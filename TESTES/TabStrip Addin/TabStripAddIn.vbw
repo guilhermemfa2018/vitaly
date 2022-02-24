@@ -1,0 +1,8 @@
+cWindowWatcher = 260, 260, 1342, 949, 
+modGlobals = 0, 0, 0, 0, C
+modWindowWatcher = 0, 0, 0, 0, C
+ucTabStrip = 0, 0, 0, 0, C, 234, 234, 1316, 923, C
+Connect = 0, 0, 0, 0, C, 52, 52, 1640, 759, C
+frmTabStrip = 130, 130, 1212, 819, Z, 26, 26, 1108, 715, C
+modWorkspaceVBW = 0, 0, 0, 0, C
+frmTabStripOptions = 156, 156, 1238, 845, , 104, 104, 1186, 793, C

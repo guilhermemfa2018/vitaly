@@ -1,0 +1,10 @@
+ÿSub Command1_Click
+Command1.Left = Command1.Left + 1000
+Form1.Width = Form1.Width + 2000
+Text2.Text = Text2.Text & "Command1_Click Event" & VbNewLine
+MsgBox "Hi"
+End Sub
+
+Sub Command1_Move
+Text2.Text = Text2.Text & "Command1_Move Event" & VbNewLine
+End Sub

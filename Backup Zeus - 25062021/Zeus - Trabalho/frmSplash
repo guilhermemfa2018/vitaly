@@ -1,0 +1,348 @@
+VERSION 5.00
+Begin VB.Form frmSplash 
+   BorderStyle     =   0  'None
+   Caption         =   "Inicializando VIX..."
+   ClientHeight    =   5145
+   ClientLeft      =   2955
+   ClientTop       =   3375
+   ClientWidth     =   9870
+   FillColor       =   &H00FFFFFF&
+   ForeColor       =   &H8000000E&
+   Icon            =   "frmSplash.frx":0000
+   LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   Picture         =   "frmSplash.frx":169B2
+   ScaleHeight     =   5145
+   ScaleWidth      =   9870
+   ShowInTaskbar   =   0   'False
+   Begin VB.TextBox txtusuario 
+      Height          =   375
+      Left            =   3840
+      TabIndex        =   2
+      Top             =   2640
+      Width           =   2655
+   End
+   Begin VB.CommandButton Cmdsenha 
+      Caption         =   "Sair"
+      Height          =   495
+      Index           =   0
+      Left            =   5250
+      TabIndex        =   6
+      Top             =   3600
+      Width           =   1215
+   End
+   Begin VB.CommandButton Cmdsenha 
+      Caption         =   "OK"
+      Height          =   495
+      Index           =   1
+      Left            =   3840
+      TabIndex        =   5
+      Top             =   3600
+      Width           =   1215
+   End
+   Begin VB.TextBox txtsenha 
+      Height          =   375
+      IMEMode         =   3  'DISABLE
+      Left            =   3840
+      PasswordChar    =   "*"
+      TabIndex        =   4
+      Top             =   3120
+      Width           =   2655
+   End
+   Begin VB.Frame fresenha 
+      BackColor       =   &H80000005&
+      Height          =   2055
+      Left            =   2025
+      TabIndex        =   7
+      Top             =   2280
+      Width           =   5895
+      Begin VB.Label Label2 
+         BackColor       =   &H80000005&
+         Caption         =   "Senha:"
+         BeginProperty Font 
+            Name            =   "Comic Sans MS"
+            Size            =   11.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000006&
+         Height          =   375
+         Left            =   840
+         TabIndex        =   10
+         Top             =   960
+         Width           =   855
+      End
+      Begin VB.Label Label1 
+         BackColor       =   &H80000005&
+         Caption         =   "Usuário:"
+         BeginProperty Font 
+            Name            =   "Comic Sans MS"
+            Size            =   11.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H80000006&
+         Height          =   495
+         Left            =   840
+         TabIndex        =   9
+         Top             =   480
+         Width           =   975
+      End
+   End
+   Begin VB.Label Lblteste 
+      BackColor       =   &H80000005&
+      ForeColor       =   &H80000007&
+      Height          =   375
+      Left            =   3840
+      TabIndex        =   8
+      Top             =   4560
+      Width           =   2535
+   End
+   Begin VB.Label lbllicenca 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Licenciado para - "
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H80000008&
+      Height          =   375
+      Left            =   2865
+      TabIndex        =   3
+      Top             =   1530
+      Width           =   7875
+   End
+   Begin VB.Label lblversao 
+      BackStyle       =   0  'Transparent
+      Caption         =   "Versão - "
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H80000008&
+      Height          =   615
+      Left            =   4020
+      TabIndex        =   1
+      Top             =   885
+      Width           =   6735
+   End
+   Begin VB.Label lblsistema 
+      BackColor       =   &H80000009&
+      BackStyle       =   0  'Transparent
+      Caption         =   "Sistema - "
+      BeginProperty Font 
+         Name            =   "Comic Sans MS"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H80000008&
+      Height          =   1095
+      Left            =   4020
+      TabIndex        =   0
+      Top             =   285
+      Width           =   6375
+   End
+End
+Attribute VB_Name = "frmSplash"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Dim contsenha As Integer
+Private rsConfSist As New ADODB.Recordset
+
+Private Sub Cmdsenha_Click(Index As Integer)
+    txtusuario.SetFocus
+    Select Case Index
+        Case 0
+            If MsgBox("Deseja encerrar a aplicação", vbQuestion + vbYesNo, "VIX") = vbYes Then
+                cnBanco.Close
+                Set cnBanco = Nothing
+                End
+            End If
+            txtusuario.SetFocus
+        Case 1
+            If txtsenha = "" Then
+                MsgBox "Senha não informada", vbInformation, "VIX"
+                txtusuario.SetFocus
+                Exit Sub
+            End If
+            Dim rsSenha As ADODB.Recordset
+            Dim sql As String
+            Dim PauseTime, Start
+            Set rsSenha = New ADODB.Recordset
+            
+            sql = "Select * from tbSenha, tbfunc, tbconfgrupo Where usuario=" & " '" & txtusuario & "'" & _
+            "and senha=" & " '" & txtsenha & "'" & "and tbsenha.codigo = tbfunc.codigo and tbconfgrupo.codigo = tbfunc.codgrupo"
+            
+            rsSenha.Open sql, cnBanco, adOpenKeyset, adLockReadOnly
+            
+            If rsSenha.RecordCount > 0 Then
+                CodUsu = rsSenha.Fields(2)
+                NomUsu = rsSenha.Fields(0)
+                If rsSenha.Fields(15) = 1 Then
+                    MsgBox "Sua senha expirou. Você precisa especificar uma nova senha para efeturar logon", vbQuestion, "Logon"
+                    frmSplash.Tag = txtusuario.Text
+                    frmAlteraSenha.Show
+                    If rsSenha.Fields(15) = 1 Then
+                        Exit Sub
+                    End If
+                End If
+                Lblteste.Caption = "Aguarde indexando arquivos..."
+                Dim X1 As Integer, Y1 As Integer, X2 As Integer, Y2 As Integer
+                Y1 = MDIPrincipal.mnu.Count
+'                For X1 = 0 To Y1 - 1
+'                    If rsSenha.Fields(19) = 1 Then MDIPrincipal.mnu(X1).Enabled = True
+'                    rsSenha.MoveNext
+'                    If X1 = 0 Then
+'                        Y2 = MDIPrincipal.submnu0.Count
+'                        For X2 = 0 To Y2 - 1
+'                            If rsSenha.Fields(19) = 1 Then
+'                                MDIPrincipal.submnu0(X2).Enabled = True
+'                            Else
+'                                MDIPrincipal.submnu0(X2).Enabled = False
+'                            End If
+'                            rsSenha.MoveNext
+'                        Next
+'
+'                    ElseIf X1 = 1 Then
+'                        Y2 = MDIPrincipal.submnu1.Count
+'                        For X2 = 0 To Y2 - 1
+'                            If rsSenha.Fields(19) = 1 Then
+'                                MDIPrincipal.submnu1(X2).Enabled = True
+ '                           Else
+ '                               MDIPrincipal.submnu1(X2).Enabled = False
+ '                           End If
+ '                           rsSenha.MoveNext
+ '                       Next
+ '                   ElseIf X1 = 2 Then
+ '                       Y2 = MDIPrincipal.submnu2.Count
+ '                       For X2 = 0 To Y2 - 1
+ '                           If rsSenha.Fields(19) = 1 Then
+'                                MDIPrincipal.submnu2(X2).Enabled = True
+'                            Else
+'                                MDIPrincipal.submnu2(X2).Enabled = False
+'                            End If
+'                            rsSenha.MoveNext
+'                        Next
+'                    ElseIf X1 = 3 Then
+'                        Y2 = MDIPrincipal.submnu3.Count
+'                        For X2 = 0 To Y2 - 1
+'                            If rsSenha.Fields(19) = 1 Then
+'                                MDIPrincipal.submnu3(X2).Enabled = True
+'                            Else
+'                                MDIPrincipal.submnu3(X2).Enabled = False
+'                            End If
+'                            rsSenha.MoveNext
+'                        Next
+'                    End If
+'                Next
+'
+'                If MDIPrincipal.submnu0(0).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(0).Enabled = False
+'                End If
+'                If MDIPrincipal.submnu0(2).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(1).Enabled = False
+'                End If
+'                If MDIPrincipal.submnu0(4).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(2).Enabled = False
+'                End If
+'                If MDIPrincipal.submnu0(3).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(4).Enabled = False
+'                End If
+'                If MDIPrincipal.submnu2(0).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(5).Enabled = False
+'                End If
+'                If MDIPrincipal.submnu2(1).Enabled = False Then
+'                   MDIPrincipal.chameleonButton(6).Enabled = False
+'                End If
+                
+                rsSenha.Close
+                Set rsSenha = Nothing
+                
+                'Variáveis de configuração de ambiente do sistema
+                '-----------------------------------
+                sql = "Select * from tbconfsist"
+                rsConfSist.Open sql, cnBanco, adOpenKeyset, adLockReadOnly
+                If rsConfSist.RecordCount > 0 Then
+                    ObterLinha = rsConfSist.Fields(0)
+                    RamalRec = rsConfSist.Fields(1)
+                    Operadora = rsConfSist.Fields(2)
+                    PortaModem = rsConfSist.Fields(3)
+                    TempoMax = rsConfSist.Fields(4)
+                    TempoMed = rsConfSist.Fields(5)
+                End If
+                rsConfSist.Close
+                Set rsConfSist = Nothing
+                '------------------------------------
+                PauseTime = 0   ' Tempo de duração.
+                Start = Timer   ' Inicialização do tempo.
+                Do While Timer < Start + PauseTime
+                    DoEvents   ' Yield to other processes.
+                Loop
+                Lblteste.Caption = "Arquivo indexado com sucesso"
+                
+                PauseTime = 0   ' Tempo de duração.
+                Start = Timer   ' Inicialização do tempo.
+                Do While Timer < Start + PauseTime
+                    DoEvents   ' Yield to other processes.
+                Loop
+                Unload frmSplash
+                MDIPrincipal.Show
+            Else
+                MsgBox "Nome ou Senha do usuario inválido", vbInformation, "VIX"
+                txtsenha.Text = ""
+                txtusuario.Text = ""
+                txtusuario.SetFocus
+                contsenha = contsenha + 1
+                rsSenha.Close
+                Set rsSenha = Nothing
+                If contsenha > 2 Then
+                    cnBanco.Close
+                    Set cnBanco = Nothing
+                    End
+                End If
+            End If
+        End Select
+End Sub
+
+Private Sub Form_Load()
+    Dim rsparametro As ADODB.Recordset
+    Dim sql As String
+    Set rsparametro = New ADODB.Recordset
+    sql = "select siglasistema, versao, licenciamento from tbparametro"
+    rsparametro.Open sql, cnBanco, adOpenStatic, adLockReadOnly
+    lblsistema = lblsistema.Caption & " " & rsparametro.Fields(0)
+    lblversao = lblversao.Caption & " " & rsparametro.Fields(1)
+    lbllicenca = lbllicenca.Caption & " " & rsparametro.Fields(2)
+    rsparametro.Close
+    Set rsparametro = Nothing
+End Sub
+
+
+Private Sub txtsenha_KeyDown(KeyCode As Integer, Shift As Integer)
+    If KeyCode = 13 Then Cmdsenha_Click (1)
+End Sub

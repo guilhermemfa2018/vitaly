@@ -1,0 +1,116 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\COMPILACOES\ISAAC - RELATORIO
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxddrt.dll=
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxdrt.dll=
+C:\Windows\SysWOW64\swebrs.dll=
+C:\Windows\SysWOW64\sviewhlp.dll=
+C:\Program Files (x86)\Common Files\Business Objects\3.5\crystalreportviewers115\ActiveXControls\CRViewer.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\Windows\SysWOW64\msstdfmt.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\OS1.0 - Isaac\RELATORIO - VB6\Relatório.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files (x86)\Common Files\System\ado\msado28.tlb=Yes
+C:\Program Files (x86)\Common Files\System\ado\msadox28.tlb=Yes
+C:\Windows\SysWOW64\cdosys.dll=Yes
+C:\Windows\SysWOW64\MSDbRptr.dll=Yes
+C:\Windows\SysWOW64\msstdfmt.dll=Yes
+C:\Program Files (x86)\Common Files\Business Objects\3.5\crystalreportviewers115\ActiveXControls\CRViewer.dll=Yes
+C:\Windows\SysWOW64\sviewhlp.dll=Yes
+C:\Windows\SysWOW64\swebrs.dll=Yes
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxdrt.dll=Yes
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxddrt.dll=Yes
+C:\Windows\SysWOW64\ComDlg32.OCX=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\OS1.0 - Isaac\RELATORIO - VB6\Relatório.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+C:\Program Files (x86)\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+C:\Windows\SysWOW64\cdosys.dll=$(WinSysPath)
+C:\Windows\SysWOW64\MSDbRptr.dll=$(WinSysPath)
+C:\Windows\SysWOW64\msstdfmt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Business Objects\3.5\crystalreportviewers115\ActiveXControls\CRViewer.dll=$(WinSysPath)
+C:\Windows\SysWOW64\sviewhlp.dll=$(WinSysPath)
+C:\Windows\SysWOW64\swebrs.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxdrt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Business Objects\3.0\bin\craxddrt.dll=$(WinSysPath)
+C:\Windows\SysWOW64\ComDlg32.OCX=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\OS1.0 - Isaac\RELATORIO - VB6\Relatório.exe=Yes
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Relatorio
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Relatorio
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Relatorio]
+Icon1=Relatório.exe
+Title1=Relatorio
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\COMPILACOES\ISAAC - RELATORIO
+ProjectFolder=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\OS1.0 - Isaac\RELATORIO - VB6
+ServerSideCab=
+File1=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\COMPILACOES\ISAAC - RELATORIO\setup.exe
+File2=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\COMPILACOES\ISAAC - RELATORIO\Setup.Lst
+File3=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\COMPILACOES\ISAAC - RELATORIO\Relatório.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

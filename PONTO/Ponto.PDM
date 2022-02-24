@@ -1,0 +1,113 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=t:\ZEUS\INSTALACAO\PONTO
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files (x86)\Common Files\System\ado\msado28.tlb=
+C:\Windows\SysWOW64\cdosys.dll=
+C:\Program Files (x86)\Common Files\System\ado\msadox28.tlb=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\Windows\SysWOW64\MSCOMCT2.OCX=
+C:\Windows\SysWOW64\mscomctl.ocx=
+C:\Windows\SysWOW64\msstdfmt.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\PONTO\Ponto.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files (x86)\Common Files\System\ado\msadox28.tlb=Yes
+C:\Windows\SysWOW64\cdosys.dll=Yes
+C:\Windows\SysWOW64\MSDbRptr.dll=Yes
+C:\Windows\SysWOW64\msstdfmt.dll=Yes
+C:\Windows\SysWOW64\sqldmo.rll=Yes
+C:\Program Files (x86)\Common Files\System\ado\msado28.tlb=Yes
+C:\Windows\SysWOW64\ComDlg32.OCX=Yes
+C:\Windows\SysWOW64\mscomctl.ocx=Yes
+C:\Windows\SysWOW64\MSCOMCT2.OCX=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\PONTO\Ponto.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+C:\Windows\SysWOW64\cdosys.dll=$(WinSysPath)
+C:\Windows\SysWOW64\MSDbRptr.dll=$(WinSysPath)
+C:\Windows\SysWOW64\msstdfmt.dll=$(WinSysPath)
+C:\Windows\SysWOW64\sqldmo.rll=$(AppPath)
+C:\Program Files (x86)\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+C:\Windows\SysWOW64\ComDlg32.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\mscomctl.ocx=$(WinSysPath)
+C:\Windows\SysWOW64\MSCOMCT2.OCX=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\PONTO\Ponto.exe=Yes
+C:\Windows\SysWOW64\sqldmo.rll=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Ponto
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Ponto
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Ponto]
+Icon1=Ponto.EXE
+Title1=Ponto
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=t:\ZEUS\INSTALACAO\PONTO
+ProjectFolder=D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\PONTO
+ServerSideCab=
+File1=t:\ZEUS\INSTALACAO\PONTO\setup.exe
+File2=t:\ZEUS\INSTALACAO\PONTO\Setup.Lst
+File3=t:\ZEUS\INSTALACAO\PONTO\Ponto.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

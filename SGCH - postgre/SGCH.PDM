@@ -1,0 +1,337 @@
+[Root]
+Most Recent Package=Instalação do SGCH - Sistema de Gestão de Competência e Habilidade
+
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\guilherme\Desktop\Instalações\Instalação SGCH - Padrao
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Files Found]
+dbmsrpcn.dll=\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll
+aguarde-01.gif=\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif
+SGCHHelp.exe=\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Files Released]
+fssl-1-2-1-1.dll=
+libOCAHelperw-2-13.dll=
+ebus-3-3-2-4.dll=
+etc-1-0-12-3.dll=
+keycode.dll=
+libOCASecurityw-1-6.dll=
+cxlibw-2-6.dll=
+cslibu-2-0-0.dll=
+CR.exe=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Missing Dependency Information]
+C:\WINDOWS\system32\activelock1884.ocx=
+C:\Arquivos de programas\CNPJ2010\COMDLG32.OCX=
+C:\Arquivos de programas\CNPJ2010\MSMASK32.OCX=
+C:\Arquivos de programas\CNPJ2010\TABCTL32.OCX=
+C:\Arquivos de programas\CNPJ2010\MSCOMCTL.OCX=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmssocn.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbnmpntw.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\odbcbcp.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=
+C:\WINDOWS\system32\cdosys.dll=
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=
+C:\Arquivos de programas\Fix Print\scrrun.dll=
+C:\WINDOWS\system32\ieframe.dll=
+C:\WINDOWS\system32\actskin4.ocx=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\odbcbcp.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbnmpntw.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmssocn.dll=
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxdrt.dll=
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxddrt.dll=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Files Added]
+aguarde-01.gif=
+tabela de importação.xls=
+sqldmo.dll=
+dbmsrpcn.dll=
+dbmssocn.dll=
+dbnmpntw.dll=
+odbcbcp.dll=
+sqlresld.dll=
+sqlsvc.dll=
+sqlunirl.dll=
+w95scm.dll=
+sgchhelp.exe=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Files Removed]
+c:\arquivos de programas\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+c:\arquivos de programas\arquivos comuns\business objects\3.5\crystalreportviewers115\activexcontrols\crviewer.dll=
+c:\windows\system32\craxddrt.dll=
+c:\arquivos de programas\arquivos comuns\business objects\3.5\bin\craxdrt.dll=
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\msscript.ocx=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\MSADODC.OCX=Yes
+C:\WINDOWS\system32\FM20.DLL=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\IpToolTips.ocx=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\sviewhlp.dll=Yes
+C:\WINDOWS\system32\swebrs.dll=Yes
+C:\WINDOWS\system32\activelock1884.ocx=Yes
+C:\WINDOWS\system32\cdosys.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\CRViewer.dll=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\aicalphaimage.ocx=Yes
+C:\Arquivos de programas\Microsoft Office\Office14\EXCEL.EXE=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\actskin4.ocx=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCH.exe=Yes
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxddrt.dll=Yes
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxdrt.dll=Yes
+C:\Arquivos de programas\Arquivos comuns\System\ado\msadox.dll=Yes
+C:\WINDOWS\system32\sqldmo.rll=Yes
+C:\Arquivos de programas\Arquivos comuns\designer\MSDERUN.DLL=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\tabela de importação.xls=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmssocn.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbnmpntw.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\odbcbcp.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=Yes
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=Yes
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Configure Registry Files]
+Applicable=No
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crdeploy.reg=Register
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Configure Remote Servers]
+Applicable=No
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Install Locations]
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\SGCH.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msscript.ocx=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Office\OFFICE11\EXCEL.EXE=$(AppPath)
+C:\Arquivos de programas\Business Objects\Common\3.5\crystalreportviewers115\ActiveXControls\sviewhlp.dll=$(WinSysPath)
+C:\Arquivos de programas\Business Objects\Common\3.5\crystalreportviewers115\ActiveXControls\CRViewer.dll=$(CommonFiles)\Business Objects\3.5\crystalreportviewers115\ActiveXControls
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.5\bin\craxdrt.dll=$(CommonFiles)\Business Objects\3.5\bin
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.5\bin\GdiPlus.dll=$(CommonFiles)\Business Objects\3.5\bin
+C:\WINDOWS\system32\usp10.dll=$(WinSysPath)
+C:\Arquivos de programas\Business Objects\Common\3.5\crystalreportviewers115\ActiveXControls\swebrs.dll=$(WinSysPath)
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\craxddrt.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\WINDOWS\system32\msvcr71.dll=$(WinSysPath)
+C:\WINDOWS\system32\mfc71u.dll=$(WinSysPath)
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crtowords_en.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\ufmanager.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2l2000.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2lcom.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2ldts.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2lexch.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2lfinra.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u252000.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\U25dts.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u25samp1.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\Implode.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crqe.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crdb_ado.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crdb_dao.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crdb_odbc.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\querybuilder.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\sscsdk80.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\chartui.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\CRAnalyzer.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\p2ixbse.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crdb_dictionary.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\filedialog.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\sacommoncontrols.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crxf_pdf.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\ExportModeller.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crtslv.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crxf_rtf.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crxf_wordw.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crxf_xls.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2fcr.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2fsepv.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2ftext.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2fxml.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2ddisk.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2dpost.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\u2dapp.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\saxserialize.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\saxmlserialize.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\sacommlayer.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\prompt.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\ParameterDesigner.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\crlov.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\Arquivos de programas\Business Objects\Common\3.5\bin\xerces-c_2_1_0.dll=$(CommonFiles)\Business Objects\3.0\bin
+C:\WINDOWS\system32\atl71.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcp71.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\MSSQL7\Binn\Resources\1033\sqldmo.rll=$(AppPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\FM20.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINDOWS\system32\IpToolTips.ocx=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\viga orc\aicalphaimage.ocx=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\tabela de importação.xls=$(AppPath)
+C:\WINDOWS\system32\sviewhlp.dll=$(WinSysPath)
+C:\WINDOWS\system32\swebrs.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\aicalphaimage.ocx=$(WinSysPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\Arquivos de programas\CNPJ2010\MSCOMCTL.OCX=$(WinSysPath)
+C:\Arquivos de programas\CNPJ2010\TABCTL32.OCX=$(WinSysPath)
+C:\Arquivos de programas\CNPJ2010\MSMASK32.OCX=$(WinSysPath)
+C:\Arquivos de programas\CNPJ2010\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\activelock1884.ocx=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmssocn.dll=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbnmpntw.dll=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\odbcbcp.dll=$(WinSysPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=$(AppPath)
+C:\WINDOWS\system32\cdosys.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\DESIGNER\MSDERUN.DLL=$(CommonFiles)\designer
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\CR.exe=$(AppPath)
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=$(AppPath)
+C:\WINDOWS\system32\CRViewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\ieframe.dll=$(WinSysPath)
+C:\Arquivos de programas\Fix Print\scrrun.dll=$(WinSysPath)
+C:\Arquivos de programas\Fix Print\comdlg32.ocx=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Office\Office14\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\actskin4.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSDERUN.DLL=$(WinSysPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCH.exe=$(AppPath)
+C:\Arquivos de programas\Arquivos comuns\Business Objects\3.0\bin\craxdrt.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\System\ado\msadox.dll=$(WinSysPath)
+C:\WINDOWS\system32\sqldmo.rll=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\tabela de importação.xls=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmsrpcn.dll=$(WinSysPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbmssocn.dll=$(WinSysPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\dbnmpntw.dll=$(WinSysPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\odbcbcp.dll=$(WinSysPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=$(AppPath)
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=$(AppPath)
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\SGCH.exe=Yes
+C:\Arquivos de programas\Microsoft Office\OFFICE11\EXCEL.EXE=No
+C:\MSSQL7\Binn\Resources\1033\sqldmo.rll=No
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\tabela de importação.xls=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=No
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\CR.exe=Yes
+C:\Documents and Settings\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=No
+C:\Arquivos de programas\Microsoft Office\Office14\EXCEL.EXE=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCH.exe=Yes
+C:\WINDOWS\system32\sqldmo.rll=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Icones\Gifs\aguarde-01.gif=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\tabela de importação.xls=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\SQLDMO.DLL=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlresld.dll=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlsvc.dll=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\sqlunirl.dll=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\Bibliotecas\w95scm.dll=No
+\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH\SGCHHelp.exe=No
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Distribution]
+Type=single
+Size=
+Title=SGCH
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|IconGroups]
+Group0=SGCH
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|SGCH]
+Icon1=SGCH.exe
+Title1=SGCH
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Instalação do SGCH - Sistema de Gestão de Competência e Habilidade|Package]
+PackageFolder=C:\Documents and Settings\guilherme\Desktop\Instalações\Instalação SGCH - Padrao
+ProjectFolder=\\Et-0009\Users\guilherme\Desktop\Programacao\SGCH
+ServerSideCab=
+File1=C:\Documents and Settings\guilherme\Desktop\Instalações\Instalação SGCH - Padrao\setup.exe
+File2=C:\Documents and Settings\guilherme\Desktop\Instalações\Instalação SGCH - Padrao\Setup.Lst
+File3=C:\Documents and Settings\guilherme\Desktop\Instalações\Instalação SGCH - Padrao\SGCH.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,16 @@
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste_Gerenciamento_de_Digitais_REP3.Properties.Resources.resources
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste Gerenciamento de Digitais REP3.csproj.GenerateResource.Cache
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste_Gerenciamento_de_Digitais_REP3.GerenciarDigitaisREP3.resources
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bin\Debug\Teste Gerenciamento de Digitais REP3.exe
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bin\Debug\Teste Gerenciamento de Digitais REP3.pdb
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste Gerenciamento de Digitais REP3.exe
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste Gerenciamento de Digitais REP3.pdb
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\Teste Gerenciamento de Digitais REP3.exe
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\Teste Gerenciamento de Digitais REP3.pdb
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste Gerenciamento de Digitais REP3.csprojResolveAssemblyReference.cache
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\obj\x86\Debug\Teste_Gerenciamento_de_Digitais_REP3.PopUp.resources
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\BouncyCastle.Crypto.dll
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\SwitchCV.dll
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\CKREP3.pdb
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\SwitchCV.pdb
+D:\Projetos\PRJ011_Rep3\Software\Teste Gerenciamento de Digitais REP3\Teste Gerenciamento de Digitais REP3\bibliotecas\CKREP3.dll

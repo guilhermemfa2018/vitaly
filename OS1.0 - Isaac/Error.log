@@ -1,0 +1,386 @@
+Relatorio Atual do Sistema: OS 1.0 - FLEX AUTOMAÇÃO COMERCIAL - Error FiveWin/3  Cannot create Dialog Box: 
+                      Resource: T_OS
+=========================== 
+........Data da Ocorrencia: 26/11/2012, 17:23:43
+.........Descricao do Erro: Error FiveWin/3  Cannot create Dialog Box: 
+                      Resource: T_OS
+=========================== 
+..........Nome no Registro: I J AUTOMAÇÃO COMERCIAL LTDA - 14.815.391/0001-07 - 
+...Informações do Registro: SIMONESIA                                      -MG (33) 3336-1562 -  - 
+...........Nome do Usuario: JU                            
+=========================== 
+.......Local do Executavel: \\Serv\c\OS1.0\SISCOM.EXE
+.............Unidade Atual: \:
+.....Nome Atual da Estação: JULIENE
+=========================== 
+=========================== 
+........Data do Executavel: 01/10/2012
+........Hora do Executavel: 16:11:30
+........Tamanho do Arquivo:   920,064 bytes
+=========================== 
+...Versão Atual do Windows:  6.1, Build 7600 
+=========================== 
+Tempo Total Sistema Aberto: 8 hours 26 mins 54 secs 
+
+Caminho Interno do Sistema:
+===========================
+Caminho: .\source\classes\DIALOG.PRG => CREATEDLGERROR(558)
+Caminho: .\source\classes\DIALOG.PRG => TDIALOG:ACTIVATE(290)
+Caminho: .\OS.PRG => TELA_ORDEM_SERVICO(80)
+Caminho: .\Siscom.prg => (b)MAIN(338)
+Caminho: C:\FPQSYSTEM\SUPORTE\btnbmp.prg => TBTNBMP:CLICK(441)
+Caminho: C:\FPQSYSTEM\SUPORTE\btnbmp.prg => TBTNBMP:LBUTTONUP(626)
+Caminho:  => TWINDOW:HANDLEEVENT(0)
+Caminho: .\source\classes\CONTROL.PRG => TCONTROL:HANDLEEVENT(1453)
+Caminho: C:\FPQSYSTEM\SUPORTE\btnbmp.prg => TBTNBMP:HANDLEEVENT(1289)
+Caminho: .\source\classes\WINDOW.PRG => _FWH(3333)
+Caminho:  => WINRUN(0)
+Caminho: .\source\classes\WINDOW.PRG => TMDIFRAME:ACTIVATE(952)
+Caminho: .\Siscom.prg => MAIN(457)
+
+Informações do Sistema Atual:
+=============================
+Modelo da CPU: AMD C-50 Processor 1000 Mhz
+   Memoria Atual: 1645 megs
+
+   Free System resources: 90 %
+        GDI    resources: 90 %
+        User   resources: 90 %
+
+    Versão do Compilador: xHarbour build 1.2.1 Intl. (SimpLex) (Rev. 6715) Processamento em (32 bits)
+ Total de Aplicativos Abertos no momento do Erro: 52
+=================================================
+      1 MSCTFIME UI
+      2 Default IME
+      3 Iniciar
+      4 CiceroUIWndFrame
+      5 Lista de Atalhos
+      6 Procurar
+      7  Programa Assistência Técnica & Orçamento v1.0 - FpqSystem ® | Licenciado para  FLEX AUTOMAÇÃO COMERCIAL
+      8 SIAD -  Versão  2012
+      9 SIAD_
+     10 Colaborar - Unopar - Mozilla Firefox
+     11 Windows Live Messenger
+     12 MCI command handling window
+     13 Msg
+     14 WidgiBho
+     15 nsAppShell:EventWindow
+     16 frmHotKey
+     17 Alternância de tarefas
+     18 Tamma
+     19 Menu Iniciar
+     20 Registro Anterior
+     21 Medidor de Bateria
+     22 View Available Networks
+     23 View Available Networks (Tooltip)
+     24 Network Flyout
+     25 UpdaterService
+     26 CL RC Engine3 Dummy Winidow
+     27 TF_FloatingLangBar_WndTitle
+     28 DANFEmon
+     29 BluetoothNotificationAreaIconWindowClass
+     30 MS_WebcheckMonitor
+     31 winvnc::IPC_Interface
+     32 RTCMediaMessageWindow
+     33 CRTCMediaController
+     34 CUccPlatform
+     35 .NET-BroadcastEventWindow.2.0.0.0.3553390.0
+     36 DDE Server Window
+     37 GDI+ Window
+     38 .NET-BroadcastEventWindow.2.0.0.0.378734a.0
+     39 HiddenFaxWindow
+     40 Rainlendar2 Control Window
+     41 IMbooster.WLM
+     42 SearchSettings{FE4559D7-F7D6-4905-99B3-9BB1DDA607C5}
+     43 Cobian Backup 10
+     44 Media Center SSO
+     45 Cobian Backup Boletus
+     46 Cobian Backup Boletus Class Name
+     47 CAvastTrayIcon
+     48 LogMeIn Hamachi:
+     49 Task Host Window
+     50 AMD EEU Client
+     51 DWM Notification Window
+     52 Program Manager
+
+Variables in use
+================
+   Procedure     Type   Value
+   ==========================
+   CREATEDLGERROR
+     Param   1:    O    Class: TDIALOG
+     Local   1:    C    "T_OS"
+     Local   2:    C    "                      "
+   TDIALOG:ACTIVATE
+     Param   1:    U    
+     Param   2:    U    
+     Param   3:    U    
+     Param   4:    L    .T.
+     Param   5:    U    
+     Param   6:    L    .T.
+     Param   7:    U    
+     Param   8:    U    
+     Param   9:    U    
+     Param  10:    L    .F.
+     Local   1:    O    Class: TDIALOG
+     Local   2:    N    132104
+     Local   3:    U    
+     Local   4:    U    
+   TELA_ORDEM_SERVICO
+     Param   1:    C    "A"
+     Local   1:    U    
+     Local   2:    U    
+     Local   3:    U    
+     Local   4:    U    
+     Local   5:    O    Class: TBUTTONBMP
+     Local   6:    O    Class: TBUTTONBMP
+     Local   7:    O    Class: TBUTTONBMP
+     Local   8:    O    Class: TBUTTONBMP
+     Local   9:    O    Class: TBUTTONBMP
+     Local  10:    O    Class: TBUTTONBMP
+     Local  11:    O    Class: TBUTTONBMP
+     Local  12:    O    Class: TBUTTONBMP
+     Local  13:    O    Class: TBUTTONBMP
+     Local  14:    O    Class: TBUTTONBMP
+     Local  15:    C    ""
+   (b)MAIN
+     Param   1:    O    Class: TBTNBMP
+   TBTNBMP:CLICK
+     Local   1:    O    Class: TBTNBMP
+   TBTNBMP:LBUTTONUP
+     Param   1:    N    31
+     Param   2:    N    19
+     Param   3:    O    Class: TBTNBMP
+     Local   1:    U    
+     Local   2:    L    .T.
+   TWINDOW:HANDLEEVENT
+     Param   1:    N    514
+     Param   2:    N    0
+     Param   3:    N    2031635
+   TCONTROL:HANDLEEVENT
+     Param   1:    N    514
+     Param   2:    N    0
+     Param   3:    N    2031635
+     Local   1:    O    Class: TBTNBMP
+     Local   2:    U    
+   TBTNBMP:HANDLEEVENT
+     Param   1:    N    514
+     Param   2:    N    0
+     Param   3:    N    2031635
+     Local   1:    O    Class: TBTNBMP
+   _FWH
+     Param   1:    N    2031635
+     Param   2:    N    514
+     Param   3:    N    0
+     Param   4:    N    2031635
+     Param   5:    N    8
+     Local   1:    O    Class: TBTNBMP
+   WINRUN
+     Param   1:    N    132104
+   TMDIFRAME:ACTIVATE
+     Param   1:    C    "MAXIMIZED"
+     Param   2:    U    
+     Param   3:    U    
+     Param   4:    U    
+     Param   5:    U    
+     Param   6:    B    {|| ... }
+     Param   7:    U    
+     Param   8:    B    {|| ... }
+     Param   9:    U    
+     Param  10:    U    
+     Param  11:    U    
+     Param  12:    U    
+     Param  13:    U    
+     Param  14:    U    
+     Param  15:    U    
+     Param  16:    U    
+     Param  17:    B    {|| ... }
+     Param  18:    U    
+     Param  19:    U    
+     Local   1:    O    Class: TMDIFRAME
+     Local   2:    U    
+     Local   3:    U    
+   MAIN
+     Local   1:    O    Class: TICON
+     Local   2:    C    "\:"
+     Local   3:    U    
+     Local   4:    C    "(0xx51)9139-5089"
+     Local   5:    C    " Programa Assistência Técnica & Orçamento v1.0 - FpqSystem ® | Licenciado para "
+     Local   6:    O    Class: TBRUSH
+     Local   7:    O    Class: TBAR
+     Local   8:    U    
+     Local   9:    O    Class: TBITMAP
+     Local  10:    L    .T.
+     Local  11:    N    23265280
+
+Linked RDDs
+===========
+   DBF
+   DBFFPT
+   DBFBLOB
+   DBFCDX
+   DBFNTX
+
+DataBases in use
+================
+
+  1:    NEWORD                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          1           60      .F.   .F.
+
+     Indexes in use                        TagName
+        => NEWORD->(STR(NUMERO,6))            CODORD
+           NEWORD->(DTOS(DATAENT))            DATAENT
+
+     Relations in use
+
+  2:    NEWCLI                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          6           48      .F.   .F.
+
+     Indexes in use                        TagName
+           Field->COD                         CODIGO
+        => Field->NOM                         NOME
+           Field->EST                         APELIDO
+           Field->CID                         CIDADE
+
+     Relations in use
+
+  3:    NEWEQ                              RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+         10           12      .F.   .F.
+
+     Indexes in use                        TagName
+           NEWEQ->(STR(CODIGO,6))             CODEQ
+        => Field->EQUIPA                      NOME
+
+     Relations in use
+
+  4:    NEWMAR                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          1           15      .F.   .F.
+
+     Indexes in use                        TagName
+           NEWMAR->(STR(CODIGO,6))            CODIGO
+        => Field->MARCA                       MAR
+
+     Relations in use
+
+  5:    NEWMOD                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+         23           25      .F.   .F.
+
+     Indexes in use                        TagName
+           NEWMOD->(STR(CODIGO,6))            CODEQ
+        => Field->MODELO                      NOME
+
+     Relations in use
+
+  6:    NEWTEC                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          3            2      .F.   .T.
+
+     Indexes in use                        TagName
+           Field->COD                         CODIGO
+        => Field->NOM                         NOME
+           Field->EST                         APELIDO
+           Field->CID                         CIDADE
+
+     Relations in use
+
+  7:    NEWSIT                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+         13           12      .F.   .T.
+
+     Indexes in use                        TagName
+           NEWSIT->(STR(CODIGO,6))            CODIGO
+        => Field->SITUACAO                    SIT
+
+     Relations in use
+
+  8:    NEWREC                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          1            0      .T.   .T.
+
+     Indexes in use                        TagName
+        => NEWREC->(STR(NUMERO,6))            NUMER
+
+     Relations in use
+
+  9: => NEWEQQ                             RddName: DBFCDX
+     ==============================
+     RecNo    RecCount    BOF   EOF
+          1            0      .T.   .T.
+
+     Indexes in use                        TagName
+           NEWEQQ->(STR(CODEQUI,6))           CODEQ
+        => NEWEQQ->EQUIPA                     NOME
+           NEWEQQ->(STR(CODMOD,6))            CODMO
+           NEWEQQ->EQUIPA+MODELO              EQUIP
+           NEWEQQ->(STR(CODMAR,6))            MAR
+           NEWEQQ->MARCA+EQUIPA+MODELO        EQUIPP
+
+     Relations in use
+
+Classes in use:
+===============
+     1 ERROR
+     2 HASHENTRY
+     3 HBCLASS
+     4 HBOBJECT
+     5 TFONT
+     6 TWINDOW
+     7 TCONTROL
+     8 TICON
+     9 TBRUSH
+    10 TBITMAP
+    11 TMDIFRAME
+    12 TMENU
+    13 TMENUITEM
+    14 TMDICLIENT
+    15 TBAR
+    16 TRECT
+    17 TBTNBMP
+    18 TIMAGE
+    19 TMSGBAR
+    20 TMSGITEM
+    21 TTIMER
+    22 TDIALOG
+    23 TCOMBOBOX
+    24 TGET
+    25 GET
+    26 TCLIPGET
+    27 TBUTTON
+    28 TBUTTONBMP
+    29 TCHECKBOX
+    30 TWBROWSE
+    31 TSCROLLBAR
+    32 TPRINTER
+    33 TPREVIEW
+    34 TCURSOR
+    35 TIMAGELIST
+    36 TREBAR
+    37 TTOOLBAR
+    38 TSTATUSBAR
+    39 TMETAFILE
+    40 TPEN
+    41 TSAY
+    42 TCLIPBOARD
+    43 TREG32
+
+Memory Analysis
+===============
+      262 Static variables
+
+   Dynamic memory consume:
+      Actual  Value:          0 bytes
+      Highest Value:          0 bytes
+

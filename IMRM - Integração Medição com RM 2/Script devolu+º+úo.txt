@@ -1,0 +1,37 @@
+-- script ferramenta emprestada, relatório da ficha atual do funcionário, ou seja, o que o funcionário possui consigo emprestado. (Guilherme)
+use Ferramentaria
+select 
+	b.localestoque as codloc,
+	c.NOME,
+	a.chapa as FUNC$,
+	a.dataemprestimo as DATAEMISSAO,
+	dife = CONVERT(VARCHAR, DATEDIFF(DAY, M.DATAEMISSAO ,GETDATE()) ) ,
+	qtDiasEmp = p.CAMPOLIVRE ,
+	atrasoDev =  p.CAMPOLIVRE - CONVERT(VARCHAR, DATEDIFF(DAY, M.DATAEMISSAO ,GETDATE()) ) ,
+	recolher  =  case when (p.CAMPOLIVRE - CONVERT(VARCHAR, DATEDIFF(DAY, a.dataemprestimo ,GETDATE()) )) <0 then  'Sim' else 'Não' end ,manutencao = ( case when
+		( SELECT manu.DATAVENCIMENTO from CORPORERM_GNV.dbo.OFVENCPLANOMANUT manu INNER join CORPORERM_GNV.dbo.TPRODUTO Prd on manu.IDOBJOF = SUBSTRING(Prd.CODIGOPRD,4,9)
+         AND PRD.CODIGOPRD  = P.CODIGOPRD
+        ) < GETDATE()then 'Sim' else 'Não' end),
+    M.HORULTIMAALTERACAO,
+	a.numeromov,
+	b.codigoprd,
+	b.descricao,
+	'-' CODBEM,
+	a.idmov,
+	b.idprd,
+	b.numerosequencial,
+	b.qtdemprestado as QUANTIDADE,
+	b.qtddevolvida as QTDEDEVOLVIDA,
+	(b.qtdemprestado-b.qtddevolvida) as QTDEPENDENTE,
+	A.nomequememprestou
+from tbEmprestimo as a 
+inner join tbEmprestimoItens as b on a.idmov = b.idmov 
+inner join CORPORERM_GNV.dbo.tloc as c on b.localestoque = c.CODLOC COLLATE SQL_Latin1_General_CP1_CI_AS and c.CODFILIAL = 1
+inner join CORPORERM_GNV.dbo.TMOV as m on 
+	a.codcoligada = m.CODCOLIGADA and
+	CAST(a.numeromov AS INT) = m.NUMEROMOV COLLATE SQL_Latin1_General_CP1_CI_AS and
+	a.serie = m.SERIE COLLATE SQL_Latin1_General_CP1_CI_AS and
+	a.idmov = m.IDMOV and m.CODFILIAL = 1
+inner join CORPORERM_GNV.dbo.TPRODUTO P on
+	b.idprd = p.IDPRD
+where a.codcoligada = 1 and a.idmov = 126090 
