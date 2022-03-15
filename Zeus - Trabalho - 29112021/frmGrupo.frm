@@ -258,12 +258,22 @@ Private Sub Form_Load()
     '================================================
     LimpaControles txtCadastro(0), txtCadastro(1), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
     txtCadastro(0) = Format(GeraCodigoLV(ListView1), "00")
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 46 'Inserir
+    carregaImagemBotao cmdCadastro(1), 1, 31 'Novo
+    carregaImagemBotao cmdCadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(5), 5, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()

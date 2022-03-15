@@ -16,6 +16,29 @@ Begin VB.Form frmUsuarios
    ScaleHeight     =   8640
    ScaleWidth      =   5400
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton chameleonButton11 
+      Height          =   615
+      Left            =   720
+      Picture         =   "frmUsuarios.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   45
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   7920
+      Width           =   615
+   End
+   Begin VB.CommandButton chameleonButton12 
+      Enabled         =   0   'False
+      Height          =   615
+      Left            =   120
+      Picture         =   "frmUsuarios.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   44
+      Tag             =   "Salvar Critério"
+      ToolTipText     =   "Salvar Critério"
+      Top             =   7920
+      Width           =   615
+   End
    Begin VB.TextBox txtCadastro 
       BeginProperty Font 
          Name            =   "Calibri"
@@ -36,24 +59,24 @@ Begin VB.Form frmUsuarios
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0CCA
-      TabIndex        =   42
+      OleObjectBlob   =   "frmUsuarios.frx":265E
+      TabIndex        =   40
       Top             =   3960
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0D2E
-      TabIndex        =   41
+      OleObjectBlob   =   "frmUsuarios.frx":26C2
+      TabIndex        =   39
       Top             =   3600
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0D92
-      TabIndex        =   40
+      OleObjectBlob   =   "frmUsuarios.frx":2726
+      TabIndex        =   38
       Top             =   3240
       Width           =   735
    End
@@ -106,144 +129,66 @@ Begin VB.Form frmUsuarios
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0DFA
-      TabIndex        =   39
+      OleObjectBlob   =   "frmUsuarios.frx":278E
+      TabIndex        =   37
       Top             =   2880
       Width           =   975
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0E64
-      TabIndex        =   38
+      OleObjectBlob   =   "frmUsuarios.frx":27F8
+      TabIndex        =   36
       Top             =   2520
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0ECA
-      TabIndex        =   37
+      OleObjectBlob   =   "frmUsuarios.frx":285E
+      TabIndex        =   35
       Top             =   2160
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0F30
-      TabIndex        =   36
+      OleObjectBlob   =   "frmUsuarios.frx":28C4
+      TabIndex        =   34
       Top             =   1800
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0F96
-      TabIndex        =   35
+      OleObjectBlob   =   "frmUsuarios.frx":292A
+      TabIndex        =   33
       Top             =   1440
       Width           =   495
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":0FF6
-      TabIndex        =   34
+      OleObjectBlob   =   "frmUsuarios.frx":298A
+      TabIndex        =   32
       Top             =   1080
       Width           =   855
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":1060
-      TabIndex        =   33
+      OleObjectBlob   =   "frmUsuarios.frx":29F4
+      TabIndex        =   31
       Top             =   720
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":10C2
-      TabIndex        =   32
+      OleObjectBlob   =   "frmUsuarios.frx":2A56
+      TabIndex        =   30
       Top             =   360
       Width           =   615
-   End
-   Begin ZEUS.chameleonButton chameleonButton11 
-      Height          =   615
-      Left            =   720
-      TabIndex        =   18
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmUsuarios.frx":1128
-      PICN            =   "frmUsuarios.frx":1144
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton chameleonButton12 
-      Height          =   615
-      Left            =   120
-      TabIndex        =   17
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmUsuarios.frx":1E1E
-      PICN            =   "frmUsuarios.frx":1E3A
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame4 
       Caption         =   "Coligada"
@@ -258,7 +203,7 @@ Begin VB.Form frmUsuarios
       EndProperty
       Height          =   615
       Left            =   120
-      TabIndex        =   29
+      TabIndex        =   27
       Top             =   6720
       Width           =   3975
       Begin VB.ComboBox Combo1 
@@ -273,7 +218,7 @@ Begin VB.Form frmUsuarios
          EndProperty
          Height          =   345
          Left            =   120
-         TabIndex        =   30
+         TabIndex        =   28
          Top             =   240
          Width           =   3735
       End
@@ -291,7 +236,7 @@ Begin VB.Form frmUsuarios
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   22
+      TabIndex        =   20
       Top             =   7440
       Width           =   5055
    End
@@ -300,96 +245,34 @@ Begin VB.Form frmUsuarios
       Enabled         =   0   'False
       Height          =   6015
       Left            =   5520
-      TabIndex        =   21
+      TabIndex        =   19
       Top             =   600
       Width           =   5535
-      Begin ZEUS.chameleonButton chameleonButton2 
-         Height          =   615
-         Left            =   1440
-         TabIndex        =   28
-         Tag             =   "retirar treinamento"
-         ToolTipText     =   "retirar treinamento"
-         Top             =   3000
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   2
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmUsuarios.frx":2B14
-         PICN            =   "frmUsuarios.frx":2B30
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   -1  'True
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
+      Begin VB.PictureBox chameleonButton2 
+         BackColor       =   &H000000FF&
+         Height          =   1000
+         Left            =   0
+         ScaleHeight     =   945
+         ScaleWidth      =   945
+         TabIndex        =   25
+         Top             =   0
+         Width           =   1000
       End
-      Begin ZEUS.chameleonButton chameleonButton1 
-         Height          =   615
-         Left            =   840
-         TabIndex        =   27
-         Tag             =   "Incluir Treinamento"
-         ToolTipText     =   "Incluir Treinamento"
-         Top             =   3000
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   2
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmUsuarios.frx":380A
-         PICN            =   "frmUsuarios.frx":3826
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   -1  'True
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
+      Begin VB.PictureBox chameleonButton1 
+         BackColor       =   &H000000FF&
+         Height          =   1000
+         Left            =   0
+         ScaleHeight     =   945
+         ScaleWidth      =   945
+         TabIndex        =   26
+         Top             =   0
+         Width           =   1000
       End
       Begin VB.CheckBox Check4 
          Caption         =   "Check4"
          Height          =   255
          Left            =   150
-         TabIndex        =   26
+         TabIndex        =   24
          Top             =   3465
          Width           =   255
       End
@@ -397,14 +280,14 @@ Begin VB.Form frmUsuarios
          Caption         =   "Check3"
          Height          =   255
          Left            =   135
-         TabIndex        =   25
+         TabIndex        =   23
          Top             =   345
          Width           =   255
       End
       Begin MSComctlLib.ListView ListView2 
          Height          =   2175
          Left            =   120
-         TabIndex        =   24
+         TabIndex        =   22
          Top             =   3720
          Width           =   5295
          _ExtentX        =   9340
@@ -425,7 +308,7 @@ Begin VB.Form frmUsuarios
       Begin MSComctlLib.ListView ListView1 
          Height          =   2295
          Left            =   120
-         TabIndex        =   23
+         TabIndex        =   21
          Top             =   600
          Width           =   5295
          _ExtentX        =   9340
@@ -463,8 +346,8 @@ Begin VB.Form frmUsuarios
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":4500
-         TabIndex        =   31
+         OleObjectBlob   =   "frmUsuarios.frx":2ABC
+         TabIndex        =   29
          Top             =   1560
          Width           =   855
       End
@@ -490,24 +373,24 @@ Begin VB.Form frmUsuarios
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":4564
-         TabIndex        =   45
+         OleObjectBlob   =   "frmUsuarios.frx":2B20
+         TabIndex        =   43
          Top             =   1200
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":45DC
-         TabIndex        =   44
+         OleObjectBlob   =   "frmUsuarios.frx":2B98
+         TabIndex        =   42
          Top             =   840
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":4640
-         TabIndex        =   43
+         OleObjectBlob   =   "frmUsuarios.frx":2BFC
+         TabIndex        =   41
          Top             =   480
          Width           =   855
       End
@@ -629,9 +512,9 @@ Begin VB.Form frmUsuarios
       EndProperty
       Height          =   345
       Index           =   0
-      ItemData        =   "frmUsuarios.frx":46A4
+      ItemData        =   "frmUsuarios.frx":2C60
       Left            =   960
-      List            =   "frmUsuarios.frx":46F9
+      List            =   "frmUsuarios.frx":2CB5
       TabIndex        =   6
       Top             =   2400
       Width           =   855
@@ -739,14 +622,14 @@ Begin VB.Form frmUsuarios
       EndProperty
       Height          =   615
       Left            =   4200
-      TabIndex        =   19
+      TabIndex        =   17
       Top             =   6720
       Width           =   975
       Begin VB.CheckBox Check1 
          Caption         =   "Ativo"
          Height          =   255
          Left            =   120
-         TabIndex        =   20
+         TabIndex        =   18
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
@@ -828,7 +711,7 @@ Private Sub Form_Load()
         Combo1.Enabled = True
     End If
     
-'    lista_Treinamentos
+    carregarIconBotao
     configControles
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
@@ -836,6 +719,11 @@ Private Sub Form_Load()
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao chameleonButton12, 0, 45 'Salvar
+    carregaImagemBotao chameleonButton11, 0, 34 'Sair
 End Sub
 
 Private Sub ResultPesq()

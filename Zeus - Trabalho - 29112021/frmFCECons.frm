@@ -16,6 +16,18 @@ Begin VB.Form frmFCECons
    ScaleHeight     =   8970
    ScaleWidth      =   11025
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdCadastro 
+      Height          =   615
+      Index           =   9
+      Left            =   120
+      Picture         =   "frmFCECons.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   59
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   8280
+      Width           =   615
+   End
    Begin VB.Frame Frame1 
       Caption         =   "Dados da FCE "
       BeginProperty Font 
@@ -43,44 +55,44 @@ Begin VB.Form frmFCECons
       Begin MSComCtl2.DTPicker DTPicker1 
          Height          =   285
          Left            =   1200
-         TabIndex        =   33
+         TabIndex        =   32
          Top             =   480
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   503
          _Version        =   393216
-         Format          =   155713537
+         Format          =   165019649
          CurrentDate     =   40449
       End
       Begin ACTIVESKINLibCtl.SkinLabel Label2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmFCECons.frx":0CCA
-         TabIndex        =   35
+         OleObjectBlob   =   "frmFCECons.frx":1994
+         TabIndex        =   34
          Top             =   480
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel24 
          Height          =   255
          Left            =   2640
-         OleObjectBlob   =   "frmFCECons.frx":0D2C
-         TabIndex        =   59
+         OleObjectBlob   =   "frmFCECons.frx":19F6
+         TabIndex        =   58
          Top             =   240
          Width           =   1455
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
          Height          =   255
          Left            =   1200
-         OleObjectBlob   =   "frmFCECons.frx":0DA8
-         TabIndex        =   58
+         OleObjectBlob   =   "frmFCECons.frx":1A72
+         TabIndex        =   57
          Top             =   240
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmFCECons.frx":0E22
-         TabIndex        =   57
+         OleObjectBlob   =   "frmFCECons.frx":1AEC
+         TabIndex        =   56
          Top             =   240
          Width           =   735
       End
@@ -98,7 +110,7 @@ Begin VB.Form frmFCECons
       TabsPerRow      =   2
       TabHeight       =   520
       TabCaption(0)   =   "Cliente"
-      TabPicture(0)   =   "frmFCECons.frx":0E8E
+      TabPicture(0)   =   "frmFCECons.frx":1B58
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame3"
       Tab(0).Control(0).Enabled=   0   'False
@@ -112,7 +124,7 @@ Begin VB.Form frmFCECons
       Tab(0).Control(4).Enabled=   0   'False
       Tab(0).ControlCount=   5
       TabCaption(1)   =   "Pedidos"
-      TabPicture(1)   =   "frmFCECons.frx":0EAA
+      TabPicture(1)   =   "frmFCECons.frx":1B74
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame13"
       Tab(1).ControlCount=   1
@@ -129,13 +141,13 @@ Begin VB.Form frmFCECons
          EndProperty
          Height          =   1215
          Left            =   120
-         TabIndex        =   31
+         TabIndex        =   30
          Top             =   5640
          Width           =   5655
          Begin MSComctlLib.ListView ListView1 
             Height          =   855
             Left            =   120
-            TabIndex        =   32
+            TabIndex        =   31
             Top             =   240
             Width           =   5415
             _ExtentX        =   9551
@@ -330,88 +342,88 @@ Begin VB.Form frmFCECons
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
             Height          =   255
             Left            =   2880
-            OleObjectBlob   =   "frmFCECons.frx":0EC6
-            TabIndex        =   46
+            OleObjectBlob   =   "frmFCECons.frx":1B90
+            TabIndex        =   45
             Top             =   2640
             Width           =   1095
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":0F2E
-            TabIndex        =   45
+            OleObjectBlob   =   "frmFCECons.frx":1BF8
+            TabIndex        =   44
             Top             =   2640
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   3240
-            OleObjectBlob   =   "frmFCECons.frx":0F98
-            TabIndex        =   44
+            OleObjectBlob   =   "frmFCECons.frx":1C62
+            TabIndex        =   43
             Top             =   2040
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   960
-            OleObjectBlob   =   "frmFCECons.frx":0FFE
-            TabIndex        =   43
+            OleObjectBlob   =   "frmFCECons.frx":1CC8
+            TabIndex        =   42
             Top             =   2040
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":106E
-            TabIndex        =   42
+            OleObjectBlob   =   "frmFCECons.frx":1D38
+            TabIndex        =   41
             Top             =   2040
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   2880
-            OleObjectBlob   =   "frmFCECons.frx":10DA
-            TabIndex        =   41
+            OleObjectBlob   =   "frmFCECons.frx":1DA4
+            TabIndex        =   40
             Top             =   1440
             Width           =   1095
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":1146
-            TabIndex        =   40
+            OleObjectBlob   =   "frmFCECons.frx":1E10
+            TabIndex        =   39
             Top             =   1440
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   4560
-            OleObjectBlob   =   "frmFCECons.frx":11B2
-            TabIndex        =   39
+            OleObjectBlob   =   "frmFCECons.frx":1E7C
+            TabIndex        =   38
             Top             =   840
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":1218
-            TabIndex        =   38
+            OleObjectBlob   =   "frmFCECons.frx":1EE2
+            TabIndex        =   37
             Top             =   840
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   1320
-            OleObjectBlob   =   "frmFCECons.frx":1288
-            TabIndex        =   37
+            OleObjectBlob   =   "frmFCECons.frx":1F52
+            TabIndex        =   36
             Top             =   240
             Width           =   1095
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":12F0
-            TabIndex        =   36
+            OleObjectBlob   =   "frmFCECons.frx":1FBA
+            TabIndex        =   35
             Top             =   240
             Width           =   735
          End
@@ -444,8 +456,8 @@ Begin VB.Form frmFCECons
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
             Height          =   255
             Left            =   2040
-            OleObjectBlob   =   "frmFCECons.frx":135C
-            TabIndex        =   50
+            OleObjectBlob   =   "frmFCECons.frx":2026
+            TabIndex        =   49
             Top             =   840
             Width           =   1095
          End
@@ -461,8 +473,8 @@ Begin VB.Form frmFCECons
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":13C6
-            TabIndex        =   49
+            OleObjectBlob   =   "frmFCECons.frx":2090
+            TabIndex        =   48
             Top             =   840
             Width           =   855
          End
@@ -488,16 +500,16 @@ Begin VB.Form frmFCECons
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmFCECons.frx":1436
-            TabIndex        =   48
+            OleObjectBlob   =   "frmFCECons.frx":2100
+            TabIndex        =   47
             Top             =   240
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":149E
-            TabIndex        =   47
+            OleObjectBlob   =   "frmFCECons.frx":2168
+            TabIndex        =   46
             Top             =   240
             Width           =   735
          End
@@ -566,104 +578,64 @@ Begin VB.Form frmFCECons
          Begin MSComCtl2.DTPicker DTPicker2 
             Height          =   285
             Left            =   120
-            TabIndex        =   34
+            TabIndex        =   33
             Top             =   480
             Width           =   1455
             _ExtentX        =   2566
             _ExtentY        =   503
             _Version        =   393216
-            Format          =   155189249
+            Format          =   165085185
             CurrentDate     =   40449
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
             Height          =   255
             Left            =   2400
-            OleObjectBlob   =   "frmFCECons.frx":150A
-            TabIndex        =   56
+            OleObjectBlob   =   "frmFCECons.frx":21D4
+            TabIndex        =   55
             Top             =   1440
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":1578
-            TabIndex        =   55
+            OleObjectBlob   =   "frmFCECons.frx":2242
+            TabIndex        =   54
             Top             =   1440
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
             Height          =   255
             Left            =   2400
-            OleObjectBlob   =   "frmFCECons.frx":15EC
-            TabIndex        =   54
+            OleObjectBlob   =   "frmFCECons.frx":22B6
+            TabIndex        =   53
             Top             =   840
             Width           =   1335
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":1664
-            TabIndex        =   53
+            OleObjectBlob   =   "frmFCECons.frx":232E
+            TabIndex        =   52
             Top             =   840
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
             Height          =   255
             Left            =   1680
-            OleObjectBlob   =   "frmFCECons.frx":16D0
-            TabIndex        =   52
+            OleObjectBlob   =   "frmFCECons.frx":239A
+            TabIndex        =   51
             Top             =   240
             Width           =   1455
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCECons.frx":1744
-            TabIndex        =   51
+            OleObjectBlob   =   "frmFCECons.frx":240E
+            TabIndex        =   50
             Top             =   240
             Width           =   1335
          End
       End
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   9
-      Left            =   120
-      TabIndex        =   30
-      Top             =   8280
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmFCECons.frx":17C0
-      PICN            =   "frmFCECons.frx":17DC
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmFCECons"
@@ -690,12 +662,18 @@ Private Sub Form_Load()
     Label2 = varGlobal
     CompoeTreeview
     CompoeControles
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(9), 9, 34 'Sair
 End Sub
 
 Private Sub CompoeTreeview()
@@ -777,15 +755,15 @@ On Error GoTo Err
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
     
     If rsFCE.RecordCount > 0 Then
-        txtCadastro(0) = rsFCE.Fields(13)
-        If Not IsNull(rsFCE.Fields(14)) Then txtCadastro(11) = rsFCE.Fields(14)
+        txtcadastro(0) = rsFCE.Fields(13)
+        If Not IsNull(rsFCE.Fields(14)) Then txtcadastro(11) = rsFCE.Fields(14)
         DTPicker1 = rsFCE.Fields(1)
         DTPicker2 = rsFCE.Fields(6)
-        txtCadastro(15) = rsFCE.Fields(7)
-        txtCadastro(16) = rsFCE.Fields(8)
-        txtCadastro(17) = rsFCE.Fields(9)
-        txtCadastro(18) = rsFCE.Fields(10)
-        txtCadastro(19) = rsFCE.Fields(11)
+        txtcadastro(15) = rsFCE.Fields(7)
+        txtcadastro(16) = rsFCE.Fields(8)
+        txtcadastro(17) = rsFCE.Fields(9)
+        txtcadastro(18) = rsFCE.Fields(10)
+        txtcadastro(19) = rsFCE.Fields(11)
         Text18 = rsFCE.Fields(5)
         Text1 = rsFCE.Fields(2)
     End If
@@ -824,7 +802,7 @@ Private Sub CarregaCli()
 On Error GoTo Err
     Dim rsCli As New ADODB.Recordset
     Dim SqlCli As String
-    SqlCli = "Select * from tbclifor where tbclifor.codclifor = '" & Val(txtCadastro(0)) & "'"
+    SqlCli = "Select * from tbclifor where tbclifor.codclifor = '" & Val(txtcadastro(0)) & "'"
     rsCli.Open SqlCli, cnBanco, adOpenKeyset, adLockOptimistic
     If rsCli.EOF Then
         'Msgbox "Cliente não cadastrado", vbInformation, "Zeus"
@@ -832,17 +810,17 @@ On Error GoTo Err
         Set rsCli = Nothing
         Exit Sub
     End If
-    txtCadastro(0).Text = Format(rsCli.Fields(0), "000000")
-    txtCadastro(1).Text = rsCli.Fields(13)
-    txtCadastro(2).Text = rsCli.Fields(1)
-    txtCadastro(3).Text = rsCli.Fields(2)
-    txtCadastro(4).Text = rsCli.Fields(3)
-    txtCadastro(5).Text = rsCli.Fields(4)
-    txtCadastro(6).Text = rsCli.Fields(5)
-    txtCadastro(7).Text = Format(rsCli.Fields(6), "(##)####-####")
-    txtCadastro(8).Text = Format(rsCli.Fields(7), "(##)####-####")
-    txtCadastro(9).Text = rsCli.Fields(8)
-    txtCadastro(10).Text = rsCli.Fields(9)
+    txtcadastro(0).Text = Format(rsCli.Fields(0), "000000")
+    txtcadastro(1).Text = rsCli.Fields(13)
+    txtcadastro(2).Text = rsCli.Fields(1)
+    txtcadastro(3).Text = rsCli.Fields(2)
+    txtcadastro(4).Text = rsCli.Fields(3)
+    txtcadastro(5).Text = rsCli.Fields(4)
+    txtcadastro(6).Text = rsCli.Fields(5)
+    txtcadastro(7).Text = Format(rsCli.Fields(6), "(##)####-####")
+    txtcadastro(8).Text = Format(rsCli.Fields(7), "(##)####-####")
+    txtcadastro(9).Text = rsCli.Fields(8)
+    txtcadastro(10).Text = rsCli.Fields(9)
     rsCli.Close
     Set rsCli = Nothing
     Exit Sub
@@ -862,8 +840,8 @@ On Error GoTo Err
     Dim rsContato As New ADODB.Recordset
     Dim SqlContato As String
     
-    SqlContato = "Select * from tbcontatos where tbcontatos.codclifor= '" & Val(txtCadastro(0)) & "'" & _
-    "and tbcontatos.codcontato=" & " '" & Val(txtCadastro(11)) & "'order by nome"
+    SqlContato = "Select * from tbcontatos where tbcontatos.codclifor= '" & Val(txtcadastro(0)) & "'" & _
+    "and tbcontatos.codcontato=" & " '" & Val(txtcadastro(11)) & "'order by nome"
     
     rsContato.Open SqlContato, cnBanco, adOpenKeyset, adLockOptimistic
     If rsContato.EOF Then
@@ -872,10 +850,10 @@ On Error GoTo Err
         Set rsContato = Nothing
         Exit Sub
     End If
-    txtCadastro(11).Text = Format(rsContato.Fields(1), "000000")
-    txtCadastro(12).Text = rsContato.Fields(2)
-    txtCadastro(13).Text = Format(rsContato.Fields(6), "(##)####-####")
-    txtCadastro(14).Text = rsContato.Fields(9)
+    txtcadastro(11).Text = Format(rsContato.Fields(1), "000000")
+    txtcadastro(12).Text = rsContato.Fields(2)
+    txtcadastro(13).Text = Format(rsContato.Fields(6), "(##)####-####")
+    txtcadastro(14).Text = rsContato.Fields(9)
     rsContato.Close
     Set rsContato = Nothing
     Exit Sub

@@ -14,12 +14,36 @@ Begin VB.Form frmTipoMat
    ScaleHeight     =   1920
    ScaleWidth      =   7800
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdCadastro 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmTipoMat.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   9
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   1200
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdCadastro 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmTipoMat.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   8
+      Tag             =   "Salvar Critério"
+      ToolTipText     =   "Salvar Critério"
+      Top             =   1200
+      Width           =   615
+   End
    Begin VB.Frame Frame3 
       Caption         =   "Status"
       Enabled         =   0   'False
       Height          =   615
       Left            =   6600
-      TabIndex        =   7
+      TabIndex        =   5
       Top             =   1200
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -27,7 +51,7 @@ Begin VB.Form frmTipoMat
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   8
+         TabIndex        =   6
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
@@ -46,7 +70,7 @@ Begin VB.Form frmTipoMat
       EndProperty
       Height          =   975
       Left            =   120
-      TabIndex        =   4
+      TabIndex        =   2
       Top             =   120
       Width           =   7575
       Begin VB.TextBox txtCadEscolaridade 
@@ -73,103 +97,19 @@ Begin VB.Form frmTipoMat
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmTipoMat.frx":0CCA
-         TabIndex        =   5
+         OleObjectBlob   =   "frmTipoMat.frx":265E
+         TabIndex        =   3
          Top             =   240
          Width           =   1695
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmTipoMat.frx":0D32
-         TabIndex        =   6
+         OleObjectBlob   =   "frmTipoMat.frx":26C6
+         TabIndex        =   4
          Top             =   240
          Width           =   855
       End
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   3
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   1200
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmTipoMat.frx":0D9E
-      PICN            =   "frmTipoMat.frx":0DBA
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   2
-      Tag             =   "Salvar registro"
-      ToolTipText     =   "Salvar registro"
-      Top             =   1200
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmTipoMat.frx":1A94
-      PICN            =   "frmTipoMat.frx":1AB0
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmTipoMat"
@@ -228,12 +168,18 @@ Private Sub Form_Load()
         DesbloqueiaControles
     End If
     configControles
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdImpostoServico(0), 0, 45 'Salvar
+    carregaImagemBotao cmdImpostoServico(1), 1, 34 'Sair
 End Sub
 
 Private Sub GravarDados()

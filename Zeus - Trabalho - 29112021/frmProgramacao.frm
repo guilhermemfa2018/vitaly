@@ -203,7 +203,7 @@ Begin VB.Form frmProgramacao
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   168558593
+         Format          =   165085185
          CurrentDate     =   42500
       End
    End
@@ -235,7 +235,7 @@ Begin VB.Form frmProgramacao
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   168558593
+         Format          =   165085185
          CurrentDate     =   41950
       End
    End
@@ -495,6 +495,7 @@ End Sub
 Private Sub Form_Load()
     listview_cabecalho
     CompoeLV 0
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -510,6 +511,14 @@ Private Sub Form_Resize()
 '    listview_cabecalho
 '    CompoeLV
 End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdcadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdcadastro(13), 13, 34 'Sair
+    carregaImagemBotao cmdcadastro(0), 0, 37 'Imprimir
+    carregaImagemBotao Command1, 1, 55 'Seta pra cima
+End Sub
+
 
 Private Sub listview_cabecalho()
 On Error GoTo Err
@@ -624,7 +633,7 @@ On Error GoTo Err
         End If
         ItemLst.SubItems(2) = "-" ' Total
         ItemLst.SubItems(3) = rsCompoeLVCC.Fields(4) ' FCE
-        If Not IsNull(rsCompoeLVCC.Fields(7)) Then ItemLst.SubItems(4) = right(rsCompoeLVCC.Fields(7), 13) Else ItemLst.SubItems(4) = "-" ' Desenhos
+        If Not IsNull(rsCompoeLVCC.Fields(7)) Then ItemLst.SubItems(4) = Right(rsCompoeLVCC.Fields(7), 13) Else ItemLst.SubItems(4) = "-" ' Desenhos
         ItemLst.SubItems(5) = Format(rsCompoeLVCC.Fields(1), "000000") ' OS
         ItemLst.SubItems(6) = rsCompoeLVCC.Fields(2) ' Revisão OS
         If Not IsNull(rsCompoeLVCC.Fields(0)) Then ItemLst.SubItems(8) = rsCompoeLVCC.Fields(6) Else ItemLst.SubItems(8) = "null" ' Data Programada

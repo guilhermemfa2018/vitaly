@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Begin VB.Form frmAlteraStatusFCE 
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Aterar Status da FCE"
+   Caption         =   "cmdCadastro"
    ClientHeight    =   4800
    ClientLeft      =   45
    ClientTop       =   330
@@ -405,6 +405,7 @@ Private Sub Form_Load()
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
+    carregarIconBotao
     CompoeControles
     Exit Sub
 ErrHandler:
@@ -728,4 +729,7 @@ errMail:
     Exit Sub
 End Sub
 
-
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(5), 5, 34 'Sair
+End Sub

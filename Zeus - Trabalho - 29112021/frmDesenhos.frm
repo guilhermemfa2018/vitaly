@@ -18,28 +18,53 @@ Begin VB.Form frmDesenhos
    ScaleHeight     =   6000
    ScaleWidth      =   8040
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdDesenho 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmDesenhos.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   33
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   5280
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdDesenho 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmDesenhos.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   34
+      Tag             =   "Salvar"
+      ToolTipText     =   "Salvar"
+      Top             =   5280
+      Width           =   615
+   End
    Begin TabDlg.SSTab SSTab1 
       Height          =   4215
       Left            =   120
-      TabIndex        =   9
+      TabIndex        =   8
       Top             =   960
       Width           =   7815
       _ExtentX        =   13785
       _ExtentY        =   7435
       _Version        =   393216
       Tabs            =   2
+      Tab             =   1
       TabsPerRow      =   2
       TabHeight       =   520
       TabCaption(0)   =   "Desenho"
-      TabPicture(0)   =   "frmDesenhos.frx":0CCA
-      Tab(0).ControlEnabled=   -1  'True
+      TabPicture(0)   =   "frmDesenhos.frx":265E
+      Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Frame1"
-      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Histórico de Revisões"
-      TabPicture(1)   =   "frmDesenhos.frx":0CE6
-      Tab(1).ControlEnabled=   0   'False
+      TabPicture(1)   =   "frmDesenhos.frx":267A
+      Tab(1).ControlEnabled=   -1  'True
       Tab(1).Control(0)=   "Frame5"
+      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).ControlCount=   1
       Begin VB.Frame Frame5 
          Caption         =   "Revisões "
@@ -53,14 +78,54 @@ Begin VB.Form frmDesenhos
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3735
-         Left            =   -74880
-         TabIndex        =   26
+         Left            =   120
+         TabIndex        =   24
          Top             =   360
          Width           =   7575
+         Begin VB.CommandButton cmdDesenho 
+            Height          =   615
+            Index           =   5
+            Left            =   1920
+            Picture         =   "frmDesenhos.frx":2696
+            Style           =   1  'Graphical
+            TabIndex        =   35
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdDesenho 
+            Height          =   615
+            Index           =   4
+            Left            =   1320
+            Picture         =   "frmDesenhos.frx":3360
+            Style           =   1  'Graphical
+            TabIndex        =   37
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdDesenho 
+            Height          =   615
+            Index           =   3
+            Left            =   720
+            Picture         =   "frmDesenhos.frx":402A
+            Style           =   1  'Graphical
+            TabIndex        =   36
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdDesenho 
+            Height          =   615
+            Index           =   2
+            Left            =   120
+            Picture         =   "frmDesenhos.frx":4CF4
+            Style           =   1  'Graphical
+            TabIndex        =   38
+            Top             =   840
+            Width           =   615
+         End
          Begin MSComctlLib.ListView ListView1 
             Height          =   2055
             Left            =   120
-            TabIndex        =   37
+            TabIndex        =   31
             Top             =   1560
             Width           =   7335
             _ExtentX        =   12938
@@ -77,166 +142,6 @@ Begin VB.Form frmDesenhos
             Appearance      =   1
             NumItems        =   0
          End
-         Begin ZEUS.chameleonButton cmdDesenho 
-            Height          =   615
-            Index           =   5
-            Left            =   1920
-            TabIndex        =   36
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmDesenhos.frx":0D02
-            PICN            =   "frmDesenhos.frx":0D1E
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdDesenho 
-            Height          =   615
-            Index           =   4
-            Left            =   1320
-            TabIndex        =   35
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmDesenhos.frx":19F8
-            PICN            =   "frmDesenhos.frx":1A14
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdDesenho 
-            Height          =   615
-            Index           =   3
-            Left            =   720
-            TabIndex        =   34
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmDesenhos.frx":26EE
-            PICN            =   "frmDesenhos.frx":270A
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdDesenho 
-            Height          =   615
-            Index           =   2
-            Left            =   120
-            TabIndex        =   33
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmDesenhos.frx":33E4
-            PICN            =   "frmDesenhos.frx":3400
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
          Begin VB.TextBox txtDesenho 
             BackColor       =   &H80000018&
             Height          =   975
@@ -244,35 +149,35 @@ Begin VB.Form frmDesenhos
             Left            =   2640
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
-            TabIndex        =   32
+            TabIndex        =   30
             Top             =   480
             Width           =   4815
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   2640
-            OleObjectBlob   =   "frmDesenhos.frx":40DA
-            TabIndex        =   31
+            OleObjectBlob   =   "frmDesenhos.frx":59BE
+            TabIndex        =   29
             Top             =   240
             Width           =   975
          End
          Begin MSComCtl2.DTPicker DTPicker2 
             Height          =   285
             Left            =   960
-            TabIndex        =   30
+            TabIndex        =   28
             Top             =   480
             Width           =   1575
             _ExtentX        =   2778
             _ExtentY        =   503
             _Version        =   393216
-            Format          =   166789121
+            Format          =   165150721
             CurrentDate     =   41463
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   960
-            OleObjectBlob   =   "frmDesenhos.frx":414A
-            TabIndex        =   29
+            OleObjectBlob   =   "frmDesenhos.frx":5A2E
+            TabIndex        =   27
             Top             =   240
             Width           =   615
          End
@@ -280,15 +185,15 @@ Begin VB.Form frmDesenhos
             Height          =   285
             Index           =   7
             Left            =   120
-            TabIndex        =   28
+            TabIndex        =   26
             Top             =   480
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":41B2
-            TabIndex        =   27
+            OleObjectBlob   =   "frmDesenhos.frx":5A96
+            TabIndex        =   25
             Top             =   240
             Width           =   495
          End
@@ -296,7 +201,7 @@ Begin VB.Form frmDesenhos
             BackColor       =   &H8000000C&
             Height          =   255
             Left            =   5640
-            TabIndex        =   38
+            TabIndex        =   32
             Top             =   240
             Visible         =   0   'False
             Width           =   1815
@@ -314,8 +219,8 @@ Begin VB.Form frmDesenhos
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3735
-         Left            =   120
-         TabIndex        =   10
+         Left            =   -74880
+         TabIndex        =   9
          Top             =   360
          Width           =   7575
          Begin VB.TextBox txtDesenho 
@@ -331,7 +236,7 @@ Begin VB.Form frmDesenhos
             Height          =   285
             Index           =   2
             Left            =   120
-            TabIndex        =   24
+            TabIndex        =   22
             Tag             =   "Nº da FCE"
             ToolTipText     =   "Nº da FCE"
             Top             =   480
@@ -342,7 +247,7 @@ Begin VB.Form frmDesenhos
             Height          =   255
             Index           =   0
             Left            =   1440
-            TabIndex        =   23
+            TabIndex        =   21
             Top             =   480
             Width           =   375
          End
@@ -351,7 +256,7 @@ Begin VB.Form frmDesenhos
             Height          =   255
             Index           =   1
             Left            =   7080
-            TabIndex        =   22
+            TabIndex        =   20
             Top             =   480
             Width           =   375
          End
@@ -359,7 +264,7 @@ Begin VB.Form frmDesenhos
             Height          =   285
             Index           =   4
             Left            =   120
-            TabIndex        =   18
+            TabIndex        =   17
             Tag             =   "Desenho"
             ToolTipText     =   "Desenho"
             Top             =   1080
@@ -370,7 +275,7 @@ Begin VB.Form frmDesenhos
             Index           =   6
             Left            =   120
             MultiLine       =   -1  'True
-            TabIndex        =   14
+            TabIndex        =   13
             Tag             =   "Descrição do desenho"
             ToolTipText     =   "Descrição do desenho"
             Top             =   1680
@@ -389,7 +294,7 @@ Begin VB.Form frmDesenhos
             Height          =   285
             Index           =   3
             Left            =   2040
-            TabIndex        =   12
+            TabIndex        =   11
             Tag             =   "Nº do projeto"
             ToolTipText     =   "Nº do projeto"
             Top             =   480
@@ -399,7 +304,7 @@ Begin VB.Form frmDesenhos
             Height          =   285
             Index           =   5
             Left            =   3240
-            TabIndex        =   19
+            TabIndex        =   18
             Tag             =   "Revisão do desenho"
             ToolTipText     =   "Revisão do desenho"
             Top             =   1080
@@ -408,31 +313,31 @@ Begin VB.Form frmDesenhos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   3240
-            OleObjectBlob   =   "frmDesenhos.frx":4216
-            TabIndex        =   11
+            OleObjectBlob   =   "frmDesenhos.frx":5AFA
+            TabIndex        =   10
             Top             =   840
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   2040
-            OleObjectBlob   =   "frmDesenhos.frx":4284
-            TabIndex        =   13
+            OleObjectBlob   =   "frmDesenhos.frx":5B68
+            TabIndex        =   12
             Top             =   240
             Width           =   1335
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":42F2
-            TabIndex        =   15
+            OleObjectBlob   =   "frmDesenhos.frx":5BD6
+            TabIndex        =   14
             Top             =   1440
             Width           =   975
          End
          Begin MSComCtl2.DTPicker DTPicker1 
             Height          =   285
             Left            =   3960
-            TabIndex        =   16
+            TabIndex        =   15
             Tag             =   "Data de cadastro do desenho"
             ToolTipText     =   "Data de cadastro do desenho"
             Top             =   1080
@@ -440,30 +345,30 @@ Begin VB.Form frmDesenhos
             _ExtentX        =   2990
             _ExtentY        =   503
             _Version        =   393216
-            Format          =   166789121
+            Format          =   165019649
             CurrentDate     =   41407
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   3960
-            OleObjectBlob   =   "frmDesenhos.frx":4364
-            TabIndex        =   17
+            OleObjectBlob   =   "frmDesenhos.frx":5C48
+            TabIndex        =   16
             Top             =   840
             Width           =   1695
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":43DE
-            TabIndex        =   21
+            OleObjectBlob   =   "frmDesenhos.frx":5CC2
+            TabIndex        =   19
             Top             =   840
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":444C
-            TabIndex        =   25
+            OleObjectBlob   =   "frmDesenhos.frx":5D30
+            TabIndex        =   23
             Top             =   240
             Width           =   615
          End
@@ -482,14 +387,14 @@ Begin VB.Form frmDesenhos
       EndProperty
       Height          =   615
       Left            =   5520
-      TabIndex        =   8
+      TabIndex        =   7
       Top             =   120
       Width           =   2175
       Begin VB.ComboBox cboDesenho 
          Height          =   315
-         ItemData        =   "frmDesenhos.frx":44B2
+         ItemData        =   "frmDesenhos.frx":5D96
          Left            =   120
-         List            =   "frmDesenhos.frx":44BF
+         List            =   "frmDesenhos.frx":5DA3
          TabIndex        =   2
          Tag             =   "Tipo de desenho"
          Text            =   "Fabricação"
@@ -511,7 +416,7 @@ Begin VB.Form frmDesenhos
       EndProperty
       Height          =   615
       Left            =   2160
-      TabIndex        =   7
+      TabIndex        =   6
       Top             =   120
       Width           =   3255
       Begin VB.TextBox txtDesenho 
@@ -547,7 +452,7 @@ Begin VB.Form frmDesenhos
       EndProperty
       Height          =   615
       Left            =   120
-      TabIndex        =   6
+      TabIndex        =   5
       Top             =   120
       Width           =   1935
       Begin VB.TextBox txtDesenho 
@@ -585,7 +490,7 @@ Begin VB.Form frmDesenhos
       EndProperty
       Height          =   615
       Left            =   6840
-      TabIndex        =   5
+      TabIndex        =   4
       Top             =   5280
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -593,91 +498,11 @@ Begin VB.Form frmDesenhos
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   4
+         TabIndex        =   3
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
       End
-   End
-   Begin ZEUS.chameleonButton cmdDesenho 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   3
-      Top             =   5280
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   8
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmDesenhos.frx":44E2
-      PICN            =   "frmDesenhos.frx":44FE
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdDesenho 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   20
-      Top             =   5280
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   8
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmDesenhos.frx":51D8
-      PICN            =   "frmDesenhos.frx":51F4
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmDesenhos"
@@ -744,7 +569,7 @@ Private Sub cmdtDesenho_Click(Index As Integer)
     End Select
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -755,7 +580,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -770,12 +595,23 @@ Private Sub Form_Load()
     ElseIf Status = "editar" Then
         ResultPesq
     End If
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdDesenho(2), 2, 46 'Inserir
+    carregaImagemBotao cmdDesenho(3), 3, 31 'Novo
+    carregaImagemBotao cmdDesenho(4), 4, 32 'Editar
+    carregaImagemBotao cmdDesenho(5), 5, 33 'Excluir
+    carregaImagemBotao cmdDesenho(0), 0, 45 'Salvar
+    carregaImagemBotao cmdDesenho(1), 1, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()
@@ -792,34 +628,34 @@ Private Sub listview_cabecalho()
 End Sub
 
 Private Sub LimpaControlesRevisao()
-    Dim x As Integer
-    For x = 7 To 8
-        txtDesenho(x) = ""
+    Dim X As Integer
+    For X = 7 To 8
+        txtDesenho(X) = ""
     Next
     DTPicker2 = Date
 End Sub
 
 Private Sub IncluirRevisao()
     Dim ItemLst As ListItem
-    Dim x As Integer, y As Integer
+    Dim X As Integer, Y As Integer
     'If ValidaCampo = False Then Exit Sub
-    y = ListView1.ListItems.Count
-    If y > 0 Then
-        For x = 1 To y
-            If ListView1.ListItems.Item(x) = Me.txtDesenho(7) Then
-                ListView1.ListItems.Item(x).Selected = True
-                Me.txtDesenho(7) = ListView1.ListItems.Item(x)
+    Y = ListView1.ListItems.Count
+    If Y > 0 Then
+        For X = 1 To Y
+            If ListView1.ListItems.Item(X) = Me.txtDesenho(7) Then
+                ListView1.ListItems.Item(X).Selected = True
+                Me.txtDesenho(7) = ListView1.ListItems.Item(X)
                 ListView1.SelectedItem.ListSubItems.Item(1) = DTPicker2
                 ListView1.SelectedItem.ListSubItems.Item(2) = txtDesenho(8)
-                y = ListView1.ListItems.Count
+                Y = ListView1.ListItems.Count
                 Exit Sub
             End If
         Next
         Set ItemLst = ListView1.ListItems.Add(, , txtDesenho(7))
-        y = ListView1.ListItems.Count
+        Y = ListView1.ListItems.Count
     Else
         Set ItemLst = ListView1.ListItems.Add(, , txtDesenho(7))
-        y = ListView1.ListItems.Count
+        Y = ListView1.ListItems.Count
     End If
     ItemLst.SubItems(1) = DTPicker2
     ItemLst.SubItems(2) = txtDesenho(8)
@@ -831,14 +667,14 @@ Private Sub IncluirRevisao()
 End Sub
 
 Private Sub AlteraRevisao()
-    Dim y As Integer, x As Integer
-    y = ListView1.ListItems.Count
-    For x = 1 To y
-        If ListView1.ListItems.Item(x).Selected = True Then
+    Dim Y As Integer, X As Integer
+    Y = ListView1.ListItems.Count
+    For X = 1 To Y
+        If ListView1.ListItems.Item(X).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtDesenho(7).Text = ListView1.ListItems.Item(x)
+    Me.txtDesenho(7).Text = ListView1.ListItems.Item(X)
     Me.txtDesenho(8).Text = ListView1.SelectedItem.ListSubItems.Item(2)
     DTPicker2 = ListView1.SelectedItem.ListSubItems.Item(1)
 End Sub
@@ -854,7 +690,7 @@ On Error GoTo Err
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
     
-    Dim y As Integer
+    Dim Y As Integer
 10  cnBanco.BeginTrans
    
     sqlDesenhos = "select * from tbDesenhos as a where a.iddesenho = '" & txtDesenho(0) & "'"
@@ -888,11 +724,11 @@ On Error GoTo Err
     SqlSalvar = "Select * from tbdesenhosrev where codcoligada = '" & vCodcoligada & "'"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-    For x = 1 To ListView1.ListItems.Count
-        ListView1.ListItems.Item(x).Selected = True
+    For X = 1 To ListView1.ListItems.Count
+        ListView1.ListItems.Item(X).Selected = True
         rsSalvar.AddNew
         rsSalvar.Fields(0) = Val(txtDesenho(0).Text)
-        rsSalvar.Fields(1) = ListView1.ListItems.Item(x)
+        rsSalvar.Fields(1) = ListView1.ListItems.Item(X)
         rsSalvar.Fields(2) = ListView1.SelectedItem.ListSubItems.Item(1)
         rsSalvar.Fields(3) = ListView1.SelectedItem.ListSubItems.Item(2)
         rsSalvar.Fields(4) = vCodcoligada 'Codigo da Coligada
@@ -917,16 +753,16 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim x As Integer
-    For x = 4 To txtDesenho.Count - 1
-        txtDesenho(x) = ""
+    Dim X As Integer
+    For X = 4 To txtDesenho.Count - 1
+        txtDesenho(X) = ""
     Next
     cboDesenho = "Fabricação"
     txtDesenho(0) = Format(GeraCodigo, "000000")
 End Sub
 
 Private Sub CompoeControles()
-    Dim x As Integer
+    Dim X As Integer
     txtDesenho(0).Text = Format(rsDesenhos.Fields(0), "000000") 'IDDesenho
     txtDesenho(1).Text = Format(rsDesenhos.Fields(1), "000000") 'Código do Projeto
     cboDesenho.Text = rsDesenhos.Fields(2) 'Tipo
@@ -945,10 +781,10 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    For x = 0 To 5
-        If txtDesenho(x).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtDesenho(x).Tag, Ok, critico, "Atenção"
-            Me.txtDesenho(x).SetFocus
+    For X = 0 To 5
+        If txtDesenho(X).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtDesenho(X).Tag, Ok, critico, "Atenção"
+            Me.txtDesenho(X).SetFocus
             Exit Function
         End If
     Next
@@ -1059,23 +895,23 @@ End Sub
 Private Sub Compoe_Listview()
     'PREENCHE O LISTVIEW DE REVISAO
     Dim ItemLst As ListItem
-    Dim x As Integer
-    x = 0
+    Dim X As Integer
+    X = 0
     While Not rsRevisao.EOF
         Set ItemLst = ListView1.ListItems.Add(, , rsRevisao.Fields(1))
         ItemLst.SubItems(1) = "" & rsRevisao.Fields(2)
         ItemLst.SubItems(2) = "" & rsRevisao.Fields(3)
         rsRevisao.MoveNext
-        x = x + 1
+        X = X + 1
     Wend
 End Sub
 
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    y = vListViewPrincipal.ListItems.Count
-    For x = 1 To y
-        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
+    Y = vListViewPrincipal.ListItems.Count
+    For X = 1 To Y
+        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
             Exit For
         End If
     Next
@@ -1148,7 +984,7 @@ End Sub
 
 Private Sub CarregaFCE()
 On Error GoTo Err
-    Dim x As Integer
+    Dim X As Integer
     sqlFCE = "Select a.* from tbprojetos as a inner join tbFCE as b on a.fce = b.fce where a.fce = '" & txtDesenho(2) & "' and b.status = 0 order by a.fce"
     'sqlFCE = "Select * from tbprojetos where fce = '" & txtDesenho(2) & "' order by fce"
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
@@ -1210,7 +1046,7 @@ End Sub
 
 Private Sub CarregaProjeto()
 On Error GoTo Err
-    Dim x As Integer
+    Dim X As Integer
     SqlProjeto = "Select * from tbprojetos where fce = '" & txtDesenho(2) & "' order by fce"
     rsProjeto.Open SqlProjeto, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsProjeto.EOF Then rsProjeto.MoveFirst

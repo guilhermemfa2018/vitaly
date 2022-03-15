@@ -257,12 +257,20 @@ Private Sub Form_Load()
     Lang_pt_br
     listview_cabecalho
     ResultPesq
+    
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(5), 5, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()

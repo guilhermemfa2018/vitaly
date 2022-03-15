@@ -211,7 +211,6 @@ Begin VB.Form frmMPCompleto
       _ExtentX        =   34105
       _ExtentY        =   14631
       _Version        =   393216
-      Tab             =   1
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Calibri"
@@ -224,90 +223,58 @@ Begin VB.Form frmMPCompleto
       EndProperty
       TabCaption(0)   =   "Desenhos"
       TabPicture(0)   =   "frmMpCompleto.frx":27EA
-      Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "cmdCadastro(4)"
-      Tab(0).Control(1)=   "cmdCadastro(8)"
+      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).Control(0)=   "Frame11"
+      Tab(0).Control(0).Enabled=   0   'False
+      Tab(0).Control(1)=   "Frame31"
+      Tab(0).Control(1).Enabled=   0   'False
       Tab(0).Control(2)=   "cmdCadastro(7)"
-      Tab(0).Control(3)=   "Frame31"
-      Tab(0).Control(4)=   "Frame11"
+      Tab(0).Control(2).Enabled=   0   'False
+      Tab(0).Control(3)=   "cmdCadastro(8)"
+      Tab(0).Control(3).Enabled=   0   'False
+      Tab(0).Control(4)=   "cmdCadastro(4)"
+      Tab(0).Control(4).Enabled=   0   'False
       Tab(0).ControlCount=   5
       TabCaption(1)   =   "Recursos"
       TabPicture(1)   =   "frmMpCompleto.frx":2806
-      Tab(1).ControlEnabled=   -1  'True
-      Tab(1).Control(0)=   "aicAlphaImage2"
-      Tab(1).Control(0).Enabled=   0   'False
-      Tab(1).Control(1)=   "Frame9"
-      Tab(1).Control(1).Enabled=   0   'False
-      Tab(1).Control(2)=   "Frame10"
-      Tab(1).Control(2).Enabled=   0   'False
-      Tab(1).Control(3)=   "Frame17"
-      Tab(1).Control(3).Enabled=   0   'False
-      Tab(1).Control(4)=   "Frame12"
-      Tab(1).Control(4).Enabled=   0   'False
-      Tab(1).Control(5)=   "ListView1"
-      Tab(1).Control(5).Enabled=   0   'False
-      Tab(1).Control(6)=   "Frame5"
-      Tab(1).Control(6).Enabled=   0   'False
-      Tab(1).Control(7)=   "Frame8"
-      Tab(1).Control(7).Enabled=   0   'False
-      Tab(1).Control(8)=   "Frame2"
-      Tab(1).Control(8).Enabled=   0   'False
-      Tab(1).Control(9)=   "Frame1"
-      Tab(1).Control(9).Enabled=   0   'False
-      Tab(1).Control(10)=   "cmdCadastro(1)"
-      Tab(1).Control(10).Enabled=   0   'False
-      Tab(1).Control(11)=   "cmdCadastro(0)"
-      Tab(1).Control(11).Enabled=   0   'False
-      Tab(1).Control(12)=   "cmdCadastro(2)"
-      Tab(1).Control(12).Enabled=   0   'False
-      Tab(1).Control(13)=   "cmdCadastro(3)"
-      Tab(1).Control(13).Enabled=   0   'False
-      Tab(1).Control(14)=   "Frame6"
-      Tab(1).Control(14).Enabled=   0   'False
-      Tab(1).Control(15)=   "Frame7"
-      Tab(1).Control(15).Enabled=   0   'False
-      Tab(1).Control(16)=   "ScriptControl1"
-      Tab(1).Control(16).Enabled=   0   'False
-      Tab(1).Control(17)=   "Frame13"
-      Tab(1).Control(17).Enabled=   0   'False
+      Tab(1).ControlEnabled=   0   'False
+      Tab(1).Control(0)=   "Frame26"
+      Tab(1).Control(1)=   "Frame25"
+      Tab(1).Control(2)=   "Timer2"
+      Tab(1).Control(3)=   "Frame20"
+      Tab(1).Control(4)=   "cmdCadastro(17)"
+      Tab(1).Control(5)=   "Frame19"
+      Tab(1).Control(6)=   "Combo1"
+      Tab(1).Control(7)=   "SkinLabel16"
+      Tab(1).Control(8)=   "txtformula(26)"
+      Tab(1).Control(9)=   "SkinLabel18"
+      Tab(1).Control(10)=   "txtLV"
+      Tab(1).Control(11)=   "txtDB"
+      Tab(1).Control(12)=   "txtformula(25)"
+      Tab(1).Control(13)=   "cmdCadastro(10)"
+      Tab(1).Control(14)=   "txtformula(1)"
+      Tab(1).Control(15)=   "txtformula(0)"
+      Tab(1).Control(16)=   "SkinLabel7"
+      Tab(1).Control(17)=   "SkinLabel6"
       Tab(1).Control(18)=   "Frame14"
-      Tab(1).Control(18).Enabled=   0   'False
-      Tab(1).Control(19)=   "SkinLabel6"
-      Tab(1).Control(19).Enabled=   0   'False
-      Tab(1).Control(20)=   "SkinLabel7"
-      Tab(1).Control(20).Enabled=   0   'False
-      Tab(1).Control(21)=   "txtformula(0)"
-      Tab(1).Control(21).Enabled=   0   'False
-      Tab(1).Control(22)=   "txtformula(1)"
-      Tab(1).Control(22).Enabled=   0   'False
-      Tab(1).Control(23)=   "cmdCadastro(10)"
-      Tab(1).Control(23).Enabled=   0   'False
-      Tab(1).Control(24)=   "txtformula(25)"
-      Tab(1).Control(24).Enabled=   0   'False
-      Tab(1).Control(25)=   "txtDB"
-      Tab(1).Control(25).Enabled=   0   'False
-      Tab(1).Control(26)=   "txtLV"
-      Tab(1).Control(26).Enabled=   0   'False
-      Tab(1).Control(27)=   "SkinLabel18"
-      Tab(1).Control(27).Enabled=   0   'False
-      Tab(1).Control(28)=   "txtformula(26)"
-      Tab(1).Control(28).Enabled=   0   'False
-      Tab(1).Control(29)=   "SkinLabel16"
-      Tab(1).Control(29).Enabled=   0   'False
-      Tab(1).Control(30)=   "Combo1"
-      Tab(1).Control(30).Enabled=   0   'False
-      Tab(1).Control(31)=   "Frame19"
-      Tab(1).Control(31).Enabled=   0   'False
-      Tab(1).Control(32)=   "cmdCadastro(17)"
-      Tab(1).Control(32).Enabled=   0   'False
-      Tab(1).Control(33)=   "Frame20"
-      Tab(1).Control(33).Enabled=   0   'False
-      Tab(1).Control(34)=   "Timer2"
-      Tab(1).Control(34).Enabled=   0   'False
-      Tab(1).Control(35)=   "Frame25"
-      Tab(1).Control(35).Enabled=   0   'False
-      Tab(1).Control(36)=   "Frame26"
-      Tab(1).Control(36).Enabled=   0   'False
+      Tab(1).Control(19)=   "Frame13"
+      Tab(1).Control(20)=   "ScriptControl1"
+      Tab(1).Control(21)=   "Frame7"
+      Tab(1).Control(22)=   "Frame6"
+      Tab(1).Control(23)=   "cmdCadastro(3)"
+      Tab(1).Control(24)=   "cmdCadastro(2)"
+      Tab(1).Control(25)=   "cmdCadastro(0)"
+      Tab(1).Control(26)=   "cmdCadastro(1)"
+      Tab(1).Control(27)=   "Frame1"
+      Tab(1).Control(28)=   "Frame2"
+      Tab(1).Control(29)=   "Frame8"
+      Tab(1).Control(30)=   "Frame5"
+      Tab(1).Control(31)=   "ListView1"
+      Tab(1).Control(32)=   "Frame12"
+      Tab(1).Control(33)=   "Frame17"
+      Tab(1).Control(34)=   "Frame10"
+      Tab(1).Control(35)=   "Frame9"
+      Tab(1).Control(36)=   "aicAlphaImage2"
       Tab(1).ControlCount=   37
       TabCaption(2)   =   "Ordem de Serviço"
       TabPicture(2)   =   "frmMpCompleto.frx":2822
@@ -327,7 +294,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   615
-         Left            =   14880
+         Left            =   -60120
          TabIndex        =   136
          Top             =   7560
          Width           =   1935
@@ -352,7 +319,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   615
-         Left            =   16920
+         Left            =   -58080
          TabIndex        =   134
          Top             =   7560
          Width           =   2295
@@ -368,7 +335,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.Timer Timer2 
          Enabled         =   0   'False
          Interval        =   3000
-         Left            =   2520
+         Left            =   -72480
          Top             =   360
       End
       Begin VB.Frame Frame20 
@@ -383,7 +350,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3855
-         Left            =   6840
+         Left            =   -68160
          TabIndex        =   122
          Top             =   960
          Width           =   3855
@@ -508,7 +475,7 @@ Begin VB.Form frmMPCompleto
          Caption         =   "Agregar"
          Height          =   495
          Index           =   17
-         Left            =   8280
+         Left            =   -66720
          TabIndex        =   121
          Tag             =   "Inclui um item selecionado no LV à uma OS"
          ToolTipText     =   "Inclui um item selecionado no LV à uma OS"
@@ -527,7 +494,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1695
-         Left            =   14640
+         Left            =   -60360
          TabIndex        =   112
          Top             =   3120
          Visible         =   0   'False
@@ -644,7 +611,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.ComboBox Combo1 
          Height          =   345
          ItemData        =   "frmMpCompleto.frx":37D0
-         Left            =   18000
+         Left            =   -57000
          List            =   "frmMpCompleto.frx":37F2
          TabIndex        =   105
          Tag             =   "Operação nº"
@@ -654,7 +621,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
          Height          =   255
-         Left            =   18000
+         Left            =   -57000
          OleObjectBlob   =   "frmMpCompleto.frx":381F
          TabIndex        =   104
          Top             =   360
@@ -663,7 +630,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.TextBox txtformula 
          Height          =   330
          Index           =   26
-         Left            =   9000
+         Left            =   -66000
          TabIndex        =   15
          Tag             =   "Observação"
          ToolTipText     =   "Observação"
@@ -672,7 +639,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
          Height          =   255
-         Left            =   9000
+         Left            =   -66000
          OleObjectBlob   =   "frmMpCompleto.frx":3895
          TabIndex        =   102
          Top             =   360
@@ -680,7 +647,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin VB.TextBox txtLV 
          Height          =   330
-         Left            =   3000
+         Left            =   -72000
          TabIndex        =   101
          Text            =   "LV"
          Top             =   7560
@@ -689,7 +656,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin VB.TextBox txtDB 
          Height          =   330
-         Left            =   1560
+         Left            =   -73440
          TabIndex        =   100
          Text            =   "DB"
          Top             =   7920
@@ -699,7 +666,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.TextBox txtformula 
          Height          =   330
          Index           =   25
-         Left            =   1560
+         Left            =   -73440
          TabIndex        =   99
          Text            =   "ID OS"
          Top             =   7560
@@ -902,7 +869,7 @@ Begin VB.Form frmMPCompleto
             _ExtentX        =   2778
             _ExtentY        =   503
             _Version        =   393216
-            Format          =   165675009
+            Format          =   423428097
             CurrentDate     =   41568
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
@@ -967,7 +934,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   10
-         Left            =   120
+         Left            =   -74880
          Picture         =   "frmMpCompleto.frx":6FDB
          Style           =   1  'Graphical
          TabIndex        =   86
@@ -989,7 +956,7 @@ Begin VB.Form frmMPCompleto
          EndProperty
          Height          =   330
          Index           =   1
-         Left            =   2760
+         Left            =   -72240
          TabIndex        =   14
          Top             =   600
          Width           =   6135
@@ -1007,7 +974,7 @@ Begin VB.Form frmMPCompleto
          EndProperty
          Height          =   330
          Index           =   0
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   12
          Tag             =   "ID Centro de Custo"
          ToolTipText     =   "ID Centro de Custo"
@@ -1016,7 +983,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
-         Left            =   2760
+         Left            =   -72240
          OleObjectBlob   =   "frmMpCompleto.frx":7CA5
          TabIndex        =   84
          Top             =   360
@@ -1024,7 +991,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
-         Left            =   120
+         Left            =   -74880
          OleObjectBlob   =   "frmMpCompleto.frx":7D11
          TabIndex        =   83
          Top             =   360
@@ -1033,7 +1000,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.Frame Frame14 
          Caption         =   "Tempo total (OS)"
          Height          =   615
-         Left            =   11880
+         Left            =   -63120
          TabIndex        =   71
          Top             =   7560
          Width           =   2895
@@ -1070,7 +1037,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   735
-         Left            =   2400
+         Left            =   -72600
          TabIndex        =   66
          Top             =   4080
          Width           =   4335
@@ -1084,7 +1051,7 @@ Begin VB.Form frmMPCompleto
          End
       End
       Begin MSScriptControlCtl.ScriptControl ScriptControl1 
-         Left            =   10560
+         Left            =   -64440
          Top             =   4200
          _ExtentX        =   1005
          _ExtentY        =   1005
@@ -1101,7 +1068,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   4680
+         Left            =   -70320
          TabIndex        =   52
          Top             =   3240
          Visible         =   0   'False
@@ -1136,7 +1103,7 @@ Begin VB.Form frmMPCompleto
             _ExtentY        =   714
             _Version        =   393216
             CheckBox        =   -1  'True
-            Format          =   165675009
+            Format          =   423428097
             CurrentDate     =   41556
          End
       End
@@ -1152,7 +1119,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   2400
+         Left            =   -72600
          TabIndex        =   50
          Top             =   3240
          Width           =   2175
@@ -1189,7 +1156,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   4
-         Left            =   -65640
+         Left            =   9360
          Picture         =   "frmMpCompleto.frx":7DD3
          Style           =   1  'Graphical
          TabIndex        =   11
@@ -1201,7 +1168,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   3
-         Left            =   1320
+         Left            =   -73680
          Picture         =   "frmMpCompleto.frx":8A9D
          Style           =   1  'Graphical
          TabIndex        =   47
@@ -1211,7 +1178,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   2
-         Left            =   720
+         Left            =   -74280
          Picture         =   "frmMpCompleto.frx":9767
          Style           =   1  'Graphical
          TabIndex        =   48
@@ -1222,7 +1189,7 @@ Begin VB.Form frmMPCompleto
          Caption         =   "..."
          Height          =   255
          Index           =   0
-         Left            =   2160
+         Left            =   -72840
          TabIndex        =   13
          Top             =   600
          Width           =   375
@@ -1230,7 +1197,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   1
-         Left            =   120
+         Left            =   -74880
          Picture         =   "frmMpCompleto.frx":A431
          Style           =   1  'Graphical
          TabIndex        =   19
@@ -1249,7 +1216,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3855
-         Left            =   10800
+         Left            =   -64200
          TabIndex        =   46
          Top             =   960
          Width           =   4455
@@ -1284,7 +1251,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3855
-         Left            =   15360
+         Left            =   -59640
          TabIndex        =   44
          Top             =   960
          Width           =   3855
@@ -1333,7 +1300,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2175
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   42
          Top             =   960
          Width           =   6615
@@ -1365,7 +1332,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   41
          Top             =   3240
          Width           =   2175
@@ -1382,7 +1349,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin MSComctlLib.ListView ListView1 
          Height          =   2655
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   20
          Top             =   4920
          Width           =   19095
@@ -1414,7 +1381,7 @@ Begin VB.Form frmMPCompleto
          EndProperty
          Height          =   615
          Index           =   8
-         Left            =   -65760
+         Left            =   9240
          TabIndex        =   10
          Top             =   3240
          Width           =   735
@@ -1432,7 +1399,7 @@ Begin VB.Form frmMPCompleto
          EndProperty
          Height          =   615
          Index           =   7
-         Left            =   -65760
+         Left            =   9240
          TabIndex        =   8
          Top             =   2400
          Width           =   735
@@ -1449,7 +1416,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   7455
-         Left            =   -64920
+         Left            =   10080
          TabIndex        =   39
          Top             =   480
          Width           =   9015
@@ -1526,7 +1493,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   7455
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   38
          Top             =   480
          Width           =   9015
@@ -1591,7 +1558,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3255
-         Left            =   11400
+         Left            =   -63600
          TabIndex        =   64
          Top             =   960
          Visible         =   0   'False
@@ -1629,7 +1596,7 @@ Begin VB.Form frmMPCompleto
       Begin VB.Frame Frame17 
          Caption         =   "Status (0-nada/1-aberta/2-andamento/3-fechada)"
          Height          =   615
-         Left            =   3600
+         Left            =   -71400
          TabIndex        =   107
          Top             =   7560
          Visible         =   0   'False
@@ -1656,7 +1623,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   735
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   62
          Top             =   1920
          Visible         =   0   'False
@@ -1684,7 +1651,7 @@ Begin VB.Form frmMPCompleto
             Strikethrough   =   0   'False
          EndProperty
          Height          =   975
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   53
          Top             =   960
          Visible         =   0   'False
@@ -1762,7 +1729,7 @@ Begin VB.Form frmMPCompleto
       End
       Begin AlphaImageControl.aicAlphaImage aicAlphaImage2 
          Height          =   435
-         Left            =   9960
+         Left            =   -65040
          Top             =   7680
          Width           =   1545
          _ExtentX        =   2725
@@ -1868,7 +1835,7 @@ Begin VB.Form frmMPCompleto
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   165675009
+         Format          =   423624705
          CurrentDate     =   41554
       End
       Begin VB.TextBox txtformula 
@@ -2033,7 +2000,7 @@ On Error GoTo Err
         Dim CodID As String
         Dim rsGeraID As New ADODB.Recordset
         Dim sqlGeraID As String
-        Dim x As Integer
+        Dim X As Integer
         
         ' CHAMA FUNÇÃO QUE CONVERTE SEMANA DO ANO PARA DATA
         DTPicker2.Value = ""
@@ -2092,8 +2059,8 @@ On Error GoTo Err
         ListView1.SortKey = 11
         ListView1.SortOrder = lvwAscending
         
-        For x = 1 To ListView1.ListItems.Count
-            ListView1.ListItems.Item(x).Selected = True
+        For X = 1 To ListView1.ListItems.Count
+            ListView1.ListItems.Item(X).Selected = True
             If ListView1.SelectedItem.ListSubItems.Item(5) = "" Then
                 ListView1.SelectedItem.ListSubItems.Item(5) = vPonte2
             End If
@@ -2296,11 +2263,11 @@ On Error GoTo Err
     sqlExcHist = "Delete from tbMPHist where programacao = '" & Val(txtformula(11)) & "' and seqprog = '" & Val(ListView4.SelectedItem.ListSubItems.Item(5)) & "'"
     rsExcHist.Open sqlExcHist, cnBanco
     
-    y = ListView4.ListItems.Count
-    For x = 1 To y
-        ListView4.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+    Y = ListView4.ListItems.Count
+    For X = 1 To Y
+        ListView4.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
         rsGravaHist.AddNew
-        rsGravaHist(0) = Val(ListView4.ListItems.Item(x))
+        rsGravaHist(0) = Val(ListView4.ListItems.Item(X))
         rsGravaHist(1) = ListView4.SelectedItem.ListSubItems.Item(1)
         rsGravaHist(2) = ListView4.SelectedItem.ListSubItems.Item(2)
         rsGravaHist(3) = ListView4.SelectedItem.ListSubItems.Item(3)
@@ -2437,12 +2404,12 @@ End Function
 Private Function AgregarOS()
     AgregarOS = False
     If ListView1.ListItems.Count < 1 Then Exit Function
-    Dim y As Integer, x As Integer, vConta As Integer
-    y = ListView1.ListItems.Count
+    Dim Y As Integer, X As Integer, vConta As Integer
+    Y = ListView1.ListItems.Count
     vConta = 0
-    For x = 1 To y
-        ListView1.ListItems.Item(x).Selected = True
-        If ListView1.ListItems.Item(x).Checked = True Then
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
+        If ListView1.ListItems.Item(X).Checked = True Then
             vConta = vConta + 1
             'Captura o número da OS a qual o item selecionado fará parte
             If vConta = 1 Then
@@ -2455,10 +2422,10 @@ Private Function AgregarOS()
                     Exit Function
                 End If
                 ListView1.SelectedItem.ListSubItems.Item(1) = txtformula(25).Text
-                ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(x)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
+                ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(X)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
                 ListView1.SelectedItem.ListSubItems.Item(13) = "1"
                 ListView1.SelectedItem.ListSubItems.Item(14) = Format(ListView1.SelectedItem.ListSubItems.Item(14), "000000000000")
-                ListView1.ListItems.Item(x).Checked = False
+                ListView1.ListItems.Item(X).Checked = False
             End If
         End If
     Next
@@ -2468,11 +2435,11 @@ End Function
 Private Function MarcaOS()
     MarcaOS = False
     If ListView1.ListItems.Count < 1 Then Exit Function
-    Dim y As Integer, x As Integer
-    y = ListView1.ListItems.Count
-    For x = 1 To y
-        ListView1.ListItems.Item(x).Selected = True
-        If ListView1.ListItems.Item(x).Checked = True Then
+    Dim Y As Integer, X As Integer
+    Y = ListView1.ListItems.Count
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
+        If ListView1.ListItems.Item(X).Checked = True Then
             If Val(ListView1.SelectedItem.ListSubItems.Item(1)) <> 0 Then
                 mobjMsg.Abrir "Itens selecionado já em outra OS!", Ok, critico, "ZEUS"
                 'A linha abaixo foi adicionada para corrigir códigos de barra qdo forem gerados errado
@@ -2480,9 +2447,9 @@ Private Function MarcaOS()
                 Exit Function
             End If
             ListView1.SelectedItem.ListSubItems.Item(1) = txtformula(25).Text & "/" & Val(txtformula(18))
-            ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(x)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
+            ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(X)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
             ListView1.SelectedItem.ListSubItems.Item(13) = "1"
-            ListView1.ListItems.Item(x).Checked = False
+            ListView1.ListItems.Item(X).Checked = False
         End If
     Next
     MarcaOS = True
@@ -2490,14 +2457,14 @@ End Function
 
 Private Sub EditaLVHist()
 On Error Resume Next
-    Dim y As Integer, x As Integer
-    y = ListView4.ListItems.Count
-    For x = 1 To y
-        If ListView4.ListItems.Item(x).Selected = True Then
+    Dim Y As Integer, X As Integer
+    Y = ListView4.ListItems.Count
+    For X = 1 To Y
+        If ListView4.ListItems.Item(X).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtformula(28).Text = ListView4.ListItems.Item(x)
+    Me.txtformula(28).Text = ListView4.ListItems.Item(X)
     Me.txtformula(0).Text = ListView4.SelectedItem.ListSubItems.Item(6)
     Me.txtformula(4).Text = ListView4.SelectedItem.ListSubItems.Item(7)
     Me.txtformula(5).Text = ListView4.SelectedItem.ListSubItems.Item(1)
@@ -2610,12 +2577,12 @@ End Sub
 
 Private Function GeraOSLV(LV As Listview)
     If LV.ListItems.Count > 0 Then
-        Dim x As Integer
-        x = 1
+        Dim X As Integer
+        X = 1
         LV.Sorted = True
         LV.SortKey = 1
         LV.SortOrder = lvwDescending
-        LV.ListItems.Item(x).Selected = True
+        LV.ListItems.Item(X).Selected = True
         GeraOSLV = Val(LV.SelectedItem.ListSubItems.Item(1)) + 1
         LV.SortKey = 11
         LV.SortOrder = lvwAscending
@@ -2628,9 +2595,9 @@ End Function
 Private Sub gravaItensOS()
     If ListView1.ListItems.Count < 1 Then Exit Sub
     'Label36.Caption = "Alteração"
-    Dim y As Integer, Z As Integer
-    y = ListView1.ListItems.Count
-    For Z = 1 To y
+    Dim Y As Integer, Z As Integer
+    Y = ListView1.ListItems.Count
+    For Z = 1 To Y
         ListView1.ListItems.Item(Z).Selected = True
         If Val(ListView1.SelectedItem.ListSubItems.Item(1)) = Val(txtformula(17).Text) Then
             separaDesLv ListView1.SelectedItem.ListSubItems.Item(4)
@@ -2643,10 +2610,10 @@ On Error GoTo Err
     Dim rsTransf As New ADODB.Recordset
     Dim SqlTransf As String
     Dim RECEBE As String
-    Dim Contador As Integer, x As Integer
+    Dim Contador As Integer, X As Integer
     Contador = 0
-    For x = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, x, 1) = ";" Then
+    For X = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, X, 1) = ";" Then
             If Len(RECEBE) = 5 Then
                 vCodLM = Mid$(RECEBE, 1, 2)
                 vCodSeq = Mid$(RECEBE, 3, 3)
@@ -2658,7 +2625,7 @@ On Error GoTo Err
             rsTransf.Open SqlTransf, cnBanco
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -2685,7 +2652,7 @@ End Sub
 
 Private Sub CarregaFCE()
 On Error GoTo Err
-    Dim x As Integer
+    Dim X As Integer
     sqlFCE = "Select a.*,b.status from tbprojetos as a inner join tbFCE as b on a.fce = b.fce where a.fce = '" & txtformula(12) & "' and b.status <> 1 order by a.fce"
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
     If rsFCE.EOF Then
@@ -2744,7 +2711,7 @@ End Sub
 
 Private Sub CarregaProjeto()
 On Error GoTo Err
-    Dim x As Integer
+    Dim X As Integer
     SqlProjeto = "Select * from tbprojetos where fce = '" & txtformula(12) & "' order by fce"
     rsProjeto.Open SqlProjeto, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsProjeto.EOF Then rsProjeto.MoveFirst
@@ -2860,6 +2827,7 @@ Private Sub Form_Load()
     End If
     
     ListView4.ListItems.Clear
+    carregarIconBotao
     
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
@@ -2868,6 +2836,28 @@ Private Sub Form_Load()
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(1), 1, 46 'Inserir
+    carregaImagemBotao cmdCadastro(11), 11, 46 'Inserir
+    
+    carregaImagemBotao cmdCadastro(4), 4, 31 'Novo
+    
+    carregaImagemBotao cmdCadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdCadastro(14), 14, 32 'Editar
+    
+    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdCadastro(18), 18, 33 'Excluir
+    carregaImagemBotao cmdCadastro(15), 15, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(13), 13, 34 'Sair
+    
+    carregaImagemBotao cmdCadastro(10), 10, 52 'Gerar OS - Engrenagem
+    carregaImagemBotao cmdCadastro(16), 16, 53 'Gerar OS - Engrenagem
+    
+End Sub
+
 
 Private Sub mostraDesenhos(vTabela As String, TV As TreeView)
 On Error GoTo Err
@@ -3139,13 +3129,13 @@ Private Sub TreeView2_NodeCheck(ByVal Node As MSComctlLib.Node)
 End Sub
 
 Private Sub buscaChecado()
-    Dim x As Integer, vContador As Integer, vQtdNos As Integer
+    Dim X As Integer, vContador As Integer, vQtdNos As Integer
     vContador = 0
-    x = 0
+    X = 0
     vQtdNos = TreeView1.Nodes.Count
-    For x = 1 To vQtdNos
-        If TreeView1.Nodes.Item(x).Checked = True Then
-            PegaTreeview x
+    For X = 1 To vQtdNos
+        If TreeView1.Nodes.Item(X).Checked = True Then
+            PegaTreeview X
             separaDadosTree vJuntaNome
             buscaPeso
         End If
@@ -3153,13 +3143,13 @@ Private Sub buscaChecado()
 End Sub
 
 Private Sub buscaChecado2(vLV As TreeView)
-    Dim x As Integer, vContador As Integer, vQtdNos As Integer
+    Dim X As Integer, vContador As Integer, vQtdNos As Integer
     vContador = 0
-    x = 0
+    X = 0
     vQtdNos = vLV.Nodes.Count
-    For x = 1 To vQtdNos
-        If vLV.Nodes.Item(x).Checked = True Then
-            transfDesenhosSel x, vLV
+    For X = 1 To vQtdNos
+        If vLV.Nodes.Item(X).Checked = True Then
+            transfDesenhosSel X, vLV
         End If
     Next
 End Sub
@@ -3444,20 +3434,20 @@ End Sub
 
 Private Sub separaDadosTree(vTxtForm As String)
     Dim RECEBE As String
-    Dim Contador As Integer, x As Integer
+    Dim Contador As Integer, X As Integer
     Contador = 0
     vNomeA = ""
     vNomeB = ""
     vNomeC = ""
-    For x = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, x, 1) = ";" Then
+    For X = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, X, 1) = ";" Then
             If Contador = 0 Then vNomeA = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then vNomeB = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 2 Then vNomeC = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3472,8 +3462,8 @@ End Sub
 Private Sub separaDadosPar(vTxtForm As TextBox)
     Dim RECEBE As String
     Dim Contador As Integer, vNum As Integer
-    For x = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, x, 1) = ";" Then
+    For X = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, X, 1) = ";" Then
             If Contador = 0 And RECEBE <> "-" Then vGrupo = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then vDimTipo = RECEBE 'Variável vDimTipo receber o valor do segundo parâmetro
             If Contador = 2 Then vDimValor = RECEBE 'Variavel vDimTipo recebe o valor do terceiro parâmetro
@@ -3482,7 +3472,7 @@ Private Sub separaDadosPar(vTxtForm As TextBox)
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
         End If
     Next
     If Contador = 0 And RECEBE <> "-" Then vGrupo = RECEBE
@@ -3508,10 +3498,10 @@ End Sub
 Private Sub separaDadosVar(vTxtForm As TextBox)
     On Error GoTo Err
     Dim RECEBE As String
-    Dim Contador As Integer, x As Integer
+    Dim Contador As Integer, X As Integer
     Contador = 0
-    For x = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, x, 1) = ";" Then
+    For X = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, X, 1) = ";" Then
             If Contador = 0 Then var(1) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then var(2) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 2 Then var(3) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
@@ -3521,7 +3511,7 @@ Private Sub separaDadosVar(vTxtForm As TextBox)
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3540,12 +3530,12 @@ End Sub
 'A função abaixo pega os valores das constantes informados no Listview2 e armazena em Arrays: cons(?)
 'específicas para cada valor
 Private Sub separaDadosCons()
-    Dim x As Integer, y As Integer
-    y = ListView2.ListItems.Count
-    For x = 1 To y
-        ListView2.ListItems.Item(x).Selected = True
-        If ListView2.ListItems.Item(x).Selected = True Then
-            cons(Val(ListView2.ListItems.Item(x))) = ListView2.SelectedItem.ListSubItems.Item(1)
+    Dim X As Integer, Y As Integer
+    Y = ListView2.ListItems.Count
+    For X = 1 To Y
+        ListView2.ListItems.Item(X).Selected = True
+        If ListView2.ListItems.Item(X).Selected = True Then
+            cons(Val(ListView2.ListItems.Item(X))) = ListView2.SelectedItem.ListSubItems.Item(1)
         End If
     Next
 End Sub
@@ -3561,10 +3551,10 @@ On Error GoTo Err
     rsTransf.Open SqlTransf, cnBanco
     
     Dim RECEBE As String
-    Dim Contador As Integer, x As Integer
+    Dim Contador As Integer, X As Integer
     Contador = 0
-    For x = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, x, 1) = ";" Then
+    For X = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, X, 1) = ";" Then
             'Separa para localizar: codigo da LM e código da sequência da LM
             'Se a variável recebe tiver + de 5 caracteres significa que a sequencia da LM ultrapassou a 999 registros
             'O procedimento para esse caso é diferenciado, por isso utilizasse o IF abaixo
@@ -3580,7 +3570,7 @@ On Error GoTo Err
             rsTransf.Open SqlTransf, cnBanco
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3752,10 +3742,10 @@ Private Sub txtformula_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtformula(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim x As Integer
-    For x = 1 To txtformula.Count - 1
-        txtformula(x).SelStart = 0
-        txtformula(x).SelLength = Len(txtformula(x).Text)
+    Dim X As Integer
+    For X = 1 To txtformula.Count - 1
+        txtformula(X).SelStart = 0
+        txtformula(X).SelLength = Len(txtformula(X).Text)
     Next
 End Sub
 
@@ -3899,13 +3889,13 @@ Private Sub localizaFormula(vNForm As Integer, vPosicao As Integer)
 End Sub
 
 Private Sub substituiValores(vFormula As TextBox)
-    Dim x As Integer
+    Dim X As Integer
     Dim vPreserva As String
     vPreserva = ""
     vPreserva = vFormula
-    For x = 1 To 50
-        vFormula = Replace(vFormula, "cons(" & (x) & ")", cons(x))
-        vFormula = Replace(vFormula, "var(" & (x) & ")", var(x))
+    For X = 1 To 50
+        vFormula = Replace(vFormula, "cons(" & (X) & ")", cons(X))
+        vFormula = Replace(vFormula, "var(" & (X) & ")", var(X))
         vFormula = Replace(vFormula, "vTMedio", vTMedio)
         vFormula = Replace(vFormula, "vFFadiga", vFFadiga)
         vFormula = Replace(vFormula, "vOrganiza", vOrganiza)
@@ -4040,15 +4030,15 @@ End Sub
 
 Private Sub SomaLV(LV As Listview, vColunaLV As Integer, vTxtRetorno As TextBox)
     On Error Resume Next
-    Dim x As Integer, y As Integer, F As Integer
-    y = LV.ListItems.Count
+    Dim X As Integer, Y As Integer, F As Integer
+    Y = LV.ListItems.Count
     Dim somaTempo As Double
     somaTempo = 0
-    For x = 1 To y
-        If LV.ListItems.Item(x).Selected = True Then F = x
+    For X = 1 To Y
+        If LV.ListItems.Item(X).Selected = True Then F = X
     Next
-    For x = 1 To y
-        LV.ListItems.Item(x).Selected = True
+    For X = 1 To Y
+        LV.ListItems.Item(X).Selected = True
         'If Trim$(LV.SelectedItem.ListSubItems.Item(6)) <> " " Then
             somaTempo = somaTempo + LV.SelectedItem.ListSubItems.Item(vColunaLV)
         'End If
@@ -4105,6 +4095,8 @@ Err:
         While reestabeleceConexao = False
         Wend
         Resume
+    ElseIf Err.Number = 91 Then
+        Resume Next
     Else
         Msgbox Err.Number & " - " & Err.Description
         Resume
@@ -4193,7 +4185,7 @@ On Error GoTo Err
     Dim rsAchaProg As New ADODB.Recordset
     Dim SqlAchaProg As String
     
-    Dim x As Integer, y As Integer
+    Dim X As Integer, Y As Integer
     SSTab1.Tab = 1
     SqlAchaProg = "select a.idos,a.idprogramacao from tbMPItens as a where a.idos = '" & Val(Text8) & "'"
     rsAchaProg.Open SqlAchaProg, cnBanco, adOpenKeyset, adLockReadOnly
@@ -4215,10 +4207,10 @@ On Error GoTo Err
     ListView1.SortKey = 11
     ListView1.SortOrder = lvwAscending
     
-    y = ListView1.ListItems.Count
+    Y = ListView1.ListItems.Count
     vStatus = 1
-    For x = 1 To y
-        ListView1.ListItems.Item(x).Selected = True
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
         ListView1.SelectedItem.ListSubItems.Item(1) = "0"
         ListView1.SelectedItem.ListSubItems.Item(4) = "009999"
         ListView1.SelectedItem.ListSubItems.Item(12) = ""
@@ -4268,11 +4260,11 @@ End Sub
 
 Private Sub MudaCorLV1()
     'On Error Resume Next
-    Dim x As Integer, y As Integer
-    y = ListView1.ListItems.Count
+    Dim X As Integer, Y As Integer
+    Y = ListView1.ListItems.Count
     vStatus = 1
-    For x = 1 To y
-        ListView1.ListItems.Item(x).Selected = True
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
         'verifica se a OS ja esta sendo apropriada. Se estiver o sistema não deixa editar
         '1 - Não houve apropriacao
         '2 - houve apropriação
@@ -4284,7 +4276,7 @@ Private Sub MudaCorLV1()
                 vStatus = Val(ListView1.SelectedItem.ListSubItems.Item(13))
             End If
             If ListView1.SelectedItem.ListSubItems.Item(13) = 2 Then
-                ListView1.ListItems.Item(x).ForeColor = &H8000&
+                ListView1.ListItems.Item(X).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(1).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(2).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(3).ForeColor = &H8000&
@@ -4300,7 +4292,7 @@ Private Sub MudaCorLV1()
                 ListView1.SelectedItem.ListSubItems.Item(13).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(14).ForeColor = &H8000&
             ElseIf ListView1.SelectedItem.ListSubItems.Item(13) = 3 Then
-                ListView1.ListItems.Item(x).ForeColor = &H808080
+                ListView1.ListItems.Item(X).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(1).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(2).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(3).ForeColor = &H808080
@@ -4321,12 +4313,12 @@ Private Sub MudaCorLV1()
 End Sub
 
 Private Sub bloqueiaEdicao()
-    Dim x As Integer
+    Dim X As Integer
     TreeView1.Enabled = False
     TreeView2.Enabled = False
     TreeView3.Enabled = False
-    For x = 0 To cmdCadastro.Count - 1
-        cmdCadastro(x).Enabled = False
+    For X = 0 To cmdCadastro.Count - 1
+        cmdCadastro(X).Enabled = False
     Next
     cmdCadastro(13).Enabled = True
     txtformula(0).Enabled = False
@@ -4465,7 +4457,7 @@ On Error GoTo Err
     Dim rsGravaLV As New ADODB.Recordset
     Dim SqlGravaLV As String
     Dim ItemLst As ListItem
-    Dim y As Integer, x As Integer
+    Dim Y As Integer, X As Integer
     Dim vGuardaData(99, 3) As String
     
 10  cnBanco.BeginTrans
@@ -4473,14 +4465,14 @@ On Error GoTo Err
     'Guarda dados referente a data programada da operação em uma matriz antes de limpar a tabela tbMPItens
     sqlGuardaDataProg = "select a.idprogramacao,a.idoperacao,a.dataprogramacao,a.databaixa from tbMPItens as a where a.idprogramacao = '" & Val(txtformula(11)) & "' order by a.idprogramacao,a.idoperacao"
     rsGuardaDataProg.Open sqlGuardaDataProg, cnBanco, adOpenKeyset, adLockReadOnly
-    x = 0
+    X = 0
     Do While Not rsGuardaDataProg.EOF
-        vGuardaData(x, 0) = rsGuardaDataProg.Fields(0)
-        vGuardaData(x, 1) = rsGuardaDataProg.Fields(1)
-        If Not IsNull(rsGuardaDataProg.Fields(2)) Then vGuardaData(x, 2) = rsGuardaDataProg.Fields(2)
-        If Not IsNull(rsGuardaDataProg.Fields(3)) Then vGuardaData(x, 3) = rsGuardaDataProg.Fields(3)
+        vGuardaData(X, 0) = rsGuardaDataProg.Fields(0)
+        vGuardaData(X, 1) = rsGuardaDataProg.Fields(1)
+        If Not IsNull(rsGuardaDataProg.Fields(2)) Then vGuardaData(X, 2) = rsGuardaDataProg.Fields(2)
+        If Not IsNull(rsGuardaDataProg.Fields(3)) Then vGuardaData(X, 3) = rsGuardaDataProg.Fields(3)
         rsGuardaDataProg.MoveNext
-        x = x + 1
+        X = X + 1
     Loop
     rsGuardaDataProg.Close
     Set rsGuardaDataProg = Nothing
@@ -4488,15 +4480,15 @@ On Error GoTo Err
     
     sqlDeletar = "Delete from tbMPItens where idprogramacao = '" & Val(txtformula(11)) & "'"
     rsDeletar.Open sqlDeletar, cnBanco
-    y = ListView1.ListItems.Count
-    For x = 1 To y
-        ListView1.ListItems.Item(x).Selected = True
+    Y = ListView1.ListItems.Count
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(5) <> "-" And ListView1.SelectedItem.ListSubItems.Item(5) <> "" Then
             SqlGravaLV = "Insert into tbMPItens(" & _
                                 "idprogramacao,idsequencia,idcc,nomecc,desenhos,dataprevista,tempocalc,grupo,variaveis,idos,observacao,idoperacao,codigobarra,status,revisaoos) " & _
                                 "values(" & _
                                 "'" & Val(txtformula(11)) & "', " & _
-                                "'" & Val(ListView1.ListItems.Item(x)) & "', " & _
+                                "'" & Val(ListView1.ListItems.Item(X)) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(2) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(3) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(4) & "', " & _
@@ -4515,7 +4507,7 @@ On Error GoTo Err
                                 "idprogramacao,idsequencia,idcc,nomecc,desenhos,tempocalc,grupo,variaveis,idos,observacao,idoperacao,codigobarra,status,revisaoos) " & _
                                 "values(" & _
                                 "'" & Val(txtformula(11)) & "', " & _
-                                "'" & Val(ListView1.ListItems.Item(x)) & "', " & _
+                                "'" & Val(ListView1.ListItems.Item(X)) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(2) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(3) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(4) & "', " & _
@@ -4531,24 +4523,24 @@ On Error GoTo Err
         End If
         rsGravaLV.Open SqlGravaLV, cnBanco
     Next
-    x = 0
-    While vGuardaData(x, 0) <> ""
-        If vGuardaData(x, 2) <> "" Then
-            sqlGuardaDataProg = "update tbMPItens set dataprogramacao = '" & Format(vGuardaData(x, 2), "yyyy-mm-dd") & "' where idprogramacao = '" & Val(vGuardaData(x, 0)) & "' and idoperacao = '" & Val(vGuardaData(x, 1)) & "'"
+    X = 0
+    While vGuardaData(X, 0) <> ""
+        If vGuardaData(X, 2) <> "" Then
+            sqlGuardaDataProg = "update tbMPItens set dataprogramacao = '" & Format(vGuardaData(X, 2), "yyyy-mm-dd") & "' where idprogramacao = '" & Val(vGuardaData(X, 0)) & "' and idoperacao = '" & Val(vGuardaData(X, 1)) & "'"
             rsGuardaDataProg.Open sqlGuardaDataProg, cnBanco
         End If
-        If vGuardaData(x, 3) <> "" Then
-            sqlGuardaDataProg = "update tbMPItens set databaixa = '" & Format(vGuardaData(x, 3), "yyyy-mm-dd") & "' where idprogramacao = '" & Val(vGuardaData(x, 0)) & "' and idoperacao = '" & Val(vGuardaData(x, 1)) & "'"
+        If vGuardaData(X, 3) <> "" Then
+            sqlGuardaDataProg = "update tbMPItens set databaixa = '" & Format(vGuardaData(X, 3), "yyyy-mm-dd") & "' where idprogramacao = '" & Val(vGuardaData(X, 0)) & "' and idoperacao = '" & Val(vGuardaData(X, 1)) & "'"
             rsGuardaDataProg.Open sqlGuardaDataProg, cnBanco
         End If
         
-        x = x + 1
+        X = X + 1
     Wend
-    For x = 0 To 49
-        For y = 0 To 3
-            vGuardaData(x, y) = ""
+    For X = 0 To 49
+        For Y = 0 To 3
+            vGuardaData(X, Y) = ""
         Next
-    Next x
+    Next X
     cnBanco.CommitTrans
     Exit Function
 Err:
@@ -4564,7 +4556,7 @@ End Function
 
 
 Private Function limpaQualquerDado()
-    Dim x As Integer, y As Integer
+    Dim X As Integer, Y As Integer
 '    For X = LBound(vQualquerDado) To UBound(vQualquerDado)
 End Function
 

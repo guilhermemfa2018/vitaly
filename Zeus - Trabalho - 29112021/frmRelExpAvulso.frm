@@ -45,8 +45,7 @@ Begin VB.Form frmRelExpAvulso
       Style           =   1  'Graphical
       TabIndex        =   35
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   7560
+      Top             =   7680
       Width           =   615
    End
    Begin VB.CommandButton cmdCadastro 
@@ -66,8 +65,7 @@ Begin VB.Form frmRelExpAvulso
       Style           =   1  'Graphical
       TabIndex        =   34
       Tag             =   "Salvar Relatório"
-      ToolTipText     =   "Salvar Relatório"
-      Top             =   7560
+      Top             =   7680
       Width           =   615
    End
    Begin VB.Frame Frame2 
@@ -129,7 +127,7 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   155910145
+         Format          =   168493057
          CurrentDate     =   40449
       End
    End
@@ -377,7 +375,7 @@ Begin VB.Form frmRelExpAvulso
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   4575
+      Height          =   4335
       Left            =   120
       TabIndex        =   40
       Top             =   3240
@@ -1415,7 +1413,7 @@ Private Sub Form_Load()
     txtLvw = ""
     txtLvw.Visible = False
     txtLvw.Tag = False 'is ListView2 dirty, not used in this example
-    
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -1424,6 +1422,16 @@ Private Sub Form_Load()
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdExpAvulso(3), 3, 46 'Inserir
+    carregaImagemBotao cmdExpAvulso(4), 4, 31 'Novo
+    carregaImagemBotao cmdExpAvulso(5), 5, 32 'Editar
+    carregaImagemBotao cmdExpAvulso(6), 6, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(6), 6, 34 'Sair
 End Sub
 
 Private Sub ListView1_DblClick()
@@ -1884,25 +1892,6 @@ Dim si As SCROLLINFO
     GetScrollInfo ListView1.HWnd, fnBar, si
     ScrollBarVisible = si.nPage <> si.nMax + 1 'maxScrollPos=0 if scrollbar is invinsible
 End Function
-
-'FUNCAO PARA MUDAR TOOLTIPS
-Private Sub MudaTool()
-    On Error Resume Next
-    Dim Ctl As Control
-    Dim i As Integer
-    With Me.cIpToolTips1
-        .Create
-        .Title = "Atenção:" 'Titulo do tooltip
-        .MyIcon = itInfoIcon 'Icone do tooltip
-        .BackColor = &H80000018  'Cor de fundo
-        .ForeColor = &H800000    'Cor da letra e bordas
-        For Each Ctl In Me.Controls
-            If Ctl.Tag <> "" Then
-                .AddTool Ctl, tfAbsolute, Replace(Ctl.Tag, "|", vbCrLf)
-            End If
-        Next
-    End With
-End Sub
 
 Private Sub SelecionaLinha()
     Dim Y As Integer

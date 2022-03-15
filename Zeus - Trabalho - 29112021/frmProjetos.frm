@@ -18,6 +18,18 @@ Begin VB.Form frmProjetos
    ScaleWidth      =   10710
    StartUpPosition =   2  'CenterScreen
    Tag             =   "Projetos"
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   11
+      Left            =   120
+      Picture         =   "frmProjetos.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   19
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   7560
+      Width           =   615
+   End
    Begin VB.Frame Frame1 
       Caption         =   "Dados do Projeto "
       BeginProperty Font 
@@ -31,15 +43,87 @@ Begin VB.Form frmProjetos
       EndProperty
       Height          =   7335
       Left            =   120
-      TabIndex        =   12
+      TabIndex        =   7
       Top             =   120
       Width           =   10455
+      Begin VB.CommandButton cmdcadastro 
+         Caption         =   "..."
+         Height          =   255
+         Index           =   0
+         Left            =   4920
+         TabIndex        =   20
+         Top             =   480
+         Width           =   375
+      End
+      Begin VB.CommandButton cmdcadastro 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   7
+         Left            =   1320
+         Picture         =   "frmProjetos.frx":1994
+         Style           =   1  'Graphical
+         TabIndex        =   16
+         Tag             =   "Excluir"
+         ToolTipText     =   "Excluir"
+         Top             =   3000
+         Width           =   615
+      End
+      Begin VB.CommandButton cmdcadastro 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   6
+         Left            =   720
+         Picture         =   "frmProjetos.frx":265E
+         Style           =   1  'Graphical
+         TabIndex        =   17
+         Tag             =   "Editar"
+         ToolTipText     =   "Editar"
+         Top             =   3000
+         Width           =   615
+      End
+      Begin VB.CommandButton cmdcadastro 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   5
+         Left            =   120
+         Picture         =   "frmProjetos.frx":3328
+         Style           =   1  'Graphical
+         TabIndex        =   18
+         Tag             =   "Incluir"
+         ToolTipText     =   "Incluir"
+         Top             =   3000
+         Width           =   615
+      End
       Begin VB.TextBox txtCadastro 
          Height          =   1125
          Index           =   4
          Left            =   120
          MultiLine       =   -1  'True
-         TabIndex        =   6
+         TabIndex        =   5
          Tag             =   "Observação"
          ToolTipText     =   "Observação"
          Top             =   1680
@@ -49,7 +133,7 @@ Begin VB.Form frmProjetos
          Height          =   285
          Index           =   3
          Left            =   120
-         TabIndex        =   5
+         TabIndex        =   4
          Tag             =   "Descrição"
          ToolTipText     =   "Descrição"
          Top             =   1080
@@ -59,7 +143,7 @@ Begin VB.Form frmProjetos
          Height          =   285
          Index           =   5
          Left            =   9000
-         TabIndex        =   4
+         TabIndex        =   3
          ToolTipText     =   "Nº Ordem de Compra do cliente"
          Top             =   480
          Width           =   1335
@@ -68,7 +152,7 @@ Begin VB.Form frmProjetos
          Height          =   285
          Index           =   2
          Left            =   5520
-         TabIndex        =   3
+         TabIndex        =   2
          Tag             =   "Projeto nº"
          ToolTipText     =   "Projeto nº"
          Top             =   480
@@ -87,13 +171,13 @@ Begin VB.Form frmProjetos
       Begin MSComCtl2.DTPicker DTPicker1 
          Height          =   285
          Left            =   1800
-         TabIndex        =   13
+         TabIndex        =   8
          Top             =   480
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   503
          _Version        =   393216
-         Format          =   90046465
+         Format          =   165150721
          CurrentDate     =   40449
       End
       Begin VB.TextBox txtCadastro 
@@ -110,102 +194,63 @@ Begin VB.Form frmProjetos
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmProjetos.frx":0CCA
-         TabIndex        =   20
+         OleObjectBlob   =   "frmProjetos.frx":3FF2
+         TabIndex        =   15
          Top             =   1440
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmProjetos.frx":0D3E
-         TabIndex        =   19
+         OleObjectBlob   =   "frmProjetos.frx":4066
+         TabIndex        =   14
          Top             =   840
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   9000
-         OleObjectBlob   =   "frmProjetos.frx":0DB0
-         TabIndex        =   18
+         OleObjectBlob   =   "frmProjetos.frx":40D8
+         TabIndex        =   13
          Top             =   240
          Width           =   615
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   5520
-         OleObjectBlob   =   "frmProjetos.frx":0E1A
-         TabIndex        =   17
+         OleObjectBlob   =   "frmProjetos.frx":4142
+         TabIndex        =   12
          Top             =   240
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   3240
-         OleObjectBlob   =   "frmProjetos.frx":0E8E
-         TabIndex        =   16
+         OleObjectBlob   =   "frmProjetos.frx":41B6
+         TabIndex        =   11
          Top             =   240
          Width           =   735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1800
-         OleObjectBlob   =   "frmProjetos.frx":0EFA
-         TabIndex        =   15
+         OleObjectBlob   =   "frmProjetos.frx":4222
+         TabIndex        =   10
          Top             =   240
          Width           =   495
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmProjetos.frx":0F62
-         TabIndex        =   14
+         OleObjectBlob   =   "frmProjetos.frx":428A
+         TabIndex        =   9
          Top             =   240
          Width           =   855
-      End
-      Begin ZEUS.chameleonButton cmdcadastro 
-         Height          =   255
-         Index           =   0
-         Left            =   4920
-         TabIndex        =   2
-         Top             =   480
-         Width           =   375
-         _ExtentX        =   661
-         _ExtentY        =   450
-         BTYPE           =   4
-         TX              =   "..."
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmProjetos.frx":0FCE
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
       End
       Begin MSComctlLib.TreeView TreeView1 
          Height          =   3495
          Left            =   120
-         TabIndex        =   10
+         TabIndex        =   6
          Top             =   3720
          Width           =   10095
          _ExtentX        =   17806
@@ -216,166 +261,6 @@ Begin VB.Form frmProjetos
          Style           =   7
          Appearance      =   1
       End
-      Begin ZEUS.chameleonButton cmdcadastro 
-         Height          =   615
-         Index           =   7
-         Left            =   1320
-         TabIndex        =   9
-         Top             =   3000
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   2
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmProjetos.frx":0FEA
-         PICN            =   "frmProjetos.frx":1006
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-      Begin ZEUS.chameleonButton cmdcadastro 
-         Height          =   615
-         Index           =   6
-         Left            =   720
-         TabIndex        =   8
-         Top             =   3000
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   2
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmProjetos.frx":1CE0
-         PICN            =   "frmProjetos.frx":1CFC
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-      Begin ZEUS.chameleonButton cmdcadastro 
-         Height          =   615
-         Index           =   5
-         Left            =   120
-         TabIndex        =   7
-         Top             =   3000
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   2
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmProjetos.frx":29D6
-         PICN            =   "frmProjetos.frx":29F2
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   11
-      Left            =   120
-      TabIndex        =   11
-      Top             =   7560
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmProjetos.frx":36CC
-      PICN            =   "frmProjetos.frx":36E8
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmProjetos"
@@ -426,12 +311,21 @@ Private Sub Form_Load()
     frmProjetos.Top = 0
     txtCadastro(0).Text = Format(GeraCodigo, "000000")
     CompoeTreeview
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdcadastro(5), 5, 46 'Inserir
+    carregaImagemBotao cmdcadastro(6), 6, 32 'Editar
+    carregaImagemBotao cmdcadastro(7), 7, 33 'Excluir
+    carregaImagemBotao cmdcadastro(11), 11, 34 'Sair
 End Sub
 
 Private Sub AbrirProjeto()

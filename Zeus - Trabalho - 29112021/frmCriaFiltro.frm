@@ -633,23 +633,6 @@ Private Sub Form_Load()
     Set vPonte6 = Me.Controls.Add("VB.TextBox", "vPonte6")
     ConexaoTotvs
     listview_cabecalho
-'    chamaSQL "SELECT COLUMN_NAME, DATA_TYPE, '',TABLE_NAME From INFORMATION_SCHEMA.Columns " & _
-'             "Where TABLE_NAME = '" & vTabela1 & "' or " & _
-'             "TABLE_NAME = '" & vTabela2 & "' or " & _
-'             "TABLE_NAME = '" & vTabela3 & "' or " & _
-'             "TABLE_NAME = '" & vTabela4 & "' or " & _
-'             "TABLE_NAME = '" & vTabela5 & "' or " & _
-'             "TABLE_NAME = '" & vTabela6 & "' or " & _
-'             "TABLE_NAME = '" & vTabela7 & "' or " & _
-'             "TABLE_NAME = '" & vTabela8 & "' or " & _
-'             "TABLE_NAME = '" & vTabela9 & "' or " & _
-'             "TABLE_NAME = '" & vTabela10 & "' or " & _
-'             "TABLE_NAME = '" & vTabela11 & "' or " & _
-'             "TABLE_NAME = '" & vTabela12 & "' or " & _
-'             "TABLE_NAME = '" & vTabela13 & "' or " & _
-'             "TABLE_NAME = '" & vTabela14 & "' or " & _
-'             "TABLE_NAME = '" & vTabela15 & "' order by TABLE_NAME,COLUMN_NAME "
-    
 
     vStringTable = vStringTable & "SELECT COLUMN_NAME, DATA_TYPE, '', TABLE_NAME " & vbCrLf
     vStringTable = vStringTable & "FROM CORPORERM.INFORMATION_SCHEMA.Columns " & vbCrLf
@@ -693,22 +676,23 @@ Private Sub Form_Load()
     
     chamaSQL vStringTable
     
-    
-    
-
-    
-    
-    
     Compoe_ListviewFiltro ListView1, Sqlp, "00"
-    'tabelaRM
+
+    carregarIconBotao
     
-    'Unload chamaForm
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao Command1, 7, 46 'Inserir
+    carregaImagemBotao Command2, 9, 32 'Editar
+    carregaImagemBotao Command3, 10, 33 'Excluir
+    carregaImagemBotao Command4, 11, 45 'Salvar
 End Sub
 
 Private Sub tabelaRM()

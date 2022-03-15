@@ -14,122 +14,32 @@ Begin VB.Form frmPesqger2
    ScaleHeight     =   5970
    ScaleWidth      =   6960
    StartUpPosition =   2  'CenterScreen
-   Begin ZEUS.chameleonButton chameleonButton3 
+   Begin VB.CommandButton chameleonButton3 
       Height          =   615
-      Left            =   6120
-      TabIndex        =   3
+      Left            =   6000
+      Picture         =   "frmPesqger2.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   6
       Top             =   240
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   8
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPesqger2.frx":0CCA
-      PICN            =   "frmPesqger2.frx":0CE6
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
-   Begin ZEUS.chameleonButton chameleonButton2 
+   Begin VB.CommandButton chameleonButton2 
       Height          =   615
       Left            =   720
+      Picture         =   "frmPesqger2.frx":1994
+      Style           =   1  'Graphical
       TabIndex        =   5
       Top             =   5280
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPesqger2.frx":19C0
-      PICN            =   "frmPesqger2.frx":19DC
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
-   Begin ZEUS.chameleonButton chameleonButton1 
+   Begin VB.CommandButton chameleonButton1 
       Height          =   615
       Left            =   120
-      TabIndex        =   2
+      Picture         =   "frmPesqger2.frx":265E
+      Style           =   1  'Graphical
+      TabIndex        =   4
       Top             =   5280
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPesqger2.frx":26B6
-      PICN            =   "frmPesqger2.frx":26D2
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame2 
       Caption         =   "Pesquisa"
@@ -144,15 +54,15 @@ Begin VB.Form frmPesqger2
       EndProperty
       Height          =   735
       Left            =   120
-      TabIndex        =   6
+      TabIndex        =   3
       Top             =   120
       Width           =   5775
       Begin VB.ComboBox Combo1 
          Height          =   315
-         ItemData        =   "frmPesqger2.frx":33AC
+         ItemData        =   "frmPesqger2.frx":3328
          Left            =   120
-         List            =   "frmPesqger2.frx":33AE
-         TabIndex        =   4
+         List            =   "frmPesqger2.frx":332A
+         TabIndex        =   2
          Top             =   240
          Width           =   1695
       End
@@ -273,6 +183,7 @@ End Sub
 
 Private Sub Form_Activate()
     Me.Text1.SetFocus
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -328,6 +239,12 @@ Private Sub Text1_KeyDown(KeyCode As Integer, Shift As Integer)
     If KeyCode = 13 Then ' Ao teclar ENTER no TexBox Text1 chama a Sub Pesquisar
         Pesquisar ' Sub que realiza a Pesquisa no Listview mediante ao que foi digitado no TexBox Text1 e ao q foi selecionado no ComboBox Combo1
     End If
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao chameleonButton1, 7, 49 'Verificar
+    carregaImagemBotao chameleonButton2, 8, 34 'Sair
+    carregaImagemBotao chameleonButton3, 9, 8 'Pesquisar
 End Sub
 
 Private Sub Pesquisar(Optional Column As ColumnHeader = Nothing)

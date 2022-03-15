@@ -25,10 +25,34 @@ Begin VB.Form frmComunicacaoDesvio
    ScaleHeight     =   6975
    ScaleWidth      =   8415
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdCD 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmComunicacaoDesvio.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   18
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   6240
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdCD 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmComunicacaoDesvio.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   19
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   6240
+      Width           =   615
+   End
    Begin VB.TextBox txtRNC 
       Height          =   375
       Left            =   2280
-      TabIndex        =   19
+      TabIndex        =   17
       Top             =   5880
       Visible         =   0   'False
       Width           =   2295
@@ -37,7 +61,7 @@ Begin VB.Form frmComunicacaoDesvio
       Caption         =   "Gerar retrabalho?"
       Height          =   375
       Left            =   240
-      TabIndex        =   18
+      TabIndex        =   16
       Top             =   5760
       Width           =   7935
    End
@@ -45,14 +69,14 @@ Begin VB.Form frmComunicacaoDesvio
       Caption         =   "Revisão nº"
       Height          =   735
       Left            =   6240
-      TabIndex        =   16
+      TabIndex        =   14
       Top             =   120
       Width           =   2055
       Begin VB.TextBox txtCD 
          Height          =   375
          Index           =   5
          Left            =   120
-         TabIndex        =   17
+         TabIndex        =   15
          Tag             =   "nº da revisão da OS"
          ToolTipText     =   "nº da revisão da OS"
          Top             =   240
@@ -62,51 +86,11 @@ Begin VB.Form frmComunicacaoDesvio
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   375
       Left            =   1560
-      OleObjectBlob   =   "frmComunicacaoDesvio.frx":0CCA
-      TabIndex        =   15
+      OleObjectBlob   =   "frmComunicacaoDesvio.frx":265E
+      TabIndex        =   13
       Top             =   6360
       Visible         =   0   'False
       Width           =   6735
-   End
-   Begin ZEUS.chameleonButton cmdCD 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   8
-      Top             =   6240
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmComunicacaoDesvio.frx":0D24
-      PICN            =   "frmComunicacaoDesvio.frx":0D40
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame2 
       Caption         =   "Dados da Comunicação "
@@ -121,7 +105,7 @@ Begin VB.Form frmComunicacaoDesvio
       EndProperty
       Height          =   4815
       Left            =   120
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   960
       Width           =   8175
       Begin VB.TextBox txtCD 
@@ -154,8 +138,8 @@ Begin VB.Form frmComunicacaoDesvio
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1800
-         OleObjectBlob   =   "frmComunicacaoDesvio.frx":1A1A
-         TabIndex        =   14
+         OleObjectBlob   =   "frmComunicacaoDesvio.frx":26B8
+         TabIndex        =   12
          Top             =   240
          Width           =   4935
       End
@@ -182,8 +166,8 @@ Begin VB.Form frmComunicacaoDesvio
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmComunicacaoDesvio.frx":1AD2
-         TabIndex        =   12
+         OleObjectBlob   =   "frmComunicacaoDesvio.frx":2770
+         TabIndex        =   10
          Top             =   960
          Width           =   6855
       End
@@ -207,14 +191,14 @@ Begin VB.Form frmComunicacaoDesvio
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   90046465
+         Format          =   165085185
          CurrentDate     =   41366
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmComunicacaoDesvio.frx":1B7E
-         TabIndex        =   13
+         OleObjectBlob   =   "frmComunicacaoDesvio.frx":281C
+         TabIndex        =   11
          Top             =   240
          Width           =   1575
       End
@@ -232,7 +216,7 @@ Begin VB.Form frmComunicacaoDesvio
       EndProperty
       Height          =   735
       Left            =   120
-      TabIndex        =   10
+      TabIndex        =   8
       Top             =   120
       Width           =   1935
       Begin VB.TextBox txtCD 
@@ -269,7 +253,7 @@ Begin VB.Form frmComunicacaoDesvio
       EndProperty
       Height          =   735
       Left            =   2160
-      TabIndex        =   9
+      TabIndex        =   7
       Top             =   120
       Width           =   3975
       Begin VB.TextBox txtCD 
@@ -281,46 +265,6 @@ Begin VB.Form frmComunicacaoDesvio
          Top             =   240
          Width           =   3735
       End
-   End
-   Begin ZEUS.chameleonButton cmdCD 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   7
-      Top             =   6240
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmComunicacaoDesvio.frx":1BF8
-      PICN            =   "frmComunicacaoDesvio.frx":1C14
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmComunicacaoDesvio"
@@ -368,6 +312,7 @@ End Sub
 Private Sub Form_Load()
     txtCD(0).Text = Format(GeraCodigoTB("tbComunicacaoDesvio", "idcd", "", ""), "000000")
     DTPicker2 = Date
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -397,6 +342,11 @@ End Sub
 Private Sub txtCD_LostFocus(Index As Integer)
     voltaCorText txtCD(Index)
     valida_OS
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCD(0), 0, 45 'Salvar
+    carregaImagemBotao cmdCD(1), 1, 34 'Sair
 End Sub
 
 Private Function chamaChapa()

@@ -16,6 +16,30 @@ Begin VB.Form frmCD
    ScaleHeight     =   4605
    ScaleWidth      =   10800
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmCD.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   42
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   3840
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmCD.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   43
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   3840
+      Width           =   615
+   End
    Begin VB.Frame Frame6 
       Caption         =   "Status"
       Enabled         =   0   'False
@@ -30,7 +54,7 @@ Begin VB.Form frmCD
       EndProperty
       Height          =   615
       Left            =   9600
-      TabIndex        =   37
+      TabIndex        =   35
       Top             =   3840
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -38,7 +62,7 @@ Begin VB.Form frmCD
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   19
+         TabIndex        =   17
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
@@ -57,15 +81,15 @@ Begin VB.Form frmCD
       EndProperty
       Height          =   615
       Left            =   2160
-      TabIndex        =   35
+      TabIndex        =   33
       Top             =   120
       Width           =   3255
       Begin VB.ComboBox cboContDes 
          Height          =   315
          Index           =   0
-         ItemData        =   "frmCD.frx":0CCA
+         ItemData        =   "frmCD.frx":265E
          Left            =   120
-         List            =   "frmCD.frx":0CD4
+         List            =   "frmCD.frx":2668
          TabIndex        =   1
          Tag             =   "Status"
          Text            =   "Aguardando"
@@ -73,86 +97,6 @@ Begin VB.Form frmCD
          Top             =   240
          Width           =   3015
       End
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   18
-      Top             =   3840
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmCD.frx":0CEF
-      PICN            =   "frmCD.frx":0D0B
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   17
-      Top             =   3840
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmCD.frx":19E5
-      PICN            =   "frmCD.frx":1A01
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame4 
       Caption         =   "Registro de andamento"
@@ -167,7 +111,7 @@ Begin VB.Form frmCD
       EndProperty
       Height          =   3615
       Left            =   5520
-      TabIndex        =   30
+      TabIndex        =   28
       Top             =   120
       Width           =   5175
       Begin VB.ComboBox cboContDes 
@@ -183,8 +127,8 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   2640
-         OleObjectBlob   =   "frmCD.frx":26DB
-         TabIndex        =   38
+         OleObjectBlob   =   "frmCD.frx":2683
+         TabIndex        =   36
          Top             =   240
          Width           =   1215
       End
@@ -202,8 +146,8 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":274F
-         TabIndex        =   36
+         OleObjectBlob   =   "frmCD.frx":26F7
+         TabIndex        =   34
          Top             =   1440
          Width           =   1575
       End
@@ -228,7 +172,7 @@ Begin VB.Form frmCD
          _ExtentX        =   2778
          _ExtentY        =   503
          _Version        =   393216
-         Format          =   155975681
+         Format          =   165019649
          CurrentDate     =   41366
       End
       Begin MSComCtl2.DTPicker DTPicker2 
@@ -242,7 +186,7 @@ Begin VB.Form frmCD
          _ExtentX        =   2778
          _ExtentY        =   503
          _Version        =   393216
-         Format          =   155975681
+         Format          =   165019649
          CurrentDate     =   41366
       End
       Begin VB.TextBox txtContDes 
@@ -259,32 +203,32 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   3480
-         OleObjectBlob   =   "frmCD.frx":27C3
-         TabIndex        =   34
+         OleObjectBlob   =   "frmCD.frx":276B
+         TabIndex        =   32
          Top             =   840
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
          Height          =   255
          Left            =   1800
-         OleObjectBlob   =   "frmCD.frx":2835
-         TabIndex        =   33
+         OleObjectBlob   =   "frmCD.frx":27DD
+         TabIndex        =   31
          Top             =   840
          Width           =   855
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":28A5
-         TabIndex        =   32
+         OleObjectBlob   =   "frmCD.frx":284D
+         TabIndex        =   30
          Top             =   840
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":291B
-         TabIndex        =   31
+         OleObjectBlob   =   "frmCD.frx":28C3
+         TabIndex        =   29
          Top             =   240
          Width           =   1815
       End
@@ -302,7 +246,7 @@ Begin VB.Form frmCD
       EndProperty
       Height          =   2895
       Left            =   120
-      TabIndex        =   21
+      TabIndex        =   19
       Top             =   840
       Width           =   5295
       Begin VB.TextBox txtContDes 
@@ -319,15 +263,15 @@ Begin VB.Form frmCD
          Height          =   285
          Index           =   12
          Left            =   3960
-         TabIndex        =   43
+         TabIndex        =   41
          Top             =   480
          Width           =   1215
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   3960
-         OleObjectBlob   =   "frmCD.frx":2989
-         TabIndex        =   42
+         OleObjectBlob   =   "frmCD.frx":2931
+         TabIndex        =   40
          Top             =   240
          Width           =   975
       End
@@ -345,15 +289,15 @@ Begin VB.Form frmCD
          Height          =   285
          Index           =   11
          Left            =   1080
-         TabIndex        =   41
+         TabIndex        =   39
          Top             =   1080
          Width           =   4095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   1200
-         OleObjectBlob   =   "frmCD.frx":29FD
-         TabIndex        =   40
+         OleObjectBlob   =   "frmCD.frx":29A5
+         TabIndex        =   38
          Top             =   840
          Width           =   735
       End
@@ -361,7 +305,7 @@ Begin VB.Form frmCD
          Caption         =   "..."
          Height          =   255
          Left            =   3480
-         TabIndex        =   39
+         TabIndex        =   37
          Top             =   480
          Width           =   375
       End
@@ -375,7 +319,7 @@ Begin VB.Form frmCD
          _ExtentX        =   2778
          _ExtentY        =   503
          _Version        =   393216
-         Format          =   155975681
+         Format          =   162267137
          CurrentDate     =   41366
       End
       Begin VB.TextBox txtContDes 
@@ -392,8 +336,8 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   2400
-         OleObjectBlob   =   "frmCD.frx":2A6B
-         TabIndex        =   29
+         OleObjectBlob   =   "frmCD.frx":2A13
+         TabIndex        =   27
          Top             =   1440
          Width           =   975
       End
@@ -470,15 +414,15 @@ Begin VB.Form frmCD
          EndProperty
          Height          =   735
          Left            =   120
-         TabIndex        =   28
+         TabIndex        =   26
          Top             =   2040
          Width           =   5055
          Begin VB.ComboBox cboContDes 
             Height          =   315
             Index           =   1
-            ItemData        =   "frmCD.frx":2ADF
+            ItemData        =   "frmCD.frx":2A87
             Left            =   1440
-            List            =   "frmCD.frx":2AE9
+            List            =   "frmCD.frx":2A91
             TabIndex        =   10
             Tag             =   "Previsão de detalhamento"
             Text            =   "Dias"
@@ -500,48 +444,48 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   3600
-         OleObjectBlob   =   "frmCD.frx":2AFA
-         TabIndex        =   27
+         OleObjectBlob   =   "frmCD.frx":2AA2
+         TabIndex        =   25
          Top             =   1440
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   1080
-         OleObjectBlob   =   "frmCD.frx":2B6A
-         TabIndex        =   26
+         OleObjectBlob   =   "frmCD.frx":2B12
+         TabIndex        =   24
          Top             =   1440
          Width           =   1215
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2BE8
-         TabIndex        =   25
+         OleObjectBlob   =   "frmCD.frx":2B90
+         TabIndex        =   23
          Top             =   1440
          Width           =   615
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmCD.frx":2C54
-         TabIndex        =   24
+         OleObjectBlob   =   "frmCD.frx":2BFC
+         TabIndex        =   22
          Top             =   240
          Width           =   735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2CC2
-         TabIndex        =   23
+         OleObjectBlob   =   "frmCD.frx":2C6A
+         TabIndex        =   21
          Top             =   240
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2D30
-         TabIndex        =   22
+         OleObjectBlob   =   "frmCD.frx":2CD8
+         TabIndex        =   20
          Top             =   840
          Width           =   975
       End
@@ -559,7 +503,7 @@ Begin VB.Form frmCD
       EndProperty
       Height          =   615
       Left            =   120
-      TabIndex        =   20
+      TabIndex        =   18
       Top             =   120
       Width           =   1935
       Begin VB.TextBox txtContDes 
@@ -659,12 +603,18 @@ Private Sub Form_Load()
         End If
     End If
     'configControles
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 45 'Salvar
+    carregaImagemBotao cmdCadastro(1), 1, 34 'Sair
 End Sub
 
 Private Sub GravarDados()

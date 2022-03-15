@@ -18,10 +18,52 @@ Begin VB.Form frmProcessos
    ScaleHeight     =   8565
    ScaleWidth      =   9840
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdcadastro 
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   11
+      Left            =   720
+      Picture         =   "frmProcessos.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   33
+      Tag             =   "Editar constante"
+      ToolTipText     =   "Editar constante"
+      Top             =   7800
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdcadastro 
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   12
+      Left            =   120
+      Picture         =   "frmProcessos.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   34
+      Tag             =   "Insere nova constante"
+      ToolTipText     =   "Insere nova constante"
+      Top             =   7800
+      Width           =   615
+   End
    Begin TabDlg.SSTab SSTab1 
       Height          =   7575
       Left            =   120
-      TabIndex        =   18
+      TabIndex        =   11
       Top             =   120
       Width           =   9615
       _ExtentX        =   16960
@@ -31,13 +73,13 @@ Begin VB.Form frmProcessos
       TabsPerRow      =   2
       TabHeight       =   520
       TabCaption(0)   =   "Processos"
-      TabPicture(0)   =   "frmProcessos.frx":0CCA
+      TabPicture(0)   =   "frmProcessos.frx":265E
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame1"
       Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Fases"
-      TabPicture(1)   =   "frmProcessos.frx":0CE6
+      TabPicture(1)   =   "frmProcessos.frx":267A
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame2"
       Tab(1).Control(1)=   "Frame3"
@@ -55,9 +97,72 @@ Begin VB.Form frmProcessos
          EndProperty
          Height          =   6735
          Left            =   120
-         TabIndex        =   21
+         TabIndex        =   14
          Top             =   360
          Width           =   9375
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   2
+            Left            =   1320
+            Picture         =   "frmProcessos.frx":2696
+            Style           =   1  'Graphical
+            TabIndex        =   27
+            Tag             =   "Exclui constante selecionada"
+            ToolTipText     =   "Exclui constante selecionada"
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   1
+            Left            =   720
+            Picture         =   "frmProcessos.frx":3360
+            Style           =   1  'Graphical
+            TabIndex        =   28
+            Tag             =   "Editar constante"
+            ToolTipText     =   "Editar constante"
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   0
+            Left            =   120
+            Picture         =   "frmProcessos.frx":402A
+            Style           =   1  'Graphical
+            TabIndex        =   29
+            Tag             =   "Insere nova constante"
+            ToolTipText     =   "Insere nova constante"
+            Top             =   840
+            Width           =   615
+         End
          Begin VB.TextBox txtCadastro 
             Height          =   285
             Index           =   0
@@ -93,143 +198,23 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmProcessos.frx":0D02
-            TabIndex        =   33
+            OleObjectBlob   =   "frmProcessos.frx":4CF4
+            TabIndex        =   24
             Top             =   240
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":0D74
-            TabIndex        =   32
+            OleObjectBlob   =   "frmProcessos.frx":4D66
+            TabIndex        =   23
             Top             =   240
             Width           =   615
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   2
-            Left            =   1320
-            TabIndex        =   4
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":0DE0
-            PICN            =   "frmProcessos.frx":0DFC
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   1
-            Left            =   720
-            TabIndex        =   3
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":1AD6
-            PICN            =   "frmProcessos.frx":1AF2
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   0
-            Left            =   120
-            TabIndex        =   2
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":27CC
-            PICN            =   "frmProcessos.frx":27E8
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
          Begin MSComctlLib.ListView ListView1 
             Height          =   5055
             Left            =   120
-            TabIndex        =   5
+            TabIndex        =   2
             Top             =   1560
             Width           =   9135
             _ExtentX        =   16113
@@ -261,14 +246,77 @@ Begin VB.Form frmProcessos
          EndProperty
          Height          =   5895
          Left            =   -74880
-         TabIndex        =   20
+         TabIndex        =   13
          Top             =   1440
          Width           =   9375
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   7
+            Left            =   1320
+            Picture         =   "frmProcessos.frx":4DD2
+            Style           =   1  'Graphical
+            TabIndex        =   30
+            Tag             =   "Exclui constante selecionada"
+            ToolTipText     =   "Exclui constante selecionada"
+            Top             =   960
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   6
+            Left            =   720
+            Picture         =   "frmProcessos.frx":5A9C
+            Style           =   1  'Graphical
+            TabIndex        =   31
+            Tag             =   "Editar constante"
+            ToolTipText     =   "Editar constante"
+            Top             =   960
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   5
+            Left            =   120
+            Picture         =   "frmProcessos.frx":6766
+            Style           =   1  'Graphical
+            TabIndex        =   32
+            Tag             =   "Insere nova constante"
+            ToolTipText     =   "Insere nova constante"
+            Top             =   960
+            Width           =   615
+         End
          Begin VB.TextBox txtCadastro 
             Height          =   285
             Index           =   4
             Left            =   5640
-            TabIndex        =   11
+            TabIndex        =   7
             Tag             =   "Título da FASE que irá ser exibido nos Relatórios de Inspeção de Fabricação"
             ToolTipText     =   "Título da FASE que irá ser exibido nos Relatórios de Inspeção de Fabricação"
             Top             =   480
@@ -278,7 +326,7 @@ Begin VB.Form frmProcessos
             Height          =   285
             Index           =   2
             Left            =   1200
-            TabIndex        =   10
+            TabIndex        =   6
             Top             =   480
             Width           =   4335
          End
@@ -286,7 +334,7 @@ Begin VB.Form frmProcessos
             Height          =   285
             Index           =   2
             Left            =   120
-            TabIndex        =   9
+            TabIndex        =   5
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
@@ -309,24 +357,24 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   5640
-            OleObjectBlob   =   "frmProcessos.frx":34C2
-            TabIndex        =   31
+            OleObjectBlob   =   "frmProcessos.frx":7430
+            TabIndex        =   22
             Top             =   240
             Width           =   1335
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmProcessos.frx":352E
-            TabIndex        =   30
+            OleObjectBlob   =   "frmProcessos.frx":749C
+            TabIndex        =   21
             Top             =   240
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":35A0
-            TabIndex        =   29
+            OleObjectBlob   =   "frmProcessos.frx":750E
+            TabIndex        =   20
             Top             =   240
             Width           =   735
          End
@@ -343,22 +391,22 @@ Begin VB.Form frmProcessos
             EndProperty
             Height          =   735
             Left            =   7800
-            TabIndex        =   26
+            TabIndex        =   17
             Top             =   840
             Width           =   1455
             Begin ACTIVESKINLibCtl.SkinLabel Label7 
                Height          =   375
                Left            =   240
-               OleObjectBlob   =   "frmProcessos.frx":360C
-               TabIndex        =   34
+               OleObjectBlob   =   "frmProcessos.frx":757A
+               TabIndex        =   25
                Top             =   240
                Width           =   495
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
                Height          =   375
                Left            =   840
-               OleObjectBlob   =   "frmProcessos.frx":3664
-               TabIndex        =   35
+               OleObjectBlob   =   "frmProcessos.frx":75D2
+               TabIndex        =   26
                Top             =   240
                Width           =   375
             End
@@ -376,14 +424,14 @@ Begin VB.Form frmProcessos
             EndProperty
             Height          =   735
             Left            =   5520
-            TabIndex        =   25
+            TabIndex        =   16
             Top             =   840
             Width           =   2175
             Begin VB.TextBox txtCadastro 
                Height          =   285
                Index           =   3
                Left            =   480
-               TabIndex        =   13
+               TabIndex        =   9
                Top             =   240
                Width           =   1215
             End
@@ -401,15 +449,15 @@ Begin VB.Form frmProcessos
             EndProperty
             Height          =   735
             Left            =   4200
-            TabIndex        =   24
+            TabIndex        =   15
             Top             =   840
             Width           =   1215
             Begin VB.ComboBox Combo1 
                Height          =   315
-               ItemData        =   "frmProcessos.frx":36BC
+               ItemData        =   "frmProcessos.frx":762A
                Left            =   120
-               List            =   "frmProcessos.frx":36C6
-               TabIndex        =   12
+               List            =   "frmProcessos.frx":7634
+               TabIndex        =   8
                Text            =   "Não"
                Top             =   240
                Width           =   975
@@ -418,7 +466,7 @@ Begin VB.Form frmProcessos
          Begin MSComctlLib.TreeView TreeView1 
             Height          =   3975
             Left            =   120
-            TabIndex        =   17
+            TabIndex        =   10
             Top             =   1680
             Width           =   9135
             _ExtentX        =   16113
@@ -428,126 +476,6 @@ Begin VB.Form frmProcessos
             LineStyle       =   1
             Style           =   7
             Appearance      =   1
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   7
-            Left            =   1320
-            TabIndex        =   16
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":36D4
-            PICN            =   "frmProcessos.frx":36F0
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   6
-            Left            =   720
-            TabIndex        =   15
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":43CA
-            PICN            =   "frmProcessos.frx":43E6
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   5
-            Left            =   120
-            TabIndex        =   14
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":50C0
-            PICN            =   "frmProcessos.frx":50DC
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
       End
       Begin VB.Frame Frame3 
@@ -563,15 +491,33 @@ Begin VB.Form frmProcessos
          EndProperty
          Height          =   975
          Left            =   -74880
-         TabIndex        =   19
+         TabIndex        =   12
          Top             =   360
          Width           =   9375
+         Begin VB.CommandButton cmdcadastro 
+            Caption         =   "..."
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Index           =   10
+            Left            =   8880
+            TabIndex        =   35
+            Top             =   480
+            Width           =   375
+         End
          Begin VB.TextBox txtCadastro 
             Enabled         =   0   'False
             Height          =   285
             Index           =   1
             Left            =   1200
-            TabIndex        =   7
+            TabIndex        =   4
             Top             =   480
             Width           =   7575
          End
@@ -579,7 +525,7 @@ Begin VB.Form frmProcessos
             Height          =   285
             Index           =   1
             Left            =   120
-            TabIndex        =   6
+            TabIndex        =   3
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
@@ -601,139 +547,20 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmProcessos.frx":5DB6
-            TabIndex        =   28
+            OleObjectBlob   =   "frmProcessos.frx":7642
+            TabIndex        =   19
             Top             =   240
             Width           =   1215
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":5E28
-            TabIndex        =   27
+            OleObjectBlob   =   "frmProcessos.frx":76B4
+            TabIndex        =   18
             Top             =   240
             Width           =   735
          End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   255
-            Index           =   10
-            Left            =   8880
-            TabIndex        =   8
-            Top             =   480
-            Width           =   375
-            _ExtentX        =   661
-            _ExtentY        =   450
-            BTYPE           =   4
-            TX              =   "..."
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmProcessos.frx":5E94
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
       End
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   11
-      Left            =   720
-      TabIndex        =   22
-      Top             =   7800
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmProcessos.frx":5EB0
-      PICN            =   "frmProcessos.frx":5ECC
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   12
-      Left            =   120
-      TabIndex        =   23
-      Top             =   7800
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmProcessos.frx":6BA6
-      PICN            =   "frmProcessos.frx":6BC2
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmProcessos"
@@ -797,12 +624,27 @@ Private Sub Form_Load()
     FecharListaVer
     Status = "novo"
     CompoeTreeview
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 46 'Inserir
+    carregaImagemBotao cmdCadastro(1), 1, 32 'Editar
+    carregaImagemBotao cmdCadastro(2), 2, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(5), 5, 46 'Inserir
+    carregaImagemBotao cmdCadastro(6), 6, 32 'Editar
+    carregaImagemBotao cmdCadastro(7), 7, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(11), 11, 34 'Sair
+
 End Sub
 
 Private Sub AbrirListaVer()

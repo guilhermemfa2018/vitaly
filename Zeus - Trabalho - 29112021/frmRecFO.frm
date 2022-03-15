@@ -14,85 +14,25 @@ Begin VB.Form frmRecFO
    ScaleHeight     =   2280
    ScaleWidth      =   5070
    StartUpPosition =   2  'CenterScreen
-   Begin ZEUS.chameleonButton cmdCadastro 
+   Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   1
       Left            =   720
+      Picture         =   "frmRecFO.frx":0CCA
+      Style           =   1  'Graphical
       TabIndex        =   6
       Top             =   1560
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmRecFO.frx":0CCA
-      PICN            =   "frmRecFO.frx":0CE6
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
-   Begin ZEUS.chameleonButton cmdCadastro 
+   Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   0
       Left            =   120
-      TabIndex        =   5
+      Picture         =   "frmRecFO.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   7
       Top             =   1560
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmRecFO.frx":19C0
-      PICN            =   "frmRecFO.frx":19DC
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame1 
       Caption         =   "Selecione "
@@ -145,8 +85,8 @@ Begin VB.Form frmRecFO
          Begin ACTIVESKINLibCtl.SkinLabel Label1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRecFO.frx":26B6
-            TabIndex        =   7
+            OleObjectBlob   =   "frmRecFO.frx":265E
+            TabIndex        =   5
             Top             =   240
             Width           =   855
          End
@@ -207,7 +147,6 @@ Private Sub Form_Activate()
     vListViewPrincipal.ListItems(Posicao).Selected = True
 End Sub
 
-
 Private Function VerificaChecados()
     Dim X As Integer, Y As Integer
     VerificaChecados = False
@@ -234,6 +173,7 @@ Private Sub MarcaPosicaoLV()
 End Sub
 
 Private Sub Form_Load()
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -248,12 +188,16 @@ Private Sub optCadastro_Click(Index As Integer)
         txtCadastro = ""
         Frame2.Enabled = False
         Label1.Enabled = False
-        'txtCadastro.Enabled = False
     Case 1
         Frame2.Enabled = True
         Label1.Enabled = True
         txtCadastro = Format(GeraFCE, "000000") & ""
     End Select
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 49 'Inserir
+    carregaImagemBotao cmdCadastro(1), 1, 34 'Sair
 End Sub
 
 Private Function GeraFCE()

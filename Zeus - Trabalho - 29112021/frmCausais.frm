@@ -26,17 +26,40 @@ Begin VB.Form frmCausais
    ScaleHeight     =   8280
    ScaleWidth      =   9870
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   11
+      Left            =   720
+      Picture         =   "frmCausais.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   24
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   7560
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   12
+      Left            =   120
+      Picture         =   "frmCausais.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   25
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   7560
+      Width           =   615
+   End
    Begin TabDlg.SSTab SSTab1 
       Height          =   7335
       Left            =   120
-      TabIndex        =   18
+      TabIndex        =   8
       Top             =   120
       Width           =   9615
       _ExtentX        =   16960
       _ExtentY        =   12938
       _Version        =   393216
       Tabs            =   2
-      Tab             =   1
       TabsPerRow      =   2
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -49,17 +72,16 @@ Begin VB.Form frmCausais
          Strikethrough   =   0   'False
       EndProperty
       TabCaption(0)   =   "Grupos"
-      TabPicture(0)   =   "frmCausais.frx":0CCA
-      Tab(0).ControlEnabled=   0   'False
+      TabPicture(0)   =   "frmCausais.frx":265E
+      Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame1"
+      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Causais"
-      TabPicture(1)   =   "frmCausais.frx":0CE6
-      Tab(1).ControlEnabled=   -1  'True
+      TabPicture(1)   =   "frmCausais.frx":267A
+      Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame2"
-      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).Control(1)=   "Frame3"
-      Tab(1).Control(1).Enabled=   0   'False
       Tab(1).ControlCount=   2
       Begin VB.Frame Frame3 
          Caption         =   "Grupo"
@@ -73,15 +95,15 @@ Begin VB.Form frmCausais
             Strikethrough   =   0   'False
          EndProperty
          Height          =   975
-         Left            =   120
-         TabIndex        =   25
+         Left            =   -74880
+         TabIndex        =   15
          Top             =   360
          Width           =   9375
          Begin VB.CommandButton Command1 
             Caption         =   "..."
             Height          =   255
             Left            =   8880
-            TabIndex        =   28
+            TabIndex        =   18
             Top             =   480
             Width           =   375
          End
@@ -89,7 +111,7 @@ Begin VB.Form frmCausais
             Height          =   285
             Index           =   2
             Left            =   120
-            TabIndex        =   7
+            TabIndex        =   3
             Top             =   480
             Width           =   975
          End
@@ -98,23 +120,23 @@ Begin VB.Form frmCausais
             Height          =   285
             Index           =   3
             Left            =   1200
-            TabIndex        =   8
+            TabIndex        =   4
             Top             =   480
             Width           =   7575
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmCausais.frx":0D02
-            TabIndex        =   26
+            OleObjectBlob   =   "frmCausais.frx":2696
+            TabIndex        =   16
             Top             =   240
             Width           =   1215
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmCausais.frx":0D6E
-            TabIndex        =   27
+            OleObjectBlob   =   "frmCausais.frx":2702
+            TabIndex        =   17
             Top             =   240
             Width           =   735
          End
@@ -131,143 +153,63 @@ Begin VB.Form frmCausais
             Strikethrough   =   0   'False
          EndProperty
          Height          =   5775
-         Left            =   120
-         TabIndex        =   22
+         Left            =   -74880
+         TabIndex        =   12
          Top             =   1440
          Width           =   9375
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   7
             Left            =   1920
-            TabIndex        =   14
+            Picture         =   "frmCausais.frx":2768
+            Style           =   1  'Graphical
+            TabIndex        =   19
             Top             =   960
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":0DD4
-            PICN            =   "frmCausais.frx":0DF0
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   6
             Left            =   1320
-            TabIndex        =   13
+            Picture         =   "frmCausais.frx":3432
+            Style           =   1  'Graphical
+            TabIndex        =   20
             Top             =   960
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":1ACA
-            PICN            =   "frmCausais.frx":1AE6
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   5
             Left            =   720
-            TabIndex        =   12
+            Picture         =   "frmCausais.frx":40FC
+            Style           =   1  'Graphical
+            TabIndex        =   21
             Top             =   960
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":27C0
-            PICN            =   "frmCausais.frx":27DC
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+         End
+         Begin VB.CommandButton cmdcadastro 
+            Height          =   615
+            Index           =   4
+            Left            =   120
+            Picture         =   "frmCausais.frx":4DC6
+            Style           =   1  'Graphical
+            TabIndex        =   22
+            Top             =   960
+            Width           =   615
          End
          Begin VB.TextBox txtCausal 
             Enabled         =   0   'False
             Height          =   285
             Index           =   4
             Left            =   120
-            TabIndex        =   9
+            TabIndex        =   5
             Top             =   480
             Width           =   975
          End
          Begin MSComctlLib.ListView ListView2 
             Height          =   3975
             Left            =   120
-            TabIndex        =   15
+            TabIndex        =   7
             Top             =   1680
             Width           =   9135
             _ExtentX        =   16113
@@ -297,65 +239,25 @@ Begin VB.Form frmCausais
             Height          =   285
             Index           =   5
             Left            =   1200
-            TabIndex        =   10
+            TabIndex        =   6
             Top             =   480
             Width           =   8055
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmCausais.frx":34B6
-            TabIndex        =   23
+            OleObjectBlob   =   "frmCausais.frx":5A90
+            TabIndex        =   13
             Top             =   240
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmCausais.frx":3522
-            TabIndex        =   24
+            OleObjectBlob   =   "frmCausais.frx":5AFC
+            TabIndex        =   14
             Top             =   240
             Width           =   735
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   4
-            Left            =   120
-            TabIndex        =   11
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":3588
-            PICN            =   "frmCausais.frx":35A4
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
       End
       Begin VB.Frame Frame1 
@@ -370,129 +272,49 @@ Begin VB.Form frmCausais
             Strikethrough   =   0   'False
          EndProperty
          Height          =   6735
-         Left            =   -74880
-         TabIndex        =   19
+         Left            =   120
+         TabIndex        =   9
          Top             =   360
          Width           =   9375
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   3
             Left            =   1920
-            TabIndex        =   5
+            Picture         =   "frmCausais.frx":5B62
+            Style           =   1  'Graphical
+            TabIndex        =   26
             Top             =   840
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":427E
-            PICN            =   "frmCausais.frx":429A
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   2
             Left            =   1320
-            TabIndex        =   4
+            Picture         =   "frmCausais.frx":682C
+            Style           =   1  'Graphical
+            TabIndex        =   28
             Top             =   840
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":4F74
-            PICN            =   "frmCausais.frx":4F90
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton cmdcadastro 
+         Begin VB.CommandButton cmdcadastro 
             Height          =   615
             Index           =   1
             Left            =   720
-            TabIndex        =   3
+            Picture         =   "frmCausais.frx":74F6
+            Style           =   1  'Graphical
+            TabIndex        =   27
             Top             =   840
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":5C6A
-            PICN            =   "frmCausais.frx":5C86
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+         End
+         Begin VB.CommandButton cmdcadastro 
+            Height          =   615
+            Index           =   0
+            Left            =   120
+            Picture         =   "frmCausais.frx":81C0
+            Style           =   1  'Graphical
+            TabIndex        =   23
+            Top             =   840
+            Width           =   615
          End
          Begin VB.TextBox txtCausal 
             Enabled         =   0   'False
@@ -514,63 +336,23 @@ Begin VB.Form frmCausais
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   1080
-            OleObjectBlob   =   "frmCausais.frx":6960
-            TabIndex        =   20
+            OleObjectBlob   =   "frmCausais.frx":8E8A
+            TabIndex        =   10
             Top             =   240
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmCausais.frx":69CC
-            TabIndex        =   21
+            OleObjectBlob   =   "frmCausais.frx":8EF6
+            TabIndex        =   11
             Top             =   240
             Width           =   615
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   0
-            Left            =   120
-            TabIndex        =   2
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmCausais.frx":6A32
-            PICN            =   "frmCausais.frx":6A4E
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
          Begin MSComctlLib.ListView ListView1 
             Height          =   5055
             Left            =   120
-            TabIndex        =   6
+            TabIndex        =   2
             Top             =   1560
             Width           =   9135
             _ExtentX        =   16113
@@ -598,86 +380,6 @@ Begin VB.Form frmCausais
             NumItems        =   0
          End
       End
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   11
-      Left            =   720
-      TabIndex        =   17
-      Top             =   7560
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmCausais.frx":7728
-      PICN            =   "frmCausais.frx":7744
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   12
-      Left            =   120
-      TabIndex        =   16
-      Top             =   7560
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmCausais.frx":841E
-      PICN            =   "frmCausais.frx":843A
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmCausais"
@@ -767,12 +469,26 @@ On Error GoTo ErrHandler
     
     LimpaControles txtCausal(0), txtCausal(1), txtCausal(0), txtCausal(0), txtCausal(0), txtCausal(0), txtCausal(0), txtCausal(0), txtCausal(0), txtCausal(0)
     txtCausal(0) = Format(GeraCodigoLV(ListView1), "00")
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdImpostoServico(0), 0, 46 'Inserir
+    carregaImagemBotao cmdImpostoServico(1), 1, 31 'Novo
+    carregaImagemBotao cmdImpostoServico(2), 2, 32 'Editar
+    carregaImagemBotao cmdImpostoServico(3), 3, 33 'Excluir
+    carregaImagemBotao cmdImpostoServico(4), 4, 46 'Inserir
+    carregaImagemBotao cmdImpostoServico(5), 5, 31 'Novo
+    carregaImagemBotao cmdImpostoServico(6), 6, 32 'Editar
+    carregaImagemBotao cmdImpostoServico(7), 7, 33 'Excluir
+    carregaImagemBotao cmdImpostoServico(12), 12, 45 'Salvar
+    carregaImagemBotao cmdImpostoServico(11), 11, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()

@@ -1157,18 +1157,18 @@ Private Sub cmdCadastro_Click(Index As Integer)
             vPAutomatico = "N"
         End If
         'Incluir Fórmula no ListView1
-        IncluirLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
-        LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
+        IncluirLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
+        LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
         Check2.Value = 0
-        Label53.Text = "-"
+        label53.Text = "-"
         txtformula(2) = Format(GeraCodigoLV(ListView1), "000")
         aicAlphaImage1.ClearImage
-        Label53.Text = "-"
+        label53.Text = "-"
     Case 2
         'Altera fórmula no ListView1
-        LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
-        Label53.Text = "-"
-        AlteraLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
+        LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
+        label53.Text = "-"
+        AlteraLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
         If vPAutomatico = "S" Then
             Check2.Value = 1
         Else
@@ -1176,14 +1176,14 @@ Private Sub cmdCadastro_Click(Index As Integer)
         End If
         
         aicAlphaImage1.ClearImage
-        If Label53.Text <> "-" Then
-            aicAlphaImage1.LoadImage_FromFile (Label53.Text)
+        If label53.Text <> "-" Then
+            aicAlphaImage1.LoadImage_FromFile (label53.Text)
         End If
     Case 3
         'Excluir Fórmulas no ListView1
         ExcluirItemLV ListView1
         LimpaControles txtformula(0), txtformula(1), txtformula(0), txtformula(0), txtformula(0), txtformula(0), txtformula(0), txtformula(0), txtformula(0), txtformula(0)
-        Label53.Text = "-"
+        label53.Text = "-"
         txtformula(2) = Format(GeraCodigoLV(ListView1), "000")
     Case 4
         'Incluir Constantes no ListView2
@@ -1259,10 +1259,10 @@ Private Sub cmdCadastro_Click(Index As Integer)
         End With
         'mostra a figura
         aicAlphaImage1.LoadImage_FromFile (Caminho1)
-        Label53 = Caminho1
+        label53 = Caminho1
     Case 15
         aicAlphaImage1.ClearImage
-        Label53 = "-"
+        label53 = "-"
     End Select
 End Sub
 
@@ -1291,23 +1291,23 @@ On Error GoTo Err
     
     
     Dim ItemLst As ListItem
-    Dim Y As Integer, x As Integer
+    Dim Y As Integer, X As Integer
     Y = ListView1.ListItems.Count
-    For x = 1 To Y
-        ListView1.ListItems.Item(x).Selected = True
+    For X = 1 To Y
+        ListView1.ListItems.Item(X).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(7) = "S" Then
-            SqlGravaDadosPar = "Select * from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(x)) & "'"
+            SqlGravaDadosPar = "Select * from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(X)) & "'"
             rsGravaDadosPar.Open SqlGravaDadosPar, cnBanco, adOpenKeyset, adLockOptimistic
             If rsGravaDadosPar.RecordCount = 0 Then
                 rsGravaDadosPar.AddNew
                 rsGravaDadosPar.Fields(0) = txtformula(0)
-                rsGravaDadosPar.Fields(1) = Val(ListView1.ListItems.Item(x))
+                rsGravaDadosPar.Fields(1) = Val(ListView1.ListItems.Item(X))
                 rsGravaDadosPar.Update
                 rsGravaDadosPar.Close
                 Set rsGravaDadosPar = Nothing
             End If
         Else
-            SqlGravaDadosPar = "delete from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(x)) & "'"
+            SqlGravaDadosPar = "delete from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(X)) & "'"
             rsGravaDadosPar.Open SqlGravaDadosPar, cnBanco
         End If
     Next
@@ -1338,27 +1338,53 @@ Private Sub Form_Load()
     txtformula(0) = varGlobal
     CarregaTxt "CORPORERM.dbo.GCCUSTO", "codreduzido", "S", "", "", txtformula(0), txtformula(1), 7, 2, txtformula(0), "S", txtformula(1), "1"
     compoeDadosLVs
+    carregarIconBotao
+    
+    
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
+    'Me.BackColor = vColorThema(Principal.Ribbon.Theme)
+    'Me.Refresh
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 End Sub
 
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(1), 1, 46 'Inserir
+    carregaImagemBotao cmdCadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(4), 4, 46 'Inserir
+    carregaImagemBotao cmdCadastro(5), 5, 32 'Editar
+    carregaImagemBotao cmdCadastro(6), 6, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(9), 9, 46 'Inserir
+    carregaImagemBotao cmdCadastro(10), 10, 32 'Editar
+    carregaImagemBotao cmdCadastro(11), 11, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(14), 14, 47 'Add User
+    carregaImagemBotao cmdCadastro(15), 15, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(13), 13, 34 'Sair
+End Sub
+
 Private Sub ListView1_DblClick()
-    LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
-    Label53.Text = "-"
+    LimpaControles txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), txtformula(2), txtformula(2), txtformula(2)
+    label53.Text = "-"
     vPAutomatico = ""
-    AlteraLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), Label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
+    AlteraLV ListView1, txtformula(2), txtformula(3), txtformula(4), txtformula(5), txtformula(6), label53, txtformula(20), vPAutomatico, txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2), txtformula(2)
     If vPAutomatico <> "" And vPAutomatico <> "N" Then
         Check2.Value = 1
     Else
         Check2.Value = 0
     End If
     aicAlphaImage1.ClearImage
-    If Label53.Text <> "-" Then
-        aicAlphaImage1.LoadImage_FromFile (Label53.Text)
+    If label53.Text <> "-" Then
+        aicAlphaImage1.LoadImage_FromFile (label53.Text)
     End If
 End Sub
 

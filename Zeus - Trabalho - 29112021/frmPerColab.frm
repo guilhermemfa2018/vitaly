@@ -25,6 +25,26 @@ Begin VB.Form frmPerColab
    ScaleHeight     =   8145
    ScaleWidth      =   7725
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdPermissao 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmPerColab.frx":0A02
+      Style           =   1  'Graphical
+      TabIndex        =   18
+      Top             =   7440
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdPermissao 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmPerColab.frx":16CC
+      Style           =   1  'Graphical
+      TabIndex        =   17
+      Top             =   7440
+      Width           =   615
+   End
    Begin VB.Frame Frame1 
       Caption         =   "Dados do Colaborador"
       BeginProperty Font 
@@ -38,7 +58,7 @@ Begin VB.Form frmPerColab
       EndProperty
       Height          =   975
       Left            =   120
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   120
       Width           =   7455
       Begin VB.TextBox txtPermissao 
@@ -62,16 +82,16 @@ Begin VB.Form frmPerColab
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmPerColab.frx":0A02
-         TabIndex        =   9
+         OleObjectBlob   =   "frmPerColab.frx":2396
+         TabIndex        =   7
          Top             =   240
          Width           =   735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1680
-         OleObjectBlob   =   "frmPerColab.frx":0A66
-         TabIndex        =   10
+         OleObjectBlob   =   "frmPerColab.frx":23FA
+         TabIndex        =   8
          Top             =   240
          Width           =   1335
       End
@@ -107,14 +127,14 @@ Begin VB.Form frmPerColab
       EndProperty
       Height          =   6135
       Left            =   120
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   1200
       Width           =   7455
       Begin VB.CheckBox Check3 
          Caption         =   "Apropria OS"
          Height          =   255
          Left            =   2400
-         TabIndex        =   18
+         TabIndex        =   16
          Top             =   1080
          Width           =   3255
       End
@@ -122,7 +142,7 @@ Begin VB.Form frmPerColab
          Caption         =   "Inserir código para encerrar sistema"
          Height          =   375
          Left            =   2400
-         TabIndex        =   17
+         TabIndex        =   15
          Top             =   1440
          Width           =   3615
       End
@@ -130,9 +150,9 @@ Begin VB.Form frmPerColab
          Height          =   615
          Index           =   3
          Left            =   720
-         Picture         =   "frmPerColab.frx":0AC8
+         Picture         =   "frmPerColab.frx":245C
          Style           =   1  'Graphical
-         TabIndex        =   15
+         TabIndex        =   13
          Top             =   1080
          Width           =   615
       End
@@ -140,9 +160,9 @@ Begin VB.Form frmPerColab
          Height          =   615
          Index           =   1
          Left            =   120
-         Picture         =   "frmPerColab.frx":1792
+         Picture         =   "frmPerColab.frx":3126
          Style           =   1  'Graphical
-         TabIndex        =   16
+         TabIndex        =   14
          Top             =   1080
          Width           =   615
       End
@@ -196,7 +216,7 @@ Begin VB.Form frmPerColab
       Begin MSComctlLib.ListView ListView1 
          Height          =   4215
          Left            =   120
-         TabIndex        =   12
+         TabIndex        =   10
          Top             =   1800
          Width           =   7215
          _ExtentX        =   12726
@@ -217,99 +237,19 @@ Begin VB.Form frmPerColab
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   2400
-         OleObjectBlob   =   "frmPerColab.frx":245C
-         TabIndex        =   13
+         OleObjectBlob   =   "frmPerColab.frx":3DF0
+         TabIndex        =   11
          Top             =   360
          Width           =   2055
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmPerColab.frx":24C8
-         TabIndex        =   14
+         OleObjectBlob   =   "frmPerColab.frx":3E5C
+         TabIndex        =   12
          Top             =   360
          Width           =   855
       End
-   End
-   Begin ZEUS.chameleonButton cmdPermissao 
-      Height          =   615
-      Index           =   1
-      Left            =   840
-      TabIndex        =   6
-      Top             =   7440
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   8
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPerColab.frx":2530
-      PICN            =   "frmPerColab.frx":254C
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdPermissao 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   7
-      Top             =   7440
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   8
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPerColab.frx":3226
-      PICN            =   "frmPerColab.frx":3242
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmPerColab"
@@ -453,6 +393,8 @@ Private Sub Form_Load()
     
     '================================================
     If ListView1.ListItems.Count > 0 Then Check1.Value = 1 Else Check1.Value = 0
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -460,6 +402,14 @@ Private Sub Form_Load()
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(1), 1, 46 'Inserir
+    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdPermissao(0), 11, 45 'Salvar
+    carregaImagemBotao cmdPermissao(1), 12, 34 'Sair
+End Sub
+
 
 Private Sub listview_cabecalho()
     ListView1.ColumnHeaders.Clear

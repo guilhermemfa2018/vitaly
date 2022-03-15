@@ -23,11 +23,35 @@ Begin VB.Form frmFiltro
    ScaleHeight     =   6810
    ScaleWidth      =   7530
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdFiltro 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmFiltro.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   22
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   6120
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdFiltro 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmFiltro.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   23
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   6120
+      Width           =   615
+   End
    Begin VB.CommandButton Command3 
       Caption         =   "Visualizar Query Principal"
       Height          =   495
       Left            =   2640
-      TabIndex        =   23
+      TabIndex        =   21
       Top             =   4080
       Width           =   2415
    End
@@ -37,7 +61,7 @@ Begin VB.Form frmFiltro
       Height          =   285
       Left            =   120
       Locked          =   -1  'True
-      TabIndex        =   22
+      TabIndex        =   20
       Top             =   3720
       Width           =   7335
    End
@@ -45,7 +69,7 @@ Begin VB.Form frmFiltro
       Caption         =   "Excluir"
       Height          =   495
       Left            =   6360
-      TabIndex        =   21
+      TabIndex        =   19
       Top             =   4080
       Width           =   1095
    End
@@ -62,13 +86,13 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   3495
       Left            =   120
-      TabIndex        =   19
+      TabIndex        =   17
       Top             =   120
       Width           =   7335
       Begin MSComctlLib.ListView ListView2 
          Height          =   3135
          Left            =   120
-         TabIndex        =   20
+         TabIndex        =   18
          Top             =   240
          Width           =   7095
          _ExtentX        =   12515
@@ -106,7 +130,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   375
       Left            =   3960
-      TabIndex        =   18
+      TabIndex        =   16
       Text            =   " "
       Top             =   0
       Visible         =   0   'False
@@ -116,7 +140,7 @@ Begin VB.Form frmFiltro
       Caption         =   "Novo Filtro"
       Height          =   495
       Left            =   5160
-      TabIndex        =   7
+      TabIndex        =   5
       Top             =   4080
       Width           =   1095
    End
@@ -133,96 +157,16 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   855
       Left            =   5160
-      TabIndex        =   5
+      TabIndex        =   3
       Top             =   5880
       Width           =   2295
       Begin VB.TextBox Text1 
          Height          =   375
          Left            =   720
-         TabIndex        =   6
+         TabIndex        =   4
          Top             =   360
          Width           =   855
       End
-   End
-   Begin ZEUS.chameleonButton cmdFiltro 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   4
-      Top             =   6120
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmFiltro.frx":0CCA
-      PICN            =   "frmFiltro.frx":0CE6
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdFiltro 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   3
-      Top             =   6120
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmFiltro.frx":19C0
-      PICN            =   "frmFiltro.frx":19DC
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.CheckBox Check1 
       Caption         =   "Configurar colunas"
@@ -261,9 +205,9 @@ Begin VB.Form frmFiltro
             Strikethrough   =   0   'False
          EndProperty
          Height          =   315
-         ItemData        =   "frmFiltro.frx":26B6
+         ItemData        =   "frmFiltro.frx":265E
          Left            =   120
-         List            =   "frmFiltro.frx":26B8
+         List            =   "frmFiltro.frx":2660
          TabIndex        =   1
          Tag             =   "Lista de opções do filtro"
          ToolTipText     =   "Lista de opções do filtro"
@@ -284,7 +228,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   17
+      TabIndex        =   15
       Top             =   360
       Visible         =   0   'False
       Width           =   1095
@@ -302,7 +246,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   16
+      TabIndex        =   14
       Top             =   1080
       Visible         =   0   'False
       Width           =   1095
@@ -320,7 +264,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   15
+      TabIndex        =   13
       Top             =   1560
       Visible         =   0   'False
       Width           =   1095
@@ -338,7 +282,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   14
+      TabIndex        =   12
       Top             =   2160
       Visible         =   0   'False
       Width           =   1095
@@ -356,7 +300,7 @@ Begin VB.Form frmFiltro
       EndProperty
       Height          =   255
       Left            =   120
-      TabIndex        =   13
+      TabIndex        =   11
       Top             =   2760
       Visible         =   0   'False
       Width           =   1095
@@ -374,7 +318,7 @@ Begin VB.Form frmFiltro
       Height          =   615
       Index           =   0
       Left            =   1320
-      TabIndex        =   12
+      TabIndex        =   10
       Top             =   360
       Visible         =   0   'False
       Width           =   16095
@@ -392,7 +336,7 @@ Begin VB.Form frmFiltro
       Height          =   375
       Index           =   1
       Left            =   1320
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   1080
       Visible         =   0   'False
       Width           =   16095
@@ -410,7 +354,7 @@ Begin VB.Form frmFiltro
       Height          =   255
       Index           =   2
       Left            =   1320
-      TabIndex        =   10
+      TabIndex        =   8
       Top             =   1560
       Visible         =   0   'False
       Width           =   16095
@@ -428,7 +372,7 @@ Begin VB.Form frmFiltro
       Height          =   255
       Index           =   3
       Left            =   1320
-      TabIndex        =   9
+      TabIndex        =   7
       Top             =   2160
       Width           =   16095
    End
@@ -445,7 +389,7 @@ Begin VB.Form frmFiltro
       Height          =   255
       Index           =   4
       Left            =   1320
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   2760
       Visible         =   0   'False
       Width           =   16095
@@ -568,12 +512,18 @@ On Error Resume Next
         'DTPicker2 = dataFilter2
     End If
     Text1.Text = LimiteLinhas
+    carregarIconBotao
     'AplicarSkin Me, Principal.Skin1
     'NewColorDBGrid Me
     'On Error GoTo ErrHandler
     'Exit Sub
 'ErrHandler:
     'mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdFiltro(0), 0, 46 'OK
+    carregaImagemBotao cmdFiltro(1), 1, 34 'Sair
 End Sub
 
 Private Sub CarregaFiltro()

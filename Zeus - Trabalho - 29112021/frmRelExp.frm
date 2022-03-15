@@ -28,6 +28,13 @@ Begin VB.Form frmRelExp
    ScaleHeight     =   9120
    ScaleMode       =   0  'User
    ScaleWidth      =   21450
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   5040
+      Top             =   8520
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCadastro 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -45,7 +52,6 @@ Begin VB.Form frmRelExp
       Style           =   1  'Graphical
       TabIndex        =   25
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   8400
       Width           =   615
    End
@@ -66,7 +72,6 @@ Begin VB.Form frmRelExp
       Style           =   1  'Graphical
       TabIndex        =   24
       Tag             =   "Salvar Relatório"
-      ToolTipText     =   "Salvar Relatório"
       Top             =   8400
       Width           =   615
    End
@@ -143,6 +148,7 @@ Begin VB.Form frmRelExp
          Index           =   17
          Left            =   1680
          TabIndex        =   22
+         Tag             =   "Peso de balança"
          Top             =   7680
          Width           =   2175
       End
@@ -193,13 +199,6 @@ Begin VB.Form frmRelExp
          TabIndex        =   42
          Top             =   7320
          Width           =   2535
-      End
-      Begin IpToolTips.cIpToolTips cIpToolTips1 
-         Left            =   11280
-         Top             =   7200
-         _ExtentX        =   847
-         _ExtentY        =   847
-         BackColor       =   0
       End
       Begin VB.Label Label9 
          Caption         =   "Nivel"
@@ -449,6 +448,7 @@ Begin VB.Form frmRelExp
             Index           =   16
             Left            =   120
             TabIndex        =   21
+            Tag             =   "Nome do motorista"
             Top             =   1080
             Width           =   6495
          End
@@ -465,6 +465,7 @@ Begin VB.Form frmRelExp
             Index           =   15
             Left            =   2520
             TabIndex        =   19
+            Tag             =   "Placa da carrreta"
             Top             =   480
             Width           =   1335
          End
@@ -473,6 +474,7 @@ Begin VB.Form frmRelExp
             Index           =   14
             Left            =   120
             TabIndex        =   17
+            Tag             =   "Placa do cavalo"
             Top             =   480
             Width           =   1335
          End
@@ -483,6 +485,7 @@ Begin VB.Form frmRelExp
             Left            =   3960
             List            =   "frmRelExp.frx":2E3C
             TabIndex        =   20
+            Tag             =   "UF da carreta"
             Top             =   480
             Width           =   735
          End
@@ -493,6 +496,7 @@ Begin VB.Form frmRelExp
             Left            =   1560
             List            =   "frmRelExp.frx":2F01
             TabIndex        =   18
+            Tag             =   "UF do cavalo"
             Top             =   480
             Width           =   735
          End
@@ -507,15 +511,15 @@ Begin VB.Form frmRelExp
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
             Height          =   255
             Left            =   2520
-            OleObjectBlob   =   "frmRelExp.frx":2FD5
+            OleObjectBlob   =   "frmRelExp.frx":2FCF
             TabIndex        =   58
             Top             =   240
-            Width           =   1095
+            Width           =   1455
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
             Height          =   255
             Left            =   1560
-            OleObjectBlob   =   "frmRelExp.frx":304F
+            OleObjectBlob   =   "frmRelExp.frx":3043
             TabIndex        =   57
             Top             =   240
             Width           =   615
@@ -523,7 +527,7 @@ Begin VB.Form frmRelExp
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRelExp.frx":30B3
+            OleObjectBlob   =   "frmRelExp.frx":30A1
             TabIndex        =   56
             Top             =   240
             Width           =   1335
@@ -552,6 +556,7 @@ Begin VB.Form frmRelExp
          Index           =   4
          Left            =   120
          TabIndex        =   0
+         Tag             =   "Nº do relatório"
          Top             =   240
          Width           =   1935
       End
@@ -629,7 +634,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExp.frx":312B
+         OleObjectBlob   =   "frmRelExp.frx":3113
          TabIndex        =   29
          Top             =   1440
          Width           =   1335
@@ -637,7 +642,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExp.frx":3199
+         OleObjectBlob   =   "frmRelExp.frx":3181
          TabIndex        =   30
          Top             =   240
          Width           =   975
@@ -645,7 +650,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExp.frx":31FF
+         OleObjectBlob   =   "frmRelExp.frx":31E7
          TabIndex        =   31
          Top             =   840
          Width           =   975
@@ -653,7 +658,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   1560
-         OleObjectBlob   =   "frmRelExp.frx":326D
+         OleObjectBlob   =   "frmRelExp.frx":3255
          TabIndex        =   32
          Top             =   240
          Width           =   1095
@@ -661,7 +666,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1560
-         OleObjectBlob   =   "frmRelExp.frx":32D5
+         OleObjectBlob   =   "frmRelExp.frx":32BD
          TabIndex        =   33
          Top             =   840
          Width           =   2055
@@ -687,6 +692,7 @@ Begin VB.Form frmRelExp
          Height          =   330
          Left            =   120
          TabIndex        =   1
+         Tag             =   "Data de emissão do relatório"
          Top             =   240
          Width           =   1575
          _ExtentX        =   2778
@@ -701,7 +707,7 @@ Begin VB.Form frmRelExp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   155516929
+         Format          =   423624705
          CurrentDate     =   40449
       End
    End
@@ -724,7 +730,7 @@ Begin VB.Form frmRelExp
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExp.frx":3341
+         OleObjectBlob   =   "frmRelExp.frx":3329
          TabIndex        =   2
          Top             =   240
          Width           =   2535
@@ -733,7 +739,7 @@ Begin VB.Form frmRelExp
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
       Height          =   495
       Left            =   7320
-      OleObjectBlob   =   "frmRelExp.frx":33AB
+      OleObjectBlob   =   "frmRelExp.frx":3393
       TabIndex        =   45
       Top             =   8400
       Width           =   14055
@@ -836,6 +842,8 @@ Private Sub Form_Load()
     txtLvw = ""
     'txtLvw.Visible = False
     txtLvw.Tag = False 'is ListView2 dirty, not used in this example
+    carregarIconBotao
+    MudaTool
     
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
@@ -843,6 +851,11 @@ Private Sub Form_Load()
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(6), 6, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()
@@ -1447,25 +1460,6 @@ Dim si As SCROLLINFO
     GetScrollInfo ListView1.HWnd, fnBar, si
     ScrollBarVisible = si.nPage <> si.nMax + 1 'maxScrollPos=0 if scrollbar is invinsible
 End Function
-
-'FUNCAO PARA MUDAR TOOLTIPS
-Private Sub MudaTool()
-    On Error Resume Next
-    Dim Ctl As Control
-    Dim i As Integer
-    With Me.cIpToolTips1
-        .Create
-        .Title = "Atenção:" 'Titulo do tooltip
-        .MyIcon = itInfoIcon 'Icone do tooltip
-        .BackColor = &H80000018  'Cor de fundo
-        .ForeColor = &H800000    'Cor da letra e bordas
-        For Each Ctl In Me.Controls
-            If Ctl.Tag <> "" Then
-                .AddTool Ctl, tfAbsolute, Replace(Ctl.Tag, "|", vbCrLf)
-            End If
-        Next
-    End With
-End Sub
 
 Private Sub CompoeTabTemp()
 On Error GoTo Err

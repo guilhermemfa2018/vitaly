@@ -25,11 +25,31 @@ Begin VB.Form frmPrintRels
    ScaleHeight     =   2850
    ScaleWidth      =   4710
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdImprimir 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmPrintRels.frx":3469A
+      Style           =   1  'Graphical
+      TabIndex        =   12
+      Top             =   2160
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdImprimir 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmPrintRels.frx":35364
+      Style           =   1  'Graphical
+      TabIndex        =   11
+      Top             =   2160
+      Width           =   615
+   End
    Begin VB.Frame Frame4 
       Caption         =   "Semana/Ano"
       Height          =   855
       Left            =   960
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   1080
       Visible         =   0   'False
       Width           =   2535
@@ -46,7 +66,7 @@ Begin VB.Form frmPrintRels
          ForeColor       =   &H00008000&
          Height          =   495
          Left            =   1200
-         TabIndex        =   12
+         TabIndex        =   10
          Top             =   240
          Width           =   1215
       End
@@ -92,8 +112,8 @@ Begin VB.Form frmPrintRels
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   495
       Left            =   1440
-      OleObjectBlob   =   "frmPrintRels.frx":3469A
-      TabIndex        =   10
+      OleObjectBlob   =   "frmPrintRels.frx":3602E
+      TabIndex        =   8
       Top             =   2280
       Visible         =   0   'False
       Width           =   3135
@@ -102,7 +122,7 @@ Begin VB.Form frmPrintRels
       Caption         =   "FCE"
       Height          =   735
       Left            =   120
-      TabIndex        =   9
+      TabIndex        =   7
       Top             =   1080
       Visible         =   0   'False
       Width           =   4455
@@ -118,7 +138,7 @@ Begin VB.Form frmPrintRels
       Caption         =   "Informe o período "
       Height          =   975
       Left            =   120
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   1080
       Visible         =   0   'False
       Width           =   4455
@@ -141,7 +161,7 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   140640257
+         Format          =   161546241
          CurrentDate     =   41660
       End
       Begin MSComCtl2.DTPicker DTPicker1 
@@ -163,95 +183,15 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   140640257
+         Format          =   161546241
          CurrentDate     =   41660
       End
-   End
-   Begin ZEUS.chameleonButton cmdImprimir 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   6
-      Top             =   2160
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPrintRels.frx":34702
-      PICN            =   "frmPrintRels.frx":3471E
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdImprimir 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   5
-      Top             =   2160
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmPrintRels.frx":353F8
-      PICN            =   "frmPrintRels.frx":35414
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame1 
       Caption         =   "Selecione o relatório que deseja visualizar "
       Height          =   855
       Left            =   120
-      TabIndex        =   7
+      TabIndex        =   5
       Top             =   120
       Width           =   4455
       Begin VB.ComboBox Combo1 
@@ -265,9 +205,9 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          Height          =   345
-         ItemData        =   "frmPrintRels.frx":360EE
+         ItemData        =   "frmPrintRels.frx":36096
          Left            =   120
-         List            =   "frmPrintRels.frx":36101
+         List            =   "frmPrintRels.frx":360A9
          TabIndex        =   0
          Text            =   "Ponto X Apropriação"
          Top             =   360
@@ -469,12 +409,18 @@ Private Sub Form_Load()
         Combo1.AddItem "Faturamento Por Período"
     End If
     Combo1.ListIndex = 0
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     'On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdImprimir(0), 0, 37 'Imprimir
+    carregaImagemBotao cmdImprimir(1), 1, 34 'Sair
 End Sub
 
 Private Sub SalvaXLS(Indice As Integer)
@@ -3785,7 +3731,7 @@ On Error GoTo Err
     SqlTempoParada = "Select * from tbApropriaControle"
     rsTempoParada.Open SqlTempoParada, cnBanco, adOpenKeyset, adLockOptimistic
     
-    If rsApropriacao.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsApropriacao.RecordCount
+    If rsApropriacao.RecordCount > 0 Then Principal.ProgressBar1.Max = rsApropriacao.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Transferindo dados para tabela temporária..."
     Do While Not rsApropriacao.EOF
@@ -3830,7 +3776,7 @@ On Error GoTo Err
     
     SqlAchaPlan = "select codreduzido from tbFormula where codreduzido in('3000.3101.SC-01','3000.3101.SC-02','3000.3101.SC-03','3000.3101.SC-04','3000.3101.SC-05','3000.3101.SC-06','3000.3101.SC-07','3000.3101.SC-08','3000.3101.SC-09','3000.3101.SC-10','3000.3101.SC-12','3000.3102.SC-01','3000.3102.SC-02','3000.3103.SC-01','3000.3103.SC-02','3000.3104.SC-01','3000.3104.SC-02','3000.3105.SC-01','3000.3105.SC-02','3000.3106.SC-01','4000.4101.SC-03','7000.7103.SC-02') group by codreduzido order by codreduzido"
     rsAchaPlan.Open SqlAchaPlan, cnBanco, adOpenKeyset, adLockReadOnly
-    If rsAchaPlan.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaPlan.RecordCount
+    If rsAchaPlan.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaPlan.RecordCount
     vProgress = 0
     Do While Not rsAchaPlan.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -3895,7 +3841,7 @@ On Error GoTo Err
     SqlAchaCC = "select centrocusto from tbApropriaControle group by centrocusto order by centrocusto"
     rsAchaCC.Open SqlAchaCC, cnBanco, adOpenKeyset, adLockReadOnly
 
-    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaCC.RecordCount
+    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaCC.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Calculando paradas por Centro de Custo..."
     Do While Not rsAchaCC.EOF
@@ -3926,7 +3872,7 @@ On Error GoTo Err
     SqlAchaCC = "select centrocusto,idparada from tbApropriaControle group by centrocusto,idparada order by centrocusto,idparada"
     rsAchaCC.Open SqlAchaCC, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaCC.RecordCount
+    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaCC.RecordCount
     vProgress = 0
     Do While Not rsAchaCC.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -3956,7 +3902,7 @@ On Error GoTo Err
     SqlAchaCC = "select centrocusto,idparada from tbApropriaControle group by centrocusto,idparada order by idparada,centrocusto"
     rsAchaCC.Open SqlAchaCC, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaCC.RecordCount
+    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaCC.RecordCount
     vProgress = 0
     Do While Not rsAchaCC.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -3984,7 +3930,7 @@ On Error GoTo Err
     SqlAchaCC = "select centrocusto,idparada from tbApropriaControle group by centrocusto,idparada order by idparada,centrocusto"
     rsAchaCC.Open SqlAchaCC, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaCC.RecordCount
+    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaCC.RecordCount
     vProgress = 0
     Do While Not rsAchaCC.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4013,7 +3959,7 @@ On Error GoTo Err
     SqlAchaCC = "select centrocusto,idparada from tbApropriaControle group by centrocusto,idparada order by idparada,centrocusto"
     rsAchaCC.Open SqlAchaCC, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaCC.RecordCount
+    If rsAchaCC.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaCC.RecordCount
     vProgress = 0
     Do While Not rsAchaCC.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4068,7 +4014,7 @@ On Error GoTo Err
                 "and retrabalho = 'S.Ret' group by centrocusto order by centrocusto"
     rsAchaHA.Open SqlAchaHA, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaHA.RecordCount
+    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaHA.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Calculando apropriação S. Ret. por CC..."
     Do While Not rsAchaHA.EOF
@@ -4098,7 +4044,7 @@ On Error GoTo Err
                 "and retrabalho = 'C.Ret' group by centrocusto order by centrocusto"
     rsAchaHA.Open SqlAchaHA, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaHA.RecordCount
+    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaHA.RecordCount
     vProgress = 0
     Do While Not rsAchaHA.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4128,7 +4074,7 @@ On Error GoTo Err
                 "group by centrocusto order by centrocusto"
     rsAchaHA.Open SqlAchaHA, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaHA.RecordCount
+    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaHA.RecordCount
     vProgress = 0
     Do While Not rsAchaHA.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4155,7 +4101,7 @@ On Error GoTo Err
                 "group by retrabalho order by retrabalho"
     rsAchaHA.Open SqlAchaHA, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaHA.RecordCount
+    If rsAchaHA.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaHA.RecordCount
     vProgress = 0
     Do While Not rsAchaHA.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4238,7 +4184,7 @@ On Error GoTo Err
                        "group by codreduzido order by codreduzido"
     rsAchaPlanejado.Open SqlAchaPlanejado, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsAchaPlanejado.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaPlanejado.RecordCount
+    If rsAchaPlanejado.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaPlanejado.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Calculando horas orçadas por CC..."
     Do While Not rsAchaPlanejado.EOF
@@ -4277,7 +4223,7 @@ On Error GoTo Err
     rsAchaPlanejado.MoveFirst
     Dim VTESTE As Double
     
-    If rsAchaPlanejado.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsAchaPlanejado.RecordCount
+    If rsAchaPlanejado.RecordCount > 0 Then Principal.ProgressBar1.Max = rsAchaPlanejado.RecordCount
     vProgress = 0
     Do While Not rsAchaPlanejado.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4422,7 +4368,7 @@ On Error GoTo Err
     cnBanco.CommandTimeout = 0
     rsAchaProgramados.Open SqlAchaProgramados, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSelecionaCCs.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSelecionaCCs.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Calculando Horas de PPS por CC"
     Do While Not rsSelecionaCCs.EOF
@@ -4482,7 +4428,7 @@ On Error GoTo Err
     cnBanco.CommandTimeout = 0
     rsAchaAtraso.Open SqlAchaAtraso, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSelecionaCCs.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSelecionaCCs.RecordCount
     vProgress = 0
     Do While Not rsSelecionaCCs.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4582,7 +4528,7 @@ On Error GoTo Err
     vHorasPPSTotal = "00:00"
     vHorasAtrasoTotal = "00:00"
     vHorasPPSRealTotal = "00:00"
-    If rsSomaTempoPPSAtraso.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSomaTempoPPSAtraso.RecordCount
+    If rsSomaTempoPPSAtraso.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSomaTempoPPSAtraso.RecordCount
     vProgress = 0
     Do While Not rsSomaTempoPPSAtraso.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4615,7 +4561,7 @@ On Error GoTo Err
     cnBanco.CommandTimeout = 0
     rsSomaTempoPPSAtraso.Open SqlSomaTempoPPSAtraso, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSelecionaCCs.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSelecionaCCs.RecordCount
     vProgress = 0
     Do While Not rsSelecionaCCs.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4655,7 +4601,7 @@ On Error GoTo Err
     rsSomaTempoPPSAtraso.Open SqlSomaTempoPPSAtraso, cnBanco, adOpenKeyset, adLockReadOnly
     vSomaHorasAtrasoPPSTotal = "00:00"
     
-    If rsSelecionaCCs.RecordCount > 0 And rsSomaTempoPPSAtraso.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSomaTempoPPSAtraso.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 And rsSomaTempoPPSAtraso.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSomaTempoPPSAtraso.RecordCount
     vProgress = 0
     Do While Not rsSomaTempoPPSAtraso.EOF
         Principal.ProgressBar1.Value = vProgress
@@ -4680,7 +4626,7 @@ On Error GoTo Err
     cnBanco.CommandTimeout = 0
     rsSomaExtraPPSCC.Open SqlSomaExtraPPSCC, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSelecionaCCs.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSelecionaCCs.RecordCount
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Calculando Horas de Extra PPS por CC"
     vHorasExtraPPSRealTotal = "00:00"
@@ -4731,7 +4677,7 @@ On Error GoTo Err
     cnBanco.CommandTimeout = 0
     rsSomaTempoPPSAtraso.Open SqlSomaTempoPPSAtraso, cnBanco, adOpenKeyset, adLockReadOnly
     
-    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.MAX = rsSelecionaCCs.RecordCount
+    If rsSelecionaCCs.RecordCount > 0 Then Principal.ProgressBar1.Max = rsSelecionaCCs.RecordCount
     vProgress = 0
     vTempoTotalRealizado = "00:00"
     Do While Not rsSelecionaCCs.EOF

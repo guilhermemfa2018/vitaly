@@ -46,6 +46,15 @@ Begin VB.Form frmRetrabalho
       Top             =   120
       Width           =   8055
       Begin VB.TextBox Text10 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   375
          Left            =   5520
          TabIndex        =   105
@@ -305,7 +314,7 @@ Begin VB.Form frmRetrabalho
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   190054401
+         Format          =   167510017
          CurrentDate     =   41554
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
@@ -411,12 +420,23 @@ Begin VB.Form frmRetrabalho
       Width           =   4575
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Imprimir"
-      Height          =   495
-      Left            =   2040
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Left            =   4440
+      Picture         =   "frmRetrabalho.frx":29C6
+      Style           =   1  'Graphical
       TabIndex        =   3
-      Top             =   9960
-      Width           =   2655
+      Tag             =   "Imprimir OS - Ordem de Serviço"
+      Top             =   9840
+      Width           =   615
    End
    Begin VB.Frame Frame18 
       Caption         =   "Peso Posição (APENAS TESTE)"
@@ -438,7 +458,7 @@ Begin VB.Form frmRetrabalho
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRetrabalho.frx":29C6
+         OleObjectBlob   =   "frmRetrabalho.frx":3690
          TabIndex        =   2
          Top             =   240
          Width           =   3735
@@ -447,7 +467,7 @@ Begin VB.Form frmRetrabalho
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
       Height          =   375
       Left            =   5160
-      OleObjectBlob   =   "frmRetrabalho.frx":2A20
+      OleObjectBlob   =   "frmRetrabalho.frx":36EA
       TabIndex        =   0
       Top             =   9960
       Visible         =   0   'False
@@ -462,7 +482,7 @@ Begin VB.Form frmRetrabalho
       _ExtentX        =   32200
       _ExtentY        =   14208
       _Version        =   393216
-      Tab             =   1
+      Tab             =   2
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Calibri"
@@ -474,79 +494,58 @@ Begin VB.Form frmRetrabalho
          Strikethrough   =   0   'False
       EndProperty
       TabCaption(0)   =   "Desenhos"
-      TabPicture(0)   =   "frmRetrabalho.frx":2AEE
+      TabPicture(0)   =   "frmRetrabalho.frx":37B8
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "cmdCadastro(4)"
-      Tab(0).Control(1)=   "cmdCadastro(8)"
+      Tab(0).Control(0)=   "Frame11"
+      Tab(0).Control(0).Enabled=   0   'False
+      Tab(0).Control(1)=   "Frame31"
+      Tab(0).Control(1).Enabled=   0   'False
       Tab(0).Control(2)=   "cmdCadastro(7)"
-      Tab(0).Control(3)=   "Frame31"
-      Tab(0).Control(4)=   "Frame11"
+      Tab(0).Control(2).Enabled=   0   'False
+      Tab(0).Control(3)=   "cmdCadastro(8)"
+      Tab(0).Control(3).Enabled=   0   'False
+      Tab(0).Control(4)=   "cmdCadastro(4)"
+      Tab(0).Control(4).Enabled=   0   'False
       Tab(0).ControlCount=   5
       TabCaption(1)   =   "Recursos"
-      TabPicture(1)   =   "frmRetrabalho.frx":2B0A
-      Tab(1).ControlEnabled=   -1  'True
-      Tab(1).Control(0)=   "aicAlphaImage2"
-      Tab(1).Control(0).Enabled=   0   'False
-      Tab(1).Control(1)=   "ScriptControl1"
-      Tab(1).Control(1).Enabled=   0   'False
-      Tab(1).Control(2)=   "ListView1"
-      Tab(1).Control(2).Enabled=   0   'False
-      Tab(1).Control(3)=   "SkinLabel6"
-      Tab(1).Control(3).Enabled=   0   'False
-      Tab(1).Control(4)=   "SkinLabel7"
-      Tab(1).Control(4).Enabled=   0   'False
-      Tab(1).Control(5)=   "SkinLabel18"
-      Tab(1).Control(5).Enabled=   0   'False
-      Tab(1).Control(6)=   "SkinLabel16"
-      Tab(1).Control(6).Enabled=   0   'False
-      Tab(1).Control(7)=   "Frame17"
-      Tab(1).Control(7).Enabled=   0   'False
-      Tab(1).Control(8)=   "Frame5"
-      Tab(1).Control(8).Enabled=   0   'False
-      Tab(1).Control(9)=   "Frame2"
-      Tab(1).Control(9).Enabled=   0   'False
-      Tab(1).Control(10)=   "Frame1"
-      Tab(1).Control(10).Enabled=   0   'False
-      Tab(1).Control(11)=   "cmdCadastro(1)"
-      Tab(1).Control(11).Enabled=   0   'False
-      Tab(1).Control(12)=   "cmdCadastro(0)"
-      Tab(1).Control(12).Enabled=   0   'False
-      Tab(1).Control(13)=   "Frame7"
-      Tab(1).Control(13).Enabled=   0   'False
-      Tab(1).Control(14)=   "Frame13"
-      Tab(1).Control(14).Enabled=   0   'False
-      Tab(1).Control(15)=   "Frame14"
-      Tab(1).Control(15).Enabled=   0   'False
-      Tab(1).Control(16)=   "txtformula(0)"
-      Tab(1).Control(16).Enabled=   0   'False
-      Tab(1).Control(17)=   "txtformula(1)"
-      Tab(1).Control(17).Enabled=   0   'False
-      Tab(1).Control(18)=   "cmdCadastro(10)"
-      Tab(1).Control(18).Enabled=   0   'False
-      Tab(1).Control(19)=   "txtformula(25)"
-      Tab(1).Control(19).Enabled=   0   'False
-      Tab(1).Control(20)=   "txtDB"
-      Tab(1).Control(20).Enabled=   0   'False
-      Tab(1).Control(21)=   "txtLV"
-      Tab(1).Control(21).Enabled=   0   'False
-      Tab(1).Control(22)=   "txtformula(26)"
-      Tab(1).Control(22).Enabled=   0   'False
-      Tab(1).Control(23)=   "Combo1"
-      Tab(1).Control(23).Enabled=   0   'False
-      Tab(1).Control(24)=   "cmdCadastro(17)"
-      Tab(1).Control(24).Enabled=   0   'False
-      Tab(1).Control(25)=   "cmdCadastro(2)"
-      Tab(1).Control(25).Enabled=   0   'False
-      Tab(1).Control(26)=   "cmdCadastro(3)"
-      Tab(1).Control(26).Enabled=   0   'False
-      Tab(1).Control(27)=   "Frame25"
-      Tab(1).Control(27).Enabled=   0   'False
+      TabPicture(1)   =   "frmRetrabalho.frx":37D4
+      Tab(1).ControlEnabled=   0   'False
+      Tab(1).Control(0)=   "Frame25"
+      Tab(1).Control(1)=   "cmdCadastro(3)"
+      Tab(1).Control(2)=   "cmdCadastro(2)"
+      Tab(1).Control(3)=   "cmdCadastro(17)"
+      Tab(1).Control(4)=   "Combo1"
+      Tab(1).Control(5)=   "txtformula(26)"
+      Tab(1).Control(6)=   "txtLV"
+      Tab(1).Control(7)=   "txtDB"
+      Tab(1).Control(8)=   "txtformula(25)"
+      Tab(1).Control(9)=   "cmdCadastro(10)"
+      Tab(1).Control(10)=   "txtformula(1)"
+      Tab(1).Control(11)=   "txtformula(0)"
+      Tab(1).Control(12)=   "Frame14"
+      Tab(1).Control(13)=   "Frame13"
+      Tab(1).Control(14)=   "Frame7"
+      Tab(1).Control(15)=   "cmdCadastro(0)"
+      Tab(1).Control(16)=   "cmdCadastro(1)"
+      Tab(1).Control(17)=   "Frame1"
+      Tab(1).Control(18)=   "Frame2"
+      Tab(1).Control(19)=   "Frame5"
+      Tab(1).Control(20)=   "Frame17"
+      Tab(1).Control(21)=   "SkinLabel16"
+      Tab(1).Control(22)=   "SkinLabel18"
+      Tab(1).Control(23)=   "SkinLabel7"
+      Tab(1).Control(24)=   "SkinLabel6"
+      Tab(1).Control(25)=   "ListView1"
+      Tab(1).Control(26)=   "ScriptControl1"
+      Tab(1).Control(27)=   "aicAlphaImage2"
       Tab(1).ControlCount=   28
       TabCaption(2)   =   "Ordem de Serviço"
-      TabPicture(2)   =   "frmRetrabalho.frx":2B26
-      Tab(2).ControlEnabled=   0   'False
+      TabPicture(2)   =   "frmRetrabalho.frx":37F0
+      Tab(2).ControlEnabled=   -1  'True
       Tab(2).Control(0)=   "Frame15"
+      Tab(2).Control(0).Enabled=   0   'False
       Tab(2).Control(1)=   "Frame16"
+      Tab(2).Control(1).Enabled=   0   'False
       Tab(2).ControlCount=   2
       Begin VB.Frame Frame25 
          Caption         =   "Tempo apropriado (OP)"
@@ -560,14 +559,14 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   615
-         Left            =   15240
+         Left            =   -59760
          TabIndex        =   106
          Top             =   7320
          Width           =   2295
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel26 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":2B42
+            OleObjectBlob   =   "frmRetrabalho.frx":380C
             TabIndex        =   107
             Top             =   240
             Width           =   1935
@@ -576,8 +575,8 @@ Begin VB.Form frmRetrabalho
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   3
-         Left            =   1320
-         Picture         =   "frmRetrabalho.frx":2B9C
+         Left            =   -73680
+         Picture         =   "frmRetrabalho.frx":3866
          Style           =   1  'Graphical
          TabIndex        =   33
          Top             =   3960
@@ -586,8 +585,8 @@ Begin VB.Form frmRetrabalho
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   2
-         Left            =   720
-         Picture         =   "frmRetrabalho.frx":3866
+         Left            =   -74280
+         Picture         =   "frmRetrabalho.frx":4530
          Style           =   1  'Graphical
          TabIndex        =   34
          Top             =   3960
@@ -595,9 +594,18 @@ Begin VB.Form frmRetrabalho
       End
       Begin VB.CommandButton cmdCadastro 
          Caption         =   "Agregar"
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   495
          Index           =   17
-         Left            =   8280
+         Left            =   -66720
          TabIndex        =   98
          Tag             =   "Inclui um item selecionado no LV à uma OS"
          ToolTipText     =   "Inclui um item selecionado no LV à uma OS"
@@ -615,9 +623,9 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   345
-         ItemData        =   "frmRetrabalho.frx":4530
-         Left            =   14400
-         List            =   "frmRetrabalho.frx":4552
+         ItemData        =   "frmRetrabalho.frx":51FA
+         Left            =   -60600
+         List            =   "frmRetrabalho.frx":521C
          TabIndex        =   97
          Tag             =   "Operação nº"
          ToolTipText     =   "Operação nº"
@@ -636,7 +644,7 @@ Begin VB.Form frmRetrabalho
          EndProperty
          Height          =   1770
          Index           =   26
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   96
          Tag             =   "Observação"
          ToolTipText     =   "Observação"
@@ -645,7 +653,7 @@ Begin VB.Form frmRetrabalho
       End
       Begin VB.TextBox txtLV 
          Height          =   330
-         Left            =   3000
+         Left            =   -72000
          TabIndex        =   95
          Text            =   "LV"
          Top             =   7320
@@ -654,7 +662,7 @@ Begin VB.Form frmRetrabalho
       End
       Begin VB.TextBox txtDB 
          Height          =   330
-         Left            =   1560
+         Left            =   -73440
          TabIndex        =   94
          Text            =   "DB"
          Top             =   7680
@@ -664,7 +672,7 @@ Begin VB.Form frmRetrabalho
       Begin VB.TextBox txtformula 
          Height          =   330
          Index           =   25
-         Left            =   1560
+         Left            =   -73440
          TabIndex        =   93
          Text            =   "ID OS"
          Top             =   7320
@@ -683,15 +691,35 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   7335
-         Left            =   -64440
+         Left            =   10560
          TabIndex        =   78
          Top             =   600
          Width           =   7575
          Begin VB.CommandButton cmdCadastro 
             Height          =   615
+            Index           =   15
+            Left            =   1320
+            Picture         =   "frmRetrabalho.frx":5249
+            Style           =   1  'Graphical
+            TabIndex        =   79
+            Top             =   2760
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdCadastro 
+            Height          =   615
+            Index           =   14
+            Left            =   720
+            Picture         =   "frmRetrabalho.frx":5F13
+            Style           =   1  'Graphical
+            TabIndex        =   80
+            Top             =   2760
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdCadastro 
+            Height          =   615
             Index           =   16
             Left            =   6720
-            Picture         =   "frmRetrabalho.frx":457F
+            Picture         =   "frmRetrabalho.frx":6BDD
             Style           =   1  'Graphical
             TabIndex        =   87
             Tag             =   "Cadastrar Serviços de Terceiros"
@@ -703,7 +731,7 @@ Begin VB.Form frmRetrabalho
             Height          =   615
             Index           =   11
             Left            =   120
-            Picture         =   "frmRetrabalho.frx":5249
+            Picture         =   "frmRetrabalho.frx":78A7
             Style           =   1  'Graphical
             TabIndex        =   86
             Top             =   2760
@@ -788,26 +816,6 @@ Begin VB.Form frmRetrabalho
             Top             =   480
             Width           =   615
          End
-         Begin VB.CommandButton cmdCadastro 
-            Height          =   615
-            Index           =   14
-            Left            =   720
-            Picture         =   "frmRetrabalho.frx":5F13
-            Style           =   1  'Graphical
-            TabIndex        =   80
-            Top             =   2760
-            Width           =   615
-         End
-         Begin VB.CommandButton cmdCadastro 
-            Height          =   615
-            Index           =   15
-            Left            =   1320
-            Picture         =   "frmRetrabalho.frx":6BDD
-            Style           =   1  'Graphical
-            TabIndex        =   79
-            Top             =   2760
-            Width           =   615
-         End
          Begin MSComctlLib.ListView ListView3 
             Height          =   3735
             Left            =   120
@@ -826,12 +834,21 @@ Begin VB.Form frmRetrabalho
             BackColor       =   -2147483643
             BorderStyle     =   1
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             NumItems        =   0
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":78A7
+            OleObjectBlob   =   "frmRetrabalho.frx":8571
             TabIndex        =   89
             Top             =   2160
             Width           =   1215
@@ -839,7 +856,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":7915
+            OleObjectBlob   =   "frmRetrabalho.frx":85DF
             TabIndex        =   90
             Top             =   960
             Width           =   855
@@ -847,7 +864,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmRetrabalho.frx":7981
+            OleObjectBlob   =   "frmRetrabalho.frx":864B
             TabIndex        =   91
             Top             =   240
             Width           =   855
@@ -855,7 +872,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":79E9
+            OleObjectBlob   =   "frmRetrabalho.frx":86B3
             TabIndex        =   92
             Top             =   240
             Width           =   1575
@@ -873,7 +890,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   7455
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   67
          Top             =   480
          Width           =   10335
@@ -951,7 +968,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":7A49
+            OleObjectBlob   =   "frmRetrabalho.frx":8713
             TabIndex        =   72
             Top             =   840
             Width           =   1215
@@ -974,13 +991,13 @@ Begin VB.Form frmRetrabalho
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   143065089
+            Format          =   423428097
             CurrentDate     =   41568
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
             Height          =   255
             Left            =   2760
-            OleObjectBlob   =   "frmRetrabalho.frx":7AB7
+            OleObjectBlob   =   "frmRetrabalho.frx":8781
             TabIndex        =   74
             Top             =   240
             Width           =   1095
@@ -988,7 +1005,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
             Height          =   255
             Left            =   4440
-            OleObjectBlob   =   "frmRetrabalho.frx":7B19
+            OleObjectBlob   =   "frmRetrabalho.frx":87E3
             TabIndex        =   75
             Top             =   240
             Width           =   1575
@@ -996,7 +1013,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   1920
-            OleObjectBlob   =   "frmRetrabalho.frx":7B91
+            OleObjectBlob   =   "frmRetrabalho.frx":885B
             TabIndex        =   76
             Top             =   240
             Width           =   855
@@ -1004,7 +1021,7 @@ Begin VB.Form frmRetrabalho
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":7BF9
+            OleObjectBlob   =   "frmRetrabalho.frx":88C3
             TabIndex        =   77
             Top             =   240
             Width           =   1215
@@ -1013,8 +1030,8 @@ Begin VB.Form frmRetrabalho
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   10
-         Left            =   240
-         Picture         =   "frmRetrabalho.frx":7C57
+         Left            =   -74760
+         Picture         =   "frmRetrabalho.frx":8921
          Style           =   1  'Graphical
          TabIndex        =   66
          Tag             =   "Gerar OS - Ordem de Serviço"
@@ -1036,7 +1053,7 @@ Begin VB.Form frmRetrabalho
          EndProperty
          Height          =   330
          Index           =   1
-         Left            =   2760
+         Left            =   -72240
          TabIndex        =   65
          Top             =   600
          Width           =   11535
@@ -1054,7 +1071,7 @@ Begin VB.Form frmRetrabalho
          EndProperty
          Height          =   330
          Index           =   0
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   64
          Tag             =   "ID Centro de Custo"
          ToolTipText     =   "ID Centro de Custo"
@@ -1073,7 +1090,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   615
-         Left            =   11880
+         Left            =   -63120
          TabIndex        =   62
          Top             =   7320
          Width           =   3255
@@ -1110,14 +1127,14 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   4320
+         Left            =   -70680
          TabIndex        =   60
          Top             =   3000
          Width           =   5535
          Begin ACTIVESKINLibCtl.SkinLabel Label8 
             Height          =   375
             Left            =   120
-            OleObjectBlob   =   "frmRetrabalho.frx":8921
+            OleObjectBlob   =   "frmRetrabalho.frx":95EB
             TabIndex        =   61
             Top             =   360
             Width           =   5055
@@ -1135,7 +1152,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   2400
+         Left            =   -72600
          TabIndex        =   58
          Top             =   3000
          Width           =   1815
@@ -1157,7 +1174,7 @@ Begin VB.Form frmRetrabalho
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   143065089
+            Format          =   423428097
             CurrentDate     =   41556
          End
       End
@@ -1165,7 +1182,7 @@ Begin VB.Form frmRetrabalho
          Height          =   615
          Index           =   4
          Left            =   -69720
-         Picture         =   "frmRetrabalho.frx":897B
+         Picture         =   "frmRetrabalho.frx":9645
          Style           =   1  'Graphical
          TabIndex        =   57
          Tag             =   "Limpar Controles"
@@ -1177,7 +1194,7 @@ Begin VB.Form frmRetrabalho
          Caption         =   "..."
          Height          =   255
          Index           =   0
-         Left            =   2160
+         Left            =   -72840
          TabIndex        =   56
          Top             =   600
          Width           =   375
@@ -1185,8 +1202,8 @@ Begin VB.Form frmRetrabalho
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
          Index           =   1
-         Left            =   120
-         Picture         =   "frmRetrabalho.frx":9645
+         Left            =   -74880
+         Picture         =   "frmRetrabalho.frx":A30F
          Style           =   1  'Graphical
          TabIndex        =   55
          Top             =   3960
@@ -1204,7 +1221,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3615
-         Left            =   9960
+         Left            =   -65040
          TabIndex        =   53
          Top             =   960
          Width           =   4215
@@ -1223,7 +1240,7 @@ Begin VB.Form frmRetrabalho
                Width           =   3975
                _ExtentX        =   7011
                _ExtentY        =   5741
-               Image           =   "frmRetrabalho.frx":A30F
+               Image           =   "frmRetrabalho.frx":AFD9
             End
          End
       End
@@ -1239,7 +1256,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3615
-         Left            =   14280
+         Left            =   -60720
          TabIndex        =   50
          Top             =   960
          Width           =   3855
@@ -1288,7 +1305,7 @@ Begin VB.Form frmRetrabalho
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   48
          Top             =   3000
          Width           =   2175
@@ -1385,7 +1402,7 @@ Begin VB.Form frmRetrabalho
             Begin ACTIVESKINLibCtl.SkinLabel Label3 
                Height          =   375
                Left            =   120
-               OleObjectBlob   =   "frmRetrabalho.frx":A327
+               OleObjectBlob   =   "frmRetrabalho.frx":AFF1
                TabIndex        =   45
                Top             =   240
                Width           =   11535
@@ -1467,7 +1484,7 @@ Begin VB.Form frmRetrabalho
             Begin ACTIVESKINLibCtl.SkinLabel Label6 
                Height          =   375
                Left            =   120
-               OleObjectBlob   =   "frmRetrabalho.frx":A381
+               OleObjectBlob   =   "frmRetrabalho.frx":B04B
                TabIndex        =   39
                Top             =   240
                Width           =   4455
@@ -1500,7 +1517,7 @@ Begin VB.Form frmRetrabalho
       Begin VB.Frame Frame17 
          Caption         =   "Status (0-nada/1-aberta/2-andamento/3-fechada)"
          Height          =   615
-         Left            =   3600
+         Left            =   -71400
          TabIndex        =   35
          Top             =   7320
          Visible         =   0   'False
@@ -1517,39 +1534,39 @@ Begin VB.Form frmRetrabalho
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
          Height          =   255
-         Left            =   14400
-         OleObjectBlob   =   "frmRetrabalho.frx":A3DB
+         Left            =   -60600
+         OleObjectBlob   =   "frmRetrabalho.frx":B0A5
          TabIndex        =   99
          Top             =   360
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
          Height          =   255
-         Left            =   120
-         OleObjectBlob   =   "frmRetrabalho.frx":A44B
+         Left            =   -74880
+         OleObjectBlob   =   "frmRetrabalho.frx":B115
          TabIndex        =   100
          Top             =   960
          Width           =   1215
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
-         Left            =   2760
-         OleObjectBlob   =   "frmRetrabalho.frx":A4B9
+         Left            =   -72240
+         OleObjectBlob   =   "frmRetrabalho.frx":B183
          TabIndex        =   101
          Top             =   360
          Width           =   2055
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
-         Left            =   120
-         OleObjectBlob   =   "frmRetrabalho.frx":A525
+         Left            =   -74880
+         OleObjectBlob   =   "frmRetrabalho.frx":B1EF
          TabIndex        =   102
          Top             =   360
          Width           =   855
       End
       Begin MSComctlLib.ListView ListView1 
          Height          =   2535
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   103
          Top             =   4680
          Width           =   18015
@@ -1578,19 +1595,19 @@ Begin VB.Form frmRetrabalho
          NumItems        =   0
       End
       Begin MSScriptControlCtl.ScriptControl ScriptControl1 
-         Left            =   9120
+         Left            =   -65880
          Top             =   4080
          _ExtentX        =   1005
          _ExtentY        =   1005
       End
       Begin AlphaImageControl.aicAlphaImage aicAlphaImage2 
          Height          =   435
-         Left            =   9960
+         Left            =   -65040
          Top             =   7440
          Width           =   1545
          _ExtentX        =   2725
          _ExtentY        =   767
-         Image           =   "frmRetrabalho.frx":A58D
+         Image           =   "frmRetrabalho.frx":B257
          Props           =   5
       End
    End
@@ -2530,10 +2547,9 @@ Private Sub Form_Load()
     compoeDadosLV
     
     compoeControlesOS 1
-    
-    
     SomaLV ListView1, 6, Text2
-
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -2595,6 +2611,21 @@ End Sub
 Private Sub Timer1_Timer()
     txtResultado = Text7
     Timer1.Enabled = False
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(1), 1, 46 'Inserir
+    carregaImagemBotao cmdCadastro(11), 11, 46 'Inserir
+    carregaImagemBotao cmdCadastro(4), 4, 31 'Novo
+    carregaImagemBotao cmdCadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdCadastro(14), 14, 32 'Editar
+    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdCadastro(15), 15, 33 'Excluir
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(13), 13, 34 'Sair
+    carregaImagemBotao cmdCadastro(10), 10, 52 'Gerar OS
+    carregaImagemBotao cmdCadastro(16), 16, 53 'Terceiros
+    carregaImagemBotao Command1, 1, 37 'Imprimir
 End Sub
 
 Private Function chamaCD()
@@ -2756,12 +2787,12 @@ On Error GoTo Err
     Dim vCodLM As String, vCodSeq As String
         
     If vNomeC <> "" Then
-        If Mid$(right(vNomeC, 6), 1, 1) = " " Then
-            vNomeC = right(vNomeC, 5)
+        If Mid$(Right(vNomeC, 6), 1, 1) = " " Then
+            vNomeC = Right(vNomeC, 5)
             vCodLM = Mid$(vNomeC, 1, 2)
             vCodSeq = Mid$(vNomeC, 3, 3)
         Else
-            vNomeC = right(vNomeC, 6)
+            vNomeC = Right(vNomeC, 6)
             vCodLM = Mid$(vNomeC, 1, 2)
             vCodSeq = Mid$(vNomeC, 3, 4)
         End If
@@ -3016,7 +3047,7 @@ On Error GoTo Err
                 vPesoPosicao = 0
                 
                 'Teste
-                If Mid$(right(vNome2, 14), 1, 3) = "OS:" Then
+                If Mid$(Right(vNome2, 14), 1, 3) = "OS:" Then
                     Dim vTamanho1 As Integer
                     vTamanho1 = Len(vNome2) - 11
                     vNome2 = Mid$(vNome2, 1, vTamanho1) & ")"
@@ -3246,12 +3277,12 @@ On Error GoTo Err
 '        txtformula(2).Text = rsCompoe.Fields(0) 'Parâmetros
 '        txtformula(3).Text = rsCompoe.Fields(1) 'Formula
 '       If Not IsNull(rsCompoe.Fields(2)) Then txtformula(6).Text = rsCompoe.Fields(2) 'Observação
-        If Not IsNull(rsCompoe.Fields(3)) Then Label53 = rsCompoe.Fields(3) Else Label53 = "-" 'Imagem
+        If Not IsNull(rsCompoe.Fields(3)) Then label53 = rsCompoe.Fields(3) Else label53 = "-" 'Imagem
     Else
 '        txtformula(2).Text = "" 'Parâmetros
 '        txtformula(3).Text = "" 'Formula
 '        txtformula(6).Text = "" 'Observação
-        Label53 = "-" 'Imagem
+        label53 = "-" 'Imagem
     End If
 '    If Mid$(txtformula(2).Text, 1, 7) = "formula" Then
 '        localizaFormula Mid$(txtformula(2).Text, 9, 1), 1
@@ -3270,8 +3301,8 @@ On Error GoTo Err
     End If
     
     aicAlphaImage1.ClearImage
-    If Label53 <> "" Or Label53 <> "-" Then
-        aicAlphaImage1.LoadImage_FromFile (Label53.Text)
+    If label53 <> "" Or label53 <> "-" Then
+        aicAlphaImage1.LoadImage_FromFile (label53.Text)
     End If
     'compoeAutomatico
     rsCompoe.Close
@@ -3638,12 +3669,12 @@ On Error GoTo Err
         txtformula(2).Text = rsCompoe.Fields(0) 'Parâmetros
         txtformula(3).Text = rsCompoe.Fields(1) 'Formula
         If Not IsNull(rsCompoe.Fields(2)) Then txtformula(6).Text = rsCompoe.Fields(2) 'Observação
-        If Not IsNull(rsCompoe.Fields(3)) Then Label53 = rsCompoe.Fields(3) Else Label53 = "-" 'Imagem
+        If Not IsNull(rsCompoe.Fields(3)) Then label53 = rsCompoe.Fields(3) Else label53 = "-" 'Imagem
     Else
         txtformula(2).Text = "" 'Parâmetros
         txtformula(3).Text = "" 'Formula
         txtformula(6).Text = "" 'Observação
-        Label53 = "-" 'Imagem
+        label53 = "-" 'Imagem
     End If
     If Mid$(txtformula(2).Text, 1, 7) = "formula" Then
         localizaFormula Mid$(txtformula(2).Text, 9, 1), 1
@@ -3662,8 +3693,8 @@ On Error GoTo Err
     'End If
     
     aicAlphaImage1.ClearImage
-    If Label53 <> "" Or Label53 <> "-" Then
-        aicAlphaImage1.LoadImage_FromFile (Label53.Text)
+    If label53 <> "" Or label53 <> "-" Then
+        aicAlphaImage1.LoadImage_FromFile (label53.Text)
     End If
     'compoeAutomatico
     rsCompoe.Close
@@ -3775,12 +3806,12 @@ On Error GoTo Err
     'vCodLM = Mid$(vNomeC, 1, 2)
     'vCodSeq = Mid$(vNomeC, 3, 3)
     
-    If Mid$(right(vNomeC, 6), 1, 1) = " " Then
-        vNomeC = right(vNomeC, 5)
+    If Mid$(Right(vNomeC, 6), 1, 1) = " " Then
+        vNomeC = Right(vNomeC, 5)
         vCodLM = Mid$(vNomeC, 1, 2)
         vCodSeq = Mid$(vNomeC, 3, 3)
     Else
-        vNomeC = right(vNomeC, 6)
+        vNomeC = Right(vNomeC, 6)
         vCodLM = Mid$(vNomeC, 1, 2)
         vCodSeq = Mid$(vNomeC, 3, 4)
     End If

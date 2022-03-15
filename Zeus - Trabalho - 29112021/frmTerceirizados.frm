@@ -27,6 +27,27 @@ Begin VB.Form frmTerceirizados
    ScaleHeight     =   6765
    ScaleWidth      =   9615
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cmdCadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   5
+      Left            =   720
+      Picture         =   "frmTerceirizados.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   23
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   6000
+      Width           =   615
+   End
    Begin VB.TextBox txtCadTerc 
       Height          =   330
       Index           =   4
@@ -81,32 +102,11 @@ Begin VB.Form frmTerceirizados
       Height          =   615
       Index           =   4
       Left            =   120
-      Picture         =   "frmTerceirizados.frx":0CCA
+      Picture         =   "frmTerceirizados.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   22
       Tag             =   "Salvar Critério"
       ToolTipText     =   "Salvar Critério"
-      Top             =   6000
-      Width           =   615
-   End
-   Begin VB.CommandButton cmdCadastro 
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   615
-      Index           =   5
-      Left            =   720
-      Picture         =   "frmTerceirizados.frx":1994
-      Style           =   1  'Graphical
-      TabIndex        =   23
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   6000
       Width           =   615
    End
@@ -296,7 +296,7 @@ Begin VB.Form frmTerceirizados
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   162267137
+         Format          =   423165953
          CurrentDate     =   42416
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
@@ -316,7 +316,7 @@ Begin VB.Form frmTerceirizados
          _ExtentX        =   2990
          _ExtentY        =   582
          _Version        =   393216
-         Format          =   162267137
+         Format          =   423165953
          CurrentDate     =   42416
       End
       Begin MSComCtl2.DTPicker DTPicker1 
@@ -328,7 +328,7 @@ Begin VB.Form frmTerceirizados
          _ExtentX        =   2990
          _ExtentY        =   582
          _Version        =   393216
-         Format          =   162267137
+         Format          =   423165953
          CurrentDate     =   42416
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
@@ -550,7 +550,7 @@ Private Sub Form_Load()
     ElseIf Status = "editar" Then
         ResultPesq
     End If
-    
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -559,10 +559,6 @@ Private Sub Form_Load()
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
-
-End Sub
-
-Private Sub Text1_Change()
 
 End Sub
 
@@ -600,6 +596,13 @@ End Sub
 
 Private Sub txtCadTerc_LostFocus(Index As Integer)
     voltaCorText txtCadTerc(Index)
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 47 'Add User
+    carregaImagemBotao cmdCadastro(1), 1, 33 'Excluir
+    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdCadastro(5), 5, 34 'Sair
 End Sub
 
 Private Sub ResultPesq()

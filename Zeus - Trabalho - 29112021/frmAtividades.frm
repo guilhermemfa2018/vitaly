@@ -25,6 +25,30 @@ Begin VB.Form frmAtividades
    ScaleHeight     =   4065
    ScaleWidth      =   7770
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdCadastro 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmAtividades.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   13
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   3360
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdCadastro 
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmAtividades.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   14
+      Tag             =   "Salvar"
+      ToolTipText     =   "Salvar"
+      Top             =   3360
+      Width           =   615
+   End
    Begin VB.Frame Frame3 
       Caption         =   "Status"
       Enabled         =   0   'False
@@ -39,7 +63,7 @@ Begin VB.Form frmAtividades
       EndProperty
       Height          =   615
       Left            =   6600
-      TabIndex        =   11
+      TabIndex        =   9
       Top             =   3360
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -47,7 +71,7 @@ Begin VB.Form frmAtividades
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   7
+         TabIndex        =   5
          Tag             =   "Status da Movimentação"
          ToolTipText     =   "Status da Movimentação"
          Top             =   240
@@ -68,7 +92,7 @@ Begin VB.Form frmAtividades
       EndProperty
       Height          =   3135
       Left            =   120
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   120
       Width           =   7575
       Begin VB.TextBox txtCadEscolaridade 
@@ -85,16 +109,16 @@ Begin VB.Form frmAtividades
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmAtividades.frx":0CCA
-         TabIndex        =   14
+         OleObjectBlob   =   "frmAtividades.frx":265E
+         TabIndex        =   12
          Top             =   1680
          Width           =   1575
       End
       Begin VB.ComboBox cboCadEscolaridade 
          Height          =   345
-         ItemData        =   "frmAtividades.frx":0D36
+         ItemData        =   "frmAtividades.frx":26CA
          Left            =   1320
-         List            =   "frmAtividades.frx":0D43
+         List            =   "frmAtividades.frx":26D7
          TabIndex        =   1
          Text            =   "Parada"
          Top             =   480
@@ -113,8 +137,8 @@ Begin VB.Form frmAtividades
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmAtividades.frx":0D62
-         TabIndex        =   12
+         OleObjectBlob   =   "frmAtividades.frx":26F6
+         TabIndex        =   10
          Top             =   960
          Width           =   735
       End
@@ -142,16 +166,16 @@ Begin VB.Form frmAtividades
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmAtividades.frx":0DC8
-         TabIndex        =   9
+         OleObjectBlob   =   "frmAtividades.frx":275C
+         TabIndex        =   7
          Top             =   960
          Width           =   1695
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmAtividades.frx":0E2A
-         TabIndex        =   10
+         OleObjectBlob   =   "frmAtividades.frx":27BE
+         TabIndex        =   8
          Top             =   240
          Width           =   855
       End
@@ -159,94 +183,10 @@ Begin VB.Form frmAtividades
          Caption         =   "Tipo:"
          Height          =   255
          Left            =   1320
-         TabIndex        =   13
+         TabIndex        =   11
          Top             =   240
          Width           =   615
       End
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   6
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   3360
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmAtividades.frx":0E88
-      PICN            =   "frmAtividades.frx":0EA4
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   5
-      Tag             =   "Salvar registro"
-      ToolTipText     =   "Salvar registro"
-      Top             =   3360
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmAtividades.frx":1B7E
-      PICN            =   "frmAtividades.frx":1B9A
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmAtividades"
@@ -303,7 +243,10 @@ Private Sub Form_Load()
         ResultPesq
         DesbloqueiaControles
     End If
-    configControles
+    'configControles
+    
+    carregarIconBotao
+    
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -524,13 +467,13 @@ Err:
     Exit Sub
 End Sub
 
-Private Sub configControles()
-    If vSal = "N" Then
-        cmdCadastro(0).UseGreyscale = True
-        cmdCadastro(0).DragMode = 1
-        cmdCadastro(0).SpecialEffect = cbEngraved
-    End If
-End Sub
+'Private Sub configControles()
+'    If vSal = "N" Then
+'        cmdCadastro(0).UseGreyscale = True
+'        cmdCadastro(0).DragMode = 1
+'        cmdCadastro(0).SpecialEffect = cbEngraved
+'    End If
+'End Sub
 
 Private Sub txtCadEscolaridade_GotFocus(Index As Integer)
     mudaCorText txtCadEscolaridade(Index)
@@ -538,4 +481,9 @@ End Sub
 
 Private Sub txtCadEscolaridade_LostFocus(Index As Integer)
     voltaCorText txtCadEscolaridade(Index)
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 45 'Salvar
+    carregaImagemBotao cmdCadastro(1), 1, 34 'Sair
 End Sub

@@ -66,12 +66,17 @@ End Sub
 
 Private Sub Form_Load()
     Frame1.Caption = "Filtro: " & frmFiltro.Combo1.Text
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao Command1, 1, 49 'Verificar
 End Sub
 
 Private Sub ValidaDados()

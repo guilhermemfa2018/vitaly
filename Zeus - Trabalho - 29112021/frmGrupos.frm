@@ -16,103 +16,43 @@ Begin VB.Form frmGrupos
    ScaleHeight     =   8640
    ScaleWidth      =   6585
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton chameleonButton11 
+      Height          =   615
+      Left            =   720
+      Picture         =   "frmGrupos.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   17
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   7920
+      Width           =   615
+   End
+   Begin VB.CommandButton chameleonButton12 
+      Height          =   615
+      Left            =   120
+      Picture         =   "frmGrupos.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   18
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   7920
+      Width           =   615
+   End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
       Height          =   255
       Left            =   240
-      OleObjectBlob   =   "frmGrupos.frx":0CCA
-      TabIndex        =   16
+      OleObjectBlob   =   "frmGrupos.frx":265E
+      TabIndex        =   14
       Top             =   720
       Width           =   855
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   255
       Left            =   240
-      OleObjectBlob   =   "frmGrupos.frx":0D3C
-      TabIndex        =   15
+      OleObjectBlob   =   "frmGrupos.frx":26D0
+      TabIndex        =   13
       Top             =   240
       Width           =   615
-   End
-   Begin ZEUS.chameleonButton chameleonButton11 
-      Height          =   615
-      Left            =   720
-      TabIndex        =   4
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmGrupos.frx":0DA8
-      PICN            =   "frmGrupos.frx":0DC4
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton chameleonButton12 
-      Height          =   615
-      Left            =   120
-      TabIndex        =   3
-      Tag             =   "Salvar dados"
-      ToolTipText     =   "Salvar dados"
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmGrupos.frx":1A9E
-      PICN            =   "frmGrupos.frx":1ABA
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame3 
       Caption         =   "Status"
@@ -128,7 +68,7 @@ Begin VB.Form frmGrupos
       EndProperty
       Height          =   615
       Left            =   5400
-      TabIndex        =   6
+      TabIndex        =   4
       Top             =   7920
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -136,7 +76,7 @@ Begin VB.Form frmGrupos
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   7
+         TabIndex        =   5
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
@@ -174,11 +114,11 @@ Begin VB.Form frmGrupos
          BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
             NumListImages   =   2
             BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmGrupos.frx":2794
+               Picture         =   "frmGrupos.frx":273C
                Key             =   "sim"
             EndProperty
             BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmGrupos.frx":31A6
+               Picture         =   "frmGrupos.frx":314E
                Key             =   "nao"
             EndProperty
          EndProperty
@@ -196,7 +136,7 @@ Begin VB.Form frmGrupos
          EndProperty
          Height          =   1335
          Left            =   120
-         TabIndex        =   8
+         TabIndex        =   6
          Top             =   5280
          Width           =   6015
          Begin VB.Frame Frame4 
@@ -212,15 +152,15 @@ Begin VB.Form frmGrupos
             EndProperty
             Height          =   855
             Left            =   3000
-            TabIndex        =   17
+            TabIndex        =   15
             Top             =   240
             Visible         =   0   'False
             Width           =   2895
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
                Height          =   375
                Left            =   120
-               OleObjectBlob   =   "frmGrupos.frx":3BB8
-               TabIndex        =   18
+               OleObjectBlob   =   "frmGrupos.frx":3B60
+               TabIndex        =   16
                Top             =   360
                Width           =   1815
             End
@@ -230,7 +170,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   5
             Left            =   2040
-            TabIndex        =   14
+            TabIndex        =   12
             Top             =   840
             Value           =   1  'Checked
             Width           =   855
@@ -240,7 +180,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   4
             Left            =   2040
-            TabIndex        =   13
+            TabIndex        =   11
             Top             =   480
             Value           =   1  'Checked
             Width           =   855
@@ -250,7 +190,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   1
             Left            =   120
-            TabIndex        =   12
+            TabIndex        =   10
             Top             =   840
             Value           =   1  'Checked
             Width           =   855
@@ -260,7 +200,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   0
             Left            =   120
-            TabIndex        =   11
+            TabIndex        =   9
             Top             =   480
             Value           =   1  'Checked
             Width           =   855
@@ -270,7 +210,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   2
             Left            =   1080
-            TabIndex        =   10
+            TabIndex        =   8
             Top             =   480
             Value           =   1  'Checked
             Width           =   855
@@ -280,7 +220,7 @@ Begin VB.Form frmGrupos
             Height          =   255
             Index           =   3
             Left            =   1080
-            TabIndex        =   9
+            TabIndex        =   7
             Top             =   840
             Value           =   1  'Checked
             Width           =   855
@@ -289,7 +229,7 @@ Begin VB.Form frmGrupos
       Begin MSComctlLib.TreeView TreeView1 
          Height          =   4980
          Left            =   120
-         TabIndex        =   5
+         TabIndex        =   3
          Top             =   240
          Width           =   6075
          _ExtentX        =   10716
@@ -363,12 +303,18 @@ Private Sub Form_Load()
         CompoeTreeview
     End If
     configControles
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao chameleonButton12, 12, 45 'Salvar
+    carregaImagemBotao chameleonButton11, 11, 34 'Sair
 End Sub
 
 Private Sub ResultPesq()

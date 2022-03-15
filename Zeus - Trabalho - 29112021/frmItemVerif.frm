@@ -18,10 +18,34 @@ Begin VB.Form frmItemVerif
    ScaleHeight     =   8280
    ScaleWidth      =   9105
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   11
+      Left            =   720
+      Picture         =   "frmItemVerif.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   22
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   7560
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdcadastro 
+      Height          =   615
+      Index           =   12
+      Left            =   120
+      Picture         =   "frmItemVerif.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   23
+      Tag             =   "Salvar"
+      ToolTipText     =   "Salvar"
+      Top             =   7560
+      Width           =   615
+   End
    Begin TabDlg.SSTab SSTab1 
       Height          =   7335
       Left            =   120
-      TabIndex        =   14
+      TabIndex        =   7
       Top             =   120
       Width           =   8895
       _ExtentX        =   15690
@@ -32,12 +56,12 @@ Begin VB.Form frmItemVerif
       TabsPerRow      =   2
       TabHeight       =   520
       TabCaption(0)   =   "Grupos"
-      TabPicture(0)   =   "frmItemVerif.frx":0CCA
+      TabPicture(0)   =   "frmItemVerif.frx":265E
       Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Frame1"
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Itens"
-      TabPicture(1)   =   "frmItemVerif.frx":0CE6
+      TabPicture(1)   =   "frmItemVerif.frx":267A
       Tab(1).ControlEnabled=   -1  'True
       Tab(1).Control(0)=   "Frame2"
       Tab(1).Control(0).Enabled=   0   'False
@@ -57,15 +81,33 @@ Begin VB.Form frmItemVerif
          EndProperty
          Height          =   975
          Left            =   120
-         TabIndex        =   17
+         TabIndex        =   10
          Top             =   360
          Width           =   8655
+         Begin VB.CommandButton cmdcadastro 
+            Caption         =   "..."
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   285
+            Index           =   10
+            Left            =   8040
+            TabIndex        =   30
+            Top             =   510
+            Width           =   495
+         End
          Begin VB.TextBox txtCadastro 
             Enabled         =   0   'False
             Height          =   285
             Index           =   1
             Left            =   1200
-            TabIndex        =   7
+            TabIndex        =   4
             Top             =   480
             Width           =   6855
          End
@@ -73,7 +115,7 @@ Begin VB.Form frmItemVerif
             Height          =   285
             Index           =   1
             Left            =   120
-            TabIndex        =   6
+            TabIndex        =   3
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
@@ -95,57 +137,18 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmItemVerif.frx":0D02
-            TabIndex        =   24
+            OleObjectBlob   =   "frmItemVerif.frx":2696
+            TabIndex        =   15
             Top             =   240
             Width           =   1095
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":0D74
-            TabIndex        =   23
+            OleObjectBlob   =   "frmItemVerif.frx":2708
+            TabIndex        =   14
             Top             =   240
             Width           =   735
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   255
-            Index           =   10
-            Left            =   8160
-            TabIndex        =   8
-            Top             =   480
-            Width           =   375
-            _ExtentX        =   661
-            _ExtentY        =   450
-            BTYPE           =   4
-            TX              =   "..."
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   700
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":0DE0
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
       End
       Begin VB.Frame Frame2 
@@ -161,22 +164,85 @@ Begin VB.Form frmItemVerif
          EndProperty
          Height          =   5775
          Left            =   120
-         TabIndex        =   16
+         TabIndex        =   9
          Top             =   1440
          Width           =   8655
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   7
+            Left            =   1320
+            Picture         =   "frmItemVerif.frx":2774
+            Style           =   1  'Graphical
+            TabIndex        =   24
+            Tag             =   "Excluir"
+            ToolTipText     =   "Excluir"
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   6
+            Left            =   720
+            Picture         =   "frmItemVerif.frx":343E
+            Style           =   1  'Graphical
+            TabIndex        =   25
+            Tag             =   "Editar"
+            ToolTipText     =   "Editar"
+            Top             =   840
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   5
+            Left            =   120
+            Picture         =   "frmItemVerif.frx":4108
+            Style           =   1  'Graphical
+            TabIndex        =   26
+            Tag             =   "Incluir"
+            ToolTipText     =   "Incluir"
+            Top             =   840
+            Width           =   615
+         End
          Begin VB.TextBox txtCadastro 
             Height          =   285
             Index           =   3
             Left            =   7680
-            TabIndex        =   30
+            TabIndex        =   21
             Top             =   480
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   7680
-            OleObjectBlob   =   "frmItemVerif.frx":0DFC
-            TabIndex        =   29
+            OleObjectBlob   =   "frmItemVerif.frx":4DD2
+            TabIndex        =   20
             Top             =   240
             Width           =   615
          End
@@ -184,7 +250,7 @@ Begin VB.Form frmItemVerif
             Height          =   285
             Index           =   2
             Left            =   1200
-            TabIndex        =   10
+            TabIndex        =   6
             Top             =   480
             Width           =   6375
          End
@@ -192,7 +258,7 @@ Begin VB.Form frmItemVerif
             Height          =   285
             Index           =   2
             Left            =   120
-            TabIndex        =   9
+            TabIndex        =   5
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
@@ -215,23 +281,23 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmItemVerif.frx":0E66
-            TabIndex        =   26
+            OleObjectBlob   =   "frmItemVerif.frx":4E3C
+            TabIndex        =   17
             Top             =   240
             Width           =   975
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":0ED8
-            TabIndex        =   25
+            OleObjectBlob   =   "frmItemVerif.frx":4EAE
+            TabIndex        =   16
             Top             =   240
             Width           =   615
          End
          Begin MSComctlLib.TreeView TreeView1 
             Height          =   4095
             Left            =   120
-            TabIndex        =   18
+            TabIndex        =   11
             Top             =   1560
             Width           =   8415
             _ExtentX        =   14843
@@ -241,126 +307,6 @@ Begin VB.Form frmItemVerif
             LineStyle       =   1
             Style           =   7
             Appearance      =   1
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   7
-            Left            =   1320
-            TabIndex        =   13
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":0F44
-            PICN            =   "frmItemVerif.frx":0F60
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   6
-            Left            =   720
-            TabIndex        =   12
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":1C3A
-            PICN            =   "frmItemVerif.frx":1C56
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   5
-            Left            =   120
-            TabIndex        =   11
-            Top             =   840
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":2930
-            PICN            =   "frmItemVerif.frx":294C
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
       End
       Begin VB.Frame Frame1 
@@ -376,15 +322,78 @@ Begin VB.Form frmItemVerif
          EndProperty
          Height          =   6855
          Left            =   -74880
-         TabIndex        =   15
+         TabIndex        =   8
          Top             =   360
          Width           =   8655
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   2
+            Left            =   1320
+            Picture         =   "frmItemVerif.frx":4F1A
+            Style           =   1  'Graphical
+            TabIndex        =   27
+            Tag             =   "Excluir"
+            ToolTipText     =   "Excluir"
+            Top             =   960
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   1
+            Left            =   720
+            Picture         =   "frmItemVerif.frx":5BE4
+            Style           =   1  'Graphical
+            TabIndex        =   28
+            Tag             =   "Editar"
+            ToolTipText     =   "Editar"
+            Top             =   960
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdcadastro 
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   615
+            Index           =   0
+            Left            =   120
+            Picture         =   "frmItemVerif.frx":68AE
+            Style           =   1  'Graphical
+            TabIndex        =   29
+            Tag             =   "Incluir"
+            ToolTipText     =   "Incluir"
+            Top             =   960
+            Width           =   615
+         End
          Begin VB.ComboBox Combo1 
             Height          =   315
-            ItemData        =   "frmItemVerif.frx":3626
+            ItemData        =   "frmItemVerif.frx":7578
             Left            =   5160
-            List            =   "frmItemVerif.frx":3633
-            TabIndex        =   28
+            List            =   "frmItemVerif.frx":7585
+            TabIndex        =   19
             Text            =   "-"
             Top             =   480
             Width           =   2895
@@ -392,8 +401,8 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   5160
-            OleObjectBlob   =   "frmItemVerif.frx":364F
-            TabIndex        =   27
+            OleObjectBlob   =   "frmItemVerif.frx":75A1
+            TabIndex        =   18
             Top             =   240
             Width           =   2415
          End
@@ -432,143 +441,23 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmItemVerif.frx":36E1
-            TabIndex        =   22
+            OleObjectBlob   =   "frmItemVerif.frx":7633
+            TabIndex        =   13
             Top             =   240
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":3753
-            TabIndex        =   21
+            OleObjectBlob   =   "frmItemVerif.frx":76A5
+            TabIndex        =   12
             Top             =   240
             Width           =   615
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   2
-            Left            =   1320
-            TabIndex        =   4
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":37BF
-            PICN            =   "frmItemVerif.frx":37DB
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   1
-            Left            =   720
-            TabIndex        =   3
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":44B5
-            PICN            =   "frmItemVerif.frx":44D1
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdcadastro 
-            Height          =   615
-            Index           =   0
-            Left            =   120
-            TabIndex        =   2
-            Top             =   960
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmItemVerif.frx":51AB
-            PICN            =   "frmItemVerif.frx":51C7
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
          Begin MSComctlLib.ListView ListView1 
             Height          =   5055
             Left            =   120
-            TabIndex        =   5
+            TabIndex        =   2
             Top             =   1680
             Width           =   8415
             _ExtentX        =   14843
@@ -586,86 +475,6 @@ Begin VB.Form frmItemVerif
             NumItems        =   0
          End
       End
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   11
-      Left            =   720
-      TabIndex        =   19
-      Top             =   7560
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmItemVerif.frx":5EA1
-      PICN            =   "frmItemVerif.frx":5EBD
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdcadastro 
-      Height          =   615
-      Index           =   12
-      Left            =   120
-      TabIndex        =   20
-      Top             =   7560
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmItemVerif.frx":6B97
-      PICN            =   "frmItemVerif.frx":6BB3
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmItemVerif"
@@ -721,12 +530,26 @@ Private Sub Form_Load()
     mskCadastro(0).PromptInclude = True
     FecharListaVer
     CompoeTreeview
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 46 'Inserir
+    carregaImagemBotao cmdCadastro(1), 1, 32 'Editar
+    carregaImagemBotao cmdCadastro(2), 2, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(5), 5, 46 'Inserir
+    carregaImagemBotao cmdCadastro(6), 6, 32 'Editar
+    carregaImagemBotao cmdCadastro(7), 7, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(11), 11, 34 'Sair
 End Sub
 
 Private Sub Form_KeyPress(KeyAscii As Integer)

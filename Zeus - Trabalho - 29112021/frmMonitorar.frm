@@ -966,8 +966,8 @@ On Error GoTo Err
     sqlStatus = sqlStatus & "ORDER BY F.CODREDUZIDO,B.NOME"
     rsStatus.Open sqlStatus, cnBanco, adOpenKeyset, adLockReadOnly
     Dim ItemLst As ListItem
-    Dim x As Integer
-    x = 0
+    Dim X As Integer
+    X = 0
     ListView1.ListItems.Clear
     While Not rsStatus.EOF
         If rsStatus.Fields(10) = "A" Then
@@ -1002,7 +1002,7 @@ On Error GoTo Err
         ItemLst.SubItems(17) = "" & rsStatus.Fields(22)
         
         rsStatus.MoveNext
-        x = x + 1
+        X = X + 1
     Wend
     rsStatus.Close
     Set rsStatus = Nothing
@@ -1036,11 +1036,11 @@ On Error GoTo Err
     Dim rsCompoe As New ADODB.Recordset
     Dim sqlCompoe As String
     
-    Dim Y As Integer, x As Integer
+    Dim Y As Integer, X As Integer
     Y = ListView1.ListItems.Count
-    For x = 1 To Y
-        If ListView1.ListItems.Item(x).Selected = True Then
-            vPosition = x
+    For X = 1 To Y
+        If ListView1.ListItems.Item(X).Selected = True Then
+            vPosition = X
             Exit For
         End If
     Next
@@ -1131,7 +1131,7 @@ On Error GoTo Err
     End If
     
     'HABILITA BOTÃO PARA FINALIZAR APROPRIAÇÃO
-    HabBotao x
+    HabBotao X
     
     'PEGA IMAGEM GRAVADO NO BANCO SQL E EXIBE EM UM COMPONENTE DE IMAGEM
     If Mid$(ListView1.SelectedItem.ListSubItems.Item(1), 1, 5) <> "CONTR" Then
@@ -1160,9 +1160,9 @@ On Error GoTo Err
     Set rsCompoe = Nothing
     calculaTempoApropriado
     If Mid$(ListView1.SelectedItem.ListSubItems.Item(1), 1, 5) <> "CONTR" Then
-        compoeAprop Mid$(ListView1.ListItems.Item(x), 1, 5)
+        compoeAprop Mid$(ListView1.ListItems.Item(X), 1, 5)
     Else
-        compoeAprop Mid$(ListView1.ListItems.Item(x), 1, 11)
+        compoeAprop Mid$(ListView1.ListItems.Item(X), 1, 11)
     End If
     Exit Sub
 Err:

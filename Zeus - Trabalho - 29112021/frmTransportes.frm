@@ -7,6 +7,15 @@ Begin VB.Form frmTransportes
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   7575
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmTransportes.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
@@ -15,12 +24,64 @@ Begin VB.Form frmTransportes
    ScaleHeight     =   3855
    ScaleWidth      =   7575
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton cmdCadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmTransportes.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   21
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   3120
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdCadastro 
+      Enabled         =   0   'False
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmTransportes.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   22
+      Tag             =   "Salvar Critério"
+      ToolTipText     =   "Salvar Critério"
+      Top             =   3120
+      Width           =   615
+   End
    Begin VB.Frame Frame3 
       Caption         =   "Status"
       Enabled         =   0   'False
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Left            =   6360
-      TabIndex        =   22
+      TabIndex        =   20
       Top             =   3120
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -28,7 +89,7 @@ Begin VB.Form frmTransportes
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   11
+         TabIndex        =   9
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
@@ -37,8 +98,8 @@ Begin VB.Form frmTransportes
    Begin VB.Frame Frame1 
       Caption         =   "Dados da Transportadora "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -47,7 +108,7 @@ Begin VB.Form frmTransportes
       EndProperty
       Height          =   2895
       Left            =   120
-      TabIndex        =   12
+      TabIndex        =   10
       Top             =   120
       Width           =   7335
       Begin VB.TextBox txtCadEscolaridade 
@@ -99,11 +160,20 @@ Begin VB.Form frmTransportes
          Width           =   2895
       End
       Begin VB.ComboBox cboCadEscolaridade 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   315
          Index           =   0
-         ItemData        =   "frmTransportes.frx":0CCA
+         ItemData        =   "frmTransportes.frx":265E
          Left            =   6480
-         List            =   "frmTransportes.frx":0D1F
+         List            =   "frmTransportes.frx":26B3
          TabIndex        =   8
          Top             =   2280
          Width           =   735
@@ -111,56 +181,56 @@ Begin VB.Form frmTransportes
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
          Height          =   255
          Left            =   6480
-         OleObjectBlob   =   "frmTransportes.frx":0D8F
-         TabIndex        =   21
+         OleObjectBlob   =   "frmTransportes.frx":2723
+         TabIndex        =   19
          Top             =   2040
          Width           =   375
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   3480
-         OleObjectBlob   =   "frmTransportes.frx":0DF3
-         TabIndex        =   20
+         OleObjectBlob   =   "frmTransportes.frx":2781
+         TabIndex        =   18
          Top             =   2040
          Width           =   735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmTransportes.frx":0E5F
-         TabIndex        =   19
+         OleObjectBlob   =   "frmTransportes.frx":27E7
+         TabIndex        =   17
          Top             =   2040
          Width           =   735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   6240
-         OleObjectBlob   =   "frmTransportes.frx":0ECB
-         TabIndex        =   18
+         OleObjectBlob   =   "frmTransportes.frx":284D
+         TabIndex        =   16
          Top             =   1440
          Width           =   495
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmTransportes.frx":0F31
-         TabIndex        =   17
+         OleObjectBlob   =   "frmTransportes.frx":28AD
+         TabIndex        =   15
          Top             =   1440
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   3720
-         OleObjectBlob   =   "frmTransportes.frx":0FA1
-         TabIndex        =   16
+         OleObjectBlob   =   "frmTransportes.frx":2917
+         TabIndex        =   14
          Top             =   840
          Width           =   2295
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmTransportes.frx":1025
-         TabIndex        =   15
+         OleObjectBlob   =   "frmTransportes.frx":2995
+         TabIndex        =   13
          Top             =   840
          Width           =   615
       End
@@ -188,103 +258,19 @@ Begin VB.Form frmTransportes
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmTransportes.frx":108D
-         TabIndex        =   13
+         OleObjectBlob   =   "frmTransportes.frx":29F7
+         TabIndex        =   11
          Top             =   240
          Width           =   1695
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmTransportes.frx":10F5
-         TabIndex        =   14
+         OleObjectBlob   =   "frmTransportes.frx":2A59
+         TabIndex        =   12
          Top             =   240
          Width           =   855
       End
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   10
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   3120
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmTransportes.frx":1161
-      PICN            =   "frmTransportes.frx":117D
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdCadastro 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   9
-      Tag             =   "Salvar registro"
-      ToolTipText     =   "Salvar registro"
-      Top             =   3120
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   0   'False
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmTransportes.frx":1E57
-      PICN            =   "frmTransportes.frx":1E73
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmTransportes"
@@ -318,7 +304,7 @@ Private Sub cmdCadastro_MouseOver(Index As Integer)
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -333,7 +319,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -346,7 +332,7 @@ Private Sub Form_Load()
         ResultPesq
         DesbloqueiaControles
     End If
-    'configControles
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -355,12 +341,17 @@ ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 End Sub
 
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadastro(0), 0, 45 'Salvar
+    carregaImagemBotao cmdCadastro(1), 1, 34 'Sair
+End Sub
+
 Private Sub GravarDados()
 On Error GoTo Err
     If ValidaCampo = False Then Exit Sub
     Dim rsSalvarTransp As New ADODB.Recordset
     Dim sqlSalvarTransp As String
-    Dim y As Integer
+    Dim Y As Integer
 10  cnBanco.BeginTrans
    
     sqlSalvarTransp = "select * from tbTransportadoras where codtransp = '" & txtCadEscolaridade(0) & "'"
@@ -405,16 +396,16 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim x As Integer
+    Dim X As Integer
     DesbloqueiaControles
-    For x = 0 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(x) = ""
+    For X = 0 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(X) = ""
     Next
     txtCadEscolaridade(0) = Format(GeraCodigo, "000000")
 End Sub
 
 Private Sub CompoeControles()
-    Dim x As Integer
+    Dim X As Integer
     txtCadEscolaridade(0).Text = Format(rsTransportadoras.Fields(0), "000000")
     txtCadEscolaridade(1).Text = rsTransportadoras.Fields(1)
     If Not IsNull(rsTransportadoras.Fields(2)) Then txtCadEscolaridade(2).Text = rsTransportadoras.Fields(2) Else txtCadEscolaridade(2).Text = "-"
@@ -433,11 +424,11 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    Dim y As Integer, x As Integer
-    For x = 0 To 7
-        If txtCadEscolaridade(x).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtCadEscolaridade(x).Tag, Ok, critico, "Atenção"
-            Me.txtCadEscolaridade(x).SetFocus
+    Dim Y As Integer, X As Integer
+    For X = 0 To 7
+        If txtCadEscolaridade(X).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtCadEscolaridade(X).Tag, Ok, critico, "Atenção"
+            Me.txtCadEscolaridade(X).SetFocus
             Exit Function
         End If
     Next
@@ -450,14 +441,14 @@ Private Function ValidaCampo()
 End Function
 
 Private Sub BloqueiaControles()
-    For x = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(x).Enabled = False
+    For X = 1 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(X).Enabled = False
     Next
 End Sub
 
 Private Sub DesbloqueiaControles()
-    For x = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(x).Enabled = True
+    For X = 1 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(X).Enabled = True
     Next
 End Sub
 
@@ -523,9 +514,9 @@ End Sub
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    y = vListViewPrincipal.ListItems.Count
-    For x = 1 To y
-        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
+    Y = vListViewPrincipal.ListItems.Count
+    For X = 1 To Y
+        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
             Exit For
         End If
     Next

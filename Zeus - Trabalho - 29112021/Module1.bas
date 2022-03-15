@@ -157,6 +157,8 @@ Public Data30 As Date
 Public vSubstituto As String, vMantemExpressao As String, vTituloFiltro As String
 Public vIdFiltro As Integer
 
+Public vColorThema(20) As String
+
 Public objText(29, 29) As TextBox
 Public objFrame(29, 29) As Frame
 Public objCombo(29, 29) As ComboBox
@@ -682,8 +684,27 @@ On Error GoTo Err
         .View = lvwReport
         .BackColor = &H80000018
         .ForeColor = &H800000
-        .SmallIcons = frmPesqGeralTeste2.ImgList
-        .Icons = frmPesqGeralTeste2.ImgList
+        
+        If vColectionIcons = 1 Then
+            .SmallIcons = frmPesqGeralTeste2.ImgList
+            .Icons = frmPesqGeralTeste2.ImgList
+        ElseIf vColectionIcons = 2 Then
+            .SmallIcons = frmPesqGeralTeste2.ImgList1
+            .Icons = frmPesqGeralTeste2.ImgList1
+        ElseIf vColectionIcons = 3 Then
+            .SmallIcons = frmPesqGeralTeste2.ImgList2
+            .Icons = frmPesqGeralTeste2.ImgList2
+        ElseIf vColectionIcons = 4 Then
+            .SmallIcons = frmPesqGeralTeste2.ImgList3
+            .Icons = frmPesqGeralTeste2.ImgList3
+        ElseIf vColectionIcons = 5 Then
+            .SmallIcons = frmPesqGeralTeste2.ImgList
+            .Icons = frmPesqGeralTeste2.ImgList
+        End If
+        
+        
+        '.SmallIcons = frmPesqGeralTeste2.ImgList
+        '.Icons = frmPesqGeralTeste2.ImgList
         .HideSelection = True
         .Sorted = False
         .AllowColumnReorder = True
@@ -724,7 +745,7 @@ Err:
     End If
 End Function
 
-Public Function construirBotoes(vTab As Long, vBotao As Long, vCaminho As String, vTop As Integer, vLeft As Integer, vWidth As Integer, vHeight As Integer, vTag As String, vVisible As Boolean)
+Public Function construirBotoes(vTab As Long, vBotao As Long, vCaminho As ImageList, vIndiceImage As Integer, vTop As Integer, vLeft As Integer, vWidth As Integer, vHeight As Integer, vTag As String, vVisible As Boolean)
 On Error Resume Next
     Set objImage = frmPesqGeralTeste2.Controls.Add("VB.Image", "objImage" & vTab & vBotao, objFrame(vTab, 0))
     With objImage
@@ -733,7 +754,7 @@ On Error Resume Next
         .Left = vLeft
         .Width = vWidth
         .Height = vHeight
-        .Picture = LoadPicture(vCaminho)
+        .Picture = vCaminho.ListImages(vIndiceImage).Picture
         .Tag = vTag
         .ToolTipText = vTag & vTab & vBotao
     End With
@@ -1029,333 +1050,598 @@ End Function
 '---CONSTRUCAO DE BOTOES ESPECIFICOS POR TABS
 
 Public Function contruirBotoesPorModulo(vQualLV As Integer)
+    Dim vImageList As ImageList
+    If vColectionIcons = 1 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList
+    ElseIf vColectionIcons = 2 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList1
+    ElseIf vColectionIcons = 3 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList2
+    ElseIf vColectionIcons = 4 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList3
+    ElseIf vColectionIcons = 5 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList
+    End If
+
 '-- TIPO DE MATERIAIS
     If vQualLV = 0 Then
         Formulario = "Tipo de Material"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+        
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
     End If
 '--CLIENTES
     If vQualLV = 1 Then
         Formulario = "Clientes"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+        
+        
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+        'construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
     End If
 
 '--PARADAS
     If vQualLV = 2 Then
         Formulario = "Paradas - OS"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+    
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    
+    
     End If
 
 '--TRANSPORTADORAS
     If vQualLV = 3 Then
         Formulario = "Transportadoras"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    End If
+
 '--FÓRMULAS PRODUTOS
     If vQualLV = 4 Then
         Formulario = "Fórmula de Produtos"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    End If
+
 '--ORÇAMENTOS
     If vQualLV = 5 Then
         Formulario = "FO"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\baixar.jpg", 360, 8040, 615, 615, "Receber FO", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\fce.jpg", 360, 9840, 615, 615, "Editar FCE", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imposto-02.jpg", 360, 10440, 615, 615, "Impostos e Serviços", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\ReceitaDespesa.jpg", 360, 11040, 615, 615, "Receitas e Despesas", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 7, 360, 8040, 615, 615, "Receber FO", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 22, 360, 9840, 615, 615, "Editar FCE", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 41, 360, 10440, 615, 615, "Impostos e Serviços", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 44, 360, 11040, 615, 615, "Receitas e Despesas", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\baixar.jpg", 360, 8040, 615, 615, "Receber FO", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\fce.jpg", 360, 9840, 615, 615, "Editar FCE", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imposto-02.jpg", 360, 10440, 615, 615, "Impostos e Serviços", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\ReceitaDespesa.jpg", 360, 11040, 615, 615, "Receitas e Despesas", True
+    
+    End If
+
 '--FCE - Ficha de Controle de Encomenda
     If vQualLV = 6 Then
         Formulario = "FCE"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\pesquisar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\pesquisar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    End If
+
 '--DESENHOS
     If vQualLV = 7 Then
         Formulario = "Desenhos"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    End If
+
 '--LM - LISTA DE MATERIAIS
     If vQualLV = 8 Then
         Formulario = "LM"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    
+    End If
+
 '--MP - Métodos e Processos
     If vQualLV = 9 Then
         Formulario = "MP"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\cd.jpg", 360, 8040, 615, 615, "CD - Comunicação de Desvio", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\retrabalho.jpg", 360, 9840, 615, 615, "Atualizar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\baixaParcial.jpg", 360, 10440, 615, 615, "Baixa Parcial", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\prog.jpg", 360, 11040, 615, 615, "Programação", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 16, 360, 8040, 615, 615, "CD - Comunicação de Desvio", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 29, 360, 9840, 615, 615, "Atualizar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 14, 360, 10440, 615, 615, "Baixa Parcial", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 43, 360, 11040, 615, 615, "Programação", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\cd.jpg", 360, 8040, 615, 615, "CD - Comunicação de Desvio", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\retrabalho.jpg", 360, 9840, 615, 615, "Atualizar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\baixaParcial.jpg", 360, 10440, 615, 615, "Baixa Parcial", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\prog.jpg", 360, 11040, 615, 615, "Programação", True
+    End If
+
 '-- CONTROLE DE DESENHOS
     If vQualLV = 10 Then
         Formulario = "Controle de Desenhos"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '--FÓRMULA CENTRO DE CUSTO
     If vQualLV = 11 Then
         Formulario = "Fórmula - Centro de Custo"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- QUALIDADE - RNCF (Registro de Não Conformidade de Fabricação)
     If vQualLV = 12 Then
         Formulario = "RNCF"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\causais.jpg", 360, 8040, 615, 615, "Admitir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 18, 360, 8040, 615, 615, "Causais", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\causais.jpg", 360, 8040, 615, 615, "Admitir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- USUÁRIOS
     If vQualLV = 13 Then
         Formulario = "Usuários"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- GRUPOS
     If vQualLV = 14 Then
         Formulario = "Grupos"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- OS FECHAMENTO - PERMISSÃO DE COLABORADORES
     If vQualLV = 15 Then
         Formulario = "OS Permissões"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
      End If
-   
+
 '-- LF - Relatório Liberação de Fabricação
     If vQualLV = 16 Then
         Formulario = "Relatório de Inspeção"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\inspecao.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\pintura.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 42, 360, 720, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\inspecao.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\pintura.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- RO - Relatório de Expedição
     If vQualLV = 17 Then
         Formulario = "Relatório de Expedição"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\transporte2.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\transporte1.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 1320, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 28, 360, 120, 615, 615, "Relatório de Expedição", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 27, 360, 720, 615, 615, "Relatório de Expedição Avulso", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 42, 360, 1320, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\transporte2.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\transporte1.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 1320, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- IMPRESSAO DOS RELATÓRIOS DE EXPEDIÇÃO
     If vQualLV = 18 Then
         Formulario = "Imp. Rel. de Expedição"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 42, 360, 720, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+    
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
     End If
 
 '-- IMPRESSAO DOS RELATÓRIOS DE INSPEÇÃO (QUALIDADE)
     If vQualLV = 19 Then
         Formulario = "Imp. Rel. de Inspeção"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 42, 360, 720, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+    End If
+
 '-- FATURAMENTO POR FCE
     If vQualLV = 20 Then
         Formulario = "Faturamento por FCE"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 1320, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\atualiza.jpg", 360, 11040, 615, 615, "Programação", True
-    End If
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 42, 360, 120, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 42, 360, 720, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 42, 360, 1320, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 29, 360, 11040, 615, 615, "Atualizar", True
     
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 120, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 720, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 1320, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\atualiza.jpg", 360, 11040, 615, 615, "Programação", True
+    End If
+
 '-- TERCEIRIZADOS
     If vQualLV = 21 Then
         Formulario = "Terceiros"
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
-        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, vImageList, 31, 360, 120, 615, 615, "Novo", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, vImageList, 32, 360, 720, 615, 615, "Editar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, vImageList, 33, 360, 1320, 615, 615, "Excluir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, vImageList, 34, 360, 1920, 615, 615, "Sair", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, vImageList, 42, 360, 8040, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, vImageList, 36, 360, 8640, 615, 615, "Filtrar", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, vImageList, 37, 360, 9240, 615, 615, "Imprimir", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, vImageList, 42, 360, 9840, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, vImageList, 42, 360, 10440, 615, 615, "", True
+        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, vImageList, 42, 360, 11040, 615, 615, "", True
+    
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 1, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\novo.jpg", 360, 120, 615, 615, "Novo", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 2, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\editar.jpg", 360, 720, 615, 615, "Editar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 3, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\excluir.jpg", 360, 1320, 615, 615, "Excluir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 4, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\sair.jpg", 360, 1920, 615, 615, "Sair", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 5, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 8040, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 6, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\filtro.jpg", 360, 8640, 615, 615, "Filtrar", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 7, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\imprimir.jpg", 360, 9240, 615, 615, "Imprimir", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 8, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 9840, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 9, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 10440, 615, 615, "", True
+'        construirBotoes frmPesqGeralTeste2.SSTab1.Tab, 10, "D:\DESENVOLVIMENTO_VITALY\DESENVOLVIMENTO\PROJETOS\Zeus - Trabalho\Icones\Botoes\clear.jpg", 360, 11040, 615, 615, "", True
     End If
 
 End Function
@@ -1541,3 +1827,53 @@ Public Function Compoe_ListviewVariaveis(vLV As Listview)
     Set lstEntry = vLV.ListItems.Add(, , "TRANSPORTEMP_MADIA_PESOPOR_CARRETA")
     vLV.Refresh
 End Function
+
+Public Function Compoe_ListviewMatrizes(vLV As Listview)
+    Dim lstEntry As ListItem
+    Set lstEntry = vLV.ListItems.Add(, , "MT_DESPESASCREDITOS(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_PINTURA(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TESTES_ENSAIOS(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TRANSPORTES_MP(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TRANSPORTES_PI(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TINTA_LATA(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TINTA_GALAO(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_TINTA_BALDE(Linha,Coluna)")
+    Set lstEntry = vLV.ListItems.Add(, , "MT_MP_(Linha,Coluna)")
+    vLV.Refresh
+End Function
+
+Public Function carregaImagemBotao(vBtn As CommandButton, vIndex As Integer, vIcon As Integer)
+    Dim vImageList As ImageList
+    If vColectionIcons = 1 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList
+    ElseIf vColectionIcons = 2 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList1
+    ElseIf vColectionIcons = 3 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList2
+    ElseIf vColectionIcons = 4 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList3
+    ElseIf vColectionIcons = 5 Then
+        Set vImageList = frmPesqGeralTeste2.ImageList
+    End If
+    vBtn.Picture = vImageList.ListImages(vIcon).Picture
+    vBtn.BackColor = &HB7B7B7
+End Function
+
+'FUNCAO PARA MUDAR TOOLTIPS
+Public Sub MudaTool()
+    On Error Resume Next
+    Dim ctl As Control
+    Dim i As Integer
+    With chamaForm.cIpToolTips1
+        .Create
+        .Title = "Atenção:" 'Titulo do tooltip
+        .MyIcon = itInfoIcon 'Icone do tooltip
+        .BackColor = &H80000018  'Cor de fundo
+        .ForeColor = &H800000    'Cor da letra e bordas
+        For Each ctl In chamaForm.Controls
+            If ctl.Tag <> "" Then
+                .AddTool ctl, tfAbsolute, Replace(ctl.Tag, "|", vbCrLf)
+            End If
+        Next
+    End With
+End Sub

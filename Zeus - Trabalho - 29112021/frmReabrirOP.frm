@@ -26,6 +26,31 @@ Begin VB.Form frmReabrirOP
    MinButton       =   0   'False
    ScaleHeight     =   6105
    ScaleWidth      =   12015
+   Begin VB.CommandButton cmdCD 
+      Height          =   615
+      Index           =   1
+      Left            =   720
+      Picture         =   "frmReabrirOP.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   42
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   5400
+      Width           =   615
+   End
+   Begin VB.CommandButton cmdCD 
+      Enabled         =   0   'False
+      Height          =   615
+      Index           =   0
+      Left            =   120
+      Picture         =   "frmReabrirOP.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   43
+      Tag             =   "Reabrir Operação"
+      ToolTipText     =   "Reabrir Operação"
+      Top             =   5400
+      Width           =   615
+   End
    Begin VB.Frame Frame7 
       Caption         =   "Justificativa para reabertura "
       BeginProperty Font 
@@ -44,9 +69,9 @@ Begin VB.Form frmReabrirOP
       Width           =   6855
       Begin VB.ComboBox Combo1 
          Height          =   345
-         ItemData        =   "frmReabrirOP.frx":0CCA
+         ItemData        =   "frmReabrirOP.frx":265E
          Left            =   120
-         List            =   "frmReabrirOP.frx":0CD1
+         List            =   "frmReabrirOP.frx":2665
          TabIndex        =   10
          Top             =   360
          Width           =   6615
@@ -93,31 +118,31 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmReabrirOP.frx":0CF1
-         TabIndex        =   39
+         OleObjectBlob   =   "frmReabrirOP.frx":2685
+         TabIndex        =   37
          Top             =   2640
          Width           =   1935
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmReabrirOP.frx":0D77
-         TabIndex        =   38
+         OleObjectBlob   =   "frmReabrirOP.frx":270B
+         TabIndex        =   36
          Top             =   2040
          Width           =   1815
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":0DF7
-         TabIndex        =   37
+         OleObjectBlob   =   "frmReabrirOP.frx":278B
+         TabIndex        =   35
          Top             =   3720
          Width           =   4575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":0E65
+         OleObjectBlob   =   "frmReabrirOP.frx":27F9
          TabIndex        =   32
          Top             =   3360
          Width           =   4575
@@ -171,14 +196,14 @@ Begin VB.Form frmReabrirOP
                Width           =   2295
                _ExtentX        =   4048
                _ExtentY        =   4683
-               Image           =   "frmReabrirOP.frx":0EE3
+               Image           =   "frmReabrirOP.frx":2877
             End
          End
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmReabrirOP.frx":0EFB
+         OleObjectBlob   =   "frmReabrirOP.frx":288F
          TabIndex        =   29
          Top             =   240
          Width           =   1215
@@ -195,13 +220,13 @@ Begin VB.Form frmReabrirOP
          Enabled         =   0   'False
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   285278209
+         Format          =   169082881
          CurrentDate     =   41967
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmReabrirOP.frx":0F61
+         OleObjectBlob   =   "frmReabrirOP.frx":28F5
          TabIndex        =   30
          Top             =   840
          Width           =   1335
@@ -209,7 +234,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmReabrirOP.frx":0FC3
+         OleObjectBlob   =   "frmReabrirOP.frx":2957
          TabIndex        =   31
          Top             =   1440
          Width           =   615
@@ -243,8 +268,8 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
          Height          =   255
          Left            =   1680
-         OleObjectBlob   =   "frmReabrirOP.frx":1025
-         TabIndex        =   41
+         OleObjectBlob   =   "frmReabrirOP.frx":29B9
+         TabIndex        =   39
          Top             =   240
          Width           =   1215
       End
@@ -260,8 +285,8 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":1093
-         TabIndex        =   40
+         OleObjectBlob   =   "frmReabrirOP.frx":2A27
+         TabIndex        =   38
          Top             =   240
          Width           =   975
       End
@@ -285,7 +310,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":10F9
+         OleObjectBlob   =   "frmReabrirOP.frx":2A8D
          TabIndex        =   34
          Top             =   360
          Width           =   4575
@@ -319,8 +344,8 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
          Height          =   255
          Left            =   1440
-         OleObjectBlob   =   "frmReabrirOP.frx":1153
-         TabIndex        =   42
+         OleObjectBlob   =   "frmReabrirOP.frx":2AE7
+         TabIndex        =   40
          Top             =   240
          Width           =   855
       End
@@ -346,7 +371,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":11BB
+         OleObjectBlob   =   "frmReabrirOP.frx":2B4F
          TabIndex        =   28
          Top             =   1680
          Width           =   3135
@@ -354,7 +379,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   5160
-         OleObjectBlob   =   "frmReabrirOP.frx":1249
+         OleObjectBlob   =   "frmReabrirOP.frx":2BDD
          TabIndex        =   27
          Top             =   240
          Width           =   1455
@@ -398,7 +423,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":12BB
+         OleObjectBlob   =   "frmReabrirOP.frx":2C4F
          TabIndex        =   21
          Top             =   960
          Width           =   1335
@@ -406,7 +431,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   3840
-         OleObjectBlob   =   "frmReabrirOP.frx":132F
+         OleObjectBlob   =   "frmReabrirOP.frx":2CC3
          TabIndex        =   20
          Top             =   240
          Width           =   1215
@@ -414,7 +439,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmReabrirOP.frx":139F
+         OleObjectBlob   =   "frmReabrirOP.frx":2D33
          TabIndex        =   19
          Top             =   240
          Width           =   615
@@ -422,7 +447,7 @@ Begin VB.Form frmReabrirOP
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   2280
-         OleObjectBlob   =   "frmReabrirOP.frx":1403
+         OleObjectBlob   =   "frmReabrirOP.frx":2D97
          TabIndex        =   18
          Top             =   240
          Width           =   1575
@@ -431,7 +456,7 @@ Begin VB.Form frmReabrirOP
          Height          =   330
          Index           =   14
          Left            =   2280
-         TabIndex        =   43
+         TabIndex        =   41
          Top             =   960
          Visible         =   0   'False
          Width           =   4455
@@ -470,88 +495,6 @@ Begin VB.Form frmReabrirOP
          Top             =   360
          Width           =   3135
       End
-   End
-   Begin ZEUS.chameleonButton cmdCD 
-      Height          =   615
-      Index           =   1
-      Left            =   720
-      TabIndex        =   35
-      Top             =   5400
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmReabrirOP.frx":1479
-      PICN            =   "frmReabrirOP.frx":1495
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton cmdCD 
-      Height          =   615
-      Index           =   0
-      Left            =   120
-      TabIndex        =   36
-      Tag             =   "Reabrir Operação"
-      ToolTipText     =   "Reabrir Operação"
-      Top             =   5400
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   0   'False
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmReabrirOP.frx":216F
-      PICN            =   "frmReabrirOP.frx":218B
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmReabrirOP"
@@ -592,6 +535,7 @@ Private Sub Form_Load()
     Set vIDCD = Me.Controls.Add("VB.TextBox", "vIDCD")
     Set vObservacao = Me.Controls.Add("VB.TextBox", "vObservacao")
     
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -617,6 +561,11 @@ End Sub
 Private Sub txtReabrirOP_LostFocus(Index As Integer)
     voltaCorText txtReabrirOP(Index)
     CompoeDados txtReabrirOP(0).Text
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCD(0), 0, 56 'reabrir operacao
+    carregaImagemBotao cmdCD(1), 1, 34 'Sair
 End Sub
 
 Private Sub CompoeDados(vCBarra As String)

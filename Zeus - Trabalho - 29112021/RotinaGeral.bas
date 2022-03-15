@@ -83,7 +83,7 @@ Public vDataDoBanco As Date 'Grava a data atual do Banco de dados
 Public vDadosTotvs(18) As String
 Public colheDados(17) As String 'Guarda dados de importação de colaboradores de arquivo TXT
 Public FimAprop As String 'Verifica se o colaborador tem permissão de encerra apropriação de colaboradores que estão apropriando em alguma OS
-
+Public vColectionIcons As Integer
 Public mStream As ADODB.Stream 'Para gravar imagem no Banco Totvs
 
 Public vServerTotvs As String  'Armazena nome do servidor totvs
@@ -1137,6 +1137,15 @@ On Error GoTo Err
     "ATIVO CHAR(1) CHECK(ATIVO IN('S','N'))," & _
     "PRIMARY KEY (IDIMPOSTOSSERVICOS))"
 
+    oConn.Execute "CREATE TABLE " & sDatabaseName & ".dbo.TBDESPESASCREDITOS(" & _
+    "IDDESPESASCREDITOS INT NOT NULL IDENTITY," & _
+    "CONTA VARCHAR(100) NOT NULL," & _
+    "TIPO INT NOT NULL CHECK(TIPO IN(1,2))," & _
+    "DESCRICAO TEXT NULL," & _
+    "F_ALIQUOTA VARCHAR(300) NULL," & _
+    "F_TOTAL VARCHAR(300) NULL," & _
+    "ATIVO CHAR(1) CHECK(ATIVO IN('S','N'))," & _
+    "PRIMARY KEY (IDDESPESASCREDITOS))"
 '============================
     'TABELAS PADRAO
     oConn.Execute "CREATE TABLE " & sDatabaseName & ".dbo.tbparametros(" & _
@@ -1155,6 +1164,7 @@ On Error GoTo Err
     "afasttreiint VARCHAR(1) NULL," & _
     "afasttreiobr VARCHAR(1) NULL," & _
     "opentabes INT NULL," & _
+    "colectionIcons INT NULL," & _
     "PRIMARY KEY (codcoligada))"
     
     oConn.Execute "CREATE TABLE " & sDatabaseName & ".dbo.tbintegracao(" & _
@@ -3571,6 +3581,9 @@ On Error GoTo Err
             sqlDeletar = "Delete from " & vTabela & " where " & vCampo1 & " ='" & vVar1 & "'"
         End If
     End If
+    rsDeletar.Open sqlDeletar, cnBanco
+    
+    sqlDeletar = "DBCC CHECKIDENT('" & vTabela & "', RESEED, 0)"
     rsDeletar.Open sqlDeletar, cnBanco
       
     SqlSalvar = "select * from " & vTabela

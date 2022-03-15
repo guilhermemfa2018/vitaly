@@ -1237,6 +1237,7 @@ On Error GoTo Err
         If Not IsNull(rsParametros.Fields(12)) Then vAfastTreiInt = rsParametros.Fields(12)
         If Not IsNull(rsParametros.Fields(13)) Then vAfastTreiObr = rsParametros.Fields(13)
         If Not IsNull(rsParametros.Fields(14)) Then vOpenTabs = rsParametros.Fields(14) Else vOpenTabs = 1
+        vColectionIcons = rsParametros.Fields(15)
         If vIntegra = "S" Then
             sqlIntegra = "Select * from tbintegracao where codcoligada = '" & vCodcoligada & "'"
             rsIntegra.Open sqlIntegra, cnBanco, adOpenKeyset, adLockReadOnly

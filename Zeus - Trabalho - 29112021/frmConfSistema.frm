@@ -18,85 +18,29 @@ Begin VB.Form frmConfSistema
    ScaleHeight     =   11355
    ScaleWidth      =   9480
    StartUpPosition =   2  'CenterScreen
-   Begin ZEUS.chameleonButton cmdCadastro 
+   Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   1
-      Left            =   720
-      TabIndex        =   87
+      Left            =   840
+      Picture         =   "frmConfSistema.frx":37E04
+      Style           =   1  'Graphical
+      TabIndex        =   175
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
       Top             =   10680
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmConfSistema.frx":37E04
-      PICN            =   "frmConfSistema.frx":37E20
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
-   Begin ZEUS.chameleonButton cmdCadastro 
+   Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   0
-      Left            =   120
-      TabIndex        =   86
+      Left            =   240
+      Picture         =   "frmConfSistema.frx":38ACE
+      Style           =   1  'Graphical
+      TabIndex        =   176
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
       Top             =   10680
       Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmConfSistema.frx":38AFA
-      PICN            =   "frmConfSistema.frx":38B16
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin TabDlg.SSTab SSTab1 
       Height          =   10335
@@ -120,7 +64,7 @@ Begin VB.Form frmConfSistema
          Strikethrough   =   0   'False
       EndProperty
       TabCaption(0)   =   "Configurações"
-      TabPicture(0)   =   "frmConfSistema.frx":397F0
+      TabPicture(0)   =   "frmConfSistema.frx":39798
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame1(0)"
       Tab(0).Control(0).Enabled=   0   'False
@@ -130,23 +74,23 @@ Begin VB.Form frmConfSistema
       Tab(0).Control(2).Enabled=   0   'False
       Tab(0).ControlCount=   3
       TabCaption(1)   =   "Parametrizações"
-      TabPicture(1)   =   "frmConfSistema.frx":3980C
+      TabPicture(1)   =   "frmConfSistema.frx":397B4
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "SSTab2"
       Tab(1).ControlCount=   1
       TabCaption(2)   =   "Empresa/Coligadas"
-      TabPicture(2)   =   "frmConfSistema.frx":39828
+      TabPicture(2)   =   "frmConfSistema.frx":397D0
       Tab(2).ControlEnabled=   0   'False
       Tab(2).Control(0)=   "SSTab4"
       Tab(2).ControlCount=   1
       TabCaption(3)   =   "Servidor - email"
-      TabPicture(3)   =   "frmConfSistema.frx":39844
+      TabPicture(3)   =   "frmConfSistema.frx":397EC
       Tab(3).ControlEnabled=   0   'False
       Tab(3).Control(0)=   "Frame10"
       Tab(3).Control(1)=   "Frame9"
       Tab(3).ControlCount=   2
       TabCaption(4)   =   "Menu"
-      TabPicture(4)   =   "frmConfSistema.frx":39860
+      TabPicture(4)   =   "frmConfSistema.frx":39808
       Tab(4).ControlEnabled=   0   'False
       Tab(4).Control(0)=   "Frame4"
       Tab(4).ControlCount=   1
@@ -163,16 +107,16 @@ Begin VB.Form frmConfSistema
          EndProperty
          Height          =   4095
          Left            =   120
-         TabIndex        =   174
+         TabIndex        =   162
          Top             =   4560
          Width           =   9015
          Begin VB.CommandButton cmdCadAtividade 
             Height          =   615
             Index           =   3
             Left            =   1920
-            Picture         =   "frmConfSistema.frx":3987C
+            Picture         =   "frmConfSistema.frx":39824
             Style           =   1  'Graphical
-            TabIndex        =   178
+            TabIndex        =   166
             Top             =   1440
             Width           =   615
          End
@@ -180,9 +124,9 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   2
             Left            =   1320
-            Picture         =   "frmConfSistema.frx":3A546
+            Picture         =   "frmConfSistema.frx":3A4EE
             Style           =   1  'Graphical
-            TabIndex        =   179
+            TabIndex        =   167
             Top             =   1440
             Width           =   615
          End
@@ -190,9 +134,9 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   1
             Left            =   720
-            Picture         =   "frmConfSistema.frx":3B210
+            Picture         =   "frmConfSistema.frx":3B1B8
             Style           =   1  'Graphical
-            TabIndex        =   180
+            TabIndex        =   168
             Top             =   1440
             Width           =   615
          End
@@ -200,9 +144,9 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   0
             Left            =   120
-            Picture         =   "frmConfSistema.frx":3BEDA
+            Picture         =   "frmConfSistema.frx":3BE82
             Style           =   1  'Graphical
-            TabIndex        =   181
+            TabIndex        =   169
             Top             =   1440
             Width           =   615
          End
@@ -219,7 +163,7 @@ Begin VB.Form frmConfSistema
             Height          =   885
             Left            =   120
             MultiLine       =   -1  'True
-            TabIndex        =   177
+            TabIndex        =   165
             ToolTipText     =   "Informe a última alteração realizada no sistema"
             Top             =   480
             Width           =   8775
@@ -227,15 +171,15 @@ Begin VB.Form frmConfSistema
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel26 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmConfSistema.frx":3CBA4
-            TabIndex        =   176
+            OleObjectBlob   =   "frmConfSistema.frx":3CB4C
+            TabIndex        =   164
             Top             =   240
             Width           =   1335
          End
          Begin MSComctlLib.ListView ListView7 
             Height          =   1815
             Left            =   120
-            TabIndex        =   175
+            TabIndex        =   163
             ToolTipText     =   "Mantém o histórico das últimas alterações realizadas no sistema"
             Top             =   2160
             Width           =   8775
@@ -277,7 +221,7 @@ Begin VB.Form frmConfSistema
          Height          =   3975
          Index           =   1
          Left            =   120
-         TabIndex        =   155
+         TabIndex        =   143
          Top             =   480
          Width           =   9015
          Begin VB.Frame Frame24 
@@ -293,7 +237,7 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   735
             Left            =   3840
-            TabIndex        =   161
+            TabIndex        =   149
             Top             =   1560
             Width           =   3135
             Begin VB.TextBox txtCorTipo 
@@ -312,7 +256,7 @@ Begin VB.Form frmConfSistema
                Height          =   330
                Left            =   240
                Locked          =   -1  'True
-               TabIndex        =   163
+               TabIndex        =   151
                Text            =   "8421631"
                Top             =   300
                Width           =   1935
@@ -322,7 +266,7 @@ Begin VB.Form frmConfSistema
                Height          =   375
                Index           =   3
                Left            =   2520
-               TabIndex        =   162
+               TabIndex        =   150
                Top             =   240
                Width           =   495
             End
@@ -338,7 +282,7 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   16
             Left            =   1920
-            Picture         =   "frmConfSistema.frx":3CC0E
+            Picture         =   "frmConfSistema.frx":3CBB6
             Style           =   1  'Graphical
             TabIndex        =   6
             Top             =   1680
@@ -348,7 +292,7 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   17
             Left            =   1320
-            Picture         =   "frmConfSistema.frx":3D8D8
+            Picture         =   "frmConfSistema.frx":3D880
             Style           =   1  'Graphical
             TabIndex        =   5
             Top             =   1680
@@ -358,7 +302,7 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   18
             Left            =   720
-            Picture         =   "frmConfSistema.frx":3E5A2
+            Picture         =   "frmConfSistema.frx":3E54A
             Style           =   1  'Graphical
             TabIndex        =   4
             Top             =   1680
@@ -368,7 +312,7 @@ Begin VB.Form frmConfSistema
             Height          =   615
             Index           =   19
             Left            =   120
-            Picture         =   "frmConfSistema.frx":3F26C
+            Picture         =   "frmConfSistema.frx":3F214
             Style           =   1  'Graphical
             TabIndex        =   3
             Top             =   1680
@@ -387,14 +331,14 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   735
             Left            =   7800
-            TabIndex        =   159
+            TabIndex        =   147
             Top             =   1560
             Width           =   1095
             Begin VB.CheckBox Check10 
                Caption         =   "Ativo"
                Height          =   255
                Left            =   120
-               TabIndex        =   160
+               TabIndex        =   148
                Top             =   300
                Value           =   1  'Checked
                Width           =   735
@@ -434,8 +378,8 @@ Begin VB.Form frmConfSistema
             Height          =   255
             Index           =   1
             Left            =   120
-            OleObjectBlob   =   "frmConfSistema.frx":3FF36
-            TabIndex        =   156
+            OleObjectBlob   =   "frmConfSistema.frx":3FEDE
+            TabIndex        =   144
             Top             =   960
             Width           =   3375
          End
@@ -443,8 +387,8 @@ Begin VB.Form frmConfSistema
             Height          =   255
             Index           =   1
             Left            =   1320
-            OleObjectBlob   =   "frmConfSistema.frx":3FFA2
-            TabIndex        =   157
+            OleObjectBlob   =   "frmConfSistema.frx":3FF4A
+            TabIndex        =   145
             Top             =   360
             Width           =   1695
          End
@@ -452,8 +396,8 @@ Begin VB.Form frmConfSistema
             Height          =   255
             Index           =   1
             Left            =   120
-            OleObjectBlob   =   "frmConfSistema.frx":40004
-            TabIndex        =   158
+            OleObjectBlob   =   "frmConfSistema.frx":3FFAC
+            TabIndex        =   146
             Top             =   360
             Width           =   495
          End
@@ -500,92 +444,84 @@ Begin VB.Form frmConfSistema
          EndProperty
          Height          =   9855
          Left            =   -74880
-         TabIndex        =   94
+         TabIndex        =   86
          Top             =   360
          Width           =   9015
-         Begin ZEUS.chameleonButton cmdCadastro 
+         Begin VB.CommandButton cmdCadastro 
             Height          =   615
             Index           =   4
             Left            =   1920
-            TabIndex        =   118
-            Tag             =   "Excluir"
-            ToolTipText     =   "Excluir"
+            Picture         =   "frmConfSistema.frx":4000A
+            Style           =   1  'Graphical
+            TabIndex        =   177
             Top             =   1680
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":40062
-            PICN            =   "frmConfSistema.frx":4007E
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton cmdCadastro 
+         Begin VB.CommandButton cmdCadastro 
             Height          =   615
             Index           =   5
             Left            =   1320
-            TabIndex        =   117
-            Tag             =   "Novo"
-            ToolTipText     =   "Novo"
+            Picture         =   "frmConfSistema.frx":40CD4
+            Style           =   1  'Graphical
+            TabIndex        =   179
             Top             =   1680
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+         End
+         Begin VB.CommandButton cmdCadastro 
+            Height          =   615
+            Index           =   3
+            Left            =   720
+            Picture         =   "frmConfSistema.frx":4199E
+            Style           =   1  'Graphical
+            TabIndex        =   178
+            Top             =   1680
+            Width           =   615
+         End
+         Begin VB.CommandButton cmdCadastro 
+            Height          =   615
+            Index           =   2
+            Left            =   120
+            Picture         =   "frmConfSistema.frx":42668
+            Style           =   1  'Graphical
+            TabIndex        =   180
+            Top             =   1680
+            Width           =   615
+         End
+         Begin VB.Frame Frame27 
+            Caption         =   "Selecione a colação de ícones para o sistema"
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
                Charset         =   0
-               Weight          =   400
+               Weight          =   700
                Underline       =   0   'False
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":40D58
-            PICN            =   "frmConfSistema.frx":40D74
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
+            Height          =   975
+            Left            =   4200
+            TabIndex        =   173
+            Top             =   1080
+            Width           =   4695
+            Begin VB.ComboBox Combo5 
+               BeginProperty Font 
+                  Name            =   "Calibri"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   345
+               ItemData        =   "frmConfSistema.frx":43332
+               Left            =   240
+               List            =   "frmConfSistema.frx":43342
+               TabIndex        =   174
+               Text            =   "Padão"
+               Top             =   360
+               Width           =   4095
+            End
          End
          Begin VB.Frame Frame14 
             Caption         =   "Identificador "
@@ -598,103 +534,19 @@ Begin VB.Form frmConfSistema
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   1215
+            Height          =   735
             Left            =   7200
-            TabIndex        =   112
+            TabIndex        =   104
             Top             =   360
             Width           =   1695
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
                Height          =   375
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":41A4E
-               TabIndex        =   114
-               Top             =   600
+               OleObjectBlob   =   "frmConfSistema.frx":43398
+               TabIndex        =   106
+               Top             =   240
                Width           =   1455
             End
-         End
-         Begin ZEUS.chameleonButton cmdCadastro 
-            Height          =   615
-            Index           =   3
-            Left            =   720
-            TabIndex        =   116
-            Tag             =   "Editar"
-            ToolTipText     =   "Editar"
-            Top             =   1680
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":41AA8
-            PICN            =   "frmConfSistema.frx":41AC4
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
-         End
-         Begin ZEUS.chameleonButton cmdCadastro 
-            Height          =   615
-            Index           =   2
-            Left            =   120
-            TabIndex        =   115
-            Tag             =   "Incluir"
-            ToolTipText     =   "Incluir"
-            Top             =   1680
-            Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":4279E
-            PICN            =   "frmConfSistema.frx":427BA
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
          Begin VB.Frame Frame13 
             Caption         =   "      Ícone "
@@ -709,14 +561,14 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   615
             Left            =   5640
-            TabIndex        =   103
+            TabIndex        =   95
             Top             =   360
             Width           =   1335
-            Begin ZEUS.chameleonButton cmdCadastro 
+            Begin ZEUS.chameleonButton cmdCadastro1 
                Height          =   255
                Index           =   6
                Left            =   840
-               TabIndex        =   119
+               TabIndex        =   107
                Top             =   240
                Width           =   375
                _ExtentX        =   661
@@ -741,7 +593,7 @@ Begin VB.Form frmConfSistema
                FCOLO           =   0
                MCOL            =   12632256
                MPTR            =   1
-               MICON           =   "frmConfSistema.frx":43494
+               MICON           =   "frmConfSistema.frx":433F2
                UMCOL           =   -1  'True
                SOFT            =   0   'False
                PICPOS          =   0
@@ -755,7 +607,7 @@ Begin VB.Form frmConfSistema
                Enabled         =   0   'False
                Height          =   285
                Left            =   120
-               TabIndex        =   111
+               TabIndex        =   103
                Tag             =   "Ícone"
                ToolTipText     =   "Ícone"
                Top             =   240
@@ -765,7 +617,7 @@ Begin VB.Form frmConfSistema
                Enabled         =   0   'False
                Height          =   255
                Left            =   120
-               TabIndex        =   110
+               TabIndex        =   102
                Top             =   0
                Width           =   255
             End
@@ -783,16 +635,16 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   615
             Left            =   120
-            TabIndex        =   100
+            TabIndex        =   92
             Top             =   360
             Width           =   1215
             Begin VB.ComboBox Combo2 
                Enabled         =   0   'False
                Height          =   315
-               ItemData        =   "frmConfSistema.frx":434B0
+               ItemData        =   "frmConfSistema.frx":4340E
                Left            =   120
-               List            =   "frmConfSistema.frx":434BD
-               TabIndex        =   102
+               List            =   "frmConfSistema.frx":4341B
+               TabIndex        =   94
                Tag             =   "Tipo"
                Text            =   "TAB"
                ToolTipText     =   "Tipo"
@@ -802,7 +654,7 @@ Begin VB.Form frmConfSistema
             Begin VB.CheckBox Check8 
                Height          =   255
                Left            =   120
-               TabIndex        =   101
+               TabIndex        =   93
                Top             =   0
                Width           =   255
             End
@@ -821,14 +673,14 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   615
             Left            =   4200
-            TabIndex        =   99
+            TabIndex        =   91
             Top             =   360
             Width           =   1335
             Begin VB.ComboBox Combo4 
                Enabled         =   0   'False
                Height          =   315
                Left            =   120
-               TabIndex        =   109
+               TabIndex        =   101
                Tag             =   "Botão"
                ToolTipText     =   "Botão"
                Top             =   240
@@ -838,7 +690,7 @@ Begin VB.Form frmConfSistema
                Enabled         =   0   'False
                Height          =   255
                Left            =   120
-               TabIndex        =   108
+               TabIndex        =   100
                Top             =   0
                Width           =   255
             End
@@ -857,16 +709,16 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   615
             Left            =   2640
-            TabIndex        =   98
+            TabIndex        =   90
             Top             =   360
             Width           =   1455
             Begin VB.ComboBox Combo3 
                Enabled         =   0   'False
                Height          =   315
-               ItemData        =   "frmConfSistema.frx":434D0
+               ItemData        =   "frmConfSistema.frx":4342E
                Left            =   120
-               List            =   "frmConfSistema.frx":434D2
-               TabIndex        =   107
+               List            =   "frmConfSistema.frx":43430
+               TabIndex        =   99
                Tag             =   "Submenu"
                ToolTipText     =   "Submenu"
                Top             =   240
@@ -876,7 +728,7 @@ Begin VB.Form frmConfSistema
                Enabled         =   0   'False
                Height          =   255
                Left            =   120
-               TabIndex        =   106
+               TabIndex        =   98
                Top             =   0
                Width           =   255
             End
@@ -895,16 +747,16 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   615
             Left            =   1440
-            TabIndex        =   97
+            TabIndex        =   89
             Top             =   360
             Width           =   1095
             Begin VB.ComboBox Combo1 
                Enabled         =   0   'False
                Height          =   315
-               ItemData        =   "frmConfSistema.frx":434D4
+               ItemData        =   "frmConfSistema.frx":43432
                Left            =   120
-               List            =   "frmConfSistema.frx":434F6
-               TabIndex        =   105
+               List            =   "frmConfSistema.frx":43454
+               TabIndex        =   97
                Tag             =   "Menu"
                Text            =   "01"
                ToolTipText     =   "Menu"
@@ -915,7 +767,7 @@ Begin VB.Form frmConfSistema
                Enabled         =   0   'False
                Height          =   255
                Left            =   120
-               TabIndex        =   104
+               TabIndex        =   96
                Top             =   0
                Width           =   255
             End
@@ -923,16 +775,16 @@ Begin VB.Form frmConfSistema
          Begin VB.TextBox Text3 
             Height          =   285
             Left            =   120
-            TabIndex        =   113
+            TabIndex        =   105
             Tag             =   "Nome"
             ToolTipText     =   "Nome"
             Top             =   1320
-            Width           =   6855
+            Width           =   3975
          End
          Begin MSComctlLib.TreeView TreeView1 
             Height          =   7335
             Left            =   120
-            TabIndex        =   95
+            TabIndex        =   87
             Top             =   2400
             Width           =   8775
             _ExtentX        =   15478
@@ -965,7 +817,7 @@ Begin VB.Form frmConfSistema
             EndProperty
             Height          =   255
             Left            =   120
-            TabIndex        =   96
+            TabIndex        =   88
             Top             =   1080
             Width           =   975
          End
@@ -992,96 +844,36 @@ Begin VB.Form frmConfSistema
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "Empresa/coligada ativa"
-         TabPicture(0)   =   "frmConfSistema.frx":43522
+         TabPicture(0)   =   "frmConfSistema.frx":43480
          Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Frame2"
          Tab(0).Control(0).Enabled=   0   'False
          Tab(0).ControlCount=   1
          TabCaption(1)   =   "Empresas/Coligadas"
-         TabPicture(1)   =   "frmConfSistema.frx":4353E
+         TabPicture(1)   =   "frmConfSistema.frx":4349C
          Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "chameleonButton5"
          Tab(1).Control(1)=   "chameleonButton4"
          Tab(1).Control(2)=   "imgColigada"
          Tab(1).Control(3)=   "ListView3"
          Tab(1).ControlCount=   4
-         Begin ZEUS.chameleonButton chameleonButton5 
+         Begin VB.CommandButton chameleonButton5 
             Height          =   615
-            Left            =   -74280
-            TabIndex        =   91
+            Left            =   -74160
+            Picture         =   "frmConfSistema.frx":434B8
+            Style           =   1  'Graphical
+            TabIndex        =   185
             Top             =   480
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":4355A
-            PICN            =   "frmConfSistema.frx":43576
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
-         Begin ZEUS.chameleonButton chameleonButton4 
+         Begin VB.CommandButton chameleonButton4 
             Height          =   615
-            Left            =   -74880
-            TabIndex        =   90
+            Left            =   -74760
+            Picture         =   "frmConfSistema.frx":44182
+            Style           =   1  'Graphical
+            TabIndex        =   186
             Top             =   480
             Width           =   615
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            BTYPE           =   2
-            TX              =   ""
-            ENAB            =   -1  'True
-            BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            COLTYPE         =   1
-            FOCUSR          =   -1  'True
-            BCOL            =   13160660
-            BCOLO           =   13160660
-            FCOL            =   0
-            FCOLO           =   0
-            MCOL            =   12632256
-            MPTR            =   1
-            MICON           =   "frmConfSistema.frx":44250
-            PICN            =   "frmConfSistema.frx":4426C
-            UMCOL           =   -1  'True
-            SOFT            =   0   'False
-            PICPOS          =   0
-            NGREY           =   0   'False
-            FX              =   0
-            HAND            =   0   'False
-            CHECK           =   0   'False
-            VALUE           =   0   'False
          End
          Begin MSComctlLib.ImageList imgColigada 
             Left            =   -74760
@@ -1096,11 +888,11 @@ Begin VB.Form frmConfSistema
             BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
                NumListImages   =   2
                BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-                  Picture         =   "frmConfSistema.frx":44F46
+                  Picture         =   "frmConfSistema.frx":44E4C
                   Key             =   "OK"
                EndProperty
                BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-                  Picture         =   "frmConfSistema.frx":45958
+                  Picture         =   "frmConfSistema.frx":4585E
                   Key             =   "EXC"
                EndProperty
             EndProperty
@@ -1154,85 +946,25 @@ Begin VB.Form frmConfSistema
             TabIndex        =   29
             Top             =   360
             Width           =   8775
-            Begin ZEUS.chameleonButton cmdCadastro 
+            Begin VB.CommandButton cmdCadastro 
                Height          =   615
                Index           =   16
                Left            =   720
-               TabIndex        =   89
-               Top             =   3600
+               Picture         =   "frmConfSistema.frx":46270
+               Style           =   1  'Graphical
+               TabIndex        =   182
+               Top             =   3720
                Width           =   615
-               _ExtentX        =   1085
-               _ExtentY        =   1085
-               BTYPE           =   2
-               TX              =   ""
-               ENAB            =   -1  'True
-               BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               COLTYPE         =   1
-               FOCUSR          =   -1  'True
-               BCOL            =   13160660
-               BCOLO           =   13160660
-               FCOL            =   0
-               FCOLO           =   0
-               MCOL            =   12632256
-               MPTR            =   1
-               MICON           =   "frmConfSistema.frx":4636A
-               PICN            =   "frmConfSistema.frx":46386
-               UMCOL           =   -1  'True
-               SOFT            =   0   'False
-               PICPOS          =   0
-               NGREY           =   0   'False
-               FX              =   0
-               HAND            =   0   'False
-               CHECK           =   0   'False
-               VALUE           =   0   'False
             End
-            Begin ZEUS.chameleonButton cmdCadastro 
+            Begin VB.CommandButton cmdCadastro 
                Height          =   615
                Index           =   15
                Left            =   120
-               TabIndex        =   88
-               Top             =   3600
+               Picture         =   "frmConfSistema.frx":46F3A
+               Style           =   1  'Graphical
+               TabIndex        =   181
+               Top             =   3720
                Width           =   615
-               _ExtentX        =   1085
-               _ExtentY        =   1085
-               BTYPE           =   2
-               TX              =   ""
-               ENAB            =   -1  'True
-               BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "MS Sans Serif"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               COLTYPE         =   1
-               FOCUSR          =   -1  'True
-               BCOL            =   13160660
-               BCOLO           =   13160660
-               FCOL            =   0
-               FCOLO           =   0
-               MCOL            =   12632256
-               MPTR            =   1
-               MICON           =   "frmConfSistema.frx":47060
-               PICN            =   "frmConfSistema.frx":4707C
-               UMCOL           =   -1  'True
-               SOFT            =   0   'False
-               PICPOS          =   0
-               NGREY           =   0   'False
-               FX              =   0
-               HAND            =   0   'False
-               CHECK           =   0   'False
-               VALUE           =   0   'False
             End
             Begin VB.TextBox txtDadosEmpresa 
                Height          =   285
@@ -1245,7 +977,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
                Height          =   255
                Left            =   3360
-               OleObjectBlob   =   "frmConfSistema.frx":47D56
+               OleObjectBlob   =   "frmConfSistema.frx":47C04
                TabIndex        =   63
                Top             =   3360
                Width           =   375
@@ -1261,7 +993,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
                Height          =   255
                Left            =   3360
-               OleObjectBlob   =   "frmConfSistema.frx":47DB6
+               OleObjectBlob   =   "frmConfSistema.frx":47C64
                TabIndex        =   62
                Top             =   3000
                Width           =   495
@@ -1285,7 +1017,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
                Height          =   255
                Left            =   2160
-               OleObjectBlob   =   "frmConfSistema.frx":47E16
+               OleObjectBlob   =   "frmConfSistema.frx":47CC4
                TabIndex        =   61
                Top             =   1920
                Width           =   495
@@ -1293,7 +1025,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":47E76
+               OleObjectBlob   =   "frmConfSistema.frx":47D24
                TabIndex        =   60
                Top             =   3360
                Width           =   735
@@ -1301,7 +1033,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":47ED8
+               OleObjectBlob   =   "frmConfSistema.frx":47D86
                TabIndex        =   59
                Top             =   3000
                Width           =   975
@@ -1309,7 +1041,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":47F42
+               OleObjectBlob   =   "frmConfSistema.frx":47DF0
                TabIndex        =   58
                Top             =   2640
                Width           =   975
@@ -1317,7 +1049,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":47FA4
+               OleObjectBlob   =   "frmConfSistema.frx":47E52
                TabIndex        =   57
                Top             =   2280
                Width           =   975
@@ -1325,7 +1057,7 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":48008
+               OleObjectBlob   =   "frmConfSistema.frx":47EB6
                TabIndex        =   56
                Top             =   1920
                Width           =   495
@@ -1334,7 +1066,7 @@ Begin VB.Form frmConfSistema
                Height          =   255
                Index           =   0
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":48068
+               OleObjectBlob   =   "frmConfSistema.frx":47F16
                TabIndex        =   55
                Top             =   1560
                Width           =   735
@@ -1343,7 +1075,7 @@ Begin VB.Form frmConfSistema
                Height          =   255
                Index           =   0
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":480CE
+               OleObjectBlob   =   "frmConfSistema.frx":47F7C
                TabIndex        =   54
                Top             =   1200
                Width           =   855
@@ -1352,7 +1084,7 @@ Begin VB.Form frmConfSistema
                Height          =   255
                Index           =   0
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":48134
+               OleObjectBlob   =   "frmConfSistema.frx":47FE2
                TabIndex        =   53
                Top             =   840
                Width           =   855
@@ -1372,7 +1104,7 @@ Begin VB.Form frmConfSistema
                Height          =   255
                Index           =   0
                Left            =   120
-               OleObjectBlob   =   "frmConfSistema.frx":4819E
+               OleObjectBlob   =   "frmConfSistema.frx":4804C
                TabIndex        =   52
                Top             =   360
                Width           =   1095
@@ -1437,9 +1169,9 @@ Begin VB.Form frmConfSistema
             End
             Begin VB.ComboBox cboDadosEmpresa 
                Height          =   315
-               ItemData        =   "frmConfSistema.frx":48210
+               ItemData        =   "frmConfSistema.frx":480BE
                Left            =   1320
-               List            =   "frmConfSistema.frx":48265
+               List            =   "frmConfSistema.frx":48113
                TabIndex        =   41
                Top             =   1800
                Width           =   735
@@ -1461,85 +1193,25 @@ Begin VB.Form frmConfSistema
                TabIndex        =   30
                Top             =   240
                Width           =   2895
-               Begin ZEUS.chameleonButton cmdCadastro 
+               Begin VB.CommandButton cmdCadastro 
                   Height          =   615
                   Index           =   13
                   Left            =   720
-                  TabIndex        =   93
+                  Picture         =   "frmConfSistema.frx":48183
+                  Style           =   1  'Graphical
+                  TabIndex        =   183
                   Top             =   3120
                   Width           =   615
-                  _ExtentX        =   1085
-                  _ExtentY        =   1085
-                  BTYPE           =   2
-                  TX              =   ""
-                  ENAB            =   -1  'True
-                  BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
-                     Size            =   8.25
-                     Charset         =   0
-                     Weight          =   400
-                     Underline       =   0   'False
-                     Italic          =   0   'False
-                     Strikethrough   =   0   'False
-                  EndProperty
-                  COLTYPE         =   1
-                  FOCUSR          =   -1  'True
-                  BCOL            =   13160660
-                  BCOLO           =   13160660
-                  FCOL            =   0
-                  FCOLO           =   0
-                  MCOL            =   12632256
-                  MPTR            =   1
-                  MICON           =   "frmConfSistema.frx":482D5
-                  PICN            =   "frmConfSistema.frx":482F1
-                  UMCOL           =   -1  'True
-                  SOFT            =   0   'False
-                  PICPOS          =   0
-                  NGREY           =   0   'False
-                  FX              =   0
-                  HAND            =   0   'False
-                  CHECK           =   0   'False
-                  VALUE           =   0   'False
                End
-               Begin ZEUS.chameleonButton cmdCadastro 
+               Begin VB.CommandButton cmdCadastro 
                   Height          =   615
                   Index           =   12
                   Left            =   120
-                  TabIndex        =   92
+                  Picture         =   "frmConfSistema.frx":48E4D
+                  Style           =   1  'Graphical
+                  TabIndex        =   184
                   Top             =   3120
                   Width           =   615
-                  _ExtentX        =   1085
-                  _ExtentY        =   1085
-                  BTYPE           =   2
-                  TX              =   ""
-                  ENAB            =   -1  'True
-                  BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                     Name            =   "MS Sans Serif"
-                     Size            =   8.25
-                     Charset         =   0
-                     Weight          =   400
-                     Underline       =   0   'False
-                     Italic          =   0   'False
-                     Strikethrough   =   0   'False
-                  EndProperty
-                  COLTYPE         =   1
-                  FOCUSR          =   -1  'True
-                  BCOL            =   13160660
-                  BCOLO           =   13160660
-                  FCOL            =   0
-                  FCOLO           =   0
-                  MCOL            =   12632256
-                  MPTR            =   1
-                  MICON           =   "frmConfSistema.frx":48FCB
-                  PICN            =   "frmConfSistema.frx":48FE7
-                  UMCOL           =   -1  'True
-                  SOFT            =   0   'False
-                  PICPOS          =   0
-                  NGREY           =   0   'False
-                  FX              =   0
-                  HAND            =   0   'False
-                  CHECK           =   0   'False
-                  VALUE           =   0   'False
                End
                Begin VB.PictureBox Picture2 
                   Height          =   2775
@@ -1556,7 +1228,7 @@ Begin VB.Form frmConfSistema
                      Width           =   2415
                      _ExtentX        =   4260
                      _ExtentY        =   4683
-                     Image           =   "frmConfSistema.frx":49CC1
+                     Image           =   "frmConfSistema.frx":49B17
                   End
                   Begin VB.Label Label59 
                      Alignment       =   2  'Center
@@ -1598,6 +1270,7 @@ Begin VB.Form frmConfSistema
          _ExtentY        =   17171
          _Version        =   393216
          Tabs            =   2
+         Tab             =   1
          TabsPerRow      =   2
          TabHeight       =   520
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -1610,18 +1283,21 @@ Begin VB.Form frmConfSistema
             Strikethrough   =   0   'False
          EndProperty
          TabCaption(0)   =   "Gerais"
-         TabPicture(0)   =   "frmConfSistema.frx":49CD9
-         Tab(0).ControlEnabled=   -1  'True
+         TabPicture(0)   =   "frmConfSistema.frx":49B2F
+         Tab(0).ControlEnabled=   0   'False
          Tab(0).Control(0)=   "Frame8"
-         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).ControlCount=   1
          TabCaption(1)   =   "Integração"
-         TabPicture(1)   =   "frmConfSistema.frx":49CF5
-         Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "Frame3"
-         Tab(1).Control(1)=   "Frame15"
-         Tab(1).Control(2)=   "Check4"
-         Tab(1).Control(3)=   "SSTab3"
+         TabPicture(1)   =   "frmConfSistema.frx":49B4B
+         Tab(1).ControlEnabled=   -1  'True
+         Tab(1).Control(0)=   "SSTab3"
+         Tab(1).Control(0).Enabled=   0   'False
+         Tab(1).Control(1)=   "Check4"
+         Tab(1).Control(1).Enabled=   0   'False
+         Tab(1).Control(2)=   "Frame15"
+         Tab(1).Control(2).Enabled=   0   'False
+         Tab(1).Control(3)=   "Frame3"
+         Tab(1).Control(3).Enabled=   0   'False
          Tab(1).ControlCount=   4
          Begin VB.Frame Frame3 
             Caption         =   "SGBD "
@@ -1637,7 +1313,7 @@ Begin VB.Form frmConfSistema
             EndProperty
             ForeColor       =   &H8000000D&
             Height          =   615
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   67
             Top             =   840
             Width           =   4095
@@ -1675,7 +1351,7 @@ Begin VB.Form frmConfSistema
             EndProperty
             ForeColor       =   &H8000000D&
             Height          =   615
-            Left            =   -70680
+            Left            =   4320
             TabIndex        =   65
             Top             =   840
             Width           =   4455
@@ -1710,7 +1386,7 @@ Begin VB.Form frmConfSistema
                Strikethrough   =   0   'False
             EndProperty
             Height          =   255
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   64
             Top             =   480
             Width           =   4695
@@ -1727,7 +1403,7 @@ Begin VB.Form frmConfSistema
                Strikethrough   =   0   'False
             EndProperty
             Height          =   9135
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   20
             Top             =   420
             Width           =   8775
@@ -1744,14 +1420,14 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   975
                Left            =   120
-               TabIndex        =   182
+               TabIndex        =   170
                Top             =   1200
                Width           =   3135
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel27 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":49D11
-                  TabIndex        =   184
+                  OleObjectBlob   =   "frmConfSistema.frx":49B67
+                  TabIndex        =   172
                   Top             =   600
                   Width           =   2895
                End
@@ -1759,7 +1435,7 @@ Begin VB.Form frmConfSistema
                   Height          =   375
                   Index           =   4
                   Left            =   120
-                  TabIndex        =   183
+                  TabIndex        =   171
                   Text            =   "1"
                   Top             =   240
                   Width           =   2775
@@ -1778,16 +1454,16 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   3255
                Left            =   4320
-               TabIndex        =   147
+               TabIndex        =   135
                Top             =   5760
                Width           =   4095
                Begin VB.CommandButton cmdCadEmail 
                   Height          =   615
                   Index           =   12
                   Left            =   1920
-                  Picture         =   "frmConfSistema.frx":49DA3
+                  Picture         =   "frmConfSistema.frx":49BF9
                   Style           =   1  'Graphical
-                  TabIndex        =   148
+                  TabIndex        =   136
                   Top             =   960
                   Width           =   615
                End
@@ -1795,9 +1471,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   13
                   Left            =   1320
-                  Picture         =   "frmConfSistema.frx":4AA6D
+                  Picture         =   "frmConfSistema.frx":4A8C3
                   Style           =   1  'Graphical
-                  TabIndex        =   149
+                  TabIndex        =   137
                   Top             =   960
                   Width           =   615
                End
@@ -1805,9 +1481,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   14
                   Left            =   720
-                  Picture         =   "frmConfSistema.frx":4B737
+                  Picture         =   "frmConfSistema.frx":4B58D
                   Style           =   1  'Graphical
-                  TabIndex        =   150
+                  TabIndex        =   138
                   Top             =   960
                   Width           =   615
                End
@@ -1815,7 +1491,7 @@ Begin VB.Form frmConfSistema
                   Height          =   375
                   Index           =   3
                   Left            =   120
-                  TabIndex        =   152
+                  TabIndex        =   140
                   Top             =   480
                   Width           =   3855
                End
@@ -1823,24 +1499,24 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   15
                   Left            =   120
-                  Picture         =   "frmConfSistema.frx":4C401
+                  Picture         =   "frmConfSistema.frx":4C257
                   Style           =   1  'Graphical
-                  TabIndex        =   151
+                  TabIndex        =   139
                   Top             =   960
                   Width           =   615
                End
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":4D0CB
-                  TabIndex        =   153
+                  OleObjectBlob   =   "frmConfSistema.frx":4CF21
+                  TabIndex        =   141
                   Top             =   240
                   Width           =   1815
                End
                Begin MSComctlLib.ListView ListView5 
                   Height          =   1455
                   Left            =   120
-                  TabIndex        =   154
+                  TabIndex        =   142
                   Top             =   1680
                   Width           =   3855
                   _ExtentX        =   6800
@@ -1871,16 +1547,16 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   3255
                Left            =   120
-               TabIndex        =   139
+               TabIndex        =   127
                Top             =   5760
                Width           =   4095
                Begin VB.CommandButton cmdCadEmail 
                   Height          =   615
                   Index           =   8
                   Left            =   1920
-                  Picture         =   "frmConfSistema.frx":4D131
+                  Picture         =   "frmConfSistema.frx":4CF87
                   Style           =   1  'Graphical
-                  TabIndex        =   140
+                  TabIndex        =   128
                   Top             =   960
                   Width           =   615
                End
@@ -1888,9 +1564,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   9
                   Left            =   1320
-                  Picture         =   "frmConfSistema.frx":4DDFB
+                  Picture         =   "frmConfSistema.frx":4DC51
                   Style           =   1  'Graphical
-                  TabIndex        =   141
+                  TabIndex        =   129
                   Top             =   960
                   Width           =   615
                End
@@ -1898,9 +1574,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   10
                   Left            =   720
-                  Picture         =   "frmConfSistema.frx":4EAC5
+                  Picture         =   "frmConfSistema.frx":4E91B
                   Style           =   1  'Graphical
-                  TabIndex        =   142
+                  TabIndex        =   130
                   Top             =   960
                   Width           =   615
                End
@@ -1908,9 +1584,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   11
                   Left            =   120
-                  Picture         =   "frmConfSistema.frx":4F78F
+                  Picture         =   "frmConfSistema.frx":4F5E5
                   Style           =   1  'Graphical
-                  TabIndex        =   144
+                  TabIndex        =   132
                   Top             =   960
                   Width           =   615
                End
@@ -1918,22 +1594,22 @@ Begin VB.Form frmConfSistema
                   Height          =   375
                   Index           =   2
                   Left            =   120
-                  TabIndex        =   143
+                  TabIndex        =   131
                   Top             =   480
                   Width           =   3855
                End
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":50459
-                  TabIndex        =   145
+                  OleObjectBlob   =   "frmConfSistema.frx":502AF
+                  TabIndex        =   133
                   Top             =   240
                   Width           =   1815
                End
                Begin MSComctlLib.ListView ListView4 
                   Height          =   1455
                   Left            =   120
-                  TabIndex        =   146
+                  TabIndex        =   134
                   Top             =   1680
                   Width           =   3855
                   _ExtentX        =   6800
@@ -1964,16 +1640,16 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   3375
                Left            =   4320
-               TabIndex        =   131
+               TabIndex        =   119
                Top             =   2280
                Width           =   4095
                Begin VB.CommandButton cmdCadEmail 
                   Height          =   615
                   Index           =   4
                   Left            =   1920
-                  Picture         =   "frmConfSistema.frx":504BF
+                  Picture         =   "frmConfSistema.frx":50315
                   Style           =   1  'Graphical
-                  TabIndex        =   132
+                  TabIndex        =   120
                   Top             =   960
                   Width           =   615
                End
@@ -1981,9 +1657,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   5
                   Left            =   1320
-                  Picture         =   "frmConfSistema.frx":51189
+                  Picture         =   "frmConfSistema.frx":50FDF
                   Style           =   1  'Graphical
-                  TabIndex        =   133
+                  TabIndex        =   121
                   Top             =   960
                   Width           =   615
                End
@@ -1991,9 +1667,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   6
                   Left            =   720
-                  Picture         =   "frmConfSistema.frx":51E53
+                  Picture         =   "frmConfSistema.frx":51CA9
                   Style           =   1  'Graphical
-                  TabIndex        =   134
+                  TabIndex        =   122
                   Top             =   960
                   Width           =   615
                End
@@ -2001,7 +1677,7 @@ Begin VB.Form frmConfSistema
                   Height          =   375
                   Index           =   0
                   Left            =   120
-                  TabIndex        =   136
+                  TabIndex        =   124
                   Top             =   480
                   Width           =   3855
                End
@@ -2009,24 +1685,24 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   7
                   Left            =   120
-                  Picture         =   "frmConfSistema.frx":52B1D
+                  Picture         =   "frmConfSistema.frx":52973
                   Style           =   1  'Graphical
-                  TabIndex        =   135
+                  TabIndex        =   123
                   Top             =   960
                   Width           =   615
                End
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":537E7
-                  TabIndex        =   137
+                  OleObjectBlob   =   "frmConfSistema.frx":5363D
+                  TabIndex        =   125
                   Top             =   240
                   Width           =   1815
                End
                Begin MSComctlLib.ListView ListView2 
                   Height          =   1575
                   Left            =   120
-                  TabIndex        =   138
+                  TabIndex        =   126
                   Top             =   1680
                   Width           =   3855
                   _ExtentX        =   6800
@@ -2057,16 +1733,16 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   3375
                Left            =   120
-               TabIndex        =   123
+               TabIndex        =   111
                Top             =   2280
                Width           =   4095
                Begin VB.CommandButton cmdCadEmail 
                   Height          =   615
                   Index           =   3
                   Left            =   1920
-                  Picture         =   "frmConfSistema.frx":5384D
+                  Picture         =   "frmConfSistema.frx":536A3
                   Style           =   1  'Graphical
-                  TabIndex        =   130
+                  TabIndex        =   118
                   Top             =   960
                   Width           =   615
                End
@@ -2074,9 +1750,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   2
                   Left            =   1320
-                  Picture         =   "frmConfSistema.frx":54517
+                  Picture         =   "frmConfSistema.frx":5436D
                   Style           =   1  'Graphical
-                  TabIndex        =   129
+                  TabIndex        =   117
                   Top             =   960
                   Width           =   615
                End
@@ -2084,9 +1760,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   1
                   Left            =   720
-                  Picture         =   "frmConfSistema.frx":551E1
+                  Picture         =   "frmConfSistema.frx":55037
                   Style           =   1  'Graphical
-                  TabIndex        =   128
+                  TabIndex        =   116
                   Top             =   960
                   Width           =   615
                End
@@ -2094,9 +1770,9 @@ Begin VB.Form frmConfSistema
                   Height          =   615
                   Index           =   0
                   Left            =   120
-                  Picture         =   "frmConfSistema.frx":55EAB
+                  Picture         =   "frmConfSistema.frx":55D01
                   Style           =   1  'Graphical
-                  TabIndex        =   127
+                  TabIndex        =   115
                   Top             =   960
                   Width           =   615
                End
@@ -2104,22 +1780,22 @@ Begin VB.Form frmConfSistema
                   Height          =   375
                   Index           =   1
                   Left            =   120
-                  TabIndex        =   124
+                  TabIndex        =   112
                   Top             =   480
                   Width           =   3855
                End
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":56B75
-                  TabIndex        =   125
+                  OleObjectBlob   =   "frmConfSistema.frx":569CB
+                  TabIndex        =   113
                   Top             =   240
                   Width           =   1815
                End
                Begin MSComctlLib.ListView ListView1 
                   Height          =   1575
                   Left            =   120
-                  TabIndex        =   126
+                  TabIndex        =   114
                   Top             =   1680
                   Width           =   3855
                   _ExtentX        =   6800
@@ -2150,14 +1826,14 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   975
                Left            =   3360
-               TabIndex        =   120
+               TabIndex        =   108
                Top             =   1200
                Width           =   5295
                Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
                   Height          =   255
                   Left            =   120
-                  OleObjectBlob   =   "frmConfSistema.frx":56BDB
-                  TabIndex        =   122
+                  OleObjectBlob   =   "frmConfSistema.frx":56A31
+                  TabIndex        =   110
                   Top             =   600
                   Width           =   4935
                End
@@ -2173,7 +1849,7 @@ Begin VB.Form frmConfSistema
                   EndProperty
                   Height          =   375
                   Left            =   120
-                  TabIndex        =   121
+                  TabIndex        =   109
                   Top             =   240
                   Width           =   5055
                End
@@ -2283,13 +1959,14 @@ Begin VB.Form frmConfSistema
          End
          Begin TabDlg.SSTab SSTab3 
             Height          =   3375
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   69
             Top             =   1680
             Width           =   8775
             _ExtentX        =   15478
             _ExtentY        =   5953
             _Version        =   393216
+            Tab             =   2
             TabHeight       =   520
             Enabled         =   0   'False
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -2302,59 +1979,59 @@ Begin VB.Form frmConfSistema
                Strikethrough   =   0   'False
             EndProperty
             TabCaption(0)   =   "RM Sistemas"
-            TabPicture(0)   =   "frmConfSistema.frx":56C8D
-            Tab(0).ControlEnabled=   -1  'True
+            TabPicture(0)   =   "frmConfSistema.frx":56AE3
+            Tab(0).ControlEnabled=   0   'False
             Tab(0).Control(0)=   "Label25"
-            Tab(0).Control(0).Enabled=   0   'False
             Tab(0).Control(1)=   "Label24"
-            Tab(0).Control(1).Enabled=   0   'False
             Tab(0).Control(2)=   "Label23"
-            Tab(0).Control(2).Enabled=   0   'False
             Tab(0).Control(3)=   "Label22"
-            Tab(0).Control(3).Enabled=   0   'False
             Tab(0).Control(4)=   "txtIntegra(0)"
-            Tab(0).Control(4).Enabled=   0   'False
             Tab(0).Control(5)=   "txtIntegra(1)"
-            Tab(0).Control(5).Enabled=   0   'False
             Tab(0).Control(6)=   "txtIntegra(2)"
-            Tab(0).Control(6).Enabled=   0   'False
             Tab(0).Control(7)=   "txtIntegra(3)"
-            Tab(0).Control(7).Enabled=   0   'False
             Tab(0).ControlCount=   8
             TabCaption(1)   =   "Relógio de Ponto"
-            TabPicture(1)   =   "frmConfSistema.frx":56CA9
+            TabPicture(1)   =   "frmConfSistema.frx":56AFF
             Tab(1).ControlEnabled=   0   'False
-            Tab(1).Control(0)=   "cmdCad(5)"
-            Tab(1).Control(1)=   "txtIntegra(10)"
-            Tab(1).Control(2)=   "txtIntegra(7)"
-            Tab(1).Control(3)=   "txtIntegra(6)"
-            Tab(1).Control(4)=   "txtIntegra(5)"
-            Tab(1).Control(5)=   "txtIntegra(4)"
-            Tab(1).Control(6)=   "SkinLabel19"
-            Tab(1).Control(7)=   "SkinLabel20"
-            Tab(1).Control(8)=   "SkinLabel21"
-            Tab(1).Control(9)=   "SkinLabel22"
-            Tab(1).Control(10)=   "SkinLabel25"
-            Tab(1).Control(11)=   "cdlTXT3"
+            Tab(1).Control(0)=   "cdlTXT3"
+            Tab(1).Control(1)=   "SkinLabel25"
+            Tab(1).Control(2)=   "SkinLabel22"
+            Tab(1).Control(3)=   "SkinLabel21"
+            Tab(1).Control(4)=   "SkinLabel20"
+            Tab(1).Control(5)=   "SkinLabel19"
+            Tab(1).Control(6)=   "txtIntegra(4)"
+            Tab(1).Control(7)=   "txtIntegra(5)"
+            Tab(1).Control(8)=   "txtIntegra(6)"
+            Tab(1).Control(9)=   "txtIntegra(7)"
+            Tab(1).Control(10)=   "txtIntegra(10)"
+            Tab(1).Control(11)=   "cmdCad(5)"
             Tab(1).ControlCount=   12
             TabCaption(2)   =   "Banco FlexJR.FDB"
-            TabPicture(2)   =   "frmConfSistema.frx":56CC5
-            Tab(2).ControlEnabled=   0   'False
-            Tab(2).Control(0)=   "txtIntegra(9)"
-            Tab(2).Control(1)=   "txtIntegra(8)"
-            Tab(2).Control(2)=   "cmdCad(4)"
-            Tab(2).Control(3)=   "Text5"
-            Tab(2).Control(4)=   "SkinLabel23"
-            Tab(2).Control(5)=   "cdlTXT4"
-            Tab(2).Control(6)=   "SkinLabel24"
-            Tab(2).Control(7)=   "Label1"
+            TabPicture(2)   =   "frmConfSistema.frx":56B1B
+            Tab(2).ControlEnabled=   -1  'True
+            Tab(2).Control(0)=   "Label1"
+            Tab(2).Control(0).Enabled=   0   'False
+            Tab(2).Control(1)=   "SkinLabel24"
+            Tab(2).Control(1).Enabled=   0   'False
+            Tab(2).Control(2)=   "cdlTXT4"
+            Tab(2).Control(2).Enabled=   0   'False
+            Tab(2).Control(3)=   "SkinLabel23"
+            Tab(2).Control(3).Enabled=   0   'False
+            Tab(2).Control(4)=   "Text5"
+            Tab(2).Control(4).Enabled=   0   'False
+            Tab(2).Control(5)=   "cmdCad(4)"
+            Tab(2).Control(5).Enabled=   0   'False
+            Tab(2).Control(6)=   "txtIntegra(8)"
+            Tab(2).Control(6).Enabled=   0   'False
+            Tab(2).Control(7)=   "txtIntegra(9)"
+            Tab(2).Control(7).Enabled=   0   'False
             Tab(2).ControlCount=   8
             Begin VB.CommandButton cmdCad 
                Caption         =   "..."
                Height          =   255
                Index           =   5
                Left            =   -71760
-               TabIndex        =   173
+               TabIndex        =   161
                ToolTipText     =   "Localizar arquivo"
                Top             =   2280
                Width           =   375
@@ -2372,7 +2049,7 @@ Begin VB.Form frmConfSistema
                Height          =   330
                Index           =   10
                Left            =   -74760
-               TabIndex        =   171
+               TabIndex        =   159
                ToolTipText     =   "Caminho onde será gravado o arquivo com os dados capturados no relógio de ponto"
                Top             =   2280
                Width           =   2895
@@ -2390,7 +2067,7 @@ Begin VB.Form frmConfSistema
                Height          =   330
                IMEMode         =   3  'DISABLE
                Index           =   9
-               Left            =   -71640
+               Left            =   3360
                PasswordChar    =   "*"
                TabIndex        =   81
                ToolTipText     =   "Senha de acesso ao banco FDB"
@@ -2409,7 +2086,7 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   330
                Index           =   8
-               Left            =   -74760
+               Left            =   240
                TabIndex        =   80
                ToolTipText     =   "Usuário de acesso ao banco FDB"
                Top             =   1560
@@ -2419,7 +2096,7 @@ Begin VB.Form frmConfSistema
                Caption         =   "..."
                Height          =   255
                Index           =   4
-               Left            =   -67800
+               Left            =   7200
                TabIndex        =   79
                ToolTipText     =   "Localizar arquivo"
                Top             =   840
@@ -2436,7 +2113,7 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   330
-               Left            =   -74760
+               Left            =   240
                TabIndex        =   78
                Text            =   "Informe o caminho do arquivo FDB"
                ToolTipText     =   "Caminho onde se encontra o arquivo FDB do Firebird"
@@ -2520,8 +2197,8 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
                Height          =   255
                Left            =   -74760
-               OleObjectBlob   =   "frmConfSistema.frx":56CE1
-               TabIndex        =   164
+               OleObjectBlob   =   "frmConfSistema.frx":56B37
+               TabIndex        =   152
                Top             =   600
                Width           =   2175
             End
@@ -2538,7 +2215,7 @@ Begin VB.Form frmConfSistema
                Height          =   330
                IMEMode         =   3  'DISABLE
                Index           =   3
-               Left            =   3360
+               Left            =   -71640
                PasswordChar    =   "*"
                TabIndex        =   73
                Top             =   1560
@@ -2556,7 +2233,7 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   330
                Index           =   2
-               Left            =   240
+               Left            =   -74760
                TabIndex        =   72
                Top             =   1560
                Width           =   2895
@@ -2573,7 +2250,7 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   330
                Index           =   1
-               Left            =   3360
+               Left            =   -71640
                TabIndex        =   71
                Top             =   840
                Width           =   2655
@@ -2590,7 +2267,7 @@ Begin VB.Form frmConfSistema
                EndProperty
                Height          =   330
                Index           =   0
-               Left            =   240
+               Left            =   -74760
                TabIndex        =   70
                Top             =   840
                Width           =   2895
@@ -2598,8 +2275,8 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
                Height          =   255
                Left            =   -71640
-               OleObjectBlob   =   "frmConfSistema.frx":56D6B
-               TabIndex        =   165
+               OleObjectBlob   =   "frmConfSistema.frx":56BC1
+               TabIndex        =   153
                ToolTipText     =   "IP do relógio"
                Top             =   600
                Width           =   1935
@@ -2607,8 +2284,8 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
                Height          =   255
                Left            =   -74760
-               OleObjectBlob   =   "frmConfSistema.frx":56DE7
-               TabIndex        =   166
+               OleObjectBlob   =   "frmConfSistema.frx":56C3D
+               TabIndex        =   154
                ToolTipText     =   "CPF do responsável cadastrado no relógio"
                Top             =   1320
                Width           =   1815
@@ -2616,22 +2293,22 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
                Height          =   375
                Left            =   -71640
-               OleObjectBlob   =   "frmConfSistema.frx":56E65
-               TabIndex        =   167
+               OleObjectBlob   =   "frmConfSistema.frx":56CBB
+               TabIndex        =   155
                ToolTipText     =   "Senha de acesso ao relógio"
                Top             =   1320
                Width           =   855
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
                Height          =   255
-               Left            =   -74760
-               OleObjectBlob   =   "frmConfSistema.frx":56EC9
-               TabIndex        =   168
+               Left            =   240
+               OleObjectBlob   =   "frmConfSistema.frx":56D1F
+               TabIndex        =   156
                Top             =   600
                Width           =   3615
             End
             Begin MSComDlg.CommonDialog cdlTXT4 
-               Left            =   -67200
+               Left            =   7800
                Top             =   720
                _ExtentX        =   847
                _ExtentY        =   847
@@ -2639,9 +2316,9 @@ Begin VB.Form frmConfSistema
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel24 
                Height          =   255
-               Left            =   -74760
-               OleObjectBlob   =   "frmConfSistema.frx":56F6B
-               TabIndex        =   169
+               Left            =   240
+               OleObjectBlob   =   "frmConfSistema.frx":56DC1
+               TabIndex        =   157
                ToolTipText     =   "CPF do responsável cadastrado no relógio"
                Top             =   1320
                Width           =   1095
@@ -2649,8 +2326,8 @@ Begin VB.Form frmConfSistema
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel25 
                Height          =   255
                Left            =   -74760
-               OleObjectBlob   =   "frmConfSistema.frx":56FD3
-               TabIndex        =   172
+               OleObjectBlob   =   "frmConfSistema.frx":56E29
+               TabIndex        =   160
                ToolTipText     =   "Caminho onde será gravado o arquivo com os dados capturados do relógio de ponto"
                Top             =   2040
                Width           =   2415
@@ -2674,8 +2351,8 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   255
-               Left            =   -71640
-               TabIndex        =   170
+               Left            =   3360
+               TabIndex        =   158
                Top             =   1320
                Width           =   2655
             End
@@ -2691,7 +2368,7 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   255
-               Left            =   3360
+               Left            =   -71640
                TabIndex        =   85
                Top             =   1320
                Width           =   2655
@@ -2708,7 +2385,7 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   255
-               Left            =   240
+               Left            =   -74760
                TabIndex        =   84
                Top             =   1320
                Width           =   2655
@@ -2725,7 +2402,7 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   255
-               Left            =   3360
+               Left            =   -71640
                TabIndex        =   83
                Top             =   600
                Width           =   2775
@@ -2742,7 +2419,7 @@ Begin VB.Form frmConfSistema
                   Strikethrough   =   0   'False
                EndProperty
                Height          =   255
-               Left            =   240
+               Left            =   -74760
                TabIndex        =   82
                Top             =   600
                Width           =   2175
@@ -2859,7 +2536,7 @@ Begin VB.Form frmConfSistema
          Begin ACTIVESKINLibCtl.SkinLabel Label16 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmConfSistema.frx":57059
+            OleObjectBlob   =   "frmConfSistema.frx":56EAF
             TabIndex        =   51
             Top             =   600
             Width           =   8655
@@ -2931,8 +2608,8 @@ Begin VB.Form frmConfSistema
             FCOLO           =   0
             MCOL            =   12632256
             MPTR            =   1
-            MICON           =   "frmConfSistema.frx":57103
-            PICN            =   "frmConfSistema.frx":5711F
+            MICON           =   "frmConfSistema.frx":56F59
+            PICN            =   "frmConfSistema.frx":56F75
             UMCOL           =   -1  'True
             SOFT            =   0   'False
             PICPOS          =   0
@@ -4381,6 +4058,10 @@ Private Sub cmdCadEmail_Click(Index As Integer)
     End Select
 End Sub
 
+Private Sub Combo5_Click()
+    vColectionIcons = Combo5.ListIndex
+End Sub
+
 Private Sub Form_Load()
     Set vPonte1 = Me.Controls.Add("VB.TextBox", "vPonte1")
     Set vPonte2 = Me.Controls.Add("VB.TextBox", "vPonte2")
@@ -4404,6 +4085,7 @@ Private Sub Form_Load()
     Me.ListView7.SortKey = 1
     Me.ListView7.SortOrder = lvwDescending
 
+    carregarIconBotao
 
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
@@ -4411,6 +4093,49 @@ Private Sub Form_Load()
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdCadEmail(19), 19, 46 'Inserir
+    carregaImagemBotao cmdCadEmail(18), 18, 32 'Editar
+    carregaImagemBotao cmdCadEmail(17), 18, 31 'Novo
+    carregaImagemBotao cmdCadEmail(16), 16, 33 'Excluir
+    carregaImagemBotao cmdCadEmail(0), 0, 46 'Inserir
+    carregaImagemBotao cmdCadEmail(1), 1, 32 'Editar
+    carregaImagemBotao cmdCadEmail(2), 2, 31 'Novo
+    carregaImagemBotao cmdCadEmail(3), 3, 33 'Excluir
+    carregaImagemBotao cmdCadEmail(7), 7, 46 'Inserir
+    carregaImagemBotao cmdCadEmail(6), 6, 32 'Editar
+    carregaImagemBotao cmdCadEmail(5), 5, 31 'Novo
+    carregaImagemBotao cmdCadEmail(4), 4, 33 'Excluir
+    carregaImagemBotao cmdCadEmail(11), 15, 46 'Inserir
+    carregaImagemBotao cmdCadEmail(10), 14, 32 'Editar
+    carregaImagemBotao cmdCadEmail(9), 13, 31 'Novo
+    carregaImagemBotao cmdCadEmail(8), 12, 33 'Excluir
+    carregaImagemBotao cmdCadEmail(15), 15, 46 'Inserir
+    carregaImagemBotao cmdCadEmail(14), 14, 32 'Editar
+    carregaImagemBotao cmdCadEmail(13), 13, 31 'Novo
+    carregaImagemBotao cmdCadEmail(12), 12, 33 'Excluir
+    
+    carregaImagemBotao cmdCadAtividade(0), 0, 46 'Inserir
+    carregaImagemBotao cmdCadAtividade(1), 1, 32 'Editar
+    carregaImagemBotao cmdCadAtividade(2), 2, 31 'Novo
+    carregaImagemBotao cmdCadAtividade(3), 3, 33 'Excluir
+    
+    carregaImagemBotao chameleonButton4, 4, 32 'Editar
+    carregaImagemBotao chameleonButton5, 5, 33 'Excluir
+
+    carregaImagemBotao cmdCadastro(15), 15, 32 'Novo
+    carregaImagemBotao cmdCadastro(13), 13, 33 'Excluir
+    carregaImagemBotao cmdCadastro(16), 16, 48 'Seta Direita
+    carregaImagemBotao cmdCadastro(12), 12, 47 'Add User
+    carregaImagemBotao cmdCadastro(2), 2, 46 'Inserir
+    carregaImagemBotao cmdCadastro(3), 3, 32 'Editar
+    carregaImagemBotao cmdCadastro(5), 5, 31 'Novo
+    carregaImagemBotao cmdCadastro(4), 4, 33 'Excluir
+    
+    carregaImagemBotao cmdCadastro(0), 0, 45 'Salvar
+    carregaImagemBotao cmdCadastro(1), 1, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()
@@ -5155,6 +4880,21 @@ On Error GoTo Err
         rsParametros.Fields(14) = txtCadParametro(4)
         vOpenTabs = txtCadParametro(4)
     End If
+    
+    If Combo5.ListIndex = 0 Then
+        rsParametros.Fields(15) = 1
+    ElseIf Combo5.ListIndex = 1 Then
+        rsParametros.Fields(15) = 2
+    ElseIf Combo5.ListIndex = 2 Then
+        rsParametros.Fields(15) = 3
+    ElseIf Combo5.ListIndex = 3 Then
+        rsParametros.Fields(15) = 4
+    ElseIf Combo5.ListIndex = 4 Then
+        rsParametros.Fields(15) = 5
+    ElseIf Combo5.ListIndex = 5 Then
+        rsParametros.Fields(15) = 6
+    End If
+    
     rsParametros.Fields(6) = vCodcoligada 'Codigo da coligada
     If Check4.Value = 1 Then
 '*************************

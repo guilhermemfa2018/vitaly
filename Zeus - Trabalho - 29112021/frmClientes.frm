@@ -18,12 +18,36 @@ Begin VB.Form frmClientes
    ScaleHeight     =   7740
    ScaleWidth      =   7470
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton chamCad 
+      Height          =   615
+      Index           =   9
+      Left            =   720
+      Picture         =   "frmClientes.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   88
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   6960
+      Width           =   615
+   End
+   Begin VB.CommandButton chamCad 
+      Height          =   615
+      Index           =   8
+      Left            =   120
+      Picture         =   "frmClientes.frx":1994
+      Style           =   1  'Graphical
+      TabIndex        =   89
+      Tag             =   "Salvar Grupo"
+      ToolTipText     =   "Salvar Grupo"
+      Top             =   6960
+      Width           =   615
+   End
    Begin VB.Frame Frame4 
       Caption         =   "Status"
       Enabled         =   0   'False
       Height          =   615
       Left            =   6240
-      TabIndex        =   88
+      TabIndex        =   86
       Top             =   6960
       Width           =   1095
       Begin VB.CheckBox Check1 
@@ -31,51 +55,11 @@ Begin VB.Form frmClientes
          Enabled         =   0   'False
          Height          =   255
          Left            =   120
-         TabIndex        =   89
+         TabIndex        =   87
          Top             =   240
          Value           =   1  'Checked
          Width           =   735
       End
-   End
-   Begin ZEUS.chameleonButton chamCad 
-      Height          =   615
-      Index           =   9
-      Left            =   765
-      TabIndex        =   31
-      Top             =   7020
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmClientes.frx":0CCA
-      PICN            =   "frmClientes.frx":0CE6
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
    Begin VB.Frame Frame6 
       Caption         =   "Ramo de Atividade"
@@ -90,7 +74,7 @@ Begin VB.Form frmClientes
       EndProperty
       Height          =   975
       Left            =   120
-      TabIndex        =   62
+      TabIndex        =   60
       Top             =   120
       Width           =   7215
       Begin MSMask.MaskEdBox mskcadastro 
@@ -110,8 +94,8 @@ Begin VB.Form frmClientes
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmClientes.frx":19C0
-         TabIndex        =   64
+         OleObjectBlob   =   "frmClientes.frx":265E
+         TabIndex        =   62
          Top             =   240
          Width           =   735
       End
@@ -126,12 +110,12 @@ Begin VB.Form frmClientes
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   1080
-         OleObjectBlob   =   "frmClientes.frx":1A2C
-         TabIndex        =   63
+         OleObjectBlob   =   "frmClientes.frx":26CA
+         TabIndex        =   61
          Top             =   240
          Width           =   1455
       End
-      Begin VB.CommandButton cmdCadastro 
+      Begin VB.CommandButton cmdcadastro 
          Caption         =   "..."
          BeginProperty Font 
             Name            =   "Arial"
@@ -153,7 +137,7 @@ Begin VB.Form frmClientes
    Begin TabDlg.SSTab SSTab1 
       Height          =   5655
       Left            =   120
-      TabIndex        =   45
+      TabIndex        =   43
       Top             =   1200
       Width           =   7215
       _ExtentX        =   12726
@@ -161,18 +145,18 @@ Begin VB.Form frmClientes
       _Version        =   393216
       TabHeight       =   520
       TabCaption(0)   =   "Jurídica"
-      TabPicture(0)   =   "frmClientes.frx":1A94
+      TabPicture(0)   =   "frmClientes.frx":2732
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame3"
       Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Física"
-      TabPicture(1)   =   "frmClientes.frx":1AB0
+      TabPicture(1)   =   "frmClientes.frx":274E
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame2"
       Tab(1).ControlCount=   1
       TabCaption(2)   =   "Contatos"
-      TabPicture(2)   =   "frmClientes.frx":1ACC
+      TabPicture(2)   =   "frmClientes.frx":276A
       Tab(2).ControlEnabled=   0   'False
       Tab(2).Control(0)=   "Grid"
       Tab(2).Control(1)=   "Frame1"
@@ -190,7 +174,7 @@ Begin VB.Form frmClientes
          EndProperty
          Height          =   4575
          Left            =   120
-         TabIndex        =   61
+         TabIndex        =   59
          Top             =   360
          Width           =   6975
          Begin VB.TextBox txtcadastro 
@@ -268,9 +252,9 @@ Begin VB.Form frmClientes
          Begin VB.ComboBox cbocadastro 
             Height          =   315
             Index           =   0
-            ItemData        =   "frmClientes.frx":1AE8
+            ItemData        =   "frmClientes.frx":2786
             Left            =   6120
-            List            =   "frmClientes.frx":1B3D
+            List            =   "frmClientes.frx":27DB
             TabIndex        =   10
             Top             =   2280
             Width           =   735
@@ -343,104 +327,104 @@ Begin VB.Form frmClientes
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":1BAD
-            TabIndex        =   78
+            OleObjectBlob   =   "frmClientes.frx":284B
+            TabIndex        =   76
             Top             =   3840
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":1C15
-            TabIndex        =   77
+            OleObjectBlob   =   "frmClientes.frx":28B3
+            TabIndex        =   75
             Top             =   3240
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
             Height          =   255
             Left            =   5520
-            OleObjectBlob   =   "frmClientes.frx":1C7F
-            TabIndex        =   76
+            OleObjectBlob   =   "frmClientes.frx":291D
+            TabIndex        =   74
             Top             =   2640
             Width           =   495
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
             Height          =   255
             Left            =   4080
-            OleObjectBlob   =   "frmClientes.frx":1CE5
-            TabIndex        =   75
+            OleObjectBlob   =   "frmClientes.frx":2983
+            TabIndex        =   73
             Top             =   2640
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   2160
-            OleObjectBlob   =   "frmClientes.frx":1D55
-            TabIndex        =   74
+            OleObjectBlob   =   "frmClientes.frx":29F3
+            TabIndex        =   72
             Top             =   2640
             Width           =   1215
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":1DD1
-            TabIndex        =   73
+            OleObjectBlob   =   "frmClientes.frx":2A6F
+            TabIndex        =   71
             Top             =   2640
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   6120
-            OleObjectBlob   =   "frmClientes.frx":1E39
-            TabIndex        =   72
+            OleObjectBlob   =   "frmClientes.frx":2AD7
+            TabIndex        =   70
             Top             =   2040
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   3600
-            OleObjectBlob   =   "frmClientes.frx":1EA5
-            TabIndex        =   71
+            OleObjectBlob   =   "frmClientes.frx":2B43
+            TabIndex        =   69
             Top             =   2040
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmClientes.frx":1F11
-            TabIndex        =   70
+            OleObjectBlob   =   "frmClientes.frx":2BAF
+            TabIndex        =   68
             Top             =   2040
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":1F7D
-            TabIndex        =   69
+            OleObjectBlob   =   "frmClientes.frx":2C1B
+            TabIndex        =   67
             Top             =   2040
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":1FE3
-            TabIndex        =   68
+            OleObjectBlob   =   "frmClientes.frx":2C81
+            TabIndex        =   66
             Top             =   1440
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":2053
-            TabIndex        =   67
+            OleObjectBlob   =   "frmClientes.frx":2CF1
+            TabIndex        =   65
             Top             =   840
             Width           =   1335
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":20CD
-            TabIndex        =   65
+            OleObjectBlob   =   "frmClientes.frx":2D6B
+            TabIndex        =   63
             Top             =   240
             Width           =   735
          End
@@ -448,7 +432,7 @@ Begin VB.Form frmClientes
             Caption         =   "Razão Social:"
             Height          =   255
             Left            =   1080
-            TabIndex        =   66
+            TabIndex        =   64
             Top             =   240
             Width           =   1215
          End
@@ -457,14 +441,14 @@ Begin VB.Form frmClientes
          Caption         =   "Dados "
          Height          =   5895
          Left            =   -74880
-         TabIndex        =   47
+         TabIndex        =   45
          Top             =   480
          Width           =   6975
          Begin MSMask.MaskEdBox mskcadastro 
             Height          =   255
             Index           =   6
             Left            =   1320
-            TabIndex        =   42
+            TabIndex        =   40
             Top             =   3960
             Width           =   2295
             _ExtentX        =   4048
@@ -478,7 +462,7 @@ Begin VB.Form frmClientes
             Height          =   255
             Index           =   5
             Left            =   1320
-            TabIndex        =   41
+            TabIndex        =   39
             Top             =   3600
             Width           =   2295
             _ExtentX        =   4048
@@ -492,7 +476,7 @@ Begin VB.Form frmClientes
             Height          =   255
             Index           =   4
             Left            =   1320
-            TabIndex        =   40
+            TabIndex        =   38
             Top             =   3240
             Width           =   2295
             _ExtentX        =   4048
@@ -515,7 +499,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   8
             Left            =   1320
-            TabIndex        =   32
+            TabIndex        =   30
             Top             =   360
             Width           =   855
          End
@@ -523,7 +507,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   16
             Left            =   1320
-            TabIndex        =   44
+            TabIndex        =   42
             Top             =   4680
             Width           =   5415
          End
@@ -531,7 +515,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   15
             Left            =   1320
-            TabIndex        =   43
+            TabIndex        =   41
             Top             =   4320
             Width           =   5415
          End
@@ -539,17 +523,17 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   14
             Left            =   1320
-            TabIndex        =   39
+            TabIndex        =   37
             Top             =   2880
             Width           =   2295
          End
          Begin VB.ComboBox cbocadastro 
             Height          =   315
             Index           =   1
-            ItemData        =   "frmClientes.frx":2139
+            ItemData        =   "frmClientes.frx":2DD7
             Left            =   1320
-            List            =   "frmClientes.frx":218E
-            TabIndex        =   38
+            List            =   "frmClientes.frx":2E2C
+            TabIndex        =   36
             Top             =   2520
             Width           =   855
          End
@@ -557,7 +541,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   13
             Left            =   1320
-            TabIndex        =   37
+            TabIndex        =   35
             Top             =   2160
             Width           =   3735
          End
@@ -565,7 +549,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   12
             Left            =   1320
-            TabIndex        =   36
+            TabIndex        =   34
             Top             =   1800
             Width           =   3735
          End
@@ -573,7 +557,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   11
             Left            =   1320
-            TabIndex        =   35
+            TabIndex        =   33
             Top             =   1440
             Width           =   1815
          End
@@ -581,7 +565,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   10
             Left            =   1320
-            TabIndex        =   34
+            TabIndex        =   32
             Top             =   1080
             Width           =   5415
          End
@@ -589,7 +573,7 @@ Begin VB.Form frmClientes
             Height          =   285
             Index           =   9
             Left            =   1320
-            TabIndex        =   33
+            TabIndex        =   31
             Top             =   720
             Width           =   5415
          End
@@ -597,7 +581,7 @@ Begin VB.Form frmClientes
             Caption         =   "Código:"
             Height          =   255
             Left            =   120
-            TabIndex        =   60
+            TabIndex        =   58
             Top             =   480
             Width           =   615
          End
@@ -605,7 +589,7 @@ Begin VB.Form frmClientes
             Caption         =   "Site:"
             Height          =   255
             Left            =   120
-            TabIndex        =   59
+            TabIndex        =   57
             Top             =   4800
             Width           =   495
          End
@@ -613,7 +597,7 @@ Begin VB.Form frmClientes
             Caption         =   "Email:"
             Height          =   255
             Left            =   120
-            TabIndex        =   58
+            TabIndex        =   56
             Top             =   4440
             Width           =   735
          End
@@ -621,7 +605,7 @@ Begin VB.Form frmClientes
             Caption         =   "Celular:"
             Height          =   255
             Left            =   120
-            TabIndex        =   57
+            TabIndex        =   55
             Top             =   4080
             Width           =   735
          End
@@ -629,7 +613,7 @@ Begin VB.Form frmClientes
             Caption         =   "Telefone:"
             Height          =   255
             Left            =   120
-            TabIndex        =   56
+            TabIndex        =   54
             Top             =   3720
             Width           =   975
          End
@@ -637,7 +621,7 @@ Begin VB.Form frmClientes
             Caption         =   "CPF:"
             Height          =   255
             Left            =   120
-            TabIndex        =   55
+            TabIndex        =   53
             Top             =   3360
             Width           =   1215
          End
@@ -645,7 +629,7 @@ Begin VB.Form frmClientes
             Caption         =   "Identidade:"
             Height          =   255
             Left            =   120
-            TabIndex        =   54
+            TabIndex        =   52
             Top             =   3000
             Width           =   855
          End
@@ -653,7 +637,7 @@ Begin VB.Form frmClientes
             Caption         =   "Estado:"
             Height          =   255
             Left            =   120
-            TabIndex        =   53
+            TabIndex        =   51
             Top             =   2640
             Width           =   735
          End
@@ -661,7 +645,7 @@ Begin VB.Form frmClientes
             Caption         =   "Cidade:"
             Height          =   255
             Left            =   120
-            TabIndex        =   52
+            TabIndex        =   50
             Top             =   2280
             Width           =   1815
          End
@@ -669,7 +653,7 @@ Begin VB.Form frmClientes
             Caption         =   "Bairro:"
             Height          =   255
             Left            =   120
-            TabIndex        =   51
+            TabIndex        =   49
             Top             =   1920
             Width           =   2175
          End
@@ -677,7 +661,7 @@ Begin VB.Form frmClientes
             Caption         =   "CEP:"
             Height          =   255
             Left            =   120
-            TabIndex        =   50
+            TabIndex        =   48
             Top             =   1560
             Width           =   1335
          End
@@ -685,7 +669,7 @@ Begin VB.Form frmClientes
             Caption         =   "Endereço:"
             Height          =   255
             Left            =   120
-            TabIndex        =   49
+            TabIndex        =   47
             Top             =   1200
             Width           =   1335
          End
@@ -693,7 +677,7 @@ Begin VB.Form frmClientes
             Caption         =   "Nome:"
             Height          =   255
             Left            =   120
-            TabIndex        =   48
+            TabIndex        =   46
             Top             =   840
             Width           =   735
          End
@@ -722,7 +706,7 @@ Begin VB.Form frmClientes
          EndProperty
          Height          =   3255
          Left            =   -74880
-         TabIndex        =   46
+         TabIndex        =   44
          Top             =   360
          Width           =   6975
          Begin VB.TextBox txtcadastro 
@@ -818,76 +802,76 @@ Begin VB.Form frmClientes
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel24 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":21FE
-            TabIndex        =   87
+            OleObjectBlob   =   "frmClientes.frx":2E9C
+            TabIndex        =   85
             Top             =   2040
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
             Height          =   255
             Left            =   4920
-            OleObjectBlob   =   "frmClientes.frx":2268
-            TabIndex        =   86
+            OleObjectBlob   =   "frmClientes.frx":2F06
+            TabIndex        =   84
             Top             =   1440
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
             Height          =   255
             Left            =   4080
-            OleObjectBlob   =   "frmClientes.frx":22D6
-            TabIndex        =   85
+            OleObjectBlob   =   "frmClientes.frx":2F74
+            TabIndex        =   83
             Top             =   1440
             Width           =   615
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
             Height          =   255
             Left            =   2040
-            OleObjectBlob   =   "frmClientes.frx":2340
-            TabIndex        =   84
+            OleObjectBlob   =   "frmClientes.frx":2FDE
+            TabIndex        =   82
             Top             =   1440
             Width           =   495
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":23A6
-            TabIndex        =   83
+            OleObjectBlob   =   "frmClientes.frx":3044
+            TabIndex        =   81
             Top             =   1440
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
             Height          =   255
             Left            =   3720
-            OleObjectBlob   =   "frmClientes.frx":240E
-            TabIndex        =   82
+            OleObjectBlob   =   "frmClientes.frx":30AC
+            TabIndex        =   80
             Top             =   840
             Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
             Height          =   255
             Left            =   3720
-            OleObjectBlob   =   "frmClientes.frx":247A
-            TabIndex        =   81
+            OleObjectBlob   =   "frmClientes.frx":3118
+            TabIndex        =   79
             Top             =   240
             Width           =   1575
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":24F2
-            TabIndex        =   80
+            OleObjectBlob   =   "frmClientes.frx":3190
+            TabIndex        =   78
             Top             =   240
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmClientes.frx":255A
-            TabIndex        =   79
+            OleObjectBlob   =   "frmClientes.frx":31F8
+            TabIndex        =   77
             Top             =   840
             Width           =   1215
          End
-         Begin VB.CommandButton cmdCadastro 
+         Begin VB.CommandButton cmdcadastro 
             Caption         =   "&Excluir"
             Height          =   495
             Index           =   2
@@ -896,7 +880,7 @@ Begin VB.Form frmClientes
             Top             =   2640
             Width           =   1215
          End
-         Begin VB.CommandButton cmdCadastro 
+         Begin VB.CommandButton cmdcadastro 
             Caption         =   "&Alterar"
             Height          =   495
             Index           =   1
@@ -905,7 +889,7 @@ Begin VB.Form frmClientes
             Top             =   2640
             Width           =   1215
          End
-         Begin VB.CommandButton cmdCadastro 
+         Begin VB.CommandButton cmdcadastro 
             Caption         =   "&Incluir"
             Height          =   495
             Index           =   0
@@ -915,46 +899,6 @@ Begin VB.Form frmClientes
             Width           =   1215
          End
       End
-   End
-   Begin ZEUS.chameleonButton chamCad 
-      Height          =   615
-      Index           =   8
-      Left            =   165
-      TabIndex        =   30
-      Top             =   7020
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   2
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmClientes.frx":25C4
-      PICN            =   "frmClientes.frx":25E0
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmClientes"
@@ -1032,8 +976,8 @@ On Error GoTo Err
             rsLocal.MoveFirst
             rsLocal.Find "descricao=" & "'" & Pesquisa & "'"
             If Not rsLocal.EOF Then
-                mskCadastro(10).Text = Format(rsLocal.Fields(0), "000000")
-                txtCadastro(23).Text = rsLocal.Fields(1)
+                mskcadastro(10).Text = Format(rsLocal.Fields(0), "000000")
+                txtcadastro(23).Text = rsLocal.Fields(1)
             Else
                 Msgbox "Ramo de Atividade não cadastrado", vbInformation, "Zeus"
             End If
@@ -1081,12 +1025,18 @@ Private Sub Form_Load()
         DesbloqueiaControles
     End If
     FecharClientes
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao chamCad(8), 8, 45 'Salvar
+    carregaImagemBotao chamCad(9), 9, 34 'Sair
 End Sub
 
 Private Sub AbrirClientes()
@@ -1135,20 +1085,20 @@ Private Sub mskCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
 On Error GoTo Err
     If KeyCode = 13 Then
         Dim SqlLocal As String
-        SqlLocal = "Select * from tbAtividades where tbAtividades.codigo = '" & Val(Me.mskCadastro(10)) & "'"
+        SqlLocal = "Select * from tbAtividades where tbAtividades.codigo = '" & Val(Me.mskcadastro(10)) & "'"
         rsLocal.Open SqlLocal, cnBanco, adOpenKeyset, adLockOptimistic
         
         If rsLocal.RecordCount = 0 Then
-            mskCadastro(10).PromptInclude = False
-            mskCadastro(10).Text = Format(mskCadastro(10), "000000") & ""
-            mskCadastro(10).PromptInclude = True
+            mskcadastro(10).PromptInclude = False
+            mskcadastro(10).Text = Format(mskcadastro(10), "000000") & ""
+            mskcadastro(10).PromptInclude = True
             Msgbox "Código não cadastrado"
-            mskCadastro(10).SetFocus
+            mskcadastro(10).SetFocus
         Else
-            mskCadastro(10).PromptInclude = False
-            mskCadastro(10).Text = Format(rsLocal.Fields(0), "000000") & ""
-            mskCadastro(10).PromptInclude = True
-            txtCadastro(23).Text = rsLocal.Fields(1)
+            mskcadastro(10).PromptInclude = False
+            mskcadastro(10).Text = Format(rsLocal.Fields(0), "000000") & ""
+            mskcadastro(10).PromptInclude = True
+            txtcadastro(23).Text = rsLocal.Fields(1)
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -1185,16 +1135,16 @@ End Sub
 Private Sub LimpaControles()
     Dim X As Integer
     DesbloqueiaControles
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).PromptInclude = False
-        mskCadastro(X) = ""
-        mskCadastro(X).PromptInclude = True
+    For X = 0 To mskcadastro.Count - 1
+        mskcadastro(X).PromptInclude = False
+        mskcadastro(X) = ""
+        mskcadastro(X).PromptInclude = True
     Next
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X) = ""
+    For X = 0 To txtcadastro.Count - 1
+        txtcadastro(X) = ""
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X) = ""
+    For X = 0 To cbocadastro.Count - 1
+        cbocadastro(X) = ""
     Next
 
     Grid.Rows = 2
@@ -1240,21 +1190,21 @@ Private Sub LimpaControles()
         
 End Sub
 Private Sub LimpaControleItem()
-    Me.txtCadastro(17).Text = ""
-    Me.txtCadastro(18).Text = ""
-    Me.txtCadastro(19).Text = ""
-    Me.txtCadastro(20).Text = ""
-    Me.txtCadastro(22).Text = ""
-    Me.txtCadastro(24).Text = ""
-    Me.mskCadastro(7).PromptInclude = False
-    Me.mskCadastro(7).Text = ""
-    Me.mskCadastro(7).PromptInclude = True
-    Me.mskCadastro(8).PromptInclude = False
-    Me.mskCadastro(8).Text = ""
-    Me.mskCadastro(8).PromptInclude = True
-    Me.mskCadastro(9).PromptInclude = False
-    Me.mskCadastro(9).Text = ""
-    Me.mskCadastro(9).PromptInclude = True
+    Me.txtcadastro(17).Text = ""
+    Me.txtcadastro(18).Text = ""
+    Me.txtcadastro(19).Text = ""
+    Me.txtcadastro(20).Text = ""
+    Me.txtcadastro(22).Text = ""
+    Me.txtcadastro(24).Text = ""
+    Me.mskcadastro(7).PromptInclude = False
+    Me.mskcadastro(7).Text = ""
+    Me.mskcadastro(7).PromptInclude = True
+    Me.mskcadastro(8).PromptInclude = False
+    Me.mskcadastro(8).Text = ""
+    Me.mskcadastro(8).PromptInclude = True
+    Me.mskcadastro(9).PromptInclude = False
+    Me.mskcadastro(9).Text = ""
+    Me.mskcadastro(9).PromptInclude = True
     'Me.cboCadastro(4).Text = ""
 End Sub
 
@@ -1267,32 +1217,32 @@ Private Sub CompoeControles()
     BloqueiaControles
     If SSTab1.TabEnabled(0) = True Then
         If rsCliForJ.RecordCount > 0 Then
-            txtCadastro(0).Text = Format(rsCliForJ.Fields(0), "000000") & ""
-            mskCadastro(0).PromptInclude = False
-            mskCadastro(0).Text = rsCliForJ.Fields(19) & ""
-            mskCadastro(0).PromptInclude = True
-            mskCadastro(1).PromptInclude = False
-            mskCadastro(1).Text = rsCliForJ.Fields(20) & ""
-            mskCadastro(1).PromptInclude = True
-            mskCadastro(2).PromptInclude = False
-            mskCadastro(2).Text = rsCliForJ.Fields(6) & ""
-            mskCadastro(2).PromptInclude = True
-            mskCadastro(3).PromptInclude = False
-            mskCadastro(3).Text = rsCliForJ.Fields(7) & ""
-            mskCadastro(3).PromptInclude = True
-            mskCadastro(10).PromptInclude = False
-            mskCadastro(10).Text = Format(rsCliForJ.Fields(12), "000000") & ""
-            mskCadastro(10).PromptInclude = True
-            txtCadastro(3).Text = rsCliForJ.Fields(1) & ""
-            txtCadastro(21).Text = rsCliForJ.Fields(2) & ""
-            txtCadastro(4).Text = rsCliForJ.Fields(3) & ""
-            txtCadastro(5).Text = rsCliForJ.Fields(4) & ""
-            txtCadastro(6).Text = rsCliForJ.Fields(8) & ""
-            txtCadastro(7).Text = rsCliForJ.Fields(9) & ""
-            txtCadastro(1).Text = rsCliForJ.Fields(17) & ""
-            txtCadastro(2).Text = rsCliForJ.Fields(18) & ""
-            txtCadastro(23) = rsCliForJ.Fields(22) & ""
-            cboCadastro(0).Text = rsCliForJ.Fields(5) & ""
+            txtcadastro(0).Text = Format(rsCliForJ.Fields(0), "000000") & ""
+            mskcadastro(0).PromptInclude = False
+            mskcadastro(0).Text = rsCliForJ.Fields(19) & ""
+            mskcadastro(0).PromptInclude = True
+            mskcadastro(1).PromptInclude = False
+            mskcadastro(1).Text = rsCliForJ.Fields(20) & ""
+            mskcadastro(1).PromptInclude = True
+            mskcadastro(2).PromptInclude = False
+            mskcadastro(2).Text = rsCliForJ.Fields(6) & ""
+            mskcadastro(2).PromptInclude = True
+            mskcadastro(3).PromptInclude = False
+            mskcadastro(3).Text = rsCliForJ.Fields(7) & ""
+            mskcadastro(3).PromptInclude = True
+            mskcadastro(10).PromptInclude = False
+            mskcadastro(10).Text = Format(rsCliForJ.Fields(12), "000000") & ""
+            mskcadastro(10).PromptInclude = True
+            txtcadastro(3).Text = rsCliForJ.Fields(1) & ""
+            txtcadastro(21).Text = rsCliForJ.Fields(2) & ""
+            txtcadastro(4).Text = rsCliForJ.Fields(3) & ""
+            txtcadastro(5).Text = rsCliForJ.Fields(4) & ""
+            txtcadastro(6).Text = rsCliForJ.Fields(8) & ""
+            txtcadastro(7).Text = rsCliForJ.Fields(9) & ""
+            txtcadastro(1).Text = rsCliForJ.Fields(17) & ""
+            txtcadastro(2).Text = rsCliForJ.Fields(18) & ""
+            txtcadastro(23) = rsCliForJ.Fields(22) & ""
+            cbocadastro(0).Text = rsCliForJ.Fields(5) & ""
             
             If rsCliForJ.Fields(15) = "S" Then
                 Check1.Value = 1
@@ -1346,13 +1296,13 @@ On Error GoTo Err
     Dim CTotal As Currency
     Grid.Rows = Grid.FixedRows ' nº de linha da grade
     Grid.Rows = Grid.FixedRows + 1
-    If txtCadastro(1) <> "" Or txtCadastro(8) <> "" Then
+    If txtcadastro(1) <> "" Or txtcadastro(8) <> "" Then
         If SSTab1.TabEnabled(1) = False Then
-            SqlGrid = "select tbcontatos.nome, tbcontatos.departamento, tbcontatos.cargo, tbcontatos.funcao, tbcontatos.telefone, tbcontatos.fax, tbcontatos.celular, tbcontatos.email, tbcontatos.ramal, tbcontatos.tipolig from tbclifor, tbcontatos where tbcontatos.codclifor = '" & Val(Me.txtCadastro(0)) & "'" & _
-            "and tbclifor.codclifor = '" & Val(Me.txtCadastro(0)) & "'"
+            SqlGrid = "select tbcontatos.nome, tbcontatos.departamento, tbcontatos.cargo, tbcontatos.funcao, tbcontatos.telefone, tbcontatos.fax, tbcontatos.celular, tbcontatos.email, tbcontatos.ramal, tbcontatos.tipolig from tbclifor, tbcontatos where tbcontatos.codclifor = '" & Val(Me.txtcadastro(0)) & "'" & _
+            "and tbclifor.codclifor = '" & Val(Me.txtcadastro(0)) & "'"
         ElseIf SSTab1.TabEnabled(0) = False Then
-            SqlGrid = "select tbcontatos.nome, tbcontatos.departamento, tbcontatos.cargo, tbcontatos.funcao, tbcontatos.telefone, tbcontatos.fax, tbcontatos.celular, tbcontatos.email, tbcontatos.ramal, tbcontatos.tipolig from tbclifor, tbcontatos where tbcontatos.codclifor = '" & Val(Me.txtCadastro(8)) & "'" & _
-            "and tbclifor.codclifor = '" & Val(Me.txtCadastro(8)) & "'"
+            SqlGrid = "select tbcontatos.nome, tbcontatos.departamento, tbcontatos.cargo, tbcontatos.funcao, tbcontatos.telefone, tbcontatos.fax, tbcontatos.celular, tbcontatos.email, tbcontatos.ramal, tbcontatos.tipolig from tbclifor, tbcontatos where tbcontatos.codclifor = '" & Val(Me.txtcadastro(8)) & "'" & _
+            "and tbclifor.codclifor = '" & Val(Me.txtcadastro(8)) & "'"
         End If
     End If
     rsGrid.Open SqlGrid, cnBanco, adOpenKeyset, adLockOptimistic
@@ -1438,31 +1388,31 @@ Private Sub IncluirItem()
         End If
         CTotal = 0
         Me.Grid.ColAlignment(2) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 2) = Me.txtCadastro(17).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 2) = Me.txtcadastro(17).Text
         
         Me.Grid.ColAlignment(3) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 3) = Me.txtCadastro(18).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 3) = Me.txtcadastro(18).Text
         
         Me.Grid.ColAlignment(4) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 4) = Me.txtCadastro(19).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 4) = Me.txtcadastro(19).Text
         
         Me.Grid.ColAlignment(5) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 5) = Me.txtCadastro(20).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 5) = Me.txtcadastro(20).Text
         
         Me.Grid.ColAlignment(9) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 9) = Me.txtCadastro(22).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 9) = Me.txtcadastro(22).Text
                
         Me.Grid.ColAlignment(6) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 6) = RemoveMask(mskCadastro(7))
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 6) = RemoveMask(mskcadastro(7))
         
         Me.Grid.ColAlignment(7) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 7) = RemoveMask(mskCadastro(8))
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 7) = RemoveMask(mskcadastro(8))
                       
         Me.Grid.ColAlignment(8) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 8) = RemoveMask(mskCadastro(9))
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 8) = RemoveMask(mskcadastro(9))
        
         Me.Grid.ColAlignment(10) = flexAlignLeftCenter
-        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 10) = Me.txtCadastro(24).Text
+        Me.Grid.TextMatrix(ByLinhaInclusaoGrid, 10) = Me.txtcadastro(24).Text
         
         Me.Grid.ColAlignment(11) = flexAlignLeftCenter
         LimpaControleItem
@@ -1474,15 +1424,15 @@ End Sub
 
 Private Sub AlterarItem()
     If Me.Grid.RowSel <> 0 Then
-        Me.txtCadastro(17).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 2)
-        Me.txtCadastro(18).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 3)
-        Me.txtCadastro(19).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 4)
-        Me.txtCadastro(20).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 5)
-        Me.txtCadastro(22).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 9)
-        Me.txtCadastro(24).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 10)
-        If Me.Grid.TextMatrix(Me.Grid.RowSel, 6) <> "" Then Me.mskCadastro(7).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 6), "(##)####-####")
-        If Me.Grid.TextMatrix(Me.Grid.RowSel, 7) <> "" Then Me.mskCadastro(8).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 7), "(##)####-####")
-        If Me.Grid.TextMatrix(Me.Grid.RowSel, 8) <> "" Then Me.mskCadastro(9).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 8), "(##)####-####")
+        Me.txtcadastro(17).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 2)
+        Me.txtcadastro(18).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 3)
+        Me.txtcadastro(19).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 4)
+        Me.txtcadastro(20).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 5)
+        Me.txtcadastro(22).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 9)
+        Me.txtcadastro(24).Text = Me.Grid.TextMatrix(Me.Grid.RowSel, 10)
+        If Me.Grid.TextMatrix(Me.Grid.RowSel, 6) <> "" Then Me.mskcadastro(7).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 6), "(##)####-####")
+        If Me.Grid.TextMatrix(Me.Grid.RowSel, 7) <> "" Then Me.mskcadastro(8).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 7), "(##)####-####")
+        If Me.Grid.TextMatrix(Me.Grid.RowSel, 8) <> "" Then Me.mskcadastro(9).Text = Format(Me.Grid.TextMatrix(Me.Grid.RowSel, 8), "(##)####-####")
         ByLinhaInclusaoGrid = Me.Grid.RowSel
     End If
 End Sub
@@ -1534,27 +1484,27 @@ On Error GoTo TrataErro
     Dim rsGCF As New ADODB.Recordset
 10  cnBanco.BeginTrans ' Inicia a transação
     If SSTab1.TabEnabled(0) = True Then
-        If txtCadastro(1).Text <> "" Then
-            SqlM = "Select * from tbclifor where tbclifor.codclifor= " & Val(Me.txtCadastro(0))
+        If txtcadastro(1).Text <> "" Then
+            SqlM = "Select * from tbclifor where tbclifor.codclifor= " & Val(Me.txtcadastro(0))
             rsGCF.Open SqlM, cnBanco, adOpenKeyset, adLockOptimistic
             CodLV = 0
-            If txtCadastro(0).Text = "" Then
+            If txtcadastro(0).Text = "" Then
                 rsGCF.AddNew
                 CodLV = GeraCodigo
                 rsGCF.Fields(0) = CodLV
             End If
         
-            rsGCF.Fields(6) = RemoveMask(mskCadastro(2).ClipText)
-            rsGCF.Fields(7) = RemoveMask(mskCadastro(3).ClipText)
-            rsGCF.Fields(12) = mskCadastro(10)
-            rsGCF.Fields(1) = txtCadastro(3).Text
-            rsGCF.Fields(2) = txtCadastro(21).Text
-            rsGCF.Fields(3) = txtCadastro(4).Text
-            rsGCF.Fields(4) = txtCadastro(5).Text
-            rsGCF.Fields(8) = txtCadastro(6).Text
-            rsGCF.Fields(9) = txtCadastro(7).Text
-            rsGCF.Fields(13) = txtCadastro(2).Text
-            rsGCF.Fields(5) = cboCadastro(0).Text
+            rsGCF.Fields(6) = RemoveMask(mskcadastro(2).ClipText)
+            rsGCF.Fields(7) = RemoveMask(mskcadastro(3).ClipText)
+            rsGCF.Fields(12) = mskcadastro(10)
+            rsGCF.Fields(1) = txtcadastro(3).Text
+            rsGCF.Fields(2) = txtcadastro(21).Text
+            rsGCF.Fields(3) = txtcadastro(4).Text
+            rsGCF.Fields(4) = txtcadastro(5).Text
+            rsGCF.Fields(8) = txtcadastro(6).Text
+            rsGCF.Fields(9) = txtcadastro(7).Text
+            rsGCF.Fields(13) = txtcadastro(2).Text
+            rsGCF.Fields(5) = cbocadastro(0).Text
             rsGCF(11) = 1
             rsGCF(10) = 1
             rsGCF.Fields(15) = "S"
@@ -1565,23 +1515,23 @@ On Error GoTo TrataErro
             Set rsGCF = Nothing
             
             
-            SqlGpj = "Select * from tbjuridica where tbjuridica.codclifor= " & Val(Me.txtCadastro(0))
+            SqlGpj = "Select * from tbjuridica where tbjuridica.codclifor= " & Val(Me.txtcadastro(0))
             rsGpj.Open SqlGpj, cnBanco, adOpenKeyset, adLockOptimistic
 
-            If txtCadastro(0).Text = "" Then
+            If txtcadastro(0).Text = "" Then
                 rsGpj.AddNew
                 rsGpj.Fields(0) = GeraCodigo - 1
             End If
-            rsGpj.Fields(3) = mskCadastro(0).ClipText
-            rsGpj.Fields(4) = mskCadastro(1).ClipText
-            rsGpj.Fields(1) = txtCadastro(1).Text
-            rsGpj.Fields(2) = txtCadastro(2).Text
+            rsGpj.Fields(3) = mskcadastro(0).ClipText
+            rsGpj.Fields(4) = mskcadastro(1).ClipText
+            rsGpj.Fields(1) = txtcadastro(1).Text
+            rsGpj.Fields(2) = txtcadastro(2).Text
             rsGpj.Update
     
-            SqlGrid = "Delete from tbcontatos where tbcontatos.codclifor= " & Val(Me.txtCadastro(0))
+            SqlGrid = "Delete from tbcontatos where tbcontatos.codclifor= " & Val(Me.txtcadastro(0))
             rsGrid.Open SqlGrid, cnBanco
         
-            SqlGrid = "Select * from tbcontatos where tbcontatos.codclifor= " & Val(Me.txtCadastro(0))
+            SqlGrid = "Select * from tbcontatos where tbcontatos.codclifor= " & Val(Me.txtcadastro(0))
             rsGrid.Open SqlGrid, cnBanco, adOpenKeyset, adLockOptimistic
 
             If rsGrid.RecordCount > 1 Then rsGrid.MoveLast
@@ -1591,10 +1541,10 @@ On Error GoTo TrataErro
                     If Me.Grid.TextMatrix(X, 2) <> "" Then
                         Y = Y + 1
                         .AddNew
-                        If txtCadastro(0) = "" Then
+                        If txtcadastro(0) = "" Then
                             .Fields(0) = GeraCodigo - 1
                         Else
-                            .Fields(0) = txtCadastro(0)
+                            .Fields(0) = txtcadastro(0)
                         End If
                         .Fields(1) = Y
                         .Fields(2) = Me.Grid.TextMatrix(X, 2)
@@ -1612,7 +1562,7 @@ On Error GoTo TrataErro
                 Next
             End With
             SSTab1.Tab = 0
-            txtCadastro(1).SetFocus
+            txtcadastro(1).SetFocus
         Else
             Msgbox "Favor Preencher o campo!", vbInformation, "ZEUS"
         End If
@@ -1702,8 +1652,8 @@ On Error GoTo TrataErro
    '     rsGpf.Close
    '     Set rsGpf = Nothing
     'End If
-    If CodLV <> 0 Then txtCadastro(0) = CodLV
-    If CodLV <> 0 Then txtCadastro(8) = CodLV
+    If CodLV <> 0 Then txtcadastro(0) = CodLV
+    If CodLV <> 0 Then txtcadastro(8) = CodLV
     rsGrid.Close
     Set rsGrid = Nothing
     cnBanco.CommitTrans
@@ -1731,13 +1681,13 @@ Private Sub AtualizaListview()
         End If
     Next
     If Status = "novo" Then
-        Set ItemLst = vListViewPrincipal.ListItems.Add(, , Format(txtCadastro(0), "000000"))
-        ItemLst.SubItems(1) = txtCadastro(2).Text
-        ItemLst.SubItems(2) = txtCadastro(3).Text
-        ItemLst.SubItems(3) = txtCadastro(21).Text
-        ItemLst.SubItems(4) = txtCadastro(4).Text
-        ItemLst.SubItems(5) = txtCadastro(5).Text
-        ItemLst.SubItems(6) = cboCadastro(0).Text
+        Set ItemLst = vListViewPrincipal.ListItems.Add(, , Format(txtcadastro(0), "000000"))
+        ItemLst.SubItems(1) = txtcadastro(2).Text
+        ItemLst.SubItems(2) = txtcadastro(3).Text
+        ItemLst.SubItems(3) = txtcadastro(21).Text
+        ItemLst.SubItems(4) = txtcadastro(4).Text
+        ItemLst.SubItems(5) = txtcadastro(5).Text
+        ItemLst.SubItems(6) = cbocadastro(0).Text
         If Check1.Value = 0 Then
             ItemLst.SubItems(7) = ""
             ItemLst.ListSubItems.Item(7).ReportIcon = "EXC"
@@ -1746,12 +1696,12 @@ Private Sub AtualizaListview()
             ItemLst.ListSubItems.Item(7).ReportIcon = "OK"
         End If
     Else
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(1) = txtCadastro(2).Text
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(2) = txtCadastro(3).Text
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(3) = txtCadastro(21).Text
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(4) = txtCadastro(4).Text
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(5) = txtCadastro(5).Text
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(6) = cboCadastro(0).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(1) = txtcadastro(2).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(2) = txtcadastro(3).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(3) = txtcadastro(21).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(4) = txtcadastro(4).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(5) = txtcadastro(5).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(6) = cbocadastro(0).Text
         If Check1.Value = 0 Then
             vListViewPrincipal.SelectedItem.ListSubItems.Item(7) = ""
             vListViewPrincipal.SelectedItem.ListSubItems.Item(7).ReportIcon = "EXC"
@@ -1775,7 +1725,7 @@ End Sub
 
 Private Sub txtCadastro_LostFocus(Index As Integer)
     If Index = 8 Then
-        Me.txtCadastro(1).SetFocus
+        Me.txtcadastro(1).SetFocus
     End If
 End Sub
 
@@ -1826,41 +1776,41 @@ Private Function ValidaCampo()
     '    Me.chkCadastro(0).SetFocus
     '    Exit Function
     'End If
-    If txtCadastro(23).Text = "" Then
+    If txtcadastro(23).Text = "" Then
         Msgbox "Favor informar o campo Código do ramo de atividade!", vbInformation, "Atenção"
-        Me.mskCadastro(10).SetFocus
+        Me.mskcadastro(10).SetFocus
         Exit Function
     End If
     If SSTab1.TabEnabled(0) = True Then
-        If Me.txtCadastro(1) = "" Then
+        If Me.txtcadastro(1) = "" Then
             Msgbox "Favor preencher o campo Razão Social!", vbInformation, "Atenção"
-            Me.txtCadastro(1).SetFocus
+            Me.txtcadastro(1).SetFocus
             Exit Function
-        ElseIf Me.txtCadastro(2) = "" Then
+        ElseIf Me.txtcadastro(2) = "" Then
             Msgbox "Favor preencher o campo Nome Fantasia!", vbInformation, "Atenção"
-            Me.txtCadastro(2).SetFocus
+            Me.txtcadastro(2).SetFocus
             Exit Function
-        ElseIf Me.mskCadastro(2) = "" Then
+        ElseIf Me.mskcadastro(2) = "" Then
             Msgbox "Favor preencher o campo Telefone", vbInformation, "Atenção"
-            Me.mskCadastro(2).SetFocus
+            Me.mskcadastro(2).SetFocus
             Exit Function
-        ElseIf Me.cboCadastro(0) = "" Then
+        ElseIf Me.cbocadastro(0) = "" Then
             Msgbox "Favor preencher o campo Estado", vbInformation, "Atenção"
-            Me.cboCadastro(0).SetFocus
+            Me.cbocadastro(0).SetFocus
             Exit Function
         End If
     ElseIf SSTab1.TabEnabled(0) = False Then
-        If Me.txtCadastro(9) = "" Then
+        If Me.txtcadastro(9) = "" Then
             Msgbox "Favor preencher o campo Nome", vbInformation, "Atenção"
-            Me.txtCadastro(1).SetFocus
+            Me.txtcadastro(1).SetFocus
             Exit Function
-        ElseIf Me.mskCadastro(5) = "" Then
+        ElseIf Me.mskcadastro(5) = "" Then
             Msgbox "Favor preencher o campo Telefone", vbInformation, "Atenção"
-            Me.mskCadastro(2).SetFocus
+            Me.mskcadastro(2).SetFocus
             Exit Function
-        ElseIf Me.cboCadastro(1) = "" Then
+        ElseIf Me.cbocadastro(1) = "" Then
             Msgbox "Favor preencher o campo Estado", vbInformation, "Atenção"
-            Me.cboCadastro(1).SetFocus
+            Me.cbocadastro(1).SetFocus
             Exit Function
         End If
     End If
@@ -1869,17 +1819,17 @@ End Function
 
 Private Function ValidaItem(smensagem)
     Dim X As Byte
-    If txtCadastro(17) = "" Then
+    If txtcadastro(17) = "" Then
         smensagem = "Favor Informar o nome do contato"
-        Me.txtCadastro(17).SetFocus
+        Me.txtcadastro(17).SetFocus
         ValidaItem = False
         Exit Function
     End If
     
     If ByLinhaInclusaoGrid = 0 Then
-        If Not VerificaGrid(txtCadastro(17).Text) Then
+        If Not VerificaGrid(txtcadastro(17).Text) Then
             smensagem = "Contato já digitado!"
-            Me.txtCadastro(17).SetFocus
+            Me.txtcadastro(17).SetFocus
             ValidaItem = False
             Exit Function
         End If
@@ -1903,34 +1853,34 @@ End Function
 Private Function DesbloqueiaControles()
     Dim X As Integer
     
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X).Enabled = True
+    For X = 0 To txtcadastro.Count - 1
+        txtcadastro(X).Enabled = True
     Next
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).Enabled = True
+    For X = 0 To mskcadastro.Count - 1
+        mskcadastro(X).Enabled = True
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X).Enabled = True
+    For X = 0 To cbocadastro.Count - 1
+        cbocadastro(X).Enabled = True
     Next
     For X = 0 To cmdCadastro.Count - 1
         cmdCadastro(X).Enabled = True
     Next
-    txtCadastro(0).Enabled = False
-    txtCadastro(8).Enabled = False
+    txtcadastro(0).Enabled = False
+    txtcadastro(8).Enabled = False
     Grid.Enabled = True
     Grid.ForeColor = &H80000008
 End Function
 
 Private Function BloqueiaControles()
     Dim X As Integer
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X).Enabled = False
+    For X = 0 To txtcadastro.Count - 1
+        txtcadastro(X).Enabled = False
     Next
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).Enabled = False
+    For X = 0 To mskcadastro.Count - 1
+        mskcadastro(X).Enabled = False
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X).Enabled = False
+    For X = 0 To cbocadastro.Count - 1
+        cbocadastro(X).Enabled = False
     Next
     For X = 0 To cmdCadastro.Count - 1
         cmdCadastro(X).Enabled = False
@@ -1941,17 +1891,17 @@ End Function
 
 Private Sub txtCadastro_GotFocus(Index As Integer)
     Dim X As Integer
-    For X = 1 To txtCadastro.Count - 1
-        txtCadastro(X).SelStart = 0
-        txtCadastro(X).SelLength = Len(txtCadastro(X).Text)
+    For X = 1 To txtcadastro.Count - 1
+        txtcadastro(X).SelStart = 0
+        txtcadastro(X).SelLength = Len(txtcadastro(X).Text)
     Next
 End Sub
 
 Private Sub Mskcadastro_GotFocus(Index As Integer)
     Dim X As Integer
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).SelStart = 0
-        mskCadastro(X).SelLength = Len(mskCadastro(X).Text)
+    For X = 0 To mskcadastro.Count - 1
+        mskcadastro(X).SelStart = 0
+        mskcadastro(X).SelLength = Len(mskcadastro(X).Text)
     Next
 End Sub
 

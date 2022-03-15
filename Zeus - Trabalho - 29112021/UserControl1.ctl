@@ -1310,6 +1310,7 @@ Private Function LoadTheme(iTema)
         Case Else
             ID = "BLACK"
     End Select
+    vColorThema(iTema) = UserControl.BackColor
     Set Barra2.Picture = LoadResPicture(101, ID)
     Set BarraLeft.Picture = LoadResPicture(102, ID)
     Set BarraRight.Picture = LoadResPicture(103, ID)

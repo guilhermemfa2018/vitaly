@@ -16,46 +16,67 @@ Begin VB.Form frmMaterial
    ScaleHeight     =   8625
    ScaleWidth      =   9960
    StartUpPosition =   2  'CenterScreen
-   Begin ZEUS.chameleonButton chameleonButton1 
-      Height          =   615
-      Left            =   9240
-      TabIndex        =   33
-      Tag             =   "Importar Fórmula"
-      ToolTipText     =   "Importar Fórmula"
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   11
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+   Begin VB.CommandButton chameleonButton1 
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmMaterial.frx":0CCA
-      PICN            =   "frmMaterial.frx":0CE6
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
+      Height          =   615
+      Left            =   9240
+      Picture         =   "frmMaterial.frx":0CCA
+      Style           =   1  'Graphical
+      TabIndex        =   30
+      Tag             =   "Importar Fórmula"
+      ToolTipText     =   "Importar Fórmula"
+      Top             =   7920
+      Width           =   615
+   End
+   Begin VB.CommandButton chamCad 
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   4
+      Left            =   720
+      Picture         =   "frmMaterial.frx":1CD2B
+      Style           =   1  'Graphical
+      TabIndex        =   29
+      Tag             =   "Sair"
+      ToolTipText     =   "Sair"
+      Top             =   7920
+      Width           =   615
+   End
+   Begin VB.CommandButton chamCad 
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   615
+      Index           =   3
+      Left            =   120
+      Picture         =   "frmMaterial.frx":1D9F5
+      Style           =   1  'Graphical
+      TabIndex        =   28
+      Tag             =   "Salvar dados"
+      ToolTipText     =   "Salvar dados"
+      Top             =   7920
+      Width           =   615
    End
    Begin VB.Frame Frame5 
       Caption         =   "Fórmulas"
@@ -70,14 +91,14 @@ Begin VB.Form frmMaterial
       EndProperty
       Height          =   1095
       Left            =   120
-      TabIndex        =   26
+      TabIndex        =   21
       Top             =   1800
       Width           =   9735
       Begin VB.TextBox txtcadastro 
          Height          =   285
          Index           =   3
          Left            =   8520
-         TabIndex        =   29
+         TabIndex        =   24
          Tag             =   "Constante para cálculo de área de pintura"
          ToolTipText     =   "Constante para cálculo de área de pintura"
          Top             =   480
@@ -87,7 +108,7 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   2
          Left            =   120
-         TabIndex        =   28
+         TabIndex        =   23
          Tag             =   "Fórmula para calculo de peso"
          ToolTipText     =   "Fórmula para calculo de peso"
          Top             =   480
@@ -97,7 +118,7 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   6
          Left            =   4440
-         TabIndex        =   27
+         TabIndex        =   22
          Tag             =   "Fórmula para calculo de área de pintura"
          ToolTipText     =   "Fórmula para calculo de área de pintura"
          Top             =   480
@@ -106,24 +127,24 @@ Begin VB.Form frmMaterial
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   8520
-         OleObjectBlob   =   "frmMaterial.frx":19C0
-         TabIndex        =   30
+         OleObjectBlob   =   "frmMaterial.frx":1E6BF
+         TabIndex        =   25
          Top             =   240
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   4440
-         OleObjectBlob   =   "frmMaterial.frx":1A3A
-         TabIndex        =   31
+         OleObjectBlob   =   "frmMaterial.frx":1E739
+         TabIndex        =   26
          Top             =   240
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmMaterial.frx":1AA8
-         TabIndex        =   32
+         OleObjectBlob   =   "frmMaterial.frx":1E7A7
+         TabIndex        =   27
          Top             =   240
          Width           =   1215
       End
@@ -141,22 +162,85 @@ Begin VB.Form frmMaterial
       EndProperty
       Height          =   4815
       Left            =   120
-      TabIndex        =   8
+      TabIndex        =   6
       Top             =   3000
       Width           =   5535
+      Begin VB.CommandButton chamCad 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   2
+         Left            =   1320
+         Picture         =   "frmMaterial.frx":1E80F
+         Style           =   1  'Graphical
+         TabIndex        =   33
+         Tag             =   "Exclui constante selecionada"
+         ToolTipText     =   "Exclui constante selecionada"
+         Top             =   1680
+         Width           =   615
+      End
+      Begin VB.CommandButton chamCad 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   1
+         Left            =   720
+         Picture         =   "frmMaterial.frx":1F4D9
+         Style           =   1  'Graphical
+         TabIndex        =   32
+         Tag             =   "Editar constante"
+         ToolTipText     =   "Editar constante"
+         Top             =   1680
+         Width           =   615
+      End
+      Begin VB.CommandButton chamCad 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Index           =   0
+         Left            =   120
+         Picture         =   "frmMaterial.frx":201A3
+         Style           =   1  'Graphical
+         TabIndex        =   31
+         Tag             =   "Insere nova constante"
+         ToolTipText     =   "Insere nova constante"
+         Top             =   1680
+         Width           =   615
+      End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
          Height          =   495
          Left            =   2280
-         OleObjectBlob   =   "frmMaterial.frx":1B10
-         TabIndex        =   21
+         OleObjectBlob   =   "frmMaterial.frx":20E6D
+         TabIndex        =   16
          Top             =   1800
          Width           =   3135
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
          Height          =   255
          Left            =   2280
-         OleObjectBlob   =   "frmMaterial.frx":1C0A
-         TabIndex        =   20
+         OleObjectBlob   =   "frmMaterial.frx":20F67
+         TabIndex        =   15
          Top             =   1560
          Width           =   855
       End
@@ -164,7 +248,7 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   5
          Left            =   120
-         TabIndex        =   13
+         TabIndex        =   8
          Tag             =   "Descrição da constante"
          ToolTipText     =   "Descrição da constante"
          Top             =   1080
@@ -174,7 +258,7 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   4
          Left            =   120
-         TabIndex        =   14
+         TabIndex        =   9
          Tag             =   "Constante da fórmula"
          ToolTipText     =   "Constante da fórmula"
          Top             =   480
@@ -183,157 +267,31 @@ Begin VB.Form frmMaterial
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmMaterial.frx":1C78
-         TabIndex        =   19
+         OleObjectBlob   =   "frmMaterial.frx":20FD5
+         TabIndex        =   14
          Top             =   840
          Width           =   1575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmMaterial.frx":1CFA
-         TabIndex        =   18
+         OleObjectBlob   =   "frmMaterial.frx":21057
+         TabIndex        =   13
          Top             =   240
          Width           =   1455
       End
       Begin VB.TextBox Text1 
          Height          =   285
          Left            =   1800
-         TabIndex        =   11
+         TabIndex        =   7
          Top             =   480
          Visible         =   0   'False
          Width           =   1335
       End
-      Begin ZEUS.chameleonButton chamCad 
-         Height          =   615
-         Index           =   2
-         Left            =   1440
-         TabIndex        =   9
-         Tag             =   "Exclui constante selecionada"
-         ToolTipText     =   "Exclui constante selecionada"
-         Top             =   1680
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   11
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmMaterial.frx":1D7E
-         PICN            =   "frmMaterial.frx":1D9A
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-      Begin ZEUS.chameleonButton chamCad 
-         Height          =   615
-         Index           =   1
-         Left            =   840
-         TabIndex        =   10
-         Tag             =   "Editar constante"
-         ToolTipText     =   "Editar constante"
-         Top             =   1680
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   11
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmMaterial.frx":2A74
-         PICN            =   "frmMaterial.frx":2A90
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
-      Begin ZEUS.chameleonButton chamCad 
-         Height          =   615
-         Index           =   0
-         Left            =   240
-         TabIndex        =   12
-         Tag             =   "Insere nova constante"
-         ToolTipText     =   "Insere nova constante"
-         Top             =   1680
-         Width           =   615
-         _ExtentX        =   1085
-         _ExtentY        =   1085
-         BTYPE           =   11
-         TX              =   ""
-         ENAB            =   -1  'True
-         BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         COLTYPE         =   1
-         FOCUSR          =   -1  'True
-         BCOL            =   13160660
-         BCOLO           =   13160660
-         FCOL            =   0
-         FCOLO           =   0
-         MCOL            =   12632256
-         MPTR            =   1
-         MICON           =   "frmMaterial.frx":376A
-         PICN            =   "frmMaterial.frx":3786
-         UMCOL           =   -1  'True
-         SOFT            =   0   'False
-         PICPOS          =   0
-         NGREY           =   0   'False
-         FX              =   0
-         HAND            =   0   'False
-         CHECK           =   0   'False
-         VALUE           =   0   'False
-      End
       Begin MSComctlLib.ListView ListView1 
          Height          =   2295
          Left            =   120
-         TabIndex        =   15
+         TabIndex        =   10
          Top             =   2400
          Width           =   5295
          _ExtentX        =   9340
@@ -364,7 +322,7 @@ Begin VB.Form frmMaterial
       EndProperty
       Height          =   4815
       Left            =   5760
-      TabIndex        =   5
+      TabIndex        =   4
       Top             =   3000
       Width           =   4095
       Begin VB.TextBox txtcadastro 
@@ -372,7 +330,7 @@ Begin VB.Form frmMaterial
          Index           =   7
          Left            =   120
          MultiLine       =   -1  'True
-         TabIndex        =   6
+         TabIndex        =   5
          Tag             =   "Informações Gerais"
          ToolTipText     =   "Informações Gerais"
          Top             =   240
@@ -400,15 +358,15 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   8
          Left            =   120
-         TabIndex        =   25
+         TabIndex        =   20
          Top             =   1080
          Width           =   2775
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmMaterial.frx":4460
-         TabIndex        =   24
+         OleObjectBlob   =   "frmMaterial.frx":210DB
+         TabIndex        =   19
          Top             =   840
          Width           =   1335
       End
@@ -417,15 +375,15 @@ Begin VB.Form frmMaterial
          Height          =   285
          Index           =   9
          Left            =   120
-         TabIndex        =   23
+         TabIndex        =   18
          Top             =   480
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmMaterial.frx":44E0
-         TabIndex        =   22
+         OleObjectBlob   =   "frmMaterial.frx":2115B
+         TabIndex        =   17
          Top             =   240
          Width           =   1095
       End
@@ -453,16 +411,16 @@ Begin VB.Form frmMaterial
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmMaterial.frx":455A
-         TabIndex        =   17
+         OleObjectBlob   =   "frmMaterial.frx":211D5
+         TabIndex        =   12
          Top             =   240
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmMaterial.frx":45CC
-         TabIndex        =   16
+         OleObjectBlob   =   "frmMaterial.frx":21247
+         TabIndex        =   11
          Top             =   240
          Width           =   735
       End
@@ -473,90 +431,6 @@ Begin VB.Form frmMaterial
          Top             =   7185
          Width           =   2355
       End
-   End
-   Begin ZEUS.chameleonButton chamCad 
-      Height          =   615
-      Index           =   4
-      Left            =   720
-      TabIndex        =   4
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   11
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmMaterial.frx":4638
-      PICN            =   "frmMaterial.frx":4654
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
-   End
-   Begin ZEUS.chameleonButton chamCad 
-      Height          =   615
-      Index           =   3
-      Left            =   120
-      TabIndex        =   7
-      Tag             =   "Salvar dados"
-      ToolTipText     =   "Salvar dados"
-      Top             =   7920
-      Width           =   615
-      _ExtentX        =   1085
-      _ExtentY        =   1085
-      BTYPE           =   11
-      TX              =   ""
-      ENAB            =   -1  'True
-      BeginProperty FONT {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      COLTYPE         =   1
-      FOCUSR          =   -1  'True
-      BCOL            =   13160660
-      BCOLO           =   13160660
-      FCOL            =   0
-      FCOLO           =   0
-      MCOL            =   12632256
-      MPTR            =   1
-      MICON           =   "frmMaterial.frx":532E
-      PICN            =   "frmMaterial.frx":534A
-      UMCOL           =   -1  'True
-      SOFT            =   0   'False
-      PICPOS          =   0
-      NGREY           =   0   'False
-      FX              =   0
-      HAND            =   0   'False
-      CHECK           =   0   'False
-      VALUE           =   0   'False
    End
 End
 Attribute VB_Name = "frmMaterial"
@@ -688,12 +562,22 @@ Private Sub Form_Load()
         'DesbloqueiaControles
     End If
     'configControles
+    carregarIconBotao
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
+End Sub
+
+Private Sub carregarIconBotao()
+    carregaImagemBotao cmdImpostoServico(0), 0, 46 'Inserir
+    carregaImagemBotao cmdImpostoServico(1), 1, 32 'Editar
+    carregaImagemBotao cmdImpostoServico(2), 2, 33 'Excluir
+    carregaImagemBotao cmdImpostoServico(3), 3, 45 'Salvar
+    carregaImagemBotao cmdImpostoServico(4), 4, 34 'Sair
+    carregaImagemBotao chameleonButton1, 4, 54 'Importar Fórmula
 End Sub
 
 Private Sub listview_cabecalho()
