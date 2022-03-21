@@ -23,8 +23,7 @@ Begin VB.Form frmBaixaParcialOS
       Picture         =   "frmBaixaParcialOS.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   0
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
+      Tag             =   "Sair"
       Top             =   8760
       Width           =   615
    End
@@ -76,6 +75,7 @@ Begin VB.Form frmBaixaParcialOS
          Height          =   375
          Left            =   2040
          TabIndex        =   7
+         Tag             =   "Número da revisão da Ordem de Serviço"
          Top             =   600
          Width           =   975
       End
@@ -100,7 +100,7 @@ Begin VB.Form frmBaixaParcialOS
          BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
             NumListImages   =   1
             BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmBaixaParcialOS.frx":1A02
+               Picture         =   "frmBaixaParcialOS.frx":19FC
                Key             =   "Linha"
             EndProperty
          EndProperty
@@ -120,13 +120,14 @@ Begin VB.Form frmBaixaParcialOS
          Height          =   405
          Left            =   120
          TabIndex        =   5
+         Tag             =   "Número da Ordem de Serviço"
          Top             =   600
          Width           =   1815
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmBaixaParcialOS.frx":26DC
+         OleObjectBlob   =   "frmBaixaParcialOS.frx":26D6
          TabIndex        =   4
          Top             =   360
          Width           =   615
@@ -169,11 +170,10 @@ Begin VB.Form frmBaixaParcialOS
       Height          =   615
       Index           =   4
       Left            =   120
-      Picture         =   "frmBaixaParcialOS.frx":2746
+      Picture         =   "frmBaixaParcialOS.frx":273A
       Style           =   1  'Graphical
       TabIndex        =   1
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
+      Tag             =   "Salvar"
       Top             =   8760
       Width           =   615
    End
@@ -320,10 +320,10 @@ Private Sub ResultPesq()
 End Sub
 
 Private Sub ConfLVServ()
-    Dim X As Integer, Y As Integer
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        ListView2.ListItems(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        ListView2.ListItems(x).Selected = True
         ListView2.SelectedItem.ListSubItems.Item(3).ReportIcon = "Linha"
     Next
 End Sub
@@ -338,7 +338,7 @@ End Sub
 '----EDITA LISTVIEW DAKI P BAIXO------
 '-------------------------------------
 
-Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
 Dim i As Integer, leftPos As Single 'the left pos of the column
 Dim dx As Single, lvwX As Single  'the x in relation to listview coordinate
 
@@ -346,7 +346,7 @@ If Button = vbLeftButton Then
     If Not ListView2.SelectedItem Is Nothing Then
         ListView2.LabelEdit = lvwManual
         dx = GetLvwDeltaX
-        lvwX = X + dx
+        lvwX = x + dx
         For i = 4 To 4
             leftPos = ListView2.Left + ListView2.ColumnHeaders(i).Left
             If lvwX > leftPos And lvwX < leftPos + ListView2.ColumnHeaders(i).Width Then 'we found the column

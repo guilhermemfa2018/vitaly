@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Begin VB.Form frmPassaParametro 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Parâmetro do filtro"
@@ -12,6 +13,13 @@ Begin VB.Form frmPassaParametro
    ScaleHeight     =   2370
    ScaleWidth      =   4440
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   1680
+      Top             =   1920
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.Frame Frame1 
       Caption         =   "Informe o valor"
       BeginProperty Font 
@@ -29,16 +37,18 @@ Begin VB.Form frmPassaParametro
       Top             =   120
       Width           =   4215
       Begin VB.TextBox Text1 
-         Height          =   315
+         Height          =   345
          Left            =   120
          TabIndex        =   0
+         Tag             =   "Informe o valor do parâmetro"
          Top             =   360
          Width           =   3975
       End
       Begin VB.TextBox Text2 
-         Height          =   375
+         Height          =   345
          Left            =   120
          TabIndex        =   1
+         Tag             =   "Informe o valor do parâmetro"
          Top             =   840
          Visible         =   0   'False
          Width           =   3975
@@ -50,6 +60,7 @@ Begin VB.Form frmPassaParametro
       Picture         =   "frmPassaParametro.frx":0000
       Style           =   1  'Graphical
       TabIndex        =   2
+      Tag             =   "Confirmar"
       Top             =   1680
       Width           =   615
    End

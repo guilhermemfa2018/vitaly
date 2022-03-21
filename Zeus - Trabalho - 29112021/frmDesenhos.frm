@@ -1,24 +1,64 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmDesenhos 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Desenhos"
-   ClientHeight    =   6000
+   ClientHeight    =   6360
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   8040
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmDesenhos.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   6000
+   ScaleHeight     =   6360
    ScaleWidth      =   8040
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   5280
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   39
+      Top             =   5760
+      Visible         =   0   'False
+      Width           =   975
+   End
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2640
+      Top             =   5760
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdDesenho 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   1
       Left            =   720
@@ -27,10 +67,19 @@ Begin VB.Form frmDesenhos
       TabIndex        =   33
       Tag             =   "Sair"
       ToolTipText     =   "Sair"
-      Top             =   5280
+      Top             =   5640
       Width           =   615
    End
    Begin VB.CommandButton cmdDesenho 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   0
       Left            =   120
@@ -39,94 +88,142 @@ Begin VB.Form frmDesenhos
       TabIndex        =   34
       Tag             =   "Salvar"
       ToolTipText     =   "Salvar"
-      Top             =   5280
+      Top             =   5640
       Width           =   615
    End
    Begin TabDlg.SSTab SSTab1 
-      Height          =   4215
+      Height          =   4455
       Left            =   120
       TabIndex        =   8
-      Top             =   960
+      Top             =   1080
       Width           =   7815
       _ExtentX        =   13785
-      _ExtentY        =   7435
+      _ExtentY        =   7858
       _Version        =   393216
       Tabs            =   2
-      Tab             =   1
       TabsPerRow      =   2
       TabHeight       =   520
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       TabCaption(0)   =   "Desenho"
       TabPicture(0)   =   "frmDesenhos.frx":265E
-      Tab(0).ControlEnabled=   0   'False
+      Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame1"
+      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).ControlCount=   1
       TabCaption(1)   =   "Histórico de Revisões"
       TabPicture(1)   =   "frmDesenhos.frx":267A
-      Tab(1).ControlEnabled=   -1  'True
+      Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Frame5"
-      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).ControlCount=   1
       Begin VB.Frame Frame5 
          Caption         =   "Revisões "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   3735
-         Left            =   120
+         Height          =   3975
+         Left            =   -74880
          TabIndex        =   24
          Top             =   360
          Width           =   7575
          Begin VB.CommandButton cmdDesenho 
+            BeginProperty Font 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             Height          =   615
             Index           =   5
             Left            =   1920
             Picture         =   "frmDesenhos.frx":2696
             Style           =   1  'Graphical
             TabIndex        =   35
-            Top             =   840
+            Tag             =   "Excluir"
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdDesenho 
+            BeginProperty Font 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             Height          =   615
             Index           =   4
             Left            =   1320
             Picture         =   "frmDesenhos.frx":3360
             Style           =   1  'Graphical
             TabIndex        =   37
-            Top             =   840
+            Tag             =   "Editar"
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdDesenho 
+            BeginProperty Font 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             Height          =   615
             Index           =   3
             Left            =   720
             Picture         =   "frmDesenhos.frx":402A
             Style           =   1  'Graphical
             TabIndex        =   36
-            Top             =   840
+            Tag             =   "Novo"
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdDesenho 
+            BeginProperty Font 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             Height          =   615
             Index           =   2
             Left            =   120
             Picture         =   "frmDesenhos.frx":4CF4
             Style           =   1  'Graphical
             TabIndex        =   38
-            Top             =   840
+            Tag             =   "Inserir"
+            Top             =   960
             Width           =   615
          End
          Begin MSComctlLib.ListView ListView1 
             Height          =   2055
             Left            =   120
             TabIndex        =   31
-            Top             =   1560
+            Top             =   1680
             Width           =   7335
             _ExtentX        =   12938
             _ExtentY        =   3625
@@ -140,11 +237,20 @@ Begin VB.Form frmDesenhos
             BackColor       =   -2147483624
             BorderStyle     =   1
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             NumItems        =   0
          End
          Begin VB.TextBox txtDesenho 
             BackColor       =   &H80000018&
-            Height          =   975
+            Height          =   1095
             Index           =   8
             Left            =   2640
             MultiLine       =   -1  'True
@@ -162,27 +268,36 @@ Begin VB.Form frmDesenhos
             Width           =   975
          End
          Begin MSComCtl2.DTPicker DTPicker2 
-            Height          =   285
+            Height          =   345
             Left            =   960
             TabIndex        =   28
             Top             =   480
             Width           =   1575
             _ExtentX        =   2778
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
-            Format          =   165150721
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Format          =   166985729
             CurrentDate     =   41463
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   960
-            OleObjectBlob   =   "frmDesenhos.frx":5A2E
+            OleObjectBlob   =   "frmDesenhos.frx":5A28
             TabIndex        =   27
             Top             =   240
             Width           =   615
          End
          Begin VB.TextBox txtDesenho 
-            Height          =   285
+            Height          =   345
             Index           =   7
             Left            =   120
             TabIndex        =   26
@@ -192,13 +307,22 @@ Begin VB.Form frmDesenhos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":5A96
+            OleObjectBlob   =   "frmDesenhos.frx":5A8A
             TabIndex        =   25
             Top             =   240
             Width           =   495
          End
          Begin VB.Label lblStatusRev 
             BackColor       =   &H8000000C&
+            BeginProperty Font 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             Height          =   255
             Left            =   5640
             TabIndex        =   32
@@ -210,22 +334,22 @@ Begin VB.Form frmDesenhos
       Begin VB.Frame Frame1 
          Caption         =   "Dados "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   3735
-         Left            =   -74880
+         Height          =   3975
+         Left            =   120
          TabIndex        =   9
          Top             =   360
          Width           =   7575
          Begin VB.TextBox txtDesenho 
             BeginProperty Font 
-               Name            =   "Arial"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -233,18 +357,17 @@ Begin VB.Form frmDesenhos
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   120
             TabIndex        =   22
             Tag             =   "Nº da FCE"
-            ToolTipText     =   "Nº da FCE"
             Top             =   480
             Width           =   1215
          End
          Begin VB.CommandButton cmdtDesenho 
             Caption         =   "..."
-            Height          =   255
+            Height          =   345
             Index           =   0
             Left            =   1440
             TabIndex        =   21
@@ -253,7 +376,7 @@ Begin VB.Form frmDesenhos
          End
          Begin VB.CommandButton cmdtDesenho 
             Caption         =   "..."
-            Height          =   255
+            Height          =   345
             Index           =   1
             Left            =   7080
             TabIndex        =   20
@@ -261,14 +384,22 @@ Begin VB.Form frmDesenhos
             Width           =   375
          End
          Begin VB.TextBox txtDesenho 
-            Height          =   285
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
             Index           =   4
             Left            =   120
             TabIndex        =   17
             Tag             =   "Desenho"
-            ToolTipText     =   "Desenho"
-            Top             =   1080
-            Width           =   3015
+            Top             =   1200
+            Width           =   4695
          End
          Begin VB.TextBox txtDesenho 
             Height          =   1935
@@ -277,13 +408,12 @@ Begin VB.Form frmDesenhos
             MultiLine       =   -1  'True
             TabIndex        =   13
             Tag             =   "Descrição do desenho"
-            ToolTipText     =   "Descrição do desenho"
-            Top             =   1680
+            Top             =   1920
             Width           =   7335
          End
          Begin VB.TextBox txtDesenho 
             BeginProperty Font 
-               Name            =   "Arial"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -291,37 +421,44 @@ Begin VB.Form frmDesenhos
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   3
             Left            =   2040
             TabIndex        =   11
             Tag             =   "Nº do projeto"
-            ToolTipText     =   "Nº do projeto"
             Top             =   480
             Width           =   4935
          End
          Begin VB.TextBox txtDesenho 
-            Height          =   285
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
             Index           =   5
-            Left            =   3240
+            Left            =   4920
             TabIndex        =   18
             Tag             =   "Revisão do desenho"
-            ToolTipText     =   "Revisão do desenho"
-            Top             =   1080
-            Width           =   615
+            Top             =   1200
+            Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
-            Left            =   3240
-            OleObjectBlob   =   "frmDesenhos.frx":5AFA
+            Left            =   4920
+            OleObjectBlob   =   "frmDesenhos.frx":5AE8
             TabIndex        =   10
-            Top             =   840
-            Width           =   615
+            Top             =   960
+            Width           =   735
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   2040
-            OleObjectBlob   =   "frmDesenhos.frx":5B68
+            OleObjectBlob   =   "frmDesenhos.frx":5B50
             TabIndex        =   12
             Top             =   240
             Width           =   1335
@@ -329,45 +466,53 @@ Begin VB.Form frmDesenhos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":5BD6
+            OleObjectBlob   =   "frmDesenhos.frx":5BB8
             TabIndex        =   14
-            Top             =   1440
+            Top             =   1680
             Width           =   975
          End
          Begin MSComCtl2.DTPicker DTPicker1 
-            Height          =   285
-            Left            =   3960
+            Height          =   345
+            Left            =   5760
             TabIndex        =   15
             Tag             =   "Data de cadastro do desenho"
-            ToolTipText     =   "Data de cadastro do desenho"
-            Top             =   1080
+            Top             =   1200
             Width           =   1695
             _ExtentX        =   2990
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
-            Format          =   165019649
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Format          =   168427521
             CurrentDate     =   41407
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
-            Left            =   3960
-            OleObjectBlob   =   "frmDesenhos.frx":5C48
+            Left            =   5760
+            OleObjectBlob   =   "frmDesenhos.frx":5C24
             TabIndex        =   16
-            Top             =   840
+            Top             =   960
             Width           =   1695
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":5CC2
+            OleObjectBlob   =   "frmDesenhos.frx":5C98
             TabIndex        =   19
-            Top             =   840
+            Top             =   960
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmDesenhos.frx":5D30
+            OleObjectBlob   =   "frmDesenhos.frx":5D00
             TabIndex        =   23
             Top             =   240
             Width           =   615
@@ -377,24 +522,24 @@ Begin VB.Form frmDesenhos
    Begin VB.Frame Frame4 
       Caption         =   "Tipo "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   5520
       TabIndex        =   7
       Top             =   120
       Width           =   2175
       Begin VB.ComboBox cboDesenho 
-         Height          =   315
-         ItemData        =   "frmDesenhos.frx":5D96
+         Height          =   345
+         ItemData        =   "frmDesenhos.frx":5D60
          Left            =   120
-         List            =   "frmDesenhos.frx":5DA3
+         List            =   "frmDesenhos.frx":5D6D
          TabIndex        =   2
          Tag             =   "Tipo de desenho"
          Text            =   "Fabricação"
@@ -406,15 +551,15 @@ Begin VB.Form frmDesenhos
    Begin VB.Frame Frame3 
       Caption         =   "Código do Projeto "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   2160
       TabIndex        =   6
       Top             =   120
@@ -422,7 +567,7 @@ Begin VB.Form frmDesenhos
       Begin VB.TextBox txtDesenho 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
             Weight          =   700
@@ -430,7 +575,7 @@ Begin VB.Form frmDesenhos
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   1
          Left            =   120
          TabIndex        =   1
@@ -442,15 +587,15 @@ Begin VB.Form frmDesenhos
    Begin VB.Frame Frame2 
       Caption         =   "Identificador "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   120
       TabIndex        =   5
       Top             =   120
@@ -458,7 +603,7 @@ Begin VB.Form frmDesenhos
       Begin VB.TextBox txtDesenho 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
             Weight          =   700
@@ -466,7 +611,7 @@ Begin VB.Form frmDesenhos
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
@@ -480,8 +625,8 @@ Begin VB.Form frmDesenhos
       Caption         =   "Status"
       Enabled         =   0   'False
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -491,7 +636,7 @@ Begin VB.Form frmDesenhos
       Height          =   615
       Left            =   6840
       TabIndex        =   4
-      Top             =   5280
+      Top             =   5640
       Width           =   1095
       Begin VB.CheckBox Check1 
          Caption         =   "Ativo"
@@ -569,7 +714,7 @@ Private Sub cmdtDesenho_Click(Index As Integer)
     End Select
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -580,12 +725,13 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture1
     Status = Pesquisa
     listview_cabecalho
     DTPicker1 = Date
@@ -596,7 +742,7 @@ Private Sub Form_Load()
         ResultPesq
     End If
     carregarIconBotao
-    
+    MudaTool
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
@@ -628,34 +774,34 @@ Private Sub listview_cabecalho()
 End Sub
 
 Private Sub LimpaControlesRevisao()
-    Dim X As Integer
-    For X = 7 To 8
-        txtDesenho(X) = ""
+    Dim x As Integer
+    For x = 7 To 8
+        txtDesenho(x) = ""
     Next
     DTPicker2 = Date
 End Sub
 
 Private Sub IncluirRevisao()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     'If ValidaCampo = False Then Exit Sub
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X) = Me.txtDesenho(7) Then
-                ListView1.ListItems.Item(X).Selected = True
-                Me.txtDesenho(7) = ListView1.ListItems.Item(X)
+    y = ListView1.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            If ListView1.ListItems.Item(x) = Me.txtDesenho(7) Then
+                ListView1.ListItems.Item(x).Selected = True
+                Me.txtDesenho(7) = ListView1.ListItems.Item(x)
                 ListView1.SelectedItem.ListSubItems.Item(1) = DTPicker2
                 ListView1.SelectedItem.ListSubItems.Item(2) = txtDesenho(8)
-                Y = ListView1.ListItems.Count
+                y = ListView1.ListItems.Count
                 Exit Sub
             End If
         Next
         Set ItemLst = ListView1.ListItems.Add(, , txtDesenho(7))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     Else
         Set ItemLst = ListView1.ListItems.Add(, , txtDesenho(7))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     End If
     ItemLst.SubItems(1) = DTPicker2
     ItemLst.SubItems(2) = txtDesenho(8)
@@ -667,14 +813,14 @@ Private Sub IncluirRevisao()
 End Sub
 
 Private Sub AlteraRevisao()
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtDesenho(7).Text = ListView1.ListItems.Item(X)
+    Me.txtDesenho(7).Text = ListView1.ListItems.Item(x)
     Me.txtDesenho(8).Text = ListView1.SelectedItem.ListSubItems.Item(2)
     DTPicker2 = ListView1.SelectedItem.ListSubItems.Item(1)
 End Sub
@@ -690,7 +836,7 @@ On Error GoTo Err
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
     
-    Dim Y As Integer
+    Dim y As Integer
 10  cnBanco.BeginTrans
    
     sqlDesenhos = "select * from tbDesenhos as a where a.iddesenho = '" & txtDesenho(0) & "'"
@@ -724,11 +870,11 @@ On Error GoTo Err
     SqlSalvar = "Select * from tbdesenhosrev where codcoligada = '" & vCodcoligada & "'"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-    For X = 1 To ListView1.ListItems.Count
-        ListView1.ListItems.Item(X).Selected = True
+    For x = 1 To ListView1.ListItems.Count
+        ListView1.ListItems.Item(x).Selected = True
         rsSalvar.AddNew
         rsSalvar.Fields(0) = Val(txtDesenho(0).Text)
-        rsSalvar.Fields(1) = ListView1.ListItems.Item(X)
+        rsSalvar.Fields(1) = ListView1.ListItems.Item(x)
         rsSalvar.Fields(2) = ListView1.SelectedItem.ListSubItems.Item(1)
         rsSalvar.Fields(3) = ListView1.SelectedItem.ListSubItems.Item(2)
         rsSalvar.Fields(4) = vCodcoligada 'Codigo da Coligada
@@ -753,16 +899,16 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
-    For X = 4 To txtDesenho.Count - 1
-        txtDesenho(X) = ""
+    Dim x As Integer
+    For x = 4 To txtDesenho.Count - 1
+        txtDesenho(x) = ""
     Next
     cboDesenho = "Fabricação"
     txtDesenho(0) = Format(GeraCodigo, "000000")
 End Sub
 
 Private Sub CompoeControles()
-    Dim X As Integer
+    Dim x As Integer
     txtDesenho(0).Text = Format(rsDesenhos.Fields(0), "000000") 'IDDesenho
     txtDesenho(1).Text = Format(rsDesenhos.Fields(1), "000000") 'Código do Projeto
     cboDesenho.Text = rsDesenhos.Fields(2) 'Tipo
@@ -781,10 +927,10 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    For X = 0 To 5
-        If txtDesenho(X).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtDesenho(X).Tag, Ok, critico, "Atenção"
-            Me.txtDesenho(X).SetFocus
+    For x = 0 To 5
+        If txtDesenho(x).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtDesenho(x).Tag, Ok, critico, "Atenção"
+            Me.txtDesenho(x).SetFocus
             Exit Function
         End If
     Next
@@ -895,23 +1041,23 @@ End Sub
 Private Sub Compoe_Listview()
     'PREENCHE O LISTVIEW DE REVISAO
     Dim ItemLst As ListItem
-    Dim X As Integer
-    X = 0
+    Dim x As Integer
+    x = 0
     While Not rsRevisao.EOF
         Set ItemLst = ListView1.ListItems.Add(, , rsRevisao.Fields(1))
         ItemLst.SubItems(1) = "" & rsRevisao.Fields(2)
         ItemLst.SubItems(2) = "" & rsRevisao.Fields(3)
         rsRevisao.MoveNext
-        X = X + 1
+        x = x + 1
     Wend
 End Sub
 
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
@@ -984,7 +1130,7 @@ End Sub
 
 Private Sub CarregaFCE()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     sqlFCE = "Select a.* from tbprojetos as a inner join tbFCE as b on a.fce = b.fce where a.fce = '" & txtDesenho(2) & "' and b.status = 0 order by a.fce"
     'sqlFCE = "Select * from tbprojetos where fce = '" & txtDesenho(2) & "' order by fce"
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
@@ -1046,7 +1192,7 @@ End Sub
 
 Private Sub CarregaProjeto()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     SqlProjeto = "Select * from tbprojetos where fce = '" & txtDesenho(2) & "' order by fce"
     rsProjeto.Open SqlProjeto, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsProjeto.EOF Then rsProjeto.MoveFirst

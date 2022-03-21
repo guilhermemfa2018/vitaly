@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmPesqger2 
    BorderStyle     =   1  'Fixed Single
@@ -7,6 +8,15 @@ Begin VB.Form frmPesqger2
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   6960
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmPesqger2.frx":0000
    LinkTopic       =   "Form5"
    MaxButton       =   0   'False
@@ -14,38 +24,75 @@ Begin VB.Form frmPesqger2
    ScaleHeight     =   5970
    ScaleWidth      =   6960
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2520
+      Top             =   5400
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton chameleonButton3 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
-      Left            =   6000
+      Left            =   6240
       Picture         =   "frmPesqger2.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   6
+      Tag             =   "Pesquisar"
       Top             =   240
       Width           =   615
    End
    Begin VB.CommandButton chameleonButton2 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Left            =   720
       Picture         =   "frmPesqger2.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   5
+      Tag             =   "Sair"
       Top             =   5280
       Width           =   615
    End
    Begin VB.CommandButton chameleonButton1 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Left            =   120
       Picture         =   "frmPesqger2.frx":265E
       Style           =   1  'Graphical
       TabIndex        =   4
+      Tag             =   "Confirmar"
       Top             =   5280
       Width           =   615
    End
    Begin VB.Frame Frame2 
       Caption         =   "Pesquisa"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -56,22 +103,24 @@ Begin VB.Form frmPesqger2
       Left            =   120
       TabIndex        =   3
       Top             =   120
-      Width           =   5775
+      Width           =   6015
       Begin VB.ComboBox Combo1 
-         Height          =   315
+         Height          =   345
          ItemData        =   "frmPesqger2.frx":3328
          Left            =   120
          List            =   "frmPesqger2.frx":332A
          TabIndex        =   2
+         Tag             =   "Informe o campo de pesquisa"
          Top             =   240
          Width           =   1695
       End
       Begin VB.TextBox Text1 
-         Height          =   285
+         Height          =   345
          Left            =   2040
          TabIndex        =   0
+         Tag             =   "Digite a string a ser perquisar"
          Top             =   240
-         Width           =   3615
+         Width           =   3855
       End
    End
    Begin MSComctlLib.ListView ListView1 
@@ -93,6 +142,15 @@ Begin VB.Form frmPesqger2
       BackColor       =   -2147483624
       BorderStyle     =   1
       Appearance      =   1
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       NumItems        =   0
    End
 End
@@ -248,9 +306,9 @@ Private Sub carregarIconBotao()
 End Sub
 
 Private Sub Pesquisar(Optional Column As ColumnHeader = Nothing)
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count 'Conta as linhas preenchidas do Listview
-    If Y > 0 Then 'Entra nessa condição se o Listview não estiver vazio
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count 'Conta as linhas preenchidas do Listview
+    If y > 0 Then 'Entra nessa condição se o Listview não estiver vazio
         Dim c As ColumnHeader
         Dim numCol As Integer
         numCol = 0
@@ -258,8 +316,8 @@ Private Sub Pesquisar(Optional Column As ColumnHeader = Nothing)
             If Combo1.Text = c Then Exit For
             numCol = numCol + 1
         Next
-        For X = 1 To Y
-            ListView1.ListItems(X).Selected = True 'Seleciona a linha de acordo com o valor de "X"
+        For x = 1 To y
+            ListView1.ListItems(x).Selected = True 'Seleciona a linha de acordo com o valor de "X"
             'SE FOR SELECIONADO A PRIMEIRA COLUNA
             If Combo1.Text = "" Then
                 'Se não for selecionado nada no ComboBox Combo1
@@ -267,17 +325,17 @@ Private Sub Pesquisar(Optional Column As ColumnHeader = Nothing)
                 Exit Sub
             End If
             If numCol = 0 Then
-                If UCase(ListView1.ListItems.Item(X)) Like UCase(Me.Text1.Text & "*") Then
-                    ListView1.ListItems(X).Selected = True
-                    ListView1.ListItems(X).EnsureVisible
+                If UCase(ListView1.ListItems.Item(x)) Like UCase(Me.Text1.Text & "*") Then
+                    ListView1.ListItems(x).Selected = True
+                    ListView1.ListItems(x).EnsureVisible
                     ListView1.SetFocus
                     Exit Sub
                 End If
             'SE FOR SELECIONADO A PARTIR DA SEGUNDA COLUNA
             ElseIf numCol > 0 Then
                 If UCase(ListView1.SelectedItem.ListSubItems.Item(numCol)) Like UCase(Me.Text1.Text & "*") Then
-                    ListView1.ListItems(X).Selected = True
-                    ListView1.ListItems(X).EnsureVisible
+                    ListView1.ListItems(x).Selected = True
+                    ListView1.ListItems(x).EnsureVisible
                     ListView1.SetFocus
                     Exit Sub
                 End If
@@ -287,17 +345,17 @@ Private Sub Pesquisar(Optional Column As ColumnHeader = Nothing)
 End Sub
 
 Private Sub capturaDados()
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
     If apontaLV = 17 Then
-        Pesquisa = ListView1.ListItems.Item(X) 'ListView1.SelectedItem.ListSubItems.Item(1)
+        Pesquisa = ListView1.ListItems.Item(x) 'ListView1.SelectedItem.ListSubItems.Item(1)
     Else
-        Pesquisa = ListView1.ListItems.Item(X)
+        Pesquisa = ListView1.ListItems.Item(x)
     End If
     Unload Me
 End Sub

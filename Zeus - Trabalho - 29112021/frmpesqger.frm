@@ -1,29 +1,65 @@
 VERSION 5.00
-Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFlxGrd.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Begin VB.Form frmpesqger 
-   ClientHeight    =   5985
+   ClientHeight    =   5790
    ClientLeft      =   60
    ClientTop       =   915
-   ClientWidth     =   7080
+   ClientWidth     =   6720
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmpesqger.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   5985
-   ScaleWidth      =   7080
+   ScaleHeight     =   5790
+   ScaleWidth      =   6720
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   3360
+      Top             =   5280
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.Frame Frame1 
       Caption         =   "Filtro da pesquisa "
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   975
       Left            =   240
       TabIndex        =   4
       Top             =   120
       Width           =   4575
       Begin VB.TextBox txtPesquisa 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   375
          Index           =   0
          Left            =   240
          TabIndex        =   0
+         Tag             =   "Digite a string a ser pesquisada"
          Top             =   360
          Width           =   3975
       End
@@ -34,7 +70,8 @@ Begin VB.Form frmpesqger
       Index           =   1
       Left            =   1560
       TabIndex        =   3
-      Top             =   5280
+      Tag             =   "Cancelar"
+      Top             =   5160
       Width           =   1215
    End
    Begin VB.CommandButton cmdPesquisa 
@@ -43,7 +80,8 @@ Begin VB.Form frmpesqger
       Index           =   0
       Left            =   240
       TabIndex        =   2
-      Top             =   5280
+      Tag             =   "COnfirmar"
+      Top             =   5160
       Width           =   1215
    End
    Begin VB.CommandButton cmdPesquisa 
@@ -52,6 +90,7 @@ Begin VB.Form frmpesqger
       Index           =   2
       Left            =   4920
       TabIndex        =   1
+      Tag             =   "Pesquisar"
       Top             =   600
       Width           =   1215
    End
@@ -68,6 +107,15 @@ Begin VB.Form frmpesqger
       WordWrap        =   -1  'True
       ScrollTrack     =   -1  'True
       SelectionMode   =   1
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
    End
 End
 Attribute VB_Name = "frmpesqger"
@@ -146,7 +194,7 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub compoe_Grid()
-    Dim X As Integer
+    Dim x As Integer
     Dim sql As String
     sql = Sqlp
     rsTabela.Open sql, cnBanco, adOpenKeyset, adLockReadOnly
@@ -180,13 +228,13 @@ Private Sub compoe_Grid()
         
         If rsTabela.RecordCount > 0 Then
             Grid.Rows = Grid.Rows + rsTabela.RecordCount
-            X = 0
+            x = 0
             Do While Not rsTabela.EOF
-                Grid.TextMatrix(X + 1, 1) = rsTabela.Fields(campo) ' ID
-                Grid.TextMatrix(X + 1, 2) = rsTabela.Fields(Campo1) 'Código do Produto
-                Grid.TextMatrix(X + 1, 3) = rsTabela.Fields(campo2) 'Descrição
+                Grid.TextMatrix(x + 1, 1) = rsTabela.Fields(campo) ' ID
+                Grid.TextMatrix(x + 1, 2) = rsTabela.Fields(Campo1) 'Código do Produto
+                Grid.TextMatrix(x + 1, 3) = rsTabela.Fields(campo2) 'Descrição
                 rsTabela.MoveNext
-                X = X + 1
+                x = x + 1
             Loop
         End If
     'USADO EM TODA PESQUISA DE MATRIZ
@@ -214,15 +262,15 @@ Private Sub compoe_Grid()
     
         If rsTabela.RecordCount > 0 Then
             Grid.Rows = Grid.Rows + rsTabela.RecordCount
-            X = 0
+            x = 0
             Do While Not rsTabela.EOF
-                Grid.TextMatrix(X + 1, 1) = Format(rsTabela.Fields(campo), "000000") 'rsTab.Fields(0)
-                Grid.TextMatrix(X + 1, 2) = rsTabela.Fields(Campo1)
-                Grid.TextMatrix(X + 1, 3) = rsTabela.Fields(campo2)
-                Grid.TextMatrix(X + 1, 4) = rsTabela.Fields(campo3)
-                Grid.TextMatrix(X + 1, 5) = rsTabela.Fields(Campo4)
+                Grid.TextMatrix(x + 1, 1) = Format(rsTabela.Fields(campo), "000000") 'rsTab.Fields(0)
+                Grid.TextMatrix(x + 1, 2) = rsTabela.Fields(Campo1)
+                Grid.TextMatrix(x + 1, 3) = rsTabela.Fields(campo2)
+                Grid.TextMatrix(x + 1, 4) = rsTabela.Fields(campo3)
+                Grid.TextMatrix(x + 1, 5) = rsTabela.Fields(Campo4)
                 rsTabela.MoveNext
-                X = X + 1
+                x = x + 1
             Loop
         End If
     
@@ -258,15 +306,15 @@ Private Sub compoe_Grid()
         
         If rsTabela.RecordCount > 0 Then
             Grid.Rows = Grid.Rows + rsTabela.RecordCount
-            X = 0
+            x = 0
             Do While Not rsTabela.EOF
-                Grid.TextMatrix(X + 1, 1) = rsTabela.Fields(campo)
-                Grid.TextMatrix(X + 1, 2) = rsTabela.Fields(Campo1)
-                Grid.TextMatrix(X + 1, 3) = rsTabela.Fields(campo2)
-                Grid.TextMatrix(X + 1, 4) = rsTabela.Fields(campo3)
-                Grid.TextMatrix(X + 1, 5) = rsTabela.Fields(Campo4)
+                Grid.TextMatrix(x + 1, 1) = rsTabela.Fields(campo)
+                Grid.TextMatrix(x + 1, 2) = rsTabela.Fields(Campo1)
+                Grid.TextMatrix(x + 1, 3) = rsTabela.Fields(campo2)
+                Grid.TextMatrix(x + 1, 4) = rsTabela.Fields(campo3)
+                Grid.TextMatrix(x + 1, 5) = rsTabela.Fields(Campo4)
                 rsTabela.MoveNext
-                X = X + 1
+                x = x + 1
             Loop
         End If
     'USADO EM TODA CONSULTA GENERICA
@@ -290,16 +338,16 @@ Private Sub compoe_Grid()
         
         If rsTabela.RecordCount > 0 Then
             Grid.Rows = Grid.Rows + rsTabela.RecordCount
-            X = 0
+            x = 0
             Do While Not rsTabela.EOF
                 If procnom <> "codorc" And procnom <> "nomecolaborador" And procnom <> "desenho" And procnom <> "nomefantasia" Then
-                    Grid.TextMatrix(X + 1, 1) = Format(rsTabela.Fields(Campo1), "000000") 'rsTab.Fields(0)
+                    Grid.TextMatrix(x + 1, 1) = Format(rsTabela.Fields(Campo1), "000000") 'rsTab.Fields(0)
                 Else
-                    Grid.TextMatrix(X + 1, 1) = rsTabela.Fields(Campo1) 'rsTab.Fields(0)
+                    Grid.TextMatrix(x + 1, 1) = rsTabela.Fields(Campo1) 'rsTab.Fields(0)
                 End If
-                If Not IsNull(rsTabela.Fields(campo)) Then Grid.TextMatrix(X + 1, 2) = rsTabela.Fields(campo) Else Grid.TextMatrix(X + 1, 2) = "-"
+                If Not IsNull(rsTabela.Fields(campo)) Then Grid.TextMatrix(x + 1, 2) = rsTabela.Fields(campo) Else Grid.TextMatrix(x + 1, 2) = "-"
                 rsTabela.MoveNext
-                X = X + 1
+                x = x + 1
             Loop
         End If
     End If

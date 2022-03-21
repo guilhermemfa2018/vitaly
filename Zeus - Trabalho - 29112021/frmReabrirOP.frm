@@ -1,6 +1,7 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{6E41052A-1C6B-4B1D-BE99-3928E843A6D8}#1.0#0"; "aicalphaimage.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmReabrirOP 
    BorderStyle     =   1  'Fixed Single
@@ -26,6 +27,13 @@ Begin VB.Form frmReabrirOP
    MinButton       =   0   'False
    ScaleHeight     =   6105
    ScaleWidth      =   12015
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   3000
+      Top             =   5520
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCD 
       Height          =   615
       Index           =   1
@@ -34,7 +42,6 @@ Begin VB.Form frmReabrirOP
       Style           =   1  'Graphical
       TabIndex        =   42
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   5400
       Width           =   615
    End
@@ -47,7 +54,6 @@ Begin VB.Form frmReabrirOP
       Style           =   1  'Graphical
       TabIndex        =   43
       Tag             =   "Reabrir Operação"
-      ToolTipText     =   "Reabrir Operação"
       Top             =   5400
       Width           =   615
    End
@@ -73,6 +79,7 @@ Begin VB.Form frmReabrirOP
          Left            =   120
          List            =   "frmReabrirOP.frx":2665
          TabIndex        =   10
+         Tag             =   "Informe a justificativa para a reabertura da Operação"
          Top             =   360
          Width           =   6615
       End
@@ -95,23 +102,21 @@ Begin VB.Form frmReabrirOP
       Width           =   4815
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   12
          Left            =   2760
          TabIndex        =   15
          Tag             =   "Baixas indevidas realizadas em qualquer Centro de Custo"
-         ToolTipText     =   "Baixas indevidas realizadas em qualquer Centro de Custo"
          Top             =   2880
          Width           =   1935
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   11
          Left            =   2760
          TabIndex        =   14
          Tag             =   "Baixas indevidas realizadas no PRÓPRIO Centro de Custo"
-         ToolTipText     =   "Baixas indevidas realizadas no PRÓPRIO Centro de Custo"
          Top             =   2280
          Width           =   1935
       End
@@ -136,6 +141,7 @@ Begin VB.Form frmReabrirOP
          Left            =   120
          OleObjectBlob   =   "frmReabrirOP.frx":278B
          TabIndex        =   35
+         Tag             =   "Centro de Custo do Colaborador"
          Top             =   3720
          Width           =   4575
       End
@@ -149,19 +155,21 @@ Begin VB.Form frmReabrirOP
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   10
          Left            =   2760
          TabIndex        =   13
+         Tag             =   "Horário que ocorreu a baixa"
          Top             =   1680
          Width           =   1935
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   9
          Left            =   2760
          TabIndex        =   11
+         Tag             =   "Semana"
          Top             =   480
          Width           =   1935
       End
@@ -209,18 +217,19 @@ Begin VB.Form frmReabrirOP
          Width           =   1215
       End
       Begin MSComCtl2.DTPicker DTPicker1 
-         Height          =   330
+         Height          =   345
          Left            =   2760
          TabIndex        =   12
+         Tag             =   "Data da baixa"
          Top             =   1080
          Width           =   1935
          _ExtentX        =   3413
-         _ExtentY        =   582
+         _ExtentY        =   609
          _Version        =   393216
          Enabled         =   0   'False
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   169082881
+         Format          =   169869313
          CurrentDate     =   41967
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
@@ -258,10 +267,11 @@ Begin VB.Form frmReabrirOP
       Width           =   3375
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   2
          Left            =   1680
          TabIndex        =   2
+         Tag             =   "Tempo apropriado"
          Top             =   480
          Width           =   1575
       End
@@ -275,10 +285,11 @@ Begin VB.Form frmReabrirOP
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   1
          Left            =   120
          TabIndex        =   1
+         Tag             =   "Tempo orçado"
          Top             =   480
          Width           =   1455
       End
@@ -312,6 +323,7 @@ Begin VB.Form frmReabrirOP
          Left            =   120
          OleObjectBlob   =   "frmReabrirOP.frx":2A8D
          TabIndex        =   34
+         Tag             =   "Status da Operação"
          Top             =   360
          Width           =   4575
       End
@@ -334,10 +346,11 @@ Begin VB.Form frmReabrirOP
       Width           =   6855
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   375
+         Height          =   345
          Index           =   13
          Left            =   1440
          TabIndex        =   4
+         Tag             =   "Revisão"
          Top             =   480
          Width           =   735
       End
@@ -351,10 +364,11 @@ Begin VB.Form frmReabrirOP
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   6
          Left            =   5160
          TabIndex        =   7
+         Tag             =   "Semana programada"
          Top             =   480
          Width           =   1575
       End
@@ -365,6 +379,7 @@ Begin VB.Form frmReabrirOP
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   9
+         Tag             =   "Observações"
          Top             =   1920
          Width           =   6615
       End
@@ -386,37 +401,41 @@ Begin VB.Form frmReabrirOP
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   375
+         Height          =   345
          Index           =   7
          Left            =   120
          TabIndex        =   8
+         Tag             =   "Nome da Operação"
          Top             =   1200
          Width           =   6615
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   375
+         Height          =   345
          Index           =   5
          Left            =   3840
          TabIndex        =   6
+         Tag             =   "Nº da Operação da OS"
          Top             =   480
          Width           =   1215
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   375
+         Height          =   345
          Index           =   4
          Left            =   2280
          TabIndex        =   5
+         Tag             =   "Nº da programação da OS"
          Top             =   480
          Width           =   1455
       End
       Begin VB.TextBox txtReabrirOP 
          Enabled         =   0   'False
-         Height          =   375
+         Height          =   345
          Index           =   3
          Left            =   120
          TabIndex        =   3
+         Tag             =   "Nº da OS"
          Top             =   480
          Width           =   1215
       End
@@ -488,10 +507,11 @@ Begin VB.Form frmReabrirOP
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   375
+         Height          =   405
          Index           =   0
          Left            =   120
          TabIndex        =   0
+         Tag             =   "Informe o Código de Barras da Operação"
          Top             =   360
          Width           =   3135
       End

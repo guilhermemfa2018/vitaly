@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmFiltro 
    BorderStyle     =   1  'Fixed Single
@@ -23,6 +24,13 @@ Begin VB.Form frmFiltro
    ScaleHeight     =   6810
    ScaleWidth      =   7530
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2760
+      Top             =   6240
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdFiltro 
       Height          =   615
       Index           =   1
@@ -31,7 +39,6 @@ Begin VB.Form frmFiltro
       Style           =   1  'Graphical
       TabIndex        =   22
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   6120
       Width           =   615
    End
@@ -42,8 +49,7 @@ Begin VB.Form frmFiltro
       Picture         =   "frmFiltro.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   23
-      Tag             =   "Sair"
-      ToolTipText     =   "Sair"
+      Tag             =   "Executar filtro selecionado"
       Top             =   6120
       Width           =   615
    End
@@ -52,6 +58,7 @@ Begin VB.Form frmFiltro
       Height          =   495
       Left            =   2640
       TabIndex        =   21
+      Tag             =   "Visualiza a query padrão "
       Top             =   4080
       Width           =   2415
    End
@@ -70,6 +77,7 @@ Begin VB.Form frmFiltro
       Height          =   495
       Left            =   6360
       TabIndex        =   19
+      Tag             =   "Exclui o filtro selecionado"
       Top             =   4080
       Width           =   1095
    End
@@ -141,6 +149,7 @@ Begin VB.Form frmFiltro
       Height          =   495
       Left            =   5160
       TabIndex        =   5
+      Tag             =   "Cria um novo filtro"
       Top             =   4080
       Width           =   1095
    End
@@ -164,6 +173,7 @@ Begin VB.Form frmFiltro
          Height          =   375
          Left            =   720
          TabIndex        =   4
+         Tag             =   "Nº máximo de linhas que serão exibidas"
          Top             =   360
          Width           =   855
       End
@@ -210,7 +220,6 @@ Begin VB.Form frmFiltro
          List            =   "frmFiltro.frx":2660
          TabIndex        =   1
          Tag             =   "Lista de opções do filtro"
-         ToolTipText     =   "Lista de opções do filtro"
          Top             =   360
          Width           =   7095
       End
@@ -714,7 +723,7 @@ End Sub
 Private Sub SeparaDados(ByVal stringParaConsulta As String)
 On Error GoTo Err
     Dim vPoints(7, 1) As String
-    Dim K As Integer, Y As Integer, vInicio As Integer, vFim As Integer
+    Dim K As Integer, y As Integer, vInicio As Integer, vFim As Integer
     Dim ondeProdurar As String
     Dim oqueProcurar As String
     Dim vPosicao As Integer
@@ -740,7 +749,7 @@ On Error GoTo Err
         ondebuscar = stringParaConsulta
         oquebuscar = vPoints(K, 0)
         If vPoints(K, 1) > 1 Then
-            For Y = 1 To vPoints(K, 1)
+            For y = 1 To vPoints(K, 1)
                 vPosicao = InStr(vPosicao, ondebuscar, oquebuscar) + 1
             Next
             vPoints(K, 1) = vPosicao - 1
@@ -750,13 +759,13 @@ On Error GoTo Err
         End If
         If K = 5 Then vPoints(K, 1) = 10000
     Next
-    Y = 0
+    y = 0
     For K = 0 To 5
         vInicio = vPoints(K, 1)
         If vPoints(K + 1, 1) > 0 Then vFim = vPoints(K + 1, 1) - 1
         If vFim = -1 Then vFim = 10000
-        Label(Y).Caption = Mid$(ondebuscar, vInicio, vFim - vInicio)
-        Y = Y + 1
+        Label(y).Caption = Mid$(ondebuscar, vInicio, vFim - vInicio)
+        y = y + 1
     Next
     Exit Sub
 Err:
@@ -833,11 +842,11 @@ End Sub
 
 Private Function Executar(vSql As String)
 On Error GoTo Err
-    Dim Y As Integer, X As Integer
-    Y = ListView2.ListItems.Count
-    If Y = 0 Then Exit Function
-    For X = 1 To Y
-        If ListView2.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView2.ListItems.Count
+    If y = 0 Then Exit Function
+    For x = 1 To y
+        If ListView2.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
@@ -1004,7 +1013,7 @@ End Sub
 '----------------------------------------------------
 '----EDITA LISTVIEW DAKI P BAIXO------
 '-------------------------------------
-Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
     Dim i As Integer, leftPos As Single 'the left pos of the column
     Dim dx As Single, lvwX As Single  'the x in relation to listview coordinate
     'ENTRA ABAIXO SOMENTE SE ESTIVER NO MODULO DE SERVICOS
@@ -1012,7 +1021,7 @@ Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, X As Single, 
         If Not ListView2.SelectedItem Is Nothing Then
             ListView2.LabelEdit = lvwManual
             dx = GetLvwDeltaX
-            lvwX = X + dx
+            lvwX = x + dx
             'Função da coluna que altera o status do requesito (possui/não possui)
             For i = 4 To 4
                 leftPos = ListView2.Left + ListView2.ColumnHeaders(i).Left
@@ -1116,11 +1125,11 @@ End Function
 
 Private Sub AlteraLVFiltro(coluna As Integer)
 '    On Error GoTo Err
-    Dim Y As Integer, X As Integer
-    Y = ListView2.ListItems.Count
+    Dim y As Integer, x As Integer
+    y = ListView2.ListItems.Count
     
-    For X = 1 To Y
-        If ListView2.ListItems.Item(X).Selected = True Then
+    For x = 1 To y
+        If ListView2.ListItems.Item(x).Selected = True Then
             If ListView2.SelectedItem.ListSubItems.Item(3) = "individual" Then
                 ListView2.SelectedItem.ListSubItems.Item(3) = "global"
             Else
@@ -1130,11 +1139,11 @@ Private Sub AlteraLVFiltro(coluna As Integer)
         End If
 
     Next
-    varGlobal = ListView2.ListItems.Item(X)
+    varGlobal = ListView2.ListItems.Item(x)
     
     Dim rsAlteraTipo As New ADODB.Recordset
     Dim SqlAlteraTipo As String
-    SqlAlteraTipo = "update tbfiltro set tipofiltro = '" & ListView2.SelectedItem.ListSubItems.Item(3) & "' where nomefiltro = '" & ListView2.ListItems.Item(X) & "' and usuario = '" & ListView2.SelectedItem.ListSubItems.Item(4) & "' and modulo = '" & ListView2.SelectedItem.ListSubItems.Item(5) & "'"
+    SqlAlteraTipo = "update tbfiltro set tipofiltro = '" & ListView2.SelectedItem.ListSubItems.Item(3) & "' where nomefiltro = '" & ListView2.ListItems.Item(x) & "' and usuario = '" & ListView2.SelectedItem.ListSubItems.Item(4) & "' and modulo = '" & ListView2.SelectedItem.ListSubItems.Item(5) & "'"
     rsAlteraTipo.Open SqlAlteraTipo, cnBanco
     
     Exit Sub

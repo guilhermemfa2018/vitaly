@@ -304,7 +304,7 @@ Private Sub cmdCadastro_MouseOver(Index As Integer)
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -319,7 +319,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -330,7 +330,7 @@ Private Sub Form_Load()
         LimpaControles
     ElseIf Status = "editar" Then
         ResultPesq
-        DesbloqueiaControles
+        'DesbloqueiaControles
     End If
     carregarIconBotao
     AplicarSkin Me, Principal.Skin1
@@ -351,7 +351,7 @@ On Error GoTo Err
     If ValidaCampo = False Then Exit Sub
     Dim rsSalvarTransp As New ADODB.Recordset
     Dim sqlSalvarTransp As String
-    Dim Y As Integer
+    Dim y As Integer
 10  cnBanco.BeginTrans
    
     sqlSalvarTransp = "select * from tbTransportadoras where codtransp = '" & txtCadEscolaridade(0) & "'"
@@ -396,16 +396,16 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
-    DesbloqueiaControles
-    For X = 0 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X) = ""
+    Dim x As Integer
+    'DesbloqueiaControles
+    For x = 0 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(x) = ""
     Next
     txtCadEscolaridade(0) = Format(GeraCodigo, "000000")
 End Sub
 
 Private Sub CompoeControles()
-    Dim X As Integer
+    Dim x As Integer
     txtCadEscolaridade(0).Text = Format(rsTransportadoras.Fields(0), "000000")
     txtCadEscolaridade(1).Text = rsTransportadoras.Fields(1)
     If Not IsNull(rsTransportadoras.Fields(2)) Then txtCadEscolaridade(2).Text = rsTransportadoras.Fields(2) Else txtCadEscolaridade(2).Text = "-"
@@ -424,11 +424,11 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    Dim Y As Integer, X As Integer
-    For X = 0 To 7
-        If txtCadEscolaridade(X).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtCadEscolaridade(X).Tag, Ok, critico, "Atenção"
-            Me.txtCadEscolaridade(X).SetFocus
+    Dim y As Integer, x As Integer
+    For x = 0 To 7
+        If txtCadEscolaridade(x).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtCadEscolaridade(x).Tag, Ok, critico, "Atenção"
+            Me.txtCadEscolaridade(x).SetFocus
             Exit Function
         End If
     Next
@@ -440,17 +440,17 @@ Private Function ValidaCampo()
     ValidaCampo = True
 End Function
 
-Private Sub BloqueiaControles()
-    For X = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X).Enabled = False
-    Next
-End Sub
+'Private Sub BloqueiaControles()
+'    For x = 1 To txtCadEscolaridade.Count - 1
+'        txtCadEscolaridade(x).Enabled = False
+'    Next
+'End Sub
 
-Private Sub DesbloqueiaControles()
-    For X = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X).Enabled = True
-    Next
-End Sub
+'Private Sub DesbloqueiaControles()
+'    For x = 1 To txtCadEscolaridade.Count - 1
+'        txtCadEscolaridade(x).Enabled = True
+'    Next
+'End Sub
 
 Private Function GeraCodigo()
 On Error GoTo Err
@@ -514,9 +514,9 @@ End Sub
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next

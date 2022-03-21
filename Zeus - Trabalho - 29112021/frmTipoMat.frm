@@ -20,7 +20,7 @@ Begin VB.Form frmTipoMat
       Left            =   720
       Picture         =   "frmTipoMat.frx":0CCA
       Style           =   1  'Graphical
-      TabIndex        =   9
+      TabIndex        =   7
       Tag             =   "Sair"
       ToolTipText     =   "Sair"
       Top             =   1200
@@ -143,7 +143,7 @@ Private Sub cmdCadastro_MouseOver(Index As Integer)
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -154,7 +154,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -187,7 +187,7 @@ On Error GoTo Err
     If ValidaCampo = False Then Exit Sub
     Dim rsSalvarTipoMat As New ADODB.Recordset
     Dim sqlSalvarTipoMat As String
-    Dim Y As Integer
+    Dim y As Integer
 10  cnBanco.BeginTrans
    
     sqlSalvarTipoMat = "select * from tbTipoMat where codigo = '" & txtCadEscolaridade(0) & "'"
@@ -224,16 +224,16 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
+    Dim x As Integer
     DesbloqueiaControles
-    For X = 0 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X) = ""
+    For x = 0 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(x) = ""
     Next
     txtCadEscolaridade(0) = Format(GeraCodigo, "000000")
 End Sub
 
 Private Sub CompoeControles()
-    Dim X As Integer
+    Dim x As Integer
     txtCadEscolaridade(0).Text = Format(rsTipoMat.Fields(0), "000000")
     txtCadEscolaridade(1).Text = rsTipoMat.Fields(1)
     If rsTipoMat.Fields(2) = "S" Then
@@ -259,14 +259,14 @@ Private Function ValidaCampo()
 End Function
 
 Private Sub BloqueiaControles()
-    For X = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X).Enabled = False
+    For x = 1 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(x).Enabled = False
     Next
 End Sub
 
 Private Sub DesbloqueiaControles()
-    For X = 1 To txtCadEscolaridade.Count - 1
-        txtCadEscolaridade(X).Enabled = True
+    For x = 1 To txtCadEscolaridade.Count - 1
+        txtCadEscolaridade(x).Enabled = True
     Next
 End Sub
 
@@ -345,9 +345,9 @@ End Sub
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next

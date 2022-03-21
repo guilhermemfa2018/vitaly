@@ -161,7 +161,7 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   161546241
+         Format          =   169345025
          CurrentDate     =   41660
       End
       Begin MSComCtl2.DTPicker DTPicker1 
@@ -183,7 +183,7 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   161546241
+         Format          =   169345025
          CurrentDate     =   41660
       End
    End
@@ -636,7 +636,7 @@ On Error GoTo Err
     Dim F As Integer
     
     j = 7
-    X = 1
+    x = 1
     
     With Plan
         .Range("F3").Value = DTPicker1.Value
@@ -1084,7 +1084,7 @@ On Error GoTo Err
     Dim F As Integer
     
     j = 7
-    X = 1
+    x = 1
     
     With Plan
         .Range("F3").Value = DTPicker1.Value
@@ -1504,7 +1504,7 @@ On Error GoTo Err
     Dim F As Integer
     
     j = 7
-    X = 1
+    x = 1
    
     
     With Plan
@@ -2115,7 +2115,7 @@ On Error GoTo Err
 '----------------------------------
     
     j = 7
-    X = 1
+    x = 1
     'Dim valor1 As Double, valor2 As Double, valor3 As Double, valor4 As Double, valor5 As Double, QtdTotCJ As Double
     
     With Plan
@@ -3276,7 +3276,7 @@ Private Sub ExportaExcelEvolucao()
 On Error GoTo Err
     'Dim vTCNC1 As String, vTCNC2 As String, vTGuil As String, vTTPuns As String, vTRosq As String, vTFRadial As String, vTFPrisma As String, vTFMag As String, vTSerraFita As String, vTCorte As String, vTDesemp As String, vTPrensa As String, vTMonC As String, vTMonN As String, vTSolC As String, vTSolN As String, vTAcabC As String, vTAcabN As String, vTCal As String, vTTrac As String
     Dim Plan As Object
-    Dim j As Integer, K As Integer, L As Integer, X As Integer
+    Dim j As Integer, K As Integer, L As Integer, x As Integer
     'INSTANCIA OBJETO EXCEL NA MEMÓRIA
     '**********************************************************************
     Set Plan = CreateObject("excel.application")
@@ -3392,7 +3392,7 @@ On Error GoTo Err
             .Cells(j, 8) = rsEvo.Fields(8) 'Peso Total
              
             If rsEvo.Fields(11) >= 2 Then
-                For X = 9 To vContaCol
+                For x = 9 To vContaCol
                     vPesoRel = 0
                     If Cells(vLin, vCol) = rsEvo.Fields(10) Then
                             If vCol < 32 Then

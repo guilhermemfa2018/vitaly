@@ -18,6 +18,20 @@ Begin VB.Form frmRNCF
    ScaleHeight     =   10905
    ScaleWidth      =   16590
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture8 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   12840
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   87
+      Top             =   10320
+      Visible         =   0   'False
+      Width           =   975
+   End
    Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   13
@@ -184,7 +198,6 @@ Begin VB.Form frmRNCF
       _ExtentX        =   28813
       _ExtentY        =   11245
       _Version        =   393216
-      Tab             =   2
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Calibri"
@@ -197,7 +210,7 @@ Begin VB.Form frmRNCF
       EndProperty
       TabCaption(0)   =   "Identificação"
       TabPicture(0)   =   "frmRNCF.frx":289E
-      Tab(0).ControlEnabled=   0   'False
+      Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame4"
       Tab(0).Control(0).Enabled=   0   'False
       Tab(0).Control(1)=   "Frame5"
@@ -208,28 +221,19 @@ Begin VB.Form frmRNCF
       TabCaption(1)   =   "Identificação Itens"
       TabPicture(1)   =   "frmRNCF.frx":28BA
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "Frame11"
-      Tab(1).Control(0).Enabled=   0   'False
-      Tab(1).Control(1)=   "cmdCadastro(8)"
-      Tab(1).Control(1).Enabled=   0   'False
-      Tab(1).Control(2)=   "cmdCadastro(7)"
-      Tab(1).Control(2).Enabled=   0   'False
-      Tab(1).Control(3)=   "Frame31"
-      Tab(1).Control(3).Enabled=   0   'False
+      Tab(1).Control(0)=   "Frame31"
+      Tab(1).Control(1)=   "cmdCadastro(7)"
+      Tab(1).Control(2)=   "cmdCadastro(8)"
+      Tab(1).Control(3)=   "Frame11"
       Tab(1).ControlCount=   4
       TabCaption(2)   =   "Plano de ação"
       TabPicture(2)   =   "frmRNCF.frx":28D6
-      Tab(2).ControlEnabled=   -1  'True
+      Tab(2).ControlEnabled=   0   'False
       Tab(2).Control(0)=   "Frame7"
-      Tab(2).Control(0).Enabled=   0   'False
       Tab(2).Control(1)=   "Frame8"
-      Tab(2).Control(1).Enabled=   0   'False
       Tab(2).Control(2)=   "Frame10"
-      Tab(2).Control(2).Enabled=   0   'False
       Tab(2).Control(3)=   "Frame12"
-      Tab(2).Control(3).Enabled=   0   'False
       Tab(2).Control(4)=   "Combo2"
-      Tab(2).Control(4).Enabled=   0   'False
       Tab(2).ControlCount=   5
       Begin VB.ComboBox Combo2 
          BeginProperty Font 
@@ -243,7 +247,7 @@ Begin VB.Form frmRNCF
          EndProperty
          Height          =   345
          ItemData        =   "frmRNCF.frx":28F2
-         Left            =   8400
+         Left            =   -66600
          List            =   "frmRNCF.frx":28FF
          TabIndex        =   62
          Tag             =   "Tipos de Ações"
@@ -263,7 +267,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2895
-         Left            =   8280
+         Left            =   -66720
          TabIndex        =   61
          Top             =   3240
          Width           =   7935
@@ -300,7 +304,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2775
-         Left            =   8280
+         Left            =   -66720
          TabIndex        =   60
          Top             =   360
          Width           =   7935
@@ -337,7 +341,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   58
          Top             =   5400
          Width           =   8175
@@ -372,7 +376,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2895
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   51
          Top             =   3240
          Width           =   7935
@@ -409,7 +413,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2775
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   50
          Top             =   360
          Width           =   7935
@@ -485,7 +489,7 @@ Begin VB.Form frmRNCF
                   Strikethrough   =   0   'False
                EndProperty
                CheckBox        =   -1  'True
-               Format          =   167510017
+               Format          =   167051265
                CurrentDate     =   41780
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
@@ -662,7 +666,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   5895
-         Left            =   -66480
+         Left            =   8520
          TabIndex        =   42
          Top             =   360
          Width           =   7575
@@ -711,7 +715,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          Height          =   4935
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   41
          Top             =   360
          Width           =   8175
@@ -980,7 +984,7 @@ Begin VB.Form frmRNCF
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   167510017
+         Format          =   167051265
          CurrentDate     =   41773
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
@@ -1116,7 +1120,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   167510017
+         Format          =   167051265
          CurrentDate     =   41809
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
@@ -1257,7 +1261,7 @@ Begin VB.Form frmRNCF
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   167510017
+         Format          =   167051265
          CurrentDate     =   41366
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
@@ -1295,7 +1299,7 @@ Begin VB.Form frmRNCF
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   167510017
+         Format          =   167051265
          CurrentDate     =   41787
       End
    End
@@ -1428,6 +1432,7 @@ Err:
 End Function
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture8
     DTPicker2 = Date
     DTPicker3 = Date
     DTPicker4 = Date
@@ -1478,10 +1483,10 @@ Private Sub txtRNC_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtRNC(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtRNC.Count - 1
-        txtRNC(X).SelStart = 0
-        txtRNC(X).SelLength = Len(txtRNC(X).Text)
+    Dim x As Integer
+    For x = 1 To txtRNC.Count - 1
+        txtRNC(x).SelStart = 0
+        txtRNC(x).SelLength = Len(txtRNC(x).Text)
     Next
 End Sub
 
@@ -1741,10 +1746,10 @@ On Error GoTo Err
     rsTransf.Open SqlTransf, cnBanco
     
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             'Separa para localizar: codigo da LM e código da sequência da LM
             'Se a variável recebe tiver + de 5 caracteres significa que a sequencia da LM ultrapassou a 999 registros
             'O procedimento para esse caso é diferenciado, por isso utilizasse o IF abaixo
@@ -1760,7 +1765,7 @@ On Error GoTo Err
             rsTransf.Open SqlTransf, cnBanco
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -1961,20 +1966,20 @@ End Sub
 
 Private Sub separaDadosTree(vTxtForm As String)
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
     vNomeA = ""
     vNomeB = ""
     vNomeC = ""
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Contador = 0 Then vNomeA = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then vNomeB = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 2 Then vNomeC = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -1985,13 +1990,13 @@ Private Sub separaDadosTree(vTxtForm As String)
 End Sub
 
 Private Sub desmarcaCC()
-    Dim X As Integer, Y As Integer, j As Integer
-    Y = ListView1.ListItems.Count
-    If Y = 0 Then Exit Sub
+    Dim x As Integer, y As Integer, j As Integer
+    y = ListView1.ListItems.Count
+    If y = 0 Then Exit Sub
     j = ListView1.SelectedItem.Index
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Checked = True Then
-            ListView1.ListItems.Item(X).Checked = False
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Checked = True Then
+            ListView1.ListItems.Item(x).Checked = False
         End If
     Next
     ListView1.ListItems.Item(j).Checked = True
@@ -1999,13 +2004,13 @@ Private Sub desmarcaCC()
 End Sub
 
 Private Sub buscaChecado2(vLV As TreeView)
-    Dim X As Integer, vContador As Integer, vQtdNos As Integer
+    Dim x As Integer, vContador As Integer, vQtdNos As Integer
     vContador = 0
-    X = 0
+    x = 0
     vQtdNos = vLV.Nodes.Count
-    For X = 1 To vQtdNos
-        If vLV.Nodes.Item(X).Checked = True Then
-            transfDesenhosSel X, vLV
+    For x = 1 To vQtdNos
+        If vLV.Nodes.Item(x).Checked = True Then
+            transfDesenhosSel x, vLV
         End If
     Next
 End Sub
@@ -2167,12 +2172,12 @@ On Error GoTo Err
     SqlSalvar = "Select * from tbRNCCausais where idrnc = '" & Val(txtRNC(7)) & "'"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     If ListView2.ListItems.Count > 0 Then
-        For X = 1 To ListView2.ListItems.Count
-            ListView2.ListItems.Item(X).Selected = True
-            If ListView2.ListItems.Item(X).Checked = True Then
+        For x = 1 To ListView2.ListItems.Count
+            ListView2.ListItems.Item(x).Selected = True
+            If ListView2.ListItems.Item(x).Checked = True Then
                 rsSalvar.AddNew
                 rsSalvar.Fields(0) = Val(txtRNC(7))
-                rsSalvar.Fields(1) = Val(ListView2.ListItems.Item(X))
+                rsSalvar.Fields(1) = Val(ListView2.ListItems.Item(x))
                 rsSalvar.Fields(2) = ListView2.SelectedItem.ListSubItems.Item(1)
             End If
         Next
@@ -2194,13 +2199,13 @@ End Function
 
 Private Sub Compoe_CC_RNC()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
-        If ListView1.ListItems.Item(X) = Text2.Text Then
-            ListView1.ListItems.Item(X).Checked = True
-            ListView1.ListItems.Item(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
+        If ListView1.ListItems.Item(x) = Text2.Text Then
+            ListView1.ListItems.Item(x).Checked = True
+            ListView1.ListItems.Item(x).Selected = True
         End If
     Next
     Me.ListView1.Sorted = True
@@ -2215,14 +2220,14 @@ On Error GoTo Err
     SqlCausais = "Select * from tbRNCCausais where idrnc = '" & Val(txtRNC(7)) & "'"
     rsCausais.Open SqlCausais, cnBanco, adOpenKeyset, adLockOptimistic
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     If rsCausais.RecordCount = 0 Then Exit Sub
-    Y = ListView2.ListItems.Count
+    y = ListView2.ListItems.Count
     While Not rsCausais.EOF
-        For X = 1 To Y
-            ListView2.ListItems(X).Selected = True
-            If Val(ListView2.ListItems.Item(X)) = rsCausais.Fields(1) Then
-                ListView2.ListItems.Item(X).Checked = True
+        For x = 1 To y
+            ListView2.ListItems(x).Selected = True
+            If Val(ListView2.ListItems.Item(x)) = rsCausais.Fields(1) Then
+                ListView2.ListItems.Item(x).Checked = True
             End If
         Next
         rsCausais.MoveNext
@@ -2247,10 +2252,10 @@ End Sub
 Private Sub AtualizaListview()
     On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Dim Y As Integer, X As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
@@ -2341,12 +2346,12 @@ Private Function verificaDados(vCF As Integer) 'C - Concluido / F - Fechado
     End If
     
     '6º passo - Verificar se pelo menos 1 causal foi selecionado
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     If ListView2.ListItems.Count > 0 Then
-        Y = ListView2.ListItems.Count
-        For X = 1 To Y
-            ListView2.ListItems.Item(X).Selected = True
-            If ListView2.ListItems.Item(X).Checked = True Then
+        y = ListView2.ListItems.Count
+        For x = 1 To y
+            ListView2.ListItems.Item(x).Selected = True
+            If ListView2.ListItems.Item(x).Checked = True Then
                 verificaDados = True
                 Exit Function
             End If
@@ -2361,7 +2366,7 @@ Private Function verificaDados(vCF As Integer) 'C - Concluido / F - Fechado
 End Function
 
 Private Sub bloqueiaEdicao()
-    Dim X As Integer
+    Dim x As Integer
     ListView1.Enabled = False
     ListView2.Enabled = False
     TreeView1.Enabled = False
@@ -2371,8 +2376,8 @@ Private Sub bloqueiaEdicao()
     cmdCadastro(12).Enabled = False
     cmdCadastro(13).Enabled = True
     
-    For X = 0 To txtRNC.Count - 1
-        txtRNC(X).Enabled = False
+    For x = 0 To txtRNC.Count - 1
+        txtRNC(x).Enabled = False
     Next
     
     DTPicker1.Enabled = False

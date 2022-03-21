@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}#1.0#0"; "msscript.ocx"
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmFO 
@@ -19,6 +20,13 @@ Begin VB.Form frmFO
    ScaleHeight     =   9570
    ScaleWidth      =   15525
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   4560
+      Top             =   9000
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton chamCad 
       Height          =   615
       Index           =   6
@@ -95,9 +103,9 @@ Begin VB.Form frmFO
       TabCaption(0)   =   "FO"
       TabPicture(0)   =   "frmFO.frx":3328
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "Frame2"
+      Tab(0).Control(0)=   "Frame1"
       Tab(0).Control(1)=   "Frame6"
-      Tab(0).Control(2)=   "Frame1"
+      Tab(0).Control(2)=   "Frame2"
       Tab(0).ControlCount=   3
       TabCaption(1)   =   "Imposto / Serviços"
       TabPicture(1)   =   "frmFO.frx":3344
@@ -4146,7 +4154,7 @@ Begin VB.Form frmFO
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   161480705
+            Format          =   168427521
             CurrentDate     =   40449
          End
          Begin MSComCtl2.DTPicker DTPicker1 
@@ -4167,7 +4175,7 @@ Begin VB.Form frmFO
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   161480705
+            Format          =   168427521
             CurrentDate     =   40449
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
@@ -4833,7 +4841,7 @@ Private rsLocal As New ADODB.Recordset
 Private rsMaterial As New ADODB.Recordset
 Private const0(9) As Double
 Private vAr0(9) As Double
-Private X As Integer, Y As Integer
+Private x As Integer, y As Integer
 Private Conta As Integer
 Private Formula As String
 Private ForPint As String
@@ -4850,11 +4858,11 @@ Private Sub chamCad_Click(Index As Integer)
         txtCadastro_KeyDown 2, 13, 1
         LimpaControles
         SomaListview
-        txtcadastro(0).SetFocus
+        txtCadastro(0).SetFocus
     Case 1
         ExcluirItem
         SomaListview
-        txtcadastro(0).SetFocus
+        txtCadastro(0).SetFocus
     Case 2
         AlterarItem1
     Case 3
@@ -4865,7 +4873,7 @@ Private Sub chamCad_Click(Index As Integer)
         Msgbox "Resumo gerado com sucesso"
     Case 4
         GravarDados
-        txtcadastro(0).SetFocus
+        txtCadastro(0).SetFocus
     Case 5
         'ExportaExcel
         Msgbox "Dados exportados com sucesso", vbInformation, "Zeus"
@@ -4878,12 +4886,12 @@ Private Sub chamCad_Click(Index As Integer)
 End Sub
 
 Private Sub Command4_Click()
-    txtcadastro(13) = ""
+    txtCadastro(13) = ""
     ChamaGridCli
 End Sub
 
 Private Sub Command5_Click()
-    txtcadastro(24) = ""
+    txtCadastro(24) = ""
     ChamaGridCont
 End Sub
 
@@ -4895,16 +4903,16 @@ End Sub
 
 Private Sub optCadastro_Click(Index As Integer)
     If optCadastro(0).Value = True Then
-        txtcadastro(2).Enabled = True
-        txtcadastro(8).Enabled = False
-        txtcadastro(8).BackColor = &H80000004
-        txtcadastro(2).BackColor = &H80000005
+        txtCadastro(2).Enabled = True
+        txtCadastro(8).Enabled = False
+        txtCadastro(8).BackColor = &H80000004
+        txtCadastro(2).BackColor = &H80000005
     End If
     If optCadastro(1).Value = True Then
-        txtcadastro(8).Enabled = True
-        txtcadastro(2).Enabled = False
-        txtcadastro(2).BackColor = &H80000004
-        txtcadastro(8).BackColor = &H80000005
+        txtCadastro(8).Enabled = True
+        txtCadastro(2).Enabled = False
+        txtCadastro(2).BackColor = &H80000004
+        txtCadastro(8).BackColor = &H80000005
     End If
 
 '    If optCadastro(2).Value = True Then
@@ -4937,7 +4945,7 @@ Private Sub Option1_Click()
         Label32.Enabled = False
         Label33.Enabled = False
         SkinLabel45.Enabled = False
-        txtcadastro(41).Enabled = False
+        txtCadastro(41).Enabled = False
     End If
 End Sub
 
@@ -4947,7 +4955,7 @@ Private Sub Option2_Click()
         Label32.Enabled = False
         Label33.Enabled = False
         SkinLabel45.Enabled = False
-        txtcadastro(41).Enabled = False
+        txtCadastro(41).Enabled = False
     End If
 End Sub
 
@@ -4957,7 +4965,7 @@ Private Sub Option3_Click()
         Label32.Enabled = True
         Label33.Enabled = True
         SkinLabel45.Enabled = True
-        txtcadastro(41).Enabled = True
+        txtCadastro(41).Enabled = True
     End If
 '    SkinLabel45.SetFocus
 End Sub
@@ -4971,8 +4979,8 @@ Private Sub Form_Load()
     TipoCad = Pesquisa
     If TipoCad = "novo" Then
         LimpaControles
-        txtcadastro(6) = Format(GeraCodigo, "000000") & ""
-        txtcadastro(6).Enabled = False
+        txtCadastro(6) = Format(GeraCodigo, "000000") & ""
+        txtCadastro(6).Enabled = False
         optCadastro_Click (0)
     ElseIf TipoCad = "editar" Then
         ResultPesq
@@ -5058,14 +5066,14 @@ Private Sub LimpaControles()
 End Sub
 
 Private Sub LimpaControles1()
-    Dim X As Integer
-    For X = 0 To 5
-        txtcadastro(X) = ""
+    Dim x As Integer
+    For x = 0 To 5
+        txtCadastro(x) = ""
     Next
-    For X = 7 To 38
-        txtcadastro(X) = ""
+    For x = 7 To 38
+        txtCadastro(x) = ""
     Next
-    txtcadastro(8) = ""
+    txtCadastro(8) = ""
     ListView1.ListItems.Clear
     Formula = ""
     ForPint = ""
@@ -5073,7 +5081,7 @@ Private Sub LimpaControles1()
 End Sub
 
 Private Sub ResultPesq()
-    txtcadastro(6) = varGlobal
+    txtCadastro(6) = varGlobal
 End Sub
 
 Sub lv_cab()
@@ -5241,27 +5249,27 @@ Private Sub inicializa_tabs()
 End Sub
 
 Private Sub DesbloqueiaControles()
-    Dim X As Integer
+    Dim x As Integer
     
-    For X = 0 To 11
-        txtcadastro(X).Enabled = True
+    For x = 0 To 11
+        txtCadastro(x).Enabled = True
     Next
-    txtcadastro(1).Enabled = False
-    txtcadastro(3).Enabled = False
-    txtcadastro(13).Enabled = True
+    txtCadastro(1).Enabled = False
+    txtCadastro(3).Enabled = False
+    txtCadastro(13).Enabled = True
     
     'mskCadastro(1).Enabled = True
     'mskCadastro(2).Enabled = False
-    For X = 39 To 40
-        txtcadastro(X).Enabled = True
+    For x = 39 To 40
+        txtCadastro(x).Enabled = True
     Next
     'cboCadastro.Enabled = True
     
-    txtcadastro(24).Enabled = True
-    txtcadastro(28).Enabled = True
-    txtcadastro(29).Enabled = True
-    txtcadastro(30).Enabled = True
-    txtcadastro(34).Enabled = True
+    txtCadastro(24).Enabled = True
+    txtCadastro(28).Enabled = True
+    txtCadastro(29).Enabled = True
+    txtCadastro(30).Enabled = True
+    txtCadastro(34).Enabled = True
     DTPicker1.Enabled = True
     Check1.Enabled = True
     optCadastro(0).Enabled = True
@@ -5280,43 +5288,43 @@ Private Sub DesbloqueiaControles()
 End Sub
 
 Private Sub BloqueiaControles()
-    txtcadastro(6).Enabled = False
+    txtCadastro(6).Enabled = False
 End Sub
 
 Private Sub txtCadastro_GotFocus(Index As Integer)
     If Index = 4 Then
-        txtcadastro(4).SelStart = 0
-        txtcadastro(4).SelLength = Len(txtcadastro(4).Text)
+        txtCadastro(4).SelStart = 0
+        txtCadastro(4).SelLength = Len(txtCadastro(4).Text)
     End If
-    Dim X As Integer
-    For X = 1 To 11
-        txtcadastro(X).SelStart = 0
-        txtcadastro(X).SelLength = Len(txtcadastro(X).Text)
+    Dim x As Integer
+    For x = 1 To 11
+        txtCadastro(x).SelStart = 0
+        txtCadastro(x).SelLength = Len(txtCadastro(x).Text)
     Next
-    For X = 13 To 40
-        txtcadastro(X).SelStart = 0
-        txtcadastro(X).SelLength = Len(txtcadastro(X).Text)
+    For x = 13 To 40
+        txtCadastro(x).SelStart = 0
+        txtCadastro(x).SelLength = Len(txtCadastro(x).Text)
     Next
 End Sub
 
 Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
     If Index = 0 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-            If txtcadastro(0) = "" Then ChamaGrid
+            If txtCadastro(0) = "" Then ChamaGrid
             CarregaDados (Index)
         End If
     ElseIf Index = 1 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-            txtcadastro(4).SetFocus
+            txtCadastro(4).SetFocus
         End If
     ElseIf Index = 2 Or Index = 34 Or Index = 35 Then
         If KeyCode = &H8 Then
-            txtcadastro(2) = ""
+            txtCadastro(2) = ""
             Formula = ""
             ForPint = ""
             Conta = 0
             CarregaDados (0)
-            txtcadastro(2).SetFocus
+            txtCadastro(2).SetFocus
         End If
         If Conta > 0 Then
             If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
@@ -5342,7 +5350,7 @@ Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
                 Formula = Replace(Formula, "var0(9)", vAr0(9))
                 Formula = Replace(Formula, ",", ".")
                 
-                QuantCJ = Val(txtcadastro(4))
+                QuantCJ = Val(txtCadastro(4))
                 ForPint = Replace(ForPint, "const0(1)", const0(1))
                 ForPint = Replace(ForPint, "const0(2)", const0(2))
                 ForPint = Replace(ForPint, "const0(3)", const0(3))
@@ -5367,7 +5375,7 @@ Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
                 If Index = 34 Or Index = 35 Then IncluirItem2
                 Conta = 0
                 LimpaControles
-                If Index = 2 Then txtcadastro(0).SetFocus
+                If Index = 2 Then txtCadastro(0).SetFocus
             End If
             If KeyCode = &H6D Then
                 If Index = 2 Then CapVar
@@ -5375,19 +5383,19 @@ Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
             End If
         ElseIf Conta = 0 Then
             If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-                vAr0(1) = Val(txtcadastro(Index))
+                vAr0(1) = Val(txtCadastro(Index))
                 Text2.Text = vAr0(1)
-                Y = X
-                X = Len(txtcadastro(Index))
+                y = x
+                x = Len(txtCadastro(Index))
                 Conta = Conta + 1
                 Text2.Text = Formula
                 txtCadastro_KeyDown Index, 13, 1
             End If
             If KeyCode = &H6D Then 'traço
-                vAr0(1) = Val(txtcadastro(Index))
+                vAr0(1) = Val(txtCadastro(Index))
                 Text2.Text = vAr0(1)
-                Y = X
-                X = Len(txtcadastro(Index))
+                y = x
+                x = Len(txtCadastro(Index))
                 Conta = Conta + 1
             End If
         End If
@@ -5395,38 +5403,38 @@ Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
     ElseIf Index = 4 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
             If optCadastro(0).Value = True Then
-                If Val(txtcadastro(0)) <> 0 Then txtcadastro(2).SetFocus
+                If Val(txtCadastro(0)) <> 0 Then txtCadastro(2).SetFocus
             Else
-                txtcadastro(8).SetFocus
+                txtCadastro(8).SetFocus
             End If
         End If
     ElseIf Index = 6 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-            If txtcadastro(6) = "" Or Val(txtcadastro(6)) = 0 Then Exit Sub
+            If txtCadastro(6) = "" Or Val(txtCadastro(6)) = 0 Then Exit Sub
             CarregaFO
-            txtcadastro(6) = Format(txtcadastro(6), "000000")
-            If txtcadastro(13) <> "" Then txtCadastro_KeyDown 13, 13, 13
-            If txtcadastro(24) <> "" Then txtCadastro_KeyDown 24, 13, 24
+            txtCadastro(6) = Format(txtCadastro(6), "000000")
+            If txtCadastro(13) <> "" Then txtCadastro_KeyDown 13, 13, 13
+            If txtCadastro(24) <> "" Then txtCadastro_KeyDown 24, 13, 24
         End If
     ElseIf Index = 7 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-            txtcadastro(0).SetFocus
+            txtCadastro(0).SetFocus
         End If
     ElseIf Index = 8 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
             chamCad_Click (0)
             LimpaControles
-            txtcadastro(0).SetFocus
+            txtCadastro(0).SetFocus
         End If
     ElseIf Index = 9 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
-            If txtcadastro(9) <> "" Then
+            If txtCadastro(9) <> "" Then
                 CarregaTipoMat
             Else
-                txtcadastro(9) = ""
-                txtcadastro(10) = ""
+                txtCadastro(9) = ""
+                txtCadastro(10) = ""
             End If
-            txtcadastro(0).SetFocus
+            txtCadastro(0).SetFocus
         End If
     ElseIf Index = 13 Then
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
@@ -5460,82 +5468,82 @@ End Sub
 
 Private Sub CarregaDados(Index)
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     If Index <> 31 Then
-        If Val(txtcadastro(0)) = 0 Then
-            txtcadastro(1).Enabled = True
-            txtcadastro(2).Enabled = False
-            txtcadastro(3).Enabled = True
+        If Val(txtCadastro(0)) = 0 Then
+            txtCadastro(1).Enabled = True
+            txtCadastro(2).Enabled = False
+            txtCadastro(3).Enabled = True
             Check1.Enabled = False
-            txtcadastro(5).Enabled = False
+            txtCadastro(5).Enabled = False
             optCadastro(1).Value = True
         
-            txtcadastro(3) = "PÇ"
-            txtcadastro(1) = "DIGITE O NOME DO MATERIAL"
-            txtcadastro(2) = "-"
+            txtCadastro(3) = "PÇ"
+            txtCadastro(1) = "DIGITE O NOME DO MATERIAL"
+            txtCadastro(2) = "-"
             Check1.Value = 0
-            txtcadastro(1).SetFocus
-            txtcadastro(1).BackColor = &HC0C0FF
-            txtcadastro(3).BackColor = &HC0C0FF
-            txtcadastro(4).BackColor = &HC0C0FF
-            txtcadastro(8).BackColor = &HC0C0FF
+            txtCadastro(1).SetFocus
+            txtCadastro(1).BackColor = &HC0C0FF
+            txtCadastro(3).BackColor = &HC0C0FF
+            txtCadastro(4).BackColor = &HC0C0FF
+            txtCadastro(8).BackColor = &HC0C0FF
             Text1.FontBold = True
             Text1.Text = "Item não cadastrado"
             
-            If txtcadastro(0) = "000000" Then optCadastro_Click (1)
+            If txtCadastro(0) = "000000" Then optCadastro_Click (1)
             Exit Sub
         Else
-            txtcadastro(1).Enabled = False
-            txtcadastro(2).Enabled = True
-            txtcadastro(1).BackColor = &H80000005
-            txtcadastro(3).BackColor = &H80000005
-            txtcadastro(4).BackColor = &H80000005
-            txtcadastro(8).BackColor = &H80000005
+            txtCadastro(1).Enabled = False
+            txtCadastro(2).Enabled = True
+            txtCadastro(1).BackColor = &H80000005
+            txtCadastro(3).BackColor = &H80000005
+            txtCadastro(4).BackColor = &H80000005
+            txtCadastro(8).BackColor = &H80000005
             Text1.FontBold = False
             If optCadastro(0).Value = True Then optCadastro_Click (0) Else optCadastro_Click (1)
             Check1.Enabled = True
             Check1.Value = 1
-            txtcadastro(5).Enabled = True
+            txtCadastro(5).Enabled = True
         End If
     End If
     
-    If Index = 0 Then SqlM = "Select tbMateriais.codmaterial, tbmateriais.descricao, tbMateriais.formula, tbmateriais.constpint, tbconstantes.valconst, tbmateriais.unidade, tbmateriais.forpint, tbmateriais.observacao from tbMateriais Inner Join tbconstantes on tbMateriais.codmaterial = tbConstantes.codmaterial where tbconstantes.codmaterial= '" & Val(txtcadastro(0)) & "'order by tbconstantes.codigo"
-    If Index = 31 Then SqlM = "Select tbMateriais.codmaterial, tbmateriais.descricao, tbMateriais.formula, tbmateriais.constpint, tbconstantes.valconst, tbmateriais.unidade, tbmateriais.forpint, tbmateriais.observacao from tbMateriais Inner Join tbconstantes on tbMateriais.codmaterial = tbConstantes.codmaterial where tbconstantes.codmaterial= '" & Val(txtcadastro(31)) & "'order by tbconstantes.codigo"
+    If Index = 0 Then SqlM = "Select tbMateriais.codmaterial, tbmateriais.descricao, tbMateriais.formula, tbmateriais.constpint, tbconstantes.valconst, tbmateriais.unidade, tbmateriais.forpint, tbmateriais.observacao from tbMateriais Inner Join tbconstantes on tbMateriais.codmaterial = tbConstantes.codmaterial where tbconstantes.codmaterial= '" & Val(txtCadastro(0)) & "'order by tbconstantes.codigo"
+    If Index = 31 Then SqlM = "Select tbMateriais.codmaterial, tbmateriais.descricao, tbMateriais.formula, tbmateriais.constpint, tbconstantes.valconst, tbmateriais.unidade, tbmateriais.forpint, tbmateriais.observacao from tbMateriais Inner Join tbconstantes on tbMateriais.codmaterial = tbConstantes.codmaterial where tbconstantes.codmaterial= '" & Val(txtCadastro(31)) & "'order by tbconstantes.codigo"
     rsMaterial.Open SqlM, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsMaterial.EOF Then rsMaterial.MoveFirst
     
-    If Index = 0 Then rsMaterial.Find "codmaterial=" & "'" & Val(Me.txtcadastro(0)) & "'"
-    If Index = 31 Then rsMaterial.Find "codmaterial=" & "'" & Val(Me.txtcadastro(31)) & "'"
+    If Index = 0 Then rsMaterial.Find "codmaterial=" & "'" & Val(Me.txtCadastro(0)) & "'"
+    If Index = 31 Then rsMaterial.Find "codmaterial=" & "'" & Val(Me.txtCadastro(31)) & "'"
     
     If rsMaterial.EOF Then
-        If Index = 0 Then txtcadastro(0).Text = Format(txtcadastro(0), "000000") & ""
-        If Index = 31 Then txtcadastro(0).Text = Format(txtcadastro(31), "000000") & ""
+        If Index = 0 Then txtCadastro(0).Text = Format(txtCadastro(0), "000000") & ""
+        If Index = 31 Then txtCadastro(0).Text = Format(txtCadastro(31), "000000") & ""
         Msgbox "Código de material não cadastrado", vbInformation, "Zeus"
     Else
         If Index = 31 Then
-            txtcadastro(31).Text = Format(rsMaterial.Fields(0), "000000") & ""
-            txtcadastro(32).Text = rsMaterial.Fields(1)
+            txtCadastro(31).Text = Format(rsMaterial.Fields(0), "000000") & ""
+            txtCadastro(32).Text = rsMaterial.Fields(1)
             Formula = rsMaterial.Fields(2)
             ForPint = rsMaterial.Fields(6)
             Text4.Text = rsMaterial.Fields(7)
         End If
         
         If Index = 0 Then
-            txtcadastro(0).Text = Format(rsMaterial.Fields(0), "000000") & ""
-            txtcadastro(1).Text = rsMaterial.Fields(1)
+            txtCadastro(0).Text = Format(rsMaterial.Fields(0), "000000") & ""
+            txtCadastro(1).Text = rsMaterial.Fields(1)
             Formula = rsMaterial.Fields(2)
             ForPint = rsMaterial.Fields(6)
-            txtcadastro(3) = rsMaterial(5)
-            txtcadastro(5) = rsMaterial(3)
+            txtCadastro(3) = rsMaterial(5)
+            txtCadastro(5) = rsMaterial(3)
             Text1.Text = rsMaterial.Fields(7)
-            txtcadastro(3).Enabled = False
-            txtcadastro(4) = 1
+            txtCadastro(3).Enabled = False
+            txtCadastro(4) = 1
         End If
-        For X = 1 To rsMaterial.RecordCount
-            const0(X) = rsMaterial.Fields(4)
+        For x = 1 To rsMaterial.RecordCount
+            const0(x) = rsMaterial.Fields(4)
             rsMaterial.MoveNext
         Next
-        If Index = 0 Then txtcadastro(4).SetFocus
+        If Index = 0 Then txtCadastro(4).SetFocus
     End If
     rsMaterial.Close
     Set rsMaterial = Nothing
@@ -5553,19 +5561,19 @@ End Sub
 
 Private Sub CarregaTipoMat()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     Dim rsTipoMat As New ADODB.Recordset
     SqlM = "Select * from tbTipoMat order by tbTipoMat.codigo"
     rsTipoMat.Open SqlM, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsTipoMat.EOF Then rsTipoMat.MoveFirst
-    rsTipoMat.Find "codigo=" & "'" & Val(Me.txtcadastro(9)) & "'"
+    rsTipoMat.Find "codigo=" & "'" & Val(Me.txtCadastro(9)) & "'"
     If rsTipoMat.EOF Then
-        txtcadastro(9).Text = Format(txtcadastro(9), "000000") & ""
+        txtCadastro(9).Text = Format(txtCadastro(9), "000000") & ""
         Msgbox "Tipo de material não cadastrado", vbInformation, "Zeus"
     Else
-        txtcadastro(9).Text = Format(rsTipoMat.Fields(0), "000000") & ""
-        txtcadastro(10).Text = rsTipoMat.Fields(1)
-        txtcadastro(10).Enabled = False
+        txtCadastro(9).Text = Format(rsTipoMat.Fields(0), "000000") & ""
+        txtCadastro(10).Text = rsTipoMat.Fields(1)
+        txtCadastro(10).Enabled = False
     End If
     rsTipoMat.Close
     Set rsTipoMat = Nothing
@@ -5596,7 +5604,7 @@ On Error GoTo Err
     SomaTotal = 0
     SomaPint = 0
     
-    sqlFO = "select * from tbfo where tbfo.codfo = '" & Val(txtcadastro(6)) & "'"
+    sqlFO = "select * from tbfo where tbfo.codfo = '" & Val(txtCadastro(6)) & "'"
     rsFO.Open sqlFO, cnBanco, adOpenKeyset, adLockOptimistic
     If rsFO.RecordCount > 0 Then
         DTPicker1 = Format(rsFO(1), "dd/mm/yyyy")
@@ -5609,13 +5617,13 @@ On Error GoTo Err
             Label32 = Label32 & "Arquivado"
         End If
         If rsFO.Fields(9) <> "Null" Then DTPicker2 = Format(rsFO(9), "dd/mm/yyyy")
-        txtcadastro(13) = Format(rsFO(5), "000000")
-        txtcadastro(24) = Format(rsFO(6), "000000")
-        txtcadastro(11) = rsFO(4)
-        txtcadastro(28) = rsFO(7)
-        txtcadastro(30) = rsFO(8)
-        If rsFO.Fields(10) <> "Null" Then txtcadastro(39) = rsFO(10)
-        txtcadastro(40) = Format(rsFO(11), "#,##0.000;(#,##0.000)")
+        txtCadastro(13) = Format(rsFO(5), "000000")
+        txtCadastro(24) = Format(rsFO(6), "000000")
+        txtCadastro(11) = rsFO(4)
+        txtCadastro(28) = rsFO(7)
+        txtCadastro(30) = rsFO(8)
+        If rsFO.Fields(10) <> "Null" Then txtCadastro(39) = rsFO(10)
+        txtCadastro(40) = Format(rsFO(11), "#,##0.000;(#,##0.000)")
         If rsFO.Fields(12) <> "Null" Then cboCadastro = rsFO(12)
         'If rsFO.Fields(13) <> "Null" Then mskCadastro(1) = rsFO(13)
         'If rsFO.Fields(13) <> "Null" Then mskCadastro(2) = Format(mskCadastro(1), "#,##0.000;(#,##0.000)") * Format(txtcadastro(40), "#,##0.000;(#,##0.000)")
@@ -5634,7 +5642,7 @@ On Error GoTo Err
         Exit Sub
     End If
     
-    sql = "select a.codfo,a.codseq,a.desenho,a.codmat,a.quantcj,a.dimensoes,a.pesounit,a.area,d.NOMEFANTASIA,d.CODUNDCONTROLE,a.TipoMat,a.revisao,c.descricao[DescTipoMat],a.observacao from tblistamaterial as a left join tbmateriais as b on a.codmat = b.idprd left join tbtipomat as c on a.TipoMat=c.codigo inner join " & vBancoTotvs & ".dbo.tprd as d on b.idprd = d.IDPRD where a.codfo = '" & Val(txtcadastro(6)) & "'order by a.codseq"
+    sql = "select a.codfo,a.codseq,a.desenho,a.codmat,a.quantcj,a.dimensoes,a.pesounit,a.area,d.NOMEFANTASIA,d.CODUNDCONTROLE,a.TipoMat,a.revisao,c.descricao[DescTipoMat],a.observacao from tblistamaterial as a left join tbmateriais as b on a.codmat = b.idprd left join tbtipomat as c on a.TipoMat=c.codigo inner join " & vBancoTotvs & ".dbo.tprd as d on b.idprd = d.IDPRD where a.codfo = '" & Val(txtCadastro(6)) & "'order by a.codseq"
     rsLisview.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
     ListView1.ListItems.Clear
     If rsLisview.RecordCount > 0 Then
@@ -5714,24 +5722,24 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    If txtcadastro(6).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(6).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(6).SetFocus
+    If txtCadastro(6).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(6).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(6).SetFocus
         Exit Function
     End If
-    If txtcadastro(30).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(30).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(30).SetFocus
+    If txtCadastro(30).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(30).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(30).SetFocus
         Exit Function
     End If
-    If txtcadastro(11).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(11).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(11).SetFocus
+    If txtCadastro(11).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(11).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(11).SetFocus
         Exit Function
     End If
-    If txtcadastro(13).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(13).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(13).SetFocus
+    If txtCadastro(13).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(13).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(13).SetFocus
         Exit Function
     End If
     ValidaCampo = True
@@ -5739,35 +5747,35 @@ End Function
 
 Private Function ValidaCampo2()
     ValidaCampo2 = False
-    If txtcadastro(0).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(0).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(0).SetFocus
+    If txtCadastro(0).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(0).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(0).SetFocus
         Exit Function
     End If
-    If txtcadastro(4).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(4).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(4).SetFocus
+    If txtCadastro(4).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(4).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(4).SetFocus
         Exit Function
     End If
-    If txtcadastro(3).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(3).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(3).SetFocus
+    If txtCadastro(3).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(3).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(3).SetFocus
         Exit Function
     End If
     
-    If optCadastro(0).Value = True And txtcadastro(2).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(2).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(2).SetFocus
+    If optCadastro(0).Value = True And txtCadastro(2).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(2).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(2).SetFocus
         Exit Function
     End If
-    If optCadastro(1).Value = True And txtcadastro(8).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(8).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(8).SetFocus
+    If optCadastro(1).Value = True And txtCadastro(8).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(8).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(8).SetFocus
         Exit Function
     End If
-    If Check1.Value = 1 And txtcadastro(5).Text = "" Then
-        Msgbox "Favor informar o campo " & Me.txtcadastro(5).Tag, vbInformation, "Atenção"
-        Me.txtcadastro(5).SetFocus
+    If Check1.Value = 1 And txtCadastro(5).Text = "" Then
+        Msgbox "Favor informar o campo " & Me.txtCadastro(5).Tag, vbInformation, "Atenção"
+        Me.txtCadastro(5).SetFocus
         Exit Function
     End If
     
@@ -5775,24 +5783,24 @@ Private Function ValidaCampo2()
 End Function
 
 Private Sub CapVar()
-    vAr0(Conta + 1) = Val(Mid$(txtcadastro(2), X + 2, Len(txtcadastro(2)) - X))
+    vAr0(Conta + 1) = Val(Mid$(txtCadastro(2), x + 2, Len(txtCadastro(2)) - x))
     Text2.Text = vAr0(Conta + 1)
-    Y = X
-    X = Len(txtcadastro(2))
+    y = x
+    x = Len(txtCadastro(2))
     Conta = Conta + 1
 End Sub
 
 Private Sub CapVar2()
-    vAr0(Conta + 1) = Val(Mid$(txtcadastro(34), X + 2, Len(txtcadastro(34)) - X))
+    vAr0(Conta + 1) = Val(Mid$(txtCadastro(34), x + 2, Len(txtCadastro(34)) - x))
     Text2.Text = vAr0(Conta + 1)
-    Y = X
-    X = Len(txtcadastro(34))
+    y = x
+    x = Len(txtCadastro(34))
     Conta = Conta + 1
 End Sub
 
 Private Sub ChamaGrid()
     'Dim F As New frmpesqcli
-    Sqlp = "Select * from tbmateriais where tbmateriais.descricao like '%" & txtcadastro(1) & "%'"
+    Sqlp = "Select * from tbmateriais where tbmateriais.descricao like '%" & txtCadastro(1) & "%'"
     procnom = "descricao"
     campo = 1
     Campo1 = 0
@@ -5800,7 +5808,7 @@ Private Sub ChamaGrid()
     Pesquisa = frmFO.Tag
     F.Show 1
     If Pesquisa <> "0" Then
-        txtcadastro(0) = Pesquisa
+        txtCadastro(0) = Pesquisa
     End If
 End Sub
 
@@ -5823,7 +5831,7 @@ On Error GoTo Err
         rsLocal.MoveFirst
         rsLocal.Find "descricao=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtcadastro(9).Text = Format(rsLocal.Fields(0), "000000")
+            txtCadastro(9).Text = Format(rsLocal.Fields(0), "000000")
         Else
             Msgbox "Tipo de material não cadastrado", vbInformation, "Zeus"
         End If
@@ -5853,9 +5861,9 @@ On Error GoTo Err
     Load F
     F.Caption = "Pesquisa Clientes"
     Pesquisa = frmFO.Tag
-    If txtcadastro(13) = "" Then F.Show 1
+    If txtCadastro(13) = "" Then F.Show 1
     Pesquisa = Mid$(Pesquisa, 7, 85)
-    If Pesquisa <> "" And txtcadastro(13) = "" Then
+    If Pesquisa <> "" And txtCadastro(13) = "" Then
         rsLocal.Open Sqlp, cnBanco, adOpenKeyset, adLockOptimistic
         If rsLocal.RecordCount < 1 Then
             rsLocal.Close
@@ -5872,7 +5880,7 @@ On Error GoTo Err
             Exit Sub
         End If
     Else
-        Sqlp = "Select * from tbclifor where tbclifor.codclifor = '" & Val(txtcadastro(13)) & "'"
+        Sqlp = "Select * from tbclifor where tbclifor.codclifor = '" & Val(txtCadastro(13)) & "'"
         rsLocal.Open Sqlp, cnBanco, adOpenKeyset, adLockOptimistic
         If rsLocal.EOF Then
             'MsgBox "Cliente não cadastrado", vbInformation, "Zeus"
@@ -5881,17 +5889,17 @@ On Error GoTo Err
             Exit Sub
         End If
     End If
-    txtcadastro(13).Text = Format(rsLocal.Fields(0), "000000")
-    txtcadastro(14).Text = rsLocal.Fields(13)
-    txtcadastro(15).Text = rsLocal.Fields(1)
-    txtcadastro(16).Text = rsLocal.Fields(2)
-    txtcadastro(17).Text = rsLocal.Fields(3)
-    txtcadastro(18).Text = rsLocal.Fields(4)
-    txtcadastro(19).Text = rsLocal.Fields(5)
-    txtcadastro(20).Text = Format(rsLocal.Fields(6), "(##)####-####")
-    txtcadastro(21).Text = Format(rsLocal.Fields(7), "(##)####-####")
-    txtcadastro(22).Text = rsLocal.Fields(8)
-    txtcadastro(23).Text = rsLocal.Fields(9)
+    txtCadastro(13).Text = Format(rsLocal.Fields(0), "000000")
+    txtCadastro(14).Text = rsLocal.Fields(13)
+    txtCadastro(15).Text = rsLocal.Fields(1)
+    txtCadastro(16).Text = rsLocal.Fields(2)
+    txtCadastro(17).Text = rsLocal.Fields(3)
+    txtCadastro(18).Text = rsLocal.Fields(4)
+    txtCadastro(19).Text = rsLocal.Fields(5)
+    txtCadastro(20).Text = Format(rsLocal.Fields(6), "(##)####-####")
+    txtCadastro(21).Text = Format(rsLocal.Fields(7), "(##)####-####")
+    txtCadastro(22).Text = rsLocal.Fields(8)
+    txtCadastro(23).Text = rsLocal.Fields(9)
     rsLocal.Close
     Set rsLocal = Nothing
     Exit Sub
@@ -5910,15 +5918,15 @@ Private Sub ChamaGridCont()
 On Error GoTo Err
     Dim F As New frmpesqger
     Dim Iposicao As Variant
-    Sqlp = "Select * from tbcontatos where tbcontatos.codclifor= '" & Val(txtcadastro(13)) & "'order by nome"
+    Sqlp = "Select * from tbcontatos where tbcontatos.codclifor= '" & Val(txtCadastro(13)) & "'order by nome"
     procnom = "nome"
     campo = 2
     Campo1 = 1
     Load F
     F.Caption = "Pesquisa Contatos"
     Pesquisa = frmFO.Tag
-    If txtcadastro(24) = "" Then F.Show 1
-    If Pesquisa <> "" And txtcadastro(24) = "" Then
+    If txtCadastro(24) = "" Then F.Show 1
+    If Pesquisa <> "" And txtCadastro(24) = "" Then
         rsLocal.Open Sqlp, cnBanco, adOpenKeyset, adLockOptimistic
         If rsLocal.RecordCount < 1 Then
             rsLocal.Close
@@ -5935,8 +5943,8 @@ On Error GoTo Err
             Exit Sub
         End If
     Else
-        Sqlp = "select * from tbcontatos where tbcontatos.codclifor = '" & Val(txtcadastro(13)) & "'" & _
-        "and tbcontatos.codcontato=" & " '" & Val(txtcadastro(24)) & "'"
+        Sqlp = "select * from tbcontatos where tbcontatos.codclifor = '" & Val(txtCadastro(13)) & "'" & _
+        "and tbcontatos.codcontato=" & " '" & Val(txtCadastro(24)) & "'"
         rsLocal.Open Sqlp, cnBanco, adOpenKeyset, adLockOptimistic
         If rsLocal.EOF Then
             'MsgBox "Contato não cadastrado", vbInformation, "Zeus"
@@ -5945,10 +5953,10 @@ On Error GoTo Err
             Exit Sub
         End If
     End If
-    txtcadastro(24).Text = Format(rsLocal.Fields(1), "000000")
-    txtcadastro(25).Text = rsLocal.Fields(2)
-    txtcadastro(26).Text = Format(rsLocal.Fields(6), "(##)####-####")
-    txtcadastro(27).Text = rsLocal.Fields(9)
+    txtCadastro(24).Text = Format(rsLocal.Fields(1), "000000")
+    txtCadastro(25).Text = rsLocal.Fields(2)
+    txtCadastro(26).Text = Format(rsLocal.Fields(6), "(##)####-####")
+    txtCadastro(27).Text = rsLocal.Fields(9)
     rsLocal.Close
     Set rsLocal = Nothing
     Exit Sub
@@ -5967,16 +5975,16 @@ End Sub
 Private Sub IncluirItem()
 On Error GoTo TrataErro
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer, ProxSeq As Integer
+    Dim x As Integer, y As Integer, ProxSeq As Integer
     If ValidaCampo2 = False Then Exit Sub
     
     'Variavel do sistema para calculo da area de pintura, consta na formula de pintura
     If optCadastro(0).Value = True Then
-        PesoTotal = Format(ScriptControl1.Eval(Formula) * Me.txtcadastro(4), "#,##0.000;(#,##0.000)")
+        PesoTotal = Format(ScriptControl1.Eval(Formula) * Me.txtCadastro(4), "#,##0.000;(#,##0.000)")
     Else
-        PesoTotal = Format(txtcadastro(8) * txtcadastro(4), "#,##0.000;(#,##0.000)")
+        PesoTotal = Format(txtCadastro(8) * txtCadastro(4), "#,##0.000;(#,##0.000)")
     End If
-    Y = ListView1.ListItems.Count
+    y = ListView1.ListItems.Count
     
     If Label36.Caption = "Alteração" Then
         ListView1.ListItems(Val(Label37)).Selected = True
@@ -5989,37 +5997,37 @@ On Error GoTo TrataErro
             'O Replace esta sendo aplicado aki pq so agora q foi encontrado o PesoTotal
             ForPint = Replace(ForPint, "pesototal", PesoTotal)
             ForPint = Replace(ForPint, ",", ".")
-            If Me.txtcadastro(2) <> ListView1.SelectedItem.ListSubItems.Item(3) Or Me.txtcadastro(8) <> ListView1.SelectedItem.ListSubItems.Item(3) Then
-                ListView1.SelectedItem.ListSubItems.Item(8) = Format(ScriptControl1.Eval(ForPint) * txtcadastro(5), "#,##0.000;(#,##0.000)")
+            If Me.txtCadastro(2) <> ListView1.SelectedItem.ListSubItems.Item(3) Or Me.txtCadastro(8) <> ListView1.SelectedItem.ListSubItems.Item(3) Then
+                ListView1.SelectedItem.ListSubItems.Item(8) = Format(ScriptControl1.Eval(ForPint) * txtCadastro(5), "#,##0.000;(#,##0.000)")
             End If
         End If
-        ListView1.SelectedItem.ListSubItems.Item(1) = Me.txtcadastro(1).Text
-        ListView1.SelectedItem.ListSubItems.Item(2) = Me.txtcadastro(9).Text & "-" & Me.txtcadastro(10).Text
+        ListView1.SelectedItem.ListSubItems.Item(1) = Me.txtCadastro(1).Text
+        ListView1.SelectedItem.ListSubItems.Item(2) = Me.txtCadastro(9).Text & "-" & Me.txtCadastro(10).Text
         
-        If Me.txtcadastro(2) <> ListView1.SelectedItem.ListSubItems.Item(3) Then
+        If Me.txtCadastro(2) <> ListView1.SelectedItem.ListSubItems.Item(3) Then
 '        If Me.txtcadastro(2) <> ListView1.SelectedItem.ListSubItems.Item(3) Or Me.txtcadastro(8) <> ListView1.SelectedItem.ListSubItems.Item(4) Then
             If optCadastro(0).Value = True Then
                 ListView1.SelectedItem.ListSubItems.Item(4) = Format(ScriptControl1.Eval(Formula), "#,##0.000;(#,##0.000)")
-                ListView1.SelectedItem.ListSubItems.Item(7) = Format(ScriptControl1.Eval(Formula) * Me.txtcadastro(4), "#,##0.000;(#,##0.000)")
+                ListView1.SelectedItem.ListSubItems.Item(7) = Format(ScriptControl1.Eval(Formula) * Me.txtCadastro(4), "#,##0.000;(#,##0.000)")
             Else
-                ListView1.SelectedItem.ListSubItems.Item(4) = Format(txtcadastro(8), "#,##0.000;(#,##0.000)")
+                ListView1.SelectedItem.ListSubItems.Item(4) = Format(txtCadastro(8), "#,##0.000;(#,##0.000)")
                 ListView1.SelectedItem.ListSubItems.Item(7) = Format(PesoTotal, "#,##0.000;(#,##0.000)")
             End If
         End If
         
-        If Me.txtcadastro(8) <> ListView1.SelectedItem.ListSubItems.Item(4) Then
+        If Me.txtCadastro(8) <> ListView1.SelectedItem.ListSubItems.Item(4) Then
             If optCadastro(1).Value = True Then
-                ListView1.SelectedItem.ListSubItems.Item(4) = Format(txtcadastro(8), "#,##0.000;(#,##0.000)")
+                ListView1.SelectedItem.ListSubItems.Item(4) = Format(txtCadastro(8), "#,##0.000;(#,##0.000)")
                 ListView1.SelectedItem.ListSubItems.Item(7) = Format(PesoTotal, "#,##0.000;(#,##0.000)")
             End If
         End If
         
-        ListView1.SelectedItem.ListSubItems.Item(3) = Me.txtcadastro(2).Text
-        ListView1.SelectedItem.ListSubItems.Item(5) = Me.txtcadastro(3).Text
-        ListView1.SelectedItem.ListSubItems.Item(6) = Me.txtcadastro(4).Text
-        ListView1.SelectedItem.ListSubItems.Item(9) = Me.txtcadastro(7).Text
+        ListView1.SelectedItem.ListSubItems.Item(3) = Me.txtCadastro(2).Text
+        ListView1.SelectedItem.ListSubItems.Item(5) = Me.txtCadastro(3).Text
+        ListView1.SelectedItem.ListSubItems.Item(6) = Me.txtCadastro(4).Text
+        ListView1.SelectedItem.ListSubItems.Item(9) = Me.txtCadastro(7).Text
         ListView1.SelectedItem.ListSubItems.Item(12) = Format(Label37, "0000") 'Me.txtcadastro(1).Text & Me.txtcadastro(10).Text
-        ListView1.SelectedItem.ListSubItems.Item(11) = Me.txtcadastro(29).Text
+        ListView1.SelectedItem.ListSubItems.Item(11) = Me.txtCadastro(29).Text
     Else
         'Ordena Listview pela sequencia de cadastramento antes de gravar
         Me.ListView1.Sorted = True
@@ -6034,30 +6042,30 @@ On Error GoTo TrataErro
             ProxSeq = 1
         End If
         
-        Set ItemLst = ListView1.ListItems.Add(, , Format(txtcadastro(0), "000000"))
+        Set ItemLst = ListView1.ListItems.Add(, , Format(txtCadastro(0), "000000"))
         Label36.Caption = "Inclusão"
         If Check1.Value = 1 Then
             'Variavel q contem a formula para calcular a área de pintura
             'O Replace esta sendo aplicado aki pq so agora q foi encontrado o PesoTotal
             ForPint = Replace(ForPint, "pesototal", PesoTotal)
             ForPint = Replace(ForPint, ",", ".")
-            ItemLst.SubItems(8) = Format(ScriptControl1.Eval(ForPint) * txtcadastro(5), "#,##0.000;(#,##0.000)")
+            ItemLst.SubItems(8) = Format(ScriptControl1.Eval(ForPint) * txtCadastro(5), "#,##0.000;(#,##0.000)")
         End If
-        ItemLst.SubItems(1) = Me.txtcadastro(1).Text
-        ItemLst.SubItems(2) = Me.txtcadastro(9).Text & "-" & Me.txtcadastro(10).Text
-        ItemLst.SubItems(3) = Me.txtcadastro(2).Text
+        ItemLst.SubItems(1) = Me.txtCadastro(1).Text
+        ItemLst.SubItems(2) = Me.txtCadastro(9).Text & "-" & Me.txtCadastro(10).Text
+        ItemLst.SubItems(3) = Me.txtCadastro(2).Text
         If optCadastro(0).Value = True Then
             ItemLst.SubItems(4) = Format(ScriptControl1.Eval(Formula), "#,##0.000;(#,##0.000)")
-            ItemLst.SubItems(7) = Format(ScriptControl1.Eval(Formula) * Me.txtcadastro(4), "#,##0.000;(#,##0.000)")
+            ItemLst.SubItems(7) = Format(ScriptControl1.Eval(Formula) * Me.txtCadastro(4), "#,##0.000;(#,##0.000)")
         Else
-            ItemLst.SubItems(4) = Format(txtcadastro(8), "#,##0.000;(#,##0.000)")
+            ItemLst.SubItems(4) = Format(txtCadastro(8), "#,##0.000;(#,##0.000)")
             ItemLst.SubItems(7) = Format(PesoTotal, "#,##0.000;(#,##0.000)")
         End If
-        ItemLst.SubItems(5) = Me.txtcadastro(3).Text
-        ItemLst.SubItems(6) = Me.txtcadastro(4).Text
-        ItemLst.SubItems(9) = Me.txtcadastro(7).Text
-        ItemLst.SubItems(10) = Me.txtcadastro(1).Text & Me.txtcadastro(10).Text
-        ItemLst.SubItems(11) = Me.txtcadastro(29).Text
+        ItemLst.SubItems(5) = Me.txtCadastro(3).Text
+        ItemLst.SubItems(6) = Me.txtCadastro(4).Text
+        ItemLst.SubItems(9) = Me.txtCadastro(7).Text
+        ItemLst.SubItems(10) = Me.txtCadastro(1).Text & Me.txtCadastro(10).Text
+        ItemLst.SubItems(11) = Me.txtCadastro(29).Text
         ItemLst.SubItems(12) = Format(ProxSeq, "0000")
         
         ListView1.ListItems(ListView1.ListItems.Count).Selected = True
@@ -6067,20 +6075,20 @@ On Error GoTo TrataErro
     Me.ListView1.ColumnHeaders(5).Alignment = lvwColumnRight
     Me.ListView1.ColumnHeaders(8).Alignment = lvwColumnRight
     Me.ListView1.ColumnHeaders(9).Alignment = lvwColumnRight
-    If txtcadastro(3) <> "pç" And txtcadastro(3) <> "PÇ" Then
+    If txtCadastro(3) <> "pç" And txtCadastro(3) <> "PÇ" Then
         If optCadastro(0).Value = True Then
-            SomaTotal = SomaTotal + ScriptControl1.Eval(Formula) * Me.txtcadastro(4)
+            SomaTotal = SomaTotal + ScriptControl1.Eval(Formula) * Me.txtCadastro(4)
         Else
-            SomaTotal = Format(SomaTotal + txtcadastro(8) * Me.txtcadastro(4), "#,##0.000;(#,##0.000")
+            SomaTotal = Format(SomaTotal + txtCadastro(8) * Me.txtCadastro(4), "#,##0.000;(#,##0.000")
         End If
         
-        If Check1.Value = 1 Then SomaPint = SomaPint + ScriptControl1.Eval(ForPint) * Me.txtcadastro(5)
+        If Check1.Value = 1 Then SomaPint = SomaPint + ScriptControl1.Eval(ForPint) * Me.txtCadastro(5)
     End If
     'lblTotal.Caption = Format(SomaTotal, "#,##0.0;(#,##0.0)") 'Format(SomaTotal, "#,##0.000000000;(#,##0.000000000)")
     'lblTotPint.Caption = Format(SomaPint, "#,##0.00;(#,##0.00)")
-    txtcadastro(0) = ""
-    txtcadastro(1) = ""
-    txtcadastro(2) = ""
+    txtCadastro(0) = ""
+    txtCadastro(1) = ""
+    txtCadastro(2) = ""
     Text1.Text = ""
     Exit Sub
 TrataErro:
@@ -6091,29 +6099,29 @@ End Sub
 Private Sub IncluirItem2()
 On Error GoTo TrataErro
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     If ValidaCampo = False Then Exit Sub
     
     'Variavel do sistema para calculo da area de pintura, consta na formula de pintura
     If optCadastro(2).Value = True Then
-        PesoTotal = Format(ScriptControl1.Eval(Formula) * Me.txtcadastro(37), "#,##0.000;(#,##0.000)")
+        PesoTotal = Format(ScriptControl1.Eval(Formula) * Me.txtCadastro(37), "#,##0.000;(#,##0.000)")
     Else
-        PesoTotal = Format(txtcadastro(35), "#,##0.000;(#,##0.000)")
+        PesoTotal = Format(txtCadastro(35), "#,##0.000;(#,##0.000)")
     End If
-    Y = ListView2.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            If ListView2.ListItems.Item(X) = Me.txtcadastro(38) Then
+    y = ListView2.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            If ListView2.ListItems.Item(x) = Me.txtCadastro(38) Then
                 If optCadastro(2).Value = True Then
-                    ListView2.SelectedItem.ListSubItems.Item(7) = Me.txtcadastro(34).Text
-                    ListView2.SelectedItem.ListSubItems.Item(8) = Format(ScriptControl1.Eval(Formula) * Me.txtcadastro(37), "#,##0.000;(#,##0.000)")
+                    ListView2.SelectedItem.ListSubItems.Item(7) = Me.txtCadastro(34).Text
+                    ListView2.SelectedItem.ListSubItems.Item(8) = Format(ScriptControl1.Eval(Formula) * Me.txtCadastro(37), "#,##0.000;(#,##0.000)")
                     ListView2.SelectedItem.ListSubItems.Item(9) = 0
-                    ListView2.SelectedItem.ListSubItems.Item(10) = txtcadastro(37)
+                    ListView2.SelectedItem.ListSubItems.Item(10) = txtCadastro(37)
                 Else
                     ListView2.SelectedItem.ListSubItems.Item(7) = "-"
-                    If Check3.Value = 1 Then ListView2.SelectedItem.ListSubItems.Item(8) = Format((txtcadastro(35) * txtcadastro(36) / 100) + txtcadastro(35), "#,##0.000;(#,##0.000)")
-                    If Check3.Value = 0 Then ListView2.SelectedItem.ListSubItems.Item(8) = Format(txtcadastro(35), "#,##0.000;(#,##0.000)")
-                    If Check3.Value = 1 Then ListView2.SelectedItem.ListSubItems.Item(9) = txtcadastro(36)
+                    If Check3.Value = 1 Then ListView2.SelectedItem.ListSubItems.Item(8) = Format((txtCadastro(35) * txtCadastro(36) / 100) + txtCadastro(35), "#,##0.000;(#,##0.000)")
+                    If Check3.Value = 0 Then ListView2.SelectedItem.ListSubItems.Item(8) = Format(txtCadastro(35), "#,##0.000;(#,##0.000)")
+                    If Check3.Value = 1 Then ListView2.SelectedItem.ListSubItems.Item(9) = txtCadastro(36)
                     ListView2.SelectedItem.ListSubItems.Item(10) = 1
                 End If
                 ListView2.SelectedItem.ListSubItems.Item(11) = "Alterado"
@@ -6126,8 +6134,8 @@ On Error GoTo TrataErro
     Me.ListView1.ColumnHeaders(8).Alignment = lvwColumnRight
     Me.ListView1.ColumnHeaders(9).Alignment = lvwColumnRight
     Text4.Text = ""
-    For X = 31 To 38
-        txtcadastro(X) = ""
+    For x = 31 To 38
+        txtCadastro(x) = ""
     Next
     LimpaControles
     Exit Sub
@@ -6138,15 +6146,15 @@ End Sub
 
 Private Sub ExcluirItem()
 On Error GoTo TrataErro
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    ListView1.ListItems.Remove (X)
+    ListView1.ListItems.Remove (x)
     Exit Sub
 TrataErro:
     Msgbox "Ocorreu um erro, Selecione um item antes de excluir", vbInformation, "Atenção"
@@ -6154,63 +6162,63 @@ TrataErro:
 End Sub
 
 Private Sub AlterarItem()
-    Dim Y As Integer, X As Integer
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        If ListView2.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        If ListView2.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtcadastro(31).Text = ListView2.SelectedItem.ListSubItems.Item(1)
-    Me.txtcadastro(32).Text = ListView2.SelectedItem.ListSubItems.Item(2)
-    Me.txtcadastro(33).Text = ListView2.SelectedItem.ListSubItems.Item(4)
-    If ListView2.SelectedItem.ListSubItems.Item(8) = 0 Then Me.txtcadastro(35).Text = ListView2.SelectedItem.ListSubItems.Item(5) Else Me.txtcadastro(35).Text = ListView2.SelectedItem.ListSubItems.Item(8)
-    If ListView2.SelectedItem.ListSubItems.Item(9) = 0 Then Me.txtcadastro(36).Text = 5 Else Me.txtcadastro(36).Text = ListView2.SelectedItem.ListSubItems.Item(9)
-    Me.txtcadastro(37).Text = ListView2.SelectedItem.ListSubItems.Item(10)
-    Me.txtcadastro(38).Text = ListView2.ListItems.Item(X)
+    Me.txtCadastro(31).Text = ListView2.SelectedItem.ListSubItems.Item(1)
+    Me.txtCadastro(32).Text = ListView2.SelectedItem.ListSubItems.Item(2)
+    Me.txtCadastro(33).Text = ListView2.SelectedItem.ListSubItems.Item(4)
+    If ListView2.SelectedItem.ListSubItems.Item(8) = 0 Then Me.txtCadastro(35).Text = ListView2.SelectedItem.ListSubItems.Item(5) Else Me.txtCadastro(35).Text = ListView2.SelectedItem.ListSubItems.Item(8)
+    If ListView2.SelectedItem.ListSubItems.Item(9) = 0 Then Me.txtCadastro(36).Text = 5 Else Me.txtCadastro(36).Text = ListView2.SelectedItem.ListSubItems.Item(9)
+    Me.txtCadastro(37).Text = ListView2.SelectedItem.ListSubItems.Item(10)
+    Me.txtCadastro(38).Text = ListView2.ListItems.Item(x)
     CarregaDados (31)
-    txtcadastro(31).Enabled = False
-    txtcadastro(32).Enabled = False
-    txtcadastro(33).Enabled = False
+    txtCadastro(31).Enabled = False
+    txtCadastro(32).Enabled = False
+    txtCadastro(33).Enabled = False
 End Sub
 
 Private Sub AlterarItem1()
     Label36.Caption = "Alteração"
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
     Label37 = Val(ListView1.SelectedItem.ListSubItems.Item(12))
-    Me.txtcadastro(7) = ListView1.SelectedItem.ListSubItems.Item(9)
-    Me.txtcadastro(29) = ListView1.SelectedItem.ListSubItems.Item(11)
-    Me.txtcadastro(9) = Mid$(ListView1.SelectedItem.ListSubItems.Item(2), 1, 6)
-    Me.txtcadastro(0) = ListView1.ListItems.Item(X)
-    Me.txtcadastro(1) = ListView1.SelectedItem.ListSubItems.Item(1)
-    Me.txtcadastro(3) = ListView1.SelectedItem.ListSubItems.Item(5)
-    Me.txtcadastro(2) = ListView1.SelectedItem.ListSubItems.Item(3)
-    Me.txtcadastro(4) = ListView1.SelectedItem.ListSubItems.Item(6)
+    Me.txtCadastro(7) = ListView1.SelectedItem.ListSubItems.Item(9)
+    Me.txtCadastro(29) = ListView1.SelectedItem.ListSubItems.Item(11)
+    Me.txtCadastro(9) = Mid$(ListView1.SelectedItem.ListSubItems.Item(2), 1, 6)
+    Me.txtCadastro(0) = ListView1.ListItems.Item(x)
+    Me.txtCadastro(1) = ListView1.SelectedItem.ListSubItems.Item(1)
+    Me.txtCadastro(3) = ListView1.SelectedItem.ListSubItems.Item(5)
+    Me.txtCadastro(2) = ListView1.SelectedItem.ListSubItems.Item(3)
+    Me.txtCadastro(4) = ListView1.SelectedItem.ListSubItems.Item(6)
     
     If ListView1.SelectedItem.ListSubItems.Item(3) = "-" Then
         Me.optCadastro(1).Value = True
         optCadastro_Click (1)
-        Me.txtcadastro(8) = ListView1.SelectedItem.ListSubItems.Item(4)
-        txtcadastro(8).SetFocus
+        Me.txtCadastro(8) = ListView1.SelectedItem.ListSubItems.Item(4)
+        txtCadastro(8).SetFocus
         Check1.Value = 0
-        txtcadastro(5).Text = ""
-        If Check1.Value = 0 Then txtcadastro(5).Enabled = False
-        txtcadastro(0).BackColor = &HC0C0FF
+        txtCadastro(5).Text = ""
+        If Check1.Value = 0 Then txtCadastro(5).Enabled = False
+        txtCadastro(0).BackColor = &HC0C0FF
     End If
     If ListView1.SelectedItem.ListSubItems.Item(3) <> "-" Then
         Me.optCadastro(0).Value = True
         optCadastro_Click (0)
-        txtcadastro(2).SetFocus
-        txtcadastro(0).BackColor = &H80000005
+        txtCadastro(2).SetFocus
+        txtCadastro(0).BackColor = &H80000005
     End If
     
-    If Val(txtcadastro(0)) = 0 Then
+    If Val(txtCadastro(0)) = 0 Then
         optCadastro_Click (1)
     End If
     
@@ -6218,9 +6226,9 @@ Private Sub AlterarItem1()
     txtCadastro_KeyDown 0, 13, 0
     txtCadastro_KeyDown 9, 13, 9
     
-    If txtcadastro(0) = "000000" Then
-        txtcadastro(8).BackColor = &HC0C0FF
-        Me.txtcadastro(1) = ListView1.SelectedItem.ListSubItems.Item(1)
+    If txtCadastro(0) = "000000" Then
+        txtCadastro(8).BackColor = &HC0C0FF
+        Me.txtCadastro(1) = ListView1.SelectedItem.ListSubItems.Item(1)
     End If
 
 End Sub
@@ -6235,40 +6243,40 @@ On Error GoTo Err
     
     Dim sqlExc As String
     Dim sql As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
 10  cnBanco.BeginTrans
 
     sql = "Select * from tbListaMaterial order by codfo"
     rsGravaLM.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
     
-    sqlExc = "Delete from tbListaMaterial where tbListaMaterial.codfo = '" & Val(txtcadastro(6)) & "'"
+    sqlExc = "Delete from tbListaMaterial where tbListaMaterial.codfo = '" & Val(txtCadastro(6)) & "'"
     rsDeleta.Open sqlExc, cnBanco
     
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         rsGravaLM.AddNew
-        rsGravaLM(0) = txtcadastro(6)
+        rsGravaLM(0) = txtCadastro(6)
         rsGravaLM(1) = ListView1.SelectedItem.ListSubItems.Item(12)
         rsGravaLM(2) = ListView1.SelectedItem.ListSubItems.Item(9)
         
-        rsGravaLM(3) = Val(ListView1.ListItems.Item(X))
+        rsGravaLM(3) = Val(ListView1.ListItems.Item(x))
         rsGravaLM(4) = ListView1.SelectedItem.ListSubItems.Item(6)
         rsGravaLM(5) = ListView1.SelectedItem.ListSubItems.Item(3)
         rsGravaLM(6) = ListView1.SelectedItem.ListSubItems.Item(4)
         If ListView1.SelectedItem.ListSubItems.Item(8) <> "" Then rsGravaLM(7) = ListView1.SelectedItem.ListSubItems.Item(8) Else rsGravaLM(7) = 0
         rsGravaLM(8) = Val(Mid$(ListView1.SelectedItem.ListSubItems.Item(2), 1, 6))
         rsGravaLM(9) = ListView1.SelectedItem.ListSubItems.Item(11)
-        If Val(ListView1.ListItems.Item(X)) = 0 Then rsGravaLM(10) = ListView1.SelectedItem.ListSubItems.Item(1)
+        If Val(ListView1.ListItems.Item(x)) = 0 Then rsGravaLM(10) = ListView1.SelectedItem.ListSubItems.Item(1)
     Next
     If Not rsGravaLM.EOF Then rsGravaLM.Update
     
-    sql = "Select * from tbFo where tbfo.codfo = '" & Val(txtcadastro(6)) & "'"
+    sql = "Select * from tbFo where tbfo.codfo = '" & Val(txtCadastro(6)) & "'"
     rsGravaFO.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
     If rsGravaFO.EOF Then
         rsGravaFO.AddNew
     End If
-    rsGravaFO(0) = txtcadastro(6)
+    rsGravaFO(0) = txtCadastro(6)
     rsGravaFO(1) = Format(DTPicker1, "dd/mm/yyyy")
 
     If rsGravaFO(2) = "" Then rsGravaFO(2) = 1
@@ -6276,16 +6284,16 @@ On Error GoTo Err
     If rsGravaFO(2) = 2 Then rsGravaFO(2) = 2
     If rsGravaFO(2) = 3 Then rsGravaFO(2) = 3
     
-    rsGravaFO(4) = txtcadastro(11)
-    If txtcadastro(13) <> "" Then rsGravaFO(5) = txtcadastro(13)
-    If txtcadastro(24) <> "" Then rsGravaFO(6) = txtcadastro(24)
-    rsGravaFO(7) = txtcadastro(28)
-    rsGravaFO(8) = txtcadastro(30)
+    rsGravaFO(4) = txtCadastro(11)
+    If txtCadastro(13) <> "" Then rsGravaFO(5) = txtCadastro(13)
+    If txtCadastro(24) <> "" Then rsGravaFO(6) = txtCadastro(24)
+    rsGravaFO(7) = txtCadastro(28)
+    rsGravaFO(8) = txtCadastro(30)
     If DTPicker2 <> "" Then
         rsGravaFO(9) = Format(DTPicker2, "dd/mm/yyyy")
     End If
-    rsGravaFO(10) = txtcadastro(39)
-    If txtcadastro(40) <> "" Then rsGravaFO(11) = Format(txtcadastro(40), "#,##0.000;(#,##0.000)")
+    rsGravaFO(10) = txtCadastro(39)
+    If txtCadastro(40) <> "" Then rsGravaFO(11) = Format(txtCadastro(40), "#,##0.000;(#,##0.000)")
     rsGravaFO(12) = cboCadastro
     'mskCadastro(1).PromptInclude = False
     'If mskCadastro(1) <> "" Then rsGravaFO(13) = mskCadastro(1)
@@ -6298,20 +6306,20 @@ On Error GoTo Err
 'Grava apenas se houver alguma informação na tabela de resumo
     If ListView2.ListItems.Count <> 0 Then
         
-        sqlExc = "Delete from tbResumo where tbResumo.codfo = '" & Val(txtcadastro(6)) & "'"
+        sqlExc = "Delete from tbResumo where tbResumo.codfo = '" & Val(txtCadastro(6)) & "'"
         rsDeleta.Open sqlExc, cnBanco
         
-        sql = "Select * from tbResumo where tbResumo.codfo = '" & Val(txtcadastro(6)) & "'"
+        sql = "Select * from tbResumo where tbResumo.codfo = '" & Val(txtCadastro(6)) & "'"
         rsResumo.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
     
         
-        Y = ListView2.ListItems.Count
-        For X = 1 To Y
-            ListView2.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+        y = ListView2.ListItems.Count
+        For x = 1 To y
+            ListView2.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
             
             
             rsResumo.AddNew
-            rsResumo.Fields(0) = txtcadastro(6)
+            rsResumo.Fields(0) = txtCadastro(6)
             rsResumo.Fields(1) = ListView2.SelectedItem.ListSubItems.Item(1)
             rsResumo.Fields(2) = ListView2.SelectedItem.ListSubItems.Item(7)
             rsResumo.Fields(3) = ListView2.SelectedItem.ListSubItems.Item(8)
@@ -6319,7 +6327,7 @@ On Error GoTo Err
             rsResumo.Fields(5) = ListView2.SelectedItem.ListSubItems.Item(10)
             rsResumo.Fields(6) = ListView2.SelectedItem.ListSubItems.Item(5)
             If ListView2.SelectedItem.ListSubItems.Item(4) <> "-" Then rsResumo.Fields(7) = Val(Mid$(ListView2.SelectedItem.ListSubItems.Item(3), 1, 6)) Else rsResumo.Fields(7) = 0
-            rsResumo.Fields(8) = X
+            rsResumo.Fields(8) = x
 '            If Val(ListView2.SelectedItem.ListSubItems.Item(1)) = 0 Then rsResumo.Fields(8) = X Else rsResumo.Fields(8) = Val(ListView2.SelectedItem.ListSubItems.Item(1))
             If Val(ListView2.SelectedItem.ListSubItems.Item(1)) = 0 Then rsResumo.Fields(9) = ListView2.SelectedItem.ListSubItems.Item(2)
         

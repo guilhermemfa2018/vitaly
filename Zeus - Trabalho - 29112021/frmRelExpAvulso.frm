@@ -6,7 +6,7 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmRelExpAvulso 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Emissão de relatórios de expedição de terceiros"
-   ClientHeight    =   8460
+   ClientHeight    =   9435
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   21450
@@ -25,9 +25,16 @@ Begin VB.Form frmRelExpAvulso
    MaxButton       =   0   'False
    MDIChild        =   -1  'True
    MinButton       =   0   'False
-   ScaleHeight     =   8460
+   ScaleHeight     =   9435
    ScaleMode       =   0  'User
    ScaleWidth      =   21450
+   Begin IpToolTips.cIpToolTips cIpToolTips2 
+      Left            =   6000
+      Top             =   8760
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCadastro 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -45,7 +52,7 @@ Begin VB.Form frmRelExpAvulso
       Style           =   1  'Graphical
       TabIndex        =   35
       Tag             =   "Sair"
-      Top             =   7680
+      Top             =   8760
       Width           =   615
    End
    Begin VB.CommandButton cmdCadastro 
@@ -65,7 +72,7 @@ Begin VB.Form frmRelExpAvulso
       Style           =   1  'Graphical
       TabIndex        =   34
       Tag             =   "Salvar Relatório"
-      Top             =   7680
+      Top             =   8760
       Width           =   615
    End
    Begin VB.Frame Frame2 
@@ -85,7 +92,7 @@ Begin VB.Form frmRelExpAvulso
       Top             =   120
       Width           =   2775
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
-         Height          =   255
+         Height          =   345
          Left            =   120
          OleObjectBlob   =   "frmRelExpAvulso.frx":265E
          TabIndex        =   2
@@ -110,13 +117,14 @@ Begin VB.Form frmRelExpAvulso
       Top             =   120
       Width           =   1815
       Begin MSComCtl2.DTPicker DTPicker1 
-         Height          =   330
+         Height          =   345
          Left            =   120
          TabIndex        =   1
+         Tag             =   "Data de emissão do relatório"
          Top             =   240
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   582
+         _ExtentY        =   609
          _Version        =   393216
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Calibri"
@@ -127,7 +135,7 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   168493057
+         Format          =   168427521
          CurrentDate     =   40449
       End
    End
@@ -142,7 +150,7 @@ Begin VB.Form frmRelExpAvulso
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2175
+      Height          =   2895
       Left            =   120
       TabIndex        =   57
       Top             =   960
@@ -153,7 +161,7 @@ Begin VB.Form frmRelExpAvulso
          Index           =   7
          Left            =   6480
          TabIndex        =   71
-         Top             =   1080
+         Top             =   1200
          Width           =   375
       End
       Begin VB.TextBox txtcadastro 
@@ -167,12 +175,11 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   2
          Left            =   1800
          TabIndex        =   5
          Tag             =   "Projeto"
-         ToolTipText     =   "Projeto"
          Top             =   480
          Width           =   4575
       End
@@ -230,12 +237,13 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   825
          Index           =   5
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   8
-         Top             =   1680
+         Tag             =   "Observação"
+         Top             =   1920
          Width           =   6735
       End
       Begin VB.TextBox txtcadastro 
@@ -268,12 +276,11 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   3
          Tag             =   "FCE nº"
-         ToolTipText     =   "FCE nº"
          Top             =   480
          Width           =   975
       End
@@ -288,11 +295,12 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   3
          Left            =   120
          TabIndex        =   7
-         Top             =   1080
+         Tag             =   "Cliente"
+         Top             =   1200
          Width           =   6255
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
@@ -300,7 +308,7 @@ Begin VB.Form frmRelExpAvulso
          Left            =   120
          OleObjectBlob   =   "frmRelExpAvulso.frx":273A
          TabIndex        =   59
-         Top             =   1440
+         Top             =   1680
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
@@ -325,7 +333,7 @@ Begin VB.Form frmRelExpAvulso
          Left            =   120
          OleObjectBlob   =   "frmRelExpAvulso.frx":287C
          TabIndex        =   62
-         Top             =   840
+         Top             =   960
          Width           =   1215
       End
    End
@@ -356,10 +364,11 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   4
          Left            =   120
          TabIndex        =   0
+         Tag             =   "ID do Relatório"
          Top             =   240
          Width           =   1935
       End
@@ -378,7 +387,7 @@ Begin VB.Form frmRelExpAvulso
       Height          =   4335
       Left            =   120
       TabIndex        =   40
-      Top             =   3240
+      Top             =   3960
       Width           =   6975
       Begin VB.CommandButton cmdExpAvulso 
          Caption         =   "..."
@@ -412,94 +421,54 @@ Begin VB.Form frmRelExpAvulso
          Height          =   975
          Left            =   120
          TabIndex        =   50
-         Top             =   2760
+         Top             =   3120
          Width           =   6735
          Begin VB.ComboBox cboCadastro 
-            BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   315
+            Height          =   345
             Index           =   1
             ItemData        =   "frmRelExpAvulso.frx":28E4
             Left            =   1440
             List            =   "frmRelExpAvulso.frx":2939
             TabIndex        =   20
+            Tag             =   "UF da placa do cavalo"
             Top             =   480
             Width           =   735
          End
          Begin VB.ComboBox cboCadastro 
-            BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   315
+            Height          =   345
             Index           =   2
             ItemData        =   "frmRelExpAvulso.frx":29A9
             Left            =   3720
             List            =   "frmRelExpAvulso.frx":29FE
             TabIndex        =   22
+            Tag             =   "UF da placa da carreta"
             Top             =   480
             Width           =   735
          End
          Begin VB.TextBox txtcadastro 
-            BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
+            Height          =   345
             Index           =   14
             Left            =   120
             TabIndex        =   19
+            Tag             =   "Nº da placa do cavalo"
             Top             =   480
             Width           =   1215
          End
          Begin VB.TextBox txtcadastro 
-            BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
+            Height          =   345
             Index           =   15
             Left            =   2280
             TabIndex        =   21
+            Tag             =   "Nº da placa da carreta"
             Top             =   480
             Width           =   1335
          End
          Begin VB.TextBox txtcadastro 
-            BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   330
+            Height          =   345
             Index           =   16
             Left            =   4560
             TabIndex        =   23
+            Tag             =   "Nome do motorista"
             Top             =   480
             Width           =   2055
          End
@@ -522,15 +491,15 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
             Height          =   255
             Left            =   2280
-            OleObjectBlob   =   "frmRelExpAvulso.frx":2B3E
+            OleObjectBlob   =   "frmRelExpAvulso.frx":2B38
             TabIndex        =   53
             Top             =   240
-            Width           =   1095
+            Width           =   1335
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
             Height          =   255
             Left            =   1440
-            OleObjectBlob   =   "frmRelExpAvulso.frx":2BB8
+            OleObjectBlob   =   "frmRelExpAvulso.frx":2BAC
             TabIndex        =   54
             Top             =   240
             Width           =   615
@@ -538,7 +507,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRelExpAvulso.frx":2C1C
+            OleObjectBlob   =   "frmRelExpAvulso.frx":2C0A
             TabIndex        =   55
             Top             =   240
             Width           =   1335
@@ -554,12 +523,11 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   6
          Left            =   120
          TabIndex        =   9
          Tag             =   "Código da transportadora"
-         ToolTipText     =   "Código da transportadora"
          Top             =   480
          Width           =   975
       End
@@ -574,10 +542,11 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   7
          Left            =   1200
          TabIndex        =   10
+         Tag             =   "Nome da transportadora"
          Top             =   480
          Width           =   5175
       End
@@ -592,11 +561,12 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   8
          Left            =   120
          TabIndex        =   12
-         Top             =   1080
+         Tag             =   "CNPJ da transportadora"
+         Top             =   1200
          Width           =   3135
       End
       Begin VB.TextBox txtcadastro 
@@ -610,11 +580,12 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   10
          Left            =   120
          TabIndex        =   14
-         Top             =   1680
+         Tag             =   "Endereço da transportadora"
+         Top             =   1920
          Width           =   5655
       End
       Begin VB.TextBox txtcadastro 
@@ -628,11 +599,12 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   12
          Left            =   120
          TabIndex        =   16
-         Top             =   2280
+         Tag             =   "Bairro da transportadora"
+         Top             =   2640
          Width           =   2535
       End
       Begin VB.TextBox txtcadastro 
@@ -646,12 +618,13 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   13
-         Left            =   3120
+         Left            =   2760
          TabIndex        =   17
-         Top             =   2280
-         Width           =   2895
+         Tag             =   "Cidade da transportadora"
+         Top             =   2640
+         Width           =   3255
       End
       Begin VB.TextBox txtcadastro 
          Enabled         =   0   'False
@@ -664,11 +637,12 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   11
          Left            =   5880
          TabIndex        =   15
-         Top             =   1680
+         Tag             =   "CEP"
+         Top             =   1920
          Width           =   975
       End
       Begin VB.ComboBox cboCadastro 
@@ -684,11 +658,12 @@ Begin VB.Form frmRelExpAvulso
          EndProperty
          Height          =   315
          Index           =   0
-         ItemData        =   "frmRelExpAvulso.frx":2C94
+         ItemData        =   "frmRelExpAvulso.frx":2C7C
          Left            =   6120
-         List            =   "frmRelExpAvulso.frx":2CE9
+         List            =   "frmRelExpAvulso.frx":2CD1
          TabIndex        =   18
-         Top             =   2280
+         Tag             =   "UF"
+         Top             =   2640
          Width           =   735
       End
       Begin VB.TextBox txtcadastro 
@@ -702,73 +677,74 @@ Begin VB.Form frmRelExpAvulso
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   9
          Left            =   3360
          TabIndex        =   13
-         Top             =   1080
+         Tag             =   "Inscrição Estadual da transportadora"
+         Top             =   1200
          Width           =   3495
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
          Height          =   255
          Left            =   5880
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2D59
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2D41
          TabIndex        =   41
-         Top             =   1440
+         Top             =   1680
          Width           =   615
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
          Height          =   255
          Left            =   6120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2DB9
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2DA1
          TabIndex        =   42
-         Top             =   2040
+         Top             =   2400
          Width           =   495
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
          Height          =   255
-         Left            =   3120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2E17
+         Left            =   2760
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2DFF
          TabIndex        =   43
-         Top             =   2040
+         Top             =   2400
          Width           =   1695
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2E7D
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2E65
          TabIndex        =   44
-         Top             =   2040
+         Top             =   2400
          Width           =   1455
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2EE3
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2ECB
          TabIndex        =   45
-         Top             =   1440
+         Top             =   1680
          Width           =   2055
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   3360
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2F4D
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2F35
          TabIndex        =   46
-         Top             =   840
+         Top             =   960
          Width           =   1575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":2FC3
+         OleObjectBlob   =   "frmRelExpAvulso.frx":2FAB
          TabIndex        =   47
-         Top             =   840
+         Top             =   960
          Width           =   1815
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   1200
-         OleObjectBlob   =   "frmRelExpAvulso.frx":3025
+         OleObjectBlob   =   "frmRelExpAvulso.frx":300D
          TabIndex        =   48
          Top             =   240
          Width           =   2295
@@ -776,7 +752,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":3087
+         OleObjectBlob   =   "frmRelExpAvulso.frx":306F
          TabIndex        =   49
          Top             =   240
          Width           =   735
@@ -801,7 +777,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel29 
          Height          =   255
          Left            =   1800
-         OleObjectBlob   =   "frmRelExpAvulso.frx":30ED
+         OleObjectBlob   =   "frmRelExpAvulso.frx":30D5
          TabIndex        =   38
          Top             =   7800
          Visible         =   0   'False
@@ -810,38 +786,40 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   240
-         OleObjectBlob   =   "frmRelExpAvulso.frx":314D
+         OleObjectBlob   =   "frmRelExpAvulso.frx":3135
          TabIndex        =   39
          Top             =   7800
          Visible         =   0   'False
          Width           =   1575
       End
       Begin VB.TextBox Text5 
-         Height          =   330
+         Height          =   345
          Left            =   12000
          TabIndex        =   28
+         Tag             =   "Peso Total"
          Top             =   1680
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel37 
          Height          =   255
          Left            =   12000
-         OleObjectBlob   =   "frmRelExpAvulso.frx":31C7
+         OleObjectBlob   =   "frmRelExpAvulso.frx":31AF
          TabIndex        =   98
          Top             =   1440
          Width           =   1695
       End
       Begin VB.TextBox Text4 
-         Height          =   330
+         Height          =   345
          Left            =   5760
          TabIndex        =   27
+         Tag             =   "Nº do Desenho"
          Top             =   1680
          Width           =   5535
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   5760
-         OleObjectBlob   =   "frmRelExpAvulso.frx":3235
+         OleObjectBlob   =   "frmRelExpAvulso.frx":321D
          TabIndex        =   97
          Top             =   1440
          Width           =   975
@@ -944,7 +922,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel36 
             Height          =   255
             Left            =   5640
-            OleObjectBlob   =   "frmRelExpAvulso.frx":329D
+            OleObjectBlob   =   "frmRelExpAvulso.frx":3285
             TabIndex        =   87
             Top             =   1440
             Width           =   1215
@@ -952,7 +930,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel35 
             Height          =   255
             Left            =   10800
-            OleObjectBlob   =   "frmRelExpAvulso.frx":330D
+            OleObjectBlob   =   "frmRelExpAvulso.frx":32F5
             TabIndex        =   86
             Top             =   840
             Width           =   375
@@ -960,7 +938,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel34 
             Height          =   255
             Left            =   8640
-            OleObjectBlob   =   "frmRelExpAvulso.frx":3371
+            OleObjectBlob   =   "frmRelExpAvulso.frx":3359
             TabIndex        =   85
             Top             =   840
             Width           =   735
@@ -968,7 +946,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel33 
             Height          =   255
             Left            =   6720
-            OleObjectBlob   =   "frmRelExpAvulso.frx":33DD
+            OleObjectBlob   =   "frmRelExpAvulso.frx":33C5
             TabIndex        =   84
             Top             =   840
             Width           =   855
@@ -976,7 +954,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel32 
             Height          =   255
             Left            =   5640
-            OleObjectBlob   =   "frmRelExpAvulso.frx":3449
+            OleObjectBlob   =   "frmRelExpAvulso.frx":3431
             TabIndex        =   83
             Top             =   840
             Width           =   855
@@ -1014,7 +992,7 @@ Begin VB.Form frmRelExpAvulso
             Width           =   4215
          End
          Begin VB.TextBox txtDestinatario 
-            Height          =   330
+            Height          =   345
             Index           =   0
             Left            =   120
             TabIndex        =   78
@@ -1024,7 +1002,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel31 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRelExpAvulso.frx":34AF
+            OleObjectBlob   =   "frmRelExpAvulso.frx":3497
             TabIndex        =   77
             Top             =   240
             Width           =   495
@@ -1032,7 +1010,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel30 
             Height          =   255
             Left            =   2880
-            OleObjectBlob   =   "frmRelExpAvulso.frx":350D
+            OleObjectBlob   =   "frmRelExpAvulso.frx":34F5
             TabIndex        =   76
             Top             =   1440
             Width           =   495
@@ -1040,7 +1018,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRelExpAvulso.frx":356B
+            OleObjectBlob   =   "frmRelExpAvulso.frx":3553
             TabIndex        =   75
             Top             =   1440
             Width           =   735
@@ -1048,7 +1026,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmRelExpAvulso.frx":35CD
+            OleObjectBlob   =   "frmRelExpAvulso.frx":35B5
             TabIndex        =   74
             Top             =   840
             Width           =   1455
@@ -1056,7 +1034,7 @@ Begin VB.Form frmRelExpAvulso
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   1320
-            OleObjectBlob   =   "frmRelExpAvulso.frx":3637
+            OleObjectBlob   =   "frmRelExpAvulso.frx":361F
             TabIndex        =   73
             Top             =   240
             Width           =   1215
@@ -1066,11 +1044,10 @@ Begin VB.Form frmRelExpAvulso
          Height          =   615
          Index           =   6
          Left            =   1920
-         Picture         =   "frmRelExpAvulso.frx":3699
+         Picture         =   "frmRelExpAvulso.frx":3681
          Style           =   1  'Graphical
          TabIndex        =   32
          Tag             =   "Excluir"
-         ToolTipText     =   "Excluir"
          Top             =   1440
          Width           =   615
       End
@@ -1078,11 +1055,10 @@ Begin VB.Form frmRelExpAvulso
          Height          =   615
          Index           =   5
          Left            =   1320
-         Picture         =   "frmRelExpAvulso.frx":4363
+         Picture         =   "frmRelExpAvulso.frx":434B
          Style           =   1  'Graphical
          TabIndex        =   31
          Tag             =   "Editar"
-         ToolTipText     =   "Editar"
          Top             =   1440
          Width           =   615
       End
@@ -1090,11 +1066,10 @@ Begin VB.Form frmRelExpAvulso
          Height          =   615
          Index           =   4
          Left            =   720
-         Picture         =   "frmRelExpAvulso.frx":502D
+         Picture         =   "frmRelExpAvulso.frx":5015
          Style           =   1  'Graphical
          TabIndex        =   30
          Tag             =   "Novo"
-         ToolTipText     =   "Novo"
          Top             =   1440
          Width           =   615
       End
@@ -1102,43 +1077,45 @@ Begin VB.Form frmRelExpAvulso
          Height          =   615
          Index           =   3
          Left            =   120
-         Picture         =   "frmRelExpAvulso.frx":5CF7
+         Picture         =   "frmRelExpAvulso.frx":5CDF
          Style           =   1  'Graphical
          TabIndex        =   29
-         Tag             =   "Incluir"
-         ToolTipText     =   "Incluir"
+         Tag             =   "Inserir"
          Top             =   1440
          Width           =   615
       End
       Begin VB.ComboBox Combo1 
          Height          =   345
-         ItemData        =   "frmRelExpAvulso.frx":69C1
+         ItemData        =   "frmRelExpAvulso.frx":69A9
          Left            =   13200
-         List            =   "frmRelExpAvulso.frx":69D7
+         List            =   "frmRelExpAvulso.frx":69BF
          TabIndex        =   26
+         Tag             =   "Unidade de medida"
          Text            =   "PÇ"
          Top             =   960
          Width           =   855
       End
       Begin VB.TextBox Text2 
-         Height          =   330
+         Height          =   345
          Left            =   12000
          TabIndex        =   25
+         Tag             =   "Quantidade"
          Top             =   960
          Width           =   1095
       End
       Begin VB.TextBox Text1 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Left            =   120
          TabIndex        =   24
+         Tag             =   "Descrição"
          Top             =   960
          Width           =   11175
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel28 
          Height          =   255
          Left            =   13200
-         OleObjectBlob   =   "frmRelExpAvulso.frx":69F3
+         OleObjectBlob   =   "frmRelExpAvulso.frx":69DB
          TabIndex        =   69
          Top             =   720
          Width           =   855
@@ -1146,7 +1123,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel27 
          Height          =   255
          Left            =   12000
-         OleObjectBlob   =   "frmRelExpAvulso.frx":6A5B
+         OleObjectBlob   =   "frmRelExpAvulso.frx":6A43
          TabIndex        =   68
          Top             =   720
          Width           =   1095
@@ -1154,7 +1131,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmRelExpAvulso.frx":6AC9
+         OleObjectBlob   =   "frmRelExpAvulso.frx":6AB1
          TabIndex        =   67
          Top             =   720
          Width           =   1095
@@ -1250,7 +1227,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel38 
          Height          =   255
          Left            =   4200
-         OleObjectBlob   =   "frmRelExpAvulso.frx":6B35
+         OleObjectBlob   =   "frmRelExpAvulso.frx":6B1D
          TabIndex        =   99
          Top             =   7800
          Visible         =   0   'False
@@ -1259,7 +1236,7 @@ Begin VB.Form frmRelExpAvulso
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel39 
          Height          =   255
          Left            =   3240
-         OleObjectBlob   =   "frmRelExpAvulso.frx":6B95
+         OleObjectBlob   =   "frmRelExpAvulso.frx":6B7D
          TabIndex        =   100
          Top             =   7800
          Visible         =   0   'False
@@ -1307,7 +1284,7 @@ Private Declare Function SendMessage Lib "user32" Alias _
 ByVal wParam As Long, lParam As Any) As Long
 Private Const LVM_FIRST = &H1000
 'Acima ajusta automaticamente a largura das colunas
-Private X As Integer, W As Integer
+Private x As Integer, W As Integer
 Private ContaLV As Integer, LinhaLV As Integer, ContaChecado As Integer, LimiTador As Integer
 Private rsLocal As New ADODB.Recordset
 Private vPonte1 As TextBox
@@ -1345,14 +1322,14 @@ Private Sub cmdExpAvulso_Click(Index As Integer)
         ChamaGridFCE
         CarregaFCE
     Case 1
-        If txtCadastro(0).Text <> "" Then
+        If txtcadastro(0).Text <> "" Then
             ChamaGridProjeto
             CarregaProjeto
         End If
     Case 2
         ChamaGridTrans
         CarregaTipoTrans
-        txtCadastro(14).SetFocus
+        txtcadastro(14).SetFocus
     Case 3
         If Text2.Text = "" Then
             mobjMsg.Abrir "Favor informar a quantidade", Ok, critico, "Atenção"
@@ -1361,9 +1338,9 @@ Private Sub cmdExpAvulso_Click(Index As Integer)
         vPonte1.Text = Combo1.Text
         vPonte2.Text = " "
         vPonte3.Text = "12"
-        If txtCadastro(19).Text <> "" Then Text1.Text = txtCadastro(19) & " - " & Text1.Text
+        If txtcadastro(19).Text <> "" Then Text1.Text = txtcadastro(19) & " - " & Text1.Text
         IncluirLV ListView1, Text3, Text1, Text4, vPonte2, vPonte2, Text5, vPonte2, Text2, vPonte3, vPonte1, vPonte2, vPonte2, vPonte2, vPonte2, vPonte2
-        LimpaControles Text1, Text2, txtCadastro(19), Text4, Text5, Text1, Text1, Text1, Text1, Text1
+        LimpaControles Text1, Text2, txtcadastro(19), Text4, Text5, Text1, Text1, Text1, Text1, Text1
         Text3 = Format(GeraCodigoLV(ListView1), "00")
         SomaTotais
         If Text1.Enabled = True Then Text1.SetFocus
@@ -1457,7 +1434,7 @@ Private Sub Text2_KeyPress(KeyAscii As Integer)
 End Sub
 
 Private Sub txtCadastro_GotFocus(Index As Integer)
-    mudaCorText txtCadastro(Index)
+    mudaCorText txtcadastro(Index)
 End Sub
 
 Private Sub Form_Resize()
@@ -1495,7 +1472,7 @@ Private Sub listview_cabecalho()
 End Sub
 
 Private Sub CompoeControles()
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
     Text3 = Format(GeraCodigoLV(ListView1), "00")
     DTPicker1 = Date 'Data de emissão do relatório
     SkinLabel7.Caption = vSituacao
@@ -1514,11 +1491,11 @@ End Sub
 Private Function SomaTotais()
 On Error GoTo TrataErro
     SomaTotais = True
-    Dim Y As Integer, SomaQtd As Double
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, SomaQtd As Double
+    y = ListView1.ListItems.Count
     SomaQtd = 0
     SomaPeso = 0
-    For W = 1 To Y
+    For W = 1 To y
         ListView1.ListItems(W).Selected = True
         SomaQtd = SomaQtd + ListView1.SelectedItem.ListSubItems.Item(7)
         SomaPeso = SomaPeso + ListView1.SelectedItem.ListSubItems.Item(5)
@@ -1580,7 +1557,7 @@ On Error GoTo Err
         Pesquisa = Mid$(Pesquisa, 7, 100)
         rsLocal.Find "nome=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(6).Text = Format(rsLocal.Fields(0), "000")
+            txtcadastro(6).Text = Format(rsLocal.Fields(0), "000")
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -1599,30 +1576,30 @@ End Sub
 
 Private Sub CarregaTipoTrans()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     Dim rsTipoTrans As New ADODB.Recordset
     SqlM = "select a.CODTRA,a.NOME,a.CGC,a.INSCRESTADUAL,a.RUA+','+a.NUMERO as endereco,a.CEP,a.BAIRRO,a.CIDADE,a.CODETD from " & vBancoTotvs & ".dbo.ttra as a order by a.CODETD"
     rsTipoTrans.Open SqlM, cnBanco, adOpenKeyset, adLockReadOnly
     If Not rsTipoTrans.EOF Then rsTipoTrans.MoveFirst
-    rsTipoTrans.Find "CODTRA=" & "'" & Format(txtCadastro(6), "000") & "'"
+    rsTipoTrans.Find "CODTRA=" & "'" & Format(txtcadastro(6), "000") & "'"
     If rsTipoTrans.EOF Then
-        txtCadastro(6).Text = Format(txtCadastro(6), "000") & ""
+        txtcadastro(6).Text = Format(txtcadastro(6), "000") & ""
         If Val(Pesquisa) <> 0 Then
             mobjMsg.Abrir "Transportadora não cadastrada", Ok, critico, "Atenção"
-            txtCadastro(7) = ""
+            txtcadastro(7) = ""
         End If
     Else
-        txtCadastro(6).Text = Format(rsTipoTrans.Fields(0), "000") & "" 'codigo
-        txtCadastro(7).Text = rsTipoTrans.Fields(1) 'nome
-        If Not IsNull(rsTipoTrans.Fields(2)) Then txtCadastro(8).Text = rsTipoTrans.Fields(2) 'cnpj
-        If Not IsNull(rsTipoTrans.Fields(3)) Then txtCadastro(9).Text = rsTipoTrans.Fields(3) 'ie
-        If Not IsNull(rsTipoTrans.Fields(4)) Then txtCadastro(10).Text = rsTipoTrans.Fields(4) 'endereco (rua+numero)
-        If Not IsNull(rsTipoTrans.Fields(5)) Then txtCadastro(11).Text = rsTipoTrans.Fields(5) 'cep
-        If Not IsNull(rsTipoTrans.Fields(6)) Then txtCadastro(12).Text = rsTipoTrans.Fields(6) 'bairro
-        If Not IsNull(rsTipoTrans.Fields(7)) Then txtCadastro(13).Text = rsTipoTrans.Fields(7) 'cidade
+        txtcadastro(6).Text = Format(rsTipoTrans.Fields(0), "000") & "" 'codigo
+        txtcadastro(7).Text = rsTipoTrans.Fields(1) 'nome
+        If Not IsNull(rsTipoTrans.Fields(2)) Then txtcadastro(8).Text = rsTipoTrans.Fields(2) 'cnpj
+        If Not IsNull(rsTipoTrans.Fields(3)) Then txtcadastro(9).Text = rsTipoTrans.Fields(3) 'ie
+        If Not IsNull(rsTipoTrans.Fields(4)) Then txtcadastro(10).Text = rsTipoTrans.Fields(4) 'endereco (rua+numero)
+        If Not IsNull(rsTipoTrans.Fields(5)) Then txtcadastro(11).Text = rsTipoTrans.Fields(5) 'cep
+        If Not IsNull(rsTipoTrans.Fields(6)) Then txtcadastro(12).Text = rsTipoTrans.Fields(6) 'bairro
+        If Not IsNull(rsTipoTrans.Fields(7)) Then txtcadastro(13).Text = rsTipoTrans.Fields(7) 'cidade
         If Not IsNull(rsTipoTrans.Fields(8)) Then cboCadastro(0).Text = rsTipoTrans.Fields(8) 'UF
-        For X = 7 To 13
-            txtCadastro(X).Enabled = False
+        For x = 7 To 13
+            txtcadastro(x).Enabled = False
         Next
         cboCadastro(0).Enabled = False
     End If
@@ -1658,10 +1635,10 @@ On Error GoTo Err
         'Pesquisa = Mid$(Pesquisa, 7, 100)
         rsLocal.Find "CODCFO=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(0).Text = "0"
-            txtCadastro(1).Text = "0"
-            txtCadastro(2).Text = "-"
-            txtCadastro(3).Text = rsLocal.Fields(1)
+            txtcadastro(0).Text = "0"
+            txtcadastro(1).Text = "0"
+            txtcadastro(2).Text = "-"
+            txtcadastro(3).Text = rsLocal.Fields(1)
 
             txtDestinatario(0).Text = rsLocal.Fields(0) 'Identificador do destinatário
             txtDestinatario(1).Text = rsLocal.Fields(1) 'Nome do destinatário
@@ -1694,7 +1671,7 @@ Private Function GravarDados()
 On Error GoTo Err
     If ValidaCampo = False Then Exit Function
     GravarDados = True
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     Dim rsRelatorio As New ADODB.Recordset
     Dim sqlRelatorio As String
@@ -1715,13 +1692,13 @@ On Error GoTo Err
     rsRelatorio.Open sqlRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
     rsRelatorio.AddNew
     
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
     
-    rsRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do Relatorio
-    rsRelatorio.Fields(1) = Val(txtCadastro(0)) 'FCE
-    rsRelatorio.Fields(2) = Val(txtCadastro(1)) 'Codigo do projeto
+    rsRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do Relatorio
+    rsRelatorio.Fields(1) = Val(txtcadastro(0)) 'FCE
+    rsRelatorio.Fields(2) = Val(txtcadastro(1)) 'Codigo do projeto
     rsRelatorio.Fields(3) = Format(DTPicker1, "dd/mm/yyyy") 'Data do relatorio
-    rsRelatorio.Fields(4) = txtCadastro(5) 'Observação
+    rsRelatorio.Fields(4) = txtcadastro(5) 'Observação
     rsRelatorio.Fields(5) = 0 'Status de impressão
     'rsRelatorio.Fields(6) = cboCadastro(4) 'Norma de Liberação
     rsRelatorio.Fields(7) = 11 'Tipo relatorio (11) Expedição
@@ -1729,7 +1706,7 @@ On Error GoTo Err
 '    rsRelatorio.Fields(8) = Format(0, "#,##0.00;(#,##0.00)") 'Peso de balança
     rsRelatorio.Fields(9) = NomUsu
     
-    If txtCadastro(0).Text = 0 Then
+    If txtcadastro(0).Text = 0 Then
         rsRelatorio.Fields(10) = txtDestinatario(0) 'Identificador do Destinatário
         rsRelatorio.Fields(11) = txtDestinatario(1) 'nome do Destinatário
         rsRelatorio.Fields(12) = txtDestinatario(2) 'Endereço do Destinatário
@@ -1748,17 +1725,17 @@ On Error GoTo Err
     'Gravar dados referente aos Itens do Relatório
     sqlItensRelatorio = "select * from tbRelInspExpitens"
     rsItensRelatorio.Open sqlItensRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         'If ListView1.ListItems.Item(X).Checked = True Then
             rsItensRelatorio.AddNew
-            rsItensRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do relatorio
-            rsItensRelatorio.Fields(1) = Val(txtCadastro(0).Text) 'Nº FCE
-            rsItensRelatorio.Fields(2) = Val(txtCadastro(1)) 'Código do Projeto
+            rsItensRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do relatorio
+            rsItensRelatorio.Fields(1) = Val(txtcadastro(0).Text) 'Nº FCE
+            rsItensRelatorio.Fields(2) = Val(txtcadastro(1)) 'Código do Projeto
             rsItensRelatorio.Fields(3) = ListView1.SelectedItem.ListSubItems.Item(2) 'Desenho
             rsItensRelatorio.Fields(4) = ListView1.SelectedItem.ListSubItems.Item(3) 'Revisão do Desenho
-            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(X) 'Posição
+            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(x) 'Posição
             rsItensRelatorio.Fields(6) = ListView1.SelectedItem.ListSubItems.Item(1) 'Descrição da posição
             rsItensRelatorio.Fields(7) = ListView1.SelectedItem.ListSubItems.Item(8) 'Status (Codfase)
             rsItensRelatorio.Fields(8) = ListView1.SelectedItem.ListSubItems.Item(7) 'Quantidade liberada
@@ -1786,47 +1763,47 @@ On Error GoTo Err
     'Grava dados do formulário
     'O 1º parametro é o valor que sera gravado no campo
     'O 2º parametro é o tipo de dado que o campo armazena
-    If txtCadastro(0).Text = "0" Then vQualquerDado(20, 1) = "-" Else vQualquerDado(20, 1) = txtCadastro(0).Text 'grava o numero da FCE
+    If txtcadastro(0).Text = "0" Then vQualquerDado(20, 1) = "-" Else vQualquerDado(20, 1) = txtcadastro(0).Text 'grava o numero da FCE
     
-    vQualquerDado(1, 1) = txtCadastro(4).Text
+    vQualquerDado(1, 1) = txtcadastro(4).Text
     vQualquerDado(1, 2) = "I"
-    vQualquerDado(2, 1) = txtCadastro(6).Text
+    vQualquerDado(2, 1) = txtcadastro(6).Text
     vQualquerDado(2, 2) = "I"
-    vQualquerDado(3, 1) = txtCadastro(7).Text
+    vQualquerDado(3, 1) = txtcadastro(7).Text
     vQualquerDado(3, 2) = "S"
-    vQualquerDado(4, 1) = txtCadastro(8).Text
+    vQualquerDado(4, 1) = txtcadastro(8).Text
     vQualquerDado(4, 2) = "S"
-    vQualquerDado(5, 1) = txtCadastro(9).Text
+    vQualquerDado(5, 1) = txtcadastro(9).Text
     vQualquerDado(5, 2) = "S"
     
-    vQualquerDado(6, 1) = txtCadastro(10).Text
+    vQualquerDado(6, 1) = txtcadastro(10).Text
     vQualquerDado(6, 2) = "S"
-    vQualquerDado(7, 1) = txtCadastro(11).Text
+    vQualquerDado(7, 1) = txtcadastro(11).Text
     vQualquerDado(7, 2) = "S"
-    vQualquerDado(8, 1) = txtCadastro(12).Text
+    vQualquerDado(8, 1) = txtcadastro(12).Text
     vQualquerDado(8, 2) = "S"
-    vQualquerDado(9, 1) = txtCadastro(13).Text
+    vQualquerDado(9, 1) = txtcadastro(13).Text
     vQualquerDado(9, 2) = "S"
     vQualquerDado(10, 1) = cboCadastro(0).Text
     vQualquerDado(10, 2) = "S"
     
-    vQualquerDado(11, 1) = txtCadastro(14).Text
+    vQualquerDado(11, 1) = txtcadastro(14).Text
     vQualquerDado(11, 2) = "S"
     vQualquerDado(12, 1) = cboCadastro(1).Text
     vQualquerDado(12, 2) = "S"
-    vQualquerDado(13, 1) = txtCadastro(15).Text
+    vQualquerDado(13, 1) = txtcadastro(15).Text
     vQualquerDado(13, 2) = "S"
     vQualquerDado(14, 1) = cboCadastro(2).Text
     vQualquerDado(14, 2) = "S"
-    vQualquerDado(15, 1) = txtCadastro(16).Text
+    vQualquerDado(15, 1) = txtcadastro(16).Text
     vQualquerDado(15, 2) = "S"
-    GravaDados "tbRelExpTransp", "codrel", "I", txtCadastro(4), 15, "", "", txtCadastro(4)
+    GravaDados "tbRelExpTransp", "codrel", "I", txtcadastro(4), 15, "", "", txtcadastro(4)
    
     mobjMsg.Abrir "Dados gravados com sucesso", Ok, informacao, "Atenção"
     
     mobjMsg.Abrir "Dados gravados com sucesso.Deseja imprimir de relatório de Expedição?", YesNo, pergunta, "Zeus"
     If Tp = 1 Then
-        vCodRel = Val(txtCadastro(4))
+        vCodRel = Val(txtcadastro(4))
         FCRExpedicao.Show 1
         sqlRelatorio = "update tbRelInspExp set statusimp=1 where codrel ='" & vCodRel & "'"
         rsRelatorio.Open sqlRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
@@ -1849,19 +1826,19 @@ End Function
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    If txtCadastro(0).Text = "" Then
-        mobjMsg.Abrir "Favor informar o campo " & Me.txtCadastro(0).Tag, Ok, critico, "Atenção"
+    If txtcadastro(0).Text = "" Then
+        mobjMsg.Abrir "Favor informar o campo " & Me.txtcadastro(0).Tag, Ok, critico, "Atenção"
         Me.cmdExpAvulso(0).SetFocus
         Exit Function
     End If
-    If txtCadastro(2).Text = "" Then
-        mobjMsg.Abrir "Favor informar o campo " & Me.txtCadastro(2).Tag, Ok, critico, "Atenção"
+    If txtcadastro(2).Text = "" Then
+        mobjMsg.Abrir "Favor informar o campo " & Me.txtcadastro(2).Tag, Ok, critico, "Atenção"
         Me.cmdExpAvulso(1).SetFocus
         Exit Function
     End If
-    If txtCadastro(6).Text = "" Then
-        mobjMsg.Abrir "Favor informar o campo " & Me.txtCadastro(6).Tag, Ok, critico, "Atenção"
-        Me.txtCadastro(6).SetFocus
+    If txtcadastro(6).Text = "" Then
+        mobjMsg.Abrir "Favor informar o campo " & Me.txtcadastro(6).Tag, Ok, critico, "Atenção"
+        Me.txtcadastro(6).SetFocus
         Exit Function
     End If
     If ListView1.ListItems.Count = 0 Then
@@ -1894,9 +1871,9 @@ Dim si As SCROLLINFO
 End Function
 
 Private Sub SelecionaLinha()
-    Dim Y As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For W = 1 To Y
+    Dim y As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For W = 1 To y
         If vListViewPrincipal.ListItems.Item(W).Selected = True Then
             Exit For
         End If
@@ -1906,17 +1883,17 @@ End Sub
 
 Private Sub CarregaFCE()
 On Error GoTo Err
-    Dim X As Integer
-    sqlFCE = "Select a.fce,a.codprojeto,b.codclifor,c.nome from tbprojetos as a inner join tbfo as b on a.fce = b.fce left join tbclifor as c on b.codclifor = c.codclifor where a.fce = '" & Val(txtCadastro(0)) & "' order by fce"
+    Dim x As Integer
+    sqlFCE = "Select a.fce,a.codprojeto,b.codclifor,c.nome from tbprojetos as a inner join tbfo as b on a.fce = b.fce left join tbclifor as c on b.codclifor = c.codclifor where a.fce = '" & Val(txtcadastro(0)) & "' order by fce"
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
     If rsFCE.EOF Then
-        txtCadastro(0).Text = txtCadastro(0)
+        txtcadastro(0).Text = txtcadastro(0)
         mobjMsg.Abrir "FCE não cadastrada", Ok, critico, "Atenção"
     Else
-        txtCadastro(0).Text = rsFCE.Fields(0)
-        txtCadastro(3).Text = rsFCE.Fields(3)
-        txtCadastro(1).Text = ""
-        txtCadastro(2).Text = ""
+        txtcadastro(0).Text = rsFCE.Fields(0)
+        txtcadastro(3).Text = rsFCE.Fields(3)
+        txtcadastro(1).Text = ""
+        txtcadastro(2).Text = ""
         txtDestinatario(0).Text = "" 'Identificador do destinatário
         txtDestinatario(1).Text = "" 'Nome do destinatário
         txtDestinatario(2).Text = "" 'Endereço do destinatário
@@ -1955,7 +1932,7 @@ On Error GoTo Err
         rsLocal.MoveFirst
         rsLocal.Find "fce=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(0).Text = rsLocal.Fields(0)
+            txtcadastro(0).Text = rsLocal.Fields(0)
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -1974,19 +1951,19 @@ End Sub
 
 Private Sub CarregaProjeto()
 On Error GoTo Err
-    Dim X As Integer
-    SqlProjeto = "Select * from tbprojetos where fce = '" & txtCadastro(0) & "' order by fce"
+    Dim x As Integer
+    SqlProjeto = "Select * from tbprojetos where fce = '" & txtcadastro(0) & "' order by fce"
     rsProjeto.Open SqlProjeto, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsProjeto.EOF Then rsProjeto.MoveFirst
-    rsProjeto.Find "projeto=" & "'" & Me.txtCadastro(2) & "'"
+    rsProjeto.Find "projeto=" & "'" & Me.txtcadastro(2) & "'"
     If rsProjeto.EOF Then
-        txtCadastro(2).Text = txtCadastro(2)
+        txtcadastro(2).Text = txtcadastro(2)
         If Val(Pesquisa) <> 0 Then
             mobjMsg.Abrir "Projeto não cadastrado", Ok, critico, "Atenção"
         End If
     Else
-        txtCadastro(2).Text = rsProjeto.Fields(2)
-        txtCadastro(1).Text = rsProjeto.Fields(0)
+        txtcadastro(2).Text = rsProjeto.Fields(2)
+        txtcadastro(1).Text = rsProjeto.Fields(0)
         'txtDesenho(1).Text = Format(rsProjeto.Fields(0), "000000")
     End If
     rsProjeto.Close
@@ -2007,7 +1984,7 @@ Private Sub ChamaGridProjeto()
 On Error GoTo Err
     Dim F As New frmpesqger
     Dim Iposicao As Variant
-    Sqlp = "Select * from tbprojetos where fce = '" & txtCadastro(0) & "' order by fce,Projeto"
+    Sqlp = "Select * from tbprojetos where fce = '" & txtcadastro(0) & "' order by fce,Projeto"
     procnom = "projeto"
     campo = 2
     Campo1 = 1
@@ -2021,7 +1998,7 @@ On Error GoTo Err
         rsLocal.MoveFirst
         rsLocal.Find "projeto=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(2).Text = rsLocal.Fields(2)
+            txtcadastro(2).Text = rsLocal.Fields(2)
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -2041,7 +2018,7 @@ End Sub
 Private Sub ChamaGridProduto()
 On Error GoTo Err
     Dim F As New frmPesqger2
-    Sqlp = "Select a.codigoprd,a.nomefantasia from " & vBancoTotvs & ".dbo.TPRD as a left join tbmateriais as b on a.IDPRD = b.idprd where a.CODIGOPRD like '%%' and a.codigoprd like '%" & txtCadastro(19) & "%' order by a.nomefantasia"
+    Sqlp = "Select a.codigoprd,a.nomefantasia from " & vBancoTotvs & ".dbo.TPRD as a left join tbmateriais as b on a.IDPRD = b.idprd where a.CODIGOPRD like '%%' and a.codigoprd like '%" & txtcadastro(19) & "%' order by a.nomefantasia"
     procnom = "nomefantasia"
     campo = 1
     Campo1 = 0
@@ -2056,7 +2033,7 @@ On Error GoTo Err
         rsLocal.Find "CODIGOPRD=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
             If Pesquisa = "Lista de Materiais" Then Pesquisa = ""
-            txtCadastro(19) = Pesquisa
+            txtcadastro(19) = Pesquisa
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -2076,7 +2053,7 @@ End Sub
 Private Sub CarregaDados(Index)
 On Error GoTo Err
     Dim rsMaterial As New ADODB.Recordset
-    SqlM = "Select a.CODIGOPRD,a.NOMEFANTASIA,b.formula,b.constpint,c.valconst,a.CODUNDCONTROLE,b.forpint,b.observacao,d.DESCRICAO,a.idprd from " & vBancoTotvs & ".dbo.tprd as a left join tbMateriais as b on b.idprd = a.idprd left Join tbconstantes as c on b.idprd = c.idprd left join " & vBancoTotvs & ".dbo.TTB2 as d on a.CODTB2FAT = d.CODTB2FAT where a.CODIGOPRD = '" & txtCadastro(19) & "'order by c.idseq"
+    SqlM = "Select a.CODIGOPRD,a.NOMEFANTASIA,b.formula,b.constpint,c.valconst,a.CODUNDCONTROLE,b.forpint,b.observacao,d.DESCRICAO,a.idprd from " & vBancoTotvs & ".dbo.tprd as a left join tbMateriais as b on b.idprd = a.idprd left Join tbconstantes as c on b.idprd = c.idprd left join " & vBancoTotvs & ".dbo.TTB2 as d on a.CODTB2FAT = d.CODTB2FAT where a.CODIGOPRD = '" & txtcadastro(19) & "'order by c.idseq"
     rsMaterial.Open SqlM, cnBanco, adOpenKeyset, adLockReadOnly
     Text1.Text = rsMaterial.Fields(1)
     rsMaterial.Close
@@ -2093,5 +2070,5 @@ Err:
 End Sub
 
 Private Sub txtCadastro_LostFocus(Index As Integer)
-    voltaCorText txtCadastro(Index)
+    voltaCorText txtcadastro(Index)
 End Sub

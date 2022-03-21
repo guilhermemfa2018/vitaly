@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmCriaFiltro 
    BorderStyle     =   1  'Fixed Single
@@ -23,11 +24,19 @@ Begin VB.Form frmCriaFiltro
    ScaleHeight     =   10770
    ScaleWidth      =   11040
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2880
+      Top             =   10200
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton Command5 
       Caption         =   "Visualizar Query Principal"
       Height          =   495
       Left            =   8520
       TabIndex        =   29
+      Tag             =   "Visualiza a query padrão dofiltro que está sendo criado"
       Top             =   10080
       Width           =   2415
    End
@@ -151,6 +160,7 @@ Begin VB.Form frmCriaFiltro
          Height          =   735
          Left            =   8040
          TabIndex        =   18
+         Tag             =   "Identifica se o filtro será exibido somente para o usuário logado ou para todos"
          Top             =   240
          Width           =   2655
          Begin VB.OptionButton Option3 
@@ -216,6 +226,7 @@ Begin VB.Form frmCriaFiltro
       Picture         =   "frmCriaFiltro.frx":3328
       Style           =   1  'Graphical
       TabIndex        =   16
+      Tag             =   "Salvar filtro"
       Top             =   10080
       Width           =   615
    End
@@ -247,6 +258,7 @@ Begin VB.Form frmCriaFiltro
             Height          =   330
             Left            =   120
             TabIndex        =   15
+            Tag             =   "Exibe o nome da tabela do campo selecionado"
             Top             =   240
             Width           =   2175
          End
@@ -305,6 +317,7 @@ Begin VB.Form frmCriaFiltro
             Height          =   285
             Left            =   240
             TabIndex        =   10
+            Tag             =   "Informe uma condição para o filtro. Abra e feche colchetes caso deseje que o parâmetro seja passo quando o filtro for executado"
             Top             =   240
             Width           =   3255
          End
@@ -312,6 +325,7 @@ Begin VB.Form frmCriaFiltro
             Height          =   285
             Left            =   240
             TabIndex        =   9
+            Tag             =   "Informe uma condição para o filtro. Abra e feche colchetes caso deseje que o parâmetro seja passo quando o filtro for executado"
             Top             =   720
             Visible         =   0   'False
             Width           =   3255
@@ -339,6 +353,7 @@ Begin VB.Form frmCriaFiltro
             Left            =   240
             List            =   "frmCriaFiltro.frx":401D
             TabIndex        =   7
+            Tag             =   "Operador utilizado para a consulta ao campo selecionado"
             Text            =   "="
             Top             =   240
             Width           =   3975
@@ -364,6 +379,7 @@ Begin VB.Form frmCriaFiltro
             Height          =   285
             Left            =   240
             TabIndex        =   5
+            Tag             =   "Campo a ser utilizado na query do filtro"
             Top             =   360
             Width           =   3975
          End
@@ -381,6 +397,7 @@ Begin VB.Form frmCriaFiltro
          Height          =   375
          Left            =   120
          TabIndex        =   3
+         Tag             =   "Nome do filtro"
          Top             =   240
          Width           =   4335
       End
@@ -396,6 +413,7 @@ Begin VB.Form frmCriaFiltro
             Height          =   330
             Left            =   120
             TabIndex        =   2
+            Tag             =   "Exibe o tipo do campo selecionado"
             Top             =   240
             Width           =   2175
          End
@@ -405,6 +423,7 @@ Begin VB.Form frmCriaFiltro
       Height          =   6255
       Left            =   120
       TabIndex        =   25
+      Tag             =   "Selecione um dos campos disponíveis para compor a query do novo filtro"
       Top             =   120
       Width           =   6135
       _ExtentX        =   10821
@@ -584,11 +603,11 @@ Private Sub Command3_Click()
 End Sub
 
 Private Sub Command4_Click()
-    Dim Y As Integer, X As Integer
-    Y = ListView2.ListItems.Count
+    Dim y As Integer, x As Integer
+    y = ListView2.ListItems.Count
     vNovoFiltro = ""
-    For X = 1 To Y
-        ListView2.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    For x = 1 To y
+        ListView2.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         vNovoFiltro = vNovoFiltro & " " & ListView2.SelectedItem.ListSubItems.Item(1) & " " & ListView2.SelectedItem.ListSubItems.Item(2)
     Next
     vNovoFiltro = vNovoFiltro

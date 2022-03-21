@@ -1,6 +1,7 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmImpostosServicos 
    BorderStyle     =   3  'Fixed Dialog
@@ -17,6 +18,13 @@ Begin VB.Form frmImpostosServicos
    ScaleWidth      =   10560
    ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   3600
+      Top             =   10080
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.Frame Frame6 
       Caption         =   "Status"
       BeginProperty Font 
@@ -74,7 +82,6 @@ Begin VB.Form frmImpostosServicos
       Style           =   1  'Graphical
       TabIndex        =   10
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   9960
       Width           =   615
    End
@@ -86,7 +93,6 @@ Begin VB.Form frmImpostosServicos
       Style           =   1  'Graphical
       TabIndex        =   9
       Tag             =   "Salvar"
-      ToolTipText     =   "Salvar"
       Top             =   9960
       Width           =   615
    End
@@ -138,6 +144,7 @@ Begin VB.Form frmImpostosServicos
          _ExtentY        =   7011
          _Version        =   393216
          Tabs            =   2
+         Tab             =   1
          TabsPerRow      =   2
          TabHeight       =   520
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -151,14 +158,14 @@ Begin VB.Form frmImpostosServicos
          EndProperty
          TabCaption(0)   =   "Fórmulas"
          TabPicture(0)   =   "frmImpostosServicos.frx":3A82
-         Tab(0).ControlEnabled=   -1  'True
+         Tab(0).ControlEnabled=   0   'False
          Tab(0).Control(0)=   "Frame2"
-         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).ControlCount=   1
          TabCaption(1)   =   "Legenda"
          TabPicture(1)   =   "frmImpostosServicos.frx":3A9E
-         Tab(1).ControlEnabled=   0   'False
+         Tab(1).ControlEnabled=   -1  'True
          Tab(1).Control(0)=   "Frame7"
+         Tab(1).Control(0).Enabled=   0   'False
          Tab(1).ControlCount=   1
          Begin VB.Frame Frame7 
             Appearance      =   0  'Flat
@@ -166,7 +173,7 @@ Begin VB.Form frmImpostosServicos
             BorderStyle     =   0  'None
             ForeColor       =   &H80000008&
             Height          =   3495
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   31
             Top             =   360
             Width           =   9855
@@ -307,7 +314,7 @@ Begin VB.Form frmImpostosServicos
                Strikethrough   =   0   'False
             EndProperty
             Height          =   3495
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   18
             Top             =   360
             Width           =   9855
@@ -351,8 +358,7 @@ Begin VB.Form frmImpostosServicos
                Index           =   5
                Left            =   4320
                TabIndex        =   21
-               Tag             =   "Compor Fórmula"
-               ToolTipText     =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
+               Tag             =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
                Top             =   2160
                Width           =   5415
             End
@@ -361,8 +367,7 @@ Begin VB.Form frmImpostosServicos
                Index           =   3
                Left            =   4320
                TabIndex        =   20
-               Tag             =   "Compor Fórmula"
-               ToolTipText     =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
+               Tag             =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
                Top             =   1320
                Width           =   5415
             End
@@ -380,8 +385,7 @@ Begin VB.Form frmImpostosServicos
                Index           =   4
                Left            =   4320
                TabIndex        =   19
-               Tag             =   "Alíquota"
-               ToolTipText     =   "Percentual a ser Aplicado sobre o valor do orçamento"
+               Tag             =   "Percentual a ser Aplicado sobre o valor do orçamento"
                Top             =   480
                Width           =   5415
             End
@@ -492,7 +496,6 @@ Begin VB.Form frmImpostosServicos
          Style           =   1  'Graphical
          TabIndex        =   7
          Tag             =   "Excluir"
-         ToolTipText     =   "Excluir"
          Top             =   6480
          Width           =   615
       End
@@ -513,7 +516,6 @@ Begin VB.Form frmImpostosServicos
          Style           =   1  'Graphical
          TabIndex        =   6
          Tag             =   "Editar"
-         ToolTipText     =   "Editar"
          Top             =   6480
          Width           =   615
       End
@@ -534,7 +536,6 @@ Begin VB.Form frmImpostosServicos
          Style           =   1  'Graphical
          TabIndex        =   4
          Tag             =   "Novo"
-         ToolTipText     =   "Novo"
          Top             =   6480
          Width           =   615
       End
@@ -571,8 +572,7 @@ Begin VB.Form frmImpostosServicos
             List            =   "frmImpostosServicos.frx":7241
             Style           =   2  'Dropdown List
             TabIndex        =   3
-            Tag             =   "Tipo: IMPOSTO ou SERVIÇO"
-            ToolTipText     =   "Selecione o Tipo: IMPOSTO ou SERVIÇO"
+            Tag             =   "Selecione o Tipo: IMPOSTO ou SERVIÇO"
             Top             =   360
             Width           =   1815
          End
@@ -593,8 +593,7 @@ Begin VB.Form frmImpostosServicos
          Picture         =   "frmImpostosServicos.frx":7257
          Style           =   1  'Graphical
          TabIndex        =   5
-         Tag             =   "Incluir"
-         ToolTipText     =   "Incluir"
+         Tag             =   "Inserir"
          Top             =   6480
          Width           =   615
       End
@@ -613,8 +612,7 @@ Begin VB.Form frmImpostosServicos
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   2
-         Tag             =   "Descrição"
-         ToolTipText     =   "Descrição do Imposto ou Serviço"
+         Tag             =   "Descrição do Imposto ou Serviço"
          Top             =   1200
          Width           =   10095
       End
@@ -632,8 +630,7 @@ Begin VB.Form frmImpostosServicos
          Index           =   1
          Left            =   1440
          TabIndex        =   1
-         Tag             =   "Nome"
-         ToolTipText     =   "Nome do imposto ou Serviço"
+         Tag             =   "Nome do imposto ou Serviço"
          Top             =   480
          Width           =   6615
       End
@@ -648,12 +645,11 @@ Begin VB.Form frmImpostosServicos
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
-         Tag             =   "ID"
-         ToolTipText     =   "Identificador do Imposto ou Serviço"
+         Tag             =   "Identificador do Imposto ou Serviço"
          Top             =   480
          Width           =   1215
       End
@@ -685,8 +681,7 @@ Begin VB.Form frmImpostosServicos
          Height          =   2535
          Left            =   120
          TabIndex        =   8
-         Tag             =   "Itens do Sub-critério"
-         ToolTipText     =   "Lista de IMPOSTOS e SERVIÇOS cadastrados"
+         Tag             =   "Lista de IMPOSTOS e SERVIÇOS cadastrados"
          Top             =   7200
          Width           =   10095
          _ExtentX        =   17806
@@ -794,7 +789,7 @@ Private Sub Command1_Click()
 End Sub
 
 Private Sub Form_Load()
-    inicializa_tabs
+    inicializa_tabs SSTab1, Picture1
     exibeOpt
     
     Text1.BackColor = 12829636
@@ -858,10 +853,10 @@ Private Sub txtImpostoServico_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtImpostoServico(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtImpostoServico.Count - 1
-        txtImpostoServico(X).SelStart = 0
-        txtImpostoServico(X).SelLength = Len(txtImpostoServico(X).Text)
+    Dim x As Integer
+    For x = 1 To txtImpostoServico.Count - 1
+        txtImpostoServico(x).SelStart = 0
+        txtImpostoServico(x).SelLength = Len(txtImpostoServico(x).Text)
     Next
 End Sub
 
@@ -913,12 +908,12 @@ Private Function ValidaInserirCampos(FormToLV_or_LVToTable As String)
 'Para que o sistema entenda se será validado dados que serão inseridos de campos do form parav um LV: ListView ou
 'Irá validar dados que serão inseridos de ListView para uma TB: Tabela do banco de dados
     If FormToLV_or_LVToTable = "FormToLV" Then
-        Dim X As Integer
+        Dim x As Integer
         ValidaInserirCampos = False
-        For X = 0 To 4
-            If Trim(txtImpostoServico(X).Text) = "" Then
-                mobjMsg.Abrir "Favor informar o campo " & Me.txtImpostoServico(X).Tag, Ok, critico, "Atenção"
-                Me.txtImpostoServico(X).SetFocus
+        For x = 0 To 4
+            If Trim(txtImpostoServico(x).Text) = "" Then
+                mobjMsg.Abrir "Favor informar o campo " & Me.txtImpostoServico(x).Tag, Ok, critico, "Atenção"
+                Me.txtImpostoServico(x).SetFocus
                 Exit Function
             End If
         Next
@@ -958,7 +953,7 @@ Private Sub lstListView2_Click()
     txtImpostoServico(vOndeEstaOTab).SetFocus
 End Sub
 
-Private Sub txtImpostoServico_MouseDown(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub txtImpostoServico_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     vOndeEstaOTab = Index
 End Sub
 
@@ -981,16 +976,16 @@ Private Sub exibeOpt()
     End If '
 End Sub
 
-Private Sub inicializa_tabs()
-    SSTab1.Tab = 0
-    SubClassSSTAB SSTab1, Picture1
-End Sub
+'Private Sub inicializa_tabs()
+'    SSTab1.Tab = 0
+'    SubClassSSTAB SSTab1, Picture1
+'End Sub
 
 Private Sub ConfLV()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(7) = "S" Then
             ListView1.SelectedItem.ListSubItems.Item(7) = ""
             ListView1.SelectedItem.ListSubItems.Item(7).ReportIcon = "OK"
@@ -1002,10 +997,10 @@ Private Sub ConfLV()
 End Sub
 
 Private Sub desConfLV()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(7).ReportIcon = "OK" Then
             ListView1.SelectedItem.ListSubItems.Item(7) = "S"
         ElseIf ListView1.SelectedItem.ListSubItems.Item(7).ReportIcon = "EXC" Then

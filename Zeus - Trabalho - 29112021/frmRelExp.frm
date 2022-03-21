@@ -6,7 +6,7 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmRelExp 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Emissão de relatórios de expedição"
-   ClientHeight    =   9090
+   ClientHeight    =   9825
    ClientLeft      =   420
    ClientTop       =   330
    ClientWidth     =   21450
@@ -25,12 +25,12 @@ Begin VB.Form frmRelExp
    MaxButton       =   0   'False
    MDIChild        =   -1  'True
    MinButton       =   0   'False
-   ScaleHeight     =   9120
+   ScaleHeight     =   9857.426
    ScaleMode       =   0  'User
    ScaleWidth      =   21450
    Begin IpToolTips.cIpToolTips cIpToolTips1 
       Left            =   5040
-      Top             =   8520
+      Top             =   9240
       _ExtentX        =   847
       _ExtentY        =   847
       BackColor       =   0
@@ -52,7 +52,7 @@ Begin VB.Form frmRelExp
       Style           =   1  'Graphical
       TabIndex        =   25
       Tag             =   "Sair"
-      Top             =   8400
+      Top             =   9120
       Width           =   615
    End
    Begin VB.CommandButton cmdCadastro 
@@ -72,7 +72,7 @@ Begin VB.Form frmRelExp
       Style           =   1  'Graphical
       TabIndex        =   24
       Tag             =   "Salvar Relatório"
-      Top             =   8400
+      Top             =   9120
       Width           =   615
    End
    Begin VB.Frame Frame3 
@@ -86,7 +86,7 @@ Begin VB.Form frmRelExp
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   8175
+      Height          =   8895
       Left            =   7200
       TabIndex        =   37
       Top             =   120
@@ -107,17 +107,17 @@ Begin VB.Form frmRelExp
          Height          =   225
          Left            =   8880
          TabIndex        =   43
-         Top             =   7800
+         Top             =   8520
          Width           =   1000
       End
       Begin MSComctlLib.ListView ListView1 
-         Height          =   6975
+         Height          =   7695
          Left            =   120
          TabIndex        =   23
          Top             =   240
          Width           =   13935
          _ExtentX        =   24580
-         _ExtentY        =   12303
+         _ExtentY        =   13573
          LabelEdit       =   1
          LabelWrap       =   -1  'True
          HideSelection   =   -1  'True
@@ -144,12 +144,12 @@ Begin VB.Form frmRelExp
          NumItems        =   0
       End
       Begin VB.TextBox txtCadastro 
-         Height          =   330
+         Height          =   345
          Index           =   17
          Left            =   1680
          TabIndex        =   22
          Tag             =   "Peso de balança"
-         Top             =   7680
+         Top             =   8400
          Width           =   2175
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
@@ -157,7 +157,7 @@ Begin VB.Form frmRelExp
          Left            =   240
          OleObjectBlob   =   "frmRelExp.frx":265E
          TabIndex        =   46
-         Top             =   7800
+         Top             =   8520
          Width           =   1455
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel30 
@@ -165,7 +165,7 @@ Begin VB.Form frmRelExp
          Left            =   4080
          OleObjectBlob   =   "frmRelExp.frx":26D6
          TabIndex        =   38
-         Top             =   7320
+         Top             =   8040
          Width           =   855
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel29 
@@ -173,7 +173,7 @@ Begin VB.Form frmRelExp
          Left            =   1800
          OleObjectBlob   =   "frmRelExp.frx":2736
          TabIndex        =   39
-         Top             =   7320
+         Top             =   8040
          Width           =   1215
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
@@ -181,7 +181,7 @@ Begin VB.Form frmRelExp
          Left            =   3120
          OleObjectBlob   =   "frmRelExp.frx":2796
          TabIndex        =   40
-         Top             =   7320
+         Top             =   8040
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
@@ -189,7 +189,7 @@ Begin VB.Form frmRelExp
          Left            =   240
          OleObjectBlob   =   "frmRelExp.frx":2804
          TabIndex        =   41
-         Top             =   7320
+         Top             =   8040
          Width           =   1575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
@@ -197,7 +197,7 @@ Begin VB.Form frmRelExp
          Left            =   5160
          OleObjectBlob   =   "frmRelExp.frx":287E
          TabIndex        =   42
-         Top             =   7320
+         Top             =   8040
          Width           =   2535
       End
       Begin VB.Label Label9 
@@ -214,7 +214,7 @@ Begin VB.Form frmRelExp
          Height          =   255
          Left            =   7920
          TabIndex        =   44
-         Top             =   7320
+         Top             =   8040
          Visible         =   0   'False
          Width           =   615
       End
@@ -230,10 +230,10 @@ Begin VB.Form frmRelExp
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   4575
+      Height          =   5055
       Left            =   120
       TabIndex        =   35
-      Top             =   3720
+      Top             =   3960
       Width           =   6975
       Begin ZEUS.chameleonButton chameleonButton2 
          Height          =   255
@@ -275,11 +275,12 @@ Begin VB.Form frmRelExp
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   9
          Left            =   3360
          TabIndex        =   11
-         Top             =   1080
+         Tag             =   "Inscrição Estadual da transportadora"
+         Top             =   1200
          Width           =   3495
       End
       Begin VB.ComboBox cboCadastro 
@@ -290,68 +291,76 @@ Begin VB.Form frmRelExp
          Left            =   6120
          List            =   "frmRelExp.frx":2977
          TabIndex        =   16
-         Top             =   2280
+         Tag             =   "UF da transportadora"
+         Top             =   2640
          Width           =   735
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   11
          Left            =   5880
          TabIndex        =   13
-         Top             =   1680
+         Tag             =   "CEP "
+         Top             =   1920
          Width           =   975
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   13
          Left            =   3120
          TabIndex        =   15
-         Top             =   2280
+         Tag             =   "Cidade da transportadora"
+         Top             =   2640
          Width           =   2895
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   12
          Left            =   120
          TabIndex        =   14
-         Top             =   2280
+         Tag             =   "Bairro da transportadora"
+         Top             =   2640
          Width           =   2535
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   10
          Left            =   120
          TabIndex        =   12
-         Top             =   1680
+         Tag             =   "Endereço da transportadora"
+         Top             =   1920
          Width           =   5655
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   8
          Left            =   120
          TabIndex        =   10
-         Top             =   1080
+         Tag             =   "CNPJ da transportadora"
+         Top             =   1200
          Width           =   3135
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   7
          Left            =   1200
          TabIndex        =   9
+         Tag             =   "Nome da transportadora"
          Top             =   480
          Width           =   5175
       End
       Begin VB.TextBox txtCadastro 
-         Height          =   330
+         Height          =   345
          Index           =   6
          Left            =   120
          TabIndex        =   8
+         Tag             =   "ID da transportadora"
          Top             =   480
          Width           =   975
       End
@@ -360,7 +369,7 @@ Begin VB.Form frmRelExp
          Left            =   5880
          OleObjectBlob   =   "frmRelExp.frx":29E7
          TabIndex        =   55
-         Top             =   1440
+         Top             =   1680
          Width           =   615
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
@@ -368,7 +377,7 @@ Begin VB.Form frmRelExp
          Left            =   6120
          OleObjectBlob   =   "frmRelExp.frx":2A47
          TabIndex        =   54
-         Top             =   2040
+         Top             =   2400
          Width           =   495
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
@@ -376,7 +385,7 @@ Begin VB.Form frmRelExp
          Left            =   3120
          OleObjectBlob   =   "frmRelExp.frx":2AA5
          TabIndex        =   53
-         Top             =   2040
+         Top             =   2400
          Width           =   1695
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
@@ -384,7 +393,7 @@ Begin VB.Form frmRelExp
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":2B0B
          TabIndex        =   52
-         Top             =   2040
+         Top             =   2400
          Width           =   1455
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
@@ -392,7 +401,7 @@ Begin VB.Form frmRelExp
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":2B71
          TabIndex        =   51
-         Top             =   1440
+         Top             =   1680
          Width           =   2055
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
@@ -400,7 +409,7 @@ Begin VB.Form frmRelExp
          Left            =   3360
          OleObjectBlob   =   "frmRelExp.frx":2BDB
          TabIndex        =   50
-         Top             =   840
+         Top             =   960
          Width           =   1575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
@@ -408,7 +417,7 @@ Begin VB.Form frmRelExp
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":2C51
          TabIndex        =   49
-         Top             =   840
+         Top             =   960
          Width           =   1815
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
@@ -441,10 +450,10 @@ Begin VB.Form frmRelExp
          Height          =   1575
          Left            =   120
          TabIndex        =   36
-         Top             =   2760
+         Top             =   3240
          Width           =   6735
          Begin VB.TextBox txtCadastro 
-            Height          =   330
+            Height          =   345
             Index           =   16
             Left            =   120
             TabIndex        =   21
@@ -461,7 +470,7 @@ Begin VB.Form frmRelExp
             Width           =   1095
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   330
+            Height          =   345
             Index           =   15
             Left            =   2520
             TabIndex        =   19
@@ -470,7 +479,7 @@ Begin VB.Form frmRelExp
             Width           =   1335
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   330
+            Height          =   345
             Index           =   14
             Left            =   120
             TabIndex        =   17
@@ -552,7 +561,7 @@ Begin VB.Form frmRelExp
       Width           =   2175
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   4
          Left            =   120
          TabIndex        =   0
@@ -572,45 +581,49 @@ Begin VB.Form frmRelExp
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2655
+      Height          =   2895
       Left            =   120
       TabIndex        =   28
       Top             =   960
       Width           =   6975
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   3
          Left            =   1560
          TabIndex        =   4
+         Tag             =   "Cliente"
          Top             =   480
          Width           =   5295
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   3
+         Tag             =   "FCE"
          Top             =   480
          Width           =   1335
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   1
          Left            =   120
          TabIndex        =   5
-         Top             =   1080
+         Tag             =   "Nº do Projeto"
+         Top             =   1200
          Width           =   1335
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   2
          Left            =   1560
          TabIndex        =   6
-         Top             =   1080
+         Tag             =   "Descrição do projeto"
+         Top             =   1200
          Width           =   5295
       End
       Begin VB.TextBox txtCadastro 
@@ -623,12 +636,13 @@ Begin VB.Form frmRelExp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   735
+         Height          =   855
          Index           =   5
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   7
-         Top             =   1680
+         Tag             =   "Observações"
+         Top             =   1920
          Width           =   6735
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
@@ -636,7 +650,7 @@ Begin VB.Form frmRelExp
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":3113
          TabIndex        =   29
-         Top             =   1440
+         Top             =   1680
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
@@ -652,7 +666,7 @@ Begin VB.Form frmRelExp
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":31E7
          TabIndex        =   31
-         Top             =   840
+         Top             =   960
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
@@ -668,7 +682,7 @@ Begin VB.Form frmRelExp
          Left            =   1560
          OleObjectBlob   =   "frmRelExp.frx":32BD
          TabIndex        =   33
-         Top             =   840
+         Top             =   960
          Width           =   2055
       End
    End
@@ -689,14 +703,14 @@ Begin VB.Form frmRelExp
       Top             =   120
       Width           =   1815
       Begin MSComCtl2.DTPicker DTPicker1 
-         Height          =   330
+         Height          =   345
          Left            =   120
          TabIndex        =   1
          Tag             =   "Data de emissão do relatório"
          Top             =   240
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   582
+         _ExtentY        =   609
          _Version        =   393216
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Calibri"
@@ -707,7 +721,7 @@ Begin VB.Form frmRelExp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   423624705
+         Format          =   163577857
          CurrentDate     =   40449
       End
    End
@@ -728,7 +742,7 @@ Begin VB.Form frmRelExp
       Top             =   120
       Width           =   2775
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
-         Height          =   255
+         Height          =   345
          Left            =   120
          OleObjectBlob   =   "frmRelExp.frx":3329
          TabIndex        =   2
@@ -741,7 +755,7 @@ Begin VB.Form frmRelExp
       Left            =   7320
       OleObjectBlob   =   "frmRelExp.frx":3393
       TabIndex        =   45
-      Top             =   8400
+      Top             =   9120
       Width           =   14055
    End
 End
@@ -785,7 +799,7 @@ Private Declare Function SendMessage Lib "user32" Alias _
 ByVal wParam As Long, lParam As Any) As Long
 Private Const LVM_FIRST = &H1000
 'Acima ajusta automaticamente a largura das colunas
-Private X As Integer, W As Integer
+Private x As Integer, W As Integer
 Private ContaLV As Integer, LinhaLV As Integer, ContaChecado As Integer, LimiTador As Integer
 Private rsLocal As New ADODB.Recordset
 Private vPonte1 As TextBox
@@ -793,7 +807,7 @@ Private vPonte1 As TextBox
 Private Sub chameleonButton2_Click()
     ChamaGridTrans
     CarregaTipoTrans
-    txtCadastro(14).SetFocus
+    txtcadastro(14).SetFocus
 End Sub
 
 Private Sub cmdCadastro_Click(Index As Integer)
@@ -898,13 +912,13 @@ On Error GoTo Err
     rsRelInsp.Open sqlRelInsp, cnBanco, adOpenKeyset, adLockReadOnly
     If rsRelInsp.RecordCount = 0 Then Exit Sub
     
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
-    txtCadastro(0) = Val(Mid(varGlobal, 7, 4)) 'FCE nº
-    txtCadastro(1) = rsRelInsp.Fields(0) 'ID Projeto
-    txtCadastro(2) = rsRelInsp.Fields(2) 'Descrição do projeto
-    txtCadastro(3) = rsRelInsp.Fields(3) 'Nome do cliente
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(0) = Val(Mid(varGlobal, 7, 4)) 'FCE nº
+    txtcadastro(1) = rsRelInsp.Fields(0) 'ID Projeto
+    txtcadastro(2) = rsRelInsp.Fields(2) 'Descrição do projeto
+    txtcadastro(3) = rsRelInsp.Fields(3) 'Nome do cliente
     DTPicker1 = Date 'Data de emissão do relatório
-    varGlobal2 = txtCadastro(4).Text
+    varGlobal2 = txtcadastro(4).Text
     SkinLabel7.Caption = vSituacao
     Exit Sub
 Err:
@@ -1010,11 +1024,11 @@ Private Function SomaTotais()
 On Error GoTo TrataErro
     SkinLabel12.Caption = ""
     SomaTotais = True
-    Dim Y As Integer, SomaPeso As Double, SomaQtd As Double
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, SomaPeso As Double, SomaQtd As Double
+    y = ListView1.ListItems.Count
     SomaQtd = 0
     SomaPeso = 0
-    For W = 1 To Y
+    For W = 1 To y
         If ListView1.ListItems.Item(W).Checked = True Then
             ListView1.ListItems(W).Selected = True
             SomaQtd = SomaQtd + ListView1.SelectedItem.ListSubItems.Item(7)
@@ -1024,7 +1038,7 @@ On Error GoTo TrataErro
     Next
     SkinLabel29 = Format(SomaQtd, "#,##0.00;(#,##0.00)")
     SkinLabel30 = Format(SomaPeso, "#,##0.00;(#,##0.00)")
-    txtCadastro(17) = Format(SomaPeso, "#,##0.00;(#,##0.00)")
+    txtcadastro(17) = Format(SomaPeso, "#,##0.00;(#,##0.00)")
     Exit Function
 TrataErro:
     SomaTotais = False
@@ -1081,7 +1095,7 @@ On Error GoTo Err
         Pesquisa = Mid$(Pesquisa, 7, 100)
         rsLocal.Find "nome=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(6).Text = Format(rsLocal.Fields(0), "000")
+            txtcadastro(6).Text = Format(rsLocal.Fields(0), "000")
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -1099,30 +1113,30 @@ End Sub
 
 Private Sub CarregaTipoTrans()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     Dim rsTipoTrans As New ADODB.Recordset
     SqlM = "select a.CODTRA,a.NOME,a.CGC,a.INSCRESTADUAL,a.RUA+','+a.NUMERO as endereco,a.CEP,a.BAIRRO,a.CIDADE,a.CODETD from " & vBancoTotvs & ".dbo.ttra as a order by a.CODETD"
     rsTipoTrans.Open SqlM, cnBanco, adOpenKeyset, adLockReadOnly
     If Not rsTipoTrans.EOF Then rsTipoTrans.MoveFirst
-    rsTipoTrans.Find "CODTRA=" & "'" & Format(txtCadastro(6), "000") & "'"
+    rsTipoTrans.Find "CODTRA=" & "'" & Format(txtcadastro(6), "000") & "'"
     If rsTipoTrans.EOF Then
-        txtCadastro(6).Text = Format(txtCadastro(6), "000") & ""
+        txtcadastro(6).Text = Format(txtcadastro(6), "000") & ""
         If Val(Pesquisa) <> 0 Then
             Msgbox "Transportadora não cadastrada", vbInformation, "Zeus"
-            txtCadastro(7) = ""
+            txtcadastro(7) = ""
         End If
     Else
-        txtCadastro(6).Text = Format(rsTipoTrans.Fields(0), "000") & "" 'codigo
-        txtCadastro(7).Text = rsTipoTrans.Fields(1) 'nome
-        If Not IsNull(rsTipoTrans.Fields(2)) Then txtCadastro(8).Text = rsTipoTrans.Fields(2) 'cnpj
-        If Not IsNull(rsTipoTrans.Fields(3)) Then txtCadastro(9).Text = rsTipoTrans.Fields(3) 'ie
-        If Not IsNull(rsTipoTrans.Fields(4)) Then txtCadastro(10).Text = rsTipoTrans.Fields(4) 'endereco (rua+numero)
-        If Not IsNull(rsTipoTrans.Fields(5)) Then txtCadastro(11).Text = rsTipoTrans.Fields(5) 'cep
-        If Not IsNull(rsTipoTrans.Fields(6)) Then txtCadastro(12).Text = rsTipoTrans.Fields(6) 'bairro
-        If Not IsNull(rsTipoTrans.Fields(7)) Then txtCadastro(13).Text = rsTipoTrans.Fields(7) 'cidade
+        txtcadastro(6).Text = Format(rsTipoTrans.Fields(0), "000") & "" 'codigo
+        txtcadastro(7).Text = rsTipoTrans.Fields(1) 'nome
+        If Not IsNull(rsTipoTrans.Fields(2)) Then txtcadastro(8).Text = rsTipoTrans.Fields(2) 'cnpj
+        If Not IsNull(rsTipoTrans.Fields(3)) Then txtcadastro(9).Text = rsTipoTrans.Fields(3) 'ie
+        If Not IsNull(rsTipoTrans.Fields(4)) Then txtcadastro(10).Text = rsTipoTrans.Fields(4) 'endereco (rua+numero)
+        If Not IsNull(rsTipoTrans.Fields(5)) Then txtcadastro(11).Text = rsTipoTrans.Fields(5) 'cep
+        If Not IsNull(rsTipoTrans.Fields(6)) Then txtcadastro(12).Text = rsTipoTrans.Fields(6) 'bairro
+        If Not IsNull(rsTipoTrans.Fields(7)) Then txtcadastro(13).Text = rsTipoTrans.Fields(7) 'cidade
         If Not IsNull(rsTipoTrans.Fields(8)) Then cboCadastro(0).Text = rsTipoTrans.Fields(8) 'UF
-        For X = 7 To 13
-            txtCadastro(X).Enabled = False
+        For x = 7 To 13
+            txtcadastro(x).Enabled = False
         Next
         cboCadastro(0).Enabled = False
     End If
@@ -1143,7 +1157,7 @@ End Sub
 Private Sub GravarDados()
 On Error GoTo Err
 
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     Dim rsRelatorio As New ADODB.Recordset
     Dim sqlRelatorio As String
@@ -1163,17 +1177,17 @@ On Error GoTo Err
     rsRelatorio.Open sqlRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
     rsRelatorio.AddNew
     
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
     
-    rsRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do Relatorio
-    rsRelatorio.Fields(1) = Val(txtCadastro(0)) 'FCE
-    rsRelatorio.Fields(2) = Val(txtCadastro(1)) 'Codigo do projeto
+    rsRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do Relatorio
+    rsRelatorio.Fields(1) = Val(txtcadastro(0)) 'FCE
+    rsRelatorio.Fields(2) = Val(txtcadastro(1)) 'Codigo do projeto
     rsRelatorio.Fields(3) = Format(DTPicker1, "dd/mm/yyyy") 'Data do relatorio
-    rsRelatorio.Fields(4) = txtCadastro(5) 'Observação
+    rsRelatorio.Fields(4) = txtcadastro(5) 'Observação
     rsRelatorio.Fields(5) = 0 'Status de impressão
     'rsRelatorio.Fields(6) = cboCadastro(4) 'Norma de Liberação
     rsRelatorio.Fields(7) = 11 'Tipo relatorio (11) Expedição
-    rsRelatorio.Fields(8) = Format(txtCadastro(17), "#,##0.00;(#,##0.00)") 'Peso de balança
+    rsRelatorio.Fields(8) = Format(txtcadastro(17), "#,##0.00;(#,##0.00)") 'Peso de balança
     rsRelatorio.Fields(9) = NomUsu
     rsRelatorio.Update
     rsRelatorio.Close
@@ -1182,17 +1196,17 @@ On Error GoTo Err
     'Gravar dados referente aos Itens do Relatório
     sqlItensRelatorio = "select * from tbRelInspExpitens"
     rsItensRelatorio.Open sqlItensRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If ListView1.ListItems.Item(X).Checked = True Then
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If ListView1.ListItems.Item(x).Checked = True Then
             rsItensRelatorio.AddNew
-            rsItensRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do relatorio
-            rsItensRelatorio.Fields(1) = Val(txtCadastro(0).Text) 'Nº FCE
-            rsItensRelatorio.Fields(2) = Val(txtCadastro(1)) 'Código do Projeto
+            rsItensRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do relatorio
+            rsItensRelatorio.Fields(1) = Val(txtcadastro(0).Text) 'Nº FCE
+            rsItensRelatorio.Fields(2) = Val(txtcadastro(1)) 'Código do Projeto
             rsItensRelatorio.Fields(3) = ListView1.SelectedItem.ListSubItems.Item(2) 'Desenho
             rsItensRelatorio.Fields(4) = ListView1.SelectedItem.ListSubItems.Item(3) 'Revisão do Desenho
-            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(X) 'Posição
+            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(x) 'Posição
             rsItensRelatorio.Fields(6) = ListView1.SelectedItem.ListSubItems.Item(1) 'Descrição da posição
             rsItensRelatorio.Fields(7) = ListView1.SelectedItem.ListSubItems.Item(8) 'Status (Codfase)
             rsItensRelatorio.Fields(8) = ListView1.SelectedItem.ListSubItems.Item(7) 'Quantidade liberada
@@ -1213,46 +1227,46 @@ On Error GoTo Err
     'Grava dados do formulário
     'O 1º parametro é o valor que sera gravado no campo
     'O 2º parametro é o tipo de dado que o campo armazena
-    vQualquerDado(20, 1) = txtCadastro(0).Text 'grava o numero da FCE
-    vQualquerDado(1, 1) = txtCadastro(4).Text
+    vQualquerDado(20, 1) = txtcadastro(0).Text 'grava o numero da FCE
+    vQualquerDado(1, 1) = txtcadastro(4).Text
     vQualquerDado(1, 2) = "I"
-    vQualquerDado(2, 1) = txtCadastro(6).Text
+    vQualquerDado(2, 1) = txtcadastro(6).Text
     vQualquerDado(2, 2) = "I"
-    vQualquerDado(3, 1) = txtCadastro(7).Text
+    vQualquerDado(3, 1) = txtcadastro(7).Text
     vQualquerDado(3, 2) = "S"
-    vQualquerDado(4, 1) = txtCadastro(8).Text
+    vQualquerDado(4, 1) = txtcadastro(8).Text
     vQualquerDado(4, 2) = "S"
-    vQualquerDado(5, 1) = txtCadastro(9).Text
+    vQualquerDado(5, 1) = txtcadastro(9).Text
     vQualquerDado(5, 2) = "S"
     
-    vQualquerDado(6, 1) = txtCadastro(10).Text
+    vQualquerDado(6, 1) = txtcadastro(10).Text
     vQualquerDado(6, 2) = "S"
-    vQualquerDado(7, 1) = txtCadastro(11).Text
+    vQualquerDado(7, 1) = txtcadastro(11).Text
     vQualquerDado(7, 2) = "S"
-    vQualquerDado(8, 1) = txtCadastro(12).Text
+    vQualquerDado(8, 1) = txtcadastro(12).Text
     vQualquerDado(8, 2) = "S"
-    vQualquerDado(9, 1) = txtCadastro(13).Text
+    vQualquerDado(9, 1) = txtcadastro(13).Text
     vQualquerDado(9, 2) = "S"
     vQualquerDado(10, 1) = cboCadastro(0).Text
     vQualquerDado(10, 2) = "S"
     
-    vQualquerDado(11, 1) = txtCadastro(14).Text
+    vQualquerDado(11, 1) = txtcadastro(14).Text
     vQualquerDado(11, 2) = "S"
     vQualquerDado(12, 1) = cboCadastro(1).Text
     vQualquerDado(12, 2) = "S"
-    vQualquerDado(13, 1) = txtCadastro(15).Text
+    vQualquerDado(13, 1) = txtcadastro(15).Text
     vQualquerDado(13, 2) = "S"
     vQualquerDado(14, 1) = cboCadastro(2).Text
     vQualquerDado(14, 2) = "S"
-    vQualquerDado(15, 1) = txtCadastro(16).Text
+    vQualquerDado(15, 1) = txtcadastro(16).Text
     vQualquerDado(15, 2) = "S"
-    GravaDados "tbRelExpTransp", "codrel", "I", txtCadastro(4), 15, "", "", txtCadastro(4)
+    GravaDados "tbRelExpTransp", "codrel", "I", txtcadastro(4), 15, "", "", txtcadastro(4)
    
     mobjMsg.Abrir "Dados gravados com sucesso", Ok, informacao, "Atenção"
     
     mobjMsg.Abrir "Dados gravados com sucesso.Deseja imprimir de relatório de Expedição?", YesNo, pergunta, "Zeus"
     If Tp = 1 Then
-        vCodRel = Val(txtCadastro(4))
+        vCodRel = Val(txtcadastro(4))
         FCRExpedicao.Show 1
         sqlRelatorio = "update tbRelInspExp set statusimp=1 where codrel ='" & vCodRel & "'"
         rsRelatorio.Open sqlRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
@@ -1316,7 +1330,7 @@ Private Sub ListView1_Click()
     End If
 End Sub
 
-Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
 'fired when the listitem is already selected, for this reason can't used mousedown event
 'so we know which row is clicked, for the column, we need to translate the x to listview coordinate
 Dim i As Integer, leftPos As Single 'the left pos of the column
@@ -1326,7 +1340,7 @@ If Button = vbLeftButton Then
     If Not ListView1.SelectedItem Is Nothing Then
         ListView1.LabelEdit = lvwManual
         dx = GetLvwDeltaX
-        lvwX = X + dx
+        lvwX = x + dx
         For i = 8 To 8
             PosLinha
             'If ListView1.ListItems.Item(LinhaLV).Checked = False Then Exit Sub
@@ -1466,7 +1480,7 @@ On Error GoTo Err
     Dim rsCodRel As New ADODB.Recordset
     Dim rsTbTemp As New ADODB.Recordset
     Dim sqlCodRel As String, sqlTbTemp As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     sqlTbTemp = "Delete from tbtemp"
     rsTbTemp.Open sqlTbTemp, cnBanco
@@ -1474,11 +1488,11 @@ On Error GoTo Err
     sqlTbTemp = "Select * from tbtemp"
     rsTbTemp.Open sqlTbTemp, cnBanco, adOpenKeyset, adLockOptimistic
     
-    Y = frmRelInsp.ListView1.ListItems.Count
-    For X = 1 To Y
-        frmRelInsp.ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If frmRelInsp.ListView1.ListItems.Item(X).Checked = True Then
-            sqlCodRel = "select tbrelatorios.codrel,tbitemrelatorio.idld from tbitemrelatorio inner join tbRelatorios on tbrelatorios.codrel = tbitemrelatorio.codrel where tbitemrelatorio.idld = '" & Val(frmRelInsp.ListView1.ListItems.Item(X)) & "'" & " order by tbitemrelatorio.codprocesso,tbitemrelatorio.codfase desc"
+    y = frmRelInsp.ListView1.ListItems.Count
+    For x = 1 To y
+        frmRelInsp.ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If frmRelInsp.ListView1.ListItems.Item(x).Checked = True Then
+            sqlCodRel = "select tbrelatorios.codrel,tbitemrelatorio.idld from tbitemrelatorio inner join tbRelatorios on tbrelatorios.codrel = tbitemrelatorio.codrel where tbitemrelatorio.idld = '" & Val(frmRelInsp.ListView1.ListItems.Item(x)) & "'" & " order by tbitemrelatorio.codprocesso,tbitemrelatorio.codfase desc"
             rsCodRel.Open sqlCodRel, cnBanco, adOpenKeyset, adLockReadOnly
             rsCodRel.MoveNext
             If rsCodRel.RecordCount > 0 Then
@@ -1505,9 +1519,9 @@ Err:
 End Sub
 
 Private Sub SelecionaLinha()
-    Dim Y As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For W = 1 To Y
+    Dim y As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For W = 1 To y
         If vListViewPrincipal.ListItems.Item(W).Selected = True Then
             Exit For
         End If

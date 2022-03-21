@@ -25,9 +25,9 @@ Begin VB.Form frmPesqGeralTeste2
    ScaleWidth      =   28800
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin MSComctlLib.ImageList ImgList3 
-      Left            =   5640
-      Top             =   8400
+   Begin MSComctlLib.ImageList ImgList1 
+      Left            =   4440
+      Top             =   9120
       _ExtentX        =   1005
       _ExtentY        =   1005
       BackColor       =   -2147483643
@@ -50,67 +50,67 @@ Begin VB.Form frmPesqGeralTeste2
             Key             =   "POSITIVO"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":25B96
+            Picture         =   "frmPesqGeralTeste2.frx":2AB77
             Key             =   "NEGATIVO"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":324C8
+            Picture         =   "frmPesqGeralTeste2.frx":374A9
             Key             =   "ARQUIVADO"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3EDFA
+            Picture         =   "frmPesqGeralTeste2.frx":43DDB
             Key             =   "AGUARDE-01"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4B72C
+            Picture         =   "frmPesqGeralTeste2.frx":5070D
             Key             =   "AGUARDE-02"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5805E
+            Picture         =   "frmPesqGeralTeste2.frx":5D03F
             Key             =   "AGUARDE-03"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":64990
+            Picture         =   "frmPesqGeralTeste2.frx":69971
             Key             =   "PENDENTE12"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":712C2
+            Picture         =   "frmPesqGeralTeste2.frx":762A3
             Key             =   "AVALIANDO1"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7DBF4
+            Picture         =   "frmPesqGeralTeste2.frx":82BD5
             Key             =   "CONCLUIDO1"
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8A526
+            Picture         =   "frmPesqGeralTeste2.frx":8F507
             Key             =   "PRETO"
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":96E58
+            Picture         =   "frmPesqGeralTeste2.frx":9BE39
             Key             =   "PENDENTE1"
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A378A
+            Picture         =   "frmPesqGeralTeste2.frx":A876B
             Key             =   "FABRICANDO"
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B00BC
+            Picture         =   "frmPesqGeralTeste2.frx":B509D
             Key             =   "FECHADO"
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":BC9EE
+            Picture         =   "frmPesqGeralTeste2.frx":C19CF
             Key             =   "ANDAMENTO"
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":C9320
+            Picture         =   "frmPesqGeralTeste2.frx":D4603
             Key             =   "CONCLUIDA"
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":D5C52
+            Picture         =   "frmPesqGeralTeste2.frx":E0F35
             Key             =   "PARALIZADA"
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":E2584
+            Picture         =   "frmPesqGeralTeste2.frx":ED867
             Key             =   "DUVIDA"
          EndProperty
       EndProperty
@@ -121,91 +121,271 @@ Begin VB.Form frmPesqGeralTeste2
       _ExtentX        =   1005
       _ExtentY        =   1005
       BackColor       =   -2147483643
-      ImageWidth      =   16
-      ImageHeight     =   16
+      ImageWidth      =   24
+      ImageHeight     =   24
       MaskColor       =   12632256
       _Version        =   393216
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   19
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":EEEB6
+            Picture         =   "frmPesqGeralTeste2.frx":FA199
             Key             =   "OK"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":FB7E8
+            Picture         =   "frmPesqGeralTeste2.frx":106ACB
             Key             =   "EXC"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":10811A
+            Picture         =   "frmPesqGeralTeste2.frx":1133FD
             Key             =   "POSITIVO"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":114A4C
+            Picture         =   "frmPesqGeralTeste2.frx":11FD2F
             Key             =   "NEGATIVO"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":12137E
+            Picture         =   "frmPesqGeralTeste2.frx":12C661
             Key             =   "ARQUIVADO"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":12DCB0
+            Picture         =   "frmPesqGeralTeste2.frx":138F93
             Key             =   "AGUARDE-01"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":13A5E2
+            Picture         =   "frmPesqGeralTeste2.frx":1458C5
             Key             =   "AGUARDE-02"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":146F14
+            Picture         =   "frmPesqGeralTeste2.frx":1521F7
             Key             =   "AGUARDE-03"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":153846
+            Picture         =   "frmPesqGeralTeste2.frx":15EB29
             Key             =   "PENDENTE12"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":153CE0
+            Picture         =   "frmPesqGeralTeste2.frx":16B45B
             Key             =   "AVALIANDO1"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":15417A
+            Picture         =   "frmPesqGeralTeste2.frx":177D8D
             Key             =   "CONCLUIDO1"
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":154614
+            Picture         =   "frmPesqGeralTeste2.frx":1846BF
             Key             =   "PRETO"
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":154AAE
+            Picture         =   "frmPesqGeralTeste2.frx":190FF1
             Key             =   "PENDENTE1"
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":154F48
+            Picture         =   "frmPesqGeralTeste2.frx":19D923
             Key             =   "FABRICANDO"
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1553E2
+            Picture         =   "frmPesqGeralTeste2.frx":1AA255
             Key             =   "FECHADO"
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":15587C
+            Picture         =   "frmPesqGeralTeste2.frx":1B6B87
             Key             =   "ANDAMENTO"
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1621AE
+            Picture         =   "frmPesqGeralTeste2.frx":1C34B9
             Key             =   "CONCLUIDA"
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":16EAE0
+            Picture         =   "frmPesqGeralTeste2.frx":1CFDEB
             Key             =   "PARALIZADA"
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":17B412
+            Picture         =   "frmPesqGeralTeste2.frx":1DC71D
             Key             =   "DUVIDA"
          EndProperty
       EndProperty
    End
-   Begin MSComctlLib.ImageList ImgList1 
+   Begin MSComctlLib.ImageList ImgList4 
+      Left            =   6240
+      Top             =   8400
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   24
+      ImageHeight     =   24
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   19
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":1E904F
+            Key             =   "OK"
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":1F7628
+            Key             =   "EXC"
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":204841
+            Key             =   "POSITIVO"
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":211173
+            Key             =   "NEGATIVO"
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":21DAA5
+            Key             =   "ARQUIVADO"
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":22A3D7
+            Key             =   "AGUARDE-01"
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":236D09
+            Key             =   "AGUARDE-02"
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":24363B
+            Key             =   "AGUARDE-03"
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":24FF6D
+            Key             =   "PENDENTE12"
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":25C89F
+            Key             =   "AVALIANDO1"
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2691D1
+            Key             =   "CONCLUIDO1"
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":275B03
+            Key             =   "PRETO"
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":282435
+            Key             =   "PENDENTE1"
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":28ED67
+            Key             =   "FABRICANDO"
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":29B699
+            Key             =   "FECHADO"
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2A7FCB
+            Key             =   "ANDAMENTO"
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2B48FD
+            Key             =   "CONCLUIDA"
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2C122F
+            Key             =   "PARALIZADA"
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2CDB61
+            Key             =   "DUVIDA"
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImgList3 
+      Left            =   5640
+      Top             =   8400
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   24
+      ImageHeight     =   24
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   19
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2DA493
+            Key             =   "OK"
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2E6DC5
+            Key             =   "EXC"
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":2F36F7
+            Key             =   "POSITIVO"
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":300029
+            Key             =   "NEGATIVO"
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":30C95B
+            Key             =   "ARQUIVADO"
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":31928D
+            Key             =   "AGUARDE-01"
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":325BBF
+            Key             =   "AGUARDE-02"
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3324F1
+            Key             =   "AGUARDE-03"
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":33EE23
+            Key             =   "PENDENTE12"
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":34B755
+            Key             =   "AVALIANDO1"
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":358087
+            Key             =   "CONCLUIDO1"
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3649B9
+            Key             =   "PRETO"
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3712EB
+            Key             =   "PENDENTE1"
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":37DC1D
+            Key             =   "FABRICANDO"
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":38A54F
+            Key             =   "FECHADO"
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":396E81
+            Key             =   "ANDAMENTO"
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3A37B3
+            Key             =   "CONCLUIDA"
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3B00E5
+            Key             =   "PARALIZADA"
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "frmPesqGeralTeste2.frx":3BCA17
+            Key             =   "DUVIDA"
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImgList11 
       Left            =   4440
       Top             =   8400
       _ExtentX        =   1005
@@ -218,858 +398,80 @@ Begin VB.Form frmPesqGeralTeste2
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   19
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":187D44
+            Picture         =   "frmPesqGeralTeste2.frx":3C9349
             Key             =   "OK"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":194676
+            Picture         =   "frmPesqGeralTeste2.frx":3D5C7B
             Key             =   "EXC"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1A0FA8
+            Picture         =   "frmPesqGeralTeste2.frx":3E25AD
             Key             =   "POSITIVO"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1B28BB
+            Picture         =   "frmPesqGeralTeste2.frx":3F3EC0
             Key             =   "NEGATIVO"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1BF1ED
+            Picture         =   "frmPesqGeralTeste2.frx":4007F2
             Key             =   "ARQUIVADO"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1CDD78
+            Picture         =   "frmPesqGeralTeste2.frx":40F37D
             Key             =   "AGUARDE-01"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1DA6AA
+            Picture         =   "frmPesqGeralTeste2.frx":41BCAF
             Key             =   "AGUARDE-02"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1E6FDC
+            Picture         =   "frmPesqGeralTeste2.frx":4285E1
             Key             =   "AGUARDE-03"
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F390E
+            Picture         =   "frmPesqGeralTeste2.frx":434F13
             Key             =   "PENDENTE12"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F3DA8
+            Picture         =   "frmPesqGeralTeste2.frx":4353AD
             Key             =   "AVALIANDO1"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F4242
+            Picture         =   "frmPesqGeralTeste2.frx":435847
             Key             =   "CONCLUIDO1"
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F46DC
+            Picture         =   "frmPesqGeralTeste2.frx":435CE1
             Key             =   "PRETO"
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F4B76
+            Picture         =   "frmPesqGeralTeste2.frx":43617B
             Key             =   "PENDENTE1"
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F5010
+            Picture         =   "frmPesqGeralTeste2.frx":436615
             Key             =   "FABRICANDO"
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F54AA
+            Picture         =   "frmPesqGeralTeste2.frx":436AAF
             Key             =   "FECHADO"
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":1F5944
+            Picture         =   "frmPesqGeralTeste2.frx":436F49
             Key             =   "ANDAMENTO"
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":208578
+            Picture         =   "frmPesqGeralTeste2.frx":449B7D
             Key             =   "CONCLUIDA"
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":214EAA
+            Picture         =   "frmPesqGeralTeste2.frx":4564AF
             Key             =   "PARALIZADA"
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2217DC
+            Picture         =   "frmPesqGeralTeste2.frx":462DE1
             Key             =   "DUVIDA"
-         EndProperty
-      EndProperty
-   End
-   Begin MSComctlLib.ImageList ImageList3 
-      Left            =   5640
-      Top             =   9000
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      BackColor       =   -2147483643
-      ImageWidth      =   32
-      ImageHeight     =   32
-      MaskColor       =   12632256
-      _Version        =   393216
-      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
-         NumListImages   =   56
-         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":22E10E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":23AA40
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":247372
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":253CA4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2605D6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":26CF08
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":27983A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":28616C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":292A9E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":29F3D0
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2ABD02
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2B8634
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2C4F66
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2D1898
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2DE1CA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2EAAFC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":2F742E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":303D60
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":310692
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":31CFC4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3298F6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":336228
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":342B5A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":34F48C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":35BDBE
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3686F0
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":375022
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":381954
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":38E286
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":39ABB8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3A74EA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3B3E1C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3C074E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3CD080
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3D99B2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3E62E4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3F2C16
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":3FF548
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":40BE7A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4187AC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4250DE
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":431A10
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":431CD3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":43E605
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":44AF37
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":457869
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":46419B
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":470ACD
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":47D3FF
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":489D31
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":496663
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4A2F95
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4AF8C7
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4BC1F9
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4C8B2B
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4D545D
-            Key             =   ""
-         EndProperty
-      EndProperty
-   End
-   Begin MSComctlLib.ImageList ImageList2 
-      Left            =   5040
-      Top             =   9000
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      BackColor       =   -2147483643
-      ImageWidth      =   32
-      ImageHeight     =   32
-      MaskColor       =   12632256
-      _Version        =   393216
-      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
-         NumListImages   =   56
-         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4E1D8F
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4EE6C1
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":4FAFF3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":507925
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":514257
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":520B89
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":52D4BB
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":539DED
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":54671F
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":553051
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":55F983
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":56C2B5
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":578BE7
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":585519
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":591E4B
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":59E77D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5AB0AF
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5B79E1
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5C4313
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5D0C45
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5DD577
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5E9EA9
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":5F67DB
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":60310D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":60FA3F
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":61C371
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":628CA3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6355D5
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":641F07
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":64E839
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":65B16B
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":667A9D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6743CF
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":680D01
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":68D633
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":699F65
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6A6897
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6B31C9
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6BFAFB
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6CC42D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6D8D5F
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6E5691
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6E5954
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6F2286
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":6FEBB8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":70B4EA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":717E1C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":72474E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":731080
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":73D9B2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":74A2E4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":756C16
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":763548
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":773552
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":77FE84
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":78C7B6
-            Key             =   ""
-         EndProperty
-      EndProperty
-   End
-   Begin MSComctlLib.ImageList ImageList1 
-      Left            =   4440
-      Top             =   9000
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      BackColor       =   -2147483643
-      ImageWidth      =   32
-      ImageHeight     =   32
-      MaskColor       =   12632256
-      _Version        =   393216
-      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
-         NumListImages   =   72
-         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7990E8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7A8AE0
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7B5412
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7C1D44
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7D108A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7DD9BC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7ECED1
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":7FAEDC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":80780E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":814140
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":820A72
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":82D3A4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":839CD6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":846608
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":852F3A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":85F86C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":86F833
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":87C165
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":888A97
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8953C9
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8A33D4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8AFD06
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8C0154
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8CCA86
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8D93B8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8E5CEA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":8F5CB1
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9025E3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":90EF15
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":91B847
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":928179
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":934AAB
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":94455D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9530E8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":95FA1A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":96C34C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":978C7E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9855B0
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":991EE2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":99E814
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9AB146
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9B7A78
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9B7D3B
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9C466D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9D8DBC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9E56EE
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9F2020
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":9FE952
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A0B284
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A17BB6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A2A7EA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A3711C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A4AFDA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A5790C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A6423E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A70B70
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A7D4A2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A89DD4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":A96706
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AA3038
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AAF96A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":ABC29C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AC8BCE
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AD5500
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AE1E32
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AEE764
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":AFB096
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B079C8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B142FA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B20C2C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B3107A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B3D9AC
-            Key             =   ""
          EndProperty
       EndProperty
    End
@@ -1113,138 +515,137 @@ Begin VB.Form frmPesqGeralTeste2
       _ExtentY        =   13996
       _Version        =   393216
       Tabs            =   30
+      Tab             =   7
       TabsPerRow      =   30
       TabHeight       =   520
       TabMaxWidth     =   4410
       ForeColor       =   -2147483630
       TabCaption(0)   =   "Carregando..."
-      TabPicture(0)   =   "frmPesqGeralTeste2.frx":B4F8A2
-      Tab(0).ControlEnabled=   -1  'True
-      Tab(0).Control(0)=   "ListView2(20)"
-      Tab(0).Control(0).Enabled=   0   'False
-      Tab(0).Control(1)=   "cmdClose(40)"
-      Tab(0).Control(1).Enabled=   0   'False
+      TabPicture(0)   =   "frmPesqGeralTeste2.frx":46F713
+      Tab(0).ControlEnabled=   0   'False
+      Tab(0).Control(0)=   "cmdClose(40)"
+      Tab(0).Control(1)=   "ListView2(20)"
       Tab(0).ControlCount=   2
       TabCaption(1)   =   "Carregando..."
-      TabPicture(1)   =   "frmPesqGeralTeste2.frx":B4F8BE
+      TabPicture(1)   =   "frmPesqGeralTeste2.frx":46F72F
       Tab(1).ControlEnabled=   0   'False
       Tab(1).ControlCount=   0
       TabCaption(2)   =   "Carregando..."
-      TabPicture(2)   =   "frmPesqGeralTeste2.frx":B4F8DA
+      TabPicture(2)   =   "frmPesqGeralTeste2.frx":46F74B
       Tab(2).ControlEnabled=   0   'False
       Tab(2).ControlCount=   0
       TabCaption(3)   =   "Carregando..."
-      TabPicture(3)   =   "frmPesqGeralTeste2.frx":B4F8F6
+      TabPicture(3)   =   "frmPesqGeralTeste2.frx":46F767
       Tab(3).ControlEnabled=   0   'False
       Tab(3).ControlCount=   0
       TabCaption(4)   =   "Carregando..."
-      TabPicture(4)   =   "frmPesqGeralTeste2.frx":B4F912
+      TabPicture(4)   =   "frmPesqGeralTeste2.frx":46F783
       Tab(4).ControlEnabled=   0   'False
       Tab(4).ControlCount=   0
       TabCaption(5)   =   "Carregando..."
-      TabPicture(5)   =   "frmPesqGeralTeste2.frx":B4F92E
+      TabPicture(5)   =   "frmPesqGeralTeste2.frx":46F79F
       Tab(5).ControlEnabled=   0   'False
       Tab(5).ControlCount=   0
       TabCaption(6)   =   "Carregando..."
-      TabPicture(6)   =   "frmPesqGeralTeste2.frx":B4F94A
+      TabPicture(6)   =   "frmPesqGeralTeste2.frx":46F7BB
       Tab(6).ControlEnabled=   0   'False
       Tab(6).ControlCount=   0
       TabCaption(7)   =   "Carregando..."
-      TabPicture(7)   =   "frmPesqGeralTeste2.frx":B4F966
-      Tab(7).ControlEnabled=   0   'False
+      TabPicture(7)   =   "frmPesqGeralTeste2.frx":46F7D7
+      Tab(7).ControlEnabled=   -1  'True
       Tab(7).ControlCount=   0
       TabCaption(8)   =   "Carregando..."
-      TabPicture(8)   =   "frmPesqGeralTeste2.frx":B4F982
+      TabPicture(8)   =   "frmPesqGeralTeste2.frx":46F7F3
       Tab(8).ControlEnabled=   0   'False
       Tab(8).ControlCount=   0
       TabCaption(9)   =   "Carregando..."
-      TabPicture(9)   =   "frmPesqGeralTeste2.frx":B4F99E
+      TabPicture(9)   =   "frmPesqGeralTeste2.frx":46F80F
       Tab(9).ControlEnabled=   0   'False
       Tab(9).ControlCount=   0
       TabCaption(10)  =   "Carregando..."
-      TabPicture(10)  =   "frmPesqGeralTeste2.frx":B4F9BA
+      TabPicture(10)  =   "frmPesqGeralTeste2.frx":46F82B
       Tab(10).ControlEnabled=   0   'False
       Tab(10).ControlCount=   0
       TabCaption(11)  =   "Carregando..."
-      TabPicture(11)  =   "frmPesqGeralTeste2.frx":B4F9D6
+      TabPicture(11)  =   "frmPesqGeralTeste2.frx":46F847
       Tab(11).ControlEnabled=   0   'False
       Tab(11).ControlCount=   0
       TabCaption(12)  =   "Carregando..."
-      TabPicture(12)  =   "frmPesqGeralTeste2.frx":B4F9F2
+      TabPicture(12)  =   "frmPesqGeralTeste2.frx":46F863
       Tab(12).ControlEnabled=   0   'False
       Tab(12).ControlCount=   0
       TabCaption(13)  =   "Carregando..."
-      TabPicture(13)  =   "frmPesqGeralTeste2.frx":B4FA0E
+      TabPicture(13)  =   "frmPesqGeralTeste2.frx":46F87F
       Tab(13).ControlEnabled=   0   'False
       Tab(13).ControlCount=   0
       TabCaption(14)  =   "Carregando..."
-      TabPicture(14)  =   "frmPesqGeralTeste2.frx":B4FA2A
+      TabPicture(14)  =   "frmPesqGeralTeste2.frx":46F89B
       Tab(14).ControlEnabled=   0   'False
       Tab(14).ControlCount=   0
       TabCaption(15)  =   "Carregando..."
-      TabPicture(15)  =   "frmPesqGeralTeste2.frx":B4FA46
+      TabPicture(15)  =   "frmPesqGeralTeste2.frx":46F8B7
       Tab(15).ControlEnabled=   0   'False
       Tab(15).ControlCount=   0
       TabCaption(16)  =   "Carregando..."
-      TabPicture(16)  =   "frmPesqGeralTeste2.frx":B4FA62
+      TabPicture(16)  =   "frmPesqGeralTeste2.frx":46F8D3
       Tab(16).ControlEnabled=   0   'False
       Tab(16).ControlCount=   0
       TabCaption(17)  =   "Carregando..."
-      TabPicture(17)  =   "frmPesqGeralTeste2.frx":B4FA7E
+      TabPicture(17)  =   "frmPesqGeralTeste2.frx":46F8EF
       Tab(17).ControlEnabled=   0   'False
       Tab(17).ControlCount=   0
       TabCaption(18)  =   "Carregando..."
-      TabPicture(18)  =   "frmPesqGeralTeste2.frx":B4FA9A
+      TabPicture(18)  =   "frmPesqGeralTeste2.frx":46F90B
       Tab(18).ControlEnabled=   0   'False
       Tab(18).ControlCount=   0
       TabCaption(19)  =   "Carregando..."
-      TabPicture(19)  =   "frmPesqGeralTeste2.frx":B4FAB6
+      TabPicture(19)  =   "frmPesqGeralTeste2.frx":46F927
       Tab(19).ControlEnabled=   0   'False
       Tab(19).ControlCount=   0
       TabCaption(20)  =   "Carregando..."
-      TabPicture(20)  =   "frmPesqGeralTeste2.frx":B4FAD2
+      TabPicture(20)  =   "frmPesqGeralTeste2.frx":46F943
       Tab(20).ControlEnabled=   0   'False
       Tab(20).ControlCount=   0
       TabCaption(21)  =   "Carregando..."
-      TabPicture(21)  =   "frmPesqGeralTeste2.frx":B4FAEE
+      TabPicture(21)  =   "frmPesqGeralTeste2.frx":46F95F
       Tab(21).ControlEnabled=   0   'False
       Tab(21).ControlCount=   0
       TabCaption(22)  =   "Carregando..."
-      TabPicture(22)  =   "frmPesqGeralTeste2.frx":B4FB0A
+      TabPicture(22)  =   "frmPesqGeralTeste2.frx":46F97B
       Tab(22).ControlEnabled=   0   'False
       Tab(22).ControlCount=   0
       TabCaption(23)  =   "Carregando..."
-      TabPicture(23)  =   "frmPesqGeralTeste2.frx":B4FB26
+      TabPicture(23)  =   "frmPesqGeralTeste2.frx":46F997
       Tab(23).ControlEnabled=   0   'False
       Tab(23).ControlCount=   0
       TabCaption(24)  =   "Carregando..."
-      TabPicture(24)  =   "frmPesqGeralTeste2.frx":B4FB42
+      TabPicture(24)  =   "frmPesqGeralTeste2.frx":46F9B3
       Tab(24).ControlEnabled=   0   'False
       Tab(24).ControlCount=   0
       TabCaption(25)  =   "Carregando..."
-      TabPicture(25)  =   "frmPesqGeralTeste2.frx":B4FB5E
+      TabPicture(25)  =   "frmPesqGeralTeste2.frx":46F9CF
       Tab(25).ControlEnabled=   0   'False
       Tab(25).ControlCount=   0
       TabCaption(26)  =   "Carregando..."
-      TabPicture(26)  =   "frmPesqGeralTeste2.frx":B4FB7A
+      TabPicture(26)  =   "frmPesqGeralTeste2.frx":46F9EB
       Tab(26).ControlEnabled=   0   'False
       Tab(26).ControlCount=   0
       TabCaption(27)  =   "Carregando..."
-      TabPicture(27)  =   "frmPesqGeralTeste2.frx":B4FB96
+      TabPicture(27)  =   "frmPesqGeralTeste2.frx":46FA07
       Tab(27).ControlEnabled=   0   'False
       Tab(27).ControlCount=   0
       TabCaption(28)  =   "Carregando..."
-      TabPicture(28)  =   "frmPesqGeralTeste2.frx":B4FBB2
+      TabPicture(28)  =   "frmPesqGeralTeste2.frx":46FA23
       Tab(28).ControlEnabled=   0   'False
       Tab(28).ControlCount=   0
       TabCaption(29)  =   "Carregando..."
-      TabPicture(29)  =   "frmPesqGeralTeste2.frx":B4FBCE
+      TabPicture(29)  =   "frmPesqGeralTeste2.frx":46FA3F
       Tab(29).ControlEnabled=   0   'False
       Tab(29).ControlCount=   0
       Begin ZEUS.chameleonButton cmdClose 
          Height          =   255
          Index           =   40
-         Left            =   2160
+         Left            =   -72840
          TabIndex        =   4
          Top             =   120
          Visible         =   0   'False
@@ -1271,8 +672,8 @@ Begin VB.Form frmPesqGeralTeste2
          FCOLO           =   0
          MCOL            =   12632256
          MPTR            =   1
-         MICON           =   "frmPesqGeralTeste2.frx":B4FBEA
-         PICN            =   "frmPesqGeralTeste2.frx":B4FC06
+         MICON           =   "frmPesqGeralTeste2.frx":46FA5B
+         PICN            =   "frmPesqGeralTeste2.frx":46FA77
          UMCOL           =   -1  'True
          SOFT            =   0   'False
          PICPOS          =   0
@@ -1285,7 +686,7 @@ Begin VB.Form frmPesqGeralTeste2
       Begin MSComctlLib.ListView ListView2 
          Height          =   6135
          Index           =   20
-         Left            =   240
+         Left            =   -74760
          TabIndex        =   1
          Top             =   1320
          Visible         =   0   'False
@@ -1302,244 +703,6 @@ Begin VB.Form frmPesqGeralTeste2
          NumItems        =   0
       End
    End
-   Begin MSComctlLib.ImageList ImageList 
-      Left            =   3840
-      Top             =   9000
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      BackColor       =   -2147483643
-      ImageWidth      =   32
-      ImageHeight     =   32
-      MaskColor       =   12632256
-      _Version        =   393216
-      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
-         NumListImages   =   56
-         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B50022
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B50CFC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B519D6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B526B0
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5338A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B54064
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B54D3E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B55A18
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B566F2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B573CC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B580A6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B58D80
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B59A5A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5A734
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5B40E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5C0E8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5CDC2
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5DA9C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5E776
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B5F450
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6012A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B60E04
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B61ADE
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B627B8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B63492
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6416C
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B64E46
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B65B20
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B667FA
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B674D4
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B67C4E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B68928
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B69602
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6A2DC
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6AFB6
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6BC90
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6C96A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6D644
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6E31E
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6EFF8
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6F83A
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B6FEB3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B70176
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B70E50
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B7151D
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B721F7
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B72ED1
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B73BAB
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B74885
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B7555F
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B76239
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B76F13
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B77BED
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B788C7
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B78E61
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B79B3B
-            Key             =   ""
-         EndProperty
-      EndProperty
-   End
    Begin MSComctlLib.ImageList ImgList 
       Left            =   3840
       Top             =   8400
@@ -1553,87 +716,87 @@ Begin VB.Form frmPesqGeralTeste2
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   21
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B7A815
+            Picture         =   "frmPesqGeralTeste2.frx":46FE93
             Key             =   "OK"
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B7B227
+            Picture         =   "frmPesqGeralTeste2.frx":4708A5
             Key             =   "EXC"
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B7BC39
+            Picture         =   "frmPesqGeralTeste2.frx":4712B7
             Key             =   "POSITIVO"
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B80653
+            Picture         =   "frmPesqGeralTeste2.frx":475CD1
             Key             =   "NEGATIVO"
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B8506D
+            Picture         =   "frmPesqGeralTeste2.frx":47A6EB
             Key             =   "ARQUIVADO"
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B933F6
+            Picture         =   "frmPesqGeralTeste2.frx":488A74
             Key             =   "AGUARDE-01"
          EndProperty
          BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B940D0
+            Picture         =   "frmPesqGeralTeste2.frx":48974E
             Key             =   "AGUARDE-02"
          EndProperty
          BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B94DAA
+            Picture         =   "frmPesqGeralTeste2.frx":48A428
             Key             =   ""
          EndProperty
          BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B95A84
+            Picture         =   "frmPesqGeralTeste2.frx":48B102
             Key             =   "PENDENTE12"
          EndProperty
          BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9675E
+            Picture         =   "frmPesqGeralTeste2.frx":48BDDC
             Key             =   "AVALIANDO1"
          EndProperty
          BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B97438
+            Picture         =   "frmPesqGeralTeste2.frx":48CAB6
             Key             =   "CONCLUIDO1"
          EndProperty
          BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B98112
+            Picture         =   "frmPesqGeralTeste2.frx":48D790
             Key             =   "PRETO"
          EndProperty
          BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B98DEC
+            Picture         =   "frmPesqGeralTeste2.frx":48E46A
             Key             =   "PENDENTE1"
          EndProperty
          BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B99AC6
+            Picture         =   "frmPesqGeralTeste2.frx":48F144
             Key             =   "FABRICANDO"
          EndProperty
          BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9A7A0
+            Picture         =   "frmPesqGeralTeste2.frx":48FE1E
             Key             =   "FECHADO"
          EndProperty
          BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9B47A
+            Picture         =   "frmPesqGeralTeste2.frx":490AF8
             Key             =   "ANDAMENTO"
          EndProperty
          BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9C154
+            Picture         =   "frmPesqGeralTeste2.frx":4917D2
             Key             =   "CONCLUIDA"
          EndProperty
          BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9CB66
+            Picture         =   "frmPesqGeralTeste2.frx":4921E4
             Key             =   "PARALIZADA"
          EndProperty
          BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9D840
+            Picture         =   "frmPesqGeralTeste2.frx":492EBE
             Key             =   "DUVIDA"
          EndProperty
          BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9E51A
+            Picture         =   "frmPesqGeralTeste2.frx":493B98
             Key             =   ""
          EndProperty
          BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmPesqGeralTeste2.frx":B9F1F4
+            Picture         =   "frmPesqGeralTeste2.frx":494872
             Key             =   ""
          EndProperty
       EndProperty
@@ -1731,6 +894,7 @@ Private Sub Form_Load()
     On Error GoTo ErrHandler
     desconstroiTabs vSSTab
     SubClassSSTAB SSTab1, Picture1
+   
 '    acertaTamanhoIcone
 '    DimensionaLV "Métodos e Processos"
     Exit Sub
@@ -2264,20 +1428,20 @@ End Sub
 
 Private Sub AlteraListview(qtdCol As Integer, vListview As Listview)
 On Error GoTo Err
-    Dim Y As Integer, X As Integer
-    Y = vListview.ListItems.Count
-    For X = 1 To Y
-        If vListview.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = vListview.ListItems.Count
+    For x = 1 To y
+        If vListview.ListItems.Item(x).Selected = True Then
             'If ListView1.CheckBoxes = True Then ListView1.ListItems.Item(X).Checked = True
             Exit For
         End If
     Next
     If qtdCol = 1 Then
-        varGlobal = vListview.ListItems.Item(X)
+        varGlobal = vListview.ListItems.Item(x)
     ElseIf qtdCol = 3 Then
         varGlobal = vListview.SelectedItem.ListSubItems.Item(1)
     Else
-        varGlobal = vListview.ListItems.Item(X) & vListview.SelectedItem.ListSubItems.Item(1)
+        varGlobal = vListview.ListItems.Item(x) & vListview.SelectedItem.ListSubItems.Item(1)
     End If
     If apontaLV = 9 Then
         vRetrabalho = vListview.SelectedItem.ListSubItems.Item(9)
@@ -2313,9 +1477,9 @@ On Error GoTo Err
         
         sqlInspecao = "select b.descricao,b.sigla from tbVerifGrupo as a inner join tbVerifItem as b on a.codgrupo = b.codgrupo where a.aplicacao <> '-'"
         rsInspecao.Open sqlInspecao, cnBanco, adOpenKeyset, adLockReadOnly
-        Y = rsInspecao.RecordCount
-        For X = 1 To Y
-            vQualquerDado(0, X) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
+        y = rsInspecao.RecordCount
+        For x = 1 To y
+            vQualquerDado(0, x) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
             rsInspecao.MoveNext
         Next
         rsInspecao.Close
@@ -2323,7 +1487,7 @@ On Error GoTo Err
         vQualquerDado(0, 30) = "RELATÓRIO DE INSPEÇÃO DE " & vListview.SelectedItem.ListSubItems.Item(6)
     End If
     
-    removeLinha = X
+    removeLinha = x
     Exit Sub
 Err:
     If Err.Number = -2147467259 Then

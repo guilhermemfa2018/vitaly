@@ -6,7 +6,7 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmRelInsp 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Emissão de relatórios de Inspeção"
-   ClientHeight    =   9120
+   ClientHeight    =   9750
    ClientLeft      =   420
    ClientTop       =   705
    ClientWidth     =   21480
@@ -25,7 +25,7 @@ Begin VB.Form frmRelInsp
    MaxButton       =   0   'False
    MDIChild        =   -1  'True
    MinButton       =   0   'False
-   ScaleHeight     =   9120
+   ScaleHeight     =   9750
    ScaleWidth      =   21480
    Tag             =   "Emissão de relatórios"
    Begin VB.CommandButton cmdCadastro 
@@ -45,23 +45,23 @@ Begin VB.Form frmRelInsp
       Style           =   1  'Graphical
       TabIndex        =   18
       Tag             =   "Sair"
-      Top             =   8400
+      Top             =   9000
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
       Height          =   495
-      Left            =   7320
+      Left            =   6480
       OleObjectBlob   =   "frmRelInsp.frx":1994
       TabIndex        =   35
-      Top             =   8520
-      Width           =   14055
+      Top             =   8880
+      Width           =   14775
    End
    Begin VB.Frame Frame5 
       Caption         =   "Siglas"
       Height          =   735
       Left            =   1800
       TabIndex        =   32
-      Top             =   8280
+      Top             =   8880
       Visible         =   0   'False
       Width           =   4455
       Begin VB.TextBox txtCadastro 
@@ -74,7 +74,7 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   6
          Left            =   120
          TabIndex        =   33
@@ -84,7 +84,7 @@ Begin VB.Form frmRelInsp
    End
    Begin VB.Frame Frame3 
       Caption         =   "Itens disponíveis para emissão do relatório"
-      Height          =   8175
+      Height          =   8655
       Left            =   6360
       TabIndex        =   21
       Top             =   120
@@ -94,7 +94,7 @@ Begin VB.Form frmRelInsp
          Left            =   4080
          OleObjectBlob   =   "frmRelInsp.frx":19EC
          TabIndex        =   29
-         Top             =   7800
+         Top             =   8160
          Width           =   855
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel29 
@@ -102,7 +102,7 @@ Begin VB.Form frmRelInsp
          Left            =   1800
          OleObjectBlob   =   "frmRelInsp.frx":1A4C
          TabIndex        =   28
-         Top             =   7800
+         Top             =   8160
          Width           =   1215
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
@@ -110,7 +110,7 @@ Begin VB.Form frmRelInsp
          Left            =   3120
          OleObjectBlob   =   "frmRelInsp.frx":1AAC
          TabIndex        =   27
-         Top             =   7800
+         Top             =   8160
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
@@ -118,7 +118,7 @@ Begin VB.Form frmRelInsp
          Left            =   240
          OleObjectBlob   =   "frmRelInsp.frx":1B1A
          TabIndex        =   26
-         Top             =   7800
+         Top             =   8160
          Width           =   1575
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
@@ -126,7 +126,7 @@ Begin VB.Form frmRelInsp
          Left            =   5160
          OleObjectBlob   =   "frmRelInsp.frx":1B94
          TabIndex        =   25
-         Top             =   7800
+         Top             =   8160
          Width           =   2535
       End
       Begin VB.TextBox txtLvw 
@@ -134,8 +134,8 @@ Begin VB.Form frmRelInsp
          Appearance      =   0  'Flat
          BorderStyle     =   0  'None
          BeginProperty Font 
-            Name            =   "Courier New"
-            Size            =   9
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -145,17 +145,17 @@ Begin VB.Form frmRelInsp
          Height          =   225
          Left            =   8880
          TabIndex        =   23
-         Top             =   7800
+         Top             =   8160
          Width           =   1000
       End
       Begin MSComctlLib.ListView ListView1 
-         Height          =   7455
+         Height          =   7815
          Left            =   120
          TabIndex        =   22
          Top             =   240
          Width           =   14775
          _ExtentX        =   26061
-         _ExtentY        =   13150
+         _ExtentY        =   13785
          LabelEdit       =   1
          LabelWrap       =   -1  'True
          HideSelection   =   -1  'True
@@ -183,7 +183,7 @@ Begin VB.Form frmRelInsp
       End
       Begin IpToolTips.cIpToolTips cIpToolTips1 
          Left            =   11280
-         Top             =   7680
+         Top             =   8040
          _ExtentX        =   847
          _ExtentY        =   847
          BackColor       =   0
@@ -191,8 +191,8 @@ Begin VB.Form frmRelInsp
       Begin VB.Label Label9 
          Caption         =   "Nivel"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -202,7 +202,7 @@ Begin VB.Form frmRelInsp
          Height          =   255
          Left            =   7920
          TabIndex        =   24
-         Top             =   7800
+         Top             =   8160
          Visible         =   0   'False
          Width           =   615
       End
@@ -215,7 +215,7 @@ Begin VB.Form frmRelInsp
       Top             =   120
       Width           =   2415
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
-         Height          =   255
+         Height          =   345
          Left            =   120
          OleObjectBlob   =   "frmRelInsp.frx":1C1C
          TabIndex        =   20
@@ -240,7 +240,7 @@ Begin VB.Form frmRelInsp
       Style           =   1  'Graphical
       TabIndex        =   17
       Tag             =   "Salvar Relatório"
-      Top             =   8400
+      Top             =   9000
       Width           =   615
    End
    Begin VB.Frame Frame8 
@@ -251,13 +251,13 @@ Begin VB.Form frmRelInsp
       Top             =   120
       Width           =   1695
       Begin MSComCtl2.DTPicker DTPicker1 
-         Height          =   330
+         Height          =   345
          Left            =   120
          TabIndex        =   12
          Top             =   240
          Width           =   1455
          _ExtentX        =   2566
-         _ExtentY        =   582
+         _ExtentY        =   609
          _Version        =   393216
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Calibri"
@@ -268,13 +268,13 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   169082881
+         Format          =   168427521
          CurrentDate     =   40449
       End
    End
    Begin VB.Frame Frame1 
       Caption         =   "Dados do Relatório "
-      Height          =   7335
+      Height          =   7815
       Left            =   120
       TabIndex        =   2
       Top             =   960
@@ -284,7 +284,7 @@ Begin VB.Form frmRelInsp
          Height          =   2415
          Left            =   120
          TabIndex        =   30
-         Top             =   2160
+         Top             =   2520
          Width           =   5895
          Begin MSComctlLib.ListView ListView2 
             Height          =   2055
@@ -332,7 +332,7 @@ Begin VB.Form frmRelInsp
          MultiLine       =   -1  'True
          TabIndex        =   16
          Tag             =   "Observação"
-         Top             =   4920
+         Top             =   5280
          Width           =   5895
       End
       Begin VB.ComboBox cboCadastro 
@@ -352,7 +352,7 @@ Begin VB.Form frmRelInsp
          List            =   "frmRelInsp.frx":2973
          TabIndex        =   15
          Tag             =   "Norma de Inspeção"
-         Top             =   1680
+         Top             =   1920
          Width           =   2535
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
@@ -360,7 +360,7 @@ Begin VB.Form frmRelInsp
          Left            =   120
          OleObjectBlob   =   "frmRelInsp.frx":299C
          TabIndex        =   14
-         Top             =   1440
+         Top             =   1680
          Width           =   1815
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
@@ -368,7 +368,7 @@ Begin VB.Form frmRelInsp
          Left            =   120
          OleObjectBlob   =   "frmRelInsp.frx":2A18
          TabIndex        =   13
-         Top             =   4680
+         Top             =   5040
          Width           =   1335
       End
       Begin VB.TextBox txtCadastro 
@@ -382,11 +382,11 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   2
          Left            =   1560
          TabIndex        =   8
-         Top             =   1080
+         Top             =   1200
          Width           =   4455
       End
       Begin VB.TextBox txtCadastro 
@@ -400,11 +400,11 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   1
          Left            =   120
          TabIndex        =   9
-         Top             =   1080
+         Top             =   1200
          Width           =   1335
       End
       Begin VB.TextBox txtCadastro 
@@ -418,7 +418,7 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   10
@@ -436,7 +436,7 @@ Begin VB.Form frmRelInsp
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   3
          Left            =   1560
          TabIndex        =   7
@@ -456,7 +456,7 @@ Begin VB.Form frmRelInsp
          Left            =   120
          OleObjectBlob   =   "frmRelInsp.frx":2AEC
          TabIndex        =   4
-         Top             =   840
+         Top             =   960
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
@@ -472,7 +472,7 @@ Begin VB.Form frmRelInsp
          Left            =   1560
          OleObjectBlob   =   "frmRelInsp.frx":2BC2
          TabIndex        =   6
-         Top             =   840
+         Top             =   960
          Width           =   2055
       End
    End
@@ -485,7 +485,7 @@ Begin VB.Form frmRelInsp
       Width           =   1815
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         Height          =   330
+         Height          =   345
          Index           =   4
          Left            =   120
          TabIndex        =   1
@@ -498,7 +498,7 @@ Begin VB.Form frmRelInsp
       Left            =   3960
       OleObjectBlob   =   "frmRelInsp.frx":2C2E
       TabIndex        =   34
-      Top             =   8880
+      Top             =   9480
       Visible         =   0   'False
       Width           =   3495
    End
@@ -543,7 +543,7 @@ Private Declare Function SendMessage Lib "user32" Alias _
 ByVal wParam As Long, lParam As Any) As Long
 Private Const LVM_FIRST = &H1000
 'Acima ajusta automaticamente a largura das colunas
-Private X As Integer, W As Integer
+Private x As Integer, W As Integer
 Private ContaLV As Integer, LinhaLV As Integer, ContaChecado As Integer, LimiTador As Integer
 Private rsLocal As New ADODB.Recordset
 Private vPonte1 As TextBox
@@ -551,7 +551,7 @@ Private vPonte1 As TextBox
 Private Sub chameleonButton2_Click()
     ChamaGridTrans
     CarregaTipoTrans
-    txtCadastro(16).SetFocus
+    txtcadastro(16).SetFocus
 End Sub
 
 'Private Sub chameleonButton3_Click()
@@ -681,19 +681,19 @@ End Sub
 
 Private Sub CompoeCombo3()
     If ListView1.ListItems.Count = 0 Then Exit Sub
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     Dim fase As String
-    Y = ListView1.ListItems.Count
-    X = 1
+    y = ListView1.ListItems.Count
+    x = 1
     Me.ListView1.Sorted = True
     Me.ListView1.SortKey = 1
     Me.ListView1.SortOrder = lvwAscending
     
-    ListView1.ListItems(X).Selected = True
+    ListView1.ListItems(x).Selected = True
     fase = ListView1.SelectedItem.ListSubItems.Item(1)
     cboCadastro(3).AddItem fase
-    For X = 2 To Y
-        ListView1.ListItems(X).Selected = True
+    For x = 2 To y
+        ListView1.ListItems(x).Selected = True
         If fase <> ListView1.SelectedItem.ListSubItems.Item(1) Then
             fase = ListView1.SelectedItem.ListSubItems.Item(1)
             cboCadastro(3).AddItem fase
@@ -713,13 +713,13 @@ On Error GoTo Err
     rsRelInsp.Open sqlRelInsp, cnBanco, adOpenKeyset, adLockReadOnly
     If rsRelInsp.RecordCount = 0 Then Exit Sub
     
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
-    txtCadastro(0) = Val(Mid(varGlobal, 7, 4)) 'FCE nº
-    txtCadastro(1) = rsRelInsp.Fields(0) 'ID Projeto
-    txtCadastro(2) = rsRelInsp.Fields(2) 'Descrição do projeto
-    txtCadastro(3) = rsRelInsp.Fields(3) 'Nome do cliente
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(0) = Val(Mid(varGlobal, 7, 4)) 'FCE nº
+    txtcadastro(1) = rsRelInsp.Fields(0) 'ID Projeto
+    txtcadastro(2) = rsRelInsp.Fields(2) 'Descrição do projeto
+    txtcadastro(3) = rsRelInsp.Fields(3) 'Nome do cliente
     DTPicker1 = Date 'Data de emissão do relatório
-    varGlobal2 = txtCadastro(4).Text
+    varGlobal2 = txtcadastro(4).Text
     SkinLabel7.Caption = vSituacao
     Exit Sub
 Err:
@@ -904,16 +904,16 @@ End Sub
 
 Private Sub compoeSiglas()
     'Adiciona processo ao item selecionado no Listview
-    Dim Y As Integer, X As Integer
-    txtCadastro(6).Text = ""
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        ListView2.ListItems(X).Selected = True
-        If ListView2.ListItems.Item(X).Checked = True Then
-            If txtCadastro(6).Text = "" Then
-                txtCadastro(6).Text = ListView2.SelectedItem.ListSubItems.Item(2)
+    Dim y As Integer, x As Integer
+    txtcadastro(6).Text = ""
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        ListView2.ListItems(x).Selected = True
+        If ListView2.ListItems.Item(x).Checked = True Then
+            If txtcadastro(6).Text = "" Then
+                txtcadastro(6).Text = ListView2.SelectedItem.ListSubItems.Item(2)
             Else
-                txtCadastro(6).Text = txtCadastro(6).Text & "/" & ListView2.SelectedItem.ListSubItems.Item(2)
+                txtcadastro(6).Text = txtcadastro(6).Text & "/" & ListView2.SelectedItem.ListSubItems.Item(2)
             End If
         End If
     Next
@@ -921,15 +921,15 @@ End Sub
 
 Private Sub AlteraListview()
     On Error GoTo Err
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
     Contador = 0
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    varGlobal = ListView1.ListItems.Item(X)
+    varGlobal = ListView1.ListItems.Item(x)
     Exit Sub
 Err:
     Msgbox "Nenhuma Ficha de Orçamento selecionada", vbInformation, "ZEUS"
@@ -939,7 +939,7 @@ End Sub
 Private Sub GravarDados()
 On Error GoTo Err
 
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     Dim rsRelatorio As New ADODB.Recordset
     Dim sqlRelatorio As String
@@ -956,16 +956,16 @@ On Error GoTo Err
     
 10  cnBanco.BeginTrans
 
-    txtCadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
+    txtcadastro(4) = Format(GeraCodigo, "000000000") & "" 'Identificador do relatório
 
     sqlRelatorio = "select * from tbRelInspExp"
     rsRelatorio.Open sqlRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
     rsRelatorio.AddNew
-    rsRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do Relatorio
-    rsRelatorio.Fields(1) = Val(txtCadastro(0)) 'FCE
-    rsRelatorio.Fields(2) = Val(txtCadastro(1)) 'Codigo do projeto
+    rsRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do Relatorio
+    rsRelatorio.Fields(1) = Val(txtcadastro(0)) 'FCE
+    rsRelatorio.Fields(2) = Val(txtcadastro(1)) 'Codigo do projeto
     rsRelatorio.Fields(3) = Format(DTPicker1, "dd/mm/yyyy") 'Data do relatorio
-    rsRelatorio.Fields(4) = txtCadastro(5) 'Observação
+    rsRelatorio.Fields(4) = txtcadastro(5) 'Observação
     rsRelatorio.Fields(5) = 0 'Status de impressão
     rsRelatorio.Fields(6) = cboCadastro(4) 'Norma de Liberação
     If SkinLabel7.Caption = "INSPEÇÃO DE FABRICAÇÃO" Then
@@ -982,17 +982,17 @@ On Error GoTo Err
     'Gravar dados referente aos Itens do Relatório
     sqlItensRelatorio = "select * from tbRelInspExpitens"
     rsItensRelatorio.Open sqlItensRelatorio, cnBanco, adOpenKeyset, adLockOptimistic
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If ListView1.ListItems.Item(X).Checked = True Then
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If ListView1.ListItems.Item(x).Checked = True Then
             rsItensRelatorio.AddNew
-            rsItensRelatorio.Fields(0) = Val(txtCadastro(4)) 'Codigo do relatorio
-            rsItensRelatorio.Fields(1) = Val(txtCadastro(0).Text) 'Nº FCE
-            rsItensRelatorio.Fields(2) = Val(txtCadastro(1)) 'Código do Projeto
+            rsItensRelatorio.Fields(0) = Val(txtcadastro(4)) 'Codigo do relatorio
+            rsItensRelatorio.Fields(1) = Val(txtcadastro(0).Text) 'Nº FCE
+            rsItensRelatorio.Fields(2) = Val(txtcadastro(1)) 'Código do Projeto
             rsItensRelatorio.Fields(3) = ListView1.SelectedItem.ListSubItems.Item(2) 'Desenho
             rsItensRelatorio.Fields(4) = ListView1.SelectedItem.ListSubItems.Item(3) 'Revisão do Desenho
-            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(X) 'Posição
+            rsItensRelatorio.Fields(5) = ListView1.ListItems.Item(x) 'Posição
             rsItensRelatorio.Fields(6) = ListView1.SelectedItem.ListSubItems.Item(1) 'Descrição da posição
             If SkinLabel7.Caption = "INSPEÇÃO DE FABRICAÇÃO" Then
                 rsItensRelatorio.Fields(7) = 3 'ListView1.SelectedItem.ListSubItems.Item(8) 'Status (Codfase)
@@ -1016,16 +1016,16 @@ On Error GoTo Err
     
     mobjMsg.Abrir "Dados gravados com sucesso.Deseja imprimir de relatório?", YesNo, pergunta, "Zeus"
     If Tp = 1 Then
-        vCodRel = Val(txtCadastro(4))
+        vCodRel = Val(txtcadastro(4))
         Dim rsInspecao As New ADODB.Recordset
         Dim sqlInspecao As String
         limpaQualquerDado
         
         sqlInspecao = "select b.descricao,b.sigla from tbVerifGrupo as a inner join tbVerifItem as b on a.codgrupo = b.codgrupo where a.aplicacao <> '-'"
         rsInspecao.Open sqlInspecao, cnBanco, adOpenKeyset, adLockReadOnly
-        Y = rsInspecao.RecordCount
-        For X = 1 To Y
-            vQualquerDado(0, X) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
+        y = rsInspecao.RecordCount
+        For x = 1 To y
+            vQualquerDado(0, x) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
             rsInspecao.MoveNext
         Next
         rsInspecao.Close
@@ -1055,9 +1055,9 @@ End Sub
 
 Private Sub SelecionaLinha()
 On Error GoTo Err
-    Dim Y As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For W = 1 To Y
+    Dim y As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For W = 1 To y
         If vListViewPrincipal.ListItems.Item(W).Selected = True Then
             Exit For
         End If
@@ -1141,11 +1141,11 @@ Private Function SomaTotais()
 On Error GoTo TrataErro
     SkinLabel12.Caption = ""
     SomaTotais = True
-    Dim Y As Integer, SomaPeso As Double, SomaQtd As Double
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, SomaPeso As Double, SomaQtd As Double
+    y = ListView1.ListItems.Count
     SomaQtd = 0
     SomaPeso = 0
-    For W = 1 To Y
+    For W = 1 To y
         If ListView1.ListItems.Item(W).Checked = True Then
             ListView1.ListItems(W).Selected = True
             SomaQtd = SomaQtd + ListView1.SelectedItem.ListSubItems.Item(7)
@@ -1211,7 +1211,7 @@ On Error GoTo Err
         rsLocal.MoveFirst
         rsLocal.Find "nome=" & "'" & Pesquisa & "'"
         If Not rsLocal.EOF Then
-            txtCadastro(6).Text = Format(rsLocal.Fields(0), "000000")
+            txtcadastro(6).Text = Format(rsLocal.Fields(0), "000000")
         End If
         rsLocal.Close
         Set rsLocal = Nothing
@@ -1230,30 +1230,30 @@ End Sub
 
 Private Sub CarregaTipoTrans()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     Dim rsTipoTrans As New ADODB.Recordset
     SqlM = "Select * from tbTransportadoras order by tbTransportadoras.codtransp"
     rsTipoTrans.Open SqlM, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsTipoTrans.EOF Then rsTipoTrans.MoveFirst
-    rsTipoTrans.Find "codtransp=" & "'" & Val(Me.txtCadastro(6)) & "'"
+    rsTipoTrans.Find "codtransp=" & "'" & Val(Me.txtcadastro(6)) & "'"
     If rsTipoTrans.EOF Then
-        txtCadastro(6).Text = Format(txtCadastro(6), "000000") & ""
+        txtcadastro(6).Text = Format(txtcadastro(6), "000000") & ""
         If Val(Pesquisa) <> 0 Then
             Msgbox "Transportadora não cadastrada", vbInformation, "Zeus"
-            txtCadastro(7) = ""
+            txtcadastro(7) = ""
         End If
     Else
-        txtCadastro(6).Text = Format(rsTipoTrans.Fields(0), "000000") & ""
-        txtCadastro(7).Text = rsTipoTrans.Fields(1)
-        txtCadastro(8).Text = rsTipoTrans.Fields(2)
-        txtCadastro(9).Text = rsTipoTrans.Fields(3)
-        txtCadastro(10).Text = rsTipoTrans.Fields(4)
-        txtCadastro(11).Text = rsTipoTrans.Fields(5)
-        txtCadastro(12).Text = rsTipoTrans.Fields(6)
-        txtCadastro(13).Text = rsTipoTrans.Fields(7)
+        txtcadastro(6).Text = Format(rsTipoTrans.Fields(0), "000000") & ""
+        txtcadastro(7).Text = rsTipoTrans.Fields(1)
+        txtcadastro(8).Text = rsTipoTrans.Fields(2)
+        txtcadastro(9).Text = rsTipoTrans.Fields(3)
+        txtcadastro(10).Text = rsTipoTrans.Fields(4)
+        txtcadastro(11).Text = rsTipoTrans.Fields(5)
+        txtcadastro(12).Text = rsTipoTrans.Fields(6)
+        txtcadastro(13).Text = rsTipoTrans.Fields(7)
         cboCadastro(0).Text = rsTipoTrans.Fields(8)
-        For X = 7 To 13
-            txtCadastro(X).Enabled = False
+        For x = 7 To 13
+            txtcadastro(x).Enabled = False
         Next
         cboCadastro(0).Enabled = False
     End If
@@ -1287,7 +1287,7 @@ Private Sub ListView1_Click()
             If ListView1.ListItems.Item(K).Checked = False Then
                 ListView1.ListItems.Item(K).Checked = True
                 ContaChecado = ContaChecado + 1
-                ListView1.SelectedItem.ListSubItems.Item(13) = txtCadastro(6).Text
+                ListView1.SelectedItem.ListSubItems.Item(13) = txtcadastro(6).Text
                 If ListView1.SelectedItem.ListSubItems.Item(7) = " " And txtLvw = "" Then
                     ListView1.SelectedItem.ListSubItems.Item(7) = ListView1.SelectedItem.ListSubItems.Item(6)
                 End If
@@ -1328,7 +1328,7 @@ End Sub
 'End Sub
 '---------------------------
 '---------------------------
-Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
 'fired when the listitem is already selected, for this reason can't used mousedown event
 'so we know which row is clicked, for the column, we need to translate the x to listview coordinate
 Dim i As Integer, leftPos As Single 'the left pos of the column
@@ -1338,7 +1338,7 @@ If Button = vbLeftButton Then
     If Not ListView1.SelectedItem Is Nothing Then
         ListView1.LabelEdit = lvwManual
         dx = GetLvwDeltaX
-        lvwX = X + dx
+        lvwX = x + dx
         For i = 8 To 8
             PosLinha
             If ListView1.ListItems.Item(LinhaLV).Checked = False Then Exit Sub
@@ -1478,7 +1478,7 @@ On Error GoTo Err
     Dim rsCodRel As New ADODB.Recordset
     Dim rsTbTemp As New ADODB.Recordset
     Dim sqlCodRel As String, sqlTbTemp As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     sqlTbTemp = "Delete from tbtemp"
     rsTbTemp.Open sqlTbTemp, cnBanco
@@ -1486,11 +1486,11 @@ On Error GoTo Err
     sqlTbTemp = "Select * from tbtemp"
     rsTbTemp.Open sqlTbTemp, cnBanco, adOpenKeyset, adLockOptimistic
     
-    Y = frmRelInsp.ListView1.ListItems.Count
-    For X = 1 To Y
-        frmRelInsp.ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If frmRelInsp.ListView1.ListItems.Item(X).Checked = True Then
-            sqlCodRel = "select tbrelatorios.codrel,tbitemrelatorio.idld from tbitemrelatorio inner join tbRelatorios on tbrelatorios.codrel = tbitemrelatorio.codrel where tbitemrelatorio.idld = '" & Val(frmRelInsp.ListView1.ListItems.Item(X)) & "'" & " order by tbitemrelatorio.codprocesso,tbitemrelatorio.codfase desc"
+    y = frmRelInsp.ListView1.ListItems.Count
+    For x = 1 To y
+        frmRelInsp.ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If frmRelInsp.ListView1.ListItems.Item(x).Checked = True Then
+            sqlCodRel = "select tbrelatorios.codrel,tbitemrelatorio.idld from tbitemrelatorio inner join tbRelatorios on tbrelatorios.codrel = tbitemrelatorio.codrel where tbitemrelatorio.idld = '" & Val(frmRelInsp.ListView1.ListItems.Item(x)) & "'" & " order by tbitemrelatorio.codprocesso,tbitemrelatorio.codfase desc"
             rsCodRel.Open sqlCodRel, cnBanco, adOpenKeyset, adLockReadOnly
             rsCodRel.MoveNext
             If rsCodRel.RecordCount > 0 Then

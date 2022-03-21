@@ -5,7 +5,7 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmUsuarios 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Cadastro de Usuários"
-   ClientHeight    =   8640
+   ClientHeight    =   9465
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   5400
@@ -13,30 +13,65 @@ Begin VB.Form frmUsuarios
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   ScaleHeight     =   8640
+   ScaleHeight     =   9465
    ScaleWidth      =   5400
    StartUpPosition =   2  'CenterScreen
+   Begin VB.Frame Frame5 
+      Caption         =   "Pacote de ícones do sistema"
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   735
+      Left            =   120
+      TabIndex        =   45
+      Top             =   7080
+      Width           =   5175
+      Begin VB.ComboBox Combo5 
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
+         ItemData        =   "frmUsuarios.frx":0CCA
+         Left            =   120
+         List            =   "frmUsuarios.frx":0CDD
+         TabIndex        =   46
+         Tag             =   "Selecione o pacote de ícone que será utilizado pelo usuário"
+         Top             =   240
+         Width           =   4935
+      End
+   End
    Begin VB.CommandButton chameleonButton11 
       Height          =   615
       Left            =   720
-      Picture         =   "frmUsuarios.frx":0CCA
+      Picture         =   "frmUsuarios.frx":0D46
       Style           =   1  'Graphical
-      TabIndex        =   45
+      TabIndex        =   44
       Tag             =   "Sair"
       ToolTipText     =   "Sair"
-      Top             =   7920
+      Top             =   8760
       Width           =   615
    End
    Begin VB.CommandButton chameleonButton12 
-      Enabled         =   0   'False
       Height          =   615
       Left            =   120
-      Picture         =   "frmUsuarios.frx":1994
+      Picture         =   "frmUsuarios.frx":1A10
       Style           =   1  'Graphical
-      TabIndex        =   44
+      TabIndex        =   43
       Tag             =   "Salvar Critério"
       ToolTipText     =   "Salvar Critério"
-      Top             =   7920
+      Top             =   8760
       Width           =   615
    End
    Begin VB.TextBox txtCadastro 
@@ -59,24 +94,24 @@ Begin VB.Form frmUsuarios
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":265E
-      TabIndex        =   40
+      OleObjectBlob   =   "frmUsuarios.frx":26DA
+      TabIndex        =   39
       Top             =   3960
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":26C2
-      TabIndex        =   39
+      OleObjectBlob   =   "frmUsuarios.frx":273E
+      TabIndex        =   38
       Top             =   3600
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":2726
-      TabIndex        =   38
+      OleObjectBlob   =   "frmUsuarios.frx":27A2
+      TabIndex        =   37
       Top             =   3240
       Width           =   735
    End
@@ -129,64 +164,64 @@ Begin VB.Form frmUsuarios
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":278E
-      TabIndex        =   37
+      OleObjectBlob   =   "frmUsuarios.frx":280A
+      TabIndex        =   36
       Top             =   2880
       Width           =   975
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":27F8
-      TabIndex        =   36
+      OleObjectBlob   =   "frmUsuarios.frx":2874
+      TabIndex        =   35
       Top             =   2520
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":285E
-      TabIndex        =   35
+      OleObjectBlob   =   "frmUsuarios.frx":28DA
+      TabIndex        =   34
       Top             =   2160
       Width           =   735
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":28C4
-      TabIndex        =   34
+      OleObjectBlob   =   "frmUsuarios.frx":2940
+      TabIndex        =   33
       Top             =   1800
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":292A
-      TabIndex        =   33
+      OleObjectBlob   =   "frmUsuarios.frx":29A6
+      TabIndex        =   32
       Top             =   1440
       Width           =   495
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":298A
-      TabIndex        =   32
+      OleObjectBlob   =   "frmUsuarios.frx":2A06
+      TabIndex        =   31
       Top             =   1080
       Width           =   855
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":29F4
-      TabIndex        =   31
+      OleObjectBlob   =   "frmUsuarios.frx":2A70
+      TabIndex        =   30
       Top             =   720
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "frmUsuarios.frx":2A56
-      TabIndex        =   30
+      OleObjectBlob   =   "frmUsuarios.frx":2AD2
+      TabIndex        =   29
       Top             =   360
       Width           =   615
    End
@@ -201,11 +236,11 @@ Begin VB.Form frmUsuarios
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   120
-      TabIndex        =   27
-      Top             =   6720
-      Width           =   3975
+      TabIndex        =   26
+      Top             =   7920
+      Width           =   5175
       Begin VB.ComboBox Combo1 
          BeginProperty Font 
             Name            =   "Calibri"
@@ -217,28 +252,14 @@ Begin VB.Form frmUsuarios
             Strikethrough   =   0   'False
          EndProperty
          Height          =   345
+         ItemData        =   "frmUsuarios.frx":2B38
          Left            =   120
-         TabIndex        =   28
+         List            =   "frmUsuarios.frx":2B3F
+         TabIndex        =   27
+         Text            =   "Vitaly"
          Top             =   240
-         Width           =   3735
+         Width           =   4935
       End
-   End
-   Begin VB.CheckBox Check2 
-      Caption         =   "Autorizado a finalizar apropriação de colaboradores"
-      BeginProperty Font 
-         Name            =   "Calibri"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   255
-      Left            =   120
-      TabIndex        =   20
-      Top             =   7440
-      Width           =   5055
    End
    Begin VB.Frame Frame2 
       Caption         =   "Informe os cursos/treinamentos"
@@ -254,7 +275,7 @@ Begin VB.Form frmUsuarios
          Left            =   0
          ScaleHeight     =   945
          ScaleWidth      =   945
-         TabIndex        =   25
+         TabIndex        =   24
          Top             =   0
          Width           =   1000
       End
@@ -264,7 +285,7 @@ Begin VB.Form frmUsuarios
          Left            =   0
          ScaleHeight     =   945
          ScaleWidth      =   945
-         TabIndex        =   26
+         TabIndex        =   25
          Top             =   0
          Width           =   1000
       End
@@ -272,7 +293,7 @@ Begin VB.Form frmUsuarios
          Caption         =   "Check4"
          Height          =   255
          Left            =   150
-         TabIndex        =   24
+         TabIndex        =   23
          Top             =   3465
          Width           =   255
       End
@@ -280,14 +301,14 @@ Begin VB.Form frmUsuarios
          Caption         =   "Check3"
          Height          =   255
          Left            =   135
-         TabIndex        =   23
+         TabIndex        =   22
          Top             =   345
          Width           =   255
       End
       Begin MSComctlLib.ListView ListView2 
          Height          =   2175
          Left            =   120
-         TabIndex        =   22
+         TabIndex        =   21
          Top             =   3720
          Width           =   5295
          _ExtentX        =   9340
@@ -308,7 +329,7 @@ Begin VB.Form frmUsuarios
       Begin MSComctlLib.ListView ListView1 
          Height          =   2295
          Left            =   120
-         TabIndex        =   21
+         TabIndex        =   20
          Top             =   600
          Width           =   5295
          _ExtentX        =   9340
@@ -338,16 +359,33 @@ Begin VB.Form frmUsuarios
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2295
+      Height          =   2655
       Left            =   120
       TabIndex        =   11
       Top             =   4320
       Width           =   5175
+      Begin VB.CheckBox Check2 
+         Caption         =   "Autorizado a finalizar apropriação de colaboradores"
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   120
+         TabIndex        =   47
+         Top             =   2280
+         Width           =   4695
+      End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":2ABC
-         TabIndex        =   29
+         OleObjectBlob   =   "frmUsuarios.frx":2B4B
+         TabIndex        =   28
          Top             =   1560
          Width           =   855
       End
@@ -373,24 +411,24 @@ Begin VB.Form frmUsuarios
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":2B20
-         TabIndex        =   43
+         OleObjectBlob   =   "frmUsuarios.frx":2BAF
+         TabIndex        =   42
          Top             =   1200
          Width           =   1335
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":2B98
-         TabIndex        =   42
+         OleObjectBlob   =   "frmUsuarios.frx":2C27
+         TabIndex        =   41
          Top             =   840
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmUsuarios.frx":2BFC
-         TabIndex        =   41
+         OleObjectBlob   =   "frmUsuarios.frx":2C8B
+         TabIndex        =   40
          Top             =   480
          Width           =   855
       End
@@ -409,7 +447,7 @@ Begin VB.Form frmUsuarios
          Left            =   1440
          TabIndex        =   16
          Top             =   1440
-         Width           =   3495
+         Width           =   3615
       End
       Begin VB.CheckBox chkCadastro 
          Caption         =   "O usuário deve alterar Login e Senha no próximo Logon"
@@ -512,9 +550,9 @@ Begin VB.Form frmUsuarios
       EndProperty
       Height          =   345
       Index           =   0
-      ItemData        =   "frmUsuarios.frx":2C60
+      ItemData        =   "frmUsuarios.frx":2CEF
       Left            =   960
-      List            =   "frmUsuarios.frx":2CB5
+      List            =   "frmUsuarios.frx":2D44
       TabIndex        =   6
       Top             =   2400
       Width           =   855
@@ -623,10 +661,19 @@ Begin VB.Form frmUsuarios
       Height          =   615
       Left            =   4200
       TabIndex        =   17
-      Top             =   6720
+      Top             =   8760
       Width           =   975
       Begin VB.CheckBox Check1 
          Caption         =   "Ativo"
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   255
          Left            =   120
          TabIndex        =   18
@@ -666,7 +713,7 @@ Private Sub chameleonButton12_Click()
     mobjMsg.Abrir "Deseja salvar os dados do usuário?", YesNo, pergunta, "ZEUS"
     If Tp = 1 Then
         Bot_salvar
-        gravaLog "Código usuário: " & mskCadastro(0), "Nome: " & txtCadastro(0), "Login: " & txtCadastro(7)
+        gravaLog "Código usuário: " & mskCadastro(0), "Nome: " & txtcadastro(0), "Login: " & txtcadastro(7)
         Unload Me
         Set frmUsuarios = Nothing
     End If
@@ -675,12 +722,12 @@ End Sub
 Private Sub Check2_Click()
     If Check2.Value = 1 Then
         Frame2.Enabled = True
-        chameleonButton1.UseGreyscale = False
-        chameleonButton2.UseGreyscale = False
+    '    chameleonButton1.UseGreyscale = False
+    '    chameleonButton2.UseGreyscale = False
     Else
         Frame2.Enabled = False
-        chameleonButton1.UseGreyscale = True
-        chameleonButton2.UseGreyscale = True
+    '    chameleonButton1.UseGreyscale = True
+    '    chameleonButton2.UseGreyscale = True
     End If
 End Sub
 
@@ -703,11 +750,11 @@ Private Sub Form_Load()
     End If
     CompoeCombo1 cboCadastro(1), "tbgrupo", "codigo", "descricao"
     CompoeCombo2 Combo1, "tbDadosEmpresa", "codcoligada", "razaosocial"
-    If txtCadastro(7) = "adm" Then
-        txtCadastro(7).Enabled = False
+    If txtcadastro(7) = "adm" Then
+        txtcadastro(7).Enabled = False
         Combo1.Enabled = False
     Else
-        txtCadastro(7).Enabled = True
+        txtcadastro(7).Enabled = True
         Combo1.Enabled = True
     End If
     
@@ -728,7 +775,92 @@ End Sub
 
 Private Sub ResultPesq()
 On Error GoTo Err
-    SqlFuncionarios = "Select * from tbUsuarios, tbgrupo, tbsenha,tbdadosempresa where tbUsuarios.codigo = tbsenha.codigo and tbUsuarios.codgrupo = tbgrupo.codigo and tbUsuarios.codcoligada = tbdadosempresa.codcoligada and tbUsuarios.codigo = '" & Val(varGlobal) & "' order by tbUsuarios.codigo"
+    'SqlFuncionarios = "Select * from tbUsuarios, tbgrupo, tbsenha,tbdadosempresa where tbUsuarios.codigo = tbsenha.codigo and tbUsuarios.codgrupo = tbgrupo.codigo and tbUsuarios.codcoligada = tbdadosempresa.codcoligada and tbUsuarios.codigo = '" & Val(varGlobal) & "' order by tbUsuarios.codigo"
+    
+    
+    SqlFuncionarios = ""
+    SqlFuncionarios = SqlFuncionarios & "SELECT " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODIGO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.NOME, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.ENDERECO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CEP, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.BAIRRO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CIDADE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.UF, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.FONE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CELULAR, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.RAMAL, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.EMAIL, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODGRUPO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.ALTLOGIN, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.ATIVO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.MULTIPLIC, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODCOLIGADA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " B.CODIGO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " B.DESCRICAO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " B.ATIVO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " B.CODCOLIGADA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " C.USUARIO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " C.SENHA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " C.CODIGO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " C.CODCOLIGADA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.RAZAOSOCIAL, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.ENDERECO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.BAIRRO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.CIDADE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.UF, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.CEP, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.EMAIL, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.SITE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.TELEFONE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.FAX, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.CNPJ, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.IE, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.LOGO, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.CODCOLIGADA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " D.ATIVA, " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " E.IDCOLECAOICON " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "FROM tbUsuarios AS A " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "INNER JOIN tbgrupo AS B ON " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODGRUPO = B.CODIGO " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "INNER JOIN tbsenha AS C ON " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODIGO = C.CODIGO " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "INNER JOIN tbdadosempresa AS D ON " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODCOLIGADA = D.CODCOLIGADA " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "LEFT JOIN TBUSUARIOCOLECAOICONES AS E ON " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & " A.CODIGO = E.IDUSUARIO " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "WHERE A.CODIGO = '" & Val(varGlobal) & "'  " & vbCrLf
+    SqlFuncionarios = SqlFuncionarios & "ORDER BY A.CODIGO"
+    
+    
+    
+'    SqlFuncionarios = ""
+'    SqlFuncionarios = SqlFuncionarios & "SELECT " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CODIGO, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.NOME, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.ENDERECO, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CEP, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.BAIRRO, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CIDADE, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.UF, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.FONE, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CELULAR, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.RAMAL, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.EMAIL, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CODGRUPO, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.ALTLOGIN, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.ATIVO, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.MULTIPLIC, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CODCOLIGADA, " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " B.IDCOLECAOICON " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & "FROM tbUsuarios AS A " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & "LEFT JOIN TBUSUARIOCOLECAOICONES AS B ON " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & " A.CODIGO = B.IDUSUARIO " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & "WHERE CODIGO = 2 " & vbCrLf
+'    SqlFuncionarios = SqlFuncionarios & "ORDER BY A.CODIGO"
+    
+    
+    
     rsFuncionarios.Open SqlFuncionarios, cnBanco, adOpenKeyset, adLockReadOnly
     If rsFuncionarios.RecordCount > 0 Then
         CompoeControles
@@ -750,18 +882,18 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
+    Dim x As Integer
     DesbloqueiaControles
-    For X = 0 To mskCadastro.Count - 1
-        Me.mskCadastro(X).PromptInclude = False
-        mskCadastro(X) = ""
-        Me.mskCadastro(X).PromptInclude = True
+    For x = 0 To mskCadastro.Count - 1
+        Me.mskCadastro(x).PromptInclude = False
+        mskCadastro(x) = ""
+        Me.mskCadastro(x).PromptInclude = True
     Next
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X) = ""
+    For x = 0 To txtcadastro.Count - 1
+        txtcadastro(x) = ""
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X) = ""
+    For x = 0 To cboCadastro.Count - 1
+        cboCadastro(x) = ""
     Next
     mskCadastro(0).Text = Format(GeraCodigo, "000000") & ""
 End Sub
@@ -776,17 +908,17 @@ Private Sub CompoeControles()
     mskCadastro(2).PromptInclude = False
     mskCadastro(2).Text = rsFuncionarios.Fields(8) & ""
     mskCadastro(2).PromptInclude = True
-    txtCadastro(0).Text = rsFuncionarios.Fields(1)
-    If rsFuncionarios.Fields(2) <> "Null" Then txtCadastro(1).Text = rsFuncionarios.Fields(2)
-    If rsFuncionarios.Fields(3) <> "Null" Then txtCadastro(2).Text = rsFuncionarios.Fields(3)
-    If rsFuncionarios.Fields(3) <> "Null" Then txtCadastro(3).Text = rsFuncionarios.Fields(4)
-    If rsFuncionarios.Fields(4) <> "Null" Then txtCadastro(4).Text = rsFuncionarios.Fields(5)
-    If rsFuncionarios.Fields(5) <> "Null" Then txtCadastro(5).Text = rsFuncionarios.Fields(9)
-    If rsFuncionarios.Fields(6) <> "Null" Then txtCadastro(6).Text = rsFuncionarios.Fields(10)
+    txtcadastro(0).Text = rsFuncionarios.Fields(1)
+    If rsFuncionarios.Fields(2) <> "Null" Then txtcadastro(1).Text = rsFuncionarios.Fields(2)
+    If rsFuncionarios.Fields(3) <> "Null" Then txtcadastro(2).Text = rsFuncionarios.Fields(3)
+    If rsFuncionarios.Fields(3) <> "Null" Then txtcadastro(3).Text = rsFuncionarios.Fields(4)
+    If rsFuncionarios.Fields(4) <> "Null" Then txtcadastro(4).Text = rsFuncionarios.Fields(5)
+    If rsFuncionarios.Fields(5) <> "Null" Then txtcadastro(5).Text = rsFuncionarios.Fields(9)
+    If rsFuncionarios.Fields(6) <> "Null" Then txtcadastro(6).Text = rsFuncionarios.Fields(10)
     
-    txtCadastro(7).Text = rsFuncionarios.Fields(20)
-    txtCadastro(8).Text = rsFuncionarios.Fields(21)
-    txtCadastro(9).Text = rsFuncionarios.Fields(21)
+    txtcadastro(7).Text = rsFuncionarios.Fields(20)
+    txtcadastro(8).Text = rsFuncionarios.Fields(21)
+    txtcadastro(9).Text = rsFuncionarios.Fields(21)
     cboCadastro(0).Text = rsFuncionarios.Fields(6) & ""
     cboCadastro(1).Text = Format(rsFuncionarios.Fields(16), "000000") & " - " & rsFuncionarios.Fields(17) & ""
     If rsFuncionarios.Fields(12) = 1 Then
@@ -804,13 +936,22 @@ Private Sub CompoeControles()
     Else
         Check2.Value = 0
     End If
-    Combo1.Text = rsFuncionarios.Fields(24)
+    
+    'If Not IsNull(rsFuncionarios.Fields(15)) Then
+    '    Combo1.ListIndex = rsFuncionarios.Fields(15)
+    'Else
+    'End If
+    
+    If Not IsNull(rsFuncionarios.Fields(39)) Then
+        Combo5.ListIndex = rsFuncionarios.Fields(39) - 1
+    Else
+    End If
     BloqueiaControles
 End Sub
 
 Private Sub Bot_salvar()
 On Error GoTo Err
-    If txtCadastro(8).Text <> txtCadastro(9).Text Then
+    If txtcadastro(8).Text <> txtcadastro(9).Text Then
         mobjMsg.Abrir "A nova senha e a senha de confirmação devem ser iguais. Digite-as novamente", Ok, critico, "Atenção"
         Exit Sub
     End If
@@ -821,11 +962,14 @@ On Error GoTo Err
     End If
 
     Dim SqlSalvar As String
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     Dim rsSalvTrei As New ADODB.Recordset
     Dim SqlSalvTrei As String
     Dim rsColigada As New ADODB.Recordset
     Dim SqlColigada As String
+    Dim rsColectionIcons As New ADODB.Recordset
+    Dim SqlColectionIcons As String
+    Dim vColecaoIcone As Integer
     
 10  cnBanco.BeginTrans
     SqlColigada = "Select codcoligada from tbDadosEmpresa where tbDadosEmpresa.razaosocial = '" & Combo1 & "'"
@@ -836,26 +980,56 @@ On Error GoTo Err
     rsColigada.Close
     Set rsColigada = Nothing
     
+    If Combo5.Text = "" Then
+        vColecaoIcone = 0
+    ElseIf Combo5.ListIndex = 0 Then
+        vColecaoIcone = 1
+    ElseIf Combo5.ListIndex = 1 Then
+        vColecaoIcone = 2
+    ElseIf Combo5.ListIndex = 2 Then
+        vColecaoIcone = 3
+    ElseIf Combo5.ListIndex = 3 Then
+        vColecaoIcone = 4
+    ElseIf Combo5.ListIndex = 4 Then
+        vColecaoIcone = 5
+    ElseIf Combo5.ListIndex = 5 Then
+        vColecaoIcone = 6
+    End If
+    
+    SqlColectionIcons = ""
+    SqlColectionIcons = SqlColectionIcons & "UPDATE TBUSUARIOCOLECAOICONES with (serializable) SET IDCOLECAOICON = " & vColecaoIcone & " " & vbCrLf
+    SqlColectionIcons = SqlColectionIcons & "WHERE IDUSUARIO = " & Val(mskCadastro(0).ClipText) & " " & vbCrLf
+    SqlColectionIcons = SqlColectionIcons & "IF @@rowcount = 0 " & vbCrLf
+    SqlColectionIcons = SqlColectionIcons & "BEGIN " & vbCrLf
+    SqlColectionIcons = SqlColectionIcons & "   INSERT INTO TBUSUARIOCOLECAOICONES(IDUSUARIO, IDCOLECAOICON) VALUES (" & Val(mskCadastro(0).ClipText) & ", " & vColecaoIcone & ") " & vbCrLf
+    SqlColectionIcons = SqlColectionIcons & "END"
+    
+    cnBanco.Execute SqlColectionIcons, adExecuteNoRecords
+    
+    'rsColectionIcons.Open SqlColectionIcons, cnBanco
+    
+    
     SqlSalvar = "Select * from tbUsuarios where tbUsuarios.codigo = '" & Val(Me.mskCadastro(0)) & "'"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
     mskCadastro(0).PromptInclude = False
-    If txtCadastro(0).Text <> "" Then
+    If txtcadastro(0).Text <> "" Then
         mskCadastro(0).PromptInclude = False
         If mskCadastro(0).Text <> "" Then
             'cnBanco.BeginTrans
+            
             If rsSalvar.RecordCount = 0 Then
                 rsSalvar.AddNew
                 rsSalvar.Fields(0) = mskCadastro(0).ClipText
                 rsSalvar.Fields(7) = mskCadastro(1).ClipText
                 rsSalvar.Fields(8) = mskCadastro(2).ClipText
-                rsSalvar.Fields(1) = txtCadastro(0).Text
-                rsSalvar.Fields(2) = txtCadastro(1).Text
-                rsSalvar.Fields(3) = txtCadastro(2).Text
-                rsSalvar.Fields(4) = txtCadastro(3).Text
-                rsSalvar.Fields(5) = txtCadastro(4).Text
-                rsSalvar.Fields(9) = txtCadastro(5).Text
-                rsSalvar.Fields(10) = txtCadastro(6).Text
+                rsSalvar.Fields(1) = txtcadastro(0).Text
+                rsSalvar.Fields(2) = txtcadastro(1).Text
+                rsSalvar.Fields(3) = txtcadastro(2).Text
+                rsSalvar.Fields(4) = txtcadastro(3).Text
+                rsSalvar.Fields(5) = txtcadastro(4).Text
+                rsSalvar.Fields(9) = txtcadastro(5).Text
+                rsSalvar.Fields(10) = txtcadastro(6).Text
                 rsSalvar.Fields(6) = cboCadastro(0).Text
                 
                 rsSalvar.Fields(11) = Val(Left(cboCadastro(1).Text, 6))
@@ -884,22 +1058,25 @@ On Error GoTo Err
                 
                 rsSenha.AddNew
                 rsSenha.Fields(2) = mskCadastro(0).ClipText
-                rsSenha.Fields(1) = txtCadastro(8)
-                rsSenha.Fields(0) = txtCadastro(7).Text
+                rsSenha.Fields(1) = txtcadastro(8)
+                rsSenha.Fields(0) = txtcadastro(7).Text
                 rsSenha.Fields(3) = vCodcoligada 'Codigo da coligada
+                
+                'SqlColectionIcons = "INSERT INTO TBUSUARIOCOLECAOICONES(IDUSUARIO, IDCOLECAOICON) VALUES (" & mskCadastro(0).ClipText & ", " & vColecaoIcone & ")"
+                'rsColectionIcons.Open SqlColectionIcons, cnBanco
                 mobjMsg.Abrir "Inclusão realizada com sucesso!", Ok, informacao, "Atenção"
                 LimpaControles
             Else
                 rsSalvar.Fields(0) = mskCadastro(0).ClipText
                 rsSalvar.Fields(7) = mskCadastro(1).ClipText
                 rsSalvar.Fields(8) = mskCadastro(2).ClipText
-                rsSalvar.Fields(1) = txtCadastro(0).Text
-                rsSalvar.Fields(2) = txtCadastro(1).Text
-                rsSalvar.Fields(3) = txtCadastro(2).Text
-                rsSalvar.Fields(4) = txtCadastro(3).Text
-                rsSalvar.Fields(5) = txtCadastro(4).Text
-                rsSalvar.Fields(9) = txtCadastro(5).Text
-                rsSalvar.Fields(10) = txtCadastro(6).Text
+                rsSalvar.Fields(1) = txtcadastro(0).Text
+                rsSalvar.Fields(2) = txtcadastro(1).Text
+                rsSalvar.Fields(3) = txtcadastro(2).Text
+                rsSalvar.Fields(4) = txtcadastro(3).Text
+                rsSalvar.Fields(5) = txtcadastro(4).Text
+                rsSalvar.Fields(9) = txtcadastro(5).Text
+                rsSalvar.Fields(10) = txtcadastro(6).Text
                 rsSalvar.Fields(6) = cboCadastro(0).Text
                 
                 rsSalvar.Fields(11) = Val(Left(cboCadastro(1).Text, 6))
@@ -925,14 +1102,16 @@ On Error GoTo Err
                 SqlSalvar = "Select * from tbsenha where tbsenha.codigo = '" & Val(Me.mskCadastro(0)) & "'"
                 rsSenha.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
                 
-                rsSenha.Fields(1) = txtCadastro(8).Text
-                rsSenha.Fields(0) = txtCadastro(7).Text
+                rsSenha.Fields(1) = txtcadastro(8).Text
+                rsSenha.Fields(0) = txtcadastro(7).Text
                 rsSenha.Fields(3) = vCodcoligada  'Codigo da coligada
                 
+                'SqlColectionIcons = "UPDATE TBUSUARIOCOLECAOICONES SET IDCOLECAOICON = " & vColecaoIcone & " WHERE IDUSUARIO = " & Val(mskCadastro(0).ClipText)
+                'rsColectionIcons.Open SqlColectionIcons, cnBanco
 '----------------------------------
-            mobjMsg.Abrir "Alteração realizada com sucesso!", Ok, informacao, "Atenção"
+                mobjMsg.Abrir "Alteração realizada com sucesso!", Ok, informacao, "Atenção"
             End If
-            'rsSalvar.Update
+            
             rsSenha.Update
             cnBanco.CommitTrans
             rsSalvar.Close
@@ -949,6 +1128,7 @@ On Error GoTo Err
     Exit Sub
 Err:
     If Err.Number = -2147467259 Then
+        Exit Sub
         While reestabeleceConexao = False
         Wend
         GoTo 10
@@ -962,16 +1142,16 @@ End Sub
 Private Sub AtualizaListview()
     'On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Dim Y As Integer, X As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
     If Status = "novo" Then
         Set ItemLst = vListViewPrincipal.ListItems.Add(, , Format(mskCadastro(0), "000000"))
-        ItemLst.SubItems(1) = txtCadastro(0).Text
+        ItemLst.SubItems(1) = txtcadastro(0).Text
         ItemLst.SubItems(2) = Mid$(cboCadastro(1).Text, 10, 20)
         If Check1.Value = 0 Then
             ItemLst.SubItems(3) = ""
@@ -981,7 +1161,7 @@ Private Sub AtualizaListview()
             ItemLst.ListSubItems.Item(3).ReportIcon = "OK"
         End If
     Else
-        vListViewPrincipal.SelectedItem.ListSubItems.Item(1) = txtCadastro(0).Text
+        vListViewPrincipal.SelectedItem.ListSubItems.Item(1) = txtcadastro(0).Text
         vListViewPrincipal.SelectedItem.ListSubItems.Item(2) = Mid$(cboCadastro(1).Text, 10, 20)
         If Check1.Value = 0 Then
             vListViewPrincipal.SelectedItem.ListSubItems.Item(3) = ""
@@ -1047,60 +1227,60 @@ Private Sub FecharUsuario()
 End Sub
 
 Private Function DesbloqueiaControles()
-    Dim X As Integer
+    Dim x As Integer
     
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X).Enabled = True
+    For x = 0 To txtcadastro.Count - 1
+        txtcadastro(x).Enabled = True
     Next
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).Enabled = True
+    For x = 0 To mskCadastro.Count - 1
+        mskCadastro(x).Enabled = True
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X).Enabled = True
+    For x = 0 To cboCadastro.Count - 1
+        cboCadastro(x).Enabled = True
     Next
     chkCadastro(0).Enabled = True
     mskCadastro(0).Enabled = False
-    If Check2.Value = 1 Then
-        Frame2.Enabled = True
-        chameleonButton1.UseGreyscale = False
-        chameleonButton2.UseGreyscale = False
-    Else
-        Frame2.Enabled = False
-        chameleonButton1.UseGreyscale = True
-        chameleonButton2.UseGreyscale = True
-    End If
+    'If Check2.Value = 1 Then
+    '    Frame2.Enabled = True
+    '    chameleonButton1.UseGreyscale = False
+    '    chameleonButton2.UseGreyscale = False
+    'Else
+    '    Frame2.Enabled = False
+    '    chameleonButton1.UseGreyscale = True
+    '    chameleonButton2.UseGreyscale = True
+    'End If
 End Function
 
 Private Function BloqueiaControles()
-    Dim X As Integer
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X).Enabled = False
+    Dim x As Integer
+    For x = 0 To txtcadastro.Count - 1
+        txtcadastro(x).Enabled = False
     Next
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).Enabled = False
+    For x = 0 To mskCadastro.Count - 1
+        mskCadastro(x).Enabled = False
     Next
-    For X = 0 To cboCadastro.Count - 1
-        cboCadastro(X).Enabled = False
+    For x = 0 To cboCadastro.Count - 1
+        cboCadastro(x).Enabled = False
     Next
     chkCadastro(0).Enabled = False
     
     If Check2.Value = 1 Then
         Frame2.Enabled = True
-        chameleonButton1.UseGreyscale = False
-        chameleonButton2.UseGreyscale = False
+        'chameleonButton1.UseGreyscale = False
+        'chameleonButton2.UseGreyscale = False
     Else
         Frame2.Enabled = False
-        chameleonButton1.UseGreyscale = True
-        chameleonButton2.UseGreyscale = True
+        'chameleonButton1.UseGreyscale = True
+        'chameleonButton2.UseGreyscale = True
     End If
 End Function
 
 Private Sub configControles()
-    If vSal = "N" Then
-        chameleonButton12.UseGreyscale = True
-        chameleonButton12.DragMode = 1
-        chameleonButton12.SpecialEffect = cbEngraved
-    End If
+    'If vSal = "N" Then
+    '    chameleonButton12.UseGreyscale = True
+    '    chameleonButton12.DragMode = 1
+    '    chameleonButton12.SpecialEffect = cbEngraved
+    'End If
 End Sub
 
 Private Sub Form_KeyPress(KeyAscii As Integer)
@@ -1162,20 +1342,20 @@ End Sub
 
 
 Private Sub addRemLoteNota(lvOrigem As Listview, lvDestino As Listview)
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     Dim ItemLst As ListItem
-    Y = lvOrigem.ListItems.Count
-    For X = 1 To Y
-        If Y < X Then
+    y = lvOrigem.ListItems.Count
+    For x = 1 To y
+        If y < x Then
             Exit Sub
         End If
-        lvOrigem.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If lvOrigem.ListItems(X).Checked = True Then
-            Set ItemLst = lvDestino.ListItems.Add(, , lvOrigem.ListItems(X)) ' Copiar o primeiro item e criar o CheckBox
+        lvOrigem.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If lvOrigem.ListItems(x).Checked = True Then
+            Set ItemLst = lvDestino.ListItems.Add(, , lvOrigem.ListItems(x)) ' Copiar o primeiro item e criar o CheckBox
             ItemLst.SubItems(1) = "" & lvOrigem.SelectedItem.ListSubItems.Item(1) 'Copia o coluna que vc desejar do item selecionado
-            lvOrigem.ListItems.Remove (X) ' Remove item selecionado do ListView1
-            Y = Y - 1
-            X = X - 1
+            lvOrigem.ListItems.Remove (x) ' Remove item selecionado do ListView1
+            y = y - 1
+            x = x - 1
         End If
     Next
     'Ordena listview para exibir na tela

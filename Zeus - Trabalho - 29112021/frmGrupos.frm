@@ -1,22 +1,79 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmGrupos 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Grupos"
-   ClientHeight    =   8640
+   ClientHeight    =   8400
    ClientLeft      =   3270
    ClientTop       =   1275
    ClientWidth     =   6585
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmGrupos.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   8640
+   ScaleHeight     =   8400
    ScaleWidth      =   6585
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2640
+      Top             =   7800
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
+   Begin VB.TextBox txtCadastro 
+      Height          =   345
+      Index           =   0
+      Left            =   1080
+      TabIndex        =   0
+      Tag             =   "Descrição do grupo"
+      Top             =   360
+      Width           =   5295
+   End
+   Begin MSMask.MaskEdBox mskCadastro 
+      Height          =   345
+      Index           =   0
+      Left            =   120
+      TabIndex        =   2
+      Tag             =   "Identificador do grupo"
+      Top             =   360
+      Width           =   855
+      _ExtentX        =   1508
+      _ExtentY        =   609
+      _Version        =   393216
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      PromptChar      =   "_"
+   End
    Begin VB.CommandButton chameleonButton11 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Left            =   720
       Picture         =   "frmGrupos.frx":0CCA
@@ -24,10 +81,19 @@ Begin VB.Form frmGrupos
       TabIndex        =   17
       Tag             =   "Salvar Grupo"
       ToolTipText     =   "Salvar Grupo"
-      Top             =   7920
+      Top             =   7680
       Width           =   615
    End
    Begin VB.CommandButton chameleonButton12 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Left            =   120
       Picture         =   "frmGrupos.frx":1994
@@ -35,31 +101,31 @@ Begin VB.Form frmGrupos
       TabIndex        =   18
       Tag             =   "Salvar Grupo"
       ToolTipText     =   "Salvar Grupo"
-      Top             =   7920
+      Top             =   7680
       Width           =   615
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
       Height          =   255
-      Left            =   240
+      Left            =   1080
       OleObjectBlob   =   "frmGrupos.frx":265E
       TabIndex        =   14
-      Top             =   720
+      Top             =   120
       Width           =   855
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   255
-      Left            =   240
-      OleObjectBlob   =   "frmGrupos.frx":26D0
+      Left            =   120
+      OleObjectBlob   =   "frmGrupos.frx":26CA
       TabIndex        =   13
-      Top             =   240
+      Top             =   120
       Width           =   615
    End
    Begin VB.Frame Frame3 
       Caption         =   "Status"
       Enabled         =   0   'False
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -69,7 +135,7 @@ Begin VB.Form frmGrupos
       Height          =   615
       Left            =   5400
       TabIndex        =   4
-      Top             =   7920
+      Top             =   7680
       Width           =   1095
       Begin VB.CheckBox Check1 
          Caption         =   "Ativo"
@@ -82,24 +148,21 @@ Begin VB.Form frmGrupos
          Width           =   735
       End
    End
-   Begin MSMask.MaskEdBox mskCadastro 
-      Height          =   375
-      Index           =   0
-      Left            =   1080
-      TabIndex        =   2
-      Top             =   120
-      Width           =   1095
-      _ExtentX        =   1931
-      _ExtentY        =   661
-      _Version        =   393216
-      PromptChar      =   "_"
-   End
    Begin VB.Frame Frame1 
       Caption         =   " Pemissões "
+      BeginProperty Font 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   6735
       Left            =   120
       TabIndex        =   1
-      Top             =   1080
+      Top             =   840
       Width           =   6375
       Begin MSComctlLib.ImageList ImageList1 
          Left            =   5040
@@ -114,11 +177,11 @@ Begin VB.Form frmGrupos
          BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
             NumListImages   =   2
             BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmGrupos.frx":273C
+               Picture         =   "frmGrupos.frx":2730
                Key             =   "sim"
             EndProperty
             BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmGrupos.frx":314E
+               Picture         =   "frmGrupos.frx":3142
                Key             =   "nao"
             EndProperty
          EndProperty
@@ -126,8 +189,8 @@ Begin VB.Form frmGrupos
       Begin VB.Frame Frame2 
          Caption         =   "Permissões de tela "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -151,15 +214,15 @@ Begin VB.Form frmGrupos
                Strikethrough   =   0   'False
             EndProperty
             Height          =   855
-            Left            =   3000
+            Left            =   3360
             TabIndex        =   15
             Top             =   240
             Visible         =   0   'False
-            Width           =   2895
+            Width           =   2535
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
                Height          =   375
                Left            =   120
-               OleObjectBlob   =   "frmGrupos.frx":3B60
+               OleObjectBlob   =   "frmGrupos.frx":3B54
                TabIndex        =   16
                Top             =   360
                Width           =   1815
@@ -169,7 +232,7 @@ Begin VB.Form frmGrupos
             Caption         =   "Filtrar"
             Height          =   255
             Index           =   5
-            Left            =   2040
+            Left            =   2160
             TabIndex        =   12
             Top             =   840
             Value           =   1  'Checked
@@ -179,11 +242,11 @@ Begin VB.Form frmGrupos
             Caption         =   "Imprimir"
             Height          =   255
             Index           =   4
-            Left            =   2040
+            Left            =   2160
             TabIndex        =   11
             Top             =   480
             Value           =   1  'Checked
-            Width           =   855
+            Width           =   1095
          End
          Begin VB.CheckBox chkGravar 
             Caption         =   "Editar"
@@ -223,7 +286,7 @@ Begin VB.Form frmGrupos
             TabIndex        =   7
             Top             =   840
             Value           =   1  'Checked
-            Width           =   855
+            Width           =   1095
          End
       End
       Begin MSComctlLib.TreeView TreeView1 
@@ -239,15 +302,16 @@ Begin VB.Form frmGrupos
          Style           =   7
          Checkboxes      =   -1  'True
          Appearance      =   1
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
       End
-   End
-   Begin VB.TextBox txtCadastro 
-      Height          =   285
-      Index           =   0
-      Left            =   1080
-      TabIndex        =   0
-      Top             =   600
-      Width           =   5415
    End
 End
 Attribute VB_Name = "frmGrupos"
@@ -341,12 +405,12 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X) = ""
+    Dim x As Integer
+    For x = 0 To mskCadastro.Count - 1
+        mskCadastro(x) = ""
     Next
-    For X = 0 To txtCadastro.Count - 1
-        txtCadastro(X) = ""
+    For x = 0 To txtCadastro.Count - 1
+        txtCadastro(x) = ""
     Next
     mskCadastro(0).Text = Format(GeraCodigo, "000000") & ""
         
@@ -454,7 +518,7 @@ Private Sub Bot_salvar()
 On Error GoTo Err
     Dim SqlSalvar As String
     Dim ItemLst As ListItem
-    Dim Y As Integer, X As Integer, i As Integer
+    Dim y As Integer, x As Integer, i As Integer
 10  cnBanco.BeginTrans
     SqlSalvar = "Select * from tbGrupo where codcoligada = '" & vCodcoligada & "' and tbGrupo.codigo = '" & Val(Me.mskCadastro(0)) & "'"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
@@ -574,10 +638,10 @@ End Sub
 Private Sub AtualizaListview()
     'On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Dim Y As Integer, X As Integer
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
@@ -610,21 +674,21 @@ End Sub
 Private Sub montaEstrutTreeview()
     Dim rsTreeview As New ADODB.Recordset
     Dim SqlTreeview As String
-    Dim X As Integer
+    Dim x As Integer
     
     SqlTreeview = "select a.*,b.incluir,b.editar,b.excluir,b.salvar,b.imprimir,b.filtrar from tbMenu as a left join tbConfGrupo as b on a.idmenu = b.idmenu and a.nome = b.nome and b.idgrupo = '" & mskCadastro(0) & "' where a.tipo <> 'CAT'"
     rsTreeview.Open SqlTreeview, cnBanco, adOpenKeyset, adLockOptimistic
     
-    If rsTreeview.RecordCount > 0 Then X = rsTreeview.Fields(0)
+    If rsTreeview.RecordCount > 0 Then x = rsTreeview.Fields(0)
     On Error Resume Next
     Do While Not rsTreeview.EOF
-        TreeView1.Nodes.Add , , "no" & X, rsTreeview.Fields(3)
+        TreeView1.Nodes.Add , , "no" & x, rsTreeview.Fields(3)
         If Not rsTreeview.EOF Then rsTreeview.MoveNext Else Exit Do
-        Do While rsTreeview.Fields(0) = X And Not rsTreeview.EOF
-            TreeView1.Nodes.Add "no" & X, tvwChild, , rsTreeview.Fields(3) & " (" & rsTreeview.Fields(6) & "/" & rsTreeview.Fields(7) & "/" & rsTreeview.Fields(8) & "/" & rsTreeview.Fields(9) & "/" & rsTreeview.Fields(10) & "/" & rsTreeview.Fields(11) & ")"
+        Do While rsTreeview.Fields(0) = x And Not rsTreeview.EOF
+            TreeView1.Nodes.Add "no" & x, tvwChild, , rsTreeview.Fields(3) & " (" & rsTreeview.Fields(6) & "/" & rsTreeview.Fields(7) & "/" & rsTreeview.Fields(8) & "/" & rsTreeview.Fields(9) & "/" & rsTreeview.Fields(10) & "/" & rsTreeview.Fields(11) & ")"
             If Not rsTreeview.EOF Then rsTreeview.MoveNext Else Exit Do
         Loop
-        If Not rsTreeview.EOF Then X = rsTreeview.Fields(0)
+        If Not rsTreeview.EOF Then x = rsTreeview.Fields(0)
     Loop
     rsTreeview.Close
     Set rsTreeview = Nothing
@@ -680,7 +744,7 @@ Private Sub IncluiTreeview()
     Dim rsAchaSelecao As New ADODB.Recordset
     Dim SqlAchaSelecao As String
     Dim vTipo As String, vIDSub As String
-    Dim vTam As Integer, X As Integer
+    Dim vTam As Integer, x As Integer
     
     Dim rsMenu As New ADODB.Recordset
     Dim SqlMenu As String
@@ -690,11 +754,11 @@ Private Sub IncluiTreeview()
     Dim RECEBE As String
     Dim Contador As Integer
     Contador = 0
-    For X = 1 To Len(SkinLabel13)
-        If Mid(SkinLabel13, X, 1) = "(" Then
+    For x = 1 To Len(SkinLabel13)
+        If Mid(SkinLabel13, x, 1) = "(" Then
             Exit For
         Else
-            RECEBE = RECEBE & Mid(SkinLabel13, X, 1)
+            RECEBE = RECEBE & Mid(SkinLabel13, x, 1)
         End If
     Next
     SkinLabel13 = RECEBE

@@ -1207,6 +1207,10 @@ On Error GoTo Err
     Dim sqlParametros As String
     Dim rsIntegra As New ADODB.Recordset
     Dim sqlIntegra As String
+    
+    Dim rsColecaoIconesUser As New ADODB.Recordset
+    Dim sqlColecaoIconesUser As String
+    
     sqlParametros = "Select * from tbparametros where codcoligada = '" & vCodcoligada & "'"
     rsParametros.Open sqlParametros, cnBanco, adOpenKeyset, adLockReadOnly
     If Not rsParametros.EOF Then
@@ -1252,6 +1256,18 @@ On Error GoTo Err
             
         End If
     End If
+    
+    sqlColecaoIconesUser = "SELECT * FROM TBUSUARIOCOLECAOICONES WHERE IDUSUARIO = " & CodUsu
+    rsColecaoIconesUser.Open sqlColecaoIconesUser, cnBanco, adOpenKeyset, adLockReadOnly
+    If Not rsColecaoIconesUser.EOF Then
+        If rsColecaoIconesUser.Fields(2) <> 0 Then
+            vColectionIcons = rsColecaoIconesUser.Fields(2)
+        End If
+    End If
+    
+    rsColecaoIconesUser.Close
+    Set rsColecaoIconesUser = Nothing
+    
     rsParametros.Close
     Set rsParametros = Nothing
     

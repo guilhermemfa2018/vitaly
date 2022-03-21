@@ -1178,8 +1178,8 @@ Begin VB.Form frmIcones
             ImageIndex      =   152
          EndProperty
       EndProperty
-      Begin MSComctlLib.ImageList ImageList4 
-         Left            =   6600
+      Begin MSComctlLib.ImageList ImageList5 
+         Left            =   7320
          Top             =   5160
          _ExtentX        =   1005
          _ExtentY        =   1005
@@ -1223,579 +1223,1201 @@ Begin VB.Form frmIcones
                Key             =   ""
             EndProperty
             BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1297D5
+               Picture         =   "frmIcones.frx":12A73E
                Key             =   ""
             EndProperty
             BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":136107
+               Picture         =   "frmIcones.frx":137070
                Key             =   ""
             EndProperty
             BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":142A39
+               Picture         =   "frmIcones.frx":1439A2
                Key             =   ""
             EndProperty
             BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14F36B
+               Picture         =   "frmIcones.frx":1502D4
                Key             =   ""
             EndProperty
             BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15BC9D
+               Picture         =   "frmIcones.frx":15CC06
                Key             =   ""
             EndProperty
             BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1685CF
+               Picture         =   "frmIcones.frx":169538
                Key             =   ""
             EndProperty
             BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":174F01
+               Picture         =   "frmIcones.frx":175E6A
                Key             =   ""
             EndProperty
             BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":181833
+               Picture         =   "frmIcones.frx":18279C
                Key             =   ""
             EndProperty
             BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":18E165
+               Picture         =   "frmIcones.frx":18F0CE
                Key             =   ""
             EndProperty
             BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":19AA97
+               Picture         =   "frmIcones.frx":19BA00
                Key             =   ""
             EndProperty
             BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1A73C9
+               Picture         =   "frmIcones.frx":1A8332
                Key             =   ""
             EndProperty
             BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1B3CFB
+               Picture         =   "frmIcones.frx":1B93AF
                Key             =   ""
             EndProperty
             BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1C062D
+               Picture         =   "frmIcones.frx":1C5CE1
                Key             =   ""
             EndProperty
             BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1CCF5F
+               Picture         =   "frmIcones.frx":1D2613
                Key             =   ""
             EndProperty
             BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1D9891
+               Picture         =   "frmIcones.frx":1DEF45
                Key             =   ""
             EndProperty
             BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1E61C3
+               Picture         =   "frmIcones.frx":1EB877
                Key             =   ""
             EndProperty
             BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1F2AF5
+               Picture         =   "frmIcones.frx":1F81A9
                Key             =   ""
             EndProperty
             BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1FF427
+               Picture         =   "frmIcones.frx":204ADB
                Key             =   ""
             EndProperty
             BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":20BD59
+               Picture         =   "frmIcones.frx":21140D
                Key             =   ""
             EndProperty
             BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":21868B
+               Picture         =   "frmIcones.frx":21DD3F
                Key             =   ""
             EndProperty
             BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":224FBD
+               Picture         =   "frmIcones.frx":22A671
                Key             =   ""
             EndProperty
             BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2318EF
+               Picture         =   "frmIcones.frx":236FA3
                Key             =   ""
             EndProperty
             BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":23E221
+               Picture         =   "frmIcones.frx":2438D5
                Key             =   ""
             EndProperty
             BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":24AB53
+               Picture         =   "frmIcones.frx":250207
                Key             =   ""
             EndProperty
             BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":257485
+               Picture         =   "frmIcones.frx":25CB39
                Key             =   ""
             EndProperty
             BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":263DB7
+               Picture         =   "frmIcones.frx":26946B
                Key             =   ""
             EndProperty
             BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2706E9
+               Picture         =   "frmIcones.frx":275D9D
                Key             =   ""
             EndProperty
             BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":27D01B
+               Picture         =   "frmIcones.frx":285118
                Key             =   ""
             EndProperty
             BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":28994D
+               Picture         =   "frmIcones.frx":291A4A
                Key             =   ""
             EndProperty
             BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":29627F
+               Picture         =   "frmIcones.frx":29E37C
                Key             =   ""
             EndProperty
             BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2A2BB1
+               Picture         =   "frmIcones.frx":2AACAE
                Key             =   ""
             EndProperty
             BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2AF4E3
+               Picture         =   "frmIcones.frx":2B75E0
                Key             =   ""
             EndProperty
             BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2BBE15
+               Picture         =   "frmIcones.frx":2C3F12
                Key             =   ""
             EndProperty
             BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2C8747
+               Picture         =   "frmIcones.frx":2D0844
                Key             =   ""
             EndProperty
             BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2D5079
+               Picture         =   "frmIcones.frx":2DE92C
                Key             =   ""
             EndProperty
             BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2E19AB
+               Picture         =   "frmIcones.frx":2EB25E
                Key             =   ""
             EndProperty
             BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2EE2DD
+               Picture         =   "frmIcones.frx":2F7B90
                Key             =   ""
             EndProperty
             BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":2FAC0F
+               Picture         =   "frmIcones.frx":3044C2
                Key             =   ""
             EndProperty
             BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":307541
+               Picture         =   "frmIcones.frx":310DF4
                Key             =   ""
             EndProperty
             BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":313E73
+               Picture         =   "frmIcones.frx":31D726
                Key             =   ""
             EndProperty
             BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3207A5
+               Picture         =   "frmIcones.frx":32A058
                Key             =   ""
             EndProperty
             BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":32D0D7
+               Picture         =   "frmIcones.frx":33698A
                Key             =   ""
             EndProperty
             BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":339A09
+               Picture         =   "frmIcones.frx":3432BC
                Key             =   ""
             EndProperty
             BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":34633B
+               Picture         =   "frmIcones.frx":34FBEE
                Key             =   ""
             EndProperty
             BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":352C6D
+               Picture         =   "frmIcones.frx":35C520
                Key             =   ""
             EndProperty
             BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":35F59F
+               Picture         =   "frmIcones.frx":368E52
                Key             =   ""
             EndProperty
             BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":36BED1
+               Picture         =   "frmIcones.frx":375784
                Key             =   ""
             EndProperty
             BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":378803
+               Picture         =   "frmIcones.frx":3820B6
                Key             =   ""
             EndProperty
             BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":385135
+               Picture         =   "frmIcones.frx":38E9E8
                Key             =   ""
             EndProperty
             BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":391A67
+               Picture         =   "frmIcones.frx":39B31A
                Key             =   ""
             EndProperty
             BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":39E399
+               Picture         =   "frmIcones.frx":3A7C4C
                Key             =   ""
             EndProperty
             BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3AACCB
+               Picture         =   "frmIcones.frx":3B457E
                Key             =   ""
             EndProperty
             BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3B75FD
+               Picture         =   "frmIcones.frx":3C0EB0
                Key             =   ""
             EndProperty
             BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3C3F2F
+               Picture         =   "frmIcones.frx":3CD7E2
                Key             =   ""
             EndProperty
             BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3D0861
+               Picture         =   "frmIcones.frx":3DA114
                Key             =   ""
             EndProperty
             BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3DD193
+               Picture         =   "frmIcones.frx":3E6A46
                Key             =   ""
             EndProperty
             BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3E9AC5
+               Picture         =   "frmIcones.frx":3F3378
                Key             =   ""
             EndProperty
             BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":3F63F7
+               Picture         =   "frmIcones.frx":402DC7
                Key             =   ""
             EndProperty
             BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":402D29
+               Picture         =   "frmIcones.frx":40F6F9
                Key             =   ""
             EndProperty
             BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":412B3E
+               Picture         =   "frmIcones.frx":41C02B
                Key             =   ""
             EndProperty
             BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":41F470
+               Picture         =   "frmIcones.frx":42895D
                Key             =   ""
             EndProperty
             BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":42BDA2
+               Picture         =   "frmIcones.frx":43528F
                Key             =   ""
             EndProperty
             BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4386D4
+               Picture         =   "frmIcones.frx":441BC1
                Key             =   ""
             EndProperty
             BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":445006
+               Picture         =   "frmIcones.frx":44E4F3
                Key             =   ""
             EndProperty
             BeginProperty ListImage73 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":451938
+               Picture         =   "frmIcones.frx":45AE25
                Key             =   ""
             EndProperty
             BeginProperty ListImage74 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":45E26A
+               Picture         =   "frmIcones.frx":468DE4
                Key             =   ""
             EndProperty
             BeginProperty ListImage75 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":46AB9C
+               Picture         =   "frmIcones.frx":475716
                Key             =   ""
             EndProperty
             BeginProperty ListImage76 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4774CE
+               Picture         =   "frmIcones.frx":482048
                Key             =   ""
             EndProperty
             BeginProperty ListImage77 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":483E00
+               Picture         =   "frmIcones.frx":48E97A
                Key             =   ""
             EndProperty
             BeginProperty ListImage78 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":490732
+               Picture         =   "frmIcones.frx":49B2AC
                Key             =   ""
             EndProperty
             BeginProperty ListImage79 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":49D064
+               Picture         =   "frmIcones.frx":4A7BDE
                Key             =   ""
             EndProperty
             BeginProperty ListImage80 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4A9996
+               Picture         =   "frmIcones.frx":4B4510
                Key             =   ""
             EndProperty
             BeginProperty ListImage81 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4B62C8
+               Picture         =   "frmIcones.frx":4C0E42
                Key             =   ""
             EndProperty
             BeginProperty ListImage82 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4C2BFA
+               Picture         =   "frmIcones.frx":4CD774
                Key             =   ""
             EndProperty
             BeginProperty ListImage83 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4CF52C
+               Picture         =   "frmIcones.frx":4DA0A6
                Key             =   ""
             EndProperty
             BeginProperty ListImage84 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4DBE5E
+               Picture         =   "frmIcones.frx":4E69D8
                Key             =   ""
             EndProperty
             BeginProperty ListImage85 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4E8790
+               Picture         =   "frmIcones.frx":4F330A
                Key             =   ""
             EndProperty
             BeginProperty ListImage86 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":4F50C2
+               Picture         =   "frmIcones.frx":4FFC3C
                Key             =   ""
             EndProperty
             BeginProperty ListImage87 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5019F4
+               Picture         =   "frmIcones.frx":50C56E
                Key             =   ""
             EndProperty
             BeginProperty ListImage88 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":50E326
+               Picture         =   "frmIcones.frx":518EA0
                Key             =   ""
             EndProperty
             BeginProperty ListImage89 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":51AC58
+               Picture         =   "frmIcones.frx":5257D2
                Key             =   ""
             EndProperty
             BeginProperty ListImage90 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":52758A
+               Picture         =   "frmIcones.frx":532104
                Key             =   ""
             EndProperty
             BeginProperty ListImage91 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":533EBC
+               Picture         =   "frmIcones.frx":53EA36
                Key             =   ""
             EndProperty
             BeginProperty ListImage92 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5407EE
+               Picture         =   "frmIcones.frx":54B368
                Key             =   ""
             EndProperty
             BeginProperty ListImage93 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":54D120
+               Picture         =   "frmIcones.frx":557C9A
                Key             =   ""
             EndProperty
             BeginProperty ListImage94 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":559A52
+               Picture         =   "frmIcones.frx":5645CC
                Key             =   ""
             EndProperty
             BeginProperty ListImage95 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":566384
+               Picture         =   "frmIcones.frx":570EFE
                Key             =   ""
             EndProperty
             BeginProperty ListImage96 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":572CB6
+               Picture         =   "frmIcones.frx":57D830
                Key             =   ""
             EndProperty
             BeginProperty ListImage97 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":57F5E8
+               Picture         =   "frmIcones.frx":58A162
                Key             =   ""
             EndProperty
             BeginProperty ListImage98 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":58BF1A
+               Picture         =   "frmIcones.frx":596A94
                Key             =   ""
             EndProperty
             BeginProperty ListImage99 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":59884C
+               Picture         =   "frmIcones.frx":5A33C6
                Key             =   ""
             EndProperty
             BeginProperty ListImage100 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5A517E
+               Picture         =   "frmIcones.frx":5AFCF8
                Key             =   ""
             EndProperty
             BeginProperty ListImage101 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5B1AB0
+               Picture         =   "frmIcones.frx":5BC62A
                Key             =   ""
             EndProperty
             BeginProperty ListImage102 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5BE3E2
+               Picture         =   "frmIcones.frx":5C8F5C
                Key             =   ""
             EndProperty
             BeginProperty ListImage103 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5CAD14
+               Picture         =   "frmIcones.frx":5D588E
                Key             =   ""
             EndProperty
             BeginProperty ListImage104 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5D7646
+               Picture         =   "frmIcones.frx":5E21C0
                Key             =   ""
             EndProperty
             BeginProperty ListImage105 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5E3F78
+               Picture         =   "frmIcones.frx":5EEAF2
                Key             =   ""
             EndProperty
             BeginProperty ListImage106 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5F08AA
+               Picture         =   "frmIcones.frx":5FB424
                Key             =   ""
             EndProperty
             BeginProperty ListImage107 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":5FD1DC
+               Picture         =   "frmIcones.frx":607D56
                Key             =   ""
             EndProperty
             BeginProperty ListImage108 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":609B0E
+               Picture         =   "frmIcones.frx":614688
                Key             =   ""
             EndProperty
             BeginProperty ListImage109 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":616440
+               Picture         =   "frmIcones.frx":620FBA
                Key             =   ""
             EndProperty
             BeginProperty ListImage110 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":622D72
+               Picture         =   "frmIcones.frx":62D8EC
                Key             =   ""
             EndProperty
             BeginProperty ListImage111 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":62F6A4
+               Picture         =   "frmIcones.frx":63D33B
                Key             =   ""
             EndProperty
             BeginProperty ListImage112 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":63BFD6
+               Picture         =   "frmIcones.frx":649C6D
                Key             =   ""
             EndProperty
             BeginProperty ListImage113 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":648908
+               Picture         =   "frmIcones.frx":65659F
                Key             =   ""
             EndProperty
             BeginProperty ListImage114 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":65523A
+               Picture         =   "frmIcones.frx":662ED1
                Key             =   ""
             EndProperty
             BeginProperty ListImage115 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":661B6C
+               Picture         =   "frmIcones.frx":66F803
                Key             =   ""
             EndProperty
             BeginProperty ListImage116 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":66E49E
+               Picture         =   "frmIcones.frx":67C135
                Key             =   ""
             EndProperty
             BeginProperty ListImage117 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":67ADD0
+               Picture         =   "frmIcones.frx":688A67
                Key             =   ""
             EndProperty
             BeginProperty ListImage118 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":687702
+               Picture         =   "frmIcones.frx":695399
                Key             =   ""
             EndProperty
             BeginProperty ListImage119 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":694034
+               Picture         =   "frmIcones.frx":6A3F70
                Key             =   ""
             EndProperty
             BeginProperty ListImage120 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6A0966
+               Picture         =   "frmIcones.frx":6B14F0
                Key             =   ""
             EndProperty
             BeginProperty ListImage121 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6AD298
+               Picture         =   "frmIcones.frx":6BDE22
                Key             =   ""
             EndProperty
             BeginProperty ListImage122 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6B9BCA
+               Picture         =   "frmIcones.frx":6CA754
                Key             =   ""
             EndProperty
             BeginProperty ListImage123 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6C64FC
+               Picture         =   "frmIcones.frx":6D7086
                Key             =   ""
             EndProperty
             BeginProperty ListImage124 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6D2E2E
+               Picture         =   "frmIcones.frx":6E39B8
                Key             =   ""
             EndProperty
             BeginProperty ListImage125 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6DF760
+               Picture         =   "frmIcones.frx":6F02EA
                Key             =   ""
             EndProperty
             BeginProperty ListImage126 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6EC092
+               Picture         =   "frmIcones.frx":6FCC1C
                Key             =   ""
             EndProperty
             BeginProperty ListImage127 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":6F89C4
+               Picture         =   "frmIcones.frx":70954E
                Key             =   ""
             EndProperty
             BeginProperty ListImage128 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7052F6
+               Picture         =   "frmIcones.frx":715E80
                Key             =   ""
             EndProperty
             BeginProperty ListImage129 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":711C28
+               Picture         =   "frmIcones.frx":723E3F
                Key             =   ""
             EndProperty
             BeginProperty ListImage130 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":71E55A
+               Picture         =   "frmIcones.frx":730771
                Key             =   ""
             EndProperty
             BeginProperty ListImage131 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":72AE8C
+               Picture         =   "frmIcones.frx":73D0A3
                Key             =   ""
             EndProperty
             BeginProperty ListImage132 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7377BE
+               Picture         =   "frmIcones.frx":7499D5
                Key             =   ""
             EndProperty
             BeginProperty ListImage133 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7440F0
+               Picture         =   "frmIcones.frx":756307
                Key             =   ""
             EndProperty
             BeginProperty ListImage134 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":750A22
+               Picture         =   "frmIcones.frx":762C39
                Key             =   ""
             EndProperty
             BeginProperty ListImage135 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":75D354
+               Picture         =   "frmIcones.frx":76F56B
                Key             =   ""
             EndProperty
             BeginProperty ListImage136 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":769C86
+               Picture         =   "frmIcones.frx":77BE9D
                Key             =   ""
             EndProperty
             BeginProperty ListImage137 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7765B8
+               Picture         =   "frmIcones.frx":7887CF
                Key             =   ""
             EndProperty
             BeginProperty ListImage138 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":782EEA
+               Picture         =   "frmIcones.frx":795101
                Key             =   ""
             EndProperty
             BeginProperty ListImage139 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":78F81C
+               Picture         =   "frmIcones.frx":7A1A33
                Key             =   ""
             EndProperty
             BeginProperty ListImage140 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":79C14E
+               Picture         =   "frmIcones.frx":7B0738
                Key             =   ""
             EndProperty
             BeginProperty ListImage141 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7A8A80
+               Picture         =   "frmIcones.frx":7BED98
                Key             =   ""
             EndProperty
             BeginProperty ListImage142 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7B53B2
+               Picture         =   "frmIcones.frx":7CB6CA
                Key             =   ""
             EndProperty
             BeginProperty ListImage143 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7C1CE4
+               Picture         =   "frmIcones.frx":7D7FFC
                Key             =   ""
             EndProperty
             BeginProperty ListImage144 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7CE616
+               Picture         =   "frmIcones.frx":7E492E
                Key             =   ""
             EndProperty
             BeginProperty ListImage145 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7DAF48
+               Picture         =   "frmIcones.frx":7F1260
                Key             =   ""
             EndProperty
             BeginProperty ListImage146 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7E787A
+               Picture         =   "frmIcones.frx":7FDB92
                Key             =   ""
             EndProperty
             BeginProperty ListImage147 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":7F41AC
+               Picture         =   "frmIcones.frx":80A4C4
                Key             =   ""
             EndProperty
             BeginProperty ListImage148 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":800ADE
+               Picture         =   "frmIcones.frx":816DF6
                Key             =   ""
             EndProperty
             BeginProperty ListImage149 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":80D410
+               Picture         =   "frmIcones.frx":823728
                Key             =   ""
             EndProperty
             BeginProperty ListImage150 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":819D42
+               Picture         =   "frmIcones.frx":83005A
                Key             =   ""
             EndProperty
             BeginProperty ListImage151 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":826674
+               Picture         =   "frmIcones.frx":83C98C
                Key             =   ""
             EndProperty
             BeginProperty ListImage152 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":832FA6
+               Picture         =   "frmIcones.frx":8492BE
+               Key             =   ""
+            EndProperty
+         EndProperty
+      End
+      Begin MSComctlLib.ImageList ImageList4 
+         Left            =   6600
+         Top             =   5160
+         _ExtentX        =   1005
+         _ExtentY        =   1005
+         BackColor       =   -2147483643
+         ImageWidth      =   32
+         ImageHeight     =   32
+         MaskColor       =   12632256
+         _Version        =   393216
+         BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+            NumListImages   =   152
+            BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":855BF0
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":862522
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":86EE54
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":87B786
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8880B8
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8949EA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8A131C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8ADC4E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8BA580
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8C6EB2
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8D37E4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8E0116
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8ECA48
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":8F937A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":905CAC
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9125DE
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":91EF10
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":92B842
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":938174
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":944AA6
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9513D8
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":95DD0A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":96A63C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":976F6E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9838A0
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9901D2
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":99CB04
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9A9436
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9B5D68
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9C269A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9CEFCC
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9DB8FE
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9E8230
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":9F4B62
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A01494
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A0DDC6
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A1A6F8
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A2702A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A3395C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A4028E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A4CBC0
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A594F2
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A65E24
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A72756
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A7F088
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A8B9BA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":A982EC
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AA4C1E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AB1550
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":ABDE82
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":ACA7B4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AD70E6
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AE3A18
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AF034A
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":AFCC7C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B095AE
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B15EE0
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B22812
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B2F144
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B3BA76
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B483A8
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B54CDA
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B6160C
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B6DF3E
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B7A870
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B871A2
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":B93AD4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BA38E9
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BB021B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BBCB4D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BC947F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BD5DB1
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage73 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BE26E3
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage74 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BEF015
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage75 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":BFB947
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage76 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C08279
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage77 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C14BAB
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage78 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C214DD
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage79 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C2DE0F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage80 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C3A741
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage81 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C47073
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage82 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C539A5
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage83 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C602D7
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage84 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C6CC09
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage85 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C7953B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage86 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C85E6D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage87 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C9279F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage88 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":C9F0D1
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage89 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CABA03
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage90 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CB8335
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage91 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CC4C67
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage92 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CD1599
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage93 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CDDECB
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage94 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CEA7FD
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage95 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":CF712F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage96 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D03A61
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage97 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D10393
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage98 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D1CCC5
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage99 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D295F7
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage100 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D35F29
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage101 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D4285B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage102 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D4F18D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage103 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D5BABF
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage104 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D683F1
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage105 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D74D23
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage106 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D81655
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage107 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D8DF87
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage108 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":D9A8B9
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage109 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DA71EB
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage110 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DB3B1D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage111 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DC044F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage112 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DCCD81
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage113 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DD96B3
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage114 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DE5FE5
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage115 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DF2917
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage116 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":DFF249
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage117 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E0BB7B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage118 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E184AD
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage119 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E24DDF
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage120 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E31711
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage121 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E3E043
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage122 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E4A975
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage123 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E572A7
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage124 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E63BD9
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage125 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E7050B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage126 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E7CE3D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage127 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E8976F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage128 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":E960A1
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage129 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EA29D3
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage130 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EAF305
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage131 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EBBC37
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage132 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EC8569
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage133 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":ED4E9B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage134 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EE17CD
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage135 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EEE0FF
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage136 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":EFAA31
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage137 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F07363
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage138 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F13C95
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage139 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F205C7
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage140 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F2CEF9
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage141 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F3982B
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage142 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F4615D
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage143 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F52A8F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage144 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F5F3C1
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage145 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F6BCF3
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage146 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F78625
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage147 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F84F57
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage148 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F91889
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage149 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":F9E1BB
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage150 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":FAAAED
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage151 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":FB741F
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage152 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "frmIcones.frx":FC3D51
                Key             =   ""
             EndProperty
          EndProperty
@@ -1813,611 +2435,611 @@ Begin VB.Form frmIcones
          BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
             NumListImages   =   152
             BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":83F8D8
+               Picture         =   "frmIcones.frx":FD0683
                Key             =   ""
             EndProperty
             BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":84C20A
+               Picture         =   "frmIcones.frx":FDCFB5
                Key             =   ""
             EndProperty
             BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":858B3C
+               Picture         =   "frmIcones.frx":FE98E7
                Key             =   ""
             EndProperty
             BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":86546E
+               Picture         =   "frmIcones.frx":FF6219
                Key             =   ""
             EndProperty
             BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":871DA0
+               Picture         =   "frmIcones.frx":1002B4B
                Key             =   ""
             EndProperty
             BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":880EFB
+               Picture         =   "frmIcones.frx":1011CA6
                Key             =   ""
             EndProperty
             BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":88D82D
+               Picture         =   "frmIcones.frx":101E5D8
                Key             =   ""
             EndProperty
             BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":89A15F
+               Picture         =   "frmIcones.frx":102AF0A
                Key             =   ""
             EndProperty
             BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8A6A91
+               Picture         =   "frmIcones.frx":103783C
                Key             =   ""
             EndProperty
             BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8B33C3
+               Picture         =   "frmIcones.frx":104416E
                Key             =   ""
             EndProperty
             BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8BFCF5
+               Picture         =   "frmIcones.frx":1050AA0
                Key             =   ""
             EndProperty
             BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8CC627
+               Picture         =   "frmIcones.frx":105D3D2
                Key             =   ""
             EndProperty
             BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8D8F59
+               Picture         =   "frmIcones.frx":1069D04
                Key             =   ""
             EndProperty
             BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8E588B
+               Picture         =   "frmIcones.frx":1076636
                Key             =   ""
             EndProperty
             BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8F21BD
+               Picture         =   "frmIcones.frx":1082F68
                Key             =   ""
             EndProperty
             BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":8FEAEF
+               Picture         =   "frmIcones.frx":108F89A
                Key             =   ""
             EndProperty
             BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":90B421
+               Picture         =   "frmIcones.frx":109C1CC
                Key             =   ""
             EndProperty
             BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":917D53
+               Picture         =   "frmIcones.frx":10A8AFE
                Key             =   ""
             EndProperty
             BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":924685
+               Picture         =   "frmIcones.frx":10B5430
                Key             =   ""
             EndProperty
             BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":930FB7
+               Picture         =   "frmIcones.frx":10C1D62
                Key             =   ""
             EndProperty
             BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":93D8E9
+               Picture         =   "frmIcones.frx":10CE694
                Key             =   ""
             EndProperty
             BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":94A21B
+               Picture         =   "frmIcones.frx":10DAFC6
                Key             =   ""
             EndProperty
             BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":956B4D
+               Picture         =   "frmIcones.frx":10E78F8
                Key             =   ""
             EndProperty
             BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":96347F
+               Picture         =   "frmIcones.frx":10F422A
                Key             =   ""
             EndProperty
             BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":96FDB1
+               Picture         =   "frmIcones.frx":1100B5C
                Key             =   ""
             EndProperty
             BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":97C6E3
+               Picture         =   "frmIcones.frx":110D48E
                Key             =   ""
             EndProperty
             BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":989015
+               Picture         =   "frmIcones.frx":1119DC0
                Key             =   ""
             EndProperty
             BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":995947
+               Picture         =   "frmIcones.frx":11266F2
                Key             =   ""
             EndProperty
             BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9A2279
+               Picture         =   "frmIcones.frx":1133024
                Key             =   ""
             EndProperty
             BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9AEBAB
+               Picture         =   "frmIcones.frx":113F956
                Key             =   ""
             EndProperty
             BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9BB4DD
+               Picture         =   "frmIcones.frx":114C288
                Key             =   ""
             EndProperty
             BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9C7E0F
+               Picture         =   "frmIcones.frx":1158BBA
                Key             =   ""
             EndProperty
             BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9D4741
+               Picture         =   "frmIcones.frx":11654EC
                Key             =   ""
             EndProperty
             BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9E1073
+               Picture         =   "frmIcones.frx":1171E1E
                Key             =   ""
             EndProperty
             BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9ED9A5
+               Picture         =   "frmIcones.frx":117E750
                Key             =   ""
             EndProperty
             BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":9FA2D7
+               Picture         =   "frmIcones.frx":118B082
                Key             =   ""
             EndProperty
             BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A06C09
+               Picture         =   "frmIcones.frx":11979B4
                Key             =   ""
             EndProperty
             BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A1353B
+               Picture         =   "frmIcones.frx":11A42E6
                Key             =   ""
             EndProperty
             BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A1FE6D
+               Picture         =   "frmIcones.frx":11B0C18
                Key             =   ""
             EndProperty
             BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A2C79F
+               Picture         =   "frmIcones.frx":11BD54A
                Key             =   ""
             EndProperty
             BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A390D1
+               Picture         =   "frmIcones.frx":11C9E7C
                Key             =   ""
             EndProperty
             BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A45A03
+               Picture         =   "frmIcones.frx":11D67AE
                Key             =   ""
             EndProperty
             BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A52335
+               Picture         =   "frmIcones.frx":11E30E0
                Key             =   ""
             EndProperty
             BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A5EC67
+               Picture         =   "frmIcones.frx":11EFA12
                Key             =   ""
             EndProperty
             BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A6B599
+               Picture         =   "frmIcones.frx":11FC344
                Key             =   ""
             EndProperty
             BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A77ECB
+               Picture         =   "frmIcones.frx":1208C76
                Key             =   ""
             EndProperty
             BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A847FD
+               Picture         =   "frmIcones.frx":12155A8
                Key             =   ""
             EndProperty
             BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A9112F
+               Picture         =   "frmIcones.frx":1221EDA
                Key             =   ""
             EndProperty
             BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":A9DA61
+               Picture         =   "frmIcones.frx":122E80C
                Key             =   ""
             EndProperty
             BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":AAA393
+               Picture         =   "frmIcones.frx":123B13E
                Key             =   ""
             EndProperty
             BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":AB6CC5
+               Picture         =   "frmIcones.frx":1247A70
                Key             =   ""
             EndProperty
             BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":AC35F7
+               Picture         =   "frmIcones.frx":12543A2
                Key             =   ""
             EndProperty
             BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":ACFF29
+               Picture         =   "frmIcones.frx":1260CD4
                Key             =   ""
             EndProperty
             BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":ADC85B
+               Picture         =   "frmIcones.frx":126D606
                Key             =   ""
             EndProperty
             BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":AE918D
+               Picture         =   "frmIcones.frx":1279F38
                Key             =   ""
             EndProperty
             BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":AF5ABF
+               Picture         =   "frmIcones.frx":128686A
                Key             =   ""
             EndProperty
             BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B023F1
+               Picture         =   "frmIcones.frx":129319C
                Key             =   ""
             EndProperty
             BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B0ED23
+               Picture         =   "frmIcones.frx":129FACE
                Key             =   ""
             EndProperty
             BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B1B655
+               Picture         =   "frmIcones.frx":12AC400
                Key             =   ""
             EndProperty
             BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B27F87
+               Picture         =   "frmIcones.frx":12B8D32
                Key             =   ""
             EndProperty
             BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B348B9
+               Picture         =   "frmIcones.frx":12C5664
                Key             =   ""
             EndProperty
             BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B45AFE
+               Picture         =   "frmIcones.frx":12D68A9
                Key             =   ""
             EndProperty
             BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B52430
+               Picture         =   "frmIcones.frx":12E31DB
                Key             =   ""
             EndProperty
             BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B5ED62
+               Picture         =   "frmIcones.frx":12EFB0D
                Key             =   ""
             EndProperty
             BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B6B694
+               Picture         =   "frmIcones.frx":12FC43F
                Key             =   ""
             EndProperty
             BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B77FC6
+               Picture         =   "frmIcones.frx":1308D71
                Key             =   ""
             EndProperty
             BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B848F8
+               Picture         =   "frmIcones.frx":13156A3
                Key             =   ""
             EndProperty
             BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":B9470D
+               Picture         =   "frmIcones.frx":13254B8
                Key             =   ""
             EndProperty
             BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BA103F
+               Picture         =   "frmIcones.frx":1331DEA
                Key             =   ""
             EndProperty
             BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BAD971
+               Picture         =   "frmIcones.frx":133E71C
                Key             =   ""
             EndProperty
             BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BBA2A3
+               Picture         =   "frmIcones.frx":134B04E
                Key             =   ""
             EndProperty
             BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BC6BD5
+               Picture         =   "frmIcones.frx":1357980
                Key             =   ""
             EndProperty
             BeginProperty ListImage73 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BD3507
+               Picture         =   "frmIcones.frx":13642B2
                Key             =   ""
             EndProperty
             BeginProperty ListImage74 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BDFE39
+               Picture         =   "frmIcones.frx":1370BE4
                Key             =   ""
             EndProperty
             BeginProperty ListImage75 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BEC76B
+               Picture         =   "frmIcones.frx":137D516
                Key             =   ""
             EndProperty
             BeginProperty ListImage76 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":BFB037
+               Picture         =   "frmIcones.frx":138BDE2
                Key             =   ""
             EndProperty
             BeginProperty ListImage77 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C09C88
+               Picture         =   "frmIcones.frx":139AA33
                Key             =   ""
             EndProperty
             BeginProperty ListImage78 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C165BA
+               Picture         =   "frmIcones.frx":13A7365
                Key             =   ""
             EndProperty
             BeginProperty ListImage79 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C22EEC
+               Picture         =   "frmIcones.frx":13B3C97
                Key             =   ""
             EndProperty
             BeginProperty ListImage80 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C2F81E
+               Picture         =   "frmIcones.frx":13C05C9
                Key             =   ""
             EndProperty
             BeginProperty ListImage81 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C3C150
+               Picture         =   "frmIcones.frx":13CCEFB
                Key             =   ""
             EndProperty
             BeginProperty ListImage82 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C4BC5A
+               Picture         =   "frmIcones.frx":13DCA05
                Key             =   ""
             EndProperty
             BeginProperty ListImage83 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C5858C
+               Picture         =   "frmIcones.frx":13E9337
                Key             =   ""
             EndProperty
             BeginProperty ListImage84 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C64EBE
+               Picture         =   "frmIcones.frx":13F5C69
                Key             =   ""
             EndProperty
             BeginProperty ListImage85 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C717F0
+               Picture         =   "frmIcones.frx":140259B
                Key             =   ""
             EndProperty
             BeginProperty ListImage86 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C7E122
+               Picture         =   "frmIcones.frx":140EECD
                Key             =   ""
             EndProperty
             BeginProperty ListImage87 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C8AA54
+               Picture         =   "frmIcones.frx":141B7FF
                Key             =   ""
             EndProperty
             BeginProperty ListImage88 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":C97386
+               Picture         =   "frmIcones.frx":1428131
                Key             =   ""
             EndProperty
             BeginProperty ListImage89 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CA3CB8
+               Picture         =   "frmIcones.frx":1434A63
                Key             =   ""
             EndProperty
             BeginProperty ListImage90 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CB05EA
+               Picture         =   "frmIcones.frx":1441395
                Key             =   ""
             EndProperty
             BeginProperty ListImage91 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CBCF1C
+               Picture         =   "frmIcones.frx":144DCC7
                Key             =   ""
             EndProperty
             BeginProperty ListImage92 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CC984E
+               Picture         =   "frmIcones.frx":145A5F9
                Key             =   ""
             EndProperty
             BeginProperty ListImage93 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CD6180
+               Picture         =   "frmIcones.frx":1466F2B
                Key             =   ""
             EndProperty
             BeginProperty ListImage94 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CE2AB2
+               Picture         =   "frmIcones.frx":147385D
                Key             =   ""
             EndProperty
             BeginProperty ListImage95 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CEF3E4
+               Picture         =   "frmIcones.frx":148018F
                Key             =   ""
             EndProperty
             BeginProperty ListImage96 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":CFBD16
+               Picture         =   "frmIcones.frx":148CAC1
                Key             =   ""
             EndProperty
             BeginProperty ListImage97 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D0C7E0
+               Picture         =   "frmIcones.frx":149D58B
                Key             =   ""
             EndProperty
             BeginProperty ListImage98 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D19112
+               Picture         =   "frmIcones.frx":14A9EBD
                Key             =   ""
             EndProperty
             BeginProperty ListImage99 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D25A44
+               Picture         =   "frmIcones.frx":14B67EF
                Key             =   ""
             EndProperty
             BeginProperty ListImage100 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D32376
+               Picture         =   "frmIcones.frx":14C3121
                Key             =   ""
             EndProperty
             BeginProperty ListImage101 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D3ECA8
+               Picture         =   "frmIcones.frx":14CFA53
                Key             =   ""
             EndProperty
             BeginProperty ListImage102 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D4B5DA
+               Picture         =   "frmIcones.frx":14DC385
                Key             =   ""
             EndProperty
             BeginProperty ListImage103 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D57F0C
+               Picture         =   "frmIcones.frx":14E8CB7
                Key             =   ""
             EndProperty
             BeginProperty ListImage104 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D6483E
+               Picture         =   "frmIcones.frx":14F55E9
                Key             =   ""
             EndProperty
             BeginProperty ListImage105 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D71170
+               Picture         =   "frmIcones.frx":1501F1B
                Key             =   ""
             EndProperty
             BeginProperty ListImage106 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D7DAA2
+               Picture         =   "frmIcones.frx":150E84D
                Key             =   ""
             EndProperty
             BeginProperty ListImage107 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D8A3D4
+               Picture         =   "frmIcones.frx":151B17F
                Key             =   ""
             EndProperty
             BeginProperty ListImage108 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":D96D06
+               Picture         =   "frmIcones.frx":1527AB1
                Key             =   ""
             EndProperty
             BeginProperty ListImage109 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DA3638
+               Picture         =   "frmIcones.frx":15343E3
                Key             =   ""
             EndProperty
             BeginProperty ListImage110 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DAFF6A
+               Picture         =   "frmIcones.frx":1540D15
                Key             =   ""
             EndProperty
             BeginProperty ListImage111 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DBC89C
+               Picture         =   "frmIcones.frx":154D647
                Key             =   ""
             EndProperty
             BeginProperty ListImage112 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DC91CE
+               Picture         =   "frmIcones.frx":1559F79
                Key             =   ""
             EndProperty
             BeginProperty ListImage113 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DD5B00
+               Picture         =   "frmIcones.frx":15668AB
                Key             =   ""
             EndProperty
             BeginProperty ListImage114 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DE2432
+               Picture         =   "frmIcones.frx":15731DD
                Key             =   ""
             EndProperty
             BeginProperty ListImage115 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DEED64
+               Picture         =   "frmIcones.frx":157FB0F
                Key             =   ""
             EndProperty
             BeginProperty ListImage116 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":DFB696
+               Picture         =   "frmIcones.frx":158C441
                Key             =   ""
             EndProperty
             BeginProperty ListImage117 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E0A340
+               Picture         =   "frmIcones.frx":159B0EB
                Key             =   ""
             EndProperty
             BeginProperty ListImage118 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E16C72
+               Picture         =   "frmIcones.frx":15A7A1D
                Key             =   ""
             EndProperty
             BeginProperty ListImage119 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E235A4
+               Picture         =   "frmIcones.frx":15B434F
                Key             =   ""
             EndProperty
             BeginProperty ListImage120 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E2FED6
+               Picture         =   "frmIcones.frx":15C0C81
                Key             =   ""
             EndProperty
             BeginProperty ListImage121 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E3C808
+               Picture         =   "frmIcones.frx":15CD5B3
                Key             =   ""
             EndProperty
             BeginProperty ListImage122 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E4913A
+               Picture         =   "frmIcones.frx":15D9EE5
                Key             =   ""
             EndProperty
             BeginProperty ListImage123 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E55A6C
+               Picture         =   "frmIcones.frx":15E6817
                Key             =   ""
             EndProperty
             BeginProperty ListImage124 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E6239E
+               Picture         =   "frmIcones.frx":15F3149
                Key             =   ""
             EndProperty
             BeginProperty ListImage125 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E6ECD0
+               Picture         =   "frmIcones.frx":15FFA7B
                Key             =   ""
             EndProperty
             BeginProperty ListImage126 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E7B602
+               Picture         =   "frmIcones.frx":160C3AD
                Key             =   ""
             EndProperty
             BeginProperty ListImage127 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E87F34
+               Picture         =   "frmIcones.frx":1618CDF
                Key             =   ""
             EndProperty
             BeginProperty ListImage128 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":E94866
+               Picture         =   "frmIcones.frx":1625611
                Key             =   ""
             EndProperty
             BeginProperty ListImage129 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EA1198
+               Picture         =   "frmIcones.frx":1631F43
                Key             =   ""
             EndProperty
             BeginProperty ListImage130 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EADACA
+               Picture         =   "frmIcones.frx":163E875
                Key             =   ""
             EndProperty
             BeginProperty ListImage131 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EBA3FC
+               Picture         =   "frmIcones.frx":164B1A7
                Key             =   ""
             EndProperty
             BeginProperty ListImage132 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EC6D2E
+               Picture         =   "frmIcones.frx":1657AD9
                Key             =   ""
             EndProperty
             BeginProperty ListImage133 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":ED3660
+               Picture         =   "frmIcones.frx":166440B
                Key             =   ""
             EndProperty
             BeginProperty ListImage134 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EDFF92
+               Picture         =   "frmIcones.frx":1670D3D
                Key             =   ""
             EndProperty
             BeginProperty ListImage135 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EF2AF3
+               Picture         =   "frmIcones.frx":168389E
                Key             =   ""
             EndProperty
             BeginProperty ListImage136 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":EFF425
+               Picture         =   "frmIcones.frx":16901D0
                Key             =   ""
             EndProperty
             BeginProperty ListImage137 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F0BD57
+               Picture         =   "frmIcones.frx":169CB02
                Key             =   ""
             EndProperty
             BeginProperty ListImage138 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F18689
+               Picture         =   "frmIcones.frx":16A9434
                Key             =   ""
             EndProperty
             BeginProperty ListImage139 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F24FBB
+               Picture         =   "frmIcones.frx":16B5D66
                Key             =   ""
             EndProperty
             BeginProperty ListImage140 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F318ED
+               Picture         =   "frmIcones.frx":16C2698
                Key             =   ""
             EndProperty
             BeginProperty ListImage141 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F3E21F
+               Picture         =   "frmIcones.frx":16CEFCA
                Key             =   ""
             EndProperty
             BeginProperty ListImage142 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F4AB51
+               Picture         =   "frmIcones.frx":16DB8FC
                Key             =   ""
             EndProperty
             BeginProperty ListImage143 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F57483
+               Picture         =   "frmIcones.frx":16E822E
                Key             =   ""
             EndProperty
             BeginProperty ListImage144 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F63DB5
+               Picture         =   "frmIcones.frx":16F4B60
                Key             =   ""
             EndProperty
             BeginProperty ListImage145 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F706E7
+               Picture         =   "frmIcones.frx":1701492
                Key             =   ""
             EndProperty
             BeginProperty ListImage146 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F7D019
+               Picture         =   "frmIcones.frx":170DDC4
                Key             =   ""
             EndProperty
             BeginProperty ListImage147 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F8994B
+               Picture         =   "frmIcones.frx":171A6F6
                Key             =   ""
             EndProperty
             BeginProperty ListImage148 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":F9627D
+               Picture         =   "frmIcones.frx":1727028
                Key             =   ""
             EndProperty
             BeginProperty ListImage149 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FA2BAF
+               Picture         =   "frmIcones.frx":173395A
                Key             =   ""
             EndProperty
             BeginProperty ListImage150 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FAF4E1
+               Picture         =   "frmIcones.frx":174028C
                Key             =   ""
             EndProperty
             BeginProperty ListImage151 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FBBE13
+               Picture         =   "frmIcones.frx":174CBBE
                Key             =   ""
             EndProperty
             BeginProperty ListImage152 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FC8745
+               Picture         =   "frmIcones.frx":17594F0
                Key             =   ""
             EndProperty
          EndProperty
@@ -2435,611 +3057,611 @@ Begin VB.Form frmIcones
          BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
             NumListImages   =   152
             BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FD5077
+               Picture         =   "frmIcones.frx":1765E22
                Key             =   ""
             EndProperty
             BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FE53FC
+               Picture         =   "frmIcones.frx":17761A7
                Key             =   ""
             EndProperty
             BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FF1D2E
+               Picture         =   "frmIcones.frx":1782AD9
                Key             =   ""
             EndProperty
             BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":FFE660
+               Picture         =   "frmIcones.frx":178F40B
                Key             =   ""
             EndProperty
             BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":100AF92
+               Picture         =   "frmIcones.frx":179BD3D
                Key             =   ""
             EndProperty
             BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":101AA44
+               Picture         =   "frmIcones.frx":17AB7EF
                Key             =   ""
             EndProperty
             BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10299AF
+               Picture         =   "frmIcones.frx":17BA75A
                Key             =   ""
             EndProperty
             BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10362E1
+               Picture         =   "frmIcones.frx":17C708C
                Key             =   ""
             EndProperty
             BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1042C13
+               Picture         =   "frmIcones.frx":17D39BE
                Key             =   ""
             EndProperty
             BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1054B09
+               Picture         =   "frmIcones.frx":17E58B4
                Key             =   ""
             EndProperty
             BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1064501
+               Picture         =   "frmIcones.frx":17F52AC
                Key             =   ""
             EndProperty
             BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1070E33
+               Picture         =   "frmIcones.frx":1801BDE
                Key             =   ""
             EndProperty
             BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":107D765
+               Picture         =   "frmIcones.frx":180E510
                Key             =   ""
             EndProperty
             BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":108A097
+               Picture         =   "frmIcones.frx":181AE42
                Key             =   ""
             EndProperty
             BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10969C9
+               Picture         =   "frmIcones.frx":1827774
                Key             =   ""
             EndProperty
             BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10A32FB
+               Picture         =   "frmIcones.frx":18340A6
                Key             =   ""
             EndProperty
             BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10AFC2D
+               Picture         =   "frmIcones.frx":18409D8
                Key             =   ""
             EndProperty
             BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10BC55F
+               Picture         =   "frmIcones.frx":184D30A
                Key             =   ""
             EndProperty
             BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10C8E91
+               Picture         =   "frmIcones.frx":1859C3C
                Key             =   ""
             EndProperty
             BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10D57C3
+               Picture         =   "frmIcones.frx":186656E
                Key             =   ""
             EndProperty
             BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10E20F5
+               Picture         =   "frmIcones.frx":1872EA0
                Key             =   ""
             EndProperty
             BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10EEA27
+               Picture         =   "frmIcones.frx":187F7D2
                Key             =   ""
             EndProperty
             BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":10FB359
+               Picture         =   "frmIcones.frx":188C104
                Key             =   ""
             EndProperty
             BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1107C8B
+               Picture         =   "frmIcones.frx":1898A36
                Key             =   ""
             EndProperty
             BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11171A0
+               Picture         =   "frmIcones.frx":18A7F4B
                Key             =   ""
             EndProperty
             BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1123AD2
+               Picture         =   "frmIcones.frx":18B487D
                Key             =   ""
             EndProperty
             BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1130404
+               Picture         =   "frmIcones.frx":18C11AF
                Key             =   ""
             EndProperty
             BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":113F7D5
+               Picture         =   "frmIcones.frx":18D0580
                Key             =   ""
             EndProperty
             BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":114C107
+               Picture         =   "frmIcones.frx":18DCEB2
                Key             =   ""
             EndProperty
             BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1158A39
+               Picture         =   "frmIcones.frx":18E97E4
                Key             =   ""
             EndProperty
             BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":116536B
+               Picture         =   "frmIcones.frx":18F6116
                Key             =   ""
             EndProperty
             BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1171C9D
+               Picture         =   "frmIcones.frx":1902A48
                Key             =   ""
             EndProperty
             BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1181DD9
+               Picture         =   "frmIcones.frx":1912B84
                Key             =   ""
             EndProperty
             BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":118E70B
+               Picture         =   "frmIcones.frx":191F4B6
                Key             =   ""
             EndProperty
             BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":119C716
+               Picture         =   "frmIcones.frx":192D4C1
                Key             =   ""
             EndProperty
             BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11A9048
+               Picture         =   "frmIcones.frx":1939DF3
                Key             =   ""
             EndProperty
             BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11B8FC3
+               Picture         =   "frmIcones.frx":1949D6E
                Key             =   ""
             EndProperty
             BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11CBBF7
+               Picture         =   "frmIcones.frx":195C9A2
                Key             =   ""
             EndProperty
             BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11D8529
+               Picture         =   "frmIcones.frx":19692D4
                Key             =   ""
             EndProperty
             BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11E4E5B
+               Picture         =   "frmIcones.frx":1975C06
                Key             =   ""
             EndProperty
             BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":11F178D
+               Picture         =   "frmIcones.frx":1982538
                Key             =   ""
             EndProperty
             BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":120123F
+               Picture         =   "frmIcones.frx":1991FEA
                Key             =   ""
             EndProperty
             BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":120DB71
+               Picture         =   "frmIcones.frx":199E91C
                Key             =   ""
             EndProperty
             BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":121A4A3
+               Picture         =   "frmIcones.frx":19AB24E
                Key             =   ""
             EndProperty
             BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1226DD5
+               Picture         =   "frmIcones.frx":19B7B80
                Key             =   ""
             EndProperty
             BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1233707
+               Picture         =   "frmIcones.frx":19C44B2
                Key             =   ""
             EndProperty
             BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1240039
+               Picture         =   "frmIcones.frx":19D0DE4
                Key             =   ""
             EndProperty
             BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":124ED84
+               Picture         =   "frmIcones.frx":19DFB2F
                Key             =   ""
             EndProperty
             BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":125B6B6
+               Picture         =   "frmIcones.frx":19EC461
                Key             =   ""
             EndProperty
             BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1267FE8
+               Picture         =   "frmIcones.frx":19F8D93
                Key             =   ""
             EndProperty
             BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":127491A
+               Picture         =   "frmIcones.frx":1A056C5
                Key             =   ""
             EndProperty
             BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12887D8
+               Picture         =   "frmIcones.frx":1A19583
                Key             =   ""
             EndProperty
             BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":129510A
+               Picture         =   "frmIcones.frx":1A25EB5
                Key             =   ""
             EndProperty
             BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12A1A3C
+               Picture         =   "frmIcones.frx":1A327E7
                Key             =   ""
             EndProperty
             BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12AE36E
+               Picture         =   "frmIcones.frx":1A3F119
                Key             =   ""
             EndProperty
             BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12BACA0
+               Picture         =   "frmIcones.frx":1A4BA4B
                Key             =   ""
             EndProperty
             BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12C75D2
+               Picture         =   "frmIcones.frx":1A5837D
                Key             =   ""
             EndProperty
             BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12D3F04
+               Picture         =   "frmIcones.frx":1A64CAF
                Key             =   ""
             EndProperty
             BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12E0836
+               Picture         =   "frmIcones.frx":1A715E1
                Key             =   ""
             EndProperty
             BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":12ED168
+               Picture         =   "frmIcones.frx":1A7DF13
                Key             =   ""
             EndProperty
             BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1300470
+               Picture         =   "frmIcones.frx":1A9121B
                Key             =   ""
             EndProperty
             BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":130CDA2
+               Picture         =   "frmIcones.frx":1A9DB4D
                Key             =   ""
             EndProperty
             BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13196D4
+               Picture         =   "frmIcones.frx":1AAA47F
                Key             =   ""
             EndProperty
             BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1326006
+               Picture         =   "frmIcones.frx":1AB6DB1
                Key             =   ""
             EndProperty
             BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1332938
+               Picture         =   "frmIcones.frx":1AC36E3
                Key             =   ""
             EndProperty
             BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":133F26A
+               Picture         =   "frmIcones.frx":1AD0015
                Key             =   ""
             EndProperty
             BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":134BB9C
+               Picture         =   "frmIcones.frx":1ADC947
                Key             =   ""
             EndProperty
             BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13584CE
+               Picture         =   "frmIcones.frx":1AE9279
                Key             =   ""
             EndProperty
             BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1364E00
+               Picture         =   "frmIcones.frx":1AF5BAB
                Key             =   ""
             EndProperty
             BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1371732
+               Picture         =   "frmIcones.frx":1B024DD
                Key             =   ""
             EndProperty
             BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":137E064
+               Picture         =   "frmIcones.frx":1B0EE0F
                Key             =   ""
             EndProperty
             BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":138A996
+               Picture         =   "frmIcones.frx":1B1B741
                Key             =   ""
             EndProperty
             BeginProperty ListImage73 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13972C8
+               Picture         =   "frmIcones.frx":1B28073
                Key             =   ""
             EndProperty
             BeginProperty ListImage74 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13A3BFA
+               Picture         =   "frmIcones.frx":1B349A5
                Key             =   ""
             EndProperty
             BeginProperty ListImage75 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13B052C
+               Picture         =   "frmIcones.frx":1B412D7
                Key             =   ""
             EndProperty
             BeginProperty ListImage76 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13BCE5E
+               Picture         =   "frmIcones.frx":1B4DC09
                Key             =   ""
             EndProperty
             BeginProperty ListImage77 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13CD5DE
+               Picture         =   "frmIcones.frx":1B5E389
                Key             =   ""
             EndProperty
             BeginProperty ListImage78 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13DC5FE
+               Picture         =   "frmIcones.frx":1B6D3A9
                Key             =   ""
             EndProperty
             BeginProperty ListImage79 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13E8F30
+               Picture         =   "frmIcones.frx":1B79CDB
                Key             =   ""
             EndProperty
             BeginProperty ListImage80 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":13F5862
+               Picture         =   "frmIcones.frx":1B8660D
                Key             =   ""
             EndProperty
             BeginProperty ListImage81 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1402194
+               Picture         =   "frmIcones.frx":1B92F3F
                Key             =   ""
             EndProperty
             BeginProperty ListImage82 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1410E5E
+               Picture         =   "frmIcones.frx":1BA1C09
                Key             =   ""
             EndProperty
             BeginProperty ListImage83 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":141D790
+               Picture         =   "frmIcones.frx":1BAE53B
                Key             =   ""
             EndProperty
             BeginProperty ListImage84 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":142E7EB
+               Picture         =   "frmIcones.frx":1BBF596
                Key             =   ""
             EndProperty
             BeginProperty ListImage85 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":143B11D
+               Picture         =   "frmIcones.frx":1BCBEC8
                Key             =   ""
             EndProperty
             BeginProperty ListImage86 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1447A4F
+               Picture         =   "frmIcones.frx":1BD87FA
                Key             =   ""
             EndProperty
             BeginProperty ListImage87 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1454381
+               Picture         =   "frmIcones.frx":1BE512C
                Key             =   ""
             EndProperty
             BeginProperty ListImage88 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1460CB3
+               Picture         =   "frmIcones.frx":1BF1A5E
                Key             =   ""
             EndProperty
             BeginProperty ListImage89 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":146D5E5
+               Picture         =   "frmIcones.frx":1BFE390
                Key             =   ""
             EndProperty
             BeginProperty ListImage90 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1479F17
+               Picture         =   "frmIcones.frx":1C0ACC2
                Key             =   ""
             EndProperty
             BeginProperty ListImage91 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1486849
+               Picture         =   "frmIcones.frx":1C175F4
                Key             =   ""
             EndProperty
             BeginProperty ListImage92 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":149317B
+               Picture         =   "frmIcones.frx":1C23F26
                Key             =   ""
             EndProperty
             BeginProperty ListImage93 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":149FAAD
+               Picture         =   "frmIcones.frx":1C30858
                Key             =   ""
             EndProperty
             BeginProperty ListImage94 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14AC3DF
+               Picture         =   "frmIcones.frx":1C3D18A
                Key             =   ""
             EndProperty
             BeginProperty ListImage95 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14B8D11
+               Picture         =   "frmIcones.frx":1C49ABC
                Key             =   ""
             EndProperty
             BeginProperty ListImage96 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14C5643
+               Picture         =   "frmIcones.frx":1C563EE
                Key             =   ""
             EndProperty
             BeginProperty ListImage97 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14D6F56
+               Picture         =   "frmIcones.frx":1C67D01
                Key             =   ""
             EndProperty
             BeginProperty ListImage98 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14E3888
+               Picture         =   "frmIcones.frx":1C74633
                Key             =   ""
             EndProperty
             BeginProperty ListImage99 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14F01BA
+               Picture         =   "frmIcones.frx":1C80F65
                Key             =   ""
             EndProperty
             BeginProperty ListImage100 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":14FCAEC
+               Picture         =   "frmIcones.frx":1C8D897
                Key             =   ""
             EndProperty
             BeginProperty ListImage101 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":150941E
+               Picture         =   "frmIcones.frx":1C9A1C9
                Key             =   ""
             EndProperty
             BeginProperty ListImage102 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1515D50
+               Picture         =   "frmIcones.frx":1CA6AFB
                Key             =   ""
             EndProperty
             BeginProperty ListImage103 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1526E80
+               Picture         =   "frmIcones.frx":1CB7C2B
                Key             =   ""
             EndProperty
             BeginProperty ListImage104 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15337B2
+               Picture         =   "frmIcones.frx":1CC455D
                Key             =   ""
             EndProperty
             BeginProperty ListImage105 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15400E4
+               Picture         =   "frmIcones.frx":1CD0E8F
                Key             =   ""
             EndProperty
             BeginProperty ListImage106 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":154CA16
+               Picture         =   "frmIcones.frx":1CDD7C1
                Key             =   ""
             EndProperty
             BeginProperty ListImage107 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1559348
+               Picture         =   "frmIcones.frx":1CEA0F3
                Key             =   ""
             EndProperty
             BeginProperty ListImage108 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1565C7A
+               Picture         =   "frmIcones.frx":1CF6A25
                Key             =   ""
             EndProperty
             BeginProperty ListImage109 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15725AC
+               Picture         =   "frmIcones.frx":1D03357
                Key             =   ""
             EndProperty
             BeginProperty ListImage110 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":157EEDE
+               Picture         =   "frmIcones.frx":1D0FC89
                Key             =   ""
             EndProperty
             BeginProperty ListImage111 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":158B810
+               Picture         =   "frmIcones.frx":1D1C5BB
                Key             =   ""
             EndProperty
             BeginProperty ListImage112 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1598142
+               Picture         =   "frmIcones.frx":1D28EED
                Key             =   ""
             EndProperty
             BeginProperty ListImage113 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15A4A74
+               Picture         =   "frmIcones.frx":1D3581F
                Key             =   ""
             EndProperty
             BeginProperty ListImage114 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15B13A6
+               Picture         =   "frmIcones.frx":1D42151
                Key             =   ""
             EndProperty
             BeginProperty ListImage115 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15C3693
+               Picture         =   "frmIcones.frx":1D5443E
                Key             =   ""
             EndProperty
             BeginProperty ListImage116 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15CFFC5
+               Picture         =   "frmIcones.frx":1D60D70
                Key             =   ""
             EndProperty
             BeginProperty ListImage117 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15DC8F7
+               Picture         =   "frmIcones.frx":1D6D6A2
                Key             =   ""
             EndProperty
             BeginProperty ListImage118 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15E9229
+               Picture         =   "frmIcones.frx":1D79FD4
                Key             =   ""
             EndProperty
             BeginProperty ListImage119 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":15F5B5B
+               Picture         =   "frmIcones.frx":1D86906
                Key             =   ""
             EndProperty
             BeginProperty ListImage120 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":160248D
+               Picture         =   "frmIcones.frx":1D93238
                Key             =   ""
             EndProperty
             BeginProperty ListImage121 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":160EDBF
+               Picture         =   "frmIcones.frx":1D9FB6A
                Key             =   ""
             EndProperty
             BeginProperty ListImage122 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":161B6F1
+               Picture         =   "frmIcones.frx":1DAC49C
                Key             =   ""
             EndProperty
             BeginProperty ListImage123 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1628023
+               Picture         =   "frmIcones.frx":1DB8DCE
                Key             =   ""
             EndProperty
             BeginProperty ListImage124 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1634955
+               Picture         =   "frmIcones.frx":1DC5700
                Key             =   ""
             EndProperty
             BeginProperty ListImage125 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1641287
+               Picture         =   "frmIcones.frx":1DD2032
                Key             =   ""
             EndProperty
             BeginProperty ListImage126 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1652AF0
+               Picture         =   "frmIcones.frx":1DE389B
                Key             =   ""
             EndProperty
             BeginProperty ListImage127 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":165F422
+               Picture         =   "frmIcones.frx":1DF01CD
                Key             =   ""
             EndProperty
             BeginProperty ListImage128 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":166BD54
+               Picture         =   "frmIcones.frx":1DFCAFF
                Key             =   ""
             EndProperty
             BeginProperty ListImage129 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1678686
+               Picture         =   "frmIcones.frx":1E09431
                Key             =   ""
             EndProperty
             BeginProperty ListImage130 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":168BA23
+               Picture         =   "frmIcones.frx":1E1C7CE
                Key             =   ""
             EndProperty
             BeginProperty ListImage131 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1698355
+               Picture         =   "frmIcones.frx":1E29100
                Key             =   ""
             EndProperty
             BeginProperty ListImage132 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16A4C87
+               Picture         =   "frmIcones.frx":1E35A32
                Key             =   ""
             EndProperty
             BeginProperty ListImage133 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16B46B5
+               Picture         =   "frmIcones.frx":1E45460
                Key             =   ""
             EndProperty
             BeginProperty ListImage134 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16C0FE7
+               Picture         =   "frmIcones.frx":1E51D92
                Key             =   ""
             EndProperty
             BeginProperty ListImage135 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16D5736
+               Picture         =   "frmIcones.frx":1E664E1
                Key             =   ""
             EndProperty
             BeginProperty ListImage136 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16E80B7
+               Picture         =   "frmIcones.frx":1E78E62
                Key             =   ""
             EndProperty
             BeginProperty ListImage137 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":16F49E9
+               Picture         =   "frmIcones.frx":1E85794
                Key             =   ""
             EndProperty
             BeginProperty ListImage138 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":170131B
+               Picture         =   "frmIcones.frx":1E920C6
                Key             =   ""
             EndProperty
             BeginProperty ListImage139 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":170DC4D
+               Picture         =   "frmIcones.frx":1E9E9F8
                Key             =   ""
             EndProperty
             BeginProperty ListImage140 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":171C7D8
+               Picture         =   "frmIcones.frx":1EAD583
                Key             =   ""
             EndProperty
             BeginProperty ListImage141 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":172910A
+               Picture         =   "frmIcones.frx":1EB9EB5
                Key             =   ""
             EndProperty
             BeginProperty ListImage142 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1735A3C
+               Picture         =   "frmIcones.frx":1EC67E7
                Key             =   ""
             EndProperty
             BeginProperty ListImage143 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":174236E
+               Picture         =   "frmIcones.frx":1ED3119
                Key             =   ""
             EndProperty
             BeginProperty ListImage144 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":1752FC6
+               Picture         =   "frmIcones.frx":1EE3D71
                Key             =   ""
             EndProperty
             BeginProperty ListImage145 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":175F8F8
+               Picture         =   "frmIcones.frx":1EF06A3
                Key             =   ""
             EndProperty
             BeginProperty ListImage146 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":176F8BF
+               Picture         =   "frmIcones.frx":1F0066A
                Key             =   ""
             EndProperty
             BeginProperty ListImage147 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":177C1F1
+               Picture         =   "frmIcones.frx":1F0CF9C
                Key             =   ""
             EndProperty
             BeginProperty ListImage148 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":178C63F
+               Picture         =   "frmIcones.frx":1F1D3EA
                Key             =   ""
             EndProperty
             BeginProperty ListImage149 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":179B922
+               Picture         =   "frmIcones.frx":1F2C6CD
                Key             =   ""
             EndProperty
             BeginProperty ListImage150 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":17AB0B4
+               Picture         =   "frmIcones.frx":1F3BE5F
                Key             =   ""
             EndProperty
             BeginProperty ListImage151 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":17BB91D
+               Picture         =   "frmIcones.frx":1F4C6C8
                Key             =   ""
             EndProperty
             BeginProperty ListImage152 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-               Picture         =   "frmIcones.frx":17CB52E
+               Picture         =   "frmIcones.frx":1F5C2D9
                Key             =   ""
             EndProperty
          EndProperty
@@ -3077,7 +3699,7 @@ End Sub
 
 Private Sub addIcons()
 On Error Resume Next
-    Dim X As Integer
+    Dim x As Integer
     Toolbar1.Buttons.Clear
     
     If vColectionIcons = 1 Then
@@ -3089,9 +3711,10 @@ On Error Resume Next
     ElseIf vColectionIcons = 4 Then
         Toolbar1.ImageList = ImageList4
     ElseIf vColectionIcons = 5 Then
+        Toolbar1.ImageList = ImageList5
     End If
-    For X = 1 To 152
-        Toolbar1.Buttons.Add X, , , 0, X
+    For x = 1 To 152
+        Toolbar1.Buttons.Add x, , , 0, x
     Next
     Toolbar1.Refresh
 End Sub

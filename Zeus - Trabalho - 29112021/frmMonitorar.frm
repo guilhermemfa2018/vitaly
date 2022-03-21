@@ -966,8 +966,8 @@ On Error GoTo Err
     sqlStatus = sqlStatus & "ORDER BY F.CODREDUZIDO,B.NOME"
     rsStatus.Open sqlStatus, cnBanco, adOpenKeyset, adLockReadOnly
     Dim ItemLst As ListItem
-    Dim X As Integer
-    X = 0
+    Dim x As Integer
+    x = 0
     ListView1.ListItems.Clear
     While Not rsStatus.EOF
         If rsStatus.Fields(10) = "A" Then
@@ -1002,7 +1002,7 @@ On Error GoTo Err
         ItemLst.SubItems(17) = "" & rsStatus.Fields(22)
         
         rsStatus.MoveNext
-        X = X + 1
+        x = x + 1
     Wend
     rsStatus.Close
     Set rsStatus = Nothing
@@ -1036,11 +1036,11 @@ On Error GoTo Err
     Dim rsCompoe As New ADODB.Recordset
     Dim sqlCompoe As String
     
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
-            vPosition = X
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
+            vPosition = x
             Exit For
         End If
     Next
@@ -1131,7 +1131,7 @@ On Error GoTo Err
     End If
     
     'HABILITA BOTÃO PARA FINALIZAR APROPRIAÇÃO
-    HabBotao X
+    HabBotao x
     
     'PEGA IMAGEM GRAVADO NO BANCO SQL E EXIBE EM UM COMPONENTE DE IMAGEM
     If Mid$(ListView1.SelectedItem.ListSubItems.Item(1), 1, 5) <> "CONTR" Then
@@ -1152,17 +1152,17 @@ On Error GoTo Err
         aicAlphaImage1.LoadImage_FromFile (App.Path & "\temp.jpg")
         Kill App.Path & "\Temp.jpg"
     Else
-        Label53 = rsCompoe.Fields(3) 'Local onde esta armazenado a foto do coloborador
-        aicAlphaImage1.LoadImage_FromFile (Label53.Caption)
+        label53 = rsCompoe.Fields(3) 'Local onde esta armazenado a foto do coloborador
+        aicAlphaImage1.LoadImage_FromFile (label53.Caption)
     End If
     
     rsCompoe.Close
     Set rsCompoe = Nothing
     calculaTempoApropriado
     If Mid$(ListView1.SelectedItem.ListSubItems.Item(1), 1, 5) <> "CONTR" Then
-        compoeAprop Mid$(ListView1.ListItems.Item(X), 1, 5)
+        compoeAprop Mid$(ListView1.ListItems.Item(x), 1, 5)
     Else
-        compoeAprop Mid$(ListView1.ListItems.Item(X), 1, 11)
+        compoeAprop Mid$(ListView1.ListItems.Item(x), 1, 11)
     End If
     Exit Sub
 Err:

@@ -26,6 +26,20 @@ Begin VB.Form frmCausais
    ScaleHeight     =   8280
    ScaleWidth      =   9870
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   8760
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   29
+      Top             =   7560
+      Visible         =   0   'False
+      Width           =   975
+   End
    Begin VB.CommandButton cmdcadastro 
       Height          =   615
       Index           =   11
@@ -33,8 +47,7 @@ Begin VB.Form frmCausais
       Picture         =   "frmCausais.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   24
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
+      Tag             =   "Sair"
       Top             =   7560
       Width           =   615
    End
@@ -46,7 +59,6 @@ Begin VB.Form frmCausais
       Style           =   1  'Graphical
       TabIndex        =   25
       Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
       Top             =   7560
       Width           =   615
    End
@@ -84,6 +96,7 @@ Begin VB.Form frmCausais
       Tab(1).Control(1)=   "Frame3"
       Tab(1).ControlCount=   2
       Begin VB.Frame Frame3 
+         BackColor       =   &H00B7B7B7&
          Caption         =   "Grupo"
          BeginProperty Font 
             Name            =   "Calibri"
@@ -112,6 +125,7 @@ Begin VB.Form frmCausais
             Index           =   2
             Left            =   120
             TabIndex        =   3
+            Tag             =   "Código do Grupo"
             Top             =   480
             Width           =   975
          End
@@ -121,6 +135,7 @@ Begin VB.Form frmCausais
             Index           =   3
             Left            =   1200
             TabIndex        =   4
+            Tag             =   "Descrição do Grupo"
             Top             =   480
             Width           =   7575
          End
@@ -142,6 +157,7 @@ Begin VB.Form frmCausais
          End
       End
       Begin VB.Frame Frame2 
+         BackColor       =   &H00B7B7B7&
          Caption         =   "Causal"
          BeginProperty Font 
             Name            =   "Calibri"
@@ -164,6 +180,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":2768
             Style           =   1  'Graphical
             TabIndex        =   19
+            Tag             =   "Excluir Causal"
             Top             =   960
             Width           =   615
          End
@@ -174,6 +191,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":3432
             Style           =   1  'Graphical
             TabIndex        =   20
+            Tag             =   "Editar Causal"
             Top             =   960
             Width           =   615
          End
@@ -184,6 +202,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":40FC
             Style           =   1  'Graphical
             TabIndex        =   21
+            Tag             =   "Novo Causal"
             Top             =   960
             Width           =   615
          End
@@ -194,6 +213,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":4DC6
             Style           =   1  'Graphical
             TabIndex        =   22
+            Tag             =   "Inserir Causal"
             Top             =   960
             Width           =   615
          End
@@ -203,6 +223,7 @@ Begin VB.Form frmCausais
             Index           =   4
             Left            =   120
             TabIndex        =   5
+            Tag             =   "Código do Causal"
             Top             =   480
             Width           =   975
          End
@@ -240,6 +261,7 @@ Begin VB.Form frmCausais
             Index           =   5
             Left            =   1200
             TabIndex        =   6
+            Tag             =   "Descrição do Causal"
             Top             =   480
             Width           =   8055
          End
@@ -261,6 +283,7 @@ Begin VB.Form frmCausais
          End
       End
       Begin VB.Frame Frame1 
+         BackColor       =   &H00B7B7B7&
          Caption         =   "Dados do Processo "
          BeginProperty Font 
             Name            =   "Calibri"
@@ -283,6 +306,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":5B62
             Style           =   1  'Graphical
             TabIndex        =   26
+            Tag             =   "Excluir Grupo"
             Top             =   840
             Width           =   615
          End
@@ -293,6 +317,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":682C
             Style           =   1  'Graphical
             TabIndex        =   28
+            Tag             =   "Editar Grupo"
             Top             =   840
             Width           =   615
          End
@@ -303,6 +328,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":74F6
             Style           =   1  'Graphical
             TabIndex        =   27
+            Tag             =   "Novo Grupo"
             Top             =   840
             Width           =   615
          End
@@ -313,6 +339,7 @@ Begin VB.Form frmCausais
             Picture         =   "frmCausais.frx":81C0
             Style           =   1  'Graphical
             TabIndex        =   23
+            Tag             =   "Inserir Grupo"
             Top             =   840
             Width           =   615
          End
@@ -322,6 +349,7 @@ Begin VB.Form frmCausais
             Index           =   0
             Left            =   120
             TabIndex        =   0
+            Tag             =   "Código do Grupo"
             Top             =   480
             Width           =   855
          End
@@ -330,6 +358,7 @@ Begin VB.Form frmCausais
             Index           =   1
             Left            =   1080
             TabIndex        =   1
+            Tag             =   "Descrição do Grupo"
             Top             =   480
             Width           =   8175
          End
@@ -464,6 +493,8 @@ On Error GoTo ErrHandler
     chamaSQL "Select a.idgrupocausal,a.nomegrupocausal from tbCausaisGrupos as a Order by a.idgrupocausal"
     Compoe_Listview ListView1, Sqlp, "00"
     
+    inicializa_tabs SSTab1, Picture1
+    
     chamaSQL "Select a.idcausal,a.nomecausal,a.idgrupocausal,b.nomegrupocausal from tbCausais as a inner join tbcausaisgrupos as b on a.idgrupocausal = b.idgrupocausal Order by a.idgrupocausal"
     Compoe_Listview ListView2, Sqlp, "00"
     
@@ -473,22 +504,23 @@ On Error GoTo ErrHandler
     AplicarSkin Me, Principal.Skin1
     NewColorDBGrid Me
     On Error GoTo ErrHandler
+    
     Exit Sub
 ErrHandler:
     mobjMsg.Abrir "ERROR: " & Err.Number & Chr(13) & "Informe ao Suporte Técnico.", , critico
 End Sub
 
 Private Sub carregarIconBotao()
-    carregaImagemBotao cmdImpostoServico(0), 0, 46 'Inserir
-    carregaImagemBotao cmdImpostoServico(1), 1, 31 'Novo
-    carregaImagemBotao cmdImpostoServico(2), 2, 32 'Editar
-    carregaImagemBotao cmdImpostoServico(3), 3, 33 'Excluir
-    carregaImagemBotao cmdImpostoServico(4), 4, 46 'Inserir
-    carregaImagemBotao cmdImpostoServico(5), 5, 31 'Novo
-    carregaImagemBotao cmdImpostoServico(6), 6, 32 'Editar
-    carregaImagemBotao cmdImpostoServico(7), 7, 33 'Excluir
-    carregaImagemBotao cmdImpostoServico(12), 12, 45 'Salvar
-    carregaImagemBotao cmdImpostoServico(11), 11, 34 'Sair
+    carregaImagemBotao cmdcadastro(0), 0, 46 'Inserir
+    carregaImagemBotao cmdcadastro(1), 1, 31 'Novo
+    carregaImagemBotao cmdcadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdcadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdcadastro(4), 4, 46 'Inserir
+    carregaImagemBotao cmdcadastro(5), 5, 31 'Novo
+    carregaImagemBotao cmdcadastro(6), 6, 32 'Editar
+    carregaImagemBotao cmdcadastro(7), 7, 33 'Excluir
+    carregaImagemBotao cmdcadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdcadastro(11), 11, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()
@@ -555,10 +587,10 @@ Private Sub txtCausal_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtCausal(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtCausal.Count - 1
-        txtCausal(X).SelStart = 0
-        txtCausal(X).SelLength = Len(txtCausal(X).Text)
+    Dim x As Integer
+    For x = 1 To txtCausal.Count - 1
+        txtCausal(x).SelStart = 0
+        txtCausal(x).SelLength = Len(txtCausal(x).Text)
     Next
 End Sub
 
@@ -582,3 +614,5 @@ Private Sub txtCausal_LostFocus(Index As Integer)
         txtCausal(4) = Format(GeraCodigoLV(ListView2), "00")
     End Select
 End Sub
+
+

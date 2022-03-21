@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmItemVerif 
    BorderStyle     =   1  'Fixed Single
@@ -10,6 +11,15 @@ Begin VB.Form frmItemVerif
    ClientLeft      =   2640
    ClientTop       =   1815
    ClientWidth     =   9105
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmItemVerif.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form2"
@@ -18,7 +28,37 @@ Begin VB.Form frmItemVerif
    ScaleHeight     =   8280
    ScaleWidth      =   9105
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   8040
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   31
+      Top             =   7560
+      Visible         =   0   'False
+      Width           =   975
+   End
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2520
+      Top             =   7800
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdcadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   11
       Left            =   720
@@ -26,11 +66,19 @@ Begin VB.Form frmItemVerif
       Style           =   1  'Graphical
       TabIndex        =   22
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   7560
       Width           =   615
    End
    Begin VB.CommandButton cmdcadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   12
       Left            =   120
@@ -38,7 +86,6 @@ Begin VB.Form frmItemVerif
       Style           =   1  'Graphical
       TabIndex        =   23
       Tag             =   "Salvar"
-      ToolTipText     =   "Salvar"
       Top             =   7560
       Width           =   615
    End
@@ -55,6 +102,15 @@ Begin VB.Form frmItemVerif
       Tab             =   1
       TabsPerRow      =   2
       TabHeight       =   520
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       TabCaption(0)   =   "Grupos"
       TabPicture(0)   =   "frmItemVerif.frx":265E
       Tab(0).ControlEnabled=   0   'False
@@ -71,8 +127,8 @@ Begin VB.Form frmItemVerif
       Begin VB.Frame Frame3 
          Caption         =   "Grupo "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -86,16 +142,7 @@ Begin VB.Form frmItemVerif
          Width           =   8655
          Begin VB.CommandButton cmdcadastro 
             Caption         =   "..."
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   10
             Left            =   8040
             TabIndex        =   30
@@ -104,22 +151,24 @@ Begin VB.Form frmItemVerif
          End
          Begin VB.TextBox txtCadastro 
             Enabled         =   0   'False
-            Height          =   285
+            Height          =   345
             Index           =   1
             Left            =   1200
             TabIndex        =   4
+            Tag             =   "Descrição do grupo"
             Top             =   480
-            Width           =   6855
+            Width           =   6735
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   1
             Left            =   120
             TabIndex        =   3
+            Tag             =   "Código do grupo"
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -145,7 +194,7 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":2708
+            OleObjectBlob   =   "frmItemVerif.frx":2702
             TabIndex        =   14
             Top             =   240
             Width           =   735
@@ -154,8 +203,8 @@ Begin VB.Form frmItemVerif
       Begin VB.Frame Frame2 
          Caption         =   "Dados do item "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -168,106 +217,79 @@ Begin VB.Form frmItemVerif
          Top             =   1440
          Width           =   8655
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   7
             Left            =   1320
-            Picture         =   "frmItemVerif.frx":2774
+            Picture         =   "frmItemVerif.frx":2768
             Style           =   1  'Graphical
             TabIndex        =   24
             Tag             =   "Excluir"
-            ToolTipText     =   "Excluir"
-            Top             =   840
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   6
             Left            =   720
-            Picture         =   "frmItemVerif.frx":343E
+            Picture         =   "frmItemVerif.frx":3432
             Style           =   1  'Graphical
             TabIndex        =   25
             Tag             =   "Editar"
-            ToolTipText     =   "Editar"
-            Top             =   840
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   5
             Left            =   120
-            Picture         =   "frmItemVerif.frx":4108
+            Picture         =   "frmItemVerif.frx":40FC
             Style           =   1  'Graphical
             TabIndex        =   26
             Tag             =   "Incluir"
-            ToolTipText     =   "Incluir"
-            Top             =   840
+            Top             =   960
             Width           =   615
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   3
             Left            =   7680
             TabIndex        =   21
+            Tag             =   "Sigla do Item"
             Top             =   480
             Width           =   855
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   7680
-            OleObjectBlob   =   "frmItemVerif.frx":4DD2
+            OleObjectBlob   =   "frmItemVerif.frx":4DC6
             TabIndex        =   20
             Top             =   240
             Width           =   615
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   1200
             TabIndex        =   6
+            Tag             =   "Descrição do Item"
             Top             =   480
             Width           =   6375
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   120
             TabIndex        =   5
+            Tag             =   "Código do Item"
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
             Enabled         =   0   'False
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -281,7 +303,7 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmItemVerif.frx":4E3C
+            OleObjectBlob   =   "frmItemVerif.frx":4E2A
             TabIndex        =   17
             Top             =   240
             Width           =   975
@@ -289,31 +311,40 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":4EAE
+            OleObjectBlob   =   "frmItemVerif.frx":4E96
             TabIndex        =   16
             Top             =   240
             Width           =   615
          End
          Begin MSComctlLib.TreeView TreeView1 
-            Height          =   4095
+            Height          =   3975
             Left            =   120
             TabIndex        =   11
-            Top             =   1560
+            Top             =   1680
             Width           =   8415
             _ExtentX        =   14843
-            _ExtentY        =   7223
+            _ExtentY        =   7011
             _Version        =   393217
             LabelEdit       =   1
             LineStyle       =   1
             Style           =   7
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
       End
       Begin VB.Frame Frame1 
          Caption         =   "Dados do grupo "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -326,74 +357,45 @@ Begin VB.Form frmItemVerif
          Top             =   360
          Width           =   8655
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   2
             Left            =   1320
-            Picture         =   "frmItemVerif.frx":4F1A
+            Picture         =   "frmItemVerif.frx":4EFC
             Style           =   1  'Graphical
             TabIndex        =   27
             Tag             =   "Excluir"
-            ToolTipText     =   "Excluir"
             Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   1
             Left            =   720
-            Picture         =   "frmItemVerif.frx":5BE4
+            Picture         =   "frmItemVerif.frx":5BC6
             Style           =   1  'Graphical
             TabIndex        =   28
             Tag             =   "Editar"
-            ToolTipText     =   "Editar"
             Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   0
             Left            =   120
-            Picture         =   "frmItemVerif.frx":68AE
+            Picture         =   "frmItemVerif.frx":6890
             Style           =   1  'Graphical
             TabIndex        =   29
             Tag             =   "Incluir"
-            ToolTipText     =   "Incluir"
             Top             =   960
             Width           =   615
          End
          Begin VB.ComboBox Combo1 
-            Height          =   315
-            ItemData        =   "frmItemVerif.frx":7578
+            Height          =   345
+            ItemData        =   "frmItemVerif.frx":755A
             Left            =   5160
-            List            =   "frmItemVerif.frx":7585
+            List            =   "frmItemVerif.frx":7567
             TabIndex        =   19
+            Tag             =   "Em quais relatório serão exibidos os itens do grupo"
             Text            =   "-"
             Top             =   480
             Width           =   2895
@@ -401,33 +403,35 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   5160
-            OleObjectBlob   =   "frmItemVerif.frx":75A1
+            OleObjectBlob   =   "frmItemVerif.frx":7583
             TabIndex        =   18
             Top             =   240
             Width           =   2415
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   315
+            Height          =   345
             Index           =   0
             Left            =   840
             TabIndex        =   1
+            Tag             =   "Descrição do Grupo"
             Top             =   480
             Width           =   4215
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   315
+            Height          =   345
             Index           =   0
             Left            =   120
             TabIndex        =   0
+            Tag             =   "Código do Grupo"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
-            _ExtentY        =   556
+            _ExtentY        =   609
             _Version        =   393216
             Enabled         =   0   'False
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -441,7 +445,7 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmItemVerif.frx":7633
+            OleObjectBlob   =   "frmItemVerif.frx":760F
             TabIndex        =   13
             Top             =   240
             Width           =   855
@@ -449,7 +453,7 @@ Begin VB.Form frmItemVerif
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmItemVerif.frx":76A5
+            OleObjectBlob   =   "frmItemVerif.frx":767B
             TabIndex        =   12
             Top             =   240
             Width           =   615
@@ -472,6 +476,15 @@ Begin VB.Form frmItemVerif
             BackColor       =   -2147483624
             BorderStyle     =   1
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             NumItems        =   0
          End
       End
@@ -502,7 +515,7 @@ Private Sub cmdCadastro_Click(Index As Integer)
         mskCadastro(2).PromptInclude = False
         mskCadastro(2) = ""
         mskCadastro(2).PromptInclude = True
-        txtCadastro(2) = ""
+        txtcadastro(2) = ""
         AlteraTreeview
     Case 7
         DeletaTreeview
@@ -519,6 +532,7 @@ Private Sub cmdCadastro_Click(Index As Integer)
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture1
     AbrirListaVer
     frmItemVerif.Left = 2710
     frmItemVerif.Top = 0
@@ -593,16 +607,16 @@ End Sub
 
 Private Sub Compoe_Listview1()
     ' Declaração de variaveis
-    Dim X As Integer
+    Dim x As Integer
     If rsGrupo.RecordCount > 0 Then Principal.ProgressBar1.Max = rsGrupo.RecordCount
-    X = 0
+    x = 0
     While Not rsGrupo.EOF
-        Principal.ProgressBar1.Value = X
+        Principal.ProgressBar1.Value = x
         Set ItemLst = ListView1.ListItems.Add(, , Format(rsGrupo(0), "000"))
         ItemLst.SubItems(1) = "" & rsGrupo.Fields(1)
         ItemLst.SubItems(2) = "" & rsGrupo.Fields(2)
         rsGrupo.MoveNext
-        X = X + 1
+        x = x + 1
     Wend
     Principal.ProgressBar1.Value = 0
     Legenda = ""
@@ -615,71 +629,71 @@ End Sub
 
 Private Sub IncluirItemGrupo()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     'If ValidaCampo = False Then Exit Sub
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X) = Me.mskCadastro(0) Then
+    y = ListView1.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            If ListView1.ListItems.Item(x) = Me.mskCadastro(0) Then
                 AbrirListaVer
-                Me.mskCadastro(0) = ListView1.ListItems.Item(X)
-                ListView1.SelectedItem.ListSubItems.Item(1) = txtCadastro(0)
+                Me.mskCadastro(0) = ListView1.ListItems.Item(x)
+                ListView1.SelectedItem.ListSubItems.Item(1) = txtcadastro(0)
                 mskCadastro(0).PromptInclude = False
                 mskCadastro(0).Text = Format(GeraCodigo, "000")
                 mskCadastro(0).PromptInclude = True
-                txtCadastro(0) = ""
-                Y = ListView1.ListItems.Count
+                txtcadastro(0) = ""
+                y = ListView1.ListItems.Count
                 ListView1.SelectedItem.ListSubItems.Item(2) = Combo1.Text
                 FecharListaVer
                 Exit Sub
             End If
         Next
         Set ItemLst = ListView1.ListItems.Add(, , mskCadastro(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     Else
         Set ItemLst = ListView1.ListItems.Add(, , mskCadastro(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     End If
-    ItemLst.SubItems(1) = txtCadastro(0)
+    ItemLst.SubItems(1) = txtcadastro(0)
     ItemLst.SubItems(2) = Combo1.Text
-    mskCadastro(0) = Format(Val(ListView1.ListItems.Item(Y)) + 1, "000")
-    txtCadastro(0) = ""
+    mskCadastro(0) = Format(Val(ListView1.ListItems.Item(y)) + 1, "000")
+    txtcadastro(0) = ""
     Combo1.Text = "-"
-    txtCadastro(0).SetFocus
+    txtcadastro(0).SetFocus
 End Sub
 
 Private Sub AlterarItem()
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.mskCadastro(0).Text = ListView1.ListItems.Item(X)
-    Me.txtCadastro(0).Text = ListView1.SelectedItem.ListSubItems.Item(1)
+    Me.mskCadastro(0).Text = ListView1.ListItems.Item(x)
+    Me.txtcadastro(0).Text = ListView1.SelectedItem.ListSubItems.Item(1)
     Me.Combo1.Text = ListView1.SelectedItem.ListSubItems.Item(2)
 End Sub
 
 Private Sub ExcluirItem()
 On Error GoTo Err
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
     Dim llng_Contador As Long
     
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
     For llng_Contador = 1 To TreeView1.Nodes.Count
-        If ListView1.ListItems.Item(X) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3) Then
+        If ListView1.ListItems.Item(x) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3) Then
             mobjMsg.Abrir "Existem  itens cadastrados para esse Grupo. O Grupo não pode ser excluido", Ok, informacao, "ZEUS"
             Exit Sub
         End If
     Next
-    ListView1.ListItems.Remove (X)
+    ListView1.ListItems.Remove (x)
     Exit Sub
 Err:
     If Err.Number = -2147467259 Then
@@ -704,10 +718,10 @@ On Error GoTo Err
     SqlSalvar = "Select * from tbVerifGrupo"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-    For X = 1 To ListView1.ListItems.Count
-        ListView1.ListItems.Item(X).Selected = True
+    For x = 1 To ListView1.ListItems.Count
+        ListView1.ListItems.Item(x).Selected = True
         rsSalvar.AddNew
-        rsSalvar.Fields(0) = ListView1.ListItems.Item(X)
+        rsSalvar.Fields(0) = ListView1.ListItems.Item(x)
         rsSalvar.Fields(1) = ListView1.SelectedItem.ListSubItems.Item(1)
         rsSalvar.Fields(2) = ListView1.SelectedItem.ListSubItems.Item(2)
     Next
@@ -765,16 +779,16 @@ On Error GoTo Err
     Dim rsTree As New ADODB.Recordset
     Dim SqlTree
     Dim no As Node
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     SqlTree = "Select a.codgrupo,a.descricao,b.coditem,b.descricao,b.sigla from tbVerifGrupo as a Inner join tbVerifItem as b on a.codgrupo = b.codgrupo Order by b.codgrupo,b.coditem"
     rsTree.Open SqlTree, cnBanco, adOpenKeyset, adLockReadOnly
     
     TreeView1.Nodes.Clear
-    For X = 1 To rsTree.RecordCount
-        Set no = TreeView1.Nodes.Add(, , "no" & X, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
-        Y = rsTree.Fields(0)
-        While Y = rsTree.Fields(0)
-            TreeView1.Nodes.Add "no" & X, tvwChild, , Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3) & "(" & rsTree.Fields(4) & ")"
+    For x = 1 To rsTree.RecordCount
+        Set no = TreeView1.Nodes.Add(, , "no" & x, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
+        y = rsTree.Fields(0)
+        While y = rsTree.Fields(0)
+            TreeView1.Nodes.Add "no" & x, tvwChild, , Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3) & "(" & rsTree.Fields(4) & ")"
             rsTree.MoveNext
             If rsTree.EOF Then Exit Sub
         Wend
@@ -806,8 +820,8 @@ On Error GoTo Err
         rsItem.Fields(1) = Val(mskCadastro(2))
         mskCadastro(1).SetFocus
     End If
-    rsItem.Fields(2) = txtCadastro(2).Text
-    rsItem.Fields(3) = txtCadastro(3).Text
+    rsItem.Fields(2) = txtcadastro(2).Text
+    rsItem.Fields(3) = txtcadastro(3).Text
     rsItem.Update
     Set rsItem = Nothing
     CompoeTreeview
@@ -832,16 +846,16 @@ Private Sub AlteraTreeview()
                 mskCadastro(1) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3)
                 mskCadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 1, 3)
                 
-                txtCadastro(3) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "("), 5)
-                txtCadastro(3) = RemoveMask2(txtCadastro(3), "(")
-                txtCadastro(3) = RemoveMask2(txtCadastro(3), ")")
+                txtcadastro(3) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "("), 5)
+                txtcadastro(3) = RemoveMask2(txtcadastro(3), "(")
+                txtcadastro(3) = RemoveMask2(txtcadastro(3), ")")
                 
                 
                 
-                txtCadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 5, 45)
-                txtCadastro(2) = RemoveMask2(txtCadastro(2), "(")
-                txtCadastro(2) = RemoveMask2(txtCadastro(2), ")")
-                txtCadastro(2) = RemoveMask2(txtCadastro(2), txtCadastro(3))
+                txtcadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 5, 45)
+                txtcadastro(2) = RemoveMask2(txtcadastro(2), "(")
+                txtcadastro(2) = RemoveMask2(txtcadastro(2), ")")
+                txtcadastro(2) = RemoveMask2(txtcadastro(2), txtcadastro(3))
                 
                 mskCadastro_KeyDown 1, 13, 1
             Else
@@ -880,9 +894,9 @@ End Sub
 Private Function ValidaCampo()
     ValidaCampo = False
     If SSTab1.Tab = 0 Then
-        If Me.txtCadastro(0) = "" Then
+        If Me.txtcadastro(0) = "" Then
             Msgbox "Favor preencher o campo Descrição!", vbInformation, "Atenção"
-            Me.txtCadastro(0).SetFocus
+            Me.txtcadastro(0).SetFocus
             Exit Function
         End If
     End If
@@ -901,9 +915,9 @@ Private Function ValidaCampo()
             mskCadastro(1).PromptInclude = True
             mskCadastro(2).PromptInclude = True
             Exit Function
-        ElseIf Me.txtCadastro(2) = "" Then
+        ElseIf Me.txtcadastro(2) = "" Then
             mobjMsg.Abrir "Favor preencher o campo Descrição do Item", Ok, critico, "Atenção"
-            Me.txtCadastro(2).SetFocus
+            Me.txtcadastro(2).SetFocus
             Exit Function
         End If
     End If
@@ -911,15 +925,15 @@ Private Function ValidaCampo()
 End Function
 
 Private Sub Mskcadastro_GotFocus(Index As Integer)
-    Dim X As Integer
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).SelStart = 0
-        mskCadastro(X).SelLength = Len(mskCadastro(X).Text)
+    Dim x As Integer
+    For x = 0 To mskCadastro.Count - 1
+        mskCadastro(x).SelStart = 0
+        mskCadastro(x).SelLength = Len(mskCadastro(x).Text)
     Next
     mskCadastro(2).PromptInclude = False
     mskCadastro(2) = ""
     mskCadastro(2).PromptInclude = True
-    txtCadastro(2) = ""
+    txtcadastro(2) = ""
 End Sub
 
 Private Sub mskCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
@@ -940,19 +954,19 @@ Private Sub CarregaGrupo()
         
     If rsGrupo.RecordCount = 0 Then
         mskCadastro(1).Text = Format(mskCadastro(1), "000") & ""
-        txtCadastro(1).Text = ""
+        txtcadastro(1).Text = ""
         Msgbox "Grupo não cadastrado"
         mskCadastro(1).SetFocus
     Else
         mskCadastro(1).Text = Format(rsGrupo.Fields(0), "000") & ""
-        txtCadastro(1).Text = rsGrupo.Fields(1)
+        txtcadastro(1).Text = rsGrupo.Fields(1)
         rsGrupo.MoveLast
         If rsGrupo.Fields(3) <> "Null" Then
             If mskCadastro(2).Text = "" Then Me.mskCadastro(2).Text = Format(rsGrupo.Fields(3) + 1, "000")
         Else
             If mskCadastro(2).Text = "" Then Me.mskCadastro(2).Text = Format(1, "000")
         End If
-        txtCadastro(2).SetFocus
+        txtcadastro(2).SetFocus
     End If
     mskCadastro(1).PromptInclude = True
     mskCadastro(2).PromptInclude = True
@@ -983,7 +997,7 @@ On Error GoTo Err
             mskCadastro(1) = Val(rsLocal.Fields(0))
             mskCadastro(1).Text = Format(mskCadastro(1), "000")
             mskCadastro(1).PromptInclude = True
-            txtCadastro(1).Text = rsLocal.Fields(1)
+            txtcadastro(1).Text = rsLocal.Fields(1)
         Else
             mobjMsg.Abrir "Grupo não cadastrado", Ok, critico, "Atenção"
         End If
@@ -1006,15 +1020,15 @@ Private Sub TreeView1_DblClick()
     mskCadastro(2).PromptInclude = False
     mskCadastro(2) = ""
     mskCadastro(2).PromptInclude = True
-    txtCadastro(2) = ""
+    txtcadastro(2) = ""
     AlteraTreeview
 End Sub
 
 Private Sub txtCadastro_GotFocus(Index As Integer)
-    Dim X As Integer
-    For X = 1 To txtCadastro.Count - 1
-        txtCadastro(X).SelStart = 0
-        txtCadastro(X).SelLength = Len(txtCadastro(X).Text)
+    Dim x As Integer
+    For x = 1 To txtcadastro.Count - 1
+        txtcadastro(x).SelStart = 0
+        txtcadastro(x).SelLength = Len(txtcadastro(x).Text)
     Next
 End Sub
 
@@ -1027,7 +1041,7 @@ Private Sub txtCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As I
     Case 2
         If KeyCode = 13 Or KeyCode = 9 Then ' Enter ou TAB
             IncluiTreeview
-            txtCadastro(2).SetFocus
+            txtcadastro(2).SetFocus
         End If
     End Select
 

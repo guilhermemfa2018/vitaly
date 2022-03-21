@@ -3,22 +3,44 @@ Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "ComDlg32.OCX"
 Object = "{6E41052A-1C6B-4B1D-BE99-3928E843A6D8}#1.0#0"; "aicalphaimage.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmFormulaCC 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Fórmulas"
-   ClientHeight    =   9930
+   ClientHeight    =   10500
    ClientLeft      =   45
    ClientTop       =   330
-   ClientWidth     =   14010
+   ClientWidth     =   13830
    Icon            =   "frmFormulaCC.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   9930
-   ScaleWidth      =   14010
+   ScaleHeight     =   10500
+   ScaleWidth      =   13830
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture2 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   9120
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   75
+      Top             =   9840
+      Visible         =   0   'False
+      Width           =   975
+   End
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   6600
+      Top             =   9840
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.Frame Frame10 
       Caption         =   "Controle de Produção"
       BeginProperty Font 
@@ -33,7 +55,7 @@ Begin VB.Form frmFormulaCC
       Height          =   615
       Left            =   11160
       TabIndex        =   71
-      Top             =   9240
+      Top             =   9720
       Width           =   2535
       Begin VB.CheckBox Check1 
          Caption         =   "Registra no TAOS"
@@ -49,6 +71,7 @@ Begin VB.Form frmFormulaCC
          Height          =   255
          Left            =   240
          TabIndex        =   72
+         Tag             =   "Marque caso for necessário realizar apontamento de horas do CC no sistema TAOS"
          Top             =   240
          Width           =   2175
       End
@@ -60,7 +83,8 @@ Begin VB.Form frmFormulaCC
       Picture         =   "frmFormulaCC.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   43
-      Top             =   9240
+      Tag             =   "Sair"
+      Top             =   9720
       Width           =   615
    End
    Begin VB.CommandButton cmdCadastro 
@@ -70,7 +94,8 @@ Begin VB.Form frmFormulaCC
       Picture         =   "frmFormulaCC.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   46
-      Top             =   9240
+      Tag             =   "Salvar"
+      Top             =   9720
       Width           =   615
    End
    Begin VB.Frame Frame1 
@@ -100,10 +125,11 @@ Begin VB.Form frmFormulaCC
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   1
          Left            =   2160
          TabIndex        =   1
+         Tag             =   "Nome do Centro de Custo"
          Top             =   480
          Width           =   11295
       End
@@ -119,10 +145,11 @@ Begin VB.Form frmFormulaCC
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
+         Tag             =   "Identificador do Centro de Custo"
          Top             =   480
          Width           =   1935
       End
@@ -144,13 +171,13 @@ Begin VB.Form frmFormulaCC
       End
    End
    Begin TabDlg.SSTab SSTab1 
-      Height          =   7935
+      Height          =   8415
       Left            =   120
       TabIndex        =   33
       Top             =   1200
       Width           =   13575
       _ExtentX        =   23945
-      _ExtentY        =   13996
+      _ExtentY        =   14843
       _Version        =   393216
       Tabs            =   2
       TabsPerRow      =   2
@@ -188,7 +215,7 @@ Begin VB.Form frmFormulaCC
          Left            =   7680
          TabIndex        =   51
          Text            =   "-"
-         Top             =   7560
+         Top             =   8040
          Visible         =   0   'False
          Width           =   5775
       End
@@ -207,25 +234,27 @@ Begin VB.Form frmFormulaCC
          Index           =   0
          Left            =   7680
          TabIndex        =   47
-         Top             =   4680
+         Top             =   5160
          Width           =   5775
          Begin VB.CommandButton cmdCadastro 
             Height          =   615
-            Index           =   14
-            Left            =   120
+            Index           =   15
+            Left            =   720
             Picture         =   "frmFormulaCC.frx":2756
             Style           =   1  'Graphical
-            TabIndex        =   50
+            TabIndex        =   49
+            Tag             =   "Excluir imagem"
             Top             =   2400
             Width           =   615
          End
          Begin VB.CommandButton cmdCadastro 
             Height          =   615
-            Index           =   15
-            Left            =   720
+            Index           =   14
+            Left            =   120
             Picture         =   "frmFormulaCC.frx":3420
             Style           =   1  'Graphical
-            TabIndex        =   49
+            TabIndex        =   50
+            Tag             =   "Inserir imagem para referência"
             Top             =   2400
             Width           =   615
          End
@@ -266,7 +295,7 @@ Begin VB.Form frmFormulaCC
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   7335
+         Height          =   7815
          Left            =   -74880
          TabIndex        =   37
          Top             =   420
@@ -308,6 +337,7 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":4102
             Style           =   1  'Graphical
             TabIndex        =   31
+            Tag             =   "Excluir"
             Top             =   2400
             Width           =   615
          End
@@ -318,6 +348,7 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":4DCC
             Style           =   1  'Graphical
             TabIndex        =   30
+            Tag             =   "Editar"
             Top             =   2400
             Width           =   615
          End
@@ -328,6 +359,7 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":5A96
             Style           =   1  'Graphical
             TabIndex        =   29
+            Tag             =   "Inserir"
             Top             =   2400
             Width           =   615
          End
@@ -357,12 +389,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   16
                Left            =   3240
                TabIndex        =   28
                Tag             =   "Organização"
-               ToolTipText     =   "Organização"
                Top             =   480
                Width           =   1455
             End
@@ -376,12 +407,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   15
                Left            =   1680
                TabIndex        =   27
                Tag             =   "Fadiga"
-               ToolTipText     =   "Fadiga"
                Top             =   480
                Width           =   1455
             End
@@ -395,12 +425,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   14
                Left            =   120
                TabIndex        =   26
                Tag             =   "Tempo Médio"
-               ToolTipText     =   "Tempo Médio"
                Top             =   480
                Width           =   1455
             End
@@ -455,12 +484,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   13
                Left            =   1680
                TabIndex        =   25
                Tag             =   "Intervalo2"
-               ToolTipText     =   "Intervalo2"
                Top             =   480
                Width           =   1455
             End
@@ -474,12 +502,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   12
                Left            =   120
                TabIndex        =   24
                Tag             =   "Intervalo1"
-               ToolTipText     =   "Intervalo1"
                Top             =   480
                Width           =   1455
             End
@@ -526,12 +553,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   11
                Left            =   1680
                TabIndex        =   23
                Tag             =   "Dimensão2"
-               ToolTipText     =   "Dimensão2"
                Top             =   480
                Width           =   1455
             End
@@ -545,12 +571,11 @@ Begin VB.Form frmFormulaCC
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Height          =   285
+               Height          =   345
                Index           =   10
                Left            =   120
                TabIndex        =   22
                Tag             =   "Dimensão1"
-               ToolTipText     =   "Dimensão1"
                Top             =   480
                Width           =   1455
             End
@@ -587,27 +612,43 @@ Begin VB.Form frmFormulaCC
             Left            =   1560
             TabIndex        =   39
             Top             =   240
-            Width           =   7815
+            Width           =   10215
             Begin VB.TextBox txtformula 
-               Height          =   285
+               BeginProperty Font 
+                  Name            =   "Calibri"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   345
                Index           =   8
                Left            =   120
                TabIndex        =   19
                Tag             =   "ID do Grupo"
-               ToolTipText     =   "ID do Grupo"
                Top             =   480
                Width           =   735
             End
             Begin VB.TextBox txtformula 
                Enabled         =   0   'False
-               Height          =   285
+               BeginProperty Font 
+                  Name            =   "Calibri"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   345
                Index           =   9
                Left            =   960
                TabIndex        =   20
                Tag             =   "Nome do Grupo"
-               ToolTipText     =   "Nome do Grupo"
                Top             =   480
-               Width           =   5175
+               Width           =   7695
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
                Height          =   255
@@ -627,9 +668,18 @@ Begin VB.Form frmFormulaCC
             End
             Begin VB.CommandButton cmdCadastro 
                Caption         =   "..."
-               Height          =   255
+               BeginProperty Font 
+                  Name            =   "Calibri"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   345
                Index           =   7
-               Left            =   6240
+               Left            =   8760
                TabIndex        =   44
                Top             =   480
                Width           =   375
@@ -637,7 +687,7 @@ Begin VB.Form frmFormulaCC
             Begin VB.CommandButton cmdCadastro 
                Height          =   615
                Index           =   8
-               Left            =   7080
+               Left            =   9480
                Picture         =   "frmFormulaCC.frx":6B18
                Style           =   1  'Graphical
                TabIndex        =   21
@@ -703,7 +753,7 @@ Begin VB.Form frmFormulaCC
          Height          =   3015
          Left            =   120
          TabIndex        =   36
-         Top             =   4740
+         Top             =   5220
          Width           =   7455
          Begin VB.TextBox txtformula 
             BeginProperty Font 
@@ -755,7 +805,7 @@ Begin VB.Form frmFormulaCC
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   4215
+         Height          =   4575
          Left            =   7680
          TabIndex        =   35
          Top             =   420
@@ -770,13 +820,12 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   19
             Left            =   120
             TabIndex        =   12
             Tag             =   "Descrição da constante"
-            ToolTipText     =   "Descrição da constante"
-            Top             =   1080
+            Top             =   1200
             Width           =   5535
          End
          Begin VB.TextBox txtformula 
@@ -789,12 +838,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   17
             Left            =   840
             TabIndex        =   10
             Tag             =   "Constante da fórmula"
-            ToolTipText     =   "Constante da fórmula"
             Top             =   480
             Width           =   1455
          End
@@ -809,12 +857,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   18
             Left            =   120
             TabIndex        =   11
             Tag             =   "ID Constante"
-            ToolTipText     =   "ID Constante"
             Top             =   480
             Width           =   615
          End
@@ -823,7 +870,7 @@ Begin VB.Form frmFormulaCC
             Left            =   120
             OleObjectBlob   =   "frmFormulaCC.frx":77E2
             TabIndex        =   60
-            Top             =   840
+            Top             =   960
             Width           =   5055
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
@@ -849,7 +896,8 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":793A
             Style           =   1  'Graphical
             TabIndex        =   15
-            Top             =   1440
+            Tag             =   "Excluir"
+            Top             =   1680
             Width           =   615
          End
          Begin VB.CommandButton cmdCadastro 
@@ -859,7 +907,8 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":8604
             Style           =   1  'Graphical
             TabIndex        =   14
-            Top             =   1440
+            Tag             =   "Editar"
+            Top             =   1680
             Width           =   615
          End
          Begin VB.CommandButton cmdCadastro 
@@ -869,19 +918,20 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":92CE
             Style           =   1  'Graphical
             TabIndex        =   13
-            Top             =   1440
+            Tag             =   "Inserir"
+            Top             =   1680
             Width           =   615
          End
          Begin MSComctlLib.ListView ListView2 
-            Height          =   1935
+            Height          =   2055
             Left            =   120
             TabIndex        =   16
             Tag             =   "Constantes"
             ToolTipText     =   "Constantes"
-            Top             =   2160
+            Top             =   2400
             Width           =   5535
             _ExtentX        =   9763
-            _ExtentY        =   3413
+            _ExtentY        =   3625
             LabelEdit       =   1
             Sorted          =   -1  'True
             LabelWrap       =   -1  'True
@@ -889,7 +939,7 @@ Begin VB.Form frmFormulaCC
             FullRowSelect   =   -1  'True
             GridLines       =   -1  'True
             _Version        =   393217
-            ForeColor       =   -2147483635
+            ForeColor       =   8388608
             BackColor       =   -2147483624
             BorderStyle     =   1
             Appearance      =   1
@@ -916,7 +966,7 @@ Begin VB.Form frmFormulaCC
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   4215
+         Height          =   4575
          Left            =   120
          TabIndex        =   34
          Top             =   420
@@ -935,7 +985,7 @@ Begin VB.Form frmFormulaCC
             Height          =   615
             Left            =   3000
             TabIndex        =   73
-            Top             =   1560
+            Top             =   1680
             Width           =   4215
             Begin VB.CheckBox Check2 
                Caption         =   "Usuário não informará parâmetros"
@@ -951,7 +1001,7 @@ Begin VB.Form frmFormulaCC
                Height          =   255
                Left            =   240
                TabIndex        =   74
-               ToolTipText     =   "Marcar quando o sistema utilizar apenas o PESO como parâmetro para cálculo de tempo de fabricação"
+               Tag             =   "Marcar quando o sistema utilizar apenas o PESO como parâmetro para cálculo de tempo de fabricação"
                Top             =   240
                Width           =   3735
             End
@@ -966,12 +1016,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   5
             Left            =   3000
             TabIndex        =   5
             Tag             =   "Fórmula"
-            ToolTipText     =   "Fórmula"
             Top             =   1200
             Width           =   4215
          End
@@ -985,12 +1034,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   4
             Left            =   120
             TabIndex        =   4
             Tag             =   "Parâmetros"
-            ToolTipText     =   "Parâmetros"
             Top             =   1200
             Width           =   2775
          End
@@ -1004,12 +1052,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   3
             Left            =   840
             TabIndex        =   3
             Tag             =   "Nome da fórmula"
-            ToolTipText     =   "Nome da fórmula"
             Top             =   480
             Width           =   6495
          End
@@ -1024,12 +1071,11 @@ Begin VB.Form frmFormulaCC
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   120
             TabIndex        =   2
             Tag             =   "Identificador"
-            ToolTipText     =   "Identificador"
             Top             =   480
             Width           =   615
          End
@@ -1066,13 +1112,13 @@ Begin VB.Form frmFormulaCC
             Width           =   375
          End
          Begin MSComctlLib.ListView ListView1 
-            Height          =   1815
+            Height          =   2055
             Left            =   120
             TabIndex        =   9
-            Top             =   2280
+            Top             =   2400
             Width           =   7215
             _ExtentX        =   12726
-            _ExtentY        =   3201
+            _ExtentY        =   3625
             LabelEdit       =   1
             Sorted          =   -1  'True
             LabelWrap       =   -1  'True
@@ -1102,7 +1148,8 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":A12E
             Style           =   1  'Graphical
             TabIndex        =   8
-            Top             =   1560
+            Tag             =   "Excluir"
+            Top             =   1680
             Width           =   615
          End
          Begin VB.CommandButton cmdCadastro 
@@ -1112,7 +1159,8 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":ADF8
             Style           =   1  'Graphical
             TabIndex        =   7
-            Top             =   1560
+            Tag             =   "Editar"
+            Top             =   1680
             Width           =   615
          End
          Begin VB.CommandButton cmdCadastro 
@@ -1122,7 +1170,8 @@ Begin VB.Form frmFormulaCC
             Picture         =   "frmFormulaCC.frx":BAC2
             Style           =   1  'Graphical
             TabIndex        =   6
-            Top             =   1560
+            Tag             =   "Inserir"
+            Top             =   1680
             Width           =   615
          End
       End
@@ -1291,23 +1340,23 @@ On Error GoTo Err
     
     
     Dim ItemLst As ListItem
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(7) = "S" Then
-            SqlGravaDadosPar = "Select * from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(X)) & "'"
+            SqlGravaDadosPar = "Select * from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(x)) & "'"
             rsGravaDadosPar.Open SqlGravaDadosPar, cnBanco, adOpenKeyset, adLockOptimistic
             If rsGravaDadosPar.RecordCount = 0 Then
                 rsGravaDadosPar.AddNew
                 rsGravaDadosPar.Fields(0) = txtformula(0)
-                rsGravaDadosPar.Fields(1) = Val(ListView1.ListItems.Item(X))
+                rsGravaDadosPar.Fields(1) = Val(ListView1.ListItems.Item(x))
                 rsGravaDadosPar.Update
                 rsGravaDadosPar.Close
                 Set rsGravaDadosPar = Nothing
             End If
         Else
-            SqlGravaDadosPar = "delete from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(X)) & "'"
+            SqlGravaDadosPar = "delete from tbParametrosAut where codreduzido = '" & txtformula(0) & "' and idform = '" & Val(ListView1.ListItems.Item(x)) & "'"
             rsGravaDadosPar.Open SqlGravaDadosPar, cnBanco
         End If
     Next
@@ -1324,6 +1373,7 @@ Err:
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture2
     Set vPAutomatico = Me.Controls.Add("VB.TextBox", "vPAutomatico")
 '    Status = Pesquisa
     SSTab1.Tab = 0

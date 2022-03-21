@@ -203,7 +203,7 @@ Begin VB.Form frmProgramacao
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   165085185
+         Format          =   162332673
          CurrentDate     =   42500
       End
    End
@@ -235,7 +235,7 @@ Begin VB.Form frmProgramacao
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   165085185
+         Format          =   162332673
          CurrentDate     =   41950
       End
    End
@@ -513,9 +513,9 @@ Private Sub Form_Resize()
 End Sub
 
 Private Sub carregarIconBotao()
-    carregaImagemBotao cmdcadastro(12), 12, 45 'Salvar
-    carregaImagemBotao cmdcadastro(13), 13, 34 'Sair
-    carregaImagemBotao cmdcadastro(0), 0, 37 'Imprimir
+    carregaImagemBotao cmdCadastro(12), 12, 45 'Salvar
+    carregaImagemBotao cmdCadastro(13), 13, 34 'Sair
+    carregaImagemBotao cmdCadastro(0), 0, 37 'Imprimir
     carregaImagemBotao Command1, 1, 55 'Seta pra cima
 End Sub
 
@@ -524,7 +524,7 @@ Private Sub listview_cabecalho()
 On Error GoTo Err
     Dim rsCompoeCC As New ADODB.Recordset
     Dim SqlCompoeCC As String
-    Dim Y As Integer
+    Dim y As Integer
     
     ListView1.ColumnHeaders.Clear
     ListView1.ColumnHeaders.Add , , "S.Prog.", ListView1.Width / 24
@@ -572,7 +572,7 @@ On Error GoTo Err
     Dim SqlDesenhoOS As String
     
     Dim ItemLst As ListItem
-    Dim Y As Integer, X As Integer, r As Integer, vOS As Integer, vRevisao As Integer
+    Dim y As Integer, x As Integer, r As Integer, vOS As Integer, vRevisao As Integer
     Dim vCC As String, vSemanaProg As String
     ListView1.ListItems.Clear
     ListView1.Sorted = False
@@ -693,19 +693,19 @@ On Error GoTo Err
         optButton(1).Value = False
         Exit Sub
     End If
-    Y = ListView1.ListItems.Count
+    y = ListView1.ListItems.Count
     vHPlanejadas = "0000:00"
     vHProgramadas = "0000:00"
     vHAtraso = "0000:00"
     rsCompoeLVCC.MoveFirst
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
         If Not IsNull(rsCompoeLVCC.Fields(0)) Then vSemanaProg = rsCompoeLVCC.Fields(0) Else vSemanaProg = "-"
         vOS = rsCompoeLVCC.Fields(2)
         If rsCompoeLVCC.Fields(3) <> "" Then vRevisao = rsCompoeLVCC.Fields(3) Else vRevisao = 0
         vTempoCC = "0000:00"
 '        Do While vOS = Val(ListView1.SelectedItem.ListSubItems.Item(5)) And vRevisao = Val(ListView1.SelectedItem.ListSubItems.Item(6)) And Not rsCompoeLVCC.EOF
-        Do While vSemanaProg = ListView1.ListItems.Item(X) And vOS = Val(ListView1.SelectedItem.ListSubItems.Item(5)) And vRevisao = Val(ListView1.SelectedItem.ListSubItems.Item(6)) And Not rsCompoeLVCC.EOF
+        Do While vSemanaProg = ListView1.ListItems.Item(x) And vOS = Val(ListView1.SelectedItem.ListSubItems.Item(5)) And vRevisao = Val(ListView1.SelectedItem.ListSubItems.Item(6)) And Not rsCompoeLVCC.EOF
             vCC = Mid$(rsCompoeLVCC.Fields(6), 6, 10)
              For r = 10 To vQtdCols
                 If vCC = ListView1.ColumnHeaders.Item(r).Text Then
@@ -791,24 +791,24 @@ On Error GoTo Err
     Dim rsInsereDadoProg As New ADODB.Recordset
     Dim SqlInsereDadoProg As String
     
-    Dim X As Integer, Y As Integer, r As Integer
+    Dim x As Integer, y As Integer, r As Integer
     SqlDeletaTabProg = "Delete from tbPrintProgramacao"
     rsDeletaTabProg.Open SqlDeletaTabProg, cnBanco
     
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then Principal.ProgressBar1.Max = Y
+    y = ListView1.ListItems.Count
+    If y > 0 Then Principal.ProgressBar1.Max = y
     vProgress = 0
     Principal.StatusBar1.Panels(3).Text = "Transferindo dados para tabela temporária"
-    For X = 2 To Y
+    For x = 2 To y
         Principal.ProgressBar1.Value = vProgress
-        ListView1.ListItems.Item(X).Selected = True
+        ListView1.ListItems.Item(x).Selected = True
         For r = 10 To vQtdCols
             SqlInsereDadoProg = "Insert into tbPrintProgramacao(" & _
                                 "OS,revisao,semprog,status,fce,total,desenhos,hplanejadas,hprogramadas,hatraso,idcc,tempocc,total3101SC01,total3101SC02,total3101SC03,total3101SC04,total3101SC05,total3101SC06,total3101SC07,total3101SC08,total3101SC09,total3101SC10,total3101SC12,total3102SC01,total3102SC02,total3103SC01,total3103SC02,total3104SC01,total3104SC02,total3105SC01,total3105SC02,total3106SC01,total4101SC03) " & _
                                 "values(" & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(5) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(6) & "', " & _
-                                "'" & ListView1.ListItems.Item(X) & "', " & _
+                                "'" & ListView1.ListItems.Item(x) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(1) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(3) & "', " & _
                                 "'" & ListView1.SelectedItem.ListSubItems.Item(2) & "', " & _
@@ -851,9 +851,9 @@ End Sub
 'SOMA COLUNA DE UM LISTVIEW EM HORAS
 Private Sub SomaCCs(LV As Listview)
     'On Error Resume Next
-    Dim X As Integer, Y As Integer, F As Integer
+    Dim x As Integer, y As Integer, F As Integer
     Dim ItemLst As ListItem
-    Y = LV.ListItems.Count
+    y = LV.ListItems.Count
    
     vTotal3101SC01 = "0000:00"
     vTotal3101SC02 = "0000:00"
@@ -886,8 +886,8 @@ Private Sub SomaCCs(LV As Listview)
     ListView1.SortOrder = lvwAscending
     
     
-    For X = 1 To Y
-        LV.ListItems.Item(X).Selected = True
+    For x = 1 To y
+        LV.ListItems.Item(x).Selected = True
         If LV.SelectedItem.ListSubItems.Item(9) <> "-" Then somaTempoCCPPS LV.SelectedItem.ListSubItems.Item(9), vTotal3101SC01
         If LV.SelectedItem.ListSubItems.Item(10) <> "-" Then somaTempoCCPPS LV.SelectedItem.ListSubItems.Item(10), vTotal3101SC02
         If LV.SelectedItem.ListSubItems.Item(11) <> "-" Then somaTempoCCPPS LV.SelectedItem.ListSubItems.Item(11), vTotal3101SC03
@@ -942,47 +942,47 @@ Private Sub SomaCCs(LV As Listview)
     ItemLst.SubItems(27) = vTotal3105SC02 ' Revisão OS
     ItemLst.SubItems(28) = vTotal3106SC01 ' Revisão OS
     ItemLst.SubItems(29) = vTotal4101SC03 ' Revisão OS
-    For X = 1 To 29
+    For x = 1 To 29
         ItemLst.ForeColor = &H8000&
-        ItemLst.ListSubItems(X).ForeColor = &H8000&
-        ItemLst.ListSubItems(X).Bold = True
+        ItemLst.ListSubItems(x).ForeColor = &H8000&
+        ItemLst.ListSubItems(x).Bold = True
     Next
 End Sub
 
 Private Sub InsereSemana()
-    Dim X As Integer, Y As Integer, vGuardaPosAtual As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer, vGuardaPosAtual As Integer
+    y = ListView1.ListItems.Count
     
     'GUARDA POSIÇÃO ATUAL
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then vGuardaPosAtual = X
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then vGuardaPosAtual = x
     Next
     'INSERE SEMANA PROGRAMADA NO QUE FOI CHECADO NO LISTVIEW
-    For X = 2 To Y
-        ListView1.ListItems.Item(X).Selected = True
-        If ListView1.ListItems.Item(X).Checked = True Then
-            If ListView1.ListItems.Item(X) <> "-" Then
+    For x = 2 To y
+        ListView1.ListItems.Item(x).Selected = True
+        If ListView1.ListItems.Item(x).Checked = True Then
+            If ListView1.ListItems.Item(x) <> "-" Then
                 
                 If IsDate(DTPicker2.Value) Then
                     Exit Sub
                 End If
                 
-                If Val(ListView1.ListItems.Item(X)) <= DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then 'Val(Text2.Text) Then
+                If Val(ListView1.ListItems.Item(x)) <= DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then 'Val(Text2.Text) Then
                     mobjMsg.Abrir "A semana do item selecionado não pode ser modificada", Ok, critico, "Atenção"
                 Else
-                    ListView1.ListItems.Item(X) = Text2.Text
+                    ListView1.ListItems.Item(x) = Text2.Text
                     ListView1.SelectedItem.ListSubItems.Item(8) = ListView1.SelectedItem.ListSubItems.Item(8) & ";" & DTPicker1.Value
                     
-                    If Val(ListView1.ListItems.Item(X)) = DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then
+                    If Val(ListView1.ListItems.Item(x)) = DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then
                         ListView1.SelectedItem.ListSubItems.Item(1) = "Extra PPS"
                     Else
                         ListView1.SelectedItem.ListSubItems.Item(1) = "PPS"
                     End If
                 End If
             Else
-                ListView1.ListItems.Item(X) = Text2.Text
+                ListView1.ListItems.Item(x) = Text2.Text
                 ListView1.SelectedItem.ListSubItems.Item(8) = ListView1.SelectedItem.ListSubItems.Item(8) & ";" & DTPicker1.Value
-                If Val(ListView1.ListItems.Item(X)) = DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then
+                If Val(ListView1.ListItems.Item(x)) = DatePart("ww", CDate(vDataDoBanco), vbMonday, vbFirstFourDays) Then
                     ListView1.SelectedItem.ListSubItems.Item(1) = "Extra PPS"
                 Else
                     ListView1.SelectedItem.ListSubItems.Item(1) = "PPS"
@@ -1001,14 +1001,14 @@ On Error GoTo Err
     Dim rsGeraProg As New ADODB.Recordset
     Dim SqlGeraProg As String
     Dim ItemLst As ListItem
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
 10  cnBanco.BeginTrans
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
         
-        If ListView1.ListItems.Item(X) <> "-" And Len(ListView1.SelectedItem.ListSubItems.Item(8)) > 10 Then
-            converteSemana Val(ListView1.ListItems.Item(X)), DTPicker1, ""
+        If ListView1.ListItems.Item(x) <> "-" And Len(ListView1.SelectedItem.ListSubItems.Item(8)) > 10 Then
+            converteSemana Val(ListView1.ListItems.Item(x)), DTPicker1, ""
         End If
         
         If Mid$(ListView1.SelectedItem.ListSubItems.Item(8), 1, 4) <> "null" And Len(ListView1.SelectedItem.ListSubItems.Item(8)) > 10 Then
@@ -1037,22 +1037,22 @@ Err:
     End If
 End Function
 
-Private Sub Frame6_DragDrop(Source As Control, X As Single, Y As Single)
+Private Sub Frame6_DragDrop(Source As Control, x As Single, y As Single)
 
 End Sub
 
 Private Sub ListView1_Click()
-    Dim X As Integer, Y As Integer, vGuardaPosAtual As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer, vGuardaPosAtual As Integer
+    y = ListView1.ListItems.Count
     
     'GUARDA POSIÇÃO ATUAL
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then vGuardaPosAtual = X
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then vGuardaPosAtual = x
     Next
     
     If IsDate(ListView1.SelectedItem.ListSubItems.Item(31)) Then
-        For X = 2 To Y
-            If ListView1.ListItems.Item(X).Selected = True Then
+        For x = 2 To y
+            If ListView1.ListItems.Item(x).Selected = True Then
                 If ListView1.SelectedItem.ListSubItems.Item(30) <> "-" Then
                     Text5.Text = ListView1.SelectedItem.ListSubItems.Item(30)
                     DTPicker2.Value = ListView1.SelectedItem.ListSubItems.Item(31)
@@ -1170,17 +1170,17 @@ End Sub
 
 Private Sub SomaMinutos()
     'On Error Resume Next
-    Dim X As Integer, Y As Integer, vGuardaPosAtual As Integer, j As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer, vGuardaPosAtual As Integer, j As Integer
+    y = ListView1.ListItems.Count
     
     'GUARDA POSIÇÃO ATUAL
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then vGuardaPosAtual = X
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then vGuardaPosAtual = x
     Next
     'INSERE SEMANA PROGRAMADA NO QUE FOI CHECADO NO LISTVIEW
-    For X = 2 To Y
-        ListView1.ListItems.Item(X).Selected = True
-        If ListView1.ListItems.Item(X).Checked = True Then
+    For x = 2 To y
+        ListView1.ListItems.Item(x).Selected = True
+        If ListView1.ListItems.Item(x).Checked = True Then
             vSomaMinutosOS = 0
             For j = 9 To 29
                 If ListView1.SelectedItem.ListSubItems.Item(j) <> "-" Then
@@ -1198,12 +1198,12 @@ End Sub
 Private Sub AchaSemanaFim(vDataProgramada As String)
     Dim vMinutosTrabalhados As Integer
     Dim vDiasTrabalhadosOS As Integer
-    Dim X As Integer
+    Dim x As Integer
     Dim vDataFim As Date
     vMinutosTrabalhados = 528
     vDiasTrabalhadosOS = (vSomaMinutosOS / vMinutosTrabalhados) / Val(Text4.Text)
     vDataFim = DTPicker1.Value
-    For X = 1 To vDiasTrabalhadosOS
+    For x = 1 To vDiasTrabalhadosOS
         vDataFim = vDataFim + 1
         If DatePart("W", vDataFim, vbMonday, vbFirstFourDays) = 1 Or DatePart("W", vDataFim, vbMonday, vbFirstFourDays) = 7 Then
             vDataFim = vDataFim + 1

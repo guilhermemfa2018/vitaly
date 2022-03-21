@@ -1,6 +1,7 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmReceitasDespesas 
    Caption         =   "Despesas e Créditos"
@@ -13,6 +14,13 @@ Begin VB.Form frmReceitasDespesas
    ScaleHeight     =   10680
    ScaleWidth      =   10545
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2640
+      Top             =   10080
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdDespesasCreditos 
       Height          =   615
       Index           =   12
@@ -21,7 +29,6 @@ Begin VB.Form frmReceitasDespesas
       Style           =   1  'Graphical
       TabIndex        =   34
       Tag             =   "Sair"
-      ToolTipText     =   "Sair"
       Top             =   9960
       Width           =   615
    End
@@ -33,7 +40,6 @@ Begin VB.Form frmReceitasDespesas
       Style           =   1  'Graphical
       TabIndex        =   35
       Tag             =   "Salvar"
-      ToolTipText     =   "Salvar"
       Top             =   9960
       Width           =   615
    End
@@ -119,7 +125,6 @@ Begin VB.Form frmReceitasDespesas
          Style           =   1  'Graphical
          TabIndex        =   18
          Tag             =   "Excluir"
-         ToolTipText     =   "Excluir"
          Top             =   6480
          Width           =   615
       End
@@ -140,7 +145,6 @@ Begin VB.Form frmReceitasDespesas
          Style           =   1  'Graphical
          TabIndex        =   19
          Tag             =   "Editar"
-         ToolTipText     =   "Editar"
          Top             =   6480
          Width           =   615
       End
@@ -161,7 +165,6 @@ Begin VB.Form frmReceitasDespesas
          Style           =   1  'Graphical
          TabIndex        =   20
          Tag             =   "Novo"
-         ToolTipText     =   "Novo"
          Top             =   6480
          Width           =   615
       End
@@ -176,12 +179,11 @@ Begin VB.Form frmReceitasDespesas
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   26
-         Tag             =   "ID"
-         ToolTipText     =   "Identificador do Imposto ou Serviço"
+         Tag             =   "Identificador do Imposto ou Serviço"
          Top             =   480
          Width           =   1215
       End
@@ -199,8 +201,7 @@ Begin VB.Form frmReceitasDespesas
          Index           =   1
          Left            =   1440
          TabIndex        =   25
-         Tag             =   "Nome"
-         ToolTipText     =   "Nome do imposto ou Serviço"
+         Tag             =   "Nome do imposto ou Serviço"
          Top             =   480
          Width           =   6615
       End
@@ -219,8 +220,7 @@ Begin VB.Form frmReceitasDespesas
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   24
-         Tag             =   "Descrição"
-         ToolTipText     =   "Descrição do Imposto ou Serviço"
+         Tag             =   "Descrição do Imposto ou Serviço"
          Top             =   1200
          Width           =   10095
       End
@@ -240,8 +240,7 @@ Begin VB.Form frmReceitasDespesas
          Picture         =   "frmReceitasDespesas.frx":4CBC
          Style           =   1  'Graphical
          TabIndex        =   23
-         Tag             =   "Incluir"
-         ToolTipText     =   "Incluir"
+         Tag             =   "Inserir"
          Top             =   6480
          Width           =   615
       End
@@ -278,8 +277,7 @@ Begin VB.Form frmReceitasDespesas
             List            =   "frmReceitasDespesas.frx":5990
             Style           =   2  'Dropdown List
             TabIndex        =   22
-            Tag             =   "Tipo: IMPOSTO ou SERVIÇO"
-            ToolTipText     =   "Selecione o Tipo: IMPOSTO ou SERVIÇO"
+            Tag             =   "Selecione o Tipo: IMPOSTO ou SERVIÇO"
             Top             =   360
             Width           =   1815
          End
@@ -369,8 +367,7 @@ Begin VB.Form frmReceitasDespesas
                Index           =   4
                Left            =   4320
                TabIndex        =   13
-               Tag             =   "Alíquota"
-               ToolTipText     =   "Percentual a ser Aplicado sobre o valor do orçamento"
+               Tag             =   "Percentual a ser Aplicado sobre o valor do orçamento"
                Top             =   480
                Width           =   5415
             End
@@ -379,8 +376,7 @@ Begin VB.Form frmReceitasDespesas
                Index           =   3
                Left            =   4320
                TabIndex        =   12
-               Tag             =   "Compor Fórmula"
-               ToolTipText     =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
+               Tag             =   "Composição da Fórmula do IMPOSTO ou SERVIÇO"
                Top             =   1320
                Width           =   5415
             End
@@ -583,8 +579,8 @@ Begin VB.Form frmReceitasDespesas
                   MultiLine       =   -1  'True
                   ScrollBars      =   2  'Vertical
                   TabIndex        =   6
+                  Tag             =   "Legenda referente aos objetos que podem ser utilizados na fórmula"
                   Text            =   "frmReceitasDespesas.frx":6EEE
-                  ToolTipText     =   "Legenda referente aos objetos que podem ser utilizados na fórmula"
                   Top             =   240
                   Width           =   9375
                End
@@ -663,8 +659,7 @@ Begin VB.Form frmReceitasDespesas
          Height          =   2535
          Left            =   120
          TabIndex        =   30
-         Tag             =   "Itens do Sub-critério"
-         ToolTipText     =   "Lista de IMPOSTOS e SERVIÇOS cadastrados"
+         Tag             =   "Lista de IMPOSTOS e SERVIÇOS cadastrados"
          Top             =   7200
          Width           =   10095
          _ExtentX        =   17806
@@ -772,7 +767,7 @@ Private Sub Command1_Click()
 End Sub
 
 Private Sub Form_Load()
-    inicializa_tabs
+    inicializa_tabs SSTab1, Picture1
     exibeOpt
     
     Text1.BackColor = 12829636
@@ -844,10 +839,10 @@ Private Sub txtDespesasCreditos_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtDespesasCreditos(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtDespesasCreditos.Count - 1
-        txtDespesasCreditos(X).SelStart = 0
-        txtDespesasCreditos(X).SelLength = Len(txtDespesasCreditos(X).Text)
+    Dim x As Integer
+    For x = 1 To txtDespesasCreditos.Count - 1
+        txtDespesasCreditos(x).SelStart = 0
+        txtDespesasCreditos(x).SelLength = Len(txtDespesasCreditos(x).Text)
     Next
 End Sub
 
@@ -898,12 +893,12 @@ Private Function ValidaInserirCampos(FormToLV_or_LVToTable As String)
 'Para que o sistema entenda se será validado dados que serão inseridos de campos do form parav um LV: ListView ou
 'Irá validar dados que serão inseridos de ListView para uma TB: Tabela do banco de dados
     If FormToLV_or_LVToTable = "FormToLV" Then
-        Dim X As Integer
+        Dim x As Integer
         ValidaInserirCampos = False
-        For X = 0 To 4
-            If Trim(txtDespesasCreditos(X).Text) = "" Then
-                mobjMsg.Abrir "Favor informar o campo " & Me.txtDespesasCreditos(X).Tag, Ok, critico, "Atenção"
-                Me.txtDespesasCreditos(X).SetFocus
+        For x = 0 To 4
+            If Trim(txtDespesasCreditos(x).Text) = "" Then
+                mobjMsg.Abrir "Favor informar o campo " & Me.txtDespesasCreditos(x).Tag, Ok, critico, "Atenção"
+                Me.txtDespesasCreditos(x).SetFocus
                 Exit Function
             End If
         Next
@@ -943,7 +938,7 @@ Private Sub lstListView2_Click()
     txtDespesasCreditos(vOndeEstaOTab).SetFocus
 End Sub
 
-Private Sub txtDespesasCreditos_MouseDown(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub txtDespesasCreditos_MouseDown(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     vOndeEstaOTab = Index
 End Sub
 
@@ -966,16 +961,16 @@ Private Sub exibeOpt()
     End If '
 End Sub
 
-Private Sub inicializa_tabs()
-    SSTab1.Tab = 0
-    SubClassSSTAB SSTab1, Picture1
-End Sub
+'Private Sub inicializa_tabs()
+'    SSTab1.Tab = 0
+'    SubClassSSTAB SSTab1, Picture1
+'End Sub
 
 Private Sub ConfLV()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(6) = "S" Then
             ListView1.SelectedItem.ListSubItems.Item(6) = ""
             ListView1.SelectedItem.ListSubItems.Item(6).ReportIcon = "OK"
@@ -987,10 +982,10 @@ Private Sub ConfLV()
 End Sub
 
 Private Sub desConfLV()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
         If ListView1.SelectedItem.ListSubItems.Item(6).ReportIcon = "OK" Then
             ListView1.SelectedItem.ListSubItems.Item(6) = "S"
         ElseIf ListView1.SelectedItem.ListSubItems.Item(6).ReportIcon = "EXC" Then

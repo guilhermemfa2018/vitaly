@@ -19,6 +19,20 @@ Begin VB.Form frmRetrabalho
    ScaleHeight     =   10545
    ScaleWidth      =   18480
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture2 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   1920
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   108
+      Top             =   9960
+      Visible         =   0   'False
+      Width           =   975
+   End
    Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   13
@@ -314,7 +328,7 @@ Begin VB.Form frmRetrabalho
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   167510017
+         Format          =   163250177
          CurrentDate     =   41554
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
@@ -497,15 +511,10 @@ Begin VB.Form frmRetrabalho
       TabPicture(0)   =   "frmRetrabalho.frx":37B8
       Tab(0).ControlEnabled=   0   'False
       Tab(0).Control(0)=   "Frame11"
-      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).Control(1)=   "Frame31"
-      Tab(0).Control(1).Enabled=   0   'False
       Tab(0).Control(2)=   "cmdCadastro(7)"
-      Tab(0).Control(2).Enabled=   0   'False
       Tab(0).Control(3)=   "cmdCadastro(8)"
-      Tab(0).Control(3).Enabled=   0   'False
       Tab(0).Control(4)=   "cmdCadastro(4)"
-      Tab(0).Control(4).Enabled=   0   'False
       Tab(0).ControlCount=   5
       TabCaption(1)   =   "Recursos"
       TabPicture(1)   =   "frmRetrabalho.frx":37D4
@@ -991,7 +1000,7 @@ Begin VB.Form frmRetrabalho
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   423428097
+            Format          =   138412033
             CurrentDate     =   41568
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
@@ -1174,7 +1183,7 @@ Begin VB.Form frmRetrabalho
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   423428097
+            Format          =   162660353
             CurrentDate     =   41556
          End
       End
@@ -1958,11 +1967,11 @@ On Error GoTo Err
     sqlExcHist = "Delete from tbMPHist where programacao = '" & Val(txtformula(11)) & "' and seqprog = '" & Val(ListView4.SelectedItem.ListSubItems.Item(5)) & "'"
     rsExcHist.Open sqlExcHist, cnBanco
     
-    Y = ListView4.ListItems.Count
-    For X = 1 To Y
-        ListView4.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    y = ListView4.ListItems.Count
+    For x = 1 To y
+        ListView4.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         rsGravaHist.AddNew
-        rsGravaHist(0) = Val(ListView4.ListItems.Item(X))
+        rsGravaHist(0) = Val(ListView4.ListItems.Item(x))
         rsGravaHist(1) = ListView4.SelectedItem.ListSubItems.Item(1)
         rsGravaHist(2) = ListView4.SelectedItem.ListSubItems.Item(2)
         rsGravaHist(3) = ListView4.SelectedItem.ListSubItems.Item(3)
@@ -2108,19 +2117,19 @@ On Error GoTo Err
     Dim sqlDeletar As String
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
-    Dim X As Integer
+    Dim x As Integer
     sqlDeletar = "delete from tbMPItensRet where idprogramacao = '" & Val(txtformula(11).Text) & "' and idoperacao = '" & Combo1.Text & "'"
     rsDeletar.Open sqlDeletar, cnBanco
     If ListView2.ListItems.Count > 0 Then
         SqlSalvar = "Select * from tbMPItensRet"
         rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-        For X = 1 To ListView2.ListItems.Count
-            ListView2.ListItems.Item(X).Selected = True
+        For x = 1 To ListView2.ListItems.Count
+            ListView2.ListItems.Item(x).Selected = True
             rsSalvar.AddNew
             rsSalvar.Fields(0) = Val(ListView2.SelectedItem.ListSubItems.Item(7))
             rsSalvar.Fields(1) = Val(ListView2.SelectedItem.ListSubItems.Item(8))
-            rsSalvar.Fields(2) = Val(ListView2.ListItems.Item(X))
+            rsSalvar.Fields(2) = Val(ListView2.ListItems.Item(x))
             If ListView2.SelectedItem.ListSubItems.Item(10) <> "" Then
                 rsSalvar.Fields(3) = Val(ListView2.SelectedItem.ListSubItems.Item(10))
             Else
@@ -2147,12 +2156,12 @@ End Sub
 Private Function AgregarOS()
     AgregarOS = False
     If ListView1.ListItems.Count < 1 Then Exit Function
-    Dim Y As Integer, X As Integer, vConta As Integer
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, x As Integer, vConta As Integer
+    y = ListView1.ListItems.Count
     vConta = 0
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
-        If ListView1.ListItems.Item(X).Checked = True Then
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
+        If ListView1.ListItems.Item(x).Checked = True Then
             vConta = vConta + 1
             'Captura o número da OS a qual o item selecionado fará parte
             If vConta = 1 Then
@@ -2165,10 +2174,10 @@ Private Function AgregarOS()
                     Exit Function
                 End If
                 ListView1.SelectedItem.ListSubItems.Item(1) = txtformula(25).Text
-                ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(X)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
+                ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(x)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
                 ListView1.SelectedItem.ListSubItems.Item(13) = "1"
                 ListView1.SelectedItem.ListSubItems.Item(14) = Format(ListView1.SelectedItem.ListSubItems.Item(14), "000000000000")
-                ListView1.ListItems.Item(X).Checked = False
+                ListView1.ListItems.Item(x).Checked = False
             End If
         End If
     Next
@@ -2178,11 +2187,11 @@ End Function
 Private Function MarcaOS()
     MarcaOS = False
     If ListView1.ListItems.Count < 1 Then Exit Function
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
-        If ListView1.ListItems.Item(X).Checked = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
+        If ListView1.ListItems.Item(x).Checked = True Then
             If Val(ListView1.SelectedItem.ListSubItems.Item(1)) <> 0 Then
                 mobjMsg.Abrir "Itens selecionado já em outra OS!", Ok, critico, "ZEUS"
                 'A linha abaixo foi adicionada para corrigir códigos de barra qdo forem gerados errado
@@ -2190,9 +2199,9 @@ Private Function MarcaOS()
                 Exit Function
             End If
             ListView1.SelectedItem.ListSubItems.Item(1) = txtformula(25).Text & "/" & Val(txtformula(18))
-            ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(X)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
+            ListView1.SelectedItem.ListSubItems.Item(12) = Val(txtformula(11).Text) & Val(txtformula(25).Text) & Val(ListView1.ListItems.Item(x)) & Val(ListView1.SelectedItem.ListSubItems.Item(11))
             ListView1.SelectedItem.ListSubItems.Item(13) = "1"
-            ListView1.ListItems.Item(X).Checked = False
+            ListView1.ListItems.Item(x).Checked = False
         End If
     Next
     MarcaOS = True
@@ -2200,14 +2209,14 @@ End Function
 
 Private Sub EditaLVHist()
 On Error Resume Next
-    Dim Y As Integer, X As Integer
-    Y = ListView4.ListItems.Count
-    For X = 1 To Y
-        If ListView4.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView4.ListItems.Count
+    For x = 1 To y
+        If ListView4.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtformula(28).Text = ListView4.ListItems.Item(X)
+    Me.txtformula(28).Text = ListView4.ListItems.Item(x)
     Me.txtformula(0).Text = ListView4.SelectedItem.ListSubItems.Item(6)
     Me.txtformula(4).Text = ListView4.SelectedItem.ListSubItems.Item(7)
     Me.txtformula(5).Text = ListView4.SelectedItem.ListSubItems.Item(1)
@@ -2289,12 +2298,12 @@ End Sub
 
 Private Function GeraOSLV(LV As Listview)
     If LV.ListItems.Count > 0 Then
-        Dim X As Integer
-        X = 1
+        Dim x As Integer
+        x = 1
         LV.Sorted = True
         LV.SortKey = 1
         LV.SortOrder = lvwDescending
-        LV.ListItems.Item(X).Selected = True
+        LV.ListItems.Item(x).Selected = True
         GeraOSLV = LV.SelectedItem.ListSubItems.Item(1) + 1
         LV.SortKey = 0
         LV.SortOrder = lvwAscending
@@ -2307,9 +2316,9 @@ End Function
 Private Sub gravaItensOS()
     If ListView1.ListItems.Count < 1 Then Exit Sub
     'Label36.Caption = "Alteração"
-    Dim Y As Integer, Z As Integer
-    Y = ListView1.ListItems.Count
-    For Z = 1 To Y
+    Dim y As Integer, Z As Integer
+    y = ListView1.ListItems.Count
+    For Z = 1 To y
         ListView1.ListItems.Item(Z).Selected = True
         If Val(ListView1.SelectedItem.ListSubItems.Item(1)) = Val(txtformula(17).Text) Then
             separaDesLv ListView1.SelectedItem.ListSubItems.Item(4)
@@ -2322,10 +2331,10 @@ On Error GoTo Err
     Dim rsTransf As New ADODB.Recordset
     Dim SqlTransf As String
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Len(RECEBE) = 5 Then
                 vCodLM = Mid$(RECEBE, 1, 2)
                 vCodSeq = Mid$(RECEBE, 3, 3)
@@ -2337,7 +2346,7 @@ On Error GoTo Err
             rsTransf.Open SqlTransf, cnBanco
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -2365,7 +2374,7 @@ End Sub
 
 Private Sub CarregaFCE()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
 '    sqlFCE = "Select * from tbprojetos where fce = '" & txtformula(12) & "' order by fce"
     sqlFCE = "Select a.*,b.status from tbprojetos as a inner join tbFCE as b on a.fce = b.fce where a.fce = '" & txtformula(12) & "' and b.status <> 1 order by a.fce"
     rsFCE.Open sqlFCE, cnBanco, adOpenKeyset, adLockOptimistic
@@ -2427,7 +2436,7 @@ End Sub
 
 Private Sub CarregaProjeto()
 On Error GoTo Err
-    Dim X As Integer
+    Dim x As Integer
     SqlProjeto = "Select * from tbprojetos where fce = '" & txtformula(12) & "' order by fce"
     rsProjeto.Open SqlProjeto, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsProjeto.EOF Then rsProjeto.MoveFirst
@@ -2525,6 +2534,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture2
     Set vPonte1 = Me.Controls.Add("VB.TextBox", "vPonte1")
     Set vPonte2 = Me.Controls.Add("VB.TextBox", "vPonte2")
     Set vPonte3 = Me.Controls.Add("VB.TextBox", "vPonte3")
@@ -2733,13 +2743,13 @@ Private Sub TreeView2_NodeCheck(ByVal Node As MSComctlLib.Node)
 End Sub
 
 Private Sub buscaChecado()
-    Dim X As Integer, vContador As Integer, vQtdNos As Integer
+    Dim x As Integer, vContador As Integer, vQtdNos As Integer
     vContador = 0
-    X = 0
+    x = 0
     vQtdNos = TreeView1.Nodes.Count
-    For X = 1 To vQtdNos
-        If TreeView1.Nodes.Item(X).Checked = True Then
-            PegaTreeview X
+    For x = 1 To vQtdNos
+        If TreeView1.Nodes.Item(x).Checked = True Then
+            PegaTreeview x
             separaDadosTree vJuntaNome
             buscaPeso
         End If
@@ -2747,27 +2757,27 @@ Private Sub buscaChecado()
 End Sub
 
 Private Sub excluiChecados()
-    Dim X As Integer, Y As Integer
-    Y = ListView2.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If X > Y Then Exit For
-        If ListView2.ListItems.Item(X).Checked = True Then
-            ListView2.ListItems.Remove (X)
-            Y = ListView2.ListItems.Count
-            X = 1
+    Dim x As Integer, y As Integer
+    y = ListView2.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If x > y Then Exit For
+        If ListView2.ListItems.Item(x).Checked = True Then
+            ListView2.ListItems.Remove (x)
+            y = ListView2.ListItems.Count
+            x = 1
         End If
     Next
 End Sub
 
 Private Sub buscaChecado2(vLV As TreeView)
-    Dim X As Integer, vContador As Integer, vQtdNos As Integer
+    Dim x As Integer, vContador As Integer, vQtdNos As Integer
     vContador = 0
-    X = 0
+    x = 0
     vQtdNos = vLV.Nodes.Count
-    For X = 1 To vQtdNos
-        If vLV.Nodes.Item(X).Checked = True Then
-            transfDesenhosSel X, vLV
+    For x = 1 To vQtdNos
+        If vLV.Nodes.Item(x).Checked = True Then
+            transfDesenhosSel x, vLV
         End If
     Next
 End Sub
@@ -2962,7 +2972,7 @@ On Error GoTo Err
         ItemLst.SubItems(11) = "" & Combo1.Text 'Identificador da Operação
         'ItemLst.ListSubItems(3).Bold = True
         rsListView2.MoveNext
-        X = X + 1
+        x = x + 1
     Loop
     rsListView2.Close
     Set rsListView2 = Nothing
@@ -3202,20 +3212,20 @@ End Sub
 
 Private Sub separaDadosTree(vTxtForm As String)
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
     vNomeA = ""
     vNomeB = ""
     vNomeC = ""
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Contador = 0 Then vNomeA = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then vNomeB = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 2 Then vNomeC = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3253,11 +3263,11 @@ Err:
 End Sub
 
 Private Sub compoeText1()
-    Dim X As Integer, Y As Integer
-    Y = ListView2.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        ListView2.ListItems.Item(X).Selected = True
+    Dim x As Integer, y As Integer
+    y = ListView2.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        ListView2.ListItems.Item(x).Selected = True
         If Text1.Text = "" Then
             Text1 = Format(ListView2.SelectedItem.ListSubItems.Item(7), "00") & Format(ListView2.SelectedItem.ListSubItems.Item(8), "000")
         Else
@@ -3277,12 +3287,12 @@ On Error GoTo Err
 '        txtformula(2).Text = rsCompoe.Fields(0) 'Parâmetros
 '        txtformula(3).Text = rsCompoe.Fields(1) 'Formula
 '       If Not IsNull(rsCompoe.Fields(2)) Then txtformula(6).Text = rsCompoe.Fields(2) 'Observação
-        If Not IsNull(rsCompoe.Fields(3)) Then label53 = rsCompoe.Fields(3) Else label53 = "-" 'Imagem
+        If Not IsNull(rsCompoe.Fields(3)) Then Label53 = rsCompoe.Fields(3) Else Label53 = "-" 'Imagem
     Else
 '        txtformula(2).Text = "" 'Parâmetros
 '        txtformula(3).Text = "" 'Formula
 '        txtformula(6).Text = "" 'Observação
-        label53 = "-" 'Imagem
+        Label53 = "-" 'Imagem
     End If
 '    If Mid$(txtformula(2).Text, 1, 7) = "formula" Then
 '        localizaFormula Mid$(txtformula(2).Text, 9, 1), 1
@@ -3301,8 +3311,8 @@ On Error GoTo Err
     End If
     
     aicAlphaImage1.ClearImage
-    If label53 <> "" Or label53 <> "-" Then
-        aicAlphaImage1.LoadImage_FromFile (label53.Text)
+    If Label53 <> "" Or Label53 <> "-" Then
+        aicAlphaImage1.LoadImage_FromFile (Label53.Text)
     End If
     'compoeAutomatico
     rsCompoe.Close
@@ -3345,8 +3355,8 @@ End Sub
 Private Sub separaDadosPar(vTxtForm As TextBox)
     Dim RECEBE As String
     Dim Contador As Integer, vNum As Integer
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Contador = 0 And RECEBE <> "-" Then vGrupo = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then vDimTipo = RECEBE 'Variável vDimTipo receber o valor do segundo parâmetro
             If Contador = 2 Then vDimValor = RECEBE 'Variavel vDimTipo recebe o valor do terceiro parâmetro
@@ -3355,7 +3365,7 @@ Private Sub separaDadosPar(vTxtForm As TextBox)
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If Contador = 0 And RECEBE <> "-" Then vGrupo = RECEBE
@@ -3380,10 +3390,10 @@ End Sub
 'específicas para cada valor
 Private Sub separaDadosVar(vTxtForm As TextBox)
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Contador = 0 Then var(1) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 1 Then var(2) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
             If Contador = 2 Then var(3) = RECEBE 'Variavel vGrupo recebe o valor do primeiro parâmetro
@@ -3393,7 +3403,7 @@ Private Sub separaDadosVar(vTxtForm As TextBox)
             Contador = Contador + 1
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3409,12 +3419,12 @@ End Sub
 'A função abaixo pega os valores das constantes informados no Listview2 e armazena em Arrays: cons(?)
 'específicas para cada valor
 Private Sub separaDadosCons()
-    Dim X As Integer, Y As Integer
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        ListView2.ListItems.Item(X).Selected = True
-        If ListView2.ListItems.Item(X).Selected = True Then
-            cons(Val(ListView2.ListItems.Item(X))) = ListView2.SelectedItem.ListSubItems.Item(1)
+    Dim x As Integer, y As Integer
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        ListView2.ListItems.Item(x).Selected = True
+        If ListView2.ListItems.Item(x).Selected = True Then
+            cons(Val(ListView2.ListItems.Item(x))) = ListView2.SelectedItem.ListSubItems.Item(1)
         End If
     Next
 End Sub
@@ -3430,10 +3440,10 @@ On Error GoTo Err
     rsTransf.Open SqlTransf, cnBanco
     
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             'Separa para localizar: codigo da LM e código da sequência da LM
             'Se a variável recebe tiver + de 5 caracteres significa que a sequencia da LM ultrapassou a 999 registros
             'O procedimento para esse caso é diferenciado, por isso utilizasse o IF abaixo
@@ -3449,7 +3459,7 @@ On Error GoTo Err
             rsTransf.Open SqlTransf, cnBanco
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3588,10 +3598,10 @@ Private Sub txtformula_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtformula(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtformula.Count - 1
-        txtformula(X).SelStart = 0
-        txtformula(X).SelLength = Len(txtformula(X).Text)
+    Dim x As Integer
+    For x = 1 To txtformula.Count - 1
+        txtformula(x).SelStart = 0
+        txtformula(x).SelLength = Len(txtformula(x).Text)
     Next
 
 End Sub
@@ -3669,12 +3679,12 @@ On Error GoTo Err
         txtformula(2).Text = rsCompoe.Fields(0) 'Parâmetros
         txtformula(3).Text = rsCompoe.Fields(1) 'Formula
         If Not IsNull(rsCompoe.Fields(2)) Then txtformula(6).Text = rsCompoe.Fields(2) 'Observação
-        If Not IsNull(rsCompoe.Fields(3)) Then label53 = rsCompoe.Fields(3) Else label53 = "-" 'Imagem
+        If Not IsNull(rsCompoe.Fields(3)) Then Label53 = rsCompoe.Fields(3) Else Label53 = "-" 'Imagem
     Else
         txtformula(2).Text = "" 'Parâmetros
         txtformula(3).Text = "" 'Formula
         txtformula(6).Text = "" 'Observação
-        label53 = "-" 'Imagem
+        Label53 = "-" 'Imagem
     End If
     If Mid$(txtformula(2).Text, 1, 7) = "formula" Then
         localizaFormula Mid$(txtformula(2).Text, 9, 1), 1
@@ -3693,8 +3703,8 @@ On Error GoTo Err
     'End If
     
     aicAlphaImage1.ClearImage
-    If label53 <> "" Or label53 <> "-" Then
-        aicAlphaImage1.LoadImage_FromFile (label53.Text)
+    If Label53 <> "" Or Label53 <> "-" Then
+        aicAlphaImage1.LoadImage_FromFile (Label53.Text)
     End If
     'compoeAutomatico
     rsCompoe.Close
@@ -3742,13 +3752,13 @@ Err:
 End Sub
 
 Private Sub substituiValores(vFormula As TextBox)
-    Dim X As Integer
+    Dim x As Integer
     Dim vPreserva As String
     vPreserva = ""
     vPreserva = vFormula
-    For X = 1 To 50
-        vFormula = Replace(vFormula, "cons(" & (X) & ")", cons(X))
-        vFormula = Replace(vFormula, "var(" & (X) & ")", var(X))
+    For x = 1 To 50
+        vFormula = Replace(vFormula, "cons(" & (x) & ")", cons(x))
+        vFormula = Replace(vFormula, "var(" & (x) & ")", var(x))
         vFormula = Replace(vFormula, "vTMedio", vTMedio)
         vFormula = Replace(vFormula, "vFFadiga", vFFadiga)
         vFormula = Replace(vFormula, "vOrganiza", vOrganiza)
@@ -3849,15 +3859,15 @@ End Sub
 
 Private Sub SomaLV(LV As Listview, vColunaLV As Integer, vTxtRetorno As TextBox)
     On Error Resume Next
-    Dim X As Integer, Y As Integer, F As Integer
-    Y = LV.ListItems.Count
+    Dim x As Integer, y As Integer, F As Integer
+    y = LV.ListItems.Count
     Dim somaTempo As Double
     somaTempo = 0
-    For X = 1 To Y
-        If LV.ListItems.Item(X).Selected = True Then F = X
+    For x = 1 To y
+        If LV.ListItems.Item(x).Selected = True Then F = x
     Next
-    For X = 1 To Y
-        LV.ListItems.Item(X).Selected = True
+    For x = 1 To y
+        LV.ListItems.Item(x).Selected = True
         'If Trim$(LV.SelectedItem.ListSubItems.Item(6)) <> " " Then
             somaTempo = somaTempo + LV.SelectedItem.ListSubItems.Item(vColunaLV)
         'End If
@@ -3938,15 +3948,15 @@ Private Sub compoeDadosLV2()
 On Error GoTo Err
     Dim rsCompoeLV2 As New ADODB.Recordset
     Dim SqlCompoeLV2 As String
-    Dim Y As Integer
-    Y = ListView2.ListItems.Count
+    Dim y As Integer
+    y = ListView2.ListItems.Count
     SqlCompoeLV2 = "Select * from tbMPItensRet as a where a.idprogramacao = '" & Val(txtformula(11)) & "' and a.idoperacao = '" & Val(Combo1.Text) & "' order by a.codlm,a.codseq"
     rsCompoeLV2.Open SqlCompoeLV2, cnBanco, adOpenKeyset, adLockReadOnly
     While Not rsCompoeLV2.EOF
-        For X = 1 To Y
-            ListView2.ListItems(X).Selected = True
+        For x = 1 To y
+            ListView2.ListItems(x).Selected = True
             If Val(ListView2.SelectedItem.ListSubItems.Item(7)) = rsCompoeLV2.Fields(0) And Val(ListView2.SelectedItem.ListSubItems.Item(8)) = rsCompoeLV2.Fields(1) Then
-                ListView2.ListItems.Item(X) = rsCompoeLV2.Fields(2)
+                ListView2.ListItems.Item(x) = rsCompoeLV2.Fields(2)
                 ListView2.SelectedItem.ListSubItems.Item(1) = rsCompoeLV2.Fields(2) * ListView2.SelectedItem.ListSubItems.Item(5)
             End If
         Next
@@ -4017,11 +4027,11 @@ End Sub
 
 Private Sub MudaCorLV1()
     'On Error Resume Next
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
     vStatus = 1
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True
         'verifica se a OS ja esta sendo apropriada. Se estiver o sistema não deixa editar
         '1 - Não houve apropriacao
         '2 - houve apropriação
@@ -4033,7 +4043,7 @@ Private Sub MudaCorLV1()
                 vStatus = Val(ListView1.SelectedItem.ListSubItems.Item(13))
             End If
             If ListView1.SelectedItem.ListSubItems.Item(13) = 2 Then
-                ListView1.ListItems.Item(X).ForeColor = &H8000&
+                ListView1.ListItems.Item(x).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(1).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(2).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(3).ForeColor = &H8000&
@@ -4049,7 +4059,7 @@ Private Sub MudaCorLV1()
                 ListView1.SelectedItem.ListSubItems.Item(13).ForeColor = &H8000&
                 ListView1.SelectedItem.ListSubItems.Item(14).ForeColor = &H8000&
             ElseIf ListView1.SelectedItem.ListSubItems.Item(13) = 3 Then
-                ListView1.ListItems.Item(X).ForeColor = &H808080
+                ListView1.ListItems.Item(x).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(1).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(2).ForeColor = &H808080
                 ListView1.SelectedItem.ListSubItems.Item(3).ForeColor = &H808080
@@ -4070,12 +4080,12 @@ Private Sub MudaCorLV1()
 End Sub
 
 Private Sub bloqueiaEdicao()
-    Dim X As Integer
+    Dim x As Integer
     TreeView1.Enabled = False
     TreeView2.Enabled = False
     TreeView3.Enabled = False
-    For X = 0 To cmdCadastro.Count - 1
-        cmdCadastro(X).Enabled = False
+    For x = 0 To cmdCadastro.Count - 1
+        cmdCadastro(x).Enabled = False
     Next
     cmdCadastro(13).Enabled = True
     txtformula(0).Enabled = False
@@ -4213,7 +4223,7 @@ End Function
 '----EDITA LISTVIEW DAKI P BAIXO------
 '-------------------------------------
 
-Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView2_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
 Dim i As Integer, leftPos As Single 'the left pos of the column
 Dim dx As Single, lvwX As Single  'the x in relation to listview coordinate
 
@@ -4221,7 +4231,7 @@ If Button = vbLeftButton Then
     If Not ListView2.SelectedItem Is Nothing Then
         ListView2.LabelEdit = lvwManual
         dx = GetLvwDeltaX
-        lvwX = X + dx
+        lvwX = x + dx
         For i = 1 To 1
             leftPos = ListView2.Left + ListView2.ColumnHeaders(i).Left
             If lvwX > leftPos And lvwX < leftPos + ListView2.ColumnHeaders(i).Width Then 'we found the column

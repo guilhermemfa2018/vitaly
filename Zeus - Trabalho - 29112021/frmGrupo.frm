@@ -1,5 +1,6 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmGrupo 
    BorderStyle     =   1  'Fixed Single
@@ -8,6 +9,15 @@ Begin VB.Form frmGrupo
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   7230
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmGrupo.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form3"
@@ -16,7 +26,23 @@ Begin VB.Form frmGrupo
    ScaleHeight     =   5640
    ScaleWidth      =   7230
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   3720
+      Top             =   5040
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   5
       Left            =   720
@@ -29,6 +55,15 @@ Begin VB.Form frmGrupo
       Width           =   615
    End
    Begin VB.CommandButton cmdCadastro 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   615
       Index           =   4
       Left            =   120
@@ -43,8 +78,8 @@ Begin VB.Form frmGrupo
    Begin VB.Frame Frame1 
       Caption         =   "Dados "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -57,32 +92,21 @@ Begin VB.Form frmGrupo
       Top             =   120
       Width           =   6975
       Begin VB.TextBox txtCadastro 
-         Height          =   285
+         Height          =   345
          Index           =   1
          Left            =   1320
          TabIndex        =   1
          Tag             =   "Nome do Grupo"
-         ToolTipText     =   "Nome do Grupo"
          Top             =   480
          Width           =   5535
       End
       Begin VB.TextBox txtCadastro 
          Enabled         =   0   'False
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
          Tag             =   "Código do Grupo"
-         ToolTipText     =   "Código do Grupo"
          Top             =   480
          Width           =   1095
       End
@@ -97,7 +121,7 @@ Begin VB.Form frmGrupo
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmGrupo.frx":26C6
+         OleObjectBlob   =   "frmGrupo.frx":26C0
          TabIndex        =   12
          Top             =   240
          Width           =   615
@@ -105,8 +129,8 @@ Begin VB.Form frmGrupo
       Begin VB.Frame Frame2 
          Caption         =   "Centro de Custo "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -116,7 +140,7 @@ Begin VB.Form frmGrupo
          Height          =   615
          Left            =   3360
          TabIndex        =   10
-         Top             =   840
+         Top             =   960
          Width           =   2535
          Begin VB.TextBox txtCadastro 
             Alignment       =   2  'Center
@@ -141,61 +165,93 @@ Begin VB.Form frmGrupo
          End
       End
       Begin VB.CommandButton cmdCadastro 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   615
          Index           =   3
          Left            =   1920
-         Picture         =   "frmGrupo.frx":2732
+         Picture         =   "frmGrupo.frx":2726
          Style           =   1  'Graphical
          TabIndex        =   5
          Tag             =   "Excluir Grupo"
-         ToolTipText     =   "Excluir Grupo"
-         Top             =   840
+         Top             =   960
          Width           =   615
       End
       Begin VB.CommandButton cmdCadastro 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   615
          Index           =   2
          Left            =   1320
-         Picture         =   "frmGrupo.frx":33FC
+         Picture         =   "frmGrupo.frx":33F0
          Style           =   1  'Graphical
          TabIndex        =   4
          Tag             =   "Editar Nome do Grupo"
-         ToolTipText     =   "Editar Nome do Grupo"
-         Top             =   840
+         Top             =   960
          Width           =   615
       End
       Begin VB.CommandButton cmdCadastro 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   615
          Index           =   1
          Left            =   720
-         Picture         =   "frmGrupo.frx":40C6
+         Picture         =   "frmGrupo.frx":40BA
          Style           =   1  'Graphical
          TabIndex        =   3
          Tag             =   "Novo Grupo"
-         ToolTipText     =   "Novo Grupo"
-         Top             =   840
+         Top             =   960
          Width           =   615
       End
       Begin VB.CommandButton cmdCadastro 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   615
          Index           =   0
          Left            =   120
-         Picture         =   "frmGrupo.frx":4D90
+         Picture         =   "frmGrupo.frx":4D84
          Style           =   1  'Graphical
          TabIndex        =   2
          Tag             =   "Incluir Grupo"
-         ToolTipText     =   "Incluir Grupo"
-         Top             =   840
+         Top             =   960
          Width           =   615
       End
       Begin MSComctlLib.ListView ListView1 
-         Height          =   3015
+         Height          =   2895
          Left            =   120
          TabIndex        =   6
-         Top             =   1560
+         Top             =   1680
          Width           =   6735
          _ExtentX        =   11880
-         _ExtentY        =   5318
+         _ExtentY        =   5106
          LabelEdit       =   1
          LabelWrap       =   -1  'True
          HideSelection   =   -1  'True
@@ -206,6 +262,15 @@ Begin VB.Form frmGrupo
          BackColor       =   -2147483624
          BorderStyle     =   1
          Appearance      =   1
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          NumItems        =   0
       End
    End
@@ -268,12 +333,12 @@ ErrHandler:
 End Sub
 
 Private Sub carregarIconBotao()
-    carregaImagemBotao cmdCadastro(0), 0, 46 'Inserir
-    carregaImagemBotao cmdCadastro(1), 1, 31 'Novo
-    carregaImagemBotao cmdCadastro(2), 2, 32 'Editar
-    carregaImagemBotao cmdCadastro(3), 3, 33 'Excluir
-    carregaImagemBotao cmdCadastro(4), 4, 45 'Salvar
-    carregaImagemBotao cmdCadastro(5), 5, 34 'Sair
+    carregaImagemBotao cmdcadastro(0), 0, 46 'Inserir
+    carregaImagemBotao cmdcadastro(1), 1, 31 'Novo
+    carregaImagemBotao cmdcadastro(2), 2, 32 'Editar
+    carregaImagemBotao cmdcadastro(3), 3, 33 'Excluir
+    carregaImagemBotao cmdcadastro(4), 4, 45 'Salvar
+    carregaImagemBotao cmdcadastro(5), 5, 34 'Sair
 End Sub
 
 Private Sub listview_cabecalho()

@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmProcessos 
    BorderStyle     =   1  'Fixed Single
@@ -10,6 +11,15 @@ Begin VB.Form frmProcessos
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   9840
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmProcessos.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
@@ -18,45 +28,46 @@ Begin VB.Form frmProcessos
    ScaleHeight     =   8565
    ScaleWidth      =   9840
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   8760
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   36
+      Top             =   7800
+      Visible         =   0   'False
+      Width           =   975
+   End
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2760
+      Top             =   7920
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdcadastro 
-      BeginProperty Font 
-         Name            =   "Calibri"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   615
       Index           =   11
       Left            =   720
       Picture         =   "frmProcessos.frx":0CCA
       Style           =   1  'Graphical
-      TabIndex        =   33
-      Tag             =   "Editar constante"
-      ToolTipText     =   "Editar constante"
+      TabIndex        =   32
+      Tag             =   "Sair"
       Top             =   7800
       Width           =   615
    End
    Begin VB.CommandButton cmdcadastro 
-      BeginProperty Font 
-         Name            =   "Calibri"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   615
       Index           =   12
       Left            =   120
       Picture         =   "frmProcessos.frx":1994
       Style           =   1  'Graphical
-      TabIndex        =   34
-      Tag             =   "Insere nova constante"
-      ToolTipText     =   "Insere nova constante"
+      TabIndex        =   33
+      Tag             =   "Salvar"
       Top             =   7800
       Width           =   615
    End
@@ -72,6 +83,15 @@ Begin VB.Form frmProcessos
       Tabs            =   2
       TabsPerRow      =   2
       TabHeight       =   520
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Calibri"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       TabCaption(0)   =   "Processos"
       TabPicture(0)   =   "frmProcessos.frx":265E
       Tab(0).ControlEnabled=   -1  'True
@@ -81,14 +101,14 @@ Begin VB.Form frmProcessos
       TabCaption(1)   =   "Fases"
       TabPicture(1)   =   "frmProcessos.frx":267A
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "Frame2"
-      Tab(1).Control(1)=   "Frame3"
+      Tab(1).Control(0)=   "Frame3"
+      Tab(1).Control(1)=   "Frame2"
       Tab(1).ControlCount=   2
       Begin VB.Frame Frame1 
          Caption         =   "Dados do Processo "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -101,90 +121,62 @@ Begin VB.Form frmProcessos
          Top             =   360
          Width           =   9375
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   2
             Left            =   1320
             Picture         =   "frmProcessos.frx":2696
             Style           =   1  'Graphical
             TabIndex        =   27
-            Tag             =   "Exclui constante selecionada"
-            ToolTipText     =   "Exclui constante selecionada"
-            Top             =   840
+            Tag             =   "Excluir"
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   1
             Left            =   720
             Picture         =   "frmProcessos.frx":3360
             Style           =   1  'Graphical
-            TabIndex        =   28
-            Tag             =   "Editar constante"
-            ToolTipText     =   "Editar constante"
-            Top             =   840
+            TabIndex        =   35
+            Tag             =   "Editar"
+            Top             =   960
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   0
             Left            =   120
             Picture         =   "frmProcessos.frx":402A
             Style           =   1  'Graphical
-            TabIndex        =   29
-            Tag             =   "Insere nova constante"
-            ToolTipText     =   "Insere nova constante"
-            Top             =   840
+            TabIndex        =   28
+            Tag             =   "Inserir"
+            Top             =   960
             Width           =   615
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   0
             Left            =   840
             TabIndex        =   1
+            Tag             =   "Descrição do Processo"
             Top             =   480
             Width           =   8415
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   0
             Left            =   120
             TabIndex        =   0
+            Tag             =   "ID do Processo"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
             Enabled         =   0   'False
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -206,19 +198,19 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":4D66
+            OleObjectBlob   =   "frmProcessos.frx":4D60
             TabIndex        =   23
             Top             =   240
             Width           =   615
          End
          Begin MSComctlLib.ListView ListView1 
-            Height          =   5055
+            Height          =   4935
             Left            =   120
             TabIndex        =   2
-            Top             =   1560
+            Top             =   1680
             Width           =   9135
             _ExtentX        =   16113
-            _ExtentY        =   8916
+            _ExtentY        =   8705
             LabelEdit       =   1
             LabelWrap       =   -1  'True
             HideSelection   =   -1  'True
@@ -230,14 +222,23 @@ Begin VB.Form frmProcessos
             BackColor       =   -2147483624
             BorderStyle     =   1
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
             NumItems        =   0
          End
       End
       Begin VB.Frame Frame2 
          Caption         =   "Dados da Fase"
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -250,100 +251,71 @@ Begin VB.Form frmProcessos
          Top             =   1440
          Width           =   9375
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   7
             Left            =   1320
-            Picture         =   "frmProcessos.frx":4DD2
+            Picture         =   "frmProcessos.frx":4DC6
             Style           =   1  'Graphical
-            TabIndex        =   30
-            Tag             =   "Exclui constante selecionada"
-            ToolTipText     =   "Exclui constante selecionada"
-            Top             =   960
+            TabIndex        =   29
+            Tag             =   "Excluir"
+            Top             =   1080
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   6
             Left            =   720
-            Picture         =   "frmProcessos.frx":5A9C
+            Picture         =   "frmProcessos.frx":5A90
             Style           =   1  'Graphical
-            TabIndex        =   31
-            Tag             =   "Editar constante"
-            ToolTipText     =   "Editar constante"
-            Top             =   960
+            TabIndex        =   30
+            Tag             =   "Editar"
+            Top             =   1080
             Width           =   615
          End
          Begin VB.CommandButton cmdcadastro 
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   615
             Index           =   5
             Left            =   120
-            Picture         =   "frmProcessos.frx":6766
+            Picture         =   "frmProcessos.frx":675A
             Style           =   1  'Graphical
-            TabIndex        =   32
-            Tag             =   "Insere nova constante"
-            ToolTipText     =   "Insere nova constante"
-            Top             =   960
+            TabIndex        =   31
+            Tag             =   "Inserir"
+            Top             =   1080
             Width           =   615
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   4
             Left            =   5640
             TabIndex        =   7
             Tag             =   "Título da FASE que irá ser exibido nos Relatórios de Inspeção de Fabricação"
-            ToolTipText     =   "Título da FASE que irá ser exibido nos Relatórios de Inspeção de Fabricação"
             Top             =   480
             Width           =   3615
          End
          Begin VB.TextBox txtCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   1200
             TabIndex        =   6
+            Tag             =   "Descrição da Fase"
             Top             =   480
             Width           =   4335
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   2
             Left            =   120
             TabIndex        =   5
+            Tag             =   "ID da Fase"
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
             Enabled         =   0   'False
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -357,7 +329,7 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   5640
-            OleObjectBlob   =   "frmProcessos.frx":7430
+            OleObjectBlob   =   "frmProcessos.frx":7424
             TabIndex        =   22
             Top             =   240
             Width           =   1335
@@ -365,7 +337,7 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmProcessos.frx":749C
+            OleObjectBlob   =   "frmProcessos.frx":748A
             TabIndex        =   21
             Top             =   240
             Width           =   975
@@ -373,7 +345,7 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":750E
+            OleObjectBlob   =   "frmProcessos.frx":74F6
             TabIndex        =   20
             Top             =   240
             Width           =   735
@@ -381,8 +353,8 @@ Begin VB.Form frmProcessos
          Begin VB.Frame Frame6 
             Caption         =   "% disponível "
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Calibri"
+               Size            =   9.75
                Charset         =   0
                Weight          =   700
                Underline       =   0   'False
@@ -392,12 +364,12 @@ Begin VB.Form frmProcessos
             Height          =   735
             Left            =   7800
             TabIndex        =   17
-            Top             =   840
+            Top             =   960
             Width           =   1455
             Begin ACTIVESKINLibCtl.SkinLabel Label7 
                Height          =   375
                Left            =   240
-               OleObjectBlob   =   "frmProcessos.frx":757A
+               OleObjectBlob   =   "frmProcessos.frx":755C
                TabIndex        =   25
                Top             =   240
                Width           =   495
@@ -405,7 +377,7 @@ Begin VB.Form frmProcessos
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
                Height          =   375
                Left            =   840
-               OleObjectBlob   =   "frmProcessos.frx":75D2
+               OleObjectBlob   =   "frmProcessos.frx":75B6
                TabIndex        =   26
                Top             =   240
                Width           =   375
@@ -414,8 +386,8 @@ Begin VB.Form frmProcessos
          Begin VB.Frame Frame5 
             Caption         =   "Peso de fabricação "
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Calibri"
+               Size            =   9.75
                Charset         =   0
                Weight          =   700
                Underline       =   0   'False
@@ -425,22 +397,24 @@ Begin VB.Form frmProcessos
             Height          =   735
             Left            =   5520
             TabIndex        =   16
-            Top             =   840
-            Width           =   2175
+            Top             =   960
+            Width           =   1935
             Begin VB.TextBox txtCadastro 
-               Height          =   285
+               Alignment       =   2  'Center
+               Height          =   345
                Index           =   3
-               Left            =   480
+               Left            =   120
                TabIndex        =   9
+               Tag             =   "Percentual do peso de Fabricação"
                Top             =   240
-               Width           =   1215
+               Width           =   1695
             End
          End
          Begin VB.Frame Frame4 
             Caption         =   "Relatório "
             BeginProperty Font 
-               Name            =   "MS Sans Serif"
-               Size            =   8.25
+               Name            =   "Calibri"
+               Size            =   9.75
                Charset         =   0
                Weight          =   700
                Underline       =   0   'False
@@ -450,13 +424,13 @@ Begin VB.Form frmProcessos
             Height          =   735
             Left            =   4200
             TabIndex        =   15
-            Top             =   840
+            Top             =   960
             Width           =   1215
             Begin VB.ComboBox Combo1 
-               Height          =   315
-               ItemData        =   "frmProcessos.frx":762A
+               Height          =   345
+               ItemData        =   "frmProcessos.frx":7610
                Left            =   120
-               List            =   "frmProcessos.frx":7634
+               List            =   "frmProcessos.frx":761A
                TabIndex        =   8
                Text            =   "Não"
                Top             =   240
@@ -464,25 +438,34 @@ Begin VB.Form frmProcessos
             End
          End
          Begin MSComctlLib.TreeView TreeView1 
-            Height          =   3975
+            Height          =   3855
             Left            =   120
             TabIndex        =   10
-            Top             =   1680
+            Top             =   1800
             Width           =   9135
             _ExtentX        =   16113
-            _ExtentY        =   7011
+            _ExtentY        =   6800
             _Version        =   393217
             LabelEdit       =   1
             LineStyle       =   1
             Style           =   7
             Appearance      =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
          End
       End
       Begin VB.Frame Frame3 
          Caption         =   "Processo "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -496,44 +479,37 @@ Begin VB.Form frmProcessos
          Width           =   9375
          Begin VB.CommandButton cmdcadastro 
             Caption         =   "..."
-            BeginProperty Font 
-               Name            =   "Calibri"
-               Size            =   9.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
             Height          =   315
             Index           =   10
             Left            =   8880
-            TabIndex        =   35
+            TabIndex        =   34
             Top             =   480
             Width           =   375
          End
          Begin VB.TextBox txtCadastro 
             Enabled         =   0   'False
-            Height          =   285
+            Height          =   345
             Index           =   1
             Left            =   1200
             TabIndex        =   4
+            Tag             =   "Descrição do Processo"
             Top             =   480
             Width           =   7575
          End
          Begin MSMask.MaskEdBox mskCadastro 
-            Height          =   285
+            Height          =   345
             Index           =   1
             Left            =   120
             TabIndex        =   3
+            Tag             =   "ID do Processo"
             Top             =   480
             Width           =   975
             _ExtentX        =   1720
-            _ExtentY        =   503
+            _ExtentY        =   609
             _Version        =   393216
             MaxLength       =   3
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "MS Sans Serif"
+               Name            =   "Calibri"
                Size            =   9.75
                Charset         =   0
                Weight          =   700
@@ -547,7 +523,7 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmProcessos.frx":7642
+            OleObjectBlob   =   "frmProcessos.frx":7628
             TabIndex        =   19
             Top             =   240
             Width           =   1215
@@ -555,7 +531,7 @@ Begin VB.Form frmProcessos
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmProcessos.frx":76B4
+            OleObjectBlob   =   "frmProcessos.frx":7694
             TabIndex        =   18
             Top             =   240
             Width           =   735
@@ -589,7 +565,7 @@ Private Sub cmdCadastro_Click(Index As Integer)
         mskCadastro(2).PromptInclude = False
         mskCadastro(2) = ""
         mskCadastro(2).PromptInclude = True
-        txtCadastro(2) = ""
+        txtcadastro(2) = ""
         AlteraTreeview
     Case 7
         DeletaTreeview
@@ -612,6 +588,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture1
     AbrirListaVer
     frmProcessos.Left = 2710
     frmProcessos.Top = 0
@@ -681,15 +658,15 @@ End Sub
 
 Private Sub Compoe_Listview1()
     ' Declaração de variaveis
-    Dim X As Integer
+    Dim x As Integer
     If rsProcesso.RecordCount > 0 Then Principal.ProgressBar1.Max = rsProcesso.RecordCount
-    X = 0
+    x = 0
     While Not rsProcesso.EOF
-        Principal.ProgressBar1.Value = X
+        Principal.ProgressBar1.Value = x
         Set ItemLst = ListView1.ListItems.Add(, , Format(rsProcesso(0), "000"))
         ItemLst.SubItems(1) = "" & rsProcesso.Fields(1)
         rsProcesso.MoveNext
-        X = X + 1
+        x = x + 1
     Wend
     Principal.ProgressBar1.Value = 0
     Legenda = ""
@@ -702,67 +679,67 @@ End Sub
 
 Private Sub IncluirItemProcesso()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     'If ValidaCampo = False Then Exit Sub
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X) = Me.mskCadastro(0) Then
+    y = ListView1.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            If ListView1.ListItems.Item(x) = Me.mskCadastro(0) Then
                 AbrirListaVer
-                Me.mskCadastro(0) = ListView1.ListItems.Item(X)
-                ListView1.SelectedItem.ListSubItems.Item(1) = txtCadastro(0)
+                Me.mskCadastro(0) = ListView1.ListItems.Item(x)
+                ListView1.SelectedItem.ListSubItems.Item(1) = txtcadastro(0)
                 mskCadastro(0).PromptInclude = False
                 mskCadastro(0).Text = Format(GeraCodigo, "000")
                 mskCadastro(0).PromptInclude = True
-                txtCadastro(0) = ""
-                Y = ListView1.ListItems.Count
+                txtcadastro(0) = ""
+                y = ListView1.ListItems.Count
                 FecharListaVer
                 Exit Sub
             End If
         Next
         Set ItemLst = ListView1.ListItems.Add(, , mskCadastro(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     Else
         Set ItemLst = ListView1.ListItems.Add(, , mskCadastro(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     End If
-    ItemLst.SubItems(1) = txtCadastro(0)
-    mskCadastro(0) = Format(Val(ListView1.ListItems.Item(Y)) + 1, "000")
-    txtCadastro(0) = ""
-    txtCadastro(0).SetFocus
+    ItemLst.SubItems(1) = txtcadastro(0)
+    mskCadastro(0) = Format(Val(ListView1.ListItems.Item(y)) + 1, "000")
+    txtcadastro(0) = ""
+    txtcadastro(0).SetFocus
 End Sub
 
 Private Sub AlterarItem()
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.mskCadastro(0).Text = ListView1.ListItems.Item(X)
-    Me.txtCadastro(0).Text = ListView1.SelectedItem.ListSubItems.Item(1)
+    Me.mskCadastro(0).Text = ListView1.ListItems.Item(x)
+    Me.txtcadastro(0).Text = ListView1.SelectedItem.ListSubItems.Item(1)
 End Sub
 
 Private Sub ExcluirItem()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
     Dim llng_Contador As Long
     
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
     For llng_Contador = 1 To TreeView1.Nodes.Count
-        If ListView1.ListItems.Item(X) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3) Then
+        If ListView1.ListItems.Item(x) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3) Then
             mobjMsg.Abrir "Existem  itens cadastrados para esse Processo. O Processo não pode ser excluido", Ok, critico, "Atenção"
             Exit Sub
         End If
     Next
     
-    ListView1.ListItems.Remove (X)
+    ListView1.ListItems.Remove (x)
 End Sub
 
 Private Sub Bot_salvar()
@@ -777,10 +754,10 @@ On Error GoTo Err
     SqlSalvar = "Select * from tbProcessos"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-    For X = 1 To ListView1.ListItems.Count
-        ListView1.ListItems.Item(X).Selected = True
+    For x = 1 To ListView1.ListItems.Count
+        ListView1.ListItems.Item(x).Selected = True
         rsSalvar.AddNew
-        rsSalvar.Fields(0) = ListView1.ListItems.Item(X)
+        rsSalvar.Fields(0) = ListView1.ListItems.Item(x)
         rsSalvar.Fields(1) = ListView1.SelectedItem.ListSubItems.Item(1)
     Next
     If Not rsSalvar.EOF Then rsSalvar.Update
@@ -837,7 +814,7 @@ On Error GoTo Err
     Dim rsTree As New ADODB.Recordset
     Dim SqlTree
     Dim no As Node
-    Dim X As Integer, Y As Integer, Contador As Integer
+    Dim x As Integer, y As Integer, Contador As Integer
     Dim vProc As String
     SqlTree = "Select tbProcessos.codprocesso, tbProcessos.descricao, tbFases.codfase, tbFases.descricao,tbFases.relger,tbfases.pesofab,tbfases.titulofase from tbProcessos,tbFases where tbFases.codprocesso=tbProcessos.codprocesso Order by tbfases.codprocesso,tbfases.codfase"
     rsTree.Open SqlTree, cnBanco, adOpenKeyset, adLockOptimistic
@@ -845,13 +822,13 @@ On Error GoTo Err
     
     Contador = 1
     TreeView1.Nodes.Clear
-    For X = 1 To rsTree.RecordCount
-        Set no = TreeView1.Nodes.Add(, , "no" & X, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
+    For x = 1 To rsTree.RecordCount
+        Set no = TreeView1.Nodes.Add(, , "no" & x, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
         no.Tag = "PAI"
         no.Sorted = True
-        Y = rsTree.Fields(0)
-        While Y = rsTree.Fields(0)
-            Set no = TreeView1.Nodes.Add("no" & X, tvwChild, Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3), Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3))
+        y = rsTree.Fields(0)
+        While y = rsTree.Fields(0)
+            Set no = TreeView1.Nodes.Add("no" & x, tvwChild, Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3), Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3))
             no.Tag = "FILHOS"
             no.Sorted = True
             
@@ -897,10 +874,10 @@ On Error GoTo Err
         rsFase.Fields(1) = Val(mskCadastro(2))
         mskCadastro(1).SetFocus
     End If
-    rsFase.Fields(2) = txtCadastro(2).Text
+    rsFase.Fields(2) = txtcadastro(2).Text
     rsFase.Fields(3) = vRelGer
-    rsFase.Fields(4) = txtCadastro(3)
-    rsFase.Fields(5) = txtCadastro(4)
+    rsFase.Fields(4) = txtcadastro(3)
+    rsFase.Fields(5) = txtcadastro(4)
     rsFase.Update
     Set rsFase = Nothing
     CompoeTreeview
@@ -924,7 +901,7 @@ Private Sub AlteraTreeview()
                 Status = "altera"
                 mskCadastro(1) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, 1, 3)
                 mskCadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 1, 3)
-                txtCadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 5, 45)
+                txtcadastro(2) = Mid$(TreeView1.Nodes(llng_Contador).FullPath, InStr(TreeView1.Nodes(llng_Contador).FullPath, "\") + 5, 45)
                 mskCadastro_KeyDown 1, 13, 1
             Else
                 Status = "novo"
@@ -963,9 +940,9 @@ End Sub
 Private Function ValidaCampo()
     ValidaCampo = False
     If SSTab1.Tab = 0 Then
-        If Me.txtCadastro(0) = "" Then
+        If Me.txtcadastro(0) = "" Then
             mobjMsg.Abrir "Favor preencher o campo Descrição!", Ok, critico, "Atenção"
-            Me.txtCadastro(0).SetFocus
+            Me.txtcadastro(0).SetFocus
             Exit Function
         End If
     End If
@@ -984,9 +961,9 @@ Private Function ValidaCampo()
             mskCadastro(1).PromptInclude = True
             mskCadastro(2).PromptInclude = True
             Exit Function
-        ElseIf Me.txtCadastro(2) = "" Then
+        ElseIf Me.txtcadastro(2) = "" Then
             mobjMsg.Abrir "Favor preencher o campo Descrição da Fase", Ok, critico, "Atenção"
-            Me.txtCadastro(2).SetFocus
+            Me.txtcadastro(2).SetFocus
             Exit Function
         End If
     End If
@@ -994,15 +971,15 @@ Private Function ValidaCampo()
 End Function
 
 Private Sub Mskcadastro_GotFocus(Index As Integer)
-    Dim X As Integer
-    For X = 0 To mskCadastro.Count - 1
-        mskCadastro(X).SelStart = 0
-        mskCadastro(X).SelLength = Len(mskCadastro(X).Text)
+    Dim x As Integer
+    For x = 0 To mskCadastro.Count - 1
+        mskCadastro(x).SelStart = 0
+        mskCadastro(x).SelLength = Len(mskCadastro(x).Text)
     Next
     mskCadastro(2).PromptInclude = False
     mskCadastro(2) = ""
     mskCadastro(2).PromptInclude = True
-    txtCadastro(2) = ""
+    txtcadastro(2) = ""
 End Sub
 
 Private Sub mskCadastro_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
@@ -1045,27 +1022,27 @@ On Error GoTo Err
         
     If rsProcesso.RecordCount <> 0 Then
         mskCadastro(1).Text = Format(rsProcesso.Fields(0), "000") & ""
-        txtCadastro(1).Text = rsProcesso.Fields(1)
+        txtcadastro(1).Text = rsProcesso.Fields(1)
         rsProcesso.MoveLast
         If rsProcesso.Fields(2) <> "Null" Then
             If mskCadastro(2).Text = "" Then Me.mskCadastro(2).Text = Format(rsProcesso.Fields(2) + 1, "000")
             If Status = "altera" Then
-                txtCadastro(2) = rsProcesso.Fields(3)
+                txtcadastro(2) = rsProcesso.Fields(3)
                 If rsProcesso.Fields(4) = "N" Then Combo1.Text = "Não"
                 If rsProcesso.Fields(4) = "S" Then Combo1.Text = "Sim"
-                If Not IsNull(rsProcesso.Fields(5)) Then txtCadastro(3) = rsProcesso.Fields(5) Else txtCadastro(3) = ""
-                If Not IsNull(rsProcesso.Fields(6)) Then txtCadastro(4) = rsProcesso.Fields(6) Else txtCadastro(4) = ""
+                If Not IsNull(rsProcesso.Fields(5)) Then txtcadastro(3) = rsProcesso.Fields(5) Else txtcadastro(3) = ""
+                If Not IsNull(rsProcesso.Fields(6)) Then txtcadastro(4) = rsProcesso.Fields(6) Else txtcadastro(4) = ""
                 'Combo2.Text = rsProcesso.Fields(5)
             Else
                 Combo1.Text = "Não"
-                txtCadastro(3) = ""
+                txtcadastro(3) = ""
                 'Combo2.Text = "Posição"
                 If mskCadastro(2).Text = "" Then Me.mskCadastro(2).Text = Format(rsProcesso.Fields(2) + 1, "000")
             End If
         Else
             If mskCadastro(2).Text = "" Then Me.mskCadastro(2).Text = Format(1, "000")
         End If
-        txtCadastro(2).SetFocus
+        txtcadastro(2).SetFocus
     End If
     mskCadastro(1).PromptInclude = True
     mskCadastro(2).PromptInclude = True
@@ -1106,7 +1083,7 @@ On Error GoTo Err
             mskCadastro(1) = Val(rsLocal.Fields(0))
             mskCadastro(1).Text = Format(mskCadastro(1), "000")
             mskCadastro(1).PromptInclude = True
-            txtCadastro(1).Text = rsLocal.Fields(1)
+            txtcadastro(1).Text = rsLocal.Fields(1)
         Else
             Msgbox "Processo não cadastrado", vbInformation, "ZEUS"
         End If
@@ -1129,16 +1106,16 @@ Private Sub TreeView1_DblClick()
     mskCadastro(2).PromptInclude = False
     mskCadastro(2) = ""
     mskCadastro(2).PromptInclude = True
-    txtCadastro(2) = ""
-    txtCadastro(4) = ""
+    txtcadastro(2) = ""
+    txtcadastro(4) = ""
     AlteraTreeview
 End Sub
 
 Private Sub txtCadastro_GotFocus(Index As Integer)
-    Dim X As Integer
-    For X = 1 To txtCadastro.Count - 1
-        txtCadastro(X).SelStart = 0
-        txtCadastro(X).SelLength = Len(txtCadastro(X).Text)
+    Dim x As Integer
+    For x = 1 To txtcadastro.Count - 1
+        txtcadastro(x).SelStart = 0
+        txtcadastro(x).SelLength = Len(txtcadastro(x).Text)
     Next
 End Sub
 

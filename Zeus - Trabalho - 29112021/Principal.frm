@@ -68,10 +68,8 @@ Begin VB.MDIForm Principal
       TabIndex        =   1
       Top             =   0
       Width           =   14235
-      _ExtentX        =   25109
-      _ExtentY        =   3069
-      BackColor       =   4210752
-      ForeColor       =   -2147483630
+      _extentx        =   25109
+      _extenty        =   3069
       Begin VB.Frame Frame7 
          Caption         =   "Parâmetros do Módulo Avaliador"
          Height          =   1695
@@ -2777,6 +2775,1882 @@ Begin VB.MDIForm Principal
          EndProperty
       EndProperty
    End
+   Begin MSComctlLib.ImageList ImageList 
+      Left            =   1680
+      Top             =   6960
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   56
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17E6435
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17E710F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17E7DE9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17E8AC3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17E979D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EA477
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EB151
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EBE2B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17ECB05
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17ED7DF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EE4B9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EF193
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17EFE6D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F0B47
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F1821
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F24FB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F31D5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F3EAF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F4B89
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F5863
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F653D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F7217
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F7EF1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F8BCB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17F98A5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FA57F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FB259
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FBF33
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FCC0D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FD8E7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FE061
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FED3B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":17FFA15
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18006EF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18013C9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18020A3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1802D7D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1803A57
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1804731
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180540B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1805C4D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18062C6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1806589
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1807263
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1807930
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180860A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18092E4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1809FBE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180AC98
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180B972
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180C64C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180D326
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180E000
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180ECDA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180F274
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":180FF4E
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList1 
+      Left            =   2280
+      Top             =   6960
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   72
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1810C28
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1820620
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":182CF52
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1839884
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1848BCA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18554FC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1864A11
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1872A1C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":187F34E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":188BC80
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18985B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18A4EE4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18B1816
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18BE148
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18CAA7A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18D73AC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18E7373
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":18F3CA5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19005D7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":190CF09
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":191AF14
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1927846
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1937C94
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19445C6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1950EF8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":195D82A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":196D7F1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":197A123
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1986A55
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1993387
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":199FCB9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19AC5EB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19BC09D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19CAC28
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19D755A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19E3E8C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19F07BE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":19FD0F0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A09A22
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A16354
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A22C86
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A2F5B8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A2F87B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A3C1AD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A508FC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A5D22E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A69B60
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A76492
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A82DC4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1A8F6F6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1AA232A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1AAEC5C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1AC2B1A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1ACF44C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1ADBD7E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1AE86B0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1AF4FE2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B01914
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B0E246
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B1AB78
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B274AA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B33DDC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B4070E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B4D040
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B59972
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B662A4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B72BD6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B7F508
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B8BE3A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1B9876C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BA8BBA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BB54EC
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList2 
+      Left            =   2880
+      Top             =   6960
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   56
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BC73E2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BD3D14
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BE0646
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BECF78
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1BF98AA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C061DC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C12B0E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C1F440
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C2BD72
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C386A4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C44FD6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C51908
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C5E23A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C6AB6C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C7749E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C83DD0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C90702
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1C9D034
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CA9966
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CB6298
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CC2BCA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CCF4FC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CDBE2E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CE8760
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1CF5092
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D019C4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D0E2F6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D1AC28
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D2755A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D33E8C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D407BE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D4D0F0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D59A22
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D66354
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D72C86
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D7F5B8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D8BEEA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1D9881C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DA514E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DB1A80
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DBE3B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DCACE4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DCAFA7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DD78D9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DE420B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DF0B3D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1DFD46F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E09DA1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E166D3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E23005
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E2F937
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E3C269
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E48B9B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E58BA5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E654D7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E71E09
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList7 
+      Left            =   3480
+      Top             =   6960
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   56
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E7E73B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E8B06D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1E9799F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EA42D1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EB0C03
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EBD535
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EC9E67
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1ED6799
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EE30CB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EEF9FD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1EFC32F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F08C61
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F15593
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F21EC5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F2E7F7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F3B129
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F47A5B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F5438D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F60CBF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F6D5F1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F79F23
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F86855
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F93187
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1F9FAB9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FAC3EB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FB8D1D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FC564F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FD1F81
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FDE8B3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FEB1E5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":1FF7B17
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2004449
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2010D7B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":201D6AD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2029FDF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2036911
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2043243
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":204FB75
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":205C4A7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2068DD9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":207570B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":208203D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2082300
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":208EC32
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":209B564
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20A7E96
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20B47C8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20C10FA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20CDA2C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20DA35E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20E6C90
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20F35C2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":20FFEF4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":210C826
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2119158
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2125A8A
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList8 
+      Left            =   4080
+      Top             =   6360
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   152
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21323BC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":213ECEE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":214B620
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2157F52
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2164884
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21711B6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":217DAE8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":218A41A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2197CB5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21A45E7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21B0F19
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21BD84B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21CA17D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21D6AAF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21E33E1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21EFD13
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":21FC645
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2208F77
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22158A9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2226926
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2233258
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":223FB8A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":224C4BC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2258DEE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2265720
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2272052
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":227E984
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":228B2B6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2297BE8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22A451A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22B0E4C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22BD77E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22CA0B0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22D69E2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22E3314
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22F268F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":22FEFC1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":230B8F3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2318225
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2324B57
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2331489
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":233DDBB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":234BEA3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23587D5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2365107
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2371A39
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":237E36B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":238AC9D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23975CF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23A3F01
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23B0833
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23BD165
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23C9A97
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23D63C9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23E2CFB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23EF62D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage57 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":23FBF5F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage58 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2408891
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage59 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24151C3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage60 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2421AF5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage61 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":242E427
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage62 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":243AD59
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage63 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":244768B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage64 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2453FBD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage65 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24608EF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage66 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":247033E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage67 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":247CC70
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage68 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24895A2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage69 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2495ED4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage70 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24A2806
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage71 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24AF138
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage72 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24BBA6A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage73 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24C839C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage74 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24D635B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage75 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24E2C8D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage76 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24EF5BF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage77 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":24FBEF1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage78 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2508823
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage79 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2515155
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage80 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2521A87
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage81 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":252E3B9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage82 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":253ACEB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage83 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":254761D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage84 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2553F4F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage85 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2560881
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage86 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":256D1B3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage87 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2579AE5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage88 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2586417
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage89 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2592D49
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage90 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":259F67B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage91 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25ABFAD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage92 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25B88DF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage93 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25C5211
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage94 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25D1B43
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage95 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25DE475
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage96 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25EADA7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage97 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":25F76D9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage98 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":260400B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage99 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":261093D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage100 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":261D26F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage101 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2629BA1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage102 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26364D3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage103 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2642E05
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage104 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":264F737
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage105 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":265C069
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage106 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":266899B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage107 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26752CD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage108 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2681BFF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage109 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":268E531
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage110 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":269AE63
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage111 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26AA8B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage112 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26B71E4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage113 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26C3B16
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage114 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26D0448
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage115 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26DCD7A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage116 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26E96AC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage117 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":26F5FDE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage118 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2702910
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage119 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27114E7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage120 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":271EA67
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage121 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":272B399
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage122 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2737CCB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage123 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27445FD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage124 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2750F2F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage125 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":275D861
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage126 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":276A193
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage127 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2776AC5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage128 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27833F7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage129 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27913B6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage130 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":279DCE8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage131 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27AA61A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage132 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27B6F4C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage133 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27C387E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage134 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27D01B0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage135 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27DCAE2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage136 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27E9414
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage137 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":27F5D46
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage138 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2802678
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage139 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":280EFAA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage140 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":281DCAF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage141 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":282C30F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage142 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2838C41
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage143 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2845573
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage144 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2851EA5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage145 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":285E7D7
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage146 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":286B109
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage147 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2877A3B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage148 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":288436D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage149 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2890C9F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage150 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":289D5D1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage151 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28A9F03
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage152 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28B6835
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.ImageList ImageList9 
+      Left            =   4080
+      Top             =   6960
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   32
+      ImageHeight     =   32
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   56
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28C3167
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28CFA99
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28DC3CB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28E8CFD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":28F562F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2901F61
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":290E893
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":291B1C5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2929D9C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29366CE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2943000
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":294F932
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":295C264
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2968B96
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29754C8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2981DFA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":298E72C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":299B05E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29A7990
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29B42C2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29C0BF4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29CD526
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29D9E58
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29E678A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29F30BC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":29FF9EE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A0C320
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A18C52
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A272B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A33BE4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A40516
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A4CE48
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A5977A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A660AC
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A729DE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A7F310
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A8BC42
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2A98574
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage39 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AA4EA6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage40 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AB17D8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage41 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AB201A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage42 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2ABE94C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage43 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2ABEC0F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage44 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2ACCBCE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage45 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AD9500
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage46 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AE5E32
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage47 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AF2764
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage48 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2AFF096
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage49 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B0B9C8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage50 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B182FA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage51 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B24C2C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage52 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B3155E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage53 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B3DE90
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage54 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B4A7C2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage55 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B570F4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage56 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "Principal.frx":2B63A26
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
 End
 Attribute VB_Name = "Principal"
 Attribute VB_GlobalNameSpace = False
@@ -2785,7 +4659,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Dim Tema As String
-Private rsConf As New ADODB.Recordset
+'Private rsConf As New ADODB.Recordset
 Private SqlConf As String
 Private vFechar As Integer
 Private rsCandidatos As New ADODB.Recordset
@@ -2873,13 +4747,13 @@ Private Sub MDIForm_Load()
     ElseIf vColectionIcons = 4 Then
         Ribbon.ImageList = ImageList6
     ElseIf vColectionIcons = 5 Then
-        Ribbon.ImageList = ImageList3
+        Ribbon.ImageList = ImageList8
     End If
     '# Set Buttons on Center verticaly    (True = Center, False(Default) = Align on Top)
     Ribbon.ButtonCenter = False
 
     abreConfMenu
-    montaMenu
+    montaMenu Ribbon
     fechaConfMenu
     montaTabMenu
     Ribbon.Refresh
@@ -3516,9 +5390,9 @@ End Sub
 
 Private Sub LoadEXE(Dir As String)
 On Error GoTo ERRO
-    Dim X As Integer
+    Dim x As Integer
     Dim nofreeze As Integer
-    X = Shell(Dir, 1)
+    x = Shell(Dir, 1)
     nofreeze = DoEvents()
     Exit Sub
 ERRO:
@@ -3526,139 +5400,139 @@ ERRO:
    Msgbox "Arquivo de HELP não foi localizado !!! Verifique sua localização ...", vbCritical, "Atenção"
 End Sub
 
-Private Sub montaTabMenu()
-On Error GoTo Err
-    Dim rsMenu As New ADODB.Recordset
-    Dim SqlMenu As String
-    Dim rsDeletar As New ADODB.Recordset
-    Dim sqlDeletar As String
-    Dim rsCopia As New ADODB.Recordset
-    Dim sqlCopia As String
-    
-    
-    Dim rsMenuExpert As New ADODB.Recordset
-    Dim sqlMenuExpert As String
-    
-    sqlMenuExpert = "Select * from tbMenuConf order by idsub"
-    rsMenuExpert.Open sqlMenuExpert, cnBanco, adOpenKeyset, adLockReadOnly
-10  cnBanco.BeginTrans
-    sqlDeletar = "Delete from tbMenu"
-    rsDeletar.Open sqlDeletar, cnBanco
-    
-    If rsMenuExpert.RecordCount > 0 Then
-        sqlCopia = "Select * into tbConfGrupoCOPIA from tbConfGrupo"
-        rsCopia.Open sqlCopia, cnBanco
+'Private Sub montaTabMenu()
+'On Error GoTo Err
+'    Dim rsMenu As New ADODB.Recordset
+'    Dim SqlMenu As String
+'    Dim rsDeletar As New ADODB.Recordset
+'    Dim sqlDeletar As String
+'    Dim rsCopia As New ADODB.Recordset
+'    Dim sqlCopia As String
+'
+'
+'    Dim rsMenuExpert As New ADODB.Recordset
+'    Dim sqlMenuExpert As String
+'
+'    sqlMenuExpert = "Select * from tbMenuConf order by idsub"
+'    rsMenuExpert.Open sqlMenuExpert, cnBanco, adOpenKeyset, adLockReadOnly
+'10  cnBanco.BeginTrans
+'    sqlDeletar = "Delete from tbMenu"
+'    rsDeletar.Open sqlDeletar, cnBanco
+'
+'    If rsMenuExpert.RecordCount > 0 Then
+'        sqlCopia = "Select * into tbConfGrupoCOPIA from tbConfGrupo"
+'        rsCopia.Open sqlCopia, cnBanco
+'
+'        sqlDeletar = "Delete from tbConfGrupo where tbconfgrupo.tipo <> 'CHK' and tbconfgrupo.idgrupo = '" & XCodGrp & "'"
+'        rsDeletar.Open sqlDeletar, cnBanco
+'        While Not rsMenuExpert.EOF
+'            SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values('" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','" & rsMenuExpert.Fields(5) & "')"
+'            rsMenu.Open SqlMenu, cnBanco
+'
+'            SqlMenu = "Insert into tbConfGrupo(idgrupo,idmenu,idsub,tipo,nome,status,codcoligada,icon) Values(" & XCodGrp & ",'" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','S','" & rsMenuExpert.Fields(5) & "','" & rsMenuExpert.Fields(6) & "')"
+'            rsMenu.Open SqlMenu, cnBanco
+'
+'            rsMenuExpert.MoveNext
+'        Wend
+'        rsMenuExpert.Close
+'        Set rsMenuExpert = Nothing
+'
+'        'Restaurando Permissões
+'        sqlCopia = "Select * from tbConfGrupoCOPIA"
+'        rsCopia.Open sqlCopia, cnBanco, adOpenKeyset, adLockReadOnly
+'        While Not rsCopia.EOF
+'            SqlMenu = "Update tbConfGrupo set status = '" & rsCopia.Fields(5) & "',incluir = '" & rsCopia.Fields(9) & "',editar = '" & rsCopia.Fields(10) & "',excluir = '" & rsCopia.Fields(11) & "',salvar = '" & rsCopia.Fields(12) & "',imprimir = '" & rsCopia.Fields(13) & "',filtrar = '" & rsCopia.Fields(14) & "' where idgrupo = '" & rsCopia.Fields(0) & "' and idmenu = '" & rsCopia.Fields(1) & "' and idsub = '" & rsCopia.Fields(2) & "'"
+'            rsMenu.Open SqlMenu, cnBanco
+'            rsCopia.MoveNext
+'        Wend
+'        rsCopia.Close
+'        Set rsCopia = Nothing
+'
+'        sqlCopia = "Drop table tbConfGrupoCOPIA"
+'        rsCopia.Open sqlCopia, cnBanco
+'
+'    Else
+'        SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','TAB','Cadastros','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','CAT','Primários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'02','CAT','Secundários','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0101','BUT','Ramo de atividades','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0102','BUT','Clientes','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0103','BUT','Transportadoras','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0104','BUT','Tipo material','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0205','BUT','Materiais','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0206','BUT','Itens verificação','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0207','BUT','Projetos','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0208','BUT','Processos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'02','TAB','Orçamentos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'11','CAT','Vendas','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'1111','BUT','Serviços','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'03','TAB','Planejamento','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'21','CAT','Planejamento e Controle da Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2121','BUT','FCE','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2122','BUT','LM','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2123','BUT','LD','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2124','BUT','OS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2125','BUT','Controle de Desenhos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'04','TAB','Produção','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'31','CAT','Acompanhamento de Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3131','BUT','OS Acompanhamento','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3132','BUT','Evolução','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'05','TAB','Inspeção/Expedição','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'41','CAT','Emissão de Relatórios','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4141','BUT','Emitir relatório','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4142','BUT','Imprimir relatório','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'06','TAB','Configurações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'51','CAT','Parametrizações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'52','CAT','Aparência','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5151','BUT','Sistema','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5152','BUT','Grupos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5153','BUT','Usuários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5254','BUT','Menu','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5255','BUT','Skin','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5256','BUT','Fundo','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'07','TAB','Sobre','" & vCodcoligada & "');" & _
+'                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'61','CAT','Sobre','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6161','BUT','Sobre ZEUS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6162','BUT','Ajuda do ZEUS','" & vCodcoligada & "');"
+'
+'        rsMenu.Open SqlMenu, cnBanco
+'    End If
+'    cnBanco.CommitTrans
+'    Set rsMenu = Nothing
+'    Exit Sub
+'Err:
+'    If Err.Number = -2147467259 Then
+'        While reestabeleceConexao = False
+'        Wend
+'        GoTo 10
+'    Else
+'        Msgbox Err.Number & " - " & Err.Description
+'        Resume
+'    End If
+'End Sub
 
-        sqlDeletar = "Delete from tbConfGrupo where tbconfgrupo.tipo <> 'CHK' and tbconfgrupo.idgrupo = '" & XCodGrp & "'"
-        rsDeletar.Open sqlDeletar, cnBanco
-        While Not rsMenuExpert.EOF
-            SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values('" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','" & rsMenuExpert.Fields(5) & "')"
-            rsMenu.Open SqlMenu, cnBanco
+'Private Sub abreConfMenu()
+'On Error GoTo Err
+''    SqlConf = "Select * from tbconfgrupo Where tbconfgrupo.codcoligada = '" & vCodcoligada & "' and tbconfgrupo.idgrupo = '" & XCodGrp & "'order by id"
+'    SqlConf = "Select * from tbconfgrupo Where tbconfgrupo.idgrupo = '" & XCodGrp & "' and codcoligada = " & vCodcoligada & " order by idsub"
+'    rsConf.Open SqlConf, cnBanco, adOpenKeyset, adLockReadOnly
+'    Exit Sub
+'Err:
+'    If Err.Number = -2147467259 Or Err.Number = 3709 Then
+'        While reestabeleceConexao = False
+'        Wend
+'        Resume
+'    Else
+'        Msgbox Err.Number & " - " & Err.Description
+'        Resume
+'    End If
+'End Sub
 
-            SqlMenu = "Insert into tbConfGrupo(idgrupo,idmenu,idsub,tipo,nome,status,codcoligada,icon) Values(" & XCodGrp & ",'" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','S','" & rsMenuExpert.Fields(5) & "','" & rsMenuExpert.Fields(6) & "')"
-            rsMenu.Open SqlMenu, cnBanco
+'Private Sub fechaConfMenu()
+'    rsConf.Close
+'    Set rsConf = Nothing
+'End Sub
 
-            rsMenuExpert.MoveNext
-        Wend
-        rsMenuExpert.Close
-        Set rsMenuExpert = Nothing
-
-        'Restaurando Permissões
-        sqlCopia = "Select * from tbConfGrupoCOPIA"
-        rsCopia.Open sqlCopia, cnBanco, adOpenKeyset, adLockReadOnly
-        While Not rsCopia.EOF
-            SqlMenu = "Update tbConfGrupo set status = '" & rsCopia.Fields(5) & "',incluir = '" & rsCopia.Fields(9) & "',editar = '" & rsCopia.Fields(10) & "',excluir = '" & rsCopia.Fields(11) & "',salvar = '" & rsCopia.Fields(12) & "',imprimir = '" & rsCopia.Fields(13) & "',filtrar = '" & rsCopia.Fields(14) & "' where idgrupo = '" & rsCopia.Fields(0) & "' and idmenu = '" & rsCopia.Fields(1) & "' and idsub = '" & rsCopia.Fields(2) & "'"
-            rsMenu.Open SqlMenu, cnBanco
-            rsCopia.MoveNext
-        Wend
-        rsCopia.Close
-        Set rsCopia = Nothing
-
-        sqlCopia = "Drop table tbConfGrupoCOPIA"
-        rsCopia.Open sqlCopia, cnBanco
-    
-    Else
-        SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','TAB','Cadastros','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','CAT','Primários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'02','CAT','Secundários','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0101','BUT','Ramo de atividades','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0102','BUT','Clientes','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0103','BUT','Transportadoras','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0104','BUT','Tipo material','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0205','BUT','Materiais','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0206','BUT','Itens verificação','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0207','BUT','Projetos','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0208','BUT','Processos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'02','TAB','Orçamentos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'11','CAT','Vendas','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'1111','BUT','Serviços','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'03','TAB','Planejamento','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'21','CAT','Planejamento e Controle da Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2121','BUT','FCE','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2122','BUT','LM','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2123','BUT','LD','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2124','BUT','OS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2125','BUT','Controle de Desenhos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'04','TAB','Produção','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'31','CAT','Acompanhamento de Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3131','BUT','OS Acompanhamento','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3132','BUT','Evolução','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'05','TAB','Inspeção/Expedição','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'41','CAT','Emissão de Relatórios','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4141','BUT','Emitir relatório','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4142','BUT','Imprimir relatório','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'06','TAB','Configurações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'51','CAT','Parametrizações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'52','CAT','Aparência','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5151','BUT','Sistema','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5152','BUT','Grupos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5153','BUT','Usuários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5254','BUT','Menu','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5255','BUT','Skin','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5256','BUT','Fundo','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'07','TAB','Sobre','" & vCodcoligada & "');" & _
-                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'61','CAT','Sobre','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6161','BUT','Sobre ZEUS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6162','BUT','Ajuda do ZEUS','" & vCodcoligada & "');"
-        
-        rsMenu.Open SqlMenu, cnBanco
-    End If
-    cnBanco.CommitTrans
-    Set rsMenu = Nothing
-    Exit Sub
-Err:
-    If Err.Number = -2147467259 Then
-        While reestabeleceConexao = False
-        Wend
-        GoTo 10
-    Else
-        Msgbox Err.Number & " - " & Err.Description
-        Resume
-    End If
-End Sub
-
-Private Sub abreConfMenu()
-On Error GoTo Err
-'    SqlConf = "Select * from tbconfgrupo Where tbconfgrupo.codcoligada = '" & vCodcoligada & "' and tbconfgrupo.idgrupo = '" & XCodGrp & "'order by id"
-    SqlConf = "Select * from tbconfgrupo Where tbconfgrupo.idgrupo = '" & XCodGrp & "' and codcoligada = " & vCodcoligada & " order by idsub"
-    rsConf.Open SqlConf, cnBanco, adOpenKeyset, adLockReadOnly
-    Exit Sub
-Err:
-    If Err.Number = -2147467259 Or Err.Number = 3709 Then
-        While reestabeleceConexao = False
-        Wend
-        Resume
-    Else
-        Msgbox Err.Number & " - " & Err.Description
-        Resume
-    End If
-End Sub
-
-Private Sub fechaConfMenu()
-    rsConf.Close
-    Set rsConf = Nothing
-End Sub
-
-Private Sub montaMenu()
-    Dim vMenu As String
-    While Not rsConf.EOF
-        If rsConf.Fields(5) = "S" Then
-            If rsConf.Fields(3) <> "CHK" Then
-                If rsConf.Fields(3) = "TAB" Then
-                    Ribbon.AddTab rsConf.Fields(1), rsConf.Fields(4)
-                End If
-                If rsConf.Fields(3) = "CAT" Then
-                    Ribbon.AddCat Right$(rsConf.Fields(2), 2), rsConf.Fields(1), rsConf.Fields(4), False
-                End If
-                If rsConf.Fields(3) = "BUT" Then
-                    If Len(rsConf.Fields(2)) = 4 Then
-                        Ribbon.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 1, 2), rsConf.Fields(4), rsConf.Fields(8)
-                    Else
-                        vMenu = Val(Mid$(rsConf.Fields(2), 3, 3))
-                        If Len(vMenu) <> 3 Then
-                            Ribbon.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 4, 2), rsConf.Fields(4), rsConf.Fields(8)
-                        Else
-                            Ribbon.AddButton Right$(rsConf.Fields(2), 3), Mid$(rsConf.Fields(2), 3, 3), rsConf.Fields(4), rsConf.Fields(8)
-                        End If
-                    End If
-                End If
-            End If
-        End If
-        rsConf.MoveNext
-    Wend
-    Ribbon.Refresh
-End Sub
+'Private Sub montaMenu()
+'    Dim vMenu As String
+'    While Not rsConf.EOF
+'        If rsConf.Fields(5) = "S" Then
+'            If rsConf.Fields(3) <> "CHK" Then
+'                If rsConf.Fields(3) = "TAB" Then
+'                    Ribbon.AddTab rsConf.Fields(1), rsConf.Fields(4)
+'                End If
+'                If rsConf.Fields(3) = "CAT" Then
+'                    Ribbon.AddCat Right$(rsConf.Fields(2), 2), rsConf.Fields(1), rsConf.Fields(4), False
+'                End If
+'                If rsConf.Fields(3) = "BUT" Then
+'                    If Len(rsConf.Fields(2)) = 4 Then
+'                        Ribbon.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 1, 2), rsConf.Fields(4), rsConf.Fields(8)
+'                    Else
+'                        vMenu = Val(Mid$(rsConf.Fields(2), 3, 3))
+'                        If Len(vMenu) <> 3 Then
+'                            Ribbon.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 4, 2), rsConf.Fields(4), rsConf.Fields(8)
+'                        Else
+'                            Ribbon.AddButton Right$(rsConf.Fields(2), 3), Mid$(rsConf.Fields(2), 3, 3), rsConf.Fields(4), rsConf.Fields(8)
+'                        End If
+'                    End If
+'                End If
+'            End If
+'        End If
+'        rsConf.MoveNext
+'    Wend
+'    Ribbon.Refresh
+'End Sub
 
 Private Function atualizaCandidatos()
 On Error GoTo Err

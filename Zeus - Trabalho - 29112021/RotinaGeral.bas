@@ -301,13 +301,13 @@ Err:
 End Sub
 
 Public Sub localizaCorTipoFCE(nomeTipoFCE As String)
-    Dim X As Integer
+    Dim x As Integer
     vIDCorTipoFCE = ""
-    For X = 0 To 10
-        If nomeTipoFCE = vCorTipoFCE(X, 0) Then
-            vIDCorTipoFCE = vCorTipoFCE(X, 1)
+    For x = 0 To 10
+        If nomeTipoFCE = vCorTipoFCE(x, 0) Then
+            vIDCorTipoFCE = vCorTipoFCE(x, 1)
         End If
-        If vCorTipoFCE(X, 0) = "" Then Exit For
+        If vCorTipoFCE(x, 0) = "" Then Exit For
     Next
 End Sub
 
@@ -315,7 +315,7 @@ Public Sub CompoeCombo(Combo As ComboBox, Tabela, campo, Campo1)
 On Error GoTo Err
     Dim sql As String
     Dim rsTabela As New ADODB.Recordset
-    Dim X As Integer
+    Dim x As Integer
     'Se a tabela for tbsetores, somente irá exibir os setores ativos
     If Tabela = "tbsetores" Then
         sql = "Select * from " & Tabela & " where codcoligada = '" & vCodcoligada & "' and ativo = 'S' Order By " & Campo1
@@ -326,7 +326,7 @@ On Error GoTo Err
     If Not rsTabela.EOF() Then
 '        Combo.Clear
         rsTabela.MoveFirst
-        For X = 0 To rsTabela.RecordCount - 1
+        For x = 0 To rsTabela.RecordCount - 1
             Combo.AddItem rsTabela.Fields(Campo1)
             Combo.ItemData(Combo.NewIndex) = Val(rsTabela.Fields(0))
             rsTabela.MoveNext
@@ -350,13 +350,13 @@ Public Sub CompoeCombo1(Combo As ComboBox, Tabela, campo, Campo1)
 On Error GoTo Err
     Dim sql As String
     Dim rsTabela As New ADODB.Recordset
-    Dim X As Integer
+    Dim x As Integer
     sql = "Select * from " & Tabela & " where codcoligada = '" & vCodcoligada & "' Order By " & campo
     rsTabela.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsTabela.EOF() Then
 '        Combo.Clear
         rsTabela.MoveFirst
-        For X = 0 To rsTabela.RecordCount - 1
+        For x = 0 To rsTabela.RecordCount - 1
             Combo.AddItem Format(rsTabela.Fields(campo), "000000") & "-" & rsTabela.Fields(Campo1)
             Combo.ItemData(Combo.NewIndex) = Val(rsTabela.Fields(0))
             rsTabela.MoveNext
@@ -381,7 +381,7 @@ On Error GoTo Err
     'Idependente de coligada
     Dim sql As String
     Dim rsTabela As New ADODB.Recordset
-    Dim X As Integer
+    Dim x As Integer
     'Se a tabela for tbsetores, somente irá exibir os setores ativos
     If Tabela = "tbsetores" Then
         sql = "Select * from " & Tabela & " where ativo = 'S' Order By " & Campo1
@@ -396,7 +396,7 @@ On Error GoTo Err
     If Not rsTabela.EOF() Then
 '        Combo.Clear
         rsTabela.MoveFirst
-        For X = 0 To rsTabela.RecordCount - 1
+        For x = 0 To rsTabela.RecordCount - 1
             Combo.AddItem rsTabela.Fields(0)
             Combo.ItemData(Combo.NewIndex) = Val(rsTabela.Fields(1))
             rsTabela.MoveNext
@@ -418,10 +418,10 @@ Err:
 End Sub
 
 Public Sub CompoeCampoCombo(Codigo, Combo As ComboBox)
-    Dim X As Integer
-    For X = 0 To Combo.ListCount - 1
-        Combo.ListIndex = X
-        If Combo.List(X) = Codigo Then
+    Dim x As Integer
+    For x = 0 To Combo.ListCount - 1
+        Combo.ListIndex = x
+        If Combo.List(x) = Codigo Then
             Exit For
         End If
     Next
@@ -452,13 +452,13 @@ Public Sub CompoeComboCC(Combo As ComboBox)
 On Error GoTo Err
     Dim sql As String
     Dim rsTabela As New ADODB.Recordset
-    Dim X As Integer
+    Dim x As Integer
     sql = "select a.NOME from " & vBancoTotvs & ".dbo.GCCUSTO as a where a.ATIVO = 'T' and substring(a.nome,1,4) = '3000' or substring(a.nome,1,4) = '4000' or substring(a.nome,1,4) = '7000' or substring(a.nome,1,4) = '5000'"
     rsTabela.Open sql, cnBanco, adOpenKeyset, adLockReadOnly
     Combo.Clear
     If Not rsTabela.EOF() Then
         rsTabela.MoveFirst
-        For X = 0 To rsTabela.RecordCount - 1
+        For x = 0 To rsTabela.RecordCount - 1
             Combo.AddItem rsTabela.Fields(0)
             rsTabela.MoveNext
         Next
@@ -483,12 +483,12 @@ End Sub
 Public Sub CompoeComboSQL(Combo As ComboBox, vSql As String)
 On Error GoTo Err
     Dim rsTabela As New ADODB.Recordset
-    Dim X As Integer
+    Dim x As Integer
     rsTabela.Open vSql, cnBanco, adOpenKeyset, adLockReadOnly
     Combo.Clear
     If Not rsTabela.EOF() Then
         rsTabela.MoveFirst
-        For X = 0 To rsTabela.RecordCount - 1
+        For x = 0 To rsTabela.RecordCount - 1
             Combo.AddItem rsTabela.Fields(0)
             rsTabela.MoveNext
         Next
@@ -526,10 +526,10 @@ End Function
 
 Public Function NameOfPC(MachineName As String) As Long
     Dim NameSize As Long
-    Dim X As Long
+    Dim x As Long
     MachineName = Space$(16)
     NameSize = Len(MachineName)
-    X = GetComputerName(MachineName, NameSize)
+    x = GetComputerName(MachineName, NameSize)
 End Function
 
 Public Function CriarTabelasADO() As Boolean
@@ -551,7 +551,7 @@ On Error GoTo Err
     Dim SqlUsuario As String
     Dim SqlGrupo As String
     Dim SqlConfGrupo As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
     sServerName = frmSplash.Combo1.Text
     sDatabaseName = frmSplash.Combo2.Text
@@ -1280,6 +1280,12 @@ On Error GoTo Err
     "multiplic CHAR(1) NULL," & _
     "codcoligada INT NOT NULL," & _
     "PRIMARY KEY (codigo,codcoligada))"
+    
+    oConn.Execute "CREATE TABLE " & sDatabaseName & ".dbo.TBUSUARIOCOLECAOICONES(" & _
+    "ID INT NOT NULL IDENTITY," & _
+    "IDUSUARIO INT NOT NULL," & _
+    "IDCOLECAOICON INT NOT NULL," & _
+    "PRIMARY KEY (ID))"
 
     oConn.Execute "CREATE TABLE " & sDatabaseName & ".dbo.tbGrupo(" & _
     "codigo NUMERIC NOT NULL," & _
@@ -1360,16 +1366,16 @@ Err:
 End Function
 
 Public Function DesabBotoesN1(Frm As Form)
-    Dim X As Integer
-    For X = 0 To Frm.cmdconsulta.Count - 1
-        Frm.cmdconsulta(X).UseGreyscale = True
+    Dim x As Integer
+    For x = 0 To Frm.cmdconsulta.Count - 1
+        Frm.cmdconsulta(x).UseGreyscale = True
     Next
 End Function
 
 Public Function HabBotoesN1(Frm As Form)
-    Dim X As Integer
-    For X = 0 To Frm.cmdconsulta.Count - 1
-        Frm.cmdconsulta(X).UseGreyscale = False
+    Dim x As Integer
+    For x = 0 To Frm.cmdconsulta.Count - 1
+        Frm.cmdconsulta(x).UseGreyscale = False
     Next
 End Function
 
@@ -1611,9 +1617,9 @@ Public Function DimensionaPPS()
     frmProgramacao.Frame1.Move 7020, frmProgramacao.Height - 1700, 3975, 1095
     frmProgramacao.Frame2.Move 11100, frmProgramacao.Height - 1700, 6615, 1095
     frmProgramacao.Frame3.Move 4400, frmProgramacao.Height - 1700, 2535, 1095
-    frmProgramacao.cmdCadastro(12).Move 120, frmProgramacao.Height - 1350, 615, 615
-    frmProgramacao.cmdCadastro(13).Move 735, frmProgramacao.Height - 1350, 615, 615
-    frmProgramacao.cmdCadastro(0).Move 1350, frmProgramacao.Height - 1350, 615, 615
+    frmProgramacao.cmdcadastro(12).Move 120, frmProgramacao.Height - 1350, 615, 615
+    frmProgramacao.cmdcadastro(13).Move 735, frmProgramacao.Height - 1350, 615, 615
+    frmProgramacao.cmdcadastro(0).Move 1350, frmProgramacao.Height - 1350, 615, 615
     frmProgramacao.Frame4.Move 2120, frmProgramacao.Height - 1700, 1935, 1095
     frmProgramacao.Frame5.Move 17800, frmProgramacao.Height - 1700, 3935, 1095
 End Function
@@ -1635,8 +1641,8 @@ Public Function DimensionaFormInsp()
     
     chamaForm.Frame1.Move chamaForm.Frame1.Left, chamaForm.Frame1.Top, chamaForm.Frame1.Width, chamaForm.Height - 2485
     
-    chamaForm.cmdCadastro(4).Move chamaForm.cmdCadastro(4).Left, chamaForm.Frame3.Height + 250
-    chamaForm.cmdCadastro(6).Move chamaForm.cmdCadastro(6).Left, chamaForm.Frame3.Height + 250
+    chamaForm.cmdcadastro(4).Move chamaForm.cmdcadastro(4).Left, chamaForm.Frame3.Height + 250
+    chamaForm.cmdcadastro(6).Move chamaForm.cmdcadastro(6).Left, chamaForm.Frame3.Height + 250
 End Function
 
 Public Function DimensionaFormExp(vForm As Form)
@@ -1669,15 +1675,15 @@ Public Function DimensionaFormExp(vForm As Form)
 
     vForm.SkinLabel8.Move vForm.SkinLabel8.Left, vForm.Frame3.Height - 800, vForm.SkinLabel8.Width, vForm.SkinLabel8.Height
     vForm.SkinLabel29.Move vForm.SkinLabel29.Left, vForm.Frame3.Height - 800, vForm.SkinLabel29.Width, vForm.SkinLabel29.Height
-    vForm.cmdCadastro(4).Move vForm.cmdCadastro(4).Left, vForm.Frame4.Height + 3350
-    vForm.cmdCadastro(6).Move vForm.cmdCadastro(6).Left, vForm.Frame4.Height + 3350
+    vForm.cmdcadastro(4).Move vForm.cmdcadastro(4).Left, vForm.Frame4.Height + 3350
+    vForm.cmdcadastro(6).Move vForm.cmdcadastro(6).Left, vForm.Frame4.Height + 3350
 '    If vForm.txtcadastro(16).Top > vForm.Frame5.Height Then
     If vForm.Frame4.Height < 4575 Then
         vForm.Frame4.Move vForm.Frame4.Left, vForm.Frame4.Top, vForm.Frame4.Width, vForm.Height - 4000
-        vForm.cmdCadastro(4).Move vForm.Frame3.Left, vForm.Frame4.Height + 3350
-        vForm.cmdCadastro(6).Move vForm.Frame3.Left + 615, vForm.Frame4.Height + 3350
-        vForm.cmdCadastro(4).Move vForm.cmdCadastro(4).Left, vForm.Frame3.Height + 300
-        vForm.cmdCadastro(6).Move vForm.cmdCadastro(6).Left, vForm.Frame3.Height + 300
+        vForm.cmdcadastro(4).Move vForm.Frame3.Left, vForm.Frame4.Height + 3350
+        vForm.cmdcadastro(6).Move vForm.Frame3.Left + 615, vForm.Frame4.Height + 3350
+        vForm.cmdcadastro(4).Move vForm.cmdcadastro(4).Left, vForm.Frame3.Height + 300
+        vForm.cmdcadastro(6).Move vForm.cmdcadastro(6).Left, vForm.Frame3.Height + 300
     End If
 End Function
 
@@ -1696,27 +1702,27 @@ End Function
 'End Function
 
 Public Function MontaCabecalhoLVTeste(vListview As Listview)
-    Dim X As Integer
+    Dim x As Integer
     'Limpa o cabeçalho antes de compor novamente
     vListview.ColumnHeaders.Clear
     QtdColReal = 0
     With vListview.ColumnHeaders
-        For X = 0 To 20
-            If NomeColLV(X) = "" Then Exit Function
-            .Add , , NomeColLV(X), Len(NomeColLV(X)) * 144
+        For x = 0 To 20
+            If NomeColLV(x) = "" Then Exit Function
+            .Add , , NomeColLV(x), Len(NomeColLV(x)) * 144
             QtdColReal = QtdColReal + 1
         Next
     End With
 End Function
 
 Public Function contaColLVTeste(vListview As Listview)
-    Dim X As Integer
+    Dim x As Integer
     'Limpa o cabeçalho antes de compor novamente
     'vListview.ColumnHeaders.Clear
     QtdColReal = 0
     With vListview.ColumnHeaders
-        For X = 0 To 20
-            If NomeColLV(X) = "" Then Exit Function
+        For x = 0 To 20
+            If NomeColLV(x) = "" Then Exit Function
             QtdColReal = QtdColReal + 1
         Next
     End With
@@ -1771,24 +1777,24 @@ On Error GoTo Err
     ' Declaração de variaveis
     Dim rsListview As New ADODB.Recordset ' Variavel que vai receber os dados da tabela
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     rsListview.Open SqlLV, cnBanco, adOpenKeyset, adLockReadOnly
     vListview.ListItems.Clear 'Limpa o listview
     If rsListview.RecordCount <> 0 Then Principal.ProgressBar1.Max = rsListview.RecordCount
-    X = 0
+    x = 0
     While Not rsListview.EOF
-        Y = 0
-        Principal.ProgressBar1.Value = X
+        y = 0
+        Principal.ProgressBar1.Value = x
         If ZeroPriCol = "S" Then
-            If Not IsNull(rsListview(Y)) Then Set ItemLst = vListview.ListItems.Add(, , Format(rsListview(Y), "000000")) Else Set ItemLst = vListview.ListItems.Add(, , "-")
+            If Not IsNull(rsListview(y)) Then Set ItemLst = vListview.ListItems.Add(, , Format(rsListview(y), "000000")) Else Set ItemLst = vListview.ListItems.Add(, , "-")
         Else
-            If Not IsNull(rsListview(Y)) Then Set ItemLst = vListview.ListItems.Add(, , rsListview(Y)) Else Set ItemLst = vListview.ListItems.Add(, , "-")
+            If Not IsNull(rsListview(y)) Then Set ItemLst = vListview.ListItems.Add(, , rsListview(y)) Else Set ItemLst = vListview.ListItems.Add(, , "-")
         End If
-        For Y = 1 To QtdColReal - 1
-            If Not IsNull(rsListview.Fields(Y)) Then ItemLst.SubItems(Y) = rsListview.Fields(Y) Else ItemLst.SubItems(Y) = "-"
+        For y = 1 To QtdColReal - 1
+            If Not IsNull(rsListview.Fields(y)) Then ItemLst.SubItems(y) = rsListview.Fields(y) Else ItemLst.SubItems(y) = "-"
         Next
         rsListview.MoveNext
-        X = X + 1
+        x = x + 1
     Wend
     'NAO EXECUTAR A LINHA ABAIXO AO ENTRAR NO FILTRO
     If vControlaDim < 8 Then LV_AutoSizeColumnTeste vListview
@@ -1813,12 +1819,12 @@ Public Function carregaCoresTipoFCE()
 On Error GoTo Err
     Dim rsCorTipoFCE As New ADODB.Recordset
     Dim sqlCorTipoFCE As String
-    Dim X As Integer
+    Dim x As Integer
     sqlCorTipoFCE = "select nome,cor from tbTipoFCE"
     rsCorTipoFCE.Open sqlCorTipoFCE, cnBanco, adOpenKeyset, adLockReadOnly
-    For X = 0 To rsCorTipoFCE.RecordCount - 1
-        vCorTipoFCE(X, 0) = rsCorTipoFCE.Fields(0)
-        vCorTipoFCE(X, 1) = rsCorTipoFCE.Fields(1)
+    For x = 0 To rsCorTipoFCE.RecordCount - 1
+        vCorTipoFCE(x, 0) = rsCorTipoFCE.Fields(0)
+        vCorTipoFCE(x, 1) = rsCorTipoFCE.Fields(1)
         rsCorTipoFCE.MoveNext
     Next
     rsCorTipoFCE.Close
@@ -1915,13 +1921,13 @@ Private Function guardaLinhaTipo(Listview As Listview, vColuna As Integer, vLinh
 End Function
 
 Public Function limpaGuardaLinhaTipo()
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
 '    For X = LBound(vQualquerDado) To UBound(vQualquerDado)
-    For X = 0 To 5000
-        For Y = 0 To 1
-            vGuardaLinhaTipo(X, Y) = ""
+    For x = 0 To 5000
+        For y = 0 To 1
+            vGuardaLinhaTipo(x, y) = ""
         Next
-    Next X
+    Next x
 End Function
 
 ''ESSA FUNCTION FOI SUBSTITUIDA PELA FUNCTION ABAIXO QUE TRABALHA COM OS COMPONENTES CRIADOS DINAMICAMENTE
@@ -2095,18 +2101,18 @@ End Function
 Public Function PersonaColLVTeste(posCol As Integer, negritoCol As String, corCol As String, caracterCol As String, imageCol As String, formataColZero As String, formataColDecimal As String, alinhaCol As String, vListview As Listview)
     On Error Resume Next
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Dim Y As Integer, X As Integer
-    Y = vListview.ListItems.Count
-    For X = 1 To Y
-        Principal.ProgressBar1.Value = X
-        Set ItemLst = vListview.ListItems.Item(X)
+    Dim y As Integer, x As Integer
+    y = vListview.ListItems.Count
+    For x = 1 To y
+        Principal.ProgressBar1.Value = x
+        Set ItemLst = vListview.ListItems.Item(x)
         'NEGRITO NOS ITENS DA COLUNA
         If negritoCol = "S" Then ItemLst.ListSubItems(posCol).Bold = True
         
         If corCol = "P" And ItemLst.ListSubItems(posCol) <> "-" Then
             'MUDA COR DAS LINHAS DO LISTVIEW PARA IDENTIFICAR O TIPO DE FCE
             'MudaCorListTeste vListview, posCol, X
-            guardaLinhaTipo vListview, posCol, X
+            guardaLinhaTipo vListview, posCol, x
         End If
         
         'COR VERDE/VERMELHO NOS ITENS DA COLUNA
@@ -2289,15 +2295,15 @@ End Sub
 
 Public Sub ExcluirItemLV(LV As Listview)
 On Error Resume Next
-    Dim X As Integer, Y As Integer
-    Y = LV.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If LV.ListItems.Item(X).Selected = True Then
+    Dim x As Integer, y As Integer
+    y = LV.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If LV.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    LV.ListItems.Remove (X)
+    LV.ListItems.Remove (x)
 End Sub
 
 ''ESSA FUNCTION FOI SUBSTITUIDA PELA FUNCTION ABAIXO QUE TRABALHA COM OS COMPONENTES CRIADOS DINAMICAMENTE
@@ -2388,7 +2394,7 @@ On Error GoTo Err
 'On Error Resume Next
     Dim rsAvaliador As New ADODB.Recordset
     Dim SqlAvaliador As String
-    Dim X As Integer
+    Dim x As Integer
     Dim Contador As Double, ConverTido As Double
     
     chamaForm.mskCadMatriz.PromptInclude = False
@@ -2400,14 +2406,14 @@ On Error GoTo Err
     Contador = 0
     
     If chamaForm.Caption = "Cadastro de colaboradores" Then
-        For X = 0 To 4
-            If chamaForm.chkAvaliador(X).Value = 1 Then
+        For x = 0 To 4
+            If chamaForm.chkAvaliador(x).Value = 1 Then
                 Contador = Contador + 1
             End If
         Next
     Else
-        For X = 0 To 3
-            If chamaForm.chkAvaliador(X).Value = 1 Then
+        For x = 0 To 3
+            If chamaForm.chkAvaliador(x).Value = 1 Then
                 Contador = Contador + 1
             End If
         Next
@@ -2705,26 +2711,26 @@ On Error GoTo Err
     Dim rsTmpExp As New ADODB.Recordset
     Dim SqlTmpEx As String
     Dim periodoEmMeses As Single
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     SqlTmpEx = "select a.cpf,a.nomecolaborador,b.codmatriz,d.codcargo,d.nomecargo,b.data from tbcolaboradores as a inner join tbcolaboradoreshist as b on a.codcoligada = '" & vCodcoligada & "' and a.cpf = b.cpf " & _
     "inner join tbmatriz as c on b.codmatriz=c.codmatriz inner join tbcargos as d on c.codcargo = d.codcargo where b.ativo = 'S' and a.tipo = 'colaborador'"
     rsTmpExp.Open SqlTmpEx, cnBanco, adOpenKeyset, adLockOptimistic
     
     If rsTmpExp.RecordCount <> 0 Then Principal.ProgressBar1.Max = rsTmpExp.RecordCount
-    X = 0
+    x = 0
     Legenda = "Aguarde, reavaliando experiência dos colaboradores..."
     Principal.StatusBar1.Panels(3).Text = Legenda
     
     'While Not rsTmpExp.EOF
     'Do While Not rsTmpExp.EOF
-    For Y = 1 To rsTmpExp.RecordCount
-        Principal.ProgressBar1.Value = X
+    For y = 1 To rsTmpExp.RecordCount
+        Principal.ProgressBar1.Value = x
         periodoEmMeses = DateDiff("m", rsTmpExp.Fields(5), Now)
         If Val(periodoEmMeses) > 0 Then
             'registraExperiencia rsTmpExp.Fields(0), rsTmpExp.Fields(3), periodoEmMeses
         End If
         rsTmpExp.MoveNext
-        X = X + 1
+        x = x + 1
     Next
     'Loop
     'Wend
@@ -2782,11 +2788,11 @@ On Error GoTo Err
     'DEFINIDAS PELO USUÁRIO
     Dim rsConfColunas As New ADODB.Recordset
     Dim SqlonfColunas As String
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     SqlonfColunas = "select * from tbConfLV where codcoligada = '" & vCodcoligada & "' and nmusuario = '" & NomUsu & "' and idmodulo = '" & apontaLV & "' order by codcoligada,nmusuario,idmodulo,posicao"
     rsConfColunas.Open SqlonfColunas, cnBanco, adOpenKeyset, adLockOptimistic
     If Not rsConfColunas.EOF Then
-        Y = rsConfColunas.RecordCount
+        y = rsConfColunas.RecordCount
         While Not rsConfColunas.EOF
             vListview.ColumnHeaders.Item(Val(rsConfColunas(2))).Position = Val(rsConfColunas(3))
             vListview.ColumnHeaders.Item(Val(rsConfColunas(2))).Width = Val(rsConfColunas(4))
@@ -2853,7 +2859,7 @@ On Error GoTo Err
     
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
 10  cnBanco.BeginTrans
    
     SqlSalvar = "Delete from tbConfLV where codcoligada = '" & vCodcoligada & "' and nmusuario = '" & NomUsu & "' and idmodulo = '" & apontaLV & "'"
@@ -2861,14 +2867,14 @@ On Error GoTo Err
     
     SqlSalvar = "select * from tbConfLV"
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
-    Y = vListViewPrincipal.ColumnHeaders.Count
-    For X = 1 To Y
+    y = vListViewPrincipal.ColumnHeaders.Count
+    For x = 1 To y
         rsSalvar.AddNew
         rsSalvar.Fields(0) = NomUsu 'Nome do usuário
         rsSalvar.Fields(1) = apontaLV 'id do módulo
-        rsSalvar.Fields(2) = vListViewPrincipal.ColumnHeaders.Item(X).Index 'índice da coluna
-        rsSalvar.Fields(3) = vListViewPrincipal.ColumnHeaders.Item(X).Position 'posição da coluna
-        rsSalvar.Fields(4) = vListViewPrincipal.ColumnHeaders.Item(X).Width 'largura da coluna
+        rsSalvar.Fields(2) = vListViewPrincipal.ColumnHeaders.Item(x).Index 'índice da coluna
+        rsSalvar.Fields(3) = vListViewPrincipal.ColumnHeaders.Item(x).Position 'posição da coluna
+        rsSalvar.Fields(4) = vListViewPrincipal.ColumnHeaders.Item(x).Width 'largura da coluna
         rsSalvar.Fields(5) = vCodcoligada 'código da coligada
     Next
     rsSalvar.Update
@@ -2954,13 +2960,13 @@ End Function
 'A Função abaixo gera código para qualquer Listview
 Public Function GeraCodigoLV(LV As Listview)
     If LV.ListItems.Count > 0 Then
-        Dim X As Integer
-        X = 1
+        Dim x As Integer
+        x = 1
         LV.Sorted = True
         LV.SortKey = 0
         LV.SortOrder = lvwDescending
-        LV.ListItems.Item(X).Selected = True
-        GeraCodigoLV = Val(LV.ListItems.Item(X)) + 1
+        LV.ListItems.Item(x).Selected = True
+        GeraCodigoLV = Val(LV.ListItems.Item(x)) + 1
     
         If apontaLV = 9 And LV.Name = "ListView1" Then
             LV.SortKey = 11
@@ -3053,15 +3059,15 @@ End Function
 'A Função abaixo é referente a ALTERAÇÃO de dados de qualquer ListView com até 15 colunas
 Public Function AlteraLV(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vCP03 As TextBox, vCP04 As TextBox, vCP05 As TextBox, vCP06 As TextBox, vCP07 As TextBox, vCP08 As TextBox, vCP09 As TextBox, vCP10 As TextBox, vCP11 As TextBox, vCP12 As TextBox, vCP13 As TextBox, vCP14 As TextBox, vCP15 As TextBox)
 On Error GoTo Err
-    Dim Y As Integer, X As Integer, Z As Integer
+    Dim y As Integer, x As Integer, Z As Integer
     Dim vRaptor(15) As String
-    For X = LBound(vRaptor) To UBound(vRaptor)
-        vRaptor(X) = ""
-    Next X
-    Y = LV.ListItems.Count
-    For X = 1 To Y
-        If LV.ListItems.Item(X).Selected = True Then
-            vponteiro = X
+    For x = LBound(vRaptor) To UBound(vRaptor)
+        vRaptor(x) = ""
+    Next x
+    y = LV.ListItems.Count
+    For x = 1 To y
+        If LV.ListItems.Item(x).Selected = True Then
+            vponteiro = x
             Exit For
         End If
     Next
@@ -3091,7 +3097,7 @@ On Error GoTo Err
     If LV.ListItems.Count > 0 Then
         For Z = 1 To LV.ColumnHeaders.Count
             If Z = 1 Then
-                vRaptor(Z) = LV.ListItems.Item(X)
+                vRaptor(Z) = LV.ListItems.Item(x)
             Else
                 vRaptor(Z) = LV.SelectedItem.ListSubItems.Item(Z - 1)
             End If
@@ -3119,22 +3125,22 @@ End Function
 
 Public Function AlteraLVFormulas(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vCP03 As TextBox, vCP04 As TextBox, vCP05 As TextBox, vCP06 As TextBox, vCP07 As TextBox, vCP08 As TextBox, vCP09 As TextBox, vCP10 As TextBox, vCP11 As TextBox, vCP12 As TextBox, vCP13 As TextBox, vCP14 As TextBox, vCP15 As TextBox, vTabIndex)
 On Error GoTo Err
-    Dim Y As Integer, X As Integer, Z As Integer
+    Dim y As Integer, x As Integer, Z As Integer
     Dim vRaptor(15) As String
-    For X = LBound(vRaptor) To UBound(vRaptor)
-        vRaptor(X) = ""
-    Next X
-    Y = LV.ListItems.Count
-    For X = 1 To Y
-        If LV.ListItems.Item(X).Selected = True Then
-            vponteiro = X
+    For x = LBound(vRaptor) To UBound(vRaptor)
+        vRaptor(x) = ""
+    Next x
+    y = LV.ListItems.Count
+    For x = 1 To y
+        If LV.ListItems.Item(x).Selected = True Then
+            vponteiro = x
             Exit For
         End If
     Next
     If LV.ListItems.Count > 0 Then
         For Z = 1 To LV.ColumnHeaders.Count
             If Z = 1 Then
-                vRaptor(Z) = LV.ListItems.Item(X)
+                vRaptor(Z) = LV.ListItems.Item(x)
             Else
                 vRaptor(Z) = LV.SelectedItem.ListSubItems.Item(Z - 1)
             End If
@@ -3156,7 +3162,7 @@ End Sub
 Public Function IncluirLV(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vCP03 As TextBox, vCP04 As TextBox, vCP05 As TextBox, vCP06 As TextBox, vCP07 As TextBox, vCP08 As TextBox, vCP09 As TextBox, vCP10 As TextBox, vCP11 As TextBox, vCP12 As TextBox, vCP13 As TextBox, vCP14 As TextBox, vCP15 As TextBox)
     On Error Resume Next
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer, Z As Integer
+    Dim x As Integer, y As Integer, Z As Integer
     Dim vRaptor(15) As TextBox
     
     Set vRaptor(1) = vCP01
@@ -3174,18 +3180,18 @@ Public Function IncluirLV(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vC
     Set vRaptor(13) = vCP13
     Set vRaptor(14) = vCP14
     Set vRaptor(15) = vCP15
-    Y = LV.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-               If LV.ListItems.Item(X) = vRaptor(1) Then
+    y = LV.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+               If LV.ListItems.Item(x) = vRaptor(1) Then
                 For Z = 1 To LV.ColumnHeaders.Count
                     If Z = 1 Then
-                        If vRaptor(Z) <> "" Then vRaptor(Z) = LV.ListItems.Item(X)
+                        If vRaptor(Z) <> "" Then vRaptor(Z) = LV.ListItems.Item(x)
                     Else
                         If vRaptor(Z) <> "" Then LV.SelectedItem.ListSubItems.Item(Z - 1) = vRaptor(Z)
                     End If
                 Next
-                Y = LV.ListItems.Count
+                y = LV.ListItems.Count
                 IncluirLV = True
                 Exit Function
             End If
@@ -3199,7 +3205,7 @@ Public Function IncluirLV(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vC
             End If
         End If
         Set ItemLst = LV.ListItems.Add(, , vRaptor(1))
-        Y = LV.ListItems.Count
+        y = LV.ListItems.Count
     Else
         If Formulario = "Métodos & Processos" And LV.Name = "ListView1" Then
 '        If chamaForm.Name = "frmMPCompleto" And LV.Name = "ListView1" Then
@@ -3211,7 +3217,7 @@ Public Function IncluirLV(LV As Listview, vCP01 As TextBox, vCP02 As TextBox, vC
             End If
         End If
         Set ItemLst = LV.ListItems.Add(, , vRaptor(1))
-        Y = LV.ListItems.Count
+        y = LV.ListItems.Count
     End If
     For Z = 2 To LV.ColumnHeaders.Count
         If vRaptor(Z) <> "" Then ItemLst.SubItems(Z - 1) = vRaptor(Z)
@@ -3232,10 +3238,10 @@ On Error GoTo Err
     Dim SqlTransf As String
     Dim vCodLM As String, vCodSeq As String
     Dim RECEBE As String
-    Dim Contador As Integer, X As Integer
+    Dim Contador As Integer, x As Integer
     Contador = 0
-    For X = 1 To Len(vTxtForm)
-        If Mid(vTxtForm, X, 1) = ";" Then
+    For x = 1 To Len(vTxtForm)
+        If Mid(vTxtForm, x, 1) = ";" Then
             If Len(RECEBE) = 5 Then
                 vCodLM = Mid$(RECEBE, 1, 2)
                 vCodSeq = Mid$(RECEBE, 3, 3)
@@ -3263,7 +3269,7 @@ On Error GoTo Err
             Set rsTransf = Nothing
             RECEBE = ""
         Else
-            RECEBE = RECEBE & Mid(vTxtForm, X, 1)
+            RECEBE = RECEBE & Mid(vTxtForm, x, 1)
         End If
     Next
     If RECEBE <> "" Then
@@ -3309,7 +3315,7 @@ End Function
 Public Function ValidaCampos(LV As Listview, vTxt1 As TextBox, vTxt2 As TextBox, vTxt3 As TextBox, vTxt4 As TextBox, vTxt5 As TextBox, vTxt6 As TextBox, vTxt7 As TextBox, vTxt8 As TextBox, vTxt9 As TextBox, vTxt10 As TextBox, vTxt11 As TextBox, vTxt12 As TextBox, vTxt13 As TextBox, vTxt14 As TextBox, vTxt15 As TextBox)
     'On Error Resume Next
     ValidaCampos = False
-    Dim X As Integer
+    Dim x As Integer
     Dim vMatrix(15) As TextBox
     'For X = LBound(vMatrix) To UBound(vMatrix)
     '    vMatrix(X) = ""
@@ -3329,9 +3335,9 @@ Public Function ValidaCampos(LV As Listview, vTxt1 As TextBox, vTxt2 As TextBox,
     Set vMatrix(13) = vTxt13
     Set vMatrix(14) = vTxt14
     Set vMatrix(15) = vTxt15
-    For X = 1 To LV.ColumnHeaders.Count
-        If vMatrix(X) = "" Then
-            mobjMsg.Abrir "Favor informar o campo: " & vMatrix(X).Tag, Ok, informacao, "Atenção"
+    For x = 1 To LV.ColumnHeaders.Count
+        If vMatrix(x) = "" Then
+            mobjMsg.Abrir "Favor informar o campo: " & vMatrix(x).Tag, Ok, informacao, "Atenção"
 '            vMatrix(X).SetFocus
             Exit Function
         End If
@@ -3341,7 +3347,7 @@ End Function
 
 'A Função abaixo é referente a LIMPA DADOS de qualquer TetBox de ListView com até 10 colunas
 Public Function LimpaControles(vTxt1 As TextBox, vTxt2 As TextBox, vTxt3 As TextBox, vTxt4 As TextBox, vTxt5 As TextBox, vTxt6 As TextBox, vTxt7 As TextBox, vTxt8 As TextBox, vTxt9 As TextBox, vTxt10 As TextBox)
-    Dim X As Integer
+    Dim x As Integer
     Dim vMatrix(10) As TextBox
     'ReDim vMatrix(10) 'Limpar Array
     Set vMatrix(1) = vTxt1
@@ -3354,8 +3360,8 @@ Public Function LimpaControles(vTxt1 As TextBox, vTxt2 As TextBox, vTxt3 As Text
     Set vMatrix(8) = vTxt8
     Set vMatrix(9) = vTxt9
     Set vMatrix(10) = vTxt10
-    For X = 1 To 10
-       vMatrix(X).Text = ""
+    For x = 1 To 10
+       vMatrix(x).Text = ""
     Next
 End Function
 
@@ -3381,7 +3387,7 @@ On Error GoTo Err
     'vRetorno2     = Nome 2º TextBox que irá receber o valor do 2º campo de retorno da Query
     'vQualQuery    = Qual query a função irá usar (1 - Uma das Querys que estão não função / 2 - Query fornecida pelo desenvolvedor  )
     
-    Dim X As Integer
+    Dim x As Integer
     Dim rsCarregaTxt As New ADODB.Recordset
     Dim sqlCarregaTxt As String
     
@@ -3449,7 +3455,7 @@ On Error GoTo Err
     
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
 10  If vTransacaoAtiva = 0 Then cnBanco.BeginTrans
    
     If vTipoCampo1 = "I" Then
@@ -3464,14 +3470,14 @@ On Error GoTo Err
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
     If rsSalvar.EOF Then rsSalvar.AddNew
-    For X = 0 To vQtdCampos - 1
-        If vQualquerDado(X + 1, 2) = "S" Then
-            rsSalvar.Fields(X) = vQualquerDado(X + 1, 1)
-        ElseIf vQualquerDado(X + 1, 2) = "I" Then
-            rsSalvar.Fields(X) = Val(vQualquerDado(X + 1, 1))
-        ElseIf vQualquerDado(X + 1, 2) = "D" Then
-            If vQualquerDado(X + 1, 1) <> "" Then
-                rsSalvar.Fields(X) = CDate(vQualquerDado(X + 1, 1))
+    For x = 0 To vQtdCampos - 1
+        If vQualquerDado(x + 1, 2) = "S" Then
+            rsSalvar.Fields(x) = vQualquerDado(x + 1, 1)
+        ElseIf vQualquerDado(x + 1, 2) = "I" Then
+            rsSalvar.Fields(x) = Val(vQualquerDado(x + 1, 1))
+        ElseIf vQualquerDado(x + 1, 2) = "D" Then
+            If vQualquerDado(x + 1, 1) <> "" Then
+                rsSalvar.Fields(x) = CDate(vQualquerDado(x + 1, 1))
             End If
         End If
     Next
@@ -3494,13 +3500,13 @@ End Function
 
 'A função abaixo limpa resíduos de dados da matriz/Array vQualquerDado
 Public Function limpaQualquerDado()
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
 '    For X = LBound(vQualquerDado) To UBound(vQualquerDado)
-    For X = 1 To 50
-        For Y = 1 To 30
-            vQualquerDado(X, Y) = ""
+    For x = 1 To 50
+        For y = 1 To 30
+            vQualquerDado(x, y) = ""
         Next
-    Next X
+    Next x
 End Function
 
 'A função abaixo Armazena todos os dados da ListView na Array vQualquerDado na posição correta
@@ -3511,11 +3517,11 @@ End Function
 
 Public Function ordenaLVArray(LV As Listview, vPos0 As String, vPos1 As String, vPos2 As String, vPos3 As String, vPos4 As String, vPos5 As String, vPos6 As String, vPos7 As String, vPos8 As String, vPos9 As String, vPos10 As String, vPos11 As String, vPos12 As String, vPos13 As String, vPos14 As String, vPos15 As String)
 On Error Resume Next
-    Dim X As Integer, Y As Integer, Z As Integer
+    Dim x As Integer, y As Integer, Z As Integer
     Dim vMatrix(16) As String
-    For X = LBound(vMatrix) To UBound(vMatrix)
-        vMatrix(X) = ""
-    Next X
+    For x = LBound(vMatrix) To UBound(vMatrix)
+        vMatrix(x) = ""
+    Next x
     vMatrix(1) = vPos0
     vMatrix(2) = vPos1
     vMatrix(3) = vPos2
@@ -3532,29 +3538,29 @@ On Error Resume Next
     vMatrix(14) = vPos13
     vMatrix(15) = vPos14
     vMatrix(16) = vPos15
-    Y = LV.ListItems.Count
-    For X = 1 To Y
-        LV.ListItems.Item(X).Selected = True
+    y = LV.ListItems.Count
+    For x = 1 To y
+        LV.ListItems.Item(x).Selected = True
         For Z = 0 To LV.ColumnHeaders.Count
             If IsNumeric(vMatrix(Z + 1)) Then
                 If vMatrix(Z + 1) = "0" Then
-                    vQualquerDado(X, Z + 1) = LV.ListItems.Item(X)
+                    vQualquerDado(x, Z + 1) = LV.ListItems.Item(x)
                 Else
                     'Se o valor da Listview for igual a "-" grava zero
                     If LV.SelectedItem.ListSubItems.Item(Val(vMatrix(Z + 1))) = "-" Then
-                        vQualquerDado(X, Z + 1) = 0
+                        vQualquerDado(x, Z + 1) = 0
                     Else
                         If LV.SelectedItem.ListSubItems.Item(Val(vMatrix(Z + 1))) = "" Then
-                            vQualquerDado(X, Z + 1) = " "
+                            vQualquerDado(x, Z + 1) = " "
                         Else
-                            vQualquerDado(X, Z + 1) = LV.SelectedItem.ListSubItems.Item(Val(vMatrix(Z + 1)))
+                            vQualquerDado(x, Z + 1) = LV.SelectedItem.ListSubItems.Item(Val(vMatrix(Z + 1)))
                         End If
                         
                         'vQualquerDado(X, Z + 1) = vMatrix(Z + 1)
                     End If
                 End If
             Else
-                vQualquerDado(X, Z + 1) = vMatrix(Z + 1)
+                vQualquerDado(x, Z + 1) = vMatrix(Z + 1)
             End If
         Next
     Next
@@ -3568,7 +3574,7 @@ On Error GoTo Err
     Dim sqlDeletar As String
     Dim rsSalvar As New ADODB.Recordset
     Dim SqlSalvar As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
 10  cnBanco.BeginTrans
     
@@ -3589,24 +3595,24 @@ On Error GoTo Err
     SqlSalvar = "select * from " & vTabela
     rsSalvar.Open SqlSalvar, cnBanco, adOpenKeyset, adLockOptimistic
     
-    X = 1
-    Y = 1
-    While vQualquerDado(X, Y) <> ""
+    x = 1
+    y = 1
+    While vQualquerDado(x, y) <> ""
         rsSalvar.AddNew
         'If Asc(vQualquerDado(X, Y)) = 160 Then vQualquerDado(X, Y) = ""
-        While vQualquerDado(X, Y) <> "" 'Or vQualquerDado(X, Y) <> " "
+        While vQualquerDado(x, y) <> "" 'Or vQualquerDado(X, Y) <> " "
             
-            If apontaLV = 9 And Y = 10 Then 'Essa condição serve Somente para o zeus
-                rsSalvar.Fields(9) = Mid$(vQualquerDado(X, Y), 1, 9)
-                rsSalvar.Fields(15) = Mid$(vQualquerDado(X, Y), 11, 1)
+            If apontaLV = 9 And y = 10 Then 'Essa condição serve Somente para o zeus
+                rsSalvar.Fields(9) = Mid$(vQualquerDado(x, y), 1, 9)
+                rsSalvar.Fields(15) = Mid$(vQualquerDado(x, y), 11, 1)
             Else
-                If vQualquerDado(X, Y) <> "-" Then rsSalvar.Fields(Y - 1) = vQualquerDado(X, Y)
+                If vQualquerDado(x, y) <> "-" Then rsSalvar.Fields(y - 1) = vQualquerDado(x, y)
             End If
-            Y = Y + 1
+            y = y + 1
             'If Asc(vQualquerDado(X, Y)) = 160 Then vQualquerDado(X, Y) = ""
         Wend
-        X = X + 1
-        Y = 1
+        x = x + 1
+        y = 1
     Wend
     If Not rsSalvar.EOF Then rsSalvar.Update
     rsSalvar.Close
@@ -3643,29 +3649,29 @@ On Error GoTo Err
     End If
 
     Dim ItemLst As ListItem
-    Dim X As Integer
-    X = 0
+    Dim x As Integer
+    x = 0
     While Not rsCompoe.EOF
-        For X = 0 To LV.ColumnHeaders.Count - 1
-            If X = 0 Then
-                If rsCompoe.Fields(X).Type = adInteger Then
-                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(X), vZerosEsq))
+        For x = 0 To LV.ColumnHeaders.Count - 1
+            If x = 0 Then
+                If rsCompoe.Fields(x).Type = adInteger Then
+                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(x), vZerosEsq))
                 Else
-                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(X))
+                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(x))
                 End If
             Else
-                If Formulario = "Métodos & Processos" And LV.Name = "ListView1" And X = 1 Then
+                If Formulario = "Métodos & Processos" And LV.Name = "ListView1" And x = 1 Then
                 'If chamaForm.Name = "frmMPCompleto" And LV.Name = "ListView1" And X = 1 Then
-                    If rsCompoe.Fields(X) = 0 Then
-                        ItemLst.SubItems(X) = "0"
+                    If rsCompoe.Fields(x) = 0 Then
+                        ItemLst.SubItems(x) = "0"
                     Else
-                        ItemLst.SubItems(X) = rsCompoe.Fields(X) '"" & Format(rsCompoe.Fields(X), "000000000")
+                        ItemLst.SubItems(x) = rsCompoe.Fields(x) '"" & Format(rsCompoe.Fields(X), "000000000")
                     End If
                 Else
-                    If rsCompoe.Fields(X) = 0 Then
-                        ItemLst.SubItems(X) = "0"
+                    If rsCompoe.Fields(x) = 0 Then
+                        ItemLst.SubItems(x) = "0"
                     Else
-                        ItemLst.SubItems(X) = "" & rsCompoe.Fields(X)
+                        ItemLst.SubItems(x) = "" & rsCompoe.Fields(x)
                     End If
                 End If
             End If
@@ -3678,6 +3684,7 @@ On Error GoTo Err
     Else
         LV.SortKey = 0
     End If
+    
     LV.SortOrder = lvwAscending
     rsCompoe.Close
     Set rsCompoe = Nothing
@@ -3704,21 +3711,21 @@ On Error GoTo Err
     End If
 
     Dim ItemLst As ListItem
-    Dim X As Integer
-    X = 0
+    Dim x As Integer
+    x = 0
     While Not rsCompoe.EOF
-        For X = 0 To LV.ColumnHeaders.Count - 1
-            If X = 0 Then
-                If rsCompoe.Fields(X).Type = adInteger Then
-                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(X), vZerosEsq))
+        For x = 0 To LV.ColumnHeaders.Count - 1
+            If x = 0 Then
+                If rsCompoe.Fields(x).Type = adInteger Then
+                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(x), vZerosEsq))
                 Else
-                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(X))
+                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(x))
                 End If
             Else
-                    If rsCompoe.Fields(X) = 0 Then
-                        ItemLst.SubItems(X) = "0"
+                    If rsCompoe.Fields(x) = 0 Then
+                        ItemLst.SubItems(x) = "0"
                     Else
-                        ItemLst.SubItems(X) = "" & rsCompoe.Fields(X)
+                        ItemLst.SubItems(x) = "" & rsCompoe.Fields(x)
                     End If
             End If
         Next
@@ -3751,21 +3758,21 @@ Public Function Compoe_ListviewFiltro(LV As Listview, vSqlCompoe As String, vZer
     rsCompoe.Open vSqlCompoe, cnBanco, adOpenKeyset, adLockReadOnly
 
     Dim ItemLst As ListItem
-    Dim X As Integer
-    X = 0
+    Dim x As Integer
+    x = 0
     While Not rsCompoe.EOF
-        For X = 0 To LV.ColumnHeaders.Count - 1
-            If X = 0 Then
-                If rsCompoe.Fields(X).Type = adInteger Then
-                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(X), vZerosEsq))
+        For x = 0 To LV.ColumnHeaders.Count - 1
+            If x = 0 Then
+                If rsCompoe.Fields(x).Type = adInteger Then
+                    Set ItemLst = LV.ListItems.Add(, , Format(rsCompoe.Fields(x), vZerosEsq))
                 Else
-                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(X))
+                    Set ItemLst = LV.ListItems.Add(, , rsCompoe.Fields(x))
                 End If
             Else
-                If rsCompoe.Fields(X) = 0 Then
-                    ItemLst.SubItems(X) = "0"
+                If rsCompoe.Fields(x) = 0 Then
+                    ItemLst.SubItems(x) = "0"
                 Else
-                    ItemLst.SubItems(X) = "" & rsCompoe.Fields(X)
+                    ItemLst.SubItems(x) = "" & rsCompoe.Fields(x)
                 End If
             End If
         Next
@@ -3843,22 +3850,22 @@ End Function
 
 Public Function MarcaDesmarca(LV As Listview)
     'Adiciona processo ao item selecionado no Listview
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     
-    Y = LV.ListItems.Count
-    For X = 1 To Y
-        LV.ListItems(X).Selected = True
-        If LV.ListItems.Item(X).Checked = True Then
-            LV.ListItems.Item(X).Checked = False
+    y = LV.ListItems.Count
+    For x = 1 To y
+        LV.ListItems(x).Selected = True
+        If LV.ListItems.Item(x).Checked = True Then
+            LV.ListItems.Item(x).Checked = False
         Else
-            LV.ListItems.Item(X).Checked = True
+            LV.ListItems.Item(x).Checked = True
         End If
     Next
 End Function
 
 Public Function montaDadosVendas()
 On Error GoTo Err
-    Dim X As Integer, Y As Integer, j As Integer
+    Dim x As Integer, y As Integer, j As Integer
     Dim rsVendas As New ADODB.Recordset
     Dim sqlVendas As String
     limpaQualquerDado
@@ -3866,17 +3873,17 @@ On Error GoTo Err
     
     sqlVendas = "select a.id,a.numoc,a.descricao,a.quantidade,a.unqtd,a.peso,a.unpeso,a.valorsimp,a.pisperc,a.pisvalor,a.cofinsperc,a.cofinsvalor,a.icmsperc,a.icmsvalor,a.valorcimp,a.und,a.subtotal,a.ipiperc,a.ipivalor,a.total,a.bcalcicms,a.foreferente,a.condicaopag,a.adiantamento,a.adiantamentoCP from tbpedidos as a where fce ='" & strAno & "'"
     rsVendas.Open sqlVendas, cnBanco, adOpenKeyset, adLockReadOnly
-    Y = rsVendas.RecordCount
+    y = rsVendas.RecordCount
     j = 1
-    For X = 1 To Y
-        If Not IsNull(rsVendas.Fields(1)) Then vQualquerDado(X, j) = rsVendas.Fields(1) 'Pedido
-        If Not IsNull(rsVendas.Fields(2)) Then vQualquerDado(X, j + 1) = rsVendas.Fields(2) 'Descrição
-        If Not IsNull(rsVendas.Fields(5)) Then vQualquerDado(X, j + 2) = rsVendas.Fields(5) 'Peso Total
-        If Not IsNull(rsVendas.Fields(19)) Then vQualquerDado(X, j + 3) = rsVendas.Fields(19) 'Valor Total
-        If Not IsNull(rsVendas.Fields(22)) Then vQualquerDado(X, j + 4) = rsVendas.Fields(22) 'Condição de pagamento
+    For x = 1 To y
+        If Not IsNull(rsVendas.Fields(1)) Then vQualquerDado(x, j) = rsVendas.Fields(1) 'Pedido
+        If Not IsNull(rsVendas.Fields(2)) Then vQualquerDado(x, j + 1) = rsVendas.Fields(2) 'Descrição
+        If Not IsNull(rsVendas.Fields(5)) Then vQualquerDado(x, j + 2) = rsVendas.Fields(5) 'Peso Total
+        If Not IsNull(rsVendas.Fields(19)) Then vQualquerDado(x, j + 3) = rsVendas.Fields(19) 'Valor Total
+        If Not IsNull(rsVendas.Fields(22)) Then vQualquerDado(x, j + 4) = rsVendas.Fields(22) 'Condição de pagamento
         
-        If Not IsNull(rsVendas.Fields(23)) Then vQualquerDado(X, j + 5) = rsVendas.Fields(23) 'Adiantamento - %
-        If Not IsNull(rsVendas.Fields(24)) Then vQualquerDado(X, j + 6) = rsVendas.Fields(24) 'Adiantamento - Condição de pagamento
+        If Not IsNull(rsVendas.Fields(23)) Then vQualquerDado(x, j + 5) = rsVendas.Fields(23) 'Adiantamento - %
+        If Not IsNull(rsVendas.Fields(24)) Then vQualquerDado(x, j + 6) = rsVendas.Fields(24) 'Adiantamento - Condição de pagamento
         j = 1
         rsVendas.MoveNext
     Next

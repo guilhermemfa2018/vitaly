@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TabCtl32.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmFCE 
@@ -28,6 +29,27 @@ Begin VB.Form frmFCE
    ScaleHeight     =   8580
    ScaleWidth      =   18435
    StartUpPosition =   2  'CenterScreen
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00B7B7B7&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   495
+      Left            =   17280
+      ScaleHeight     =   495
+      ScaleWidth      =   975
+      TabIndex        =   149
+      Top             =   7920
+      Visible         =   0   'False
+      Width           =   975
+   End
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   4080
+      Top             =   8040
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCadastro 
       Height          =   615
       Index           =   9
@@ -62,7 +84,6 @@ Begin VB.Form frmFCE
       _ExtentY        =   11668
       _Version        =   393216
       Tabs            =   5
-      Tab             =   2
       TabsPerRow      =   5
       TabHeight       =   520
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -76,36 +97,41 @@ Begin VB.Form frmFCE
       EndProperty
       TabCaption(0)   =   "Cliente"
       TabPicture(0)   =   "frmFCE.frx":265E
-      Tab(0).ControlEnabled=   0   'False
+      Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "Frame3"
+      Tab(0).Control(0).Enabled=   0   'False
       Tab(0).Control(1)=   "Frame6"
+      Tab(0).Control(1).Enabled=   0   'False
       Tab(0).Control(2)=   "Frame2"
+      Tab(0).Control(2).Enabled=   0   'False
       Tab(0).Control(3)=   "Frame9"
+      Tab(0).Control(3).Enabled=   0   'False
       Tab(0).Control(4)=   "Frame20"
+      Tab(0).Control(4).Enabled=   0   'False
       Tab(0).Control(5)=   "Frame21"
+      Tab(0).Control(5).Enabled=   0   'False
       Tab(0).ControlCount=   6
       TabCaption(1)   =   "Pedidos"
       TabPicture(1)   =   "frmFCE.frx":267A
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "ListView1"
-      Tab(1).Control(1)=   "Frame4"
-      Tab(1).Control(2)=   "Frame15"
-      Tab(1).Control(3)=   "Frame14"
-      Tab(1).Control(4)=   "Frame5"
-      Tab(1).Control(5)=   "Frame10"
+      Tab(1).Control(0)=   "cmdCadastro(2)"
+      Tab(1).Control(1)=   "cmdCadastro(1)"
+      Tab(1).Control(2)=   "cmdCadastro(0)"
+      Tab(1).Control(3)=   "Frame19"
+      Tab(1).Control(4)=   "Frame18"
+      Tab(1).Control(5)=   "Frame17"
       Tab(1).Control(6)=   "Frame16"
-      Tab(1).Control(7)=   "Frame17"
-      Tab(1).Control(8)=   "Frame18"
-      Tab(1).Control(9)=   "Frame19"
-      Tab(1).Control(10)=   "cmdCadastro(0)"
-      Tab(1).Control(11)=   "cmdCadastro(1)"
-      Tab(1).Control(12)=   "cmdCadastro(2)"
+      Tab(1).Control(7)=   "Frame10"
+      Tab(1).Control(8)=   "Frame5"
+      Tab(1).Control(9)=   "Frame14"
+      Tab(1).Control(10)=   "Frame15"
+      Tab(1).Control(11)=   "Frame4"
+      Tab(1).Control(12)=   "ListView1"
       Tab(1).ControlCount=   13
       TabCaption(2)   =   "Faturamento"
       TabPicture(2)   =   "frmFCE.frx":2696
-      Tab(2).ControlEnabled=   -1  'True
+      Tab(2).ControlEnabled=   0   'False
       Tab(2).Control(0)=   "Frame7"
-      Tab(2).Control(0).Enabled=   0   'False
       Tab(2).ControlCount=   1
       TabCaption(3)   =   "Lista de verificação"
       TabPicture(3)   =   "frmFCE.frx":26B2
@@ -115,8 +141,8 @@ Begin VB.Form frmFCE
       TabCaption(4)   =   "Obs. Administrativas"
       TabPicture(4)   =   "frmFCE.frx":26CE
       Tab(4).ControlEnabled=   0   'False
-      Tab(4).Control(0)=   "Frame11"
-      Tab(4).Control(1)=   "Frame12"
+      Tab(4).Control(0)=   "Frame12"
+      Tab(4).Control(1)=   "Frame11"
       Tab(4).ControlCount=   2
       Begin VB.CommandButton cmdCadastro 
          Height          =   615
@@ -125,6 +151,7 @@ Begin VB.Form frmFCE
          Picture         =   "frmFCE.frx":26EA
          Style           =   1  'Graphical
          TabIndex        =   143
+         Tag             =   "Excluir"
          Top             =   2760
          Width           =   615
       End
@@ -135,6 +162,7 @@ Begin VB.Form frmFCE
          Picture         =   "frmFCE.frx":33B4
          Style           =   1  'Graphical
          TabIndex        =   144
+         Tag             =   "Editar"
          Top             =   2760
          Width           =   615
       End
@@ -145,6 +173,7 @@ Begin VB.Form frmFCE
          Picture         =   "frmFCE.frx":407E
          Style           =   1  'Graphical
          TabIndex        =   145
+         Tag             =   "Inserir"
          Top             =   2760
          Width           =   615
       End
@@ -160,7 +189,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   735
-         Left            =   -69120
+         Left            =   5880
          TabIndex        =   139
          Top             =   4680
          Width           =   3375
@@ -185,7 +214,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   855
-         Left            =   -69120
+         Left            =   5880
          TabIndex        =   135
          Top             =   5640
          Width           =   3375
@@ -193,6 +222,7 @@ Begin VB.Form frmFCE
             Height          =   330
             Left            =   120
             TabIndex        =   136
+            Tag             =   "Informe o percentual de evolução do Data Book"
             Text            =   "0"
             Top             =   360
             Width           =   855
@@ -213,13 +243,14 @@ Begin VB.Form frmFCE
          Left            =   -65040
          TabIndex        =   127
          Top             =   1560
-         Width           =   2295
+         Width           =   2415
          Begin VB.ComboBox Combo4 
             Height          =   345
             ItemData        =   "frmFCE.frx":4DA2
             Left            =   120
             List            =   "frmFCE.frx":4DAF
             TabIndex        =   19
+            Tag             =   "COndições de pagamento do adiantamento"
             Text            =   "-"
             Top             =   1320
             Width           =   2055
@@ -230,13 +261,14 @@ Begin VB.Form frmFCE
             OleObjectBlob   =   "frmFCE.frx":4DC8
             TabIndex        =   129
             Top             =   960
-            Width           =   2055
+            Width           =   2175
          End
          Begin VB.TextBox txtcadastro 
             Height          =   330
             Index           =   22
             Left            =   120
             TabIndex        =   18
+            Tag             =   "Percentual de adiantamento"
             Text            =   "0"
             Top             =   480
             Width           =   1215
@@ -244,7 +276,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel60 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":4E54
+            OleObjectBlob   =   "frmFCE.frx":4E4E
             TabIndex        =   128
             Top             =   240
             Width           =   1815
@@ -268,10 +300,11 @@ Begin VB.Form frmFCE
          Width           =   3615
          Begin VB.ComboBox Combo3 
             Height          =   345
-            ItemData        =   "frmFCE.frx":4ECC
+            ItemData        =   "frmFCE.frx":4EC0
             Left            =   120
-            List            =   "frmFCE.frx":4EE5
+            List            =   "frmFCE.frx":4ED9
             TabIndex        =   20
+            Tag             =   "Condições de pagamento"
             Text            =   "30 dias após faturamento da NF"
             Top             =   240
             Width           =   3375
@@ -289,14 +322,14 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   1815
-         Left            =   -62640
+         Left            =   -62520
          TabIndex        =   108
          Top             =   1560
-         Width           =   5775
+         Width           =   5655
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel48 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":4FBB
+            OleObjectBlob   =   "frmFCE.frx":4FAF
             TabIndex        =   114
             Top             =   1440
             Width           =   1335
@@ -304,7 +337,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel47 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":5031
+            OleObjectBlob   =   "frmFCE.frx":5025
             TabIndex        =   113
             Top             =   1200
             Width           =   1335
@@ -312,23 +345,23 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel58 
             Height          =   255
             Left            =   3720
-            OleObjectBlob   =   "frmFCE.frx":50A7
+            OleObjectBlob   =   "frmFCE.frx":509B
             TabIndex        =   124
             Top             =   480
-            Width           =   1695
+            Width           =   1575
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel57 
             Height          =   255
             Left            =   3720
-            OleObjectBlob   =   "frmFCE.frx":5101
+            OleObjectBlob   =   "frmFCE.frx":50F5
             TabIndex        =   123
             Top             =   240
-            Width           =   1695
+            Width           =   1575
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel56 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":515B
+            OleObjectBlob   =   "frmFCE.frx":514F
             TabIndex        =   122
             Top             =   1440
             Width           =   1695
@@ -336,7 +369,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel55 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":51B5
+            OleObjectBlob   =   "frmFCE.frx":51A9
             TabIndex        =   121
             Top             =   1200
             Width           =   1695
@@ -344,7 +377,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel54 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":520F
+            OleObjectBlob   =   "frmFCE.frx":5203
             TabIndex        =   120
             Top             =   960
             Width           =   1695
@@ -352,7 +385,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel53 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":5269
+            OleObjectBlob   =   "frmFCE.frx":525D
             TabIndex        =   119
             Top             =   720
             Width           =   1695
@@ -360,7 +393,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel52 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":52C3
+            OleObjectBlob   =   "frmFCE.frx":52B7
             TabIndex        =   118
             Top             =   480
             Width           =   1695
@@ -368,7 +401,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel51 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":531D
+            OleObjectBlob   =   "frmFCE.frx":5311
             TabIndex        =   117
             Top             =   240
             Width           =   1695
@@ -376,7 +409,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel50 
             Height          =   255
             Left            =   2760
-            OleObjectBlob   =   "frmFCE.frx":5377
+            OleObjectBlob   =   "frmFCE.frx":536B
             TabIndex        =   116
             Top             =   480
             Width           =   615
@@ -384,7 +417,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel49 
             Height          =   255
             Left            =   2760
-            OleObjectBlob   =   "frmFCE.frx":53DB
+            OleObjectBlob   =   "frmFCE.frx":53CF
             TabIndex        =   115
             Top             =   240
             Width           =   1215
@@ -392,7 +425,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel46 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":5445
+            OleObjectBlob   =   "frmFCE.frx":5439
             TabIndex        =   112
             Top             =   960
             Width           =   2175
@@ -400,7 +433,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel45 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":54A3
+            OleObjectBlob   =   "frmFCE.frx":5497
             TabIndex        =   111
             Top             =   720
             Width           =   735
@@ -408,7 +441,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel44 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":5505
+            OleObjectBlob   =   "frmFCE.frx":54F9
             TabIndex        =   110
             Top             =   480
             Width           =   615
@@ -416,7 +449,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel43 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":556B
+            OleObjectBlob   =   "frmFCE.frx":555F
             TabIndex        =   109
             Top             =   240
             Width           =   495
@@ -441,7 +474,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel40 
             Height          =   375
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":55CB
+            OleObjectBlob   =   "frmFCE.frx":55BF
             TabIndex        =   105
             Top             =   240
             Width           =   615
@@ -465,9 +498,9 @@ Begin VB.Form frmFCE
          Width           =   6615
          Begin VB.ComboBox Combo1 
             Height          =   345
-            ItemData        =   "frmFCE.frx":5625
+            ItemData        =   "frmFCE.frx":5619
             Left            =   5640
-            List            =   "frmFCE.frx":5638
+            List            =   "frmFCE.frx":562C
             TabIndex        =   12
             Text            =   "KG"
             Top             =   480
@@ -502,6 +535,7 @@ Begin VB.Form frmFCE
             Index           =   26
             Left            =   3720
             TabIndex        =   10
+            Tag             =   "Unidade de medida do peso"
             Text            =   "KG"
             Top             =   480
             Width           =   495
@@ -512,7 +546,6 @@ Begin VB.Form frmFCE
             Left            =   2400
             TabIndex        =   9
             Tag             =   "Peso"
-            ToolTipText     =   "Peso"
             Top             =   480
             Width           =   1215
             _ExtentX        =   2143
@@ -535,6 +568,7 @@ Begin VB.Form frmFCE
             Index           =   25
             Left            =   1440
             TabIndex        =   8
+            Tag             =   "Unidade de Medida da quantidade"
             Text            =   "CJ"
             Top             =   480
             Width           =   735
@@ -545,7 +579,6 @@ Begin VB.Form frmFCE
             Left            =   120
             TabIndex        =   7
             Tag             =   "Quantidade"
-            ToolTipText     =   "Quantidade"
             Top             =   480
             Width           =   1215
             _ExtentX        =   2143
@@ -566,7 +599,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel29 
             Height          =   255
             Left            =   5640
-            OleObjectBlob   =   "frmFCE.frx":5652
+            OleObjectBlob   =   "frmFCE.frx":5646
             TabIndex        =   92
             Top             =   240
             Width           =   495
@@ -574,7 +607,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel28 
             Height          =   255
             Left            =   4320
-            OleObjectBlob   =   "frmFCE.frx":56B4
+            OleObjectBlob   =   "frmFCE.frx":56A8
             TabIndex        =   91
             Top             =   240
             Width           =   975
@@ -582,7 +615,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel27 
             Height          =   255
             Left            =   3720
-            OleObjectBlob   =   "frmFCE.frx":5722
+            OleObjectBlob   =   "frmFCE.frx":5716
             TabIndex        =   90
             Top             =   240
             Width           =   495
@@ -590,7 +623,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel26 
             Height          =   255
             Left            =   2400
-            OleObjectBlob   =   "frmFCE.frx":5782
+            OleObjectBlob   =   "frmFCE.frx":5776
             TabIndex        =   89
             Top             =   240
             Width           =   615
@@ -598,7 +631,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel25 
             Height          =   255
             Left            =   1440
-            OleObjectBlob   =   "frmFCE.frx":57E4
+            OleObjectBlob   =   "frmFCE.frx":57D8
             TabIndex        =   88
             Top             =   240
             Width           =   615
@@ -606,7 +639,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel24 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":5846
+            OleObjectBlob   =   "frmFCE.frx":583A
             TabIndex        =   87
             Top             =   240
             Width           =   615
@@ -633,6 +666,7 @@ Begin VB.Form frmFCE
             Index           =   10
             Left            =   120
             TabIndex        =   17
+            Tag             =   "ISS"
             Top             =   1080
             Visible         =   0   'False
             Width           =   615
@@ -645,7 +679,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel59 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":58AC
+            OleObjectBlob   =   "frmFCE.frx":58A0
             TabIndex        =   125
             Top             =   840
             Visible         =   0   'False
@@ -656,6 +690,7 @@ Begin VB.Form frmFCE
             Index           =   7
             Left            =   2280
             TabIndex        =   16
+            Tag             =   "IPI"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
@@ -678,6 +713,7 @@ Begin VB.Form frmFCE
             Index           =   6
             Left            =   1560
             TabIndex        =   15
+            Tag             =   "ICMS"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
@@ -700,6 +736,7 @@ Begin VB.Form frmFCE
             Index           =   5
             Left            =   840
             TabIndex        =   14
+            Tag             =   "Cofins"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
@@ -722,6 +759,7 @@ Begin VB.Form frmFCE
             Index           =   4
             Left            =   120
             TabIndex        =   13
+            Tag             =   "PIS"
             Top             =   480
             Width           =   615
             _ExtentX        =   1085
@@ -742,7 +780,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel33 
             Height          =   255
             Left            =   2280
-            OleObjectBlob   =   "frmFCE.frx":590C
+            OleObjectBlob   =   "frmFCE.frx":5900
             TabIndex        =   96
             Top             =   240
             Width           =   375
@@ -750,7 +788,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel32 
             Height          =   255
             Left            =   1560
-            OleObjectBlob   =   "frmFCE.frx":596C
+            OleObjectBlob   =   "frmFCE.frx":5960
             TabIndex        =   95
             Top             =   240
             Width           =   615
@@ -758,7 +796,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel31 
             Height          =   255
             Left            =   840
-            OleObjectBlob   =   "frmFCE.frx":59CE
+            OleObjectBlob   =   "frmFCE.frx":59C2
             TabIndex        =   94
             Top             =   240
             Width           =   615
@@ -766,7 +804,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel30 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":5A34
+            OleObjectBlob   =   "frmFCE.frx":5A28
             TabIndex        =   93
             Top             =   240
             Width           =   495
@@ -793,6 +831,7 @@ Begin VB.Form frmFCE
             Height          =   330
             Left            =   120
             TabIndex        =   60
+            Tag             =   "FO(s) que compõe(m) a FCE"
             Top             =   480
             Width           =   2655
          End
@@ -894,6 +933,7 @@ Begin VB.Form frmFCE
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   28
+            Tag             =   "Observações financeiras"
             Top             =   360
             Width           =   8415
          End
@@ -921,6 +961,7 @@ Begin VB.Form frmFCE
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   27
+            Tag             =   "Observações comerciais"
             Top             =   360
             Width           =   8895
          End
@@ -937,7 +978,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   5775
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   48
          Top             =   480
          Width           =   18015
@@ -945,9 +986,10 @@ Begin VB.Form frmFCE
             Height          =   615
             Index           =   5
             Left            =   1320
-            Picture         =   "frmFCE.frx":5A94
+            Picture         =   "frmFCE.frx":5A88
             Style           =   1  'Graphical
             TabIndex        =   146
+            Tag             =   "Excluir"
             Top             =   1320
             Width           =   615
          End
@@ -955,9 +997,10 @@ Begin VB.Form frmFCE
             Height          =   615
             Index           =   4
             Left            =   720
-            Picture         =   "frmFCE.frx":675E
+            Picture         =   "frmFCE.frx":6752
             Style           =   1  'Graphical
             TabIndex        =   147
+            Tag             =   "Editar"
             Top             =   1320
             Width           =   615
          End
@@ -965,9 +1008,10 @@ Begin VB.Form frmFCE
             Height          =   615
             Index           =   3
             Left            =   120
-            Picture         =   "frmFCE.frx":7428
+            Picture         =   "frmFCE.frx":741C
             Style           =   1  'Graphical
             TabIndex        =   148
+            Tag             =   "Inserir"
             Top             =   1320
             Width           =   615
          End
@@ -992,9 +1036,10 @@ Begin VB.Form frmFCE
                Index           =   9
                Left            =   5280
                TabIndex        =   25
+               Tag             =   "valor da nota fiscal"
                Top             =   480
-               Width           =   1095
-               _ExtentX        =   1931
+               Width           =   1695
+               _ExtentX        =   2990
                _ExtentY        =   582
                _Version        =   393216
                BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -1011,10 +1056,11 @@ Begin VB.Form frmFCE
             End
             Begin VB.ComboBox Combo2 
                Height          =   345
-               ItemData        =   "frmFCE.frx":80F2
+               ItemData        =   "frmFCE.frx":80E6
                Left            =   4440
-               List            =   "frmFCE.frx":810E
+               List            =   "frmFCE.frx":8102
                TabIndex        =   24
+               Tag             =   "Unidade de medida informada na nota fiscal"
                Text            =   "KG"
                Top             =   480
                Width           =   735
@@ -1024,6 +1070,7 @@ Begin VB.Form frmFCE
                Index           =   8
                Left            =   3120
                TabIndex        =   23
+               Tag             =   "Quantidade informada na nota fiscal"
                Top             =   480
                Width           =   1215
                _ExtentX        =   2143
@@ -1045,6 +1092,7 @@ Begin VB.Form frmFCE
                Height          =   330
                Left            =   1440
                TabIndex        =   22
+               Tag             =   "Data de emissão da Nota Fiscal"
                Top             =   480
                Width           =   1575
                _ExtentX        =   2778
@@ -1059,7 +1107,7 @@ Begin VB.Form frmFCE
                   Italic          =   0   'False
                   Strikethrough   =   0   'False
                EndProperty
-               Format          =   421855233
+               Format          =   167837697
                CurrentDate     =   40449
             End
             Begin VB.TextBox txtcadastro 
@@ -1067,13 +1115,14 @@ Begin VB.Form frmFCE
                Index           =   31
                Left            =   120
                TabIndex        =   21
+               Tag             =   "Nº da Nota Fiscal"
                Top             =   480
                Width           =   1215
             End
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel38 
                Height          =   255
                Left            =   5280
-               OleObjectBlob   =   "frmFCE.frx":8133
+               OleObjectBlob   =   "frmFCE.frx":8127
                TabIndex        =   101
                Top             =   240
                Width           =   615
@@ -1081,7 +1130,7 @@ Begin VB.Form frmFCE
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel37 
                Height          =   255
                Left            =   4440
-               OleObjectBlob   =   "frmFCE.frx":8197
+               OleObjectBlob   =   "frmFCE.frx":818B
                TabIndex        =   100
                Top             =   240
                Width           =   495
@@ -1089,7 +1138,7 @@ Begin VB.Form frmFCE
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel36 
                Height          =   255
                Left            =   3120
-               OleObjectBlob   =   "frmFCE.frx":81FB
+               OleObjectBlob   =   "frmFCE.frx":81EF
                TabIndex        =   99
                Top             =   240
                Width           =   975
@@ -1097,7 +1146,7 @@ Begin VB.Form frmFCE
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel35 
                Height          =   255
                Left            =   1440
-               OleObjectBlob   =   "frmFCE.frx":825F
+               OleObjectBlob   =   "frmFCE.frx":8253
                TabIndex        =   98
                Top             =   240
                Width           =   975
@@ -1105,7 +1154,7 @@ Begin VB.Form frmFCE
             Begin ACTIVESKINLibCtl.SkinLabel SkinLabel34 
                Height          =   255
                Left            =   120
-               OleObjectBlob   =   "frmFCE.frx":82C1
+               OleObjectBlob   =   "frmFCE.frx":82B5
                TabIndex        =   97
                Top             =   240
                Width           =   1215
@@ -1154,7 +1203,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   6015
-         Left            =   -65640
+         Left            =   9360
          TabIndex        =   47
          Top             =   480
          Width           =   8775
@@ -1164,6 +1213,7 @@ Begin VB.Form frmFCE
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
             TabIndex        =   4
+            Tag             =   "Observações"
             Top             =   240
             Width           =   8535
          End
@@ -1171,8 +1221,8 @@ Begin VB.Form frmFCE
       Begin VB.Frame Frame2 
          Caption         =   "Dados do Cliente "
          BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Name            =   "Calibri"
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -1180,7 +1230,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3495
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   35
          Top             =   480
          Width           =   5655
@@ -1190,6 +1240,7 @@ Begin VB.Form frmFCE
             Index           =   10
             Left            =   2880
             TabIndex        =   36
+            Tag             =   "Site"
             Top             =   2880
             Width           =   2655
          End
@@ -1199,6 +1250,7 @@ Begin VB.Form frmFCE
             Index           =   9
             Left            =   120
             TabIndex        =   37
+            Tag             =   "Email"
             Top             =   2880
             Width           =   2655
          End
@@ -1208,6 +1260,7 @@ Begin VB.Form frmFCE
             Index           =   8
             Left            =   3360
             TabIndex        =   38
+            Tag             =   "Fax"
             Top             =   2280
             Width           =   2175
          End
@@ -1217,6 +1270,7 @@ Begin VB.Form frmFCE
             Index           =   6
             Left            =   120
             TabIndex        =   40
+            Tag             =   "Estado"
             Top             =   2280
             Width           =   735
          End
@@ -1226,6 +1280,7 @@ Begin VB.Form frmFCE
             Index           =   7
             Left            =   960
             TabIndex        =   39
+            Tag             =   "Telefone"
             Top             =   2280
             Width           =   2295
          End
@@ -1235,6 +1290,7 @@ Begin VB.Form frmFCE
             Index           =   5
             Left            =   2880
             TabIndex        =   41
+            Tag             =   "Cidade"
             Top             =   1680
             Width           =   2655
          End
@@ -1262,6 +1318,7 @@ Begin VB.Form frmFCE
             Index           =   2
             Left            =   120
             TabIndex        =   44
+            Tag             =   "Endereço"
             Top             =   1080
             Width           =   3975
          End
@@ -1271,6 +1328,7 @@ Begin VB.Form frmFCE
             Index           =   1
             Left            =   1200
             TabIndex        =   45
+            Tag             =   "Nome do Cliente"
             Top             =   480
             Width           =   4335
          End
@@ -1287,7 +1345,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
             Height          =   255
             Left            =   2880
-            OleObjectBlob   =   "frmFCE.frx":8337
+            OleObjectBlob   =   "frmFCE.frx":832B
             TabIndex        =   74
             Top             =   2640
             Width           =   495
@@ -1295,7 +1353,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8399
+            OleObjectBlob   =   "frmFCE.frx":838D
             TabIndex        =   73
             Top             =   2640
             Width           =   615
@@ -1303,7 +1361,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
             Height          =   255
             Left            =   3360
-            OleObjectBlob   =   "frmFCE.frx":83FD
+            OleObjectBlob   =   "frmFCE.frx":83F1
             TabIndex        =   72
             Top             =   2040
             Width           =   495
@@ -1311,7 +1369,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
             Height          =   255
             Left            =   960
-            OleObjectBlob   =   "frmFCE.frx":845D
+            OleObjectBlob   =   "frmFCE.frx":8451
             TabIndex        =   71
             Top             =   2040
             Width           =   975
@@ -1319,7 +1377,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":84C7
+            OleObjectBlob   =   "frmFCE.frx":84BB
             TabIndex        =   70
             Top             =   2040
             Width           =   615
@@ -1327,7 +1385,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
             Height          =   255
             Left            =   2880
-            OleObjectBlob   =   "frmFCE.frx":852D
+            OleObjectBlob   =   "frmFCE.frx":8521
             TabIndex        =   69
             Top             =   1440
             Width           =   1215
@@ -1335,7 +1393,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8593
+            OleObjectBlob   =   "frmFCE.frx":8587
             TabIndex        =   68
             Top             =   1440
             Width           =   615
@@ -1343,7 +1401,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
             Height          =   255
             Left            =   4200
-            OleObjectBlob   =   "frmFCE.frx":85F9
+            OleObjectBlob   =   "frmFCE.frx":85ED
             TabIndex        =   67
             Top             =   840
             Width           =   735
@@ -1351,7 +1409,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8659
+            OleObjectBlob   =   "frmFCE.frx":864D
             TabIndex        =   66
             Top             =   840
             Width           =   1095
@@ -1359,7 +1417,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmFCE.frx":86C1
+            OleObjectBlob   =   "frmFCE.frx":86B5
             TabIndex        =   65
             Top             =   240
             Width           =   1095
@@ -1367,7 +1425,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8723
+            OleObjectBlob   =   "frmFCE.frx":8717
             TabIndex        =   64
             Top             =   240
             Width           =   735
@@ -1385,7 +1443,7 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   2415
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   30
          Top             =   4080
          Width           =   5655
@@ -1395,6 +1453,7 @@ Begin VB.Form frmFCE
             Index           =   14
             Left            =   2640
             TabIndex        =   31
+            Tag             =   "Email"
             Top             =   1080
             Width           =   2895
          End
@@ -1404,6 +1463,7 @@ Begin VB.Form frmFCE
             Index           =   13
             Left            =   120
             TabIndex        =   32
+            Tag             =   "Telefone"
             Top             =   1080
             Width           =   2415
          End
@@ -1413,6 +1473,7 @@ Begin VB.Form frmFCE
             Index           =   12
             Left            =   1200
             TabIndex        =   33
+            Tag             =   "Nome"
             Top             =   480
             Width           =   4335
          End
@@ -1429,7 +1490,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
             Height          =   255
             Left            =   2640
-            OleObjectBlob   =   "frmFCE.frx":8789
+            OleObjectBlob   =   "frmFCE.frx":877D
             TabIndex        =   78
             Top             =   840
             Width           =   735
@@ -1437,7 +1498,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":87ED
+            OleObjectBlob   =   "frmFCE.frx":87E1
             TabIndex        =   77
             Top             =   840
             Width           =   855
@@ -1445,7 +1506,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
             Height          =   255
             Left            =   1200
-            OleObjectBlob   =   "frmFCE.frx":8857
+            OleObjectBlob   =   "frmFCE.frx":884B
             TabIndex        =   76
             Top             =   240
             Width           =   855
@@ -1453,7 +1514,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":88B9
+            OleObjectBlob   =   "frmFCE.frx":88AD
             TabIndex        =   75
             Top             =   240
             Width           =   735
@@ -1478,19 +1539,18 @@ Begin VB.Form frmFCE
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   0
-            ItemData        =   "frmFCE.frx":891F
+            ItemData        =   "frmFCE.frx":8913
             Left            =   9720
-            List            =   "frmFCE.frx":8921
+            List            =   "frmFCE.frx":8915
             TabIndex        =   138
             Tag             =   "Tipo FCE"
-            ToolTipText     =   "Tipo FCE"
             Top             =   480
             Width           =   2295
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel62 
             Height          =   255
             Left            =   9720
-            OleObjectBlob   =   "frmFCE.frx":8923
+            OleObjectBlob   =   "frmFCE.frx":8917
             TabIndex        =   137
             Top             =   240
             Width           =   855
@@ -1501,7 +1561,6 @@ Begin VB.Form frmFCE
             Left            =   120
             TabIndex        =   5
             Tag             =   "OC nº"
-            ToolTipText     =   "OC nº"
             Top             =   480
             Width           =   1215
          End
@@ -1510,13 +1569,14 @@ Begin VB.Form frmFCE
             Index           =   21
             Left            =   1440
             TabIndex        =   6
+            Tag             =   "Descrição do pedido"
             Top             =   480
             Width           =   8175
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel23 
             Height          =   255
             Left            =   1440
-            OleObjectBlob   =   "frmFCE.frx":898D
+            OleObjectBlob   =   "frmFCE.frx":8981
             TabIndex        =   86
             Top             =   240
             Width           =   855
@@ -1524,7 +1584,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel22 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":89F9
+            OleObjectBlob   =   "frmFCE.frx":89ED
             TabIndex        =   85
             Top             =   240
             Width           =   735
@@ -1542,57 +1602,62 @@ Begin VB.Form frmFCE
             Strikethrough   =   0   'False
          EndProperty
          Height          =   3975
-         Left            =   -69120
+         Left            =   5880
          TabIndex        =   3
          Top             =   480
          Width           =   3375
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   19
-            ItemData        =   "frmFCE.frx":8A5D
+            ItemData        =   "frmFCE.frx":8A51
             Left            =   120
-            List            =   "frmFCE.frx":8A67
+            List            =   "frmFCE.frx":8A5B
             TabIndex        =   134
+            Text            =   "Informe quem será o responsável pela pintura"
             Top             =   3480
             Width           =   3135
          End
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   18
-            ItemData        =   "frmFCE.frx":8A7A
+            ItemData        =   "frmFCE.frx":8A6E
             Left            =   120
-            List            =   "frmFCE.frx":8A84
+            List            =   "frmFCE.frx":8A78
             TabIndex        =   133
+            Tag             =   "Informe quem será o responsável pelo transporte do produto acabado"
             Top             =   2880
             Width           =   3135
          End
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   17
-            ItemData        =   "frmFCE.frx":8A97
+            ItemData        =   "frmFCE.frx":8A8B
             Left            =   120
-            List            =   "frmFCE.frx":8AA1
+            List            =   "frmFCE.frx":8A95
             TabIndex        =   132
+            Tag             =   "Informe quem irá fornecer a matéria prima"
             Top             =   2280
             Width           =   3135
          End
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   16
-            ItemData        =   "frmFCE.frx":8AB4
+            ItemData        =   "frmFCE.frx":8AA8
             Left            =   120
-            List            =   "frmFCE.frx":8ABE
+            List            =   "frmFCE.frx":8AB2
             TabIndex        =   131
+            Tag             =   "Selecione o responsável pelo reparo"
             Top             =   1680
             Width           =   3135
          End
          Begin VB.ComboBox cboCadastro 
             Height          =   345
             Index           =   15
-            ItemData        =   "frmFCE.frx":8AD1
+            ItemData        =   "frmFCE.frx":8AC5
             Left            =   120
-            List            =   "frmFCE.frx":8ADB
+            List            =   "frmFCE.frx":8ACF
             TabIndex        =   130
+            Tag             =   "Selecione o responsável pela fabricação"
             Top             =   1080
             Width           =   3135
          End
@@ -1600,6 +1665,7 @@ Begin VB.Form frmFCE
             Height          =   330
             Left            =   120
             TabIndex        =   55
+            Tag             =   "Data de entrega"
             Top             =   480
             Width           =   1575
             _ExtentX        =   2778
@@ -1614,13 +1680,13 @@ Begin VB.Form frmFCE
                Italic          =   0   'False
                Strikethrough   =   0   'False
             EndProperty
-            Format          =   161480705
+            Format          =   167903233
             CurrentDate     =   40449
          End
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel21 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8AEE
+            OleObjectBlob   =   "frmFCE.frx":8AE2
             TabIndex        =   84
             Top             =   3240
             Width           =   1095
@@ -1628,7 +1694,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel20 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8B56
+            OleObjectBlob   =   "frmFCE.frx":8B4A
             TabIndex        =   83
             Top             =   2640
             Width           =   975
@@ -1636,7 +1702,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel19 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8BC4
+            OleObjectBlob   =   "frmFCE.frx":8BB8
             TabIndex        =   82
             Top             =   2040
             Width           =   1215
@@ -1644,7 +1710,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel18 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8C38
+            OleObjectBlob   =   "frmFCE.frx":8C2C
             TabIndex        =   81
             Top             =   1440
             Width           =   735
@@ -1652,7 +1718,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel17 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8C9E
+            OleObjectBlob   =   "frmFCE.frx":8C92
             TabIndex        =   80
             Top             =   840
             Width           =   1095
@@ -1660,7 +1726,7 @@ Begin VB.Form frmFCE
          Begin ACTIVESKINLibCtl.SkinLabel SkinLabel16 
             Height          =   255
             Left            =   120
-            OleObjectBlob   =   "frmFCE.frx":8D0C
+            OleObjectBlob   =   "frmFCE.frx":8D00
             TabIndex        =   79
             Top             =   240
             Width           =   1935
@@ -1699,8 +1765,8 @@ Begin VB.Form frmFCE
    Begin VB.Frame Frame1 
       Caption         =   "Dados da FCE "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -1730,7 +1796,7 @@ Begin VB.Form frmFCE
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   161480705
+         Format          =   167903233
          CurrentDate     =   40449
       End
       Begin VB.TextBox Text1 
@@ -1746,13 +1812,14 @@ Begin VB.Form frmFCE
          Height          =   330
          Left            =   3000
          TabIndex        =   1
+         Tag             =   "Nº da carta proposta"
          Top             =   480
          Width           =   15135
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel42 
          Height          =   255
          Left            =   3000
-         OleObjectBlob   =   "frmFCE.frx":8D84
+         OleObjectBlob   =   "frmFCE.frx":8D78
          TabIndex        =   107
          Top             =   240
          Width           =   3375
@@ -1760,7 +1827,7 @@ Begin VB.Form frmFCE
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel41 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmFCE.frx":8DFA
+         OleObjectBlob   =   "frmFCE.frx":8DEE
          TabIndex        =   106
          Top             =   240
          Width           =   855
@@ -1768,7 +1835,7 @@ Begin VB.Form frmFCE
       Begin ACTIVESKINLibCtl.SkinLabel Label2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmFCE.frx":8E5C
+         OleObjectBlob   =   "frmFCE.frx":8E50
          TabIndex        =   102
          Top             =   480
          Width           =   1095
@@ -1776,7 +1843,7 @@ Begin VB.Form frmFCE
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel39 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmFCE.frx":8EC0
+         OleObjectBlob   =   "frmFCE.frx":8EB4
          TabIndex        =   103
          Top             =   240
          Width           =   975
@@ -1857,10 +1924,10 @@ Private Sub txtCadastro_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtcadastro(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtcadastro.Count - 1
-        txtcadastro(X).SelStart = 0
-        txtcadastro(X).SelLength = Len(txtcadastro(X).Text)
+    Dim x As Integer
+    For x = 1 To txtcadastro.Count - 1
+        txtcadastro(x).SelStart = 0
+        txtcadastro(x).SelLength = Len(txtcadastro(x).Text)
     Next
 End Sub
 
@@ -1881,6 +1948,8 @@ On Error Resume Next
 End Sub
 
 Private Sub Form_Load()
+    inicializa_tabs SSTab1, Picture1
+    
     If varGlobal = "-" Then
         mobjMsg.Abrir "Nenhuma FCE selecionada", Ok, critico, "ZEUS"
         'Msgbox "Nenhuma FCE selecionada", vbCritical, "Zeus"
@@ -1990,16 +2059,16 @@ On Error GoTo Err
     Dim rsTree As New ADODB.Recordset
     Dim SqlTree
     Dim no As Node
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     SqlTree = "Select tbVerifGrupo.codgrupo, tbVerifGrupo.descricao, tbVerifItem.coditem, tbVerifItem.descricao from tbVerifGrupo,tbVerifItem where tbVerifItem.codgrupo=tbVerifGrupo.codgrupo Order by tbVerifItem.codgrupo,tbVerifItem.coditem"
     rsTree.Open SqlTree, cnBanco, adOpenKeyset, adLockOptimistic
     
     TreeView1.Nodes.Clear
-    For X = 1 To rsTree.RecordCount
-        Set no = TreeView1.Nodes.Add(, , "no" & X, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
-        Y = rsTree.Fields(0)
-        While Y = rsTree.Fields(0)
-            TreeView1.Nodes.Add "no" & X, tvwChild, , Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3)
+    For x = 1 To rsTree.RecordCount
+        Set no = TreeView1.Nodes.Add(, , "no" & x, Format(rsTree.Fields(0), "000") & "-" & rsTree.Fields(1))
+        y = rsTree.Fields(0)
+        While y = rsTree.Fields(0)
+            TreeView1.Nodes.Add "no" & x, tvwChild, , Format(rsTree.Fields(2), "000") & "-" & rsTree.Fields(3)
             rsTree.MoveNext
             If rsTree.EOF Then Exit Sub
         Wend
@@ -2053,7 +2122,7 @@ Private Sub CompoeControles()
 On Error GoTo Err
     Dim llng_Contador As Long
     Dim SqlTreeview As String
-    Dim Y As Integer, X As Integer, i As Integer
+    Dim y As Integer, x As Integer, i As Integer
     
     Dim rsFO As New ADODB.Recordset
     Dim rsFCECtrl As New ADODB.Recordset
@@ -2243,7 +2312,7 @@ End Sub
 
 Private Sub IncluirItemPed()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer, P As Integer
+    Dim x As Integer, y As Integer, P As Integer
     Dim SUBTOTAL As Double, PIS As Double, COFINS As Double, ICMS As Double, IPI As Double, VALORUNIT As Double, TOTAL As Double
 
     'CALCULOS
@@ -2302,13 +2371,13 @@ Private Sub IncluirItemPed()
             VALORUNIT = (SUBTOTAL - (ICMS + COFINS + PIS)) / Format(MaskEdBox(2), "#,##0.000;($#,##0.000")
         End If
     End If
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            ListView1.ListItems(X).Selected = True
-            ListView1.ListItems(X).EnsureVisible
-            If ListView1.ListItems.Item(X) = Me.SkinLabel40 Then
-                Me.SkinLabel40 = ListView1.ListItems.Item(X) 'Identificador
+    y = ListView1.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            ListView1.ListItems(x).Selected = True
+            ListView1.ListItems(x).EnsureVisible
+            If ListView1.ListItems.Item(x) = Me.SkinLabel40 Then
+                Me.SkinLabel40 = ListView1.ListItems.Item(x) 'Identificador
                 ListView1.SelectedItem.ListSubItems.Item(1) = Me.txtcadastro(20) 'Nº da Ordem de compra
                 ListView1.SelectedItem.ListSubItems.Item(2) = Me.txtcadastro(21) ''Descrição
                 ListView1.SelectedItem.ListSubItems.Item(3) = Format(MaskEdBox(1), "#,##0.00;(#,##0.00)") 'Quantidade
@@ -2346,7 +2415,7 @@ Private Sub IncluirItemPed()
                 Me.ListView1.Sorted = True
                 Me.ListView1.SortKey = 0
                 Me.ListView1.SortOrder = lvwAscending
-                Y = ListView1.ListItems.Count
+                y = ListView1.ListItems.Count
                 Me.ListView1.ColumnHeaders(4).Alignment = lvwColumnRight
                 Me.ListView1.ColumnHeaders(6).Alignment = lvwColumnRight
                 Me.ListView1.ColumnHeaders(8).Alignment = lvwColumnRight
@@ -2369,9 +2438,9 @@ Private Sub IncluirItemPed()
         Me.ListView1.Sorted = True
         Me.ListView1.SortKey = 0
         Me.ListView1.SortOrder = lvwAscending
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     Else
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
         Set ItemLst = ListView1.ListItems.Add(, , SkinLabel40) 'ListView1.ListItems.Add(Format(Y + 1, "0000"))
     End If
     
@@ -2425,15 +2494,15 @@ Private Sub IncluirItemPed()
 End Sub
 
 Private Sub AlteraItemPed()
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.SkinLabel40.Caption = ListView1.ListItems.Item(X)
+    Me.SkinLabel40.Caption = ListView1.ListItems.Item(x)
     Me.txtcadastro(20).Text = ListView1.SelectedItem.ListSubItems.Item(1)
     Me.txtcadastro(21).Text = ListView1.SelectedItem.ListSubItems.Item(2)
     Me.MaskEdBox(1) = ListView1.SelectedItem.ListSubItems.Item(3)
@@ -2459,27 +2528,27 @@ Private Sub AlteraItemPed()
 End Sub
 
 Private Sub ExcluirItemPed()
-    Dim X As Integer, Y As Integer
-    Y = ListView1.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim x As Integer, y As Integer
+    y = ListView1.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    ListView1.ListItems.Remove (X)
+    ListView1.ListItems.Remove (x)
 End Sub
 
 Private Sub IncluirItemFat()
     Dim ItemLst As ListItem
-    Dim X As Integer, Y As Integer, P As Integer
-    Y = ListView2.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            ListView2.ListItems(X).Selected = True
-            ListView2.ListItems(X).EnsureVisible
-            If ListView2.ListItems.Item(X) = Me.txtcadastro(31) Then
-                Me.txtcadastro(31) = ListView2.ListItems.Item(X)
+    Dim x As Integer, y As Integer, P As Integer
+    y = ListView2.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            ListView2.ListItems(x).Selected = True
+            ListView2.ListItems(x).EnsureVisible
+            If ListView2.ListItems.Item(x) = Me.txtcadastro(31) Then
+                Me.txtcadastro(31) = ListView2.ListItems.Item(x)
                 ListView2.SelectedItem.ListSubItems.Item(1) = Me.DTPicker4
                 ListView2.SelectedItem.ListSubItems.Item(2) = Format(MaskEdBox(8), "#,##0.00;(#,##0.00)")
                 ListView2.SelectedItem.ListSubItems.Item(3) = Me.Combo2
@@ -2492,7 +2561,7 @@ Private Sub IncluirItemFat()
                 Me.ListView2.Sorted = True
                 Me.ListView2.SortKey = 0
                 Me.ListView2.SortOrder = lvwAscending
-                Y = ListView2.ListItems.Count
+                y = ListView2.ListItems.Count
                 Me.ListView2.ColumnHeaders(3).Alignment = lvwColumnRight
                 Me.ListView2.ColumnHeaders(5).Alignment = lvwColumnRight
                 Exit Sub
@@ -2502,9 +2571,9 @@ Private Sub IncluirItemFat()
         Me.ListView2.Sorted = True
         Me.ListView2.SortKey = 0
         Me.ListView2.SortOrder = lvwAscending
-        Y = ListView2.ListItems.Count
+        y = ListView2.ListItems.Count
     Else
-        Y = ListView2.ListItems.Count
+        y = ListView2.ListItems.Count
         Set ItemLst = ListView2.ListItems.Add(, , txtcadastro(31)) 'ListView2.ListItems.Add(Format(Y + 1, "0000"))
     End If
     ItemLst.SubItems(1) = Me.DTPicker4
@@ -2520,14 +2589,14 @@ Private Sub IncluirItemFat()
 End Sub
 
 Private Sub AlteraItemFat()
-    Dim Y As Integer, X As Integer
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        If ListView2.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        If ListView2.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    Me.txtcadastro(31).Text = ListView2.ListItems.Item(X)
+    Me.txtcadastro(31).Text = ListView2.ListItems.Item(x)
     Me.DTPicker4 = ListView2.SelectedItem.ListSubItems.Item(1)
     Me.MaskEdBox(8) = ListView2.SelectedItem.ListSubItems.Item(2)
     Me.Combo2 = ListView2.SelectedItem.ListSubItems.Item(3)
@@ -2535,23 +2604,23 @@ Private Sub AlteraItemFat()
 End Sub
 
 Private Sub ExcluirItemFat()
-    Dim X As Integer, Y As Integer
-    Y = ListView2.ListItems.Count
-    If Y = 0 Then Exit Sub
-    For X = 1 To Y
-        If ListView2.ListItems.Item(X).Selected = True Then
+    Dim x As Integer, y As Integer
+    y = ListView2.ListItems.Count
+    If y = 0 Then Exit Sub
+    For x = 1 To y
+        If ListView2.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
-    ListView2.ListItems.Remove (X)
+    ListView2.ListItems.Remove (x)
 End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    For X = 1 To 3
-        If MaskEdBox(X).Text = "" Then
-            mobjMsg.Abrir "Favor informar o valor do campo " & MaskEdBox(X).Tag, Ok, informacao, "Atenção"
-            MaskEdBox(X).SetFocus
+    For x = 1 To 3
+        If MaskEdBox(x).Text = "" Then
+            mobjMsg.Abrir "Favor informar o valor do campo " & MaskEdBox(x).Tag, Ok, informacao, "Atenção"
+            MaskEdBox(x).SetFocus
             Exit Function
         End If
     Next
@@ -2582,17 +2651,17 @@ On Error GoTo Err
     vTransacaoAtiva = 0
     Dim sqlExc As String
     Dim sql As String
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
 10  cnBanco.BeginTrans
     sql = "Select * from tbfo"
     rsGravaFO.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        vListViewPrincipal.ListItems(X).Selected = True
-        vListViewPrincipal.ListItems(X).EnsureVisible
-        If vListViewPrincipal.ListItems.Item(X).Checked = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        vListViewPrincipal.ListItems(x).Selected = True
+        vListViewPrincipal.ListItems(x).EnsureVisible
+        If vListViewPrincipal.ListItems.Item(x).Checked = True Then
             While Not rsGravaFO.EOF
-                If Val(vListViewPrincipal.ListItems.Item(X)) = rsGravaFO.Fields(0) Then
+                If Val(vListViewPrincipal.ListItems.Item(x)) = rsGravaFO.Fields(0) Then
                     rsGravaFO.Fields(2) = 2
                 End If
                 rsGravaFO.MoveNext
@@ -2634,11 +2703,11 @@ On Error GoTo Err
     sqlExc = "Delete from tbpedidos where tbpedidos.fce = '" & Val(Label2) & "'"
     rsDeleta.Open sqlExc, cnBanco
     
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         rsGravaPedidos.AddNew
-        rsGravaPedidos(0) = Val(ListView1.ListItems.Item(X))
+        rsGravaPedidos(0) = Val(ListView1.ListItems.Item(x))
         rsGravaPedidos(1) = Label2
         rsGravaPedidos(2) = ListView1.SelectedItem.ListSubItems.Item(1)
         rsGravaPedidos(3) = ListView1.SelectedItem.ListSubItems.Item(2)
@@ -2676,12 +2745,12 @@ On Error GoTo Err
     sqlExc = "Delete from tbfaturamento where tbfaturamento.fce = '" & Val(Label2) & "'"
     rsDeleta.Open sqlExc, cnBanco
     
-    Y = ListView2.ListItems.Count
-    For X = 1 To Y
-        ListView1.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
+    y = ListView2.ListItems.Count
+    For x = 1 To y
+        ListView1.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
         rsGravaFaturamento.AddNew
         rsGravaFaturamento(0) = Label2
-        rsGravaFaturamento(1) = ListView2.ListItems.Item(X)
+        rsGravaFaturamento(1) = ListView2.ListItems.Item(x)
         rsGravaFaturamento(2) = ListView2.SelectedItem.ListSubItems.Item(1)
         rsGravaFaturamento(3) = Val(ListView2.SelectedItem.ListSubItems.Item(2))
         rsGravaFaturamento(4) = ListView2.SelectedItem.ListSubItems.Item(3)
@@ -2712,17 +2781,17 @@ On Error GoTo Err
     rsGravaListaVer.Close
 
 '----Inicio da Rotina p gravar numero de FCE na FO---------
-    Y = vListViewPrincipal.ListItems.Count
+    y = vListViewPrincipal.ListItems.Count
     sql = "Select * from tbFO"
     rsGravaFO.Open sql, cnBanco, adOpenKeyset, adLockOptimistic
 
-    For X = 1 To Y
-        vListViewPrincipal.ListItems.Item(X).Selected = True 'Passar a selecao para o próximo item
-        If vListViewPrincipal.ListItems.Item(X).Checked = True Then
+    For x = 1 To y
+        vListViewPrincipal.ListItems.Item(x).Selected = True 'Passar a selecao para o próximo item
+        If vListViewPrincipal.ListItems.Item(x).Checked = True Then
             vListViewPrincipal.SelectedItem.ListSubItems.Item(13) = Label2.Caption
             vListViewPrincipal.SelectedItem.ListSubItems.Item(14) = "Serviço"
             rsGravaFO.MoveFirst
-            rsGravaFO.Find "codfo=" & "'" & Val(vListViewPrincipal.ListItems.Item(X)) & "'"
+            rsGravaFO.Find "codfo=" & "'" & Val(vListViewPrincipal.ListItems.Item(x)) & "'"
             If Not rsGravaFO.EOF Then
                 rsGravaFO.Fields(3) = Label2.Caption
                 rsGravaFO.Fields(2) = 2
@@ -2749,7 +2818,7 @@ Err:
 End Sub
 
 Private Sub LimpaContPed()
-    Dim X As Integer
+    Dim x As Integer
     MaskEdBox(1).PromptInclude = False
     MaskEdBox(2).PromptInclude = False
     MaskEdBox(3).PromptInclude = False
@@ -2759,13 +2828,13 @@ Private Sub LimpaContPed()
     MaskEdBox(1).PromptInclude = True
     MaskEdBox(2).PromptInclude = True
     MaskEdBox(3).PromptInclude = True
-    For X = 20 To 21
-        txtcadastro(X) = ""
+    For x = 20 To 21
+        txtcadastro(x) = ""
     Next
 End Sub
 
 Private Sub LimpaContFat()
-    Dim X As Integer
+    Dim x As Integer
     MaskEdBox(8).PromptInclude = False
     MaskEdBox(9).PromptInclude = False
     MaskEdBox(8) = ""
@@ -2777,20 +2846,20 @@ Private Sub LimpaContFat()
 End Sub
 
 Private Sub ContFOSel()
-    Dim Y As Integer, codfornec As Integer
+    Dim y As Integer, codfornec As Integer
     Dim numFO As String
     Contador = 0
     codfornec = 0
     Mensagem = ""
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        vListViewPrincipal.ListItems(X).Selected = True
-        vListViewPrincipal.ListItems(X).EnsureVisible
-        If vListViewPrincipal.ListItems.Item(X).Checked = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        vListViewPrincipal.ListItems(x).Selected = True
+        vListViewPrincipal.ListItems(x).EnsureVisible
+        If vListViewPrincipal.ListItems.Item(x).Checked = True Then
             If numFO = "" Then
-                numFO = vListViewPrincipal.ListItems.Item(X)
+                numFO = vListViewPrincipal.ListItems.Item(x)
             Else
-                numFO = numFO & "," & vListViewPrincipal.ListItems.Item(X)
+                numFO = numFO & "," & vListViewPrincipal.ListItems.Item(x)
             End If
             Contador = Contador + 1
         End If
@@ -2809,8 +2878,8 @@ Private Function SomaTotais()
 On Error GoTo TrataErro
     SkinLabel12.Caption = ""
     SomaTotais = True
-    Dim Y As Integer, vPIS As Double, vCofins As Double, vICMS As Double, vIPI As Double, vVSImp As Double, vCCImp As Double, vSubTotal As Double, vTotal As Double
-    Y = ListView1.ListItems.Count
+    Dim y As Integer, vPIS As Double, vCofins As Double, vICMS As Double, vIPI As Double, vVSImp As Double, vCCImp As Double, vSubTotal As Double, vTotal As Double
+    y = ListView1.ListItems.Count
     vPIS = 0
     vCofins = 0
     vICMS = 0
@@ -2819,7 +2888,7 @@ On Error GoTo TrataErro
     vCCImp = 0
     vSubTotal = 0
     vTotal = 0
-    For W = 1 To Y
+    For W = 1 To y
         ListView1.ListItems(W).Selected = True
         ListView1.SelectedItem.ListSubItems.Item(9) = Format(ListView1.SelectedItem.ListSubItems.Item(9), "#,##0.00;(#,##0.00)")
         ListView1.SelectedItem.ListSubItems.Item(11) = Format(ListView1.SelectedItem.ListSubItems.Item(11), "#,##0.00;(#,##0.00)")

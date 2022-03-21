@@ -4,17 +4,17 @@ Begin VB.Form frmLocalizar
    AutoRedraw      =   -1  'True
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Visualizador de Imagens"
-   ClientHeight    =   7470
+   ClientHeight    =   7335
    ClientLeft      =   45
    ClientTop       =   330
-   ClientWidth     =   11430
+   ClientWidth     =   11670
    Icon            =   "Visualizador de Imagens.frx":0000
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   7470
-   ScaleWidth      =   11430
+   ScaleHeight     =   7335
+   ScaleWidth      =   11670
    StartUpPosition =   2  'CenterScreen
    Begin VB.PictureBox imgFig1 
       Appearance      =   0  'Flat
@@ -23,27 +23,27 @@ Begin VB.Form frmLocalizar
       DrawStyle       =   5  'Transparent
       ForeColor       =   &H80000008&
       HasDC           =   0   'False
-      Height          =   6375
+      Height          =   6975
       Left            =   3600
-      ScaleHeight     =   6345
-      ScaleWidth      =   7665
+      ScaleHeight     =   6945
+      ScaleWidth      =   7905
       TabIndex        =   5
-      Top             =   360
-      Width           =   7695
+      Top             =   240
+      Width           =   7935
       Begin VB.Image imgFig 
          BorderStyle     =   1  'Fixed Single
-         Height          =   6375
+         Height          =   6975
          Left            =   0
          Stretch         =   -1  'True
          Top             =   0
-         Width           =   7695
+         Width           =   7935
       End
    End
    Begin VB.CommandButton Cmd1 
       Appearance      =   0  'Flat
       Caption         =   "Confirmar (F9)"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Calibri"
          Size            =   9.75
          Charset         =   0
          Weight          =   700
@@ -52,16 +52,16 @@ Begin VB.Form frmLocalizar
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   3600
+      Left            =   120
       TabIndex        =   4
-      Top             =   6840
-      Width           =   1935
+      Top             =   6720
+      Width           =   1335
    End
    Begin VB.CommandButton cmdSair 
       Appearance      =   0  'Flat
       Caption         =   "Sair (Esc)"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Calibri"
          Size            =   9.75
          Charset         =   0
          Weight          =   700
@@ -70,14 +70,14 @@ Begin VB.Form frmLocalizar
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   5640
+      Left            =   1560
       TabIndex        =   3
-      Top             =   6840
-      Width           =   1695
+      Top             =   6720
+      Width           =   1335
    End
    Begin VB.FileListBox File1 
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Calibri"
          Size            =   9.75
          Charset         =   0
          Weight          =   400
@@ -85,16 +85,16 @@ Begin VB.Form frmLocalizar
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2730
+      Height          =   2565
       Left            =   120
       Pattern         =   "*.bmp;*.jpg;*.gif"
       TabIndex        =   2
-      Top             =   3960
+      Top             =   3840
       Width           =   3375
    End
    Begin VB.DirListBox Dir1 
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Calibri"
          Size            =   9.75
          Charset         =   0
          Weight          =   400
@@ -102,16 +102,16 @@ Begin VB.Form frmLocalizar
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2790
+      Height          =   2640
       Left            =   120
       TabIndex        =   1
-      Top             =   720
+      Top             =   600
       Width           =   3375
    End
    Begin VB.DriveListBox Drive1 
       Appearance      =   0  'Flat
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
+         Name            =   "Calibri"
          Size            =   9.75
          Charset         =   0
          Weight          =   400
@@ -119,10 +119,10 @@ Begin VB.Form frmLocalizar
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   360
+      Height          =   345
       Left            =   120
       TabIndex        =   0
-      Top             =   360
+      Top             =   240
       Width           =   3375
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
@@ -130,15 +130,15 @@ Begin VB.Form frmLocalizar
       Left            =   120
       OleObjectBlob   =   "Visualizador de Imagens.frx":1CFA
       TabIndex        =   7
-      Top             =   3720
+      Top             =   3600
       Width           =   2415
    End
    Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
       Height          =   255
       Left            =   120
-      OleObjectBlob   =   "Visualizador de Imagens.frx":1D82
+      OleObjectBlob   =   "Visualizador de Imagens.frx":1D7C
       TabIndex        =   6
-      Top             =   120
+      Top             =   0
       Width           =   1575
    End
 End
@@ -171,10 +171,10 @@ Dir1.Path = Drive1.Drive
 End Sub
 
 Private Sub File1_Click()
-Dim X As Picture
+Dim x As Picture
 
-Set X = LoadPicture(File1.Path & "\" & File1.FileName)
-Set imgFig.Picture = X
+Set x = LoadPicture(File1.Path & "\" & File1.FileName)
+Set imgFig.Picture = x
 End Sub
 
 Private Sub Form_KeyPress(KeyAscii As Integer)

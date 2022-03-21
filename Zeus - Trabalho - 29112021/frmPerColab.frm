@@ -1,5 +1,6 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "mscomctl.ocx"
 Begin VB.Form frmPerColab 
    BorderStyle     =   1  'Fixed Single
@@ -25,6 +26,13 @@ Begin VB.Form frmPerColab
    ScaleHeight     =   8145
    ScaleWidth      =   7725
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   2280
+      Top             =   7560
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdPermissao 
       Height          =   615
       Index           =   1
@@ -32,6 +40,7 @@ Begin VB.Form frmPerColab
       Picture         =   "frmPerColab.frx":0A02
       Style           =   1  'Graphical
       TabIndex        =   18
+      Tag             =   "Sair"
       Top             =   7440
       Width           =   615
    End
@@ -42,6 +51,7 @@ Begin VB.Form frmPerColab
       Picture         =   "frmPerColab.frx":16CC
       Style           =   1  'Graphical
       TabIndex        =   17
+      Tag             =   "Salvar"
       Top             =   7440
       Width           =   615
    End
@@ -63,19 +73,21 @@ Begin VB.Form frmPerColab
       Width           =   7455
       Begin VB.TextBox txtPermissao 
          Enabled         =   0   'False
-         Height          =   285
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
+         Tag             =   "Chapa do Colaborador"
          Top             =   480
          Width           =   1455
       End
       Begin VB.TextBox txtPermissao 
          Enabled         =   0   'False
-         Height          =   285
+         Height          =   345
          Index           =   1
          Left            =   1680
          TabIndex        =   1
+         Tag             =   "Nome do colaborador"
          Top             =   480
          Width           =   5655
       End
@@ -135,6 +147,7 @@ Begin VB.Form frmPerColab
          Height          =   255
          Left            =   2400
          TabIndex        =   16
+         Tag             =   "Colaborador realiza apropriação de OS - Ordem de Serviço"
          Top             =   1080
          Width           =   3255
       End
@@ -143,6 +156,7 @@ Begin VB.Form frmPerColab
          Height          =   375
          Left            =   2400
          TabIndex        =   15
+         Tag             =   "Permissão para encerrar o sistema TAOS"
          Top             =   1440
          Width           =   3615
       End
@@ -153,6 +167,7 @@ Begin VB.Form frmPerColab
          Picture         =   "frmPerColab.frx":245C
          Style           =   1  'Graphical
          TabIndex        =   13
+         Tag             =   "Excluir"
          Top             =   1080
          Width           =   615
       End
@@ -163,6 +178,7 @@ Begin VB.Form frmPerColab
          Picture         =   "frmPerColab.frx":3126
          Style           =   1  'Graphical
          TabIndex        =   14
+         Tag             =   "Inserir"
          Top             =   1080
          Width           =   615
       End
@@ -186,12 +202,11 @@ Begin VB.Form frmPerColab
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   2
          Left            =   120
          TabIndex        =   3
          Tag             =   "ID Centro de Custo"
-         ToolTipText     =   "ID Centro de Custo"
          Top             =   600
          Width           =   1575
       End
@@ -206,10 +221,11 @@ Begin VB.Form frmPerColab
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   330
+         Height          =   345
          Index           =   3
          Left            =   2400
          TabIndex        =   5
+         Tag             =   "Nome do Centro de Custo"
          Top             =   600
          Width           =   4935
       End
@@ -298,23 +314,23 @@ On Error GoTo Err
     sqlIDFechamento = "Select a.codigo,a.nmparada from tbparadas as a where a.tipo = 'Fechamento'"
     rsIDFechamento.Open sqlIDFechamento, cnBanco, adOpenKeyset, adLockOptimistic
     If rsIDFechamento.RecordCount = 0 Then Exit Sub
-    Y = ListView1.ListItems.Count
-    If Y > 0 Then
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X) = rsIDFechamento.Fields(0) Then
-                ListView1.ListItems.Item(X).Selected = True
-                rsIDFechamento.Fields(0) = ListView1.ListItems.Item(X)
+    y = ListView1.ListItems.Count
+    If y > 0 Then
+        For x = 1 To y
+            If ListView1.ListItems.Item(x) = rsIDFechamento.Fields(0) Then
+                ListView1.ListItems.Item(x).Selected = True
+                rsIDFechamento.Fields(0) = ListView1.ListItems.Item(x)
                 ListView1.SelectedItem.ListSubItems.Item(1) = rsIDFechamento.Fields(1)
                 ListView1.SelectedItem.ListSubItems.Item(2) = txtPermissao(0).Text
-                Y = ListView1.ListItems.Count
+                y = ListView1.ListItems.Count
                 Exit Sub
             End If
         Next
         Set ItemLst = ListView1.ListItems.Add(, , rsIDFechamento.Fields(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     Else
         Set ItemLst = ListView1.ListItems.Add(, , rsIDFechamento.Fields(0))
-        Y = ListView1.ListItems.Count
+        y = ListView1.ListItems.Count
     End If
     ItemLst.SubItems(1) = rsIDFechamento.Fields(1)
     ItemLst.SubItems(2) = txtPermissao(0).Text
@@ -332,7 +348,7 @@ End Sub
 
 Private Sub insereApropOS()
     Set ItemLst = ListView1.ListItems.Add(, , "1")
-    Y = ListView1.ListItems.Count
+    y = ListView1.ListItems.Count
     ItemLst.SubItems(1) = "APROPRIAR OS"
     ItemLst.SubItems(2) = txtPermissao(0).Text
 End Sub

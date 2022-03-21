@@ -1,10 +1,11 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmCD 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Controle de Desenhos"
-   ClientHeight    =   4605
+   ClientHeight    =   4905
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   10800
@@ -13,9 +14,16 @@ Begin VB.Form frmCD
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   4605
+   ScaleHeight     =   4905
    ScaleWidth      =   10800
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   4200
+      Top             =   4200
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdcadastro 
       Height          =   615
       Index           =   1
@@ -23,9 +31,8 @@ Begin VB.Form frmCD
       Picture         =   "frmCD.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   42
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
-      Top             =   3840
+      Tag             =   "Sair"
+      Top             =   4200
       Width           =   615
    End
    Begin VB.CommandButton cmdcadastro 
@@ -35,17 +42,16 @@ Begin VB.Form frmCD
       Picture         =   "frmCD.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   43
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
-      Top             =   3840
+      Tag             =   "Salvar "
+      Top             =   4200
       Width           =   615
    End
    Begin VB.Frame Frame6 
       Caption         =   "Status"
       Enabled         =   0   'False
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -55,11 +61,20 @@ Begin VB.Form frmCD
       Height          =   615
       Left            =   9600
       TabIndex        =   35
-      Top             =   3840
+      Top             =   4200
       Width           =   1095
       Begin VB.CheckBox Check1 
          Caption         =   "Ativo"
          Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   255
          Left            =   120
          TabIndex        =   17
@@ -71,21 +86,30 @@ Begin VB.Form frmCD
    Begin VB.Frame Frame5 
       Caption         =   "Status "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   2160
       TabIndex        =   33
       Top             =   120
       Width           =   3255
       Begin VB.ComboBox cboContDes 
-         Height          =   315
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   0
          ItemData        =   "frmCD.frx":265E
          Left            =   120
@@ -93,7 +117,6 @@ Begin VB.Form frmCD
          TabIndex        =   1
          Tag             =   "Status"
          Text            =   "Aguardando"
-         ToolTipText     =   "Status"
          Top             =   240
          Width           =   3015
       End
@@ -109,18 +132,26 @@ Begin VB.Form frmCD
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   3615
+      Height          =   3975
       Left            =   5520
       TabIndex        =   28
       Top             =   120
       Width           =   5175
       Begin VB.ComboBox cboContDes 
-         Height          =   315
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   2
          Left            =   2640
          TabIndex        =   12
          Tag             =   "Detalhista"
-         ToolTipText     =   "Detalhista"
          Top             =   480
          Width           =   2415
       End
@@ -133,77 +164,117 @@ Begin VB.Form frmCD
          Width           =   1215
       End
       Begin VB.TextBox txtContDes 
-         Height          =   1815
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   2175
          Index           =   10
          Left            =   120
          MultiLine       =   -1  'True
          TabIndex        =   16
          Tag             =   "Observação"
-         ToolTipText     =   "Observação"
          Top             =   1680
          Width           =   4935
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel13 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":26F7
+         OleObjectBlob   =   "frmCD.frx":26F1
          TabIndex        =   34
          Top             =   1440
          Width           =   1575
       End
       Begin VB.TextBox txtContDes 
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   9
          Left            =   3480
          TabIndex        =   15
          Tag             =   "Croqui"
-         ToolTipText     =   "Croqui"
          Top             =   1080
          Width           =   1575
       End
       Begin MSComCtl2.DTPicker DTPicker3 
-         Height          =   285
+         Height          =   345
          Left            =   1800
          TabIndex        =   14
          Tag             =   "Data fim"
-         ToolTipText     =   "Data fim"
          Top             =   1080
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   503
+         _ExtentY        =   609
          _Version        =   393216
-         Format          =   165019649
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   168427521
          CurrentDate     =   41366
       End
       Begin MSComCtl2.DTPicker DTPicker2 
-         Height          =   285
+         Height          =   345
          Left            =   120
          TabIndex        =   13
          Tag             =   "Data início"
-         ToolTipText     =   "Data início"
          Top             =   1080
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   503
+         _ExtentY        =   609
          _Version        =   393216
-         Format          =   165019649
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   168427521
          CurrentDate     =   41366
       End
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   285
          Index           =   8
          Left            =   120
          TabIndex        =   11
          Tag             =   "Usuário"
-         ToolTipText     =   "Usuário"
          Top             =   480
          Width           =   2415
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel12 
          Height          =   255
          Left            =   3480
-         OleObjectBlob   =   "frmCD.frx":276B
+         OleObjectBlob   =   "frmCD.frx":275F
          TabIndex        =   32
          Top             =   840
          Width           =   1335
@@ -211,7 +282,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel11 
          Height          =   255
          Left            =   1800
-         OleObjectBlob   =   "frmCD.frx":27DD
+         OleObjectBlob   =   "frmCD.frx":27CB
          TabIndex        =   31
          Top             =   840
          Width           =   855
@@ -219,7 +290,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":284D
+         OleObjectBlob   =   "frmCD.frx":2835
          TabIndex        =   30
          Top             =   840
          Width           =   1095
@@ -227,7 +298,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":28C3
+         OleObjectBlob   =   "frmCD.frx":28A5
          TabIndex        =   29
          Top             =   240
          Width           =   1815
@@ -236,31 +307,31 @@ Begin VB.Form frmCD
    Begin VB.Frame Frame2 
       Caption         =   "Registro de entrada (Desenhos recebidos)"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2895
+      Height          =   3135
       Left            =   120
       TabIndex        =   19
-      Top             =   840
+      Top             =   960
       Width           =   5295
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   12
          Left            =   3960
          TabIndex        =   41
@@ -270,7 +341,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel15 
          Height          =   255
          Left            =   3960
-         OleObjectBlob   =   "frmCD.frx":2931
+         OleObjectBlob   =   "frmCD.frx":290D
          TabIndex        =   40
          Top             =   240
          Width           =   975
@@ -278,31 +349,41 @@ Begin VB.Form frmCD
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   11
          Left            =   1080
          TabIndex        =   39
+         Tag             =   "Projeto"
          Top             =   1080
          Width           =   4095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel14 
          Height          =   255
          Left            =   1200
-         OleObjectBlob   =   "frmCD.frx":29A5
+         OleObjectBlob   =   "frmCD.frx":297B
          TabIndex        =   38
          Top             =   840
          Width           =   735
       End
       Begin VB.CommandButton Command1 
          Caption         =   "..."
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   255
          Left            =   3480
          TabIndex        =   37
@@ -310,81 +391,149 @@ Begin VB.Form frmCD
          Width           =   375
       End
       Begin MSComCtl2.DTPicker DTPicker1 
-         Height          =   285
+         Height          =   345
          Left            =   3600
          TabIndex        =   8
-         ToolTipText     =   "Recebido"
+         Tag             =   "Recebido"
          Top             =   1680
          Width           =   1575
          _ExtentX        =   2778
-         _ExtentY        =   503
+         _ExtentY        =   609
          _Version        =   393216
-         Format          =   162267137
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   168427521
          CurrentDate     =   41366
       End
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   6
          Left            =   2400
          TabIndex        =   7
          Tag             =   "Peso Total"
-         ToolTipText     =   "Peso Total"
          Top             =   1680
          Width           =   1095
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
          Height          =   255
          Left            =   2400
-         OleObjectBlob   =   "frmCD.frx":2A13
+         OleObjectBlob   =   "frmCD.frx":29E3
          TabIndex        =   27
          Top             =   1440
          Width           =   975
       End
       Begin VB.TextBox txtContDes 
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   5
          Left            =   1080
          TabIndex        =   6
          Tag             =   "Peso Unitário"
-         ToolTipText     =   "Peso Unitário"
          Top             =   1680
          Width           =   1215
       End
       Begin VB.TextBox txtContDes 
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   4
          Left            =   120
          TabIndex        =   5
          Tag             =   "Quantidade"
-         ToolTipText     =   "Quantidade"
          Top             =   1680
          Width           =   855
       End
       Begin VB.TextBox txtContDes 
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   3
          Left            =   2760
          TabIndex        =   4
          Tag             =   "Revisão"
-         ToolTipText     =   "Revisão"
          Top             =   480
          Width           =   615
       End
       Begin VB.TextBox txtContDes 
-         Height          =   285
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
          Index           =   2
          Left            =   120
          TabIndex        =   3
          Tag             =   "Desenho"
-         ToolTipText     =   "Desenho"
          Top             =   480
          Width           =   2535
       End
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   345
+         Index           =   1
+         Left            =   120
+         TabIndex        =   2
+         Tag             =   "FCE"
+         Top             =   1080
+         Width           =   855
+      End
+      Begin VB.Frame Frame3 
+         Caption         =   "Previsão de detalhamento "
+         BeginProperty Font 
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
             Weight          =   700
@@ -392,51 +541,47 @@ Begin VB.Form frmCD
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
-         Index           =   1
-         Left            =   120
-         TabIndex        =   2
-         Tag             =   "FCE"
-         ToolTipText     =   "FCE"
-         Top             =   1080
-         Width           =   855
-      End
-      Begin VB.Frame Frame3 
-         Caption         =   "Previsão de detalhamento "
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   735
+         Height          =   855
          Left            =   120
          TabIndex        =   26
-         Top             =   2040
+         Top             =   2160
          Width           =   5055
          Begin VB.ComboBox cboContDes 
-            Height          =   315
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
             Index           =   1
-            ItemData        =   "frmCD.frx":2A87
+            ItemData        =   "frmCD.frx":2A51
             Left            =   1440
-            List            =   "frmCD.frx":2A91
+            List            =   "frmCD.frx":2A5B
             TabIndex        =   10
             Tag             =   "Previsão de detalhamento"
             Text            =   "Dias"
-            ToolTipText     =   "Previsão de detalhamento"
             Top             =   360
             Width           =   1095
          End
          Begin VB.TextBox txtContDes 
-            Height          =   285
+            BeginProperty Font 
+               Name            =   "Calibri"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
             Index           =   7
             Left            =   120
             TabIndex        =   9
             Tag             =   "Pevisão de detalhamento"
-            ToolTipText     =   "Pevisão de detalhamento"
             Top             =   360
             Width           =   1215
          End
@@ -444,7 +589,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel7 
          Height          =   255
          Left            =   3600
-         OleObjectBlob   =   "frmCD.frx":2AA2
+         OleObjectBlob   =   "frmCD.frx":2A6C
          TabIndex        =   25
          Top             =   1440
          Width           =   975
@@ -452,7 +597,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel6 
          Height          =   255
          Left            =   1080
-         OleObjectBlob   =   "frmCD.frx":2B12
+         OleObjectBlob   =   "frmCD.frx":2AD6
          TabIndex        =   24
          Top             =   1440
          Width           =   1215
@@ -460,7 +605,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel5 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2B90
+         OleObjectBlob   =   "frmCD.frx":2B4E
          TabIndex        =   23
          Top             =   1440
          Width           =   615
@@ -468,7 +613,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel4 
          Height          =   255
          Left            =   2760
-         OleObjectBlob   =   "frmCD.frx":2BFC
+         OleObjectBlob   =   "frmCD.frx":2BB4
          TabIndex        =   22
          Top             =   240
          Width           =   735
@@ -476,7 +621,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2C6A
+         OleObjectBlob   =   "frmCD.frx":2C1C
          TabIndex        =   21
          Top             =   240
          Width           =   975
@@ -484,7 +629,7 @@ Begin VB.Form frmCD
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmCD.frx":2CD8
+         OleObjectBlob   =   "frmCD.frx":2C84
          TabIndex        =   20
          Top             =   840
          Width           =   975
@@ -493,15 +638,15 @@ Begin VB.Form frmCD
    Begin VB.Frame Frame1 
       Caption         =   "Identificador "
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Calibri"
+         Size            =   9.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   615
+      Height          =   735
       Left            =   120
       TabIndex        =   18
       Top             =   120
@@ -509,7 +654,7 @@ Begin VB.Form frmCD
       Begin VB.TextBox txtContDes 
          Enabled         =   0   'False
          BeginProperty Font 
-            Name            =   "Arial"
+            Name            =   "Calibri"
             Size            =   9.75
             Charset         =   0
             Weight          =   700
@@ -517,12 +662,11 @@ Begin VB.Form frmCD
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   285
+         Height          =   345
          Index           =   0
          Left            =   120
          TabIndex        =   0
          Tag             =   "Identificador"
-         ToolTipText     =   "Identificador"
          Top             =   240
          Width           =   1695
       End
@@ -560,7 +704,7 @@ Private Sub cmdCadastro_MouseOver(Index As Integer)
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
 
-Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub cmdCadastro_MouseUp(Index As Integer, Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -575,7 +719,7 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then SendKeys "{TAB}": KeyAscii = 0
 End Sub
 
-Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub Frame1_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
     Legenda = ""
     'frmMenu2.StatusBar1.Panels(3).Text = Legenda
 End Sub
@@ -622,7 +766,7 @@ On Error GoTo Err
     If ValidaCampo = False Then Exit Sub
     Dim rsContDes As New ADODB.Recordset
     Dim sqlContDes As String
-    Dim Y As Integer
+    Dim y As Integer
 10  cnBanco.BeginTrans
    
     sqlContDes = "select * from tbcd where idcd = '" & txtContDes(0) & "'"
@@ -690,20 +834,20 @@ Err:
 End Sub
 
 Private Sub LimpaControles()
-    Dim X As Integer
+    Dim x As Integer
     DesbloqueiaControles
-    For X = 0 To txtContDes.Count - 1
-        txtContDes(X) = ""
+    For x = 0 To txtContDes.Count - 1
+        txtContDes(x) = ""
     Next
-    For X = 1 To cboContDes.Count - 1
-        cboContDes(X) = ""
+    For x = 1 To cboContDes.Count - 1
+        cboContDes(x) = ""
     Next
     txtContDes(0) = Format(GeraCodigo, "000000")
     txtContDes(8).Text = NomUsu 'Detalhista
 End Sub
 
 Private Sub CompoeControles()
-    Dim X As Integer
+    Dim x As Integer
     txtContDes(0).Text = Format(rsContDes.Fields(0), "000000") 'IDCD
     If rsContDes.Fields(13) = 4 Then
         cboContDes(0).Text = "Aguardando" 'Status
@@ -744,18 +888,18 @@ End Sub
 
 Private Function ValidaCampo()
     ValidaCampo = False
-    For X = 0 To 8
-        If txtContDes(X).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtContDes(X).Tag, Ok, critico, "Atenção"
-            Me.txtContDes(X).SetFocus
+    For x = 0 To 8
+        If txtContDes(x).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtContDes(x).Tag, Ok, critico, "Atenção"
+            Me.txtContDes(x).SetFocus
             Exit Function
         End If
     Next
     
-    For X = 0 To 1
-        If txtContDes(X).Text = "" Then
-            mobjMsg.Abrir "Favor informar o campo " & Me.txtContDes(X).Tag, Ok, critico, "Atenção"
-            Me.txtContDes(X).SetFocus
+    For x = 0 To 1
+        If txtContDes(x).Text = "" Then
+            mobjMsg.Abrir "Favor informar o campo " & Me.txtContDes(x).Tag, Ok, critico, "Atenção"
+            Me.txtContDes(x).SetFocus
             Exit Function
         End If
     Next
@@ -768,11 +912,11 @@ Private Function ValidaCampo()
 End Function
 
 Private Sub BloqueiaControles()
-    For X = 0 To txtContDes.Count - 1
-        txtContDes(X).Enabled = False
+    For x = 0 To txtContDes.Count - 1
+        txtContDes(x).Enabled = False
     Next
-    For X = 0 To cboContDes.Count - 1
-        cboContDes(X).Enabled = False
+    For x = 0 To cboContDes.Count - 1
+        cboContDes(x).Enabled = False
     Next
     DTPicker1.Enabled = False
     DTPicker2.Enabled = False
@@ -782,11 +926,11 @@ Private Sub BloqueiaControles()
 End Sub
 
 Private Sub DesbloqueiaControles()
-    For X = 1 To txtContDes.Count - 1
-        txtContDes(X).Enabled = True
+    For x = 1 To txtContDes.Count - 1
+        txtContDes(x).Enabled = True
     Next
-    For X = 0 To cboContDes.Count - 1
-        cboContDes(X).Enabled = True
+    For x = 0 To cboContDes.Count - 1
+        cboContDes(x).Enabled = True
     Next
     DTPicker1.Enabled = True
     DTPicker2.Enabled = True
@@ -874,9 +1018,9 @@ End Sub
 Private Sub AtualizaListview()
     'On Error GoTo Err
     Dim ItemLst As ListItem 'variavel q recebe as propriedades do Listview,
-    Y = vListViewPrincipal.ListItems.Count
-    For X = 1 To Y
-        If vListViewPrincipal.ListItems.Item(X).Selected = True Then
+    y = vListViewPrincipal.ListItems.Count
+    For x = 1 To y
+        If vListViewPrincipal.ListItems.Item(x).Selected = True Then
             Exit For
         End If
     Next
@@ -1019,7 +1163,7 @@ Private Sub achaDesenho()
 On Error GoTo Err
     Dim rsDesenho As New ADODB.Recordset
     Dim SqlDesenho As String
-    Dim X As Integer
+    Dim x As Integer
     
     SqlDesenho = "Select * from tbDesenhos where desenho = '" & txtContDes(2) & "' order by desenho"
     rsDesenho.Open SqlDesenho, cnBanco, adOpenKeyset, adLockOptimistic

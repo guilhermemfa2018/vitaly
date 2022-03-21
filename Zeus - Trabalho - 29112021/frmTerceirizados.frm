@@ -296,7 +296,7 @@ Begin VB.Form frmTerceirizados
          _Version        =   393216
          CheckBox        =   -1  'True
          DateIsNull      =   -1  'True
-         Format          =   423165953
+         Format          =   166985729
          CurrentDate     =   42416
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel9 
@@ -316,7 +316,7 @@ Begin VB.Form frmTerceirizados
          _ExtentX        =   2990
          _ExtentY        =   582
          _Version        =   393216
-         Format          =   423165953
+         Format          =   166985729
          CurrentDate     =   42416
       End
       Begin MSComCtl2.DTPicker DTPicker1 
@@ -328,7 +328,7 @@ Begin VB.Form frmTerceirizados
          _ExtentX        =   2990
          _ExtentY        =   582
          _Version        =   393216
-         Format          =   423165953
+         Format          =   166985729
          CurrentDate     =   42416
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel8 
@@ -506,11 +506,11 @@ Private Sub cmdCadastro_Click(Index As Integer)
         'mostra a figura
         'Image1.Picture = LoadPicture(Caminho1)
         aicAlphaImage1.LoadImage_FromFile (Caminho1)
-        Label53 = Caminho1
+        label53 = Caminho1
     
     Case 1
         aicAlphaImage1.ClearImage
-        Label53 = ""
+        label53 = ""
     Case 2
         ChamaGrid "CORPORERM.dbo.PSECAO", "descricao", txtCadTerc(2), frmTerceirizados, "codigo", "descricao"
         CarregaTxt "CORPORERM.dbo.PSECAO", "codigo", "S", "", "", txtCadTerc(2), txtCadTerc(5), 1, 2, txtCadTerc(2), "S", txtCadTerc(5), "1"
@@ -566,10 +566,10 @@ Private Sub txtCadTerc_GotFocus(Index As Integer)
 On Error Resume Next
     mudaCorText txtCadTerc(Index)
     'Abaixo - Deixa selecionado todo o texto do TextBox
-    Dim X As Integer
-    For X = 1 To txtCadTerc.Count - 1
-        txtCadTerc(X).SelStart = 0
-        txtCadTerc(X).SelLength = Len(txtCadTerc(X).Text)
+    Dim x As Integer
+    For x = 1 To txtCadTerc.Count - 1
+        txtCadTerc(x).SelStart = 0
+        txtCadTerc(x).SelLength = Len(txtCadTerc(x).Text)
     Next
 End Sub
 
@@ -647,8 +647,8 @@ Private Sub compoeControlesForm()
     txtCadTerc(11) = Mid$(rsTerceirizados.Fields(17), 1, 5) ' Horário de fim do expediente
     
     
-    Label53 = rsTerceirizados.Fields(13) 'Local onde esta armazenado a foto do coloborador
-    aicAlphaImage1.LoadImage_FromFile (Label53.Caption)
+    label53 = rsTerceirizados.Fields(13) 'Local onde esta armazenado a foto do coloborador
+    aicAlphaImage1.LoadImage_FromFile (label53.Caption)
     If rsTerceirizados.Fields(12) = "N" Or IsNull(rsTerceirizados.Fields(12)) Then
         Check1.Value = 0 'Status (não ativo)
     Else
@@ -659,7 +659,7 @@ End Sub
 Private Function salvar_Dados()
 'On Error GoTo Err
     salvar_Dados = True
-    Dim X As Integer, Y As Integer
+    Dim x As Integer, y As Integer
     
     'Grava dados do formulário
     'O 1º parametro é o valor que sera gravado no campo
@@ -671,7 +671,7 @@ Private Function salvar_Dados()
     vQualquerDado(1, 2) = "S"
     vQualquerDado(2, 1) = txtCadTerc(1).Text 'Nome do terceirizado
     vQualquerDado(2, 2) = "S"
-    vQualquerDado(3, 1) = Label53.Caption ' Descrição do critério
+    vQualquerDado(3, 1) = label53.Caption ' Descrição do critério
     vQualquerDado(3, 2) = "S"
     vQualquerDado(4, 1) = txtCadTerc(2).Text 'id do setor
     vQualquerDado(4, 2) = "S"

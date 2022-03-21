@@ -26,7 +26,7 @@ Private Const STRETCHMODE = vbPaletteModeContainer
 Private Const WM_PAINT = &HF
 
 Private Declare Function BeginPaint Lib "user32" (ByVal HWnd As Long, lpPaint As PAINTSTRUCT) As Long
-Private Declare Function BitBlt Lib "gdi32" (ByVal hDestDC As Long, ByVal X As Long, ByVal Y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
+Private Declare Function BitBlt Lib "gdi32" (ByVal hDestDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
 
 Private Declare Function CallWindowProc Lib "user32" Alias "CallWindowProcA" (ByVal lpPrevWndFunc As Long, ByVal HWnd As Long, ByVal Msg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long
 Private Declare Function CreateCompatibleBitmap Lib "gdi32" (ByVal hdc As Long, ByVal nWidth As Long, ByVal nHeight As Long) As Long
@@ -41,7 +41,7 @@ Private Declare Function SelectObject Lib "gdi32" (ByVal hdc As Long, ByVal hObj
 Private Declare Function SetProp Lib "user32" Alias "SetPropA" (ByVal HWnd As Long, ByVal lpString As String, ByVal hData As Long) As Long
 Private Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal HWnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
 Private Declare Function SetStretchBltMode Lib "gdi32" (ByVal hdc As Long, ByVal hStretchMode As Long) As Long
-Private Declare Function StretchBlt Lib "gdi32" (ByVal hdc As Long, ByVal X As Long, ByVal Y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal nSrcWidth As Long, ByVal nSrcHeight As Long, ByVal dwRop As Long) As Long
+Private Declare Function StretchBlt Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal nSrcWidth As Long, ByVal nSrcHeight As Long, ByVal dwRop As Long) As Long
 Private Declare Sub CopyMemory Lib "kernel32.dll" Alias "RtlMoveMemory" (Destination As Any, Source As Any, ByVal Length As Long)
 Private pRect As RECT
 
@@ -52,7 +52,7 @@ Public vLeftPadrao As Integer
 
 Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal HWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
 Public Declare Function DeleteFile Lib "kernel32" Alias "DeleteFileA" (ByVal lpFileName As String) As Long
-Private Declare Function SetWindowPos Lib "user32" (ByVal HWnd As Long, ByVal hWndInsertAfter As Long, ByVal X As Long, ByVal Y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
+Private Declare Function SetWindowPos Lib "user32" (ByVal HWnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
 
 Public CaminhoSkin As String
 
@@ -88,7 +88,7 @@ Public ResY As Single
 Public OldX As Single
 Public OldY As Single
 Public resolucao As Boolean
-
+Public rsConf As New ADODB.Recordset
 'muda data e símbolo de R$
 Public Const LOCALE_SSHORTDATE = &H1F
 Public Const LOCALE_SCURRENCY = 20
@@ -273,12 +273,12 @@ Public Function constroiTabs(vSSTab1 As SSTab, vCheck As Boolean)
         Exit Function
     End If
     
-    Dim vProximaTab As Integer, X As Integer, Y As Integer
-    X = 29
+    Dim vProximaTab As Integer, x As Integer, y As Integer
+    x = 29
     vProximaTab = 0
-    For Y = 0 To X
-        If vSSTab1.TabVisible(Y) = False Then
-            vProximaTab = Y
+    For y = 0 To x
+        If vSSTab1.TabVisible(y) = False Then
+            vProximaTab = y
             Exit For
         Else
             'vProximaTab = Y
@@ -308,13 +308,13 @@ End Function
 
 Public Function verificaTabAberta(vSSTab1 As SSTab)
     verificaTabAberta = False
-    Dim vProximaTab As Integer, X As Integer, Y As Integer
-    X = 29
+    Dim vProximaTab As Integer, x As Integer, y As Integer
+    x = 29
     vProximaTab = 0
-    For Y = 0 To X
-        If vSSTab1.TabCaption(Y) = Formulario Then
-            vSSTab1.TabVisible(Y) = True
-            vSSTab1.Tab = Y
+    For y = 0 To x
+        If vSSTab1.TabCaption(y) = Formulario Then
+            vSSTab1.TabVisible(y) = True
+            vSSTab1.Tab = y
             verificaTabAberta = True
             Exit Function
         End If
@@ -323,10 +323,10 @@ End Function
 
 Public Function contaTabsAbertas(vSSTab1 As SSTab) As Boolean
     contaTabsAbertas = False
-    Dim vContaTabsAbertas As Integer, X As Integer, Y As Integer
-    X = 29
-    For Y = 0 To X
-        If vSSTab1.TabVisible(Y) = True Then
+    Dim vContaTabsAbertas As Integer, x As Integer, y As Integer
+    x = 29
+    For y = 0 To x
+        If vSSTab1.TabVisible(y) = True Then
             vContaTabsAbertas = vContaTabsAbertas + 1
         End If
     Next
@@ -556,7 +556,7 @@ On Error GoTo Err
         .Height = 495
         .Caption = ""
         .ButtonType = 11
-        .PictureNormal = frmPesqGeralTeste2.ImageList.ListImages(30).Picture
+        .PictureNormal = Principal.ImageList.ListImages(30).Picture
         .Tag = "Pesquisar"
         .ToolTipText = "Pesquisar"
         .BackColor = &HB7B7B7
@@ -698,7 +698,7 @@ On Error GoTo Err
             .SmallIcons = frmPesqGeralTeste2.ImgList3
             .Icons = frmPesqGeralTeste2.ImgList3
         ElseIf vColectionIcons = 5 Then
-            .SmallIcons = frmPesqGeralTeste2.ImgList
+            .SmallIcons = frmPesqGeralTeste2.ImgList4
             .Icons = frmPesqGeralTeste2.ImgList
         End If
         
@@ -764,9 +764,9 @@ End Function
 
 Public Function desconstruirBotao(vTab As Long)
 On Error Resume Next
-    Dim X As Integer
-    For X = 1 To 10
-        frmPesqGeralTeste2.Controls.Remove ("objImage" & vTab & X)
+    Dim x As Integer
+    For x = 1 To 10
+        frmPesqGeralTeste2.Controls.Remove ("objImage" & vTab & x)
     Next
 End Function
 
@@ -784,20 +784,20 @@ End Function
 
 Public Function construirBotaoClose(vSSTab1 As SSTab)
 On Error GoTo Err
-    Dim X As Integer, Y As Integer, vcontaTabAberta As Integer
+    Dim x As Integer, y As Integer, vcontaTabAberta As Integer
     'desconstruirBotaoClose frmPesqGeralTeste2.SSTab1
-    X = 29
-    Y = 0
+    x = 29
+    y = 0
     vcontaTabAberta = 0
     'Debug.Print String(50, 13)
 
   
-    For Y = Y To X
-        If vSSTab1.TabVisible(Y) = True Then
+    For y = y To x
+        If vSSTab1.TabVisible(y) = True Then
             'vSSTab1.Tab = Y
-            Load frmPesqGeralTeste2.cmdClose(Y)
-            Debug.Print "ENCONTROU TAB (Y): " & Y
-            With frmPesqGeralTeste2.cmdClose(Y)
+            Load frmPesqGeralTeste2.cmdClose(y)
+            Debug.Print "ENCONTROU TAB (Y): " & y
+            With frmPesqGeralTeste2.cmdClose(y)
                 .Visible = True
                 .Top = 60
                 .Left = leftDoBotaoFecharDaAba(vcontaTabAberta)
@@ -806,7 +806,7 @@ On Error GoTo Err
                 .Caption = ""
                 .ButtonType = 11
                 .Tag = "Fechar aba"
-                .ToolTipText = "Fechar aba: " & Trim(Str(Y))
+                .ToolTipText = "Fechar aba: " & Trim(Str(y))
                 .BackColor = &HB7B7B7
                 '.ZOrder (0)
             End With
@@ -818,9 +818,9 @@ On Error GoTo Err
     Exit Function
 Err:
     If Err.Number = 360 And vAcaoTab = "CLOSE" Then
-        If frmPesqGeralTeste2.cmdClose(Y).Left <> leftDoBotaoFecharDaAba(vcontaTabAberta) Then
-            frmPesqGeralTeste2.SSTab1.Tab = Y
-            frmPesqGeralTeste2.cmdClose(Y).Left = leftDoBotaoFecharDaAba(vcontaTabAberta)
+        If frmPesqGeralTeste2.cmdClose(y).Left <> leftDoBotaoFecharDaAba(vcontaTabAberta) Then
+            frmPesqGeralTeste2.SSTab1.Tab = y
+            frmPesqGeralTeste2.cmdClose(y).Left = leftDoBotaoFecharDaAba(vcontaTabAberta)
         End If
 '    If Err.Number = 360 And vAcaoTab = "OPEN" Then
     End If
@@ -828,7 +828,7 @@ Err:
     'frmPesqGeralTeste2.cmdClose(Y).Left = leftDoBotaoFecharDaAba(vcontaTabAberta)
     'Unload frmPesqGeralTeste2.cmdClose(Y)
     vcontaTabAberta = vcontaTabAberta + 1
-    Y = Y + 1
+    y = y + 1
     'vSSTab1.Tab = Y
     Resume
 End Function
@@ -1052,15 +1052,15 @@ End Function
 Public Function contruirBotoesPorModulo(vQualLV As Integer)
     Dim vImageList As ImageList
     If vColectionIcons = 1 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList
+        Set vImageList = Principal.ImageList
     ElseIf vColectionIcons = 2 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList1
+        Set vImageList = Principal.ImageList1
     ElseIf vColectionIcons = 3 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList2
+        Set vImageList = Principal.ImageList2
     ElseIf vColectionIcons = 4 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList3
+        Set vImageList = Principal.ImageList7
     ElseIf vColectionIcons = 5 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList
+        Set vImageList = Principal.ImageList9
     End If
 
 '-- TIPO DE MATERIAIS
@@ -1845,18 +1845,153 @@ End Function
 Public Function carregaImagemBotao(vBtn As CommandButton, vIndex As Integer, vIcon As Integer)
     Dim vImageList As ImageList
     If vColectionIcons = 1 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList
+        Set vImageList = Principal.ImageList
     ElseIf vColectionIcons = 2 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList1
+        Set vImageList = Principal.ImageList1
     ElseIf vColectionIcons = 3 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList2
+        Set vImageList = Principal.ImageList2
     ElseIf vColectionIcons = 4 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList3
+        Set vImageList = Principal.ImageList7
     ElseIf vColectionIcons = 5 Then
-        Set vImageList = frmPesqGeralTeste2.ImageList
+        Set vImageList = Principal.ImageList9
     End If
     vBtn.Picture = vImageList.ListImages(vIcon).Picture
     vBtn.BackColor = &HB7B7B7
+End Function
+
+Public Function montaTabMenu()
+On Error GoTo Err
+    Dim rsMenu As New ADODB.Recordset
+    Dim SqlMenu As String
+    Dim rsDeletar As New ADODB.Recordset
+    Dim sqlDeletar As String
+    Dim rsCopia As New ADODB.Recordset
+    Dim sqlCopia As String
+    
+    
+    Dim rsMenuExpert As New ADODB.Recordset
+    Dim sqlMenuExpert As String
+    
+    sqlMenuExpert = "Select * from tbMenuConf order by idsub"
+    rsMenuExpert.Open sqlMenuExpert, cnBanco, adOpenKeyset, adLockReadOnly
+10  cnBanco.BeginTrans
+    sqlDeletar = "Delete from tbMenu"
+    rsDeletar.Open sqlDeletar, cnBanco
+    
+    If rsMenuExpert.RecordCount > 0 Then
+        sqlCopia = "Select * into tbConfGrupoCOPIA from tbConfGrupo"
+        rsCopia.Open sqlCopia, cnBanco
+
+        sqlDeletar = "Delete from tbConfGrupo where tbconfgrupo.tipo <> 'CHK' and tbconfgrupo.idgrupo = '" & XCodGrp & "'"
+        rsDeletar.Open sqlDeletar, cnBanco
+        While Not rsMenuExpert.EOF
+            SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values('" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','" & rsMenuExpert.Fields(5) & "')"
+            rsMenu.Open SqlMenu, cnBanco
+
+            SqlMenu = "Insert into tbConfGrupo(idgrupo,idmenu,idsub,tipo,nome,status,codcoligada,icon) Values(" & XCodGrp & ",'" & rsMenuExpert.Fields(0) & "','" & rsMenuExpert.Fields(1) & "','" & rsMenuExpert.Fields(2) & "','" & rsMenuExpert.Fields(3) & "','S','" & rsMenuExpert.Fields(5) & "','" & rsMenuExpert.Fields(6) & "')"
+            rsMenu.Open SqlMenu, cnBanco
+
+            rsMenuExpert.MoveNext
+        Wend
+        rsMenuExpert.Close
+        Set rsMenuExpert = Nothing
+
+        'Restaurando Permissões
+        sqlCopia = "Select * from tbConfGrupoCOPIA"
+        rsCopia.Open sqlCopia, cnBanco, adOpenKeyset, adLockReadOnly
+        While Not rsCopia.EOF
+            SqlMenu = "Update tbConfGrupo set status = '" & rsCopia.Fields(5) & "',incluir = '" & rsCopia.Fields(9) & "',editar = '" & rsCopia.Fields(10) & "',excluir = '" & rsCopia.Fields(11) & "',salvar = '" & rsCopia.Fields(12) & "',imprimir = '" & rsCopia.Fields(13) & "',filtrar = '" & rsCopia.Fields(14) & "' where idgrupo = '" & rsCopia.Fields(0) & "' and idmenu = '" & rsCopia.Fields(1) & "' and idsub = '" & rsCopia.Fields(2) & "'"
+            rsMenu.Open SqlMenu, cnBanco
+            rsCopia.MoveNext
+        Wend
+        rsCopia.Close
+        Set rsCopia = Nothing
+
+        sqlCopia = "Drop table tbConfGrupoCOPIA"
+        rsCopia.Open sqlCopia, cnBanco
+    
+    Else
+        SqlMenu = "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','TAB','Cadastros','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'01','CAT','Primários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'02','CAT','Secundários','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0101','BUT','Ramo de atividades','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0102','BUT','Clientes','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0103','BUT','Transportadoras','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0104','BUT','Tipo material','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0205','BUT','Materiais','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0206','BUT','Itens verificação','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0207','BUT','Projetos','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(1,'0208','BUT','Processos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'02','TAB','Orçamentos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'11','CAT','Vendas','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(2,'1111','BUT','Serviços','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'03','TAB','Planejamento','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'21','CAT','Planejamento e Controle da Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2121','BUT','FCE','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2122','BUT','LM','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2123','BUT','LD','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2124','BUT','OS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(3,'2125','BUT','Controle de Desenhos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'04','TAB','Produção','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'31','CAT','Acompanhamento de Produção','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3131','BUT','OS Acompanhamento','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(4,'3132','BUT','Evolução','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'05','TAB','Inspeção/Expedição','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'41','CAT','Emissão de Relatórios','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4141','BUT','Emitir relatório','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(5,'4142','BUT','Imprimir relatório','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'06','TAB','Configurações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'51','CAT','Parametrizações','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'52','CAT','Aparência','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5151','BUT','Sistema','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5152','BUT','Grupos','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5153','BUT','Usuários','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5254','BUT','Menu','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5255','BUT','Skin','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(6,'5256','BUT','Fundo','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'07','TAB','Sobre','" & vCodcoligada & "');" & _
+                  "Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'61','CAT','Sobre','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6161','BUT','Sobre ZEUS','" & vCodcoligada & "');Insert into tbMenu(idmenu,idsub,tipo,nome,codcoligada) Values(7,'6162','BUT','Ajuda do ZEUS','" & vCodcoligada & "');"
+        
+        rsMenu.Open SqlMenu, cnBanco
+    End If
+    cnBanco.CommitTrans
+    Set rsMenu = Nothing
+    Exit Function
+Err:
+    If Err.Number = -2147467259 Then
+        While reestabeleceConexao = False
+        Wend
+        GoTo 10
+    Else
+        Msgbox Err.Number & " - " & Err.Description
+        Resume
+    End If
+End Function
+
+Public Function abreConfMenu()
+On Error GoTo Err
+
+    Dim SqlConf As String
+    SqlConf = "Select * from tbconfgrupo Where tbconfgrupo.idgrupo = '" & XCodGrp & "' and codcoligada = " & vCodcoligada & " order by idsub"
+    rsConf.Open SqlConf, cnBanco, adOpenKeyset, adLockReadOnly
+    Exit Function
+Err:
+    If Err.Number = -2147467259 Or Err.Number = 3709 Then
+        While reestabeleceConexao = False
+        Wend
+        Resume
+    Else
+        Msgbox Err.Number & " - " & Err.Description
+        Resume
+    End If
+End Function
+
+Public Function fechaConfMenu()
+    rsConf.Close
+    Set rsConf = Nothing
+End Function
+
+Public Function montaMenu(vRB As XTREMERibbon)
+    Dim vMenu As String
+    While Not rsConf.EOF
+        If rsConf.Fields(5) = "S" Then
+            If rsConf.Fields(3) <> "CHK" Then
+                If rsConf.Fields(3) = "TAB" Then
+                    vRB.AddTab rsConf.Fields(1), rsConf.Fields(4)
+                End If
+                If rsConf.Fields(3) = "CAT" Then
+                    vRB.AddCat Right$(rsConf.Fields(2), 2), rsConf.Fields(1), rsConf.Fields(4), False
+                End If
+                If rsConf.Fields(3) = "BUT" Then
+                    If Len(rsConf.Fields(2)) = 4 Then
+                        vRB.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 1, 2), rsConf.Fields(4), rsConf.Fields(8)
+                    Else
+                        vMenu = Val(Mid$(rsConf.Fields(2), 3, 3))
+                        If Len(vMenu) <> 3 Then
+                            vRB.AddButton Right$(rsConf.Fields(2), 2), Mid$(rsConf.Fields(2), 4, 2), rsConf.Fields(4), rsConf.Fields(8)
+                        Else
+                            vRB.AddButton Right$(rsConf.Fields(2), 3), Mid$(rsConf.Fields(2), 3, 3), rsConf.Fields(4), rsConf.Fields(8)
+                        End If
+                    End If
+                End If
+            End If
+        End If
+        rsConf.MoveNext
+    Wend
+    vRB.Refresh
 End Function
 
 'FUNCAO PARA MUDAR TOOLTIPS
@@ -1876,4 +2011,9 @@ Public Sub MudaTool()
             End If
         Next
     End With
+End Sub
+
+Public Sub inicializa_tabs(vSSTab As SSTab, vPic As PictureBox)
+    vSSTab.Tab = 0
+    SubClassSSTAB vSSTab, vPic
 End Sub

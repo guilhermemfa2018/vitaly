@@ -1,5 +1,6 @@
 VERSION 5.00
 Object = "{90F3D7B3-92E7-44BA-B444-6A8E2A3BC375}#1.0#0"; "actskin4.ocx"
+Object = "{34AD7171-8984-11D8-AD7F-BE723A6C8E7C}#1.0#0"; "IpToolTips.ocx"
 Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmComunicacaoDesvio 
    BorderStyle     =   1  'Fixed Single
@@ -25,6 +26,13 @@ Begin VB.Form frmComunicacaoDesvio
    ScaleHeight     =   6975
    ScaleWidth      =   8415
    StartUpPosition =   2  'CenterScreen
+   Begin IpToolTips.cIpToolTips cIpToolTips1 
+      Left            =   6120
+      Top             =   5880
+      _ExtentX        =   847
+      _ExtentY        =   847
+      BackColor       =   0
+   End
    Begin VB.CommandButton cmdCD 
       Height          =   615
       Index           =   1
@@ -32,8 +40,7 @@ Begin VB.Form frmComunicacaoDesvio
       Picture         =   "frmComunicacaoDesvio.frx":0CCA
       Style           =   1  'Graphical
       TabIndex        =   18
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
+      Tag             =   "Sair"
       Top             =   6240
       Width           =   615
    End
@@ -44,8 +51,7 @@ Begin VB.Form frmComunicacaoDesvio
       Picture         =   "frmComunicacaoDesvio.frx":1994
       Style           =   1  'Graphical
       TabIndex        =   19
-      Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
+      Tag             =   "Salvar e Enviar"
       Top             =   6240
       Width           =   615
    End
@@ -62,6 +68,7 @@ Begin VB.Form frmComunicacaoDesvio
       Height          =   375
       Left            =   240
       TabIndex        =   16
+      Tag             =   "Marcar caso seja necessário o retrabalho"
       Top             =   5760
       Width           =   7935
    End
@@ -78,7 +85,6 @@ Begin VB.Form frmComunicacaoDesvio
          Left            =   120
          TabIndex        =   15
          Tag             =   "nº da revisão da OS"
-         ToolTipText     =   "nº da revisão da OS"
          Top             =   240
          Width           =   1815
       End
@@ -113,6 +119,7 @@ Begin VB.Form frmComunicacaoDesvio
          Index           =   4
          Left            =   1800
          TabIndex        =   3
+         Tag             =   "Código do responsável pela abertura da CD"
          Top             =   480
          Width           =   1695
       End
@@ -131,7 +138,7 @@ Begin VB.Form frmComunicacaoDesvio
          Index           =   3
          Left            =   3600
          TabIndex        =   4
-         Tag             =   "Responsável"
+         Tag             =   "Nome do responsável pela abertura da CD"
          Top             =   480
          Width           =   3975
       End
@@ -159,7 +166,6 @@ Begin VB.Form frmComunicacaoDesvio
          MultiLine       =   -1  'True
          TabIndex        =   6
          Tag             =   "Observação"
-         ToolTipText     =   "Observação"
          Top             =   1200
          Width           =   7935
       End
@@ -176,7 +182,6 @@ Begin VB.Form frmComunicacaoDesvio
          Left            =   120
          TabIndex        =   2
          Tag             =   "Data início"
-         ToolTipText     =   "Data início"
          Top             =   480
          Width           =   1455
          _ExtentX        =   2566
@@ -191,7 +196,7 @@ Begin VB.Form frmComunicacaoDesvio
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Format          =   165085185
+         Format          =   168427521
          CurrentDate     =   41366
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel10 
@@ -235,7 +240,6 @@ Begin VB.Form frmComunicacaoDesvio
          Left            =   120
          TabIndex        =   0
          Tag             =   "Identificador"
-         ToolTipText     =   "Identificador"
          Top             =   240
          Width           =   1695
       End

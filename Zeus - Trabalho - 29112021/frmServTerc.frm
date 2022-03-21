@@ -200,23 +200,23 @@ Private sqlTipoTrei As String
 Private Sub cmdCadastro_Click(Index As Integer)
     Select Case Index
     Case 0
-        If ValidaCampos(ListView2, txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)) = False Then Exit Sub
+        If ValidaCampos(ListView2, txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)) = False Then Exit Sub
         
-        IncluirLV ListView2, txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
-        LimpaControles txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
-        txtCadastro(0) = Format(GeraCodigoLV(ListView2), "00")
+        IncluirLV ListView2, txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
+        LimpaControles txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
+        txtcadastro(0) = Format(GeraCodigoLV(ListView2), "00")
     Case 1
-        LimpaControles txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
-        txtCadastro(0) = Format(GeraCodigoLV(ListView2), "00")
+        LimpaControles txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
+        txtcadastro(0) = Format(GeraCodigoLV(ListView2), "00")
     Case 2
-        AlteraLV ListView2, txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
+        AlteraLV ListView2, txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
     Case 3
         ExcluirItemLV ListView2
     Case 4
         'Grava dados ListView2
         limpaQualquerDado
         ordenaLVArray ListView2, "0", "1", "2", "", "", "", "", "", "", "", "", "", "", "", "", ""
-        GravaDadosLV "tbServTerc", "idservTerc", "I", txtCadastro(0)
+        GravaDadosLV "tbServTerc", "idservTerc", "I", txtcadastro(0)
         Msgbox "Dados Salvos com sucesso!", vbInformation, "PrototipoX"
     Case 5
         Unload Me
@@ -236,8 +236,8 @@ Private Sub Form_Load()
     chamaSQL "Select a.idservterc,a.nmserv,a.unidade from tbServTerc as a Order by a.idservterc"
     Compoe_Listview ListView2, Sqlp, "00"
     '================================================
-    LimpaControles txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
-    txtCadastro(0) = Format(GeraCodigoLV(ListView2), "00")
+    LimpaControles txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
+    txtcadastro(0) = Format(GeraCodigoLV(ListView2), "00")
     AplicarSkin Me, Principal.Skin1
     carregarIconBotao
     
@@ -269,7 +269,7 @@ End Sub
 
 Private Sub ListView2_DblClick()
     If vEdi <> "N" Then
-        AlteraLV ListView2, txtCadastro(0), txtCadastro(1), txtCadastro(2), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0), txtCadastro(0)
+        AlteraLV ListView2, txtcadastro(0), txtcadastro(1), txtcadastro(2), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0), txtcadastro(0)
     End If
 End Sub
 

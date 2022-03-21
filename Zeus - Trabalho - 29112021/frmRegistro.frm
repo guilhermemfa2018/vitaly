@@ -8,6 +8,15 @@ Begin VB.Form frmRegistro
    ClientLeft      =   45
    ClientTop       =   330
    ClientWidth     =   7455
+   BeginProperty Font 
+      Name            =   "Calibri"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
    Icon            =   "frmRegistro.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -26,6 +35,15 @@ Begin VB.Form frmRegistro
    End
    Begin VB.TextBox txtcodigodoprograma 
       BorderStyle     =   0  'None
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       ForeColor       =   &H00008000&
       Height          =   375
       Left            =   2280
@@ -81,7 +99,7 @@ Begin VB.Form frmRegistro
       Left            =   2280
       TabIndex        =   4
       Top             =   4800
-      Width           =   3615
+      Width           =   4215
    End
    Begin VB.Label Label1 
       BackColor       =   &H00FFFFFF&
@@ -91,7 +109,7 @@ Begin VB.Form frmRegistro
       Left            =   2280
       TabIndex        =   2
       Top             =   4200
-      Width           =   1815
+      Width           =   3975
    End
    Begin AlphaImageControl.aicAlphaImage aicAlphaImage1 
       Height          =   5100

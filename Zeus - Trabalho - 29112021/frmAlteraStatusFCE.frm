@@ -22,7 +22,6 @@ Begin VB.Form frmAlteraStatusFCE
       Style           =   1  'Graphical
       TabIndex        =   18
       Tag             =   "Salvar Grupo"
-      ToolTipText     =   "Salvar Grupo"
       Top             =   4080
       Width           =   615
    End
@@ -34,7 +33,6 @@ Begin VB.Form frmAlteraStatusFCE
       Style           =   1  'Graphical
       TabIndex        =   17
       Tag             =   "Salvar Status"
-      ToolTipText     =   "Salvar Status"
       Top             =   4080
       Width           =   615
    End
@@ -86,7 +84,7 @@ Begin VB.Form frmAlteraStatusFCE
             Left            =   240
             PasswordChar    =   "*"
             TabIndex        =   26
-            ToolTipText     =   "Informe a senha do usuário autorizado"
+            Tag             =   "Informe a senha do usuário autorizado"
             Top             =   1200
             Width           =   2415
          End
@@ -111,7 +109,7 @@ Begin VB.Form frmAlteraStatusFCE
             Height          =   375
             Left            =   240
             TabIndex        =   24
-            ToolTipText     =   "Confirme o nº da FCE a ser CONCLUÍDA"
+            Tag             =   "Confirme o nº da FCE a ser CONCLUÍDA"
             Top             =   480
             Width           =   2415
          End
@@ -126,16 +124,25 @@ Begin VB.Form frmAlteraStatusFCE
       End
       Begin VB.OptionButton Option4 
          Caption         =   "Inconsistência"
+         BeginProperty Font 
+            Name            =   "Calibri"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
          Height          =   375
          Left            =   120
          TabIndex        =   20
          Top             =   1800
-         Width           =   1455
+         Width           =   1815
       End
       Begin VB.PictureBox Picture7 
          BorderStyle     =   0  'None
          Height          =   480
-         Left            =   1560
+         Left            =   2040
          Picture         =   "frmAlteraStatusFCE.frx":273E
          ScaleHeight     =   465.455
          ScaleMode       =   0  'User
@@ -148,7 +155,7 @@ Begin VB.Form frmAlteraStatusFCE
          AutoSize        =   -1  'True
          BorderStyle     =   0  'None
          Height          =   480
-         Left            =   1560
+         Left            =   2040
          Picture         =   "frmAlteraStatusFCE.frx":3408
          ScaleHeight     =   480
          ScaleWidth      =   480
@@ -160,7 +167,7 @@ Begin VB.Form frmAlteraStatusFCE
          AutoSize        =   -1  'True
          BorderStyle     =   0  'None
          Height          =   480
-         Left            =   1560
+         Left            =   2040
          Picture         =   "frmAlteraStatusFCE.frx":40D2
          ScaleHeight     =   480
          ScaleWidth      =   480
@@ -173,7 +180,7 @@ Begin VB.Form frmAlteraStatusFCE
          BorderStyle     =   0  'None
          FillColor       =   &H00808080&
          Height          =   480
-         Left            =   1560
+         Left            =   2040
          Picture         =   "frmAlteraStatusFCE.frx":4D9C
          ScaleHeight     =   480
          ScaleWidth      =   480
@@ -317,6 +324,7 @@ Begin VB.Form frmAlteraStatusFCE
          Left            =   1200
          Locked          =   -1  'True
          TabIndex        =   5
+         Tag             =   "Descrição da FCE"
          Top             =   480
          Width           =   5415
       End
@@ -336,13 +344,14 @@ Begin VB.Form frmAlteraStatusFCE
          Left            =   120
          Locked          =   -1  'True
          TabIndex        =   4
+         Tag             =   "Número da FCE"
          Top             =   480
          Width           =   975
       End
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel3 
          Height          =   255
          Left            =   6720
-         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8DF8
+         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8DF2
          TabIndex        =   3
          Top             =   240
          Width           =   1095
@@ -350,7 +359,7 @@ Begin VB.Form frmAlteraStatusFCE
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel2 
          Height          =   255
          Left            =   1320
-         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8E70
+         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8E6A
          TabIndex        =   2
          Top             =   240
          Width           =   4575
@@ -358,7 +367,7 @@ Begin VB.Form frmAlteraStatusFCE
       Begin ACTIVESKINLibCtl.SkinLabel SkinLabel1 
          Height          =   255
          Left            =   120
-         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8EE2
+         OleObjectBlob   =   "frmAlteraStatusFCE.frx":8ED6
          TabIndex        =   1
          Top             =   240
          Width           =   975

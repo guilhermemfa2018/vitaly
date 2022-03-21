@@ -934,7 +934,7 @@ End Sub
 Private Sub cmdconsulta_Click(Index As Integer)
 'On Error GoTo Err
     'On Error Resume Next
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     Select Case Index
     Case 0
         
@@ -954,34 +954,34 @@ Private Sub cmdconsulta_Click(Index As Integer)
         '    ListView1.SetFocus
         'End If
     Case 1
-        Y = ListView1.ListItems.Count
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X).Selected = True Then
+        y = ListView1.ListItems.Count
+        For x = 1 To y
+            If ListView1.ListItems.Item(x).Selected = True Then
                 Exit For
             End If
         Next
-        If X > 1 Then
-            ListView1.ListItems(X - 1).Selected = True
-            ListView1.ListItems(X - 1).EnsureVisible
+        If x > 1 Then
+            ListView1.ListItems(x - 1).Selected = True
+            ListView1.ListItems(x - 1).EnsureVisible
         End If
         ListView1.SetFocus
     Case 2
-        Y = ListView1.ListItems.Count
-        For X = 1 To Y
-            If ListView1.ListItems.Item(X).Selected = True Then
+        y = ListView1.ListItems.Count
+        For x = 1 To y
+            If ListView1.ListItems.Item(x).Selected = True Then
                 Exit For
             End If
         Next
-        If X < Y Then
-            ListView1.ListItems(X + 1).Selected = True
-            ListView1.ListItems(X + 1).EnsureVisible
+        If x < y Then
+            ListView1.ListItems(x + 1).Selected = True
+            ListView1.ListItems(x + 1).EnsureVisible
         End If
         ListView1.SetFocus
     Case 3
-        Y = ListView1.ListItems.Count
-        If Y > 0 Then
-            ListView1.ListItems(Y).Selected = True
-            ListView1.ListItems(Y).EnsureVisible
+        y = ListView1.ListItems.Count
+        If y > 0 Then
+            ListView1.ListItems(y).Selected = True
+            ListView1.ListItems(y).EnsureVisible
             ListView1.SetFocus
         End If
     Case 4
@@ -1179,15 +1179,15 @@ End Sub
 
 Private Sub VerificaFCE()
     On Error GoTo Err
-    Dim Y As Integer, X As Integer
+    Dim y As Integer, x As Integer
     Dim fce As String
-    Y = ListView1.ListItems.Count
+    y = ListView1.ListItems.Count
     fce = ""
-    For X = 1 To Y
-        ListView1.ListItems(X).Selected = True
-        If ListView1.ListItems.Item(X).Selected = True Then
-            If ListView1.ListItems.Item(X).Checked = True Then
-                varGlobal = ListView1.ListItems.Item(X)
+    For x = 1 To y
+        ListView1.ListItems(x).Selected = True
+        If ListView1.ListItems.Item(x).Selected = True Then
+            If ListView1.ListItems.Item(x).Checked = True Then
+                varGlobal = ListView1.ListItems.Item(x)
                 If fce <> "" Then
                     If ListView1.SelectedItem.ListSubItems.Item(1) <> fce Then
                         mobjMsg.Abrir "Não é permitido selecionadas FO's de empresas diferentes", Ok, critico, "Atenção"
@@ -1216,7 +1216,7 @@ End Sub
 
 Private Sub DesabBotoes()
 On Error Resume Next
-    Dim X As Integer
+    Dim x As Integer
 '    For X = 0 To cmdconsulta.Count - 1
 '        If cmdconsulta(X).Visible = True Then cmdconsulta(X).UseGreyscale = True
 '    Next
@@ -1242,20 +1242,20 @@ End Sub
 
 Private Sub AlteraListview(qtdCol As Integer)
 On Error GoTo Err
-    Dim Y As Integer, X As Integer
-    Y = ListView1.ListItems.Count
-    For X = 1 To Y
-        If ListView1.ListItems.Item(X).Selected = True Then
+    Dim y As Integer, x As Integer
+    y = ListView1.ListItems.Count
+    For x = 1 To y
+        If ListView1.ListItems.Item(x).Selected = True Then
             'If ListView1.CheckBoxes = True Then ListView1.ListItems.Item(X).Checked = True
             Exit For
         End If
     Next
     If qtdCol = 1 Then
-        varGlobal = ListView1.ListItems.Item(X)
+        varGlobal = ListView1.ListItems.Item(x)
     ElseIf qtdCol = 3 Then
         varGlobal = ListView1.SelectedItem.ListSubItems.Item(1)
     Else
-        varGlobal = ListView1.ListItems.Item(X) & ListView1.SelectedItem.ListSubItems.Item(1)
+        varGlobal = ListView1.ListItems.Item(x) & ListView1.SelectedItem.ListSubItems.Item(1)
     End If
     If apontaLV = 9 Then
         vRetrabalho = ListView1.SelectedItem.ListSubItems.Item(9)
@@ -1291,9 +1291,9 @@ On Error GoTo Err
         
         sqlInspecao = "select b.descricao,b.sigla from tbVerifGrupo as a inner join tbVerifItem as b on a.codgrupo = b.codgrupo where a.aplicacao <> '-'"
         rsInspecao.Open sqlInspecao, cnBanco, adOpenKeyset, adLockReadOnly
-        Y = rsInspecao.RecordCount
-        For X = 1 To Y
-            vQualquerDado(0, X) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
+        y = rsInspecao.RecordCount
+        For x = 1 To y
+            vQualquerDado(0, x) = rsInspecao.Fields(1) & " - " & rsInspecao.Fields(0)
             rsInspecao.MoveNext
         Next
         rsInspecao.Close
@@ -1301,7 +1301,7 @@ On Error GoTo Err
         vQualquerDado(0, 30) = "RELATÓRIO DE INSPEÇÃO DE " & ListView1.SelectedItem.ListSubItems.Item(6)
     End If
     
-    removeLinha = X
+    removeLinha = x
     Exit Sub
 Err:
     If Err.Number = -2147467259 Then
@@ -1511,7 +1511,7 @@ End Sub
 
 '----EDITA LISTVIEW DAKI P BAIXO------
 '-------------------------------------
-Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
     If apontaLV = 10 Then
         Dim i As Integer, leftPos As Single 'the left pos of the column
         Dim dx As Single, lvwX As Single  'the x in relation to listview coordinate
@@ -1519,7 +1519,7 @@ Private Sub ListView1_MouseUp(Button As Integer, Shift As Integer, X As Single, 
             If Not ListView1.SelectedItem Is Nothing Then
                 ListView1.LabelEdit = lvwManual
                 dx = GetLvwDeltaX
-                lvwX = X + dx
+                lvwX = x + dx
                 For i = 13 To 13
                     leftPos = ListView1.Left + ListView1.ColumnHeaders(i).Left
                     If lvwX > leftPos And lvwX < leftPos + ListView1.ColumnHeaders(i).Width Then 'we found the column
