@@ -334,7 +334,7 @@ Private Sub Form_Load()
         
 'QUANDO INFORMA UMA FCE ESPECIFICA
         If vFCECC <> "" Then
-                sqlCentroCusto = sqlCentroCusto & "                         AND(A.CODTB3FAT LIKE '" & vFCECC & "%' OR A.CAMPOLIVRE3 LIKE '" & vFCECC & "%')" & vbCrLf
+                sqlCentroCusto = sqlCentroCusto & "                         AND(A.CODTB3FAT LIKE '%" & vFCECC & "%' OR A.CAMPOLIVRE3 LIKE '%" & vFCECC & "%')" & vbCrLf
         End If
 'QUANDO INFORMA O CENTRO DE CUSTO OU PARTE DELE
         If vCustos <> "" Then
