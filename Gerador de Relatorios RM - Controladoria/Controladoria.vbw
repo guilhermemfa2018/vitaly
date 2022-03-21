@@ -1,9 +1,9 @@
 Form1 = 182, 182, 1328, 871, , 156, 156, 1302, 845, C
 Module1 = 104, 104, 1302, 793, 
 CRCustoGerencial = 0, 0, 0, 0, C, 104, 104, 1039, 786, CZ
-FCRCustoGerencial = 312, 312, 1393, 1001, , 0, 0, 1198, 689, CZ
+FCRCustoGerencial = 312, 312, 1393, 1001, , 0, 0, 1198, 689, C
 CRCentroCusto = 286, 286, 1484, 975, C, 78, 78, 1479, 1110, CZ
-FCRCentroCusto = 52, 52, 1198, 741, , 26, 26, 1172, 715, CZ
+FCRCentroCusto = 52, 52, 1198, 741, Z, 26, 26, 1172, 715, C
 frmSenha = 286, 286, 1432, 975, , 260, 260, 1406, 949, C
 CREncargosSalarios = 0, 0, 0, 0, C, 130, 130, 1065, 812, CZ
 FCREncargosSalarios = 260, 260, 1561, 784, , 104, 104, 1302, 793, CZ

@@ -144,7 +144,6 @@ Begin VB.Form frmImpostosServicos
          _ExtentY        =   7011
          _Version        =   393216
          Tabs            =   2
-         Tab             =   1
          TabsPerRow      =   2
          TabHeight       =   520
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -158,12 +157,13 @@ Begin VB.Form frmImpostosServicos
          EndProperty
          TabCaption(0)   =   "Fórmulas"
          TabPicture(0)   =   "frmImpostosServicos.frx":3A82
-         Tab(0).ControlEnabled=   0   'False
+         Tab(0).ControlEnabled=   -1  'True
          Tab(0).Control(0)=   "Frame2"
+         Tab(0).Control(0).Enabled=   0   'False
          Tab(0).ControlCount=   1
          TabCaption(1)   =   "Legenda"
          TabPicture(1)   =   "frmImpostosServicos.frx":3A9E
-         Tab(1).ControlEnabled=   -1  'True
+         Tab(1).ControlEnabled=   0   'False
          Tab(1).Control(0)=   "Frame7"
          Tab(1).Control(0).Enabled=   0   'False
          Tab(1).ControlCount=   1
@@ -173,7 +173,7 @@ Begin VB.Form frmImpostosServicos
             BorderStyle     =   0  'None
             ForeColor       =   &H80000008&
             Height          =   3495
-            Left            =   120
+            Left            =   -74880
             TabIndex        =   31
             Top             =   360
             Width           =   9855
@@ -314,7 +314,7 @@ Begin VB.Form frmImpostosServicos
                Strikethrough   =   0   'False
             EndProperty
             Height          =   3495
-            Left            =   -74880
+            Left            =   120
             TabIndex        =   18
             Top             =   360
             Width           =   9855

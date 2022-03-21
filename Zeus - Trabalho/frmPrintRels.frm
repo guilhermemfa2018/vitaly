@@ -141,7 +141,7 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   162136065
+         Format          =   191823873
          CurrentDate     =   41660
       End
       Begin MSComCtl2.DTPicker DTPicker1 
@@ -163,7 +163,7 @@ Begin VB.Form frmPrintRels
             Strikethrough   =   0   'False
          EndProperty
          CheckBox        =   -1  'True
-         Format          =   162136065
+         Format          =   191823873
          CurrentDate     =   41660
       End
    End
@@ -1240,6 +1240,11 @@ On Error GoTo Err
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-11CCP]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-11CCP]),'00:00:00') END AS [4101.SC-11 (P)], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-11CCR]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-11CCR]),'00:00:00') END AS [4101.SC-11 (R)], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-11CCT]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-11CCT]),'00:00:00') END AS [4101.SC-11 (T)], " & vbCrLf
+    
+    SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-12CCP]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-12CCP]),'00:00:00') END AS [4101.SC-12 (P)], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-12CCR]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-12CCR]),'00:00:00') END AS [4101.SC-12 (R)], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([4001.4101.SC-12CCT]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([4001.4101.SC-12CCT]),'00:00:00') END AS [4101.SC-12 (T)], " & vbCrLf
+    
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([7000.7103.SC-02CCP]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([7000.7103.SC-02CCP]),'00:00:00') END AS [7103-SC-02 (P)], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([7000.7103.SC-02CCR]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([7000.7103.SC-02CCR]),'00:00:00') END AS [7103-SC-02 (R)], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      CASE WHEN COALESCE(MAX([7000.7103.SC-02CCT]),'00:00:00') = ' ' THEN '00:00:00' ELSE COALESCE(MAX([7000.7103.SC-02CCT]),'00:00:00') END AS [7103-SC-02 (T)] " & vbCrLf
@@ -1317,6 +1322,7 @@ On Error GoTo Err
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-09CCP], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-10CCP], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-11CCP], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-12CCP], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [7000.7103.SC-02CCP])) AS COLUNAS_PLANEJADO " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      PIVOT (MAX(HORAS_REALIZADO)   FOR IDCC_REALIZADO IN ( " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.AJ-01CCR], " & vbCrLf
@@ -1331,6 +1337,7 @@ On Error GoTo Err
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-09CCR], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-10CCR], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-11CCR], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-12CCR], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [7000.7103.SC-02CCR])) AS COLUNAS_REALIZADO " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      PIVOT (MAX(HORAS_TRABALHADO)  FOR IDCC_TRABALHADO IN ( " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.AJ-01CCT], " & vbCrLf
@@ -1345,6 +1352,7 @@ On Error GoTo Err
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-09CCT], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-10CCT], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-11CCT], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-12CCT], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [7000.7103.SC-02CCT])) AS COLUNAS_REALIZADO " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      PIVOT (MAX(PERCENTUALBAIXADO) FOR IDCC_PERBAIXADO IN ( " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.AJ-01PB], " & vbCrLf
@@ -1359,6 +1367,7 @@ On Error GoTo Err
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-09PB], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-10PB], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-11PB], " & vbCrLf
+    SqlOSUsi = SqlOSUsi & "      [4001.4101.SC-12PB], " & vbCrLf
     SqlOSUsi = SqlOSUsi & "      [7000.7103.SC-02PB])) AS PERCENTUALBAIXADO " & vbCrLf
     SqlOSUsi = SqlOSUsi & "  ) AS A " & vbCrLf
     SqlOSUsi = SqlOSUsi & "  GROUP BY FCE,PROJETO,DESENHO,DATAPREVISTA,SEMANA,IDOS,REVISAOOS " & vbCrLf
